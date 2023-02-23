@@ -86,7 +86,6 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 % Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\left(1-\frac xK\right)$ o $h$ dolů. Pokud posuneme hodně, dostane se celá parabola pod osu $x$ a funkce bude pořád záporná. Kritická hodnota je v situaci, kdy mizí možnost, že $f_h(x)$ má body kde je kladná a populace se může rozvíjet. To nastane,  pokud se vrchol paraboly dostane na osu $x$, tj. $h$ je rovno funkční hodnotě funkce $f(x)$ v bodě $x=\frac K2.$
 % ```
-
 -->
 
 
@@ -253,8 +252,7 @@ popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypouští
 
 1. Zkontrolujte, že pro $h>0$ má každá počáteční úloha jediné řešení. Interpretujte tento výsledek prakticky.
 1. Pro $h=0$ by řešení nemuselo být určeno jednoznačně. A opravdu
-  není. Řešením je například $h(t)=0$ nebo $$h(t)=
-  \begin{cases}
+  není. Řešením je například $h(t)=0$ nebo $$h(t)=  \begin{cases}
     \frac 14 k^2 t^2 & t<0\\
     0 & t\geq 0.
   \end{cases}
@@ -284,8 +282,7 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 1. Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme $$
     \begin{aligned}
       \dv {h}{t}&=\frac 14 k^2 \cdot 2t = \frac 12 k^2 t\\
-      -k\sqrt h&=-k\sqrt{\frac 14 k^2 t^2} = - k \frac 12 |k| \cdot |t| =
-      - k \frac 12 k (-t) = \frac 12 k^2 t
+      -k\sqrt h&=-k\sqrt{\frac 14 k^2 t^2} = - k \frac 12 |k| \cdot |t| =      - k \frac 12 k (-t) = \frac 12 k^2 t
     \end{aligned}
     $$ a obě strany rovnice jsou stejné. Pro $h=0$ je dosazení triviální. Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
 
@@ -339,7 +336,6 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 
 <!--
-
 
 % \obrazek[vlastní]{pokros.jpg}
 
@@ -639,8 +635,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 % \begin{enumerate}[A)]
 % 1. $$S_s\frac{\partial h}{\partial t}=\sigma + \frac{\partial }{\partial x}\left (T \frac{\partial h}{\partial x} \right)
-%   +
-%   \frac{\partial }{\partial y}\left (T \frac{\partial h}{\partial y} \right)
+%   +%   \frac{\partial }{\partial y}\left (T \frac{\partial h}{\partial y} \right)
 %   $$
 % 1. Protože máme uvažovat stacionární případ, funkce $h$ nezávisí na $t$. Podle předpokladu $h$ nemá záviset ani na $y$. Proto platí $h=h(x)$, tj. derivace $h$ podle $t$ a podle $y$ jsou nulové.
 %   Protože nemáme uvažovat zdroje, je $\sigma$ také nulové. Protože máme uvažovat homogenní případ a $T=kh$, můžeme konstantu $k$ a dát před derivaci.  Rovnice má tvar
@@ -656,6 +651,5 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 %   $$h^2=\frac{-2q}k x + \text{const.}$$
 % \end{enumerate}
 % ```
-
 -->
 

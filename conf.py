@@ -60,3 +60,8 @@ html_js_files = [
     'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js'
 ]
 latex_table_style = ['booktabs','colorrows']
+
+mathjax3_config = {
+  'loader': {'load': ['[tex]/physics']},
+  'tex': {'packages': {'[+]': ['physics']}}
+}

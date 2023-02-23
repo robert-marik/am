@@ -21,8 +21,7 @@ https://youtu.be/bdnxbITOIrM
 :nonumber:
 
 
-1. $\nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2)
-=2xy+(0+2y)=2y(x+1)$
+1. $\nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2)=2xy+(0+2y)=2y(x+1)$
 1. $\vec F(2,1)=2^2\cdot 1\cdot \vec \imath + (2+1^2)\vec \jmath=4\vec\imath+3\vec\jmath=(4,3)$, tj. vektorové pole teče směrem doprava nahoru směrem daným směrnicí $0.75$, tj. pod úhlem menším než $45^\circ$.
 1. $\nabla\cdot\vec F(2,1)=2\cdot 1 \cdot(2+1)=6>0$. Divergence je kladná a proto se tok zahušťuje.
 1. Zdroj (kladná divergence).
@@ -43,8 +42,7 @@ https://youtu.be/zwYPRlEIrHI
 :nonumber:
 
 
-1. $\nabla \cdot \vec F=\pdv{x}(ax^3y^2)+\pdv{y}(3x^2y)
-=3ax^2y^2+3x^2=3x^2(ay^2+1)$
+1. $\nabla \cdot \vec F=\pdv{x}(ax^3y^2)+\pdv{y}(3x^2y)=3ax^2y^2+3x^2=3x^2(ay^2+1)$
 1. $\nabla \cdot \vec F (-1,2)=3(-1)^2(a\cdot 2^2+1)=3(4a+1)$ a $\nabla \cdot \vec F (-1,2)=0$ pokud $3(4a+1)=0$, tj. $a=-\frac 14$.
 
 ```
@@ -62,8 +60,7 @@ Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycen
   Rozměry jsou v centimetrech a teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)
 
 1. Vypočtěte gradient $\nabla T$  a tok tepla $-k \cdot \nabla T.$
-Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $k=
-  \begin{pmatrix}
+Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $k=  \begin{pmatrix}
     4 & 1\\1&6
   \end{pmatrix}.$ 
 1. Určete, zda na levém okraji desky teče teplo dovnitř do desky nebo z desky ven.
@@ -77,21 +74,17 @@ Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $
 
 1. Gradient je vektor složený z parciálních derivací. $$\nabla T=\qty(
   4(2x-y)+4x^3,-2(2x-y))^T$$ Tok je tenzor vodivosti maticově vynásobený s gradientem teploty a faktorem $(-1)$.
-  $$-k\cdot \nabla T=-
-  \begin{pmatrix}
+  $$-k\cdot \nabla T=-  \begin{pmatrix}
     4&1\\1&6
   \end{pmatrix}
   \begin{pmatrix}
     4(2x-y)+4x^3\\-2(2x-y)
-  \end{pmatrix}
-  =-
-  \begin{pmatrix}
+  \end{pmatrix} =-  \begin{pmatrix}
     14(2x- y)+16x^3\\-8(2x- y)+4x^3
   \end{pmatrix}
 $$
 1. Do vztahu pro tok dosadíme rovnici levého okraje desky, tj. $x=0$.
-  $$-k\cdot \nabla T (x=0)=
-  \begin{pmatrix}
+  $$-k\cdot \nabla T (x=0)=  \begin{pmatrix}
     14y\\-8y
   \end{pmatrix}
   $$

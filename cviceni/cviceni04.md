@@ -20,8 +20,7 @@ Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
 
  $$
  \begin{aligned}
-\curl \vec F=
- \begin{vmatrix}
+\curl \vec F= \begin{vmatrix}
    \vec\imath & \vec \jmath & \vec k\\
    \pdv{x} & \pdv{y} & \pdv{z} \\
    xy^2 & 2xy & 0
@@ -49,14 +48,12 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
 
  $$
  \begin{aligned}
-\curl \vec F&=
- \begin{vmatrix}
+\curl \vec F&= \begin{vmatrix}
    \vec\imath & \vec \jmath & \vec k\\[4pt]
    \pdv{x} & \pdv{y} & \pdv{z} \\[10pt]
    xyz& 5x^2y & -3x^2z
  \end{vmatrix}\\
- &=
-\vec \imath \ \qty[\pdv {(-3x^2z)}{y}-\pdv {5x^2y}{z}]
+ &=\vec \imath \ \qty[\pdv {(-3x^2z)}{y}-\pdv {5x^2y}{z}]
  +\vec \jmath \ \qty[\pdv {xyz}{z}-\pdv {(-3x^2z)}{x}] 
  +\vec k\ \qty[{\pdv {5x^2y}{x}-\pdv {xyz}{y}}]\\
  &=(xy+6xz)\vec\jmath + (10xy-xz)\vec k
@@ -82,8 +79,7 @@ Vypočtěte divergenci a rotaci funkce $\vec F=ax^2y^3\vec \imath + (x^2+y)\vec\
 
 $$\nabla\cdot \vec F=\pdv{x}(ax^2y^3)+\pdv{y}(x^2+y)=2axy^3+1$$
 
- $$\curl \vec F=
- \begin{vmatrix}
+ $$\curl \vec F= \begin{vmatrix}
    \vec\imath & \vec \jmath & \vec k\\
    \pdv{x} & \pdv{y} & \pdv{z} \\
    ax^2y^3 & x^2+y & 0
@@ -108,11 +104,9 @@ Pro vektorové pole $$\frac 45 x y^3\vec \imath + \frac 65x^2y^2\vec\jmath$$ naj
 Platí $\pdv {\varphi}{x}=\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2$.
 
 Odsud
-$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int \frac 45 xy^3 \,\mathrm dx
-=\frac 45 \frac {x^2}{2}y^3=\frac 25 x^2y^3+C_1(y)$$
+$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int \frac 45 xy^3 \,\mathrm dx=\frac 45 \frac {x^2}{2}y^3=\frac 25 x^2y^3+C_1(y)$$
 a
-$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 \,\mathrm dy
-=\frac 65 {x^2}\frac{y^3}3=\frac 25 x^2y^3+C_2(x).$$
+$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 \,\mathrm dy=\frac 65 {x^2}\frac{y^3}3=\frac 25 x^2y^3+C_2(x).$$
 Porovnáním musí být $C_1(y)=C_2(x)=C\in\mathbb R$ a
 $$\varphi(x,y)=\frac 25 x^2y^3+C,\quad C\in\mathbb R.$$
 
@@ -133,11 +127,9 @@ Pro vektorové pole $$\left(x^2+\frac 45 x y^3\right)\vec \imath + \left(\frac 6
 Platí $\pdv {\varphi}{x}=x^2+\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2+y$.
 
 Odsud
-$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int x^2+\frac 45 xy^3 \,\mathrm dx
-=\frac {x^3}3+\frac 45 \frac {x^2}{2}y^3=\frac {x^3}3+\frac 25 x^2y^3+C_1(y)$$
+$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int x^2+\frac 45 xy^3 \,\mathrm dx=\frac {x^3}3+\frac 45 \frac {x^2}{2}y^3=\frac {x^3}3+\frac 25 x^2y^3+C_1(y)$$
 a
-$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 +y \,\mathrm dy
-=\frac 65 {x^2}\frac{y^3}{3}+\frac 12 y^2=\frac 25 x^2y^3+\frac 12 y^2 + C_2(x).$$
+$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 +y \,\mathrm dy=\frac 65 {x^2}\frac{y^3}{3}+\frac 12 y^2=\frac 25 x^2y^3+\frac 12 y^2 + C_2(x).$$
 Porovnáním musí být $C_1(y)=\frac 12 y^2+C$ a $C_2(x)=\frac {x^3}3+C$, $C\in\mathbb R$ a
 $$\varphi(x,y)=\frac {1}{3}x^3+\frac 25 x^2y^3+\frac 12 y^2+C,\quad C\in\mathbb R.$$
 
@@ -159,11 +151,9 @@ Pro vektorové pole $$\left(y+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x
 Platí $\pdv {\varphi}{x}=y+\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2+x^2$.
 
 Odsud
-$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int y+\frac 45 xy^3 \,\mathrm dx
-=xy+\frac 45 \frac {x^2}{2}y^3=xy+\frac 25 x^2y^3+C_1(y)$$
+$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int y+\frac 45 xy^3 \,\mathrm dx=xy+\frac 45 \frac {x^2}{2}y^3=xy+\frac 25 x^2y^3+C_1(y)$$
 a
-$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 +x^2 \,\mathrm dy
-=\frac 65 {x^2}\frac{y^3}3+x^2y=\frac 25 x^2y^3+x^2y+ C_2(x).$$
+$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 +x^2 \,\mathrm dy=\frac 65 {x^2}\frac{y^3}3+x^2y=\frac 25 x^2y^3+x^2y+ C_2(x).$$
 Porovnáním musí být
 $$xy+C_1(y)=x^2y+C_2(x),$$
 což není možné splnit.

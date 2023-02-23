@@ -36,8 +36,7 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).$$
 Rovnice vektorového pole podél křivky má tvar
 $$\vec F(\vec r(t))=(-\sin t,\cos t).$$
 Skalárním součinem dostáváme
-$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
-(-\sin t,\cos t)\cdot (-\sin (t),\cos (t)) = \sin^2 t+\cos^2 t =1.
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-\sin t,\cos t)\cdot (-\sin (t),\cos (t)) = \sin^2 t+\cos^2 t =1.
 $$
 Odsud formálně $$\vec F\mathrm d\vec r=1\mathrm dt$$
 a integrál má tvar
@@ -52,8 +51,7 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(-1,1).$$
 Rovnice vektorového pole podél křivky má tvar
 $$\vec F(\vec r(t))=(-t,1-t).$$
 Skalárním součinem dostáváme
-$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
-(-t,1- t)\cdot (-1,1) = (-t)(-1)+(1-t)\cdot 1 =1.
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-t,1- t)\cdot (-1,1) = (-t)(-1)+(1-t)\cdot 1 =1.
 $$
 Odsud formálně $$\vec F\mathrm d\vec r=1\mathrm dt$$
 a integrál má tvar
@@ -68,13 +66,11 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(-2t,1).$$
 Rovnice vektorového pole podél křivky má tvar
 $$\vec F(\vec r(t))=(-t,1-t^2).$$
 Skalárním součinem dostáváme
-$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
-(-t,1- t^2)\cdot (-2t,1) = (-t)(-2t)+(1-t^2)\cdot 1 =t^2+1.
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-t,1- t^2)\cdot (-2t,1) = (-t)(-2t)+(1-t^2)\cdot 1 =t^2+1.
 $$
 Odsud formálně $$\vec F\mathrm d\vec r=(t^2+1)\mathrm dt$$
 a integrál má tvar
-$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=
-\qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=\qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
 $$
 
 
@@ -133,13 +129,11 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(1,2t).$$
 Rovnice vektorového pole podél křivky má tvar
 $$\vec F(\vec r(t))=(t^2,t+t^2).$$
 Skalárním součinem dostáváme
-$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
-(1,2t)\cdot (t^2,t+t^2) = 1\cdot t^2+2t\cdot(t+t^2)=3t^2+2t^3.
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(1,2t)\cdot (t^2,t+t^2) = 1\cdot t^2+2t\cdot(t+t^2)=3t^2+2t^3.
 $$
 Odsud formálně $$\vec F\mathrm d\vec r=(3t^2+2t^3)\mathrm dt$$
 a integrál má tvar
-$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt
-=\qty[t^3+\frac 12 t^4]_0^1=1+\frac 12 - 0 = \frac 32.$$
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt=\qty[t^3+\frac 12 t^4]_0^1=1+\frac 12 - 0 = \frac 32.$$
 
 ```
 
@@ -171,13 +165,11 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(1,3t^2).$$
 Rovnice vektorového pole podél křivky má tvar
 $$\vec F(\vec r(t))=(2t^3,t^2t^3)=(2t^3,t^5).$$
 Skalárním součinem dostáváme
-$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
-(1,3t^2)\cdot (2t^3,t^5) = 1\cdot 2t^3+3t^2\cdot t^5=2t^3+3t^7.
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(1,3t^2)\cdot (2t^3,t^5) = 1\cdot 2t^3+3t^2\cdot t^5=2t^3+3t^7.
 $$
 Odsud formálně $$\vec F\mathrm d\vec r=(2t^3+3t^7)\mathrm dt$$
 a integrál má tvar
-$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt
-=\qty[\frac 12 t^4 + \frac 38 t^8]_0^1=\frac 12 +\frac 38 - 0 = \frac 78.$$
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt=\qty[\frac 12 t^4 + \frac 38 t^8]_0^1=\frac 12 +\frac 38 - 0 = \frac 78.$$
 
 ```
 
@@ -212,8 +204,7 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).$$
 Rovnice vektorového pole $\vec F$ podél křivky $C$ má tvar
 $$\vec F(\vec r(t))=(0,2+\cos t).$$
 Skalárním součinem dostáváme
-$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
-(-\sin t,\cos t)\cdot (0,2+\cos (t)) = 2\cos t+\cos^2 t .
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-\sin t,\cos t)\cdot (0,2+\cos (t)) = 2\cos t+\cos^2 t .
 $$
 Odsud formálně $$\vec F\mathrm d\vec r=(2\cos t+\cos^2 t)\mathrm dt$$
 a integrál má tvar
@@ -246,8 +237,7 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).$$
 Rovnice vektorového pole $\vec F$ podél křivky $C$ má tvar
 $$\vec F(\vec r(t))=(0,2+\sin t).$$
 Skalárním součinem dostáváme
-$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
-(-\sin t,\cos t)\cdot (0,2+\sin (t)) = 2\cos t+\cos t \sin t.
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-\sin t,\cos t)\cdot (0,2+\sin (t)) = 2\cos t+\cos t \sin t.
 $$
 Odsud formálně $$\vec F\mathrm d\vec r=(2\cos t+\cos t\sin t)\mathrm dt$$
 a integrál má tvar

@@ -20,8 +20,7 @@ Určete, pro jakou hodnotu parametru $a\in \mathbb R$ křivkový integrál vekto
 
 Podmínka pro nezávislost na integrační cestě je $$
 \begin{aligned}
-0&=\nabla \times  \vec F
-=\begin{vmatrix}
+0&=\nabla \times  \vec F=\begin{vmatrix}
   \vec i & \vec j& \vec k \\
   \frac{\partial}{\partial x} &  \frac{\partial}{\partial y} &  \frac{\partial}{\partial z}\\
   ax^2y &  x^3+1 &  0
@@ -116,13 +115,10 @@ $$\frac{\mathrm d\vec r}{\mathrm dt}=(a,b)$$
 a dosazením křivky do vektorového pole
 $$\vec F(\vec r(t))=(6a^2t^2bt+at+bt,2a^3t^3+at)=(6a^2bt^3+at+bt,2a^3t^3+at).$$
 Skalární součin je daný vztahem
-$$\vec F\frac{\mathrm d\vec r}{\mathrm dt}=a(6a^2bt^3+at+bt)+b(2a^3t^3+at)
-=8a^3b t^3+a^2t+2abt.
+$$\vec F\frac{\mathrm d\vec r}{\mathrm dt}=a(6a^2bt^3+at+bt)+b(2a^3t^3+at)=8a^3b t^3+a^2t+2abt.
 $$
 Křivkový integrál je tedy roven
-$$\int_C \vec F\,\mathrm d\vec r=
-\int_0^1 8a^3b t^3+a^2t+2abt\,\mathrm dt=
-\qty[2a^3bt^4+\frac 12 a^2 t^2+abt^2]_0^1=2a^3b+\frac 12 a^2+ab.
+$$\int_C \vec F\,\mathrm d\vec r=\int_0^1 8a^3b t^3+a^2t+2abt\,\mathrm dt=\qty[2a^3bt^4+\frac 12 a^2 t^2+abt^2]_0^1=2a^3b+\frac 12 a^2+ab.
 $$
 Podle věty o nezávislosti křivkového integrálu na integrační cestě máme
 $$\varphi(a,b)-\varphi(0,0)=2a^3b+\frac 12 a^2+ab$$
@@ -147,11 +143,8 @@ Určete integrál $$\oint_C \vec F\,\mathrm d\vec r$$ po křivce, která je klad
 $$
 \begin{aligned}
   \oint_C \vec F\,\mathrm d\vec r
-  &=
-  \oint_C x^7\,\mathrm dx+ xy\,\mathrm dy\\&
-  =\int_0^1 \int_0^1 \frac{\partial}{\partial x}(xy)-\frac{\partial}{\partial y}(x^7) \,\mathrm dy\mathrm dx\\
-  &=\int_0^1 \int_0^1 y \,\mathrm dy\mathrm dx\\&
-  =\int_0^1 y \,\mathrm dy \times \int_0^1 \,\mathrm dx \\&= \left[\frac 12 y^2\right]_0^1 \times 1\\&= \frac 12
+  &=  \oint_C x^7\,\mathrm dx+ xy\,\mathrm dy\\&  =\int_0^1 \int_0^1 \frac{\partial}{\partial x}(xy)-\frac{\partial}{\partial y}(x^7) \,\mathrm dy\mathrm dx\\
+  &=\int_0^1 \int_0^1 y \,\mathrm dy\mathrm dx\\& =\int_0^1 y \,\mathrm dy \times \int_0^1 \,\mathrm dx \\&= \left[\frac 12 y^2\right]_0^1 \times 1\\&= \frac 12
 \end{aligned}
 $$
 

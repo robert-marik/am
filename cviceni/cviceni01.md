@@ -32,8 +32,7 @@ Vypočtěte následující parciální derivace.
 1. $\frac{\partial }{\partial y}(x^2y+2xy^3+x+1)=x^2+2x\cdot 3y^2+0+0=x^2+6xy$
 1. $\frac{\partial }{\partial x}(3x(3-x-2y))=\pdv x (9x-3x^2-6xy)=9-3\cdot 2x-6\cdot 1\cdot y=9-6x-6y$
 1. $\frac{\partial }{\partial y}(3x(3-x-2y))=3x\frac{\partial }{\partial y}(3-x-2y)=3x(-2)=-6x$ (pozor, ve videu je u tohoto příkladu překlep a zapomněl jsem derivovat člen $2y$)
-1. $\pdv {x} \sqrt{1-x^2-y^2}=\pdv {x} (1-x^2-y^2)^{\frac 12}=\frac 12 (1-x^2-y^2)^{-\frac 12} (0-2x-0)=
-  -\frac {x}{\sqrt{1-x^2-y^2}}$
+1. $\pdv {x} \sqrt{1-x^2-y^2}=\pdv {x} (1-x^2-y^2)^{\frac 12}=\frac 12 (1-x^2-y^2)^{-\frac 12} (0-2x-0)=  -\frac {x}{\sqrt{1-x^2-y^2}}$
 1. $\pdv {y} \sqrt{1-x^2-y^2}= -\frac {y} {\sqrt{1-x^2-y^2}}$ (z předchozího výpočtu a symetrie)  
 1. $\pdv {x} \frac x{x^2+y^2}=\frac{1(x^2+y^2)-x(2x+0)}{(x^2+y^2)^2}=\frac{y^2-x^2}{(x^2+y^2)^2}$ (derivace podílu)
 1. $\pdv{y} \frac x{x^2+y^2}=\pdv {y} x(x^2+y^2)^{-1}=x(-1)(x^2+y^2)^{-2}(0+2y)=-\frac{2xy}{(x^2+y^2)^2}$ (derivace konstantního násobku mocninné funkce s vnitřní složkou)
@@ -148,9 +147,7 @@ Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané tep
 
 Průměr dopředné a zpětné diference:
 $$
-  \frac{\frac{f(x)-f(x-h)}{h} + \frac{f(x+h)-f(x)}{h}}{2}=
-  \frac{\frac{f(x)-f(x-h)+f(x+h)-f(x)}{h}}{2}=
-\frac{f(x+h)-f(x-h)}{2h}
+  \frac{\frac{f(x)-f(x-h)}{h} + \frac{f(x+h)-f(x)}{h}}{2}=  \frac{\frac{f(x)-f(x-h)+f(x+h)-f(x)}{h}}{2}=\frac{f(x+h)-f(x-h)}{2h}
 $$
 
 ```

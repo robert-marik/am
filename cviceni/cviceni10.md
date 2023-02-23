@@ -3,13 +3,11 @@
 K cvičení je k dispozici [Jupyter zápisník s numerickými simulacemi](http://user.mendelu.cz/marik/aromamath/Autonomni_rovnice_a_systemy.html) zde představených modelů. Tento zápisník je možné si naklonovat a samostatně modifikovat příkazy nebo texty a zkoušet vlastní numerické simulace.
 
 <!--
-
 ### Instrukce k online výuce prosinec 2021
 
 * V úlohách bude podstatná schopnost sestavení diferenciální rovnice a umění detekovat, zda kde je pravá strana rovnice nulová, kde kladná  a  kde záporná. To je dostatečná informace k tomu, abychom dokázali odhalit stacionární body (to jsou stavy kdy je systém v rovnováze a do jednoho s těchto stavů časem dospěje), nestabilní stacionární body (stavy, kdy je systém v křehké rovnováze, která je narušena i malým výkyvem) a stabilní stacionární body (systém je v robustní rovnováze, která se po malých výchylkách sama automaticky obnovuje). V první úloze je možné uvažovat pravou stranu jako celek a zakreslit si situaci graficky. Ve druhé úloze je členů více a je výhodnější pravou stranu uvažovat jako rozdíl dvou funkcí a hledat průsečíky a intervaly, kdy je jedna funkce nad druhou a naopak. 
 * Ve třetí úloze si ukážeme, jak se dají namodelovat soustavy rovnic diferenciálních rovnic. Použijeme k tomu lehce představitelný případ konkurence populací v ekosystému. Kromě sestavení rovnice si ukážeme nástroj umožňující pohodlné modelování, jak se budou chovat řešení. (Význam tohoto nástroje je čistě pedagogický. V praxi je nutné aby toto modelování bylo stavebním kamenem nějaké celkové analýzy, zahrnující jednotlivé scénáře, pravděpodobnostní rozložení hodnot parametrů a podobně. Zde jakýkoliv interaktivní nástroj nemá šanci na uplatnitelnost.)
 * Stacionární body jsou u systémů to, co nás zajímá v první řadě. Skutečně, všechna ohraničená řešení systému v rovině konvergují k některému stacionárnímu bodu nebo okolo něj obíhají v cyklu. Proto si v poslední úloze ukážeme, jak se dá odhalit chování trajektorií v okolí stacionárního bodu nelineárního systému. Ukážeme si, jak systém linearizovat pomocí Jacobiho matice ve stacionárním bodě. Najdeme vlastní čísla této matice a pomocí nich určíme typ stacionárního bodu. To nám dodá informaci, zda si bod "přitáhne" všechny trajektorie ze svého okolí, zda je naopak odpuzuje, nebo zda se chová ještě nějak jinak. 
-
 -->
 
 ## Skladování stavebního recyklátu
@@ -200,14 +198,12 @@ $$
 ```
 
 <!--
-
 % Holling
 % https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=x*(1-x/2)-y*%20x/(1+x)&dydt=-0.2*y%20+%200.7%20*%20y%20*%20x/(1+x)&x=0,1.5,15&y=0,2,15&method=rk4&h=0.05&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.19553571428571428,0.7085714285714286%5D,%5B0.23839285714285716,0.8731100478468901%5D,%5B0.38571428571428573,0.477799043062201%5D
 
 %
 % Jezera
 % https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?O&S,29,F,80,10;H,0,T,290,100;M,0,T,130,200;R,0,T,325,280;O,0,T,490,230&S,H,S*15/2900;M,H,M*38/1180;H,R,H*68/850;R,O,R*85/116;O,s,O*99/393&The%20compartments%20represent%20levels%20of%20some%20pollutant%20in%20the%20Great%20Lakes.%20%28R%20%3D%20Erie%2C%20because%20E%20is%20not%20an%20allowed%20variable%20name.%29%20The%20model%20assumes%20that%20the%20initial%20concentration%20of%20the%20pollutant%20is%20the%20same%20in%20all%20the%20lakes%2C%20so%20the%20initial%20value%20is%20proportional%20to%20the%20lake%27s%20volume.%20No%20more%20of%20that%20pollutant%20is%20being%20introduced%2C%20and%20pure%20%28rain%29%20water%20flows%20in%20to%20the%20lakes%2C%20with%20the%20resulting%20mixture%20flowing%20from%20each%20lake%20into%20the%20next%2C%20and%20eventually%20to%20the%20ocean.%20From%20Fundamentals%20of%20Differential%20Equations%20%28Nagle%20and%20Saff%2C%201996%29%2C%20page%20317.
-
 -->
 
 
@@ -239,23 +235,19 @@ $$
 \end{aligned}
 $$
 a odsud 
-$$J(x,y)=
-\begin{pmatrix}
+$$J(x,y)=\begin{pmatrix}
   8xy& 4x^2+3y^2 \\ 3y^2 & 6xy-3
 \end{pmatrix}. 
 $$
 Ve stacionárním bodě dostáváme 
-$$J(1,1)=
-\begin{pmatrix}
+$$J(1,1)=\begin{pmatrix}
   8 & 7\\3&3
 \end{pmatrix}.
 $$
 Výpočtem determinantu dostáváme
-$$|J-\lambda I|=
-\begin{vmatrix}
+$$|J-\lambda I|=\begin{vmatrix}
   8-\lambda & 7 \\ 3 & 3-\lambda
-\end{vmatrix}
-=(8-\lambda)(3-\lambda)-21=\lambda^2-11\lambda +3.
+\end{vmatrix}=(8-\lambda)(3-\lambda)-21=\lambda^2-11\lambda +3.
 $$
 Kořeny jsou
 $$\lambda_{1,2}=\frac{11\pm\sqrt{121-12}}{2}$$

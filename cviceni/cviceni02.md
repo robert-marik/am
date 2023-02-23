@@ -170,13 +170,11 @@ $$\begin{aligned}
   \frac{\partial }{\partial y}\left(e^{3x}\right) &=0\\
 \end{aligned}$$
 a proto má Jacobiho matice tvar
-$$  J(x,y)=
-  \begin{pmatrix}
+$$  J(x,y)=  \begin{pmatrix}
     2x+y & x+6\\ 3e^{3x} & 0
   \end{pmatrix}.
 $$V bodě $(0,0)$ potom platí
-$$  J(0,0)=
-  \begin{pmatrix}
+$$  J(0,0)=  \begin{pmatrix}
     0 & 6\\ 3 & 0
   \end{pmatrix}.
 $$
@@ -200,8 +198,7 @@ této funkce jsou kružnice se středem v počátku, nakreslete obrázek s
 těmito vrstevnicemi a vyznačte do tohoto obrázku gradienty v bodech
 $A=(0,1)$, $B=(1,0)$ a $C=(1,1)$
 
-Uvažujte součinitel tepelné vodivosti $$\lambda =
-\begin{pmatrix}
+Uvažujte součinitel tepelné vodivosti $$\lambda =\begin{pmatrix}
   2&0\\0&3
 \end{pmatrix}$$
 a vypočtěte tok tepla v bodech $A$, $B$, $C$. Porovnejte směr tohoto toku se směrem gradientu a vysvětlete svá pozorování. Snaží se matice usměrnit teplo do  směru osy $x$ nebo do  směru osy $y$? Odpovídá situace spíše dřevu s podélným směrem v ose $x$ nebo v ose $y$?
@@ -215,17 +212,14 @@ a vypočtěte tok tepla v bodech $A$, $B$, $C$. Porovnejte směr tohoto toku se 
 Platí $$\pdv{T}{x}=-\frac 12 (x^2+y^2)^{-\frac 12}(2x)=-\frac{x}{\sqrt{x^2+y^2}}$$
 a ze symetrie 
 $$\pdv{T}{y}=-\frac{y}{\sqrt{x^2+y^2}}.$$
-Odsud $$\nabla T=\qty(-\frac{x}{\sqrt{x^2+y^2}},-\frac{y}{\sqrt{x^2+y^2}})^T
-=
--\frac 1{\sqrt{x^2+y^2}}(x,y)^T.$$
+Odsud $$\nabla T=\qty(-\frac{x}{\sqrt{x^2+y^2}},-\frac{y}{\sqrt{x^2+y^2}})^T=-\frac 1{\sqrt{x^2+y^2}}(x,y)^T.$$
 Tok tepla je
 $$\vec q=-\lambda \nabla T=\frac 1{\sqrt{x^2+y^2}}\begin{pmatrix}
   2&0\\0&3
 \end{pmatrix}
 \begin{pmatrix}
   x\\y
-\end{pmatrix}
-=\frac 1{\sqrt{x^2+y^2}} \begin{pmatrix}
+\end{pmatrix}=\frac 1{\sqrt{x^2+y^2}} \begin{pmatrix}
   2x\\3y
 \end{pmatrix}
 $$
@@ -244,10 +238,9 @@ ww:problems/gradient/12.pg
 
 https://youtu.be/A13omrC6i2I
 
-<div class=chart>
 
 $T$|$-30$|$-25$|$-20$|$-15$|$-10$|$-5$|$0$|$5$|$10$|$15$|$20$|$25$|$30$
---|---|---|---|---|---|--|-|-|--|--|--|--|--
+|--|---|---|---|---|---|--|-|-|--|--|--|--|--|
 $-30$|81.39|84.14|86.39|88.14|89.39|90.14|90.39|90.14|89.39|88.14|86.39|84.14|81.39
 $-25$|83.47|86.22|88.47|90.22|91.47|92.22|92.47|92.22|91.47|90.22|88.47|86.22|83.47
 $-20$|85.54|88.29|90.54|92.29|93.54|94.29|94.54|94.29|93.54|92.29|90.54|88.29|85.54
@@ -265,21 +258,6 @@ $30$|106.29|109.04|111.29|113.04|114.29|115.04|115.29|115.04|114.29|113.04|111.2
 Tabulka $T(x,y)$, vodorovně $x$, svisle $y$
 
 
-```
-
-
-<style>
-
-.chart td {padding-left:0.5em; padding-right:0.5em; }
-.chart td:nth-child(1){  
-  background-color:#0a5028;
-  color:white;
-
-}
-
-.chart tr { padding:5px;}
-
-</style>
 
 !["Termosnímek" k tabulce. Pozor na to, že v tabulce rostou hodnoty $y$ směrem dolů, ale v grafu nahoru.](gradient_num.png)
 

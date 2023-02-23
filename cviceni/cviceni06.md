@@ -31,8 +31,7 @@ $$
   \iint_\Omega xy^2\mathrm dx\mathrm dy
   &=\int_0^3x\,\mathrm dx \int _1^2 y^2 \,\mathrm dy
 \\&=\left[\frac {x^2}2\right]_0^3 \times \left[\frac 13 y^3 \right]_1^2
-\\&=\left[\frac 92-0\right]\times \left [\frac 13 2^3 - \frac 13 \right]
-=\frac 92 \times \frac 73 = \frac {21}2
+\\&=\left[\frac 92-0\right]\times \left [\frac 13 2^3 - \frac 13 \right]=\frac 92 \times \frac 73 = \frac {21}2
 \end{aligned}
 $$
 
@@ -65,9 +64,7 @@ $$
 
 $$
 \begin{aligned}
-  \iint_\Omega y^2\,\mathrm dx \mathrm dy
-  = \int_{-\frac a2}^{\frac a2} \,\mathrm dx \times \int_{-\frac b2}^{\frac b2}y^2\,\mathrm dy=a\times \left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}=a\times \left(\frac 13 \times \frac {b^3}{8} + \frac 13 \times \frac {b^3}{8}\right)=
-  \frac 1{12}ab^3
+  \iint_\Omega y^2\,\mathrm dx \mathrm dy = \int_{-\frac a2}^{\frac a2} \,\mathrm dx \times \int_{-\frac b2}^{\frac b2}y^2\,\mathrm dy=a\times \left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}=a\times \left(\frac 13 \times \frac {b^3}{8} + \frac 13 \times \frac {b^3}{8}\right)=  \frac 1{12}ab^3
 \end{aligned}
 $$
 
@@ -299,8 +296,7 @@ $$
 Přímým výpočtem dostáváme
 $$
 \begin{aligned}
-  \iint_{\Omega}y^2\,\mathrm dx\mathrm dy&=
-  \int_{0}^R \int_0^{2\pi} r^2\sin^2\varphi \times r\,\mathrm d\varphi \mathrm dr
+  \iint_{\Omega}y^2\,\mathrm dx\mathrm dy&=  \int_{0}^R \int_0^{2\pi} r^2\sin^2\varphi \times r\,\mathrm d\varphi \mathrm dr
   =\int_{0}^R  r^3  \mathrm dr \int_0^{2\pi}\sin^2\varphi \,\mathrm d\varphi
   =\left[\frac {r^4}{4}\right]_0^R \pi
   =\frac {\pi}{4} R^4,
@@ -315,8 +311,7 @@ To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že sn�
 ```
 
 
-<!--
-%
+<!--%
 
 %## Jacobiho matice pro polární souřadnice
 
@@ -328,6 +323,5 @@ To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že sn�
 %   \end{aligned}
 % \end{equation*}
 % mezi polárními a kartézskými souřadnicemi.
-
 -->
 

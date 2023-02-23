@@ -1,12 +1,6 @@
 # Diferenciální rovnice 
 
 
-
-<style>
-.volitelne {font-size:small;}
-h2 {clear:both;}
-</style>  
-
 > Anotace.
 >
 > * V přednášce se seznámíme s rovnicemi, obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
@@ -39,8 +33,7 @@ https://youtu.be/08uAuAgY-lw
 
 <div class='obtekat'>
 
-![Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,
- https://pixabay.com](hot.jpg)
+![Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,  https://pixabay.com](hot.jpg)
 
 </div>
 
@@ -100,9 +93,7 @@ https://youtu.be/08uAuAgY-lw
 
 <div class='obtekat'>
 
-![Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,
- se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot
- je úměrná míře znečištění.  https://pixabay.com](voda.jpg)
+![Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot  je úměrná míře znečištění.  https://pixabay.com](voda.jpg)
 
 </div>
 
@@ -147,8 +138,7 @@ https://youtu.be/08uAuAgY-lw
 
 <div class='obtekat'>
 
-![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: 
- https://pixabay.com](chirurg.jpg)
+![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com](chirurg.jpg)
 
 </div>
 
@@ -195,14 +185,10 @@ https://youtu.be/08uAuAgY-lw
 <div class='obtekat'>
 
 <!--
-![RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$
- Zdroj: Wikipedia](RC_circuit.png)
+![RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$  Zdroj: Wikipedia](RC_circuit.png)
  -->
 
-![Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby. 
- Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term
-Wood Moisture Monitoring Based on
-Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
+![Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
 
 </div>
 
@@ -225,8 +211,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 <div class='obtekat'>
 
-![Při intenzivním lovu může dojít ke zničení populace
- https://pixabay.com](kralik.jpg)
+![Při intenzivním lovu může dojít ke zničení populace  https://pixabay.com](kralik.jpg)
 
 </div>
 
@@ -403,12 +388,9 @@ manim:Diference|r_Ae2mGnfFs|Numerické řešení diferenciální ronvice je zpra
 
 <div class='obtekat'>
 
-![Eulerova metoda s\ velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou
- barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
+![Eulerova metoda s\ velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
 
-![Metoda Runge Kutta s\ velmi dlouhým krokem (modrou barvou, jde jasně
- vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou
- barvou.](rk.png)
+![Metoda Runge Kutta s\ velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.](rk.png)
 
 </div>
 

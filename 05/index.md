@@ -225,10 +225,7 @@ https://youtu.be/GeJgtBHy_sM
 
 \iffalse
 
-![Křivkový integrál druhého druhu. Výška plochy je v každém bodě
- křivky určena skalárním součinem tečného vektoru jednotkové délky a
- vektorem zadaného vektorového
- pole.](krivkovy_integral_druheho_druhu_1.png)
+![Křivkový integrál druhého druhu. Výška plochy je v každém bodě  křivky určena skalárním součinem tečného vektoru jednotkové délky a  vektorem zadaného vektorového  pole.](krivkovy_integral_druheho_druhu_1.png)
 
 \fi
 

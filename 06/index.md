@@ -40,9 +40,7 @@ https://youtu.be/DYySq6o6WTk
 
 <div class='obtekat'>
 
-![Deska s nekonstantní plošnou hustotou. Zdroj:
- https://www.flickr.com/photos/svacher, licence CC BY-NC-ND
- 2.0](table.jpg)
+![Deska s nekonstantní plošnou hustotou. Zdroj:  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0](table.jpg)
 
 </div>
 
@@ -87,8 +85,7 @@ https://youtu.be/DYySq6o6WTk
 
 <div class='obtekat'>
 
-![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji
- než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com](pipe.jpg)
+![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji  než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com](pipe.jpg)
 
 </div>
 

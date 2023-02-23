@@ -364,16 +364,6 @@ se projeví zvýšením teploty v místě, kde k zeslabení došlo.
 |Rovnice vedení tepla|Červené výrazy jsou si úměrné.|
 
 
-<style>
-
-td {padding:10px; text-align: center;}
-tr:nth-child(even) {color:green; background: #E9E9E9;}
-table {border-collapse: collapse; width:80%; margin:auto; margin-top:20px; margin-bottom:20px;}
-th {color:white; background: #555;}
-
-</style>
-
-
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
 
 **Numerické modelování.**
@@ -588,8 +578,6 @@ ylabel('t')
 -->
 
 
-</div>
-
 ## Vzdálenost a pojmy s ní související
 
 V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovském prostoru se ujistíme, že dokážeme dát přesný obsah tak běžným pojmům, jako vzdálenost nebo hranice množiny. Protože matematické pojetí těchto pojmů plně vystihuje a zobecňuje základní představu z běžného života, není v tuto chvíli nutné se učit jednotlivé definice. Jenom si rámcově odneste přehled, jak jsou tyto pojmy definovány a jaké pojmy vlastně používáme. V případě nutnosti se k těmto definicím můýžete kdykoliv vrátit. 
@@ -712,5 +700,3 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 * Přírodní zákony jsou formulovány buď přibližně, pomocí součinů, podílů a průměrných rychlostí, nebo přesně pomocí derivací a okamžitých rychlostí. Nám jde o detailní popis, tj. o přesnou fomrulaci.
 * Kvalitativní představa může být, že teplo teče do studenějšího místa a v místě, kam se dodává teplo, roste teplota. Toto je pouze hrubý model. Pomocí parciálních derivací tento děj umíme namodelovat kvantitativně. Můžeme si tak sestrojit model, porovnat s experimentem a přesvědčit se, že naše metody kvantitativního vyjádření fyzikálních zákonů jsou správné. Tím si potvrzujeme, že jsou správné naše představy o fungování materiálů.
 * V praxi často derivace počítáme pro funkce dané tabulkou. V tomto případě používáme numerickou aproximaci derivace. Nejčastěji pomocí centrální diference.
-
-		

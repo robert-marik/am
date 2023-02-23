@@ -21,7 +21,10 @@ přes obdélník $$
 \end{gathered}
 $$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -34,7 +37,7 @@ $$
 $$
 
 
-</div>
+```
 
 ## Kvadratický moment pro obdélník
 
@@ -54,7 +57,10 @@ $$
 \end{aligned}
 $$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 
 $$
@@ -65,7 +71,7 @@ $$
 \end{aligned}
 $$
 
-</div>
+```
 
 ## Integrál závislý na parametru
 
@@ -81,7 +87,10 @@ přes jednotkový čtverec $$
 $$
 v závislosti na parametru $n\geq 0$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -97,7 +106,7 @@ což porovnáme s očekávanými výsledky. Dalším využitím je působiště 
 $$\frac{I_2}{I_1}=\frac {\frac 13}{\frac 12}=\frac 23,$$
 tj. ve dvou třetinách hloubky.
 
-</div>
+```
 
 
 ## Integrál přes trojúhelník
@@ -112,7 +121,10 @@ $$  \iint_\Omega xy^2\,\mathrm dx \mathrm dy
 $$
 přes trojúhelník $\Omega$ s vrcholy v bodech $(0,0)$, $(1,0)$ a $(0,1)$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Rovnice přímky, ve které leží přepona trojúhelníka, je
 $$y=1-x$$ a trojúhelník tedy je možno zapsat soustavou nerovností
@@ -137,7 +149,7 @@ $$
 \end{aligned}
 $$
 
-</div> 
+``` 
 
 
 ## Integrál pod parabolou
@@ -164,7 +176,10 @@ $$
 $$
 Určete obsah a polohu těžiště této množiny.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -199,7 +214,7 @@ $$
 
 Obsah je $\frac 23$ a souřadnice těžiště jsou $\left[\frac 38,\frac 4{10}\right]$. Toto je možné porovnat s obsahem a souřadnicemi těžiště trojúhelníka, který vznikne nahrazením paraboly přímkou a tento trojúhelník má obsah $\frac 12$ a souřadnice těžiště $\left[\frac 13,\frac 13\right].$
 
-</div> 
+``` 
 
 
 ## Integrál přes čtvrtkruh
@@ -220,7 +235,10 @@ $$
 přes čtvrtkruh na obrázku (čtvrtina jednotkového kruhu v prvním kvadrantu).
 Určete obsah a polohu těžiště tohoto čtvrtkruhu.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 V polárních souřadnicích daných rovnicemi $$
 \begin{aligned}
@@ -257,7 +275,7 @@ Obsah je $\frac \pi 4$, což odpovídá čtvtině vzorce pro obsah jednotkového
 $$\frac {4}{3\pi}\approx 0.42,$$
 což odpovídá tomu, že těžište je posunuto doprava nahoru ve srovnání těžištěm trojúhelníka, který by vznikl nahrazením oblouku úsečkou.
 
-</div>
+```
 
 ## Kvadratický moment kruhu
 
@@ -265,7 +283,10 @@ https://youtu.be/OPqy2AU-SKU
 
 Vypočtěte kvadratický moment kruhu o poloměru $R$ vzhledem k ose procházející středem.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Vypočteme kvadratický moment kruhu daného v polárních souřadnicích nerovnicemi
 $$
@@ -291,7 +312,7 @@ kde při výpočtu integrálu přes proměnnou $\varphi$ využijeme nápovědu, 
 
 To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Devadesát šest procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
 
-</div>
+```
 
 
 <!--

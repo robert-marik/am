@@ -33,7 +33,10 @@ se děje rychlostí úměrnou povrchu návětrné strany pláště.
 1. Může hromada skončit i při neustálém přisypávání celá rozfoukaná?
 1. Mohou pracovníci navršit hromadu do libovolné výšky anebo pro velkou hromadu je již rozfoukávání rychlejší než přisypávání?
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Rychlost, s jakou se mění objem, je $\frac{\mathrm dV}{\mathrm dt}$. Rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 Podle zadání platí $$  \frac{\mathrm dV}{\mathrm dt} = R - k_0S$$
@@ -47,7 +50,7 @@ Protože $f(0)>0$, malá hromada vždy roste a proto nemůže skončit celá roz
 
 Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou. 
 
-</div>
+```
 
 
 
@@ -68,7 +71,10 @@ rychlostí úměrnou koncentraci.
 
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Rovnice má tvar
 $$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P,$$
@@ -76,7 +82,7 @@ kde $k_1$, $k_2$ a $k_3$ jsou kladné konstanty úměrnosti. Rovnici je možno z
 $$\frac{\mathrm dP}{\mathrm dt}=\Bigl(k_2-k_3 P\Bigr)-\Bigl(k_1 P^3\Bigr) $$
 s rozdílem klesající a rostoucí funkce na pravé straně. Tyto funkce mají jediný průsečík a proto má rovnice jediný stacionární bod. Tento bod je stabilní, protože pro vysoké hodnoty $P$ je pravá strana rovnice záporná (dominantní člen je $-k_1 P^3$) a pro malé hodnoty $P$ je pravá strana kladná (v nule je rovna konstantě $k_2$).
 
-</div>
+```
 
 
 ## Modely interagujících populací
@@ -99,7 +105,10 @@ Sestavte matematický model a otestujte jej numerickým experimentem na stabilit
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -111,7 +120,7 @@ $$
 [Online model.](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=3*x%20-%20x%5E2%20-%20x*y&dydt=2*y%20-%20y%5E2%20-%200.5%20*%20x%20*%20y&x=0,4,20&y=0,3,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.3,0.28328571428571436%5D,%5B0.20714285714285716,0.6434928229665071%5D,%5B2.664285714285714,2.158851674641148%5D,%5B3.1714285714285713,0.7533014354066987%5D,%5B1.7785714285714285,0.2115789473684213%5D)
 
 
-</div>
+```
 
 <!--
 
@@ -142,7 +151,10 @@ Vyjádřete tyto vztahy matematickým modelem.
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snížené úmrtnosti v případě, že puštík má přístup k potravě._
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -153,7 +165,7 @@ $$
 
 [Online model.](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x%20-%200.025*x-0.01*x*y&dydt=-0.1*y+0.05*x*y&x=0,10,20&y=0,40,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.7894736842105263,10.577142857142857%5D,%5B1.795774647887324,12.09377990430622%5D,%5B0.7394366197183099,22.830622009569378%5D)
 
-</div>
+```
 
 
 ### Kůň Převalského
@@ -173,7 +185,10 @@ _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
 _Podle Wikipedie kůň Převalského přežil jenom díky péči zoologických zahrad a z rodokmenu je zřejmé, že 70 procent jedinců tohoto druhu má původní předky ze zoologické zahrady v Praze._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -182,7 +197,7 @@ $$
 \end{aligned}
 $$
 
-</div>
+```
 
 <!--
 
@@ -209,7 +224,10 @@ $$
 $$
 má stacionární bod $(1,1)$. Najděte Jacobiho matici v tomto bodě, vlastní čísla této matice a určete typ stacionárního bodu.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Platí
 $$
@@ -243,6 +261,6 @@ Kořeny jsou
 $$\lambda_{1,2}=\frac{11\pm\sqrt{121-12}}{2}$$
  a oba jsou kladné. Ve stacionárním bodě proto je nestabilní uzel.
 
-</div>
+```
 
 ww:problems/autonomni_systemy/14.pg

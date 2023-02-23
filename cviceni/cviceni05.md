@@ -23,7 +23,10 @@ Tj. počítáme
 $$\int_{C_i} -y\,\mathrm dx + x\,\mathrm dy$$
 po třech zadaných křivkách $C_1$, $C_2$ a $C_3$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
 
@@ -101,7 +104,7 @@ Integrál fyzikálně znamená tok vektorového pole $(x,y)$ křivkou. Toto vekt
 Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce $C_1$ (kružnice) je tok v každém bodě kolmý ke křivce a stejně velký a proto je celkový tok snadné určit jako součin velikosti vektorového pole na křivce ($|\vec F|=1$) a délky křivky $\frac \pi 2$.
 
 
-</div>
+```
 
 
 ## Křivkový integrál druhého druhu po parabole
@@ -116,7 +119,10 @@ tj. počítáme
 $$\int_C x^2\,\mathrm dx + (x+y)\,\mathrm dy$$
 po zadané křivce $C$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
 
@@ -135,7 +141,7 @@ a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt
 =\qty[t^3+\frac 12 t^4]_0^1=1+\frac 12 - 0 = \frac 32.$$
 
-</div>
+```
 
 
 
@@ -151,7 +157,10 @@ tj. počítáme
 $$\int_C 2y\,\mathrm dx + x^2y\,\mathrm dy$$
 po zadané křivce $C$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
 
@@ -170,7 +179,7 @@ a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt
 =\qty[\frac 12 t^4 + \frac 38 t^8]_0^1=\frac 12 +\frac 38 - 0 = \frac 78.$$
 
-</div>
+```
 
 
 ww:problems/krivkovy_integral/09.pg
@@ -191,7 +200,10 @@ Vypočtěte tok vektorového pole $$\vec \Phi_1=(x+2)\vec\imath$$ jednotkovou kr
 **Návod:** Platí $$\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi$$
 a tento integrál je možno najít například grafickou cestou.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Vektorové pole teče směrem doprava a směrem doprava i zesiluje. Dá se čekat, že tok ven pravou polovinou kružnice bude větší než tok dovnitř levou polovinou kružnice a celkový tok bude nenulový.
 
 Vektorové pole je $$\vec \Phi_1=(x+2,0)$$ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole $$\vec F=(0,x+2).$$
@@ -209,7 +221,7 @@ $$\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos^2 t)\,\mathrm dt= \pi
 kde poslední Riemannův integrál není nutné počítat, protože integrál z první části je nulový díky geometrické interpretaci integrálu a periodicitě funkce $\cos t$ a integrál z druhého sčítance byl součástí zadání.
 
 
-</div>
+```
 
 
 ## Tok vektorového pole uzavřenou křivkou II
@@ -222,7 +234,10 @@ Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kr
 
 **Návod:** Platí $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0.$$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každé výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.
 
 Vektorové pole je $$\vec \Phi_2=(y+2,0)$$ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole $$\vec F=(0,y+2).$$
@@ -242,7 +257,7 @@ Integrál z prvního sčítance můžeme vypočítat pomocí primitivní funkce
 $$\int_0^{2\pi} 2\cos x\,\mathrm dx=\qty[2\sin x]_0^{2\pi}=2\sin(2\pi)-2\sin 0 =0$$ a integrál z druhého sčítance je nulový, proto je nulový i celý integrál.
 $$\int_C\vec F\mathrm d\vec r=0$$
 
-</div>
+```
 
 ## Křivkový integrál a tok graficky
 

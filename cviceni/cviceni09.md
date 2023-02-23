@@ -18,7 +18,10 @@ Množství radioaktivního materiálu se snižuje rychlostí úměrnou tomuto mn
 1. Napište vhodný matematický model a vyřešte jej. 
 2. Určete dobu, za kterou se množství radioaktivního materiálu sníží na polovinu. 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. Modelem je rovnice $$\frac{\mathrm dy}{\mathrm dt}=-ky$$ s jedním řešením 
 $$y=e^{-kt}$$ a obecným řešením
@@ -30,7 +33,7 @@ $$kT=\ln 2$$
 a
 $$T=\frac 1k \ln 2.$$ Tato hodnota se nazývá poločas rozpadu a je $\ln2$ násobkem převrácené hodnoty rozpadové konstanty $k$.
 
-</div>
+```
 
 
 ## Radioaktivní rozpad a radon v budovách
@@ -55,7 +58,10 @@ V zemích s přirozenou radioaktivitou je nebezpečím radon. Na rozdíl od osta
 
 _Více viz [Radon in the environment](http://www.nat.vu.nl/environmentalphysics/REAL%20Experiments/Radon/Radon_Theory.html)._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 1. Je-li $q$ rychlost s jakou radon proniká do budovy, $k$ rozpadová konstanta a $d$ konstanta úměrnosti charakterizující intenzitu s jakou plyn uniká difuzí z budovy, je modelem rovnice $$\frac{\mathrm dy}{\mathrm dt}=q-ky-dy,$$ nebo po úpravě
 $$\frac{\mathrm dy}{\mathrm dt}=q-(k+d)y.$$
 2. Stacionární řešení je $$y=\frac{q}{k+d},$$ což zjistíme, pokud do modelu za derivaci dosadíme nulu a vyřešíme vzhledem k $y$.
@@ -74,7 +80,7 @@ $$ \frac {q}{k+d} - y = Ke^{-(k+d)t}$$
 a
 $$y=\frac {q}{k+d} - Ke^{-(k+d)t}.$$ 
 4. Izolace sníží rychlost s jakou radon prostupuje do budovy a sníží tedy konstantu $q$. Větrání zvýší rychlost difuze ven a zvýší koeficient $d$. Každý z těchto efektů nezávisle sníží čitatel resp. zvýší jmenovatel podílu $$\frac {q}{k+d},$$ což vede k menší hodnotě. Hodnota ve stacionárním stavu klesne.
-</div>
+```
 
 ## Časový rozestup mezi trolejbusy
 
@@ -103,7 +109,10 @@ _Podle knihy P.  Blanchard,
 R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 (2006), 828 pp._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Situaci je možno modelovat diferenciální rovnicí
 $$ 
@@ -154,7 +163,7 @@ veřejné dopravy jezdit "jak jim to vyjde". Situace by směřovala k
 tomu, že cestující budou nejprve dlouho čekat na trolejbus a nakonec
 přijede několik trolejbusů těsně za sebou. 
 
-</div>
+```
 
 
 ## Pásová brzda
@@ -178,7 +187,10 @@ Poznámky.
 * Exponenciální růst využívají arboristé u spouštěcího bubnu nebo námořníci u ráhnové brzdy. Na principu více brzd spojených za sebou pracuje slaňovací osma a její zdokonalené varianty. V tomto případě je materiálem kov s nízkým koeficientem tření, které se vyrovná několika otáčkami. Počtem otoček je možné regulovat účinnost.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. Jedná se o klasickou homogenní lineární diferenciální rovnici s konstantním koeficientem. Jedno řešení je $$T=e^{\mu\theta}$$ a obecné řešení $$T=Ce^{\mu\theta}.$$ Pro $\theta = 0$ dostáváme $T=C$ a je-li $T_0$ tah na jenom konci (méně namáhaném), je tah na druhém konci $$T=T_0 e^{\mu\theta}.$$ Tah se tedy zvýší multiplikativním faktorem $e^{\mu\theta}.$ Pokud brzdné účinky definujeme jako podíl tahů na obou koncích, dostáváme 
 $$\frac{T(\theta)}{T_0}=e^{\mu\theta}$$ a tento podíl roste exponenciálně s úhlem $\theta$.
@@ -194,7 +206,7 @@ Postupně tedy poklesne tahová síla o 44 procent (půlotáčka), o 70 procent 
 $e^{\mu\theta_1}$ a u druhé násobkem $e^{\mu\theta_2}$, vynásobením těchto faktorů s pomocí vzorce pro součin exponenciálních výrazů se stejným základem (mocniny o stejném základu se násobí tak, že se sčítají exponenty) dostáváme
 $$e^{\mu\theta_1}e^{\mu\theta_2}=e^{\mu(\theta_1+\theta_2)}.$$ Tah se tedy mění s faktorem odpovídajícím součtu úhlů, což bylo dokazováno.
 
-</div>
+```
 
 
 <!-- https://pixabay.com/photos/abseiling-adventure-carabiner-1842180/ -->
@@ -226,7 +238,10 @@ Ukažte, že stacionární stav je robustní (roven $T_0=\frac\gamma k$ a nezáv
 4. Najděte vlastní čísla autonomního systému vytvořeného v tomto modelu a okomentujte, jak se budou chovat řešení. Ukažte, že parametry systému je možné shluknout do jednoho bezrozměrného parametru, jehož hodnota dokáže odlišit kvalitativně různá chování systému. Všimněte si, že situace je skoro stejná jako u soustavy popisující [kmity tlumeného oscilátoru v přednášce](../09/#mechanick%C3%BD-oscil%C3%A1tor).
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. Modelem je rovnice $$\frac{\mathrm dT}{\mathrm dt}=aP+S-bT$$ a stacionární řešení pro konstantní výkon $P$ získáme řešením rovnice
 $$0=aP+S-bT,$$
@@ -278,5 +293,5 @@ Pokud je $b^2-4ak>0$, jsou oba kořeny reálné záporné a ve stacionárním bo
 $$\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}P\\T\end{pmatrix}=\begin{pmatrix}0&-k\\a&-b\end{pmatrix}\begin{pmatrix}P\\T\end{pmatrix}+\begin{pmatrix}kT_0\\S\end{pmatrix}.$$
 Až na konstantní člen na pravé straně je systém stejný jako systém pro mechanický oscilátor. Přítomnost konstantního člene způsobí, že stacionární bod není v počátku, ale je posunutý.
 
-</div>
+```
 

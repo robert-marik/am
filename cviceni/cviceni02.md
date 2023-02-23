@@ -17,7 +17,10 @@ https://youtu.be/NFymct4-4jQ
 Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
 $$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Přímým použitím vzorce pro lineární aproximaci dostáváme
 $$
@@ -25,7 +28,7 @@ W=-20.2+1.289(T-(-11))-0.163(v-26)=-20.2+1.289(T+11)-0.163(v-26),
 $$
 přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kilometry za hodinu).
 
-</div>
+```
 
 
 ## Parciální derivace, gradient
@@ -34,7 +37,10 @@ https://youtu.be/Gnl5liHh2fA
 
 Určete gradient funkcí $z=ax^2y-2xy^2$ a $h=\frac {ax}{y^2}+5x^3y^2$, kde $a\in\mathbb R$ je reálný parametr.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -47,7 +53,7 @@ $$
   \end{aligned}
 $$
 
-</div>
+```
 
 ## Gradient funkce s vrstevnicemi ve tvaru kružnic
 
@@ -57,10 +63,13 @@ https://youtu.be/irOsyX_k620
 
 Určete gradient funkce $z=x^2+y^2$ a zkontrolujte, že je v každém bodě kolmý ke kružnici se středem v počátku. Využijte toho, že spojnice bodu na kružnici se středem kružnice je kolmá k této kružnici. 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 $$\begin{aligned} \pdv{z}{x} &= 2x\\ \pdv{z}{y} &= 2y\\ \nabla z &= (2x, 2y) = 2x\vec \imath + 2y\vec \jmath \end{aligned}$$
 Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spojnice se středem a tedy je kolmý k vrstevnici.
-</div>
+```
 
 ## Gradient funkce s paprskovitými vrstevnicemi
 
@@ -68,7 +77,10 @@ https://youtu.be/OeEuQqRGeBY
 
 Určete gradient funkce $z=\mathop{\mathrm{arctg}} \frac yx$ a zkontrolujte, že je v každém bodě tečný ke kružnici se středem v počátku. Využijte toho, že tečna je kolmá na poloměr.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -79,7 +91,7 @@ $$
 $$
 
 Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$. Proto je tečný ke kružnici.
-</div>
+```
 
 
 
@@ -99,7 +111,10 @@ Pro funkci $f(x,y)=x^2+\frac x{y^2}-6$ najděte
 
 _V tomto příkladě ukazujeme, že někdy je vhodné úlohu řešit v rámci obecnější teorie. Zde v podúkolu číslo 7 vlastně najdeme lineární aproximaci relativně komplikované funkce jedné proměnné (nalezené v podúkolu 6). To se dá udělat prostředky diferenciálního počtu funkcí jedné proměnné, ale výpočet by byl poměrně nepříjemný, protože by bylo nutno derivovat funkci s nepříjemnou odmocninou. Alternativa je najít tečnou rovinu k funkci více proměnných z našeho zadání a příslušný řez této tečné roviny bude tečnou k vrstevnici. Použitý aparát je sice pokročilejší (používáme funkce více proměnných tam, kde by stačily funkce jedné proměnné), ale početní náročnost je nižší. Technicky je derivování nepříjemné odmocniny ze zlomku nahrazeno derivováním polynomu._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. $\nabla f=\left(2x+\frac 1{y^2},-2\frac x{y^3}\right)$
 1. $\nabla f(2,1)=(5,-4)$
@@ -121,7 +136,7 @@ $$
   a proto
   $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$. Všimněte si, že jsme **nepotřebovali aproximovanou funkci $\sqrt{\frac{x}{6-x^2}}$ vůbec derivovat**. To je výhoda, protože derivace odmocniny z podílu se nepočítá zcela příjemně. Namísto toho jsme využili výsledek z teorie funkce více proměnných. Přitom se musela využít nadřazená teorie, ale k výpočtu nebylo třeba derivovat nic horšího, než mocninnou funkci.
 
-</div>
+```
 
 ww:problems/gradient/01.pg
 
@@ -142,7 +157,10 @@ jednotlivých komponent vektorové funkce jsou zapsány do řádků matice.
 
 Najděte Jacobiho matici pro funkci $$\vec F(x,y)=(x^2+xy+6y)\vec i + e^{3x}\vec j$$ a poté hodnotu této matice v bodě $(0,0)$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Platí
 $$\begin{aligned}
@@ -163,7 +181,7 @@ $$  J(0,0)=
   \end{pmatrix}.
 $$
 
-</div>
+```
 
 
 ww:problems/gradient/07.pg
@@ -189,7 +207,10 @@ Uvažujte součinitel tepelné vodivosti $$\lambda =
 a vypočtěte tok tepla v bodech $A$, $B$, $C$. Porovnejte směr tohoto toku se směrem gradientu a vysvětlete svá pozorování. Snaží se matice usměrnit teplo do  směru osy $x$ nebo do  směru osy $y$? Odpovídá situace spíše dřevu s podélným směrem v ose $x$ nebo v ose $y$?
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Platí $$\pdv{T}{x}=-\frac 12 (x^2+y^2)^{-\frac 12}(2x)=-\frac{x}{\sqrt{x^2+y^2}}$$
 a ze symetrie 
@@ -210,7 +231,7 @@ $$\vec q=-\lambda \nabla T=\frac 1{\sqrt{x^2+y^2}}\begin{pmatrix}
 $$
 Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\frac 1{\sqrt{2}}(2,3)^T$. Porovnáním s gradientem $\nabla T(A)=-(0,1)^T$, $\nabla T(B)=-(1,0)^T$ a $\nabla T(C)=-\frac 1{\sqrt 2}(1,1)^T$ vidíme, že v bodech $A$  a $B$ je tok proti směru gradientu, v bodě $C$ se tok stáčí do směru osy $y$. Protože ve ose $y$ má dřevo větší vodivost, jedná se o podélný směr. To je ale vlastně vidět už ze zadané matice.
 
-</div>
+```
 
 
 ww:problems/gradient/10.pg
@@ -244,7 +265,7 @@ $30$|106.29|109.04|111.29|113.04|114.29|115.04|115.29|115.04|114.29|113.04|111.2
 Tabulka $T(x,y)$, vodorovně $x$, svisle $y$
 
 
-</div>
+```
 
 
 <style>
@@ -268,7 +289,10 @@ Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku
 
 <!-- https://sagecell.sagemath.org/?z=eJyVU9uOmzAQfUfiH0abl5BNssA2UrURb_sJeYtSyQuT4AA2NQZhvr7HySatdlu1RQLNmDNnzlw8Zqvn-GXz8hwT0YyU6KwYWElqeJLUGu3fhpXiMHB3bBjsx3FJzh0oA7IrT0YWNPdH0dbzNEZOlbjEV4a7GoxhEAY7wJP4a7qK13GyGMf1t5QeKV5_STYL52gFM002Kf7A3YJncHmpIaQQVsA5sWLTn7lhUnwWle7p2KsqB2CA_S4VMWHQ9U0WQ8s_PjNqhRENW9NTX4hBnCVYkYIandOkRKkLJZHXK0Eh2e4RGRZGqGLeyYnnuyj6c7bZtYCHSSBIsRIPdGWE6IFrpILlWZOnJI5pQUb3IN6tF3Cjv7BOQlfAl2iyAC1aAZXcsZUKXiM7LzgM2lzX2swxN-eWuwjRJyOOZLmttXUecQE0oqVSW_qwDh7bL-lNmAFsXSkKqU4klWXT_hY5uLIWE-aFqTCGWLj3BKD4WcCnMMNHNqxynNzRqOJNV72XuC_GZeEOGdCFZGXRoqdNdKEaXKtztnT7dcG_ZvskJuxBTMlhe-2ZPPaTX3BhZc4eZHU1Zqs5vc6TZRItihE76e0UtqPrQgNzAborMP0FmN6BnqzUdUFahcH3Xg586_dFdnQve3C3W4HxV1YbPXCJq6ZrjE6TfjNiqnrch1sxH-i8Yv9x0f_RIeQHCMIuJQ==&lang=octave&interacts=eJyLjgUAARUAuQ== -->
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Pomocí centrální diference odhadneme parciální derivace pro $x=20$ a $y=5$.
 $$\frac{\partial T}{\partial x}\approx \frac{98.67-102.67}{2\times 5}=-0.4$$
@@ -276,7 +300,7 @@ $$\frac{\partial T}{\partial y}\approx \frac{102.99-98.84}{2\times 5}=0.415$$
 Gradient je $$\nabla T=\begin{pmatrix} -0.400\\ 0.415\end{pmatrix}.$$
 Směřuje tedy doleva nahoru. To koresponduje s obrázkem, v bodě $x=20$ a $y=5$ teplota roste směrem doleva a nahoru.
 
-</div>
+```
 
 
 ww:problems/gradient/gradient_numericky.pg

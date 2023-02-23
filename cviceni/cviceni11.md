@@ -12,7 +12,10 @@ Ukažte, že úloha
 $$y''-my=0, \quad y(0)=0=y(1), \ m>0$$
 má pouze nulové řešení.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Charakteristcká rovnice je $$\lambda^2-m=0$$ s reálnými kořeny $\lambda_{1,2}=-\sqrt m$.
 Obecným řešením je funkce 
@@ -29,7 +32,7 @@ a
 $C_1=0$. Poto však $C_2=-C_1=0$ a řešení se redukuje na 
 $$y(t)=0 e^{\sqrt m t} + 0 e^{-\sqrt m t}=0$$
 tj. na konstantní nulovou funkci.
-</div>
+```
 
 ## Okrajová úloha pro rovnici žebra chladiče
 
@@ -41,7 +44,10 @@ Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra
 * Ze zkušenosti očekáváme, že pro materiál, který lépe vede teplo, bude konec chladiče více horký. Teplota jako funkce polohy bude klesat pomaleji. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí. 
 * Ze zkušenosti očekáváme, že pokud bude teplo intenzivněji vyzařováno do okolí, bude teplota na konci nižší. Při pomalejším vyzařování (například světlá barva chladiče a izolující nános prachu) bude teplota na konci vyšší. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí. 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Jedná se o nehomogenní rovnici 
 $$\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = -\frac {h}{\lambda} T_0.$$ 
@@ -67,7 +73,7 @@ Pokud je teplo intenzivněji vyzařováno do okolí, je vyšší hodnota $h$. Pr
 
 Pro zadané pevné $x$ a kladné $C$ je funkce $$T=T_0+C e^{-\sqrt{\frac h\lambda}x}$$ rostoucí funkcí proměnné $\lambda$ a klesající funkcí proměnné $h$. Řešení úlohy se tedy chová v souladu s očekáváním.
 
-</div>
+```
 
 ## Separce proměnných ve vlnové rovnici, kmity struny
 

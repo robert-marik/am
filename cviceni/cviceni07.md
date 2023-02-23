@@ -13,7 +13,10 @@ https://youtu.be/-VCnGpRz3K0
 
 Určete, pro jakou hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Podmínka pro nezávislost na integrační cestě je $$
 \begin{aligned}
@@ -51,7 +54,7 @@ Porovnáním dostáváme kmenovou funkci $$\varphi (x,y)=x^3y+y+C,$$ kde $C$ je 
 $$\int _C \vec F\mathrm d\vec r=\varphi(1,2)-\varphi(0,0)=2+2-0=4.$$
 
 
-</div>
+```
 
 ## Křivkový integrál pomocí kmenové funkce 2
 
@@ -62,7 +65,10 @@ $$\int (6x^2y+x+y)\,\mathrm dx+(mx^3+x)\,\mathrm dy$$ nezávislý na
 integrační cestě v $\mathbb R^2$? Vypočtěte hodnotu tohoto integrálu
 po křivce z bodu $(2,1)$ do bodu $(1,3)$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Podmínka pro nezávislost na integrační cestě je $$\pdv{y}\qty(6x^2y+x+y)=\pdv{x}\qty(mx^3+x).$$
 Po výpočtu derivací dostáváme
@@ -84,7 +90,7 @@ Integrál po křivce  z bodu $(2,1)$ do bodu $(1,3)$
 má hodnotu
 $$\varphi(1,3)-\varphi(2,1)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
 
-</div>
+```
 
 
 ## Kmenová funkce pomocí křivkového integrálu
@@ -98,7 +104,10 @@ $\vec F=(6x^2y+x+y,2x^3+x)$ má kmenovou funkci. Vypočtěte z definice křivkov
 Toto je metoda, jak určit skalární potenciál z numerických dat. Pokud je vektorové pole dáno numericky, je hledání skalárního potenciálu integrováním těžce realizovatelné. Ale derivováním a výpočtem rotace je jednoduché zkontrolovat podmínku existence skalárního potenciálu a poté se dá hodnota skalárního potenciálu v libovolném bodě počítat pomocí křivkového integrálu vedoucího z počátku do daného bodu.
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Platí $$\pdv{y}\qty(6x^2y+x+y)=6x^2+1=\pdv{x}\qty(2x^3+x)$$
 a proto kmenová funkce existuje.
 
@@ -122,7 +131,7 @@ $$\varphi(a,b)=2a^3b+\frac 12 a^2+ab+\varphi(0,0),$$
 neboli (po přejmenování proměnných a zavedení konstanty $C$ místo $\varphi(0,0)$)
 $$\varphi(x,y)=2x^3y+\frac 12 x^2+xy+C.$$
 
-</div>
+```
 
 ## Greenova věta
 
@@ -130,7 +139,10 @@ https://youtu.be/J6BVkOzg0mg
 
 Určete integrál $$\oint_C \vec F\,\mathrm d\vec r$$ po křivce, která je kladně orientovanou hranicí jednotkového čtverce s vrcholy v bodech $(0,0)$, $(1,0)$, $(0,1)$, $(1,1)$ pro vektorovou funkci $$\vec F=x^7\vec i+xy\vec j.$$
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$
 \begin{aligned}
@@ -143,7 +155,7 @@ $$
 \end{aligned}
 $$
 
-</div>
+```
 
 ## Rovnice vedení tepla v materiálech různých vlastností
 
@@ -156,11 +168,14 @@ $$c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}
 Za jakých okolností je možno veličiny $\lambda_x$ a $\lambda_y$ napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace? 
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být homogenní. Závislost na poloze nesmí být ani zprostředkovaná přes teplotu. Tyto veličiny tedy nesmí být ani funkcemi teploty. Jinými slovy, konstanta úměrnosti ve Fourierově zákoně se nesmí měnit s teplotou, vztah z Fourierova zákona musí být přesně lineární a takové materiály se nazývají materiály s lineární materiálovou odezvou (zkráceně lineární materiály). Veličiny  $\lambda_x$ a $\lambda_y$  se dají napsat před vnější derivace pouze pokud je materiál homogenní a lineární.
 
-</div>
+```
 
 
 ## Stacionární vedení tepla v žebru chladiče
@@ -181,7 +196,10 @@ rozdílu teploty v daném místě a teploty okolního vzduchu. (Koeficient
 úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte
 stacionární děj.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
 
@@ -193,5 +211,5 @@ Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, 
 
 Máme rovnici, kde neznámou je funkce a v rovnici figuruje druhá derivace této funkce. Takové rovnice se naučíme řešit na konci semestru. To nám odpoví na otázku, zda teplota bude podél chladiče klesat lineárně, nebo exponenciálně či nějak jinak.
 
-</div>
+```
 

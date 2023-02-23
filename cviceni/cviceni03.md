@@ -16,7 +16,10 @@ https://youtu.be/bdnxbITOIrM
 1. Vypočtěte divergenci vektorového pole v bodě $(2,1)$ a podle toho, zda je kladná nebo záporná rozhodněte, zda tok v daném bodě sílí nebo slábne.
 1. Předpokládejme, že dané vektorové pole reprezentuje stacionární tok. Je v bodě $(2,1)$ zdroj nebo spotřebič?
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. $\nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2)
 =2xy+(0+2y)=2y(x+1)$
@@ -24,7 +27,7 @@ https://youtu.be/bdnxbITOIrM
 1. $\nabla\cdot\vec F(2,1)=2\cdot 1 \cdot(2+1)=6>0$. Divergence je kladná a proto se tok zahušťuje.
 1. Zdroj (kladná divergence).
 
-</div>
+```
 
 ## Divegrence vektorového pole s parametrem
 
@@ -35,13 +38,16 @@ https://youtu.be/zwYPRlEIrHI
   $a\in\mathbb R$ je reálný parametr.
 1. Určete hodnotu parametru $a$ tak, aby pole bylo v bodě $(-1,2)$ nezřídlové, tj. aby mělo nulovou divergenci v bodě $(-1,2)$.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. $\nabla \cdot \vec F=\pdv{x}(ax^3y^2)+\pdv{y}(3x^2y)
 =3ax^2y^2+3x^2=3x^2(ay^2+1)$
 1. $\nabla \cdot \vec F (-1,2)=3(-1)^2(a\cdot 2^2+1)=3(4a+1)$ a $\nabla \cdot \vec F (-1,2)=0$ pokud $3(4a+1)=0$, tj. $a=-\frac 14$.
 
-</div>
+```
 
 ## Rovnice vedení tepla v dvourozměrném materiálu
 
@@ -64,7 +70,10 @@ Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $
 1. Vypočtěte divergenci toku tepla, tj. $\nabla\cdot(-k \cdot \nabla T).$
 1. V desce nejsou zdroje tepla. Ochlazuje se deska uprostřed, nebo otepluje?
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. Gradient je vektor složený z parciálních derivací. $$\nabla T=\qty(
   4(2x-y)+4x^3,-2(2x-y))^T$$ Tok je tenzor vodivosti maticově vynásobený s gradientem teploty a faktorem $(-1)$.
@@ -100,7 +109,7 @@ $$
 
 [Sage](https://sagecell.sagemath.org/?z=eJxNT8GOwiAUvJPwDy_uBRQ3anQPm_QfNllvTU3Y8qrYCoZCF_z6hUN1SUiGycwwM0nHFhHSggO8gcJOG90i3J29oTGpvVByZFEkDhWw3TKuEz_tYAXxtC8Gj_fBeklJX92kdzqyut6LbSPqrfhomhyaRaMNbY71OBQ9DgZhskpPdvSaEkrOTiqNxlfH9xmy4izemaDE275a98uZgNfJNWxPSU5Ed0bTYqV017FM1ptGRL56PnOxvCTvfEqLNQjQRmFMMMG3PCNI-Er-Yk2AEaHV4xCuGqwCE4ZUCnfWgc4eYHMbkWPKZbHacPGK_wfZQRw4_8y_P-yPkw80GqY0Dqj6kMHdtj5QUvaMF_vLNP8D8_-DMQ==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-</div>
+```
 
 <!--
 % var('x,y')
@@ -123,7 +132,10 @@ https://youtu.be/MnThGZphPps
   pokud jsou materiálové konstanty nezávislé na poloze (homogenní
   materiál) a na teplotě (lineární materiál).
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 Pomůže [cheatsheet](https://github.com/robert-marik/apl-slidy/blob/master/cheatsheet/cheatsheet-AM.pdf)
 
@@ -134,6 +146,6 @@ Pomůže [cheatsheet](https://github.com/robert-marik/apl-slidy/blob/master/chea
 
      Ortotropní: $\varrho c \pdv{T}{t} = k_x\pdv[2]{T}{x}+k_y\pdv[2]{T}{y}+k_z\pdv[2]{T}{z}$
 
-</div>
+```
 
 ww:problems/difuzni_rce/napis_rovnici.pg

@@ -29,13 +29,16 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
 
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar
 $$\dv {L}{t}=k (L_{\max}-L).$$
 Konstanta $k$ vyjadřuje rychlost s jakou roste délka při jednotkovém rozdílu mezi aktuální délkou a délkou maximální.
 
 
-</div>
+```
 
 
 ### Kontaminace a čištění
@@ -50,10 +53,13 @@ modelu.
 _Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na změně podílejí dva procesy a jejich účinek se sčítá. Příklad navíc připomíná, jak se pracuje se změnou vyjádřenou procenty. Toto je používané například při úročení spojitým úrokem. Pokud pokles změníme na růst, tj. pokud změníme
   znaménka u derivace, máme okamžitě model růstu financí na účtu, na kterém se pravidelně připisuje úrok a k tomu se přidává fixní úložka._
 
-<div class=reseni> Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+ Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
 $$\dv {y}{t}=-0.08y-30.$$
 
-</div>
+```
 
 
 <!--
@@ -72,11 +78,14 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 % \textit{Toto je asi nejdůležitější rovnice pro modelování biologických jevů. Používá se při modelování vývoje obnovitelných zdrojů a bývá modifikována pro konkrétní případy podle toho, jak populace interaguje s okolím.}
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 % Funkce $f(x)=rx\left(1-\frac xK\right)$ je kvadratická funkce s nulovými body $x=0$ a $x=K$, vrcholem uprostřed mezi nulovými body (tj. pro $x=\frac K2$) a parabola je otočená vrcholem nahoru. Proto je napravo od $x=K$ záporná. To odpovídá tomu, že populace s velikostí přesahující nosnou kapacitu v dlouhodobém horizontu vymírá.
 
 % Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\left(1-\frac xK\right)$ o $h$ dolů. Pokud posuneme hodně, dostane se celá parabola pod osu $x$ a funkce bude pořád záporná. Kritická hodnota je v situaci, kdy mizí možnost, že $f_h(x)$ má body kde je kladná a populace se může rozvíjet. To nastane,  pokud se vrchol paraboly dostane na osu $x$, tj. $h$ je rovno funkční hodnotě funkce $f(x)$ v bodě $x=\frac K2.$
-% </div>
+% ```
 
 -->
 
@@ -91,10 +100,13 @@ Populace jelenů v národním parku přibývá rychlostí 10\% za
 rok. Správa parku každý rok odebere 50 jedinců. Napište
 matematický model pro velikost populace jelenů v tomto parku.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Je-li $x$ velikost populace jelenů, platí
 $$ \dv {x}{t}=0.10 x-50, $$ kde $t$ je čas v letech.
-</div>
+```
 
 
 ### Hrubý model chřipkové epidemie
@@ -105,10 +117,13 @@ počtu nemocných a počtu zdravých jedinců. Sestavte model takového
 
 _Toto je současně model popisující šíření informace v populaci, stačí si místo chřipky představit nějakou informaci předávanou mezi lidmi (sociální difuze)._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Je-li $M$ velikost populace a $y$ počet nemocných, je v populaci $M-y$ zdravých a model má tvar
 $$\dv {y}{t}=ky(M-y).$$
-</div>
+```
 
 
 ### Ropná skvrna
@@ -119,10 +134,13 @@ Kruhová ropná skvrna na hladině se rozšiřuje tak, že její poloměr jako
 funkce času roste rychlostí, která je nepřímo úměrná druhé mocnině
 poloměru. Vyjádřete proces kvantitativně pomocí derivací.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Je-li $r$ poloměr, je $r^2$ druhá mocnina a protože se jedná o nepřímou úměrnost, platí
 $$\dv {r}{t}=\frac{k}{r^2}.$$ Konstanta $k$ vyjadřuje rychlost s jakou roste ropná skvrna ve fázi, kdy má jednotkový poloměr $r$.
-</div>
+```
 
 ### Model učení
 
@@ -130,10 +148,13 @@ Rychlost učení (tj. časová změna objemu osvojené látky nebo procento z
 maximální manuální zručnosti) je úměrná objemu dosud nenaučené
 látky. Vyjádřete proces kvantitativně pomocí derivací.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
 $$\dv {L}{t}=k (L_{\max}-L).$$
-</div>
+```
 
 
 
@@ -146,7 +167,10 @@ stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapiš
 tento fakt pomocí vhodného matematického modelu a najděte řešení
 vzniklé diferenciální rovnice.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Je-li $h$ tloušťka ledu, je matematickým vyjádřením situace model
 $$\frac{\mathrm dh}{\mathrm dt}=\frac kh,$$ kde $k$ je konstanta úměrnosti a vyjadřuje rychlost, s jakou roste tloušťka ledu v okamžiku, kdy je tato tloušťka rovna jedné. Postupným řešením získáváme následující vztahy.
 $$
@@ -160,7 +184,7 @@ $$
 
 
 
-</div> 
+``` 
 
 
 
@@ -190,7 +214,10 @@ a nádrž ve tvaru _kužele_ otočeného vrcholem dolů (trychtýř).
 
 _V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 Buď $V$ objem vody a $h$ výška hladiny od dna.
 Podle zadání ve všech případech platí $$\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h$$ a musíme derivaci $\frac {\mathrm dV}{\mathrm dt}$ vyjádřit pomocí $\frac {\mathrm dh}{\mathrm dt}$.
 
@@ -211,7 +238,7 @@ a po přeznačení konstanty má model pro kuželovou nádrž tvar
 $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
 
-</div>
+```
 
 
 ## Problematika jednoznačnosti v modelu vypouštění nádrže
@@ -235,7 +262,10 @@ popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypouští
 Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmyslete, jestli nejednoznačnost je jenom matematický trik, nebo jestli má
  fyzikální interpretaci.
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
     * _Podle obecné věty o jednoznačnosti:_ Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle $h$. Protože platí
@@ -259,7 +289,7 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
     \end{aligned}
     $$ a obě strany rovnice jsou stejné. Pro $h=0$ je dosazení triviální. Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
 
-</div>
+```
 
 
 ## Řešení ODE a IVP 
@@ -277,7 +307,10 @@ https://youtu.be/XUKvuqSgA6U
 _Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (stacionární řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová)._
 
 
-<div class=reseni>
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot y^2$
    *  Konstantní řešení jsou řešení rovnice $$ y^2=0,$$ tj. je jediné konstantní řešení $$ y=0.$$
@@ -301,7 +334,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
     * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2.$$ Toto řešení splňuje počáteční podmínku.
     * Pravá strana má ohraničenou (dokonce konstantní) derivaci podle $m$. Proto je řešení každé počáteční úlohy určeno jednoznačně. Řešení z předchozího bodu je jediné a další nemusíme hledat.
 
-</div>
+```
 
 
 
@@ -324,7 +357,10 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 % \textit{Toto je podobný model jako model vypouštění nádrže, ale kratší. Opět máme po přepisu zadání do matematického modelu dvě veličiny měnící se s časem v jedné rovnici. Derivace objemu, která nás zajímá, již v rovnici přítomna naštěstí je. Stačí vyjádřit obsah pomocí objemu, nejlépe pomocí rozměrové analýzy.}
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 % Rychlost s jakou se mění objem je $\frac{\mathrm dV}{\mathrm dt}$, rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 % Podle zadání platí
 % $$  \frac{\mathrm dV}{\mathrm dt} = R - k_0S.$$
@@ -332,7 +368,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % $$  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},$$
 % kde $r$ a $k=k_0k_1$ jsou konstanty.
 
-% </div>
+% ```
 
 
 
@@ -353,7 +389,10 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % 1. Mohou pracovníci navršit hromadu do libovolné výšky anebo pro velkou hromadu je již rozfoukávání rychlejší než přisypávání?
 % \end{itemize}
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 % Označme $f(V)=R-kV^{\frac 23}$.
 % Konstantní řešení je řešením rovnice $f(V)=0$, tj. $$R-kV^{\frac 23}=0.$$ Odsud
 % $$V_0=\left(\frac{R}{k}\right)^{3/2}.$$ Protože $f$ klesá v bodě $V_0$, je toto řešení stabilní.
@@ -362,7 +401,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 % Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou. 
 
-% </div>
+% ```
 
 
 % 
@@ -395,7 +434,10 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 % (\textit{Podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9.})
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 % \begin{enumerate}[A)]
 %   1.  $$v_f=-k\derivace {h}x$$
@@ -410,7 +452,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 %     V souřadnicích, kdy osa $x$ směřuje doprava a $h$ nahoru, se jedná
 %     se o parabolu ``otočenou vrcholem směrem doprava''.
 % \end{enumerate}
-% </div>
+% ```
 
 
 
@@ -427,7 +469,10 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % (\textit{Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Analogickým způsobem se počítají tepelné ztráty při prostupu tepla válcovou stěnou (viz \url{https://youtu.be/rvyogmaUmUQ}).})
 
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 % $$
 % \begin{aligned}
 %   -\frac{Q}{2\pi x}&=-kh\derivace hx\\
@@ -456,7 +501,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % potřebám. Častou aplikací je například hydraulická clona (soustava
 % prvků rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace z chemické výroby do vodárensky využívaných vod).
 
-% </div>
+% ```
 
 % ## Rovnice podzemní vody
 % \def\raggedright{\rightskip 0 pt plus 1 em}
@@ -530,7 +575,10 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 % \textit{Podle Jacob Bear, Modeling Groundwater Flow and Pollution a Charles Fitts, Groundwater Science.}
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 
 % \begin{enumerate}[A)]
 % 1. $\vec q=-T \nabla h$ kde $T$ je koeficient průtočnosti a $-\nabla h$
@@ -568,7 +616,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 %   \end{equation*}
 
 % \end{enumerate}
-% </div>
+% ```
 % 
 
 % ## Rovinné proudění podzemní vody podruhé
@@ -585,7 +633,10 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % \end{enumerate}
 
 
-% <div class=reseni>
+% ```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
 % \begin{enumerate}[A)]
 % 1. $$S_s\frac{\partial h}{\partial t}=\sigma + \frac{\partial }{\partial x}\left (T \frac{\partial h}{\partial x} \right)
 %   +
@@ -604,7 +655,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 %   Křivka odpovídá výsledku příkladu  \ref{pokles}, kde je
 %   $$h^2=\frac{-2q}k x + \text{const.}$$
 % \end{enumerate}
-% </div>
+% ```
 
 -->
 

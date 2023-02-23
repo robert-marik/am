@@ -6,7 +6,6 @@
 > * Greenova věta pro nás bude mít spíše teoretický význam. Umožňuje přepis křivkového integrálu na dvojný. Vlastní použití není těžké a osaháme si jej i v domácích úlohách. I zde je důležité v první řadě vědět, že to jde a teprve potom přemýšlet nad tím, jak konkrétně se to dělá.
 > * V příkladě se vrátíme i k difuzní rovnici.
 
-
 ## Křivkový integrál pomocí kmenové funkce
 
 https://youtu.be/-VCnGpRz3K0
@@ -16,7 +15,6 @@ Určete, pro jakou hodnotu parametru $a\in \mathbb R$ křivkový integrál vekto
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Podmínka pro nezávislost na integrační cestě je $$
 \begin{aligned}
@@ -52,7 +50,6 @@ $$
 Porovnáním dostáváme kmenovou funkci $$\varphi (x,y)=x^3y+y+C,$$ kde $C$ je integrační konstanta. Integrál po křivce (tvar není důležitý, vzhledem k nezávislosti na integrační cestě stačí počáteční a koncový bod) je
 $$\int _C \vec F\mathrm d\vec r=\varphi(1,2)-\varphi(0,0)=2+2-0=4.$$
 
-
 ```
 
 ## Křivkový integrál pomocí kmenové funkce 2
@@ -67,7 +64,6 @@ po křivce z bodu $(2,1)$ do bodu $(1,3)$.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Podmínka pro nezávislost na integrační cestě je $$\pdv{y}\qty(6x^2y+x+y)=\pdv{x}\qty(mx^3+x).$$
 Po výpočtu derivací dostáváme
@@ -91,9 +87,7 @@ $$\varphi(1,3)-\varphi(2,1)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
 
 ```
 
-
 ## Kmenová funkce pomocí křivkového integrálu
-
 
 https://youtu.be/y-gTOlGVRXI
 
@@ -101,7 +95,6 @@ Ukažte, že vektorové pole
 $\vec F=(6x^2y+x+y,2x^3+x)$ má kmenovou funkci. Vypočtěte z definice křivkový integrál v tomto vektorovém poli po křivce $\vec r(t)=(at,bt)$, $t\in[0,1]$, tj. po úsečce z počátku do bodu $(a,b)$ a ukažte, že tímto způsobem obdržíme kmenovou funkci.
 
 Toto je metoda, jak určit skalární potenciál z numerických dat. Pokud je vektorové pole dáno numericky, je hledání skalárního potenciálu integrováním těžce realizovatelné. Ale derivováním a výpočtem rotace je jednoduché zkontrolovat podmínku existence skalárního potenciálu a poté se dá hodnota skalárního potenciálu v libovolném bodě počítat pomocí křivkového integrálu vedoucího z počátku do daného bodu.
-
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -139,7 +132,6 @@ Určete integrál $$\oint_C \vec F\,\mathrm d\vec r$$ po křivce, která je klad
 :class: dropdown
 :nonumber:
 
-
 $$
 \begin{aligned}
   \oint_C \vec F\,\mathrm d\vec r
@@ -160,16 +152,13 @@ byly ve směru souřadnicových os má nejobecnější možné vyjádření
 $$c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}{y}) . $$
 Za jakých okolností je možno veličiny $\lambda_x$ a $\lambda_y$ napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace? 
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
-
 V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být homogenní. Závislost na poloze nesmí být ani zprostředkovaná přes teplotu. Tyto veličiny tedy nesmí být ani funkcemi teploty. Jinými slovy, konstanta úměrnosti ve Fourierově zákoně se nesmí měnit s teplotou, vztah z Fourierova zákona musí být přesně lineární a takové materiály se nazývají materiály s lineární materiálovou odezvou (zkráceně lineární materiály). Veličiny  $\lambda_x$ a $\lambda_y$  se dají napsat před vnější derivace pouze pokud je materiál homogenní a lineární.
 
 ```
-
 
 ## Stacionární vedení tepla v žebru chladiče
 
@@ -192,7 +181,6 @@ stacionární děj.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
 

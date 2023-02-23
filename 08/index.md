@@ -1,6 +1,5 @@
 # Diferenciální rovnice 
 
-
 > Anotace.
 >
 > * V přednášce se seznámíme s rovnicemi, obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
@@ -20,8 +19,6 @@
 >
 > * Diferenciální rovnice souvisí s derivacemi. Pro úspěšné rozhodnutí, zda se úloha dá modelovat pomocí diferenciální rovnice nutně potřebujeme spolehlivě znát využití derivace. V podstatě s jistotou všude tam, kde se mluví o rychlostech, ale aplikace jsou i jinde. 
 > * Pro nalezení analytického řešení diferenciální je třeba ovládat integrál funkce jedné proměnné.
-
-
 
 ## Modely založené na rychlostech (derivacích)
 
@@ -62,7 +59,6 @@ https://youtu.be/08uAuAgY-lw
 
 ![Model úbytku rychlostí úměrnou množství modeluje radioaktivní rozpad. V České republice nás zajímá radioaktivní rozpad například z hlediska nežádoucího hromadění radonu v obytných budovách. Zdroj: pixabay.com, rabedirkwennigsen](nuclear-waste.jpg)
 
-
 </div>
 \fi
 
@@ -99,7 +95,6 @@ https://youtu.be/08uAuAgY-lw
 
 \fi
 
-
 * Nechť veličina $y$ udává množství látky, která znečišťuje vodu v\ jezeře o\ objemu $V$.
 * Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
   odtéká voda s\ nečistotami (hladina se nemění, je v\ ustáleném
@@ -129,20 +124,15 @@ https://youtu.be/08uAuAgY-lw
   většina léčiv za běžných koncentrací), řídí se proces odbourávání
   stejnou diferenciální rovnicí.
 
-
 \iffalse
 
-
 ### Akutní normovolemická hemodiluce aneb o krvinky neradi přicházíme
-
 
 <div class='obtekat'>
 
 ![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com](chirurg.jpg)
 
 </div>
-
-
 
 * Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
   ní i\ krvinky. Při konstantní intenzitě krvácení to znamená, že
@@ -175,7 +165,6 @@ https://youtu.be/08uAuAgY-lw
   z ní vyplývající. Současně je tato metoda výrazně finančně levnější
   a její přínos je tak i\ ekonomický. (Podle https://zdravi.euro.cz/)
 
-
 \fi
 
 ### RC obvod a chytré stěny ve dřevostavbách.
@@ -193,7 +182,6 @@ https://youtu.be/08uAuAgY-lw
 </div>
 
 \fi
-
 
 Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíjení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí vztahem
 $$R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.$$
@@ -233,7 +221,6 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
   kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
   tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
   udržitelné strategie lovu.
-
 
 \iffalse
 
@@ -275,7 +262,6 @@ poté poslouží k analýze, jaké jsou pozorovatelné důsledky a tím se
 ověří, jestli příslušná aplikovaná věda správně vystihuje podstatu
 modelovaného děje.
 
-
 > Definice (diferenciální rovnice). *Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
 > k derivaci* (stručněji též diferenciální rovnicí, DR) s neznámou $y$
 > rozumíme rovnici tvaru $$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) \tag{1}$$ kde $\varphi$ je funkce
@@ -287,7 +273,6 @@ modelovaného děje.
   $$y'=\varphi(x,y),$$
   $${\mathrm{d}y}=\varphi(x,y)\mathrm{d}x,$$
   $${\mathrm{d}y}-\varphi(x,y)\mathrm{d}x=0.$$
-
 
 **Příklad.**  Najděte všechny funkce splňující $y'=2xy$. (Naučíme se řešit později.)
 
@@ -506,7 +491,6 @@ znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řeše
 
 </div>
 
-
 Uvedli jsme, že počáteční úlohu umíme vyřešit numericky. Ukázali jsme
 si základní algoritmus (Eulerův) a řekli, že existují algoritmy
 pokročilejší. Na tomto místě upozorníme na záludnosti skryté v
@@ -542,7 +526,6 @@ S chybami plynoucími ze zaokrouhlování se setkáme i\ při výpočtech mimo m
 inaccurate results in
 Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel).
 
-
 -->
 
 <!-- 
@@ -564,7 +547,6 @@ se budou řešení chovat.
   jestli při vychýlení z tohoto rovnovážného stavu má systém tendenci
   se vrátit do původního stavu, nebo se od původního stavu dále
   odchylovat. Na tuto otázku dává odpověď následující věta.
-
 
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
@@ -594,7 +576,6 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 \iffalse
 
 <div class='obtekat'>
-
 
 ![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s\ IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
 
@@ -637,7 +618,6 @@ přijede několik trolejbusů těsně za sebou. (Podle knihy P.  Blanchard,
 R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 (2006), 828 pp.)
 
-
 --> 
 
 ## ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(x)g(y)$ (rovnice se separovanými proměnnými)
@@ -651,14 +631,11 @@ Najít řešení obecné diferenciální rovnice je nemožné, ani však takové
 > kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
 > se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 
-
 **Příklad:** Rovnice $$y'+xy +xy^2=0$$ je rovnicí se separovanými
   proměnnými, protože je možno ji zapsat ve tvaru $$y'=-xy(y+1).$$
   Rovnice $$y'=x^2-y^2$$ není rovnice se separovatelnými proměnnými.
 
-
 ## Řešení ODE se separovanými proměnnými
-
 
 1.  Má-li algebraická rovnice $g(y)=0$ řešení $k_1$, $k_2$, …, $k_n$,
     jsou konstantní funkce $y\equiv k_1$, $y\equiv k_2$, …,
@@ -747,8 +724,6 @@ Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi je
 
 </div>
 
-
-
 * Uvažujme například horkou trubku ochlazovanou zvenčí a proudění tepla radiálně směrem od středu. Teplota $T$ je funkcí vzdálenosti $r$ od středu a po transformaci gradientu a divergence do polárních souřadnic se stacionární bezzdrojová rovnice vedení tepla $$0=\nabla\cdot(k\nabla T)$$ redukuje na
 $$\frac 1r \frac{\partial}{\partial r}\left(kr\frac{\partial T}{\partial r}\right)=0.$$
 Parciální derivace se opět redukují pro funkci jedné proměnné na obyčejné derivace a stejně jako v předchozím případě můžeme integrovat na
@@ -778,7 +753,6 @@ potřebám. Častou aplikací je také hydraulická clona (soustava prvků
 rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace
 z chemické výroby do vodárensky využívaných vod). V tomto případě je však situace komplikovanější, protože je nutné zkombinovat dostředivé proudění k čerpanému vrtu s rovinným prouděním podzemní vody. Toto se naučíme v příští přednášce a využijeme linearitu. 
 
-
 ## Diferenciální rovnice růstu vodní kapky
 
 https://youtu.be/gJoOmF39rbw
@@ -792,7 +766,6 @@ https://youtu.be/gJoOmF39rbw
 </div>
 
 \fi
-
 
 Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
 vodní páry. Kapka proto roste tak, že její objem se zvětšuje rychlostí

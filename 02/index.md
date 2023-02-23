@@ -1,8 +1,5 @@
 # Gradient, lineární aproximace
 
-
-
-
 > Anotace.
 >
 > * Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. V této přednášce se zaměříme na prakticky nejlépe využitelný případ, kdy budeme sledovat závislost na prostorových proměnných. 
@@ -10,13 +7,11 @@
 > * Obecněji tento aparát slouží k lineární aproximaci funkce. Naučíme se lineární aproximaci použít i pro vektorové funkce. To nám umožní formulovat fyzikální zákony dávajících do souvislosti tok a gradient veličiny (spád veličiny) i v případě, kdy tyto vektory nemají stejný směr. Bez této dovednosti se neobjedeme, chceme-li realisticky popsat vlastnosti anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají při vyjádření v souřadnicích podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
 > * Jako vedlejší produkt slouží gradient k nalezení lokální extrémů funkce.
 
-
 > Prerekvizity.
 >
 > * Navážeme na znalosti parciálních derivací z minulé přednášky.
 > * Pro efektivní formulaci využijeme maticový součin. Ten většina studentů pozná v úvodních přednáškách z matematiky. Například [zde](http://user.mendelu.cz/marik/mtk/mat-slidy/matice/).
 > * Před snahou o lineární aproximaci funkce více proměnných je vhodné si zopakovat [lineární aproximaci funkce jedné proměnné.](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/)
-
 
 ## Opakování
 
@@ -48,13 +43,11 @@ manimp:MatrixMultiplication|Maticové násobení.
 * Pokud se vektor zobrazí na svůj násobek, nazývá se vlastní vektor a tento násobek je vlastní číslo. $$A\vec v=\lambda \vec v$$
 * Matice s vlastními vektory se směru souřadných os je diagonální. Skutečně, například použitím definice maticového součinu a použitím definice vlastního vektoru a čísla dostáváme $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}.$$ To si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
 
-
 ## Diferenciální operátory
 
 Parciální derivace se vyskytují ve většině důležitých rovnic popisujících fyzikální svět okolo nás. Vztahy ze středoškolské fyziky nebo tabulek pro inženýry jsou jenom důsledky odvozené pro hodně speciální situace. Všude tam, kde se zajímáme o fyzikální podstatu děje a máme ambice popsat děj přesně, nestačí středoškolský aparát, protože je nutné pracovat s okamžitou rychlostí změn fyzikálních veličin. A tyto jsou vyjádřeny právě parciálními derivacemi. 
 
 Parciální derivace umožňují sledovat závislost stavových veličin v závislosti na souřadnicích nebo čase, a to pro každou souřadnici samostatně. Nicméně souřadný systém je něco, co do popisu vnášíme uměle a proto by fyzikální proces neměl být na tomto souřadném systému závislý. *Proto často spojujeme parciální derivace do složitějších výrazů -- diferenciálních operátorů. Zde teprve vynikne síla parciálních derivací.*
-
 
 ## Gradient
 
@@ -68,13 +61,11 @@ Podobně je definován gradient skalární funkce tří proměnných $f(x,y,z)$.
   f}{\partial x}, \frac{\partial f}{\partial y},
   \frac{\partial f}{\partial z}\right)$$
 
-
 Význam a postavení gardientu ilustruje následující příklad, který je poté zobecněn do poznámky shrnující fyzikální význam gradientu.
 
 **Příklad.** Pokud je teplota v rovině v bodě $(x,y)$ dána předpisem $$T=(x^2-xy^2)^\circ\mathrm C,$$ je gradientem vektor $$\nabla T=\begin{pmatrix}2x-y^2, -2xy\end{pmatrix} {}^\circ\mathrm C \mathrm m^{-1}.$$ V bodě $(1,1)$ je gradient $$\nabla T(1,1)=\begin{pmatrix}1,-2\end{pmatrix}{}^{\circ}\mathrm C \mathrm m^{-1}.$$ To znamená, že v tomto bodě roste teplota ve směru osy $x$ rychlostí jeden stupeň Celsia na každý metr délky a ve směru osy $y$ klesá rychlostí dva stupně Celsia na každý metr délky. Vektor definovaný tímto gradientem má směr doprava dolů (pod úhlem splňujícím podmínku $\tan \varphi = -2$) a délku $\sqrt{(1)^2+(-2)^2}=\sqrt 5\approx 2.2$. To znamená, že maximální nárůst teploty je směrem doprava dolů a tento nárůst je $2.2$ stupně Celsia na každý metr délky.
 
 > Poznámka (fyzikální význam gradientu). Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat. Například vedení tepla vyrovnává nerovnoměrné rozložení teploty a difuze vyrovnává nerovnoměrnosti v koncentraci. Teplota se vyrovnává tak, že teplo teče z místa s vysokou teplotou do místa s malou teplotou. Difuze směřuje  z místa s vyšší koncentrací do místa s nižší koncentrací. V praxi nás proto většinou místo směru maximálního růstu zajímá směr maximálního poklesu, tj. $-\nabla f$.
-
 
 <div class="obtekat">
 
@@ -85,7 +76,6 @@ Význam a postavení gardientu ilustruje následující příklad, který je pot
 \fi
 
 </div>
-
 
 Symbol $\nabla$ je operátor nabla definovaný formálně vztahem $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right)$$ nebo $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)$$ (v závislosti na počtu proměnných funkce $f$). "Násobení" $\frac{\partial }{\partial x}$ s\ funkcí $f$ přitom chápeme jako parciální derivaci $\frac{\partial f}{\partial x}$.
 
@@ -109,8 +99,6 @@ https://youtu.be/Mpb4EAdIPPM
 
 ![Hydroizohypsy. Křivky spojující místa se stejnou výškou podzemní vody.  Zdroj: Principles of GW Flow https://web.viu.ca/earle/geol304/geol-304-c.pdf](flow.png)
 
-
-
 </div>
 
 \fi
@@ -131,7 +119,6 @@ Z diferenciálního počtu funkcí jedné proměnné víme, že platí přibliž
 
 https://youtu.be/3wTwWTtbkis
 
-
 ### Lineární aproximace skalární funkce
 
 * Lineární aproximací funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ je
@@ -143,8 +130,6 @@ $$      f(x,y)\approx f(x_0, y_0)+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
   $$z=z_0+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0),$$
 nebo (vyjádřeno pomocí gradientu)
 $$      z= z_0+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
-
-
 
 ### Lineární aproximace vektorové funkce
 
@@ -167,9 +152,7 @@ je Jacobiho matice funkce $\vec F$.
 V materiálovém inženýrství často provádíme linearizaci v okolí nuly a pro funkci, která je v nule nulová. Tedy máme $x_0=y_0=\vec F(0,0)=0$. Výsledná lineární aproximace se poté redukuje na tvar $$\vec F(x,y)\approx J(0,0)
 \begin{pmatrix}x\\ y\end{pmatrix}.$$ 
 
-
 ## Vícerozměrné konstitutivní zákony
-
 
 https://youtu.be/uTzCAxOOye8
 
@@ -199,7 +182,6 @@ Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 
 ### Darcyho zákon (proudění podzemní vody)
 
-
 \iffalse
 
 <div class='obtekat'>
@@ -224,7 +206,6 @@ V letech 1855 a 1856 francouzský inženýr H. Darcy pokusy prokázal přímou 
 
 \fi
 
-
 Fourierův zákon se týká vedení tepla a vyjadřuje, 
 že vektor hustoty tepelného toku $\vec q$ je úměrný záporně vzatému gradientu teploty $\nabla T$, tj. 
 $$\vec q=-k\nabla T.$$ 
@@ -234,7 +215,6 @@ tenzorem. Je-li materiál izotropní, je
 $k$ skalární veličinou, případně skalární veličina násobená
 jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
 Veličina $k$ se nazývá součinitel tepelné vodivosti, koeficient tepelné vodivosti nebo Fourierův koeficient.
-
 
 ### Různé podoby Fourierova zákona
 
@@ -247,7 +227,6 @@ V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivn�
 * Chceme-li v předešlé formulaci zachytit i vedení tepla v anizotropním materiálu (v různých směrech různé vlastnosti), má Fourierův zákon formálně opět tvar $$\vec q=-\lambda \nabla{T},\tag{F.5}$$ ale veličina $\lambda$ už není skalární veličina, je to matice. V souřadnicích potom $$ q_i=-\sum_{j}\lambda_{ij} \frac{\partial T}{\partial x_j}.$$ Tento vztah se zpravidla zapisuje pomocí zkrácené Einsteinovy notace (přes opakovaný index se sčítá a vynechává se znaménko pro sumu) ve tvaru $$ q_i=-\lambda_{ij} \frac{\partial T}{\partial x_j}.$$
 
 Tvar (F.5) je nejobecnější. Pokud je materiál iztropní, redukuje se (F.5) na (F.4). Pokud je úloha jednodimenzionální, redukují se (F.4) a (F.5) automaticky na (F.3). Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na (F.2) nebo (pokud nás zajímá velikost a ne směr) na (F.1).
-
 
 <style>
 table, th, td {
@@ -271,7 +250,6 @@ th {
     }
 
 </style>
-
 
 |Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Zachytí i nelineární průběh teploty|Udává směr toku tepla|Odlišnost od předchozí formulace (o řádek výše)|
 |--|--|--|--|--|--|
@@ -297,7 +275,6 @@ Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k tran
 
 </div>
 
-
 Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru (pro popis děje v látce) tento zákon říká, že hustota elektrického proudu $\vec j$ je dána intenzitou  elektrického pole $\vec E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického pole, tj. $\vec E=\nabla \varphi$. Spojenením těchto poznatků a při použití  lineární aproximace dostáváme $$\vec j=-\gamma \nabla \varphi,$$ což je Ohmův zákon v diferenciálním tvaru. Formálně máme tedy stejný tvar zákona jako u vedení tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot je nahrazen rozdílem potenciálů. Znalost zapojování elektrických obvodů, jako je například paralelní nebo sériové zapojení rezistorů, bývá běžná a toho se často využívá při modelování tepelného odporu pomocí elektrického odporu. Formálně jsou vztahy identické.
 
 Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo, nikoliv matice. Tím se věci znatelně zjednodušují, ale vyplývají odsud i limity použitelnosti při modelování vedení tepla jako vedení elektrického proudu. Například při průchodu elektrického proudu dřevem je konstanta úměrnosti z Ohmova zákona tenzorová a její nahrazení jedinou skalární hodnotou je pouze zjednodušení reálné situace.
@@ -308,7 +285,6 @@ Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v příp
 
 https://youtu.be/vrPhbc-GJqc
 
-
 \iffalse
 
 <div class='obtekat'>
@@ -318,7 +294,6 @@ https://youtu.be/vrPhbc-GJqc
 </div>
 
 \fi
-
 
 Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla u ,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
 $$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y},\frac{\partial u }{\partial z}\right)^T$$
@@ -389,7 +364,6 @@ souřadnic. Pokud bychom neměli možnost zvolit
 soustavu souřadnic tak, aby matice byla diagonální, máme alespoň
 jistotu, že vlastní čísla zůstanou stejná. 
 
-
 ### Ortotropní případ ve 2D
 
 Stejné jako ve 3D, pouze chybí třetí rovnice.
@@ -398,7 +372,6 @@ Stejné jako ve 3D, pouze chybí třetí rovnice.
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
 $\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, na rozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě. Toto je nejjednodušší případ. Proto je studium izotropních materiálů mnohem mnohem jednodušší, než studium materiálů obecnějších. To je nejzásadnější vlastnost, která činí studium biologických materiálů mnohem komplikovanějším, než je třeba studium vlastností kovů. Biologické materiály mají typicky určitou vnitřní strukturu, která jim dává v různých směrech různé vlastnosti. Postupy odvozené pro izotropní materiály zde nefungují.
-
 
 ## Tečna k vrstevnici
 
@@ -424,10 +397,7 @@ V řezu vodorovnou rovinou $z=0$ z grafu funkce a z tečné roviny zůstanou vrs
 
 \fi
 
-
 ## Implicitně definovaná funkce 
-
-
 
 \iffalse
 
@@ -446,9 +416,6 @@ Pokud tečna k vrstevnici není rovnoběžná s osou $y$, je možno vrstevnici c
 >  y_0)$ spojité parciální derivace. Platí-li $$\frac{\partial f (x_0,y_0)}{\partial y}\neq 0,$$ je rovnicí
 >    $$f(x,y)=0$$ v okolí bodu $(x_0, y_0)$ implicitně určena
 >    **právě jedna spojitá funkce** $y=g(x)$.
-
-
-
 
 ## Lokální extrémy funkce více proměnných
 
@@ -473,9 +440,7 @@ Funkce jedné proměnné určitě nemá lokální extrém v bodě, ve kterém m�
 
 *V bodě lokálního extrému hladké funkce je tedy nulový gradient.*
 
-
 ## Tenzor malých deformací
-
 
 <div class="obtekat">
 
@@ -486,8 +451,6 @@ Funkce jedné proměnné určitě nemá lokální extrém v bodě, ve kterém m�
 \fi
 
 </div>
-
-
 
 Na závěr jedna aplikace z oblasti parciálních derivací a lineárních aproximací vektorových funkcí více proměnných. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
@@ -514,8 +477,6 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 [Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJydU8tq20AU3Rv8DxdlESmaKLbadBEyBbeFkoU3behGmDCWbuKpRzNiNHIr_UO-oKt8QL7C-bBePeq42FCoQGIe555z7kMnMI3gi2nWSmRglphqBGeFLu-NzUWKoAUYZ1LUEgSUdY7OynRtqn2UHI9OIH7l2cEOuWRjnDUFsaWidESZ4UYKZywtdmTj0aYxtuZ-MmGTBUumw3dK30l0yabRu3bV7-kuGI9mPBck-dNPkojgUXzZYSeX7DyKFx3ils-izk5hSvTp5MMdGeX-LJzdBhdxuxf9wflwcALf6nKDTrXZ97dXsIbCyrLAzbpisHZoa7BYWGxQu-o7QpOjrv7ULGctOhM5gswIIB0FiWWdrkwOOSoqA6qDYrZWqFC8M9h6TsnvRXw2UNR3Q65xlwRVsEeed1EHtun-3667NqQSTDa0SMuVaWMKkVX_mQQtYQ5SQ5LMmPcR1fZp12X0qD99SZk3I87dzBDo5XH7VDpSNVTGl0fU22eCQ9JlybyvR6BN_vKLxstthK0GLOXBvJth3rbPA7RH1n8hKXnmfaIKbJ_2J7FVXVyNR0CPWVrR1Dzx58lkER42IjjbYErBvgygzVu2eXdTvOgJbuafeWGkdn5PxSA1ylh-ajE7ZVDKBvnbSRAWRtUPRh9HCVWsBKdfIAiV1HgMFLzK0Rv2kp2RncgOv1QVHgb0-kPIvVSK39oK98SPxpcr88NfuVz53vUqfu-F82S6CL3ri3YT7IHA110RGWTyQbqSv9m_9ckDSdGkpu7OCicNnx5TsC3pb7sKl7c=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-
-
 ## Z ptačí perspektivy
 
 \iffalse
@@ -526,9 +487,7 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 </div>
 
-
 \fi
-
 
 * Parciální derivace z minulé přednášky sleduje vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, který míří směrem maximálního růstu funkčních hodnot a má velikost odpovídající nárůstu na intervalu jednotkové délky.
 * Pomocí gradientu dokážeme formulovat lineární aproximaci funkce. U vektorových  funkcí tuto aproximaci můžeme formulovat pro každou komponentu samostatně a dostáváme tak nástroj, jak pomocí maticového násobení aproximovat funkční vztahy, kde na vstupu i na výstupu je vektor. Tím získáme jednotný popis všech materiálových vztahů, kde vektorová veličina, která je podnětem, vyvolává jako odezvu jinou vektorovou veličinu. Například pokles teploty, definovaný směrem a intenzitou, vyvolává tok tepla odpovídajícím směrem a odpovídající intenzitou.

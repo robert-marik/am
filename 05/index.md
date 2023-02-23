@@ -1,8 +1,5 @@
 # Křivkový integrál
 
-
-
-
 > Anotace.
 >
 > * V přednášce se seznámíme s rozšířením Riemannova integrálu. Riemannův integrál umožňuje sečíst příspěvky na úsečce. Zobecníme si tento nástroj tak, že umožní sečíst příspěvky podél křivky. Seznámíme se s křivkovým integrálem.
@@ -46,7 +43,6 @@ Nejprve představíme matematický aparát pro popis křivek.  Rovinné křivky 
 * Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkUFvhCAQhe8m_geiB7AlaTFNb5x75ResmbLslohgcGJlf31Ftx42y23C-957k5khMrqQRJuyKIu6rkkMs7fakDEG0kc796ksvBRlsTBspA4Tw5Nf1SmPk_X3cYcHc9vJESIMBmNZ4GA9xwEW-c5Z-zLa5sTE245s0JOXf5SQowvIcixnyA-fhhNnrsafOwffxkmaFbn_SijxukHpCaSDC1HSaM700SHdHaaf8MuU4ORir5O9Gck--ceKokVnZPUV4ZJIjiNAMlNtW6hW_q9rdbfl762z5KHGEdJymEajsYuANkhxhKjDqof9AFA1fx4nfBQ=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * Parametrizace kružnice, úsečky a grafu funkce jedné proměnné jsou v [cheatsheetu.](https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf)
 
-
 ## Křivkový integrál prvního druhu
 
 https://youtu.be/ZRed88fgDkI
@@ -56,7 +52,6 @@ https://youtu.be/ZRed88fgDkI
 \iffalse
 
 ![Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>](krivkovy_integral_prvniho_druhu_1.png)
-
 
 \fi
 
@@ -70,7 +65,6 @@ drátu rovna součinu $$m=fs.$$ Pokud by drát nebyl homogenní, je nutné v tom
 * Zjemňováním dělení se tyto odhady zpřesňují. 
 
 V limitním procesu můžeme nechat délku  kousíčků konvergovat k nule. Poté dostáváme objekt, který se nazývá *křivkový integrál prvního druhu*, označuje $$ \int_C f\;\mathrm{d} s $$ a fyzikálně vyjadřuje hmotnost drátu z výše uvažované úlohy. Pokud počáteční a koncový bod křivky $C$ splývají, píšeme též $$ \oint_C f\;\mathrm{d} s $$ a integrál nazýváme *integrálem po uzavřené křivce*.
-
 
 ### Převod na Riemannův integrál (rovinná křivka)
 
@@ -100,7 +94,6 @@ $$
 \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t))\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)}\;\mathrm{d} t.
 $$
 
-
 ### Převod na Riemannův integrál (prostorová  křivka)
 
 S křivkovým integrálu po křivce  
@@ -113,7 +106,6 @@ $$
 $$
 a integrál má tvar
 \dm$$ \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{(\varphi^{\prime}(t))^2+(\psi^{\prime }(t))^2+(\xi^{\prime }(t))^2}\;\mathrm{d} t. $$
-
 
 ### Aplikace křivkového integrálu prvního druhu
 
@@ -146,7 +138,6 @@ th {
 
 \velkatabulka
 
-
 |Funkce $f(x,y)$        |Integrál $\int_C f\;\mathrm{d}s$                                                                         |
 |----------------|-----------------------------------------|
 |$1$ | délka křivky $C$|
@@ -156,11 +147,9 @@ th {
 |$y^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $x$|
 |$\rho^2(x,y)\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k obecné ose, kde $\rho(x,y)$ je vzdálenost bodu $[x,y]$ od osy otáčení.|
 
-
 \velkatabulkakonec
 
 \fi
-
 
 ### Vlastnosti křivkového integrálu prvního druhu
 
@@ -190,7 +179,6 @@ $$
 ![Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.](impregnacni_komora.jpg)
 
 ![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
-
 
 \fi
 
@@ -305,7 +293,6 @@ $$
 ## Aplikace křivkového integrálu druhého druhu
 
 manimp:integracni_cesta|Křivkový integrál může a nemusí záviset na integrační cestě. Pokud na ní nezávisí, je možné v takovém poli nadefinovat potenciální energii.
-
 
 * Integrál
   $$

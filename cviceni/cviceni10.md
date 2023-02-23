@@ -35,7 +35,6 @@ se děje rychlostí úměrnou povrchu návětrné strany pláště.
 :class: dropdown
 :nonumber:
 
-
 Rychlost, s jakou se mění objem, je $\frac{\mathrm dV}{\mathrm dt}$. Rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 Podle zadání platí $$  \frac{\mathrm dV}{\mathrm dt} = R - k_0S$$
 pro vhodnou kontantu úměrnosti $k_0$.
@@ -49,8 +48,6 @@ Protože $f(0)>0$, malá hromada vždy roste a proto nemůže skončit celá roz
 Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou. 
 
 ```
-
-
 
 ## Propeptid kolagenu
 
@@ -73,7 +70,6 @@ _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 :class: dropdown
 :nonumber:
 
-
 Rovnice má tvar
 $$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P,$$
 kde $k_1$, $k_2$ a $k_3$ jsou kladné konstanty úměrnosti. Rovnici je možno zapsat ve tvaru
@@ -82,9 +78,7 @@ s rozdílem klesající a rostoucí funkce na pravé straně. Tyto funkce mají 
 
 ```
 
-
 ## Modely interagujících populací
-
 
 https://youtu.be/Rd_5KC2iFtE
 
@@ -102,11 +96,9 @@ Sestavte matematický model a otestujte jej numerickým experimentem na stabilit
 
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 $$
 \begin{aligned}
@@ -116,7 +108,6 @@ $$
 $$
 
 [Online model.](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=3*x%20-%20x%5E2%20-%20x*y&dydt=2*y%20-%20y%5E2%20-%200.5%20*%20x%20*%20y&x=0,4,20&y=0,3,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.3,0.28328571428571436%5D,%5B0.20714285714285716,0.6434928229665071%5D,%5B2.664285714285714,2.158851674641148%5D,%5B3.1714285714285713,0.7533014354066987%5D,%5B1.7785714285714285,0.2115789473684213%5D)
-
 
 ```
 
@@ -128,10 +119,8 @@ $$
 
 % Konkurence je častý jev v přírodě. Například v lese si konkurují listnaté a jehličnaté stormy z hlediska prostoru, slunečního světla a vody. Stromy se liší rychlostí růstu, nosnou kapacitou prostředí a tím, jak ovlivňují své konkurenty. Předpokládejte logistický růst v obou konkurujících si populacích, předpokládejte člen vyjadřující zbrždění vlivem konkurenta přímo úměrný velikosti obou populací  a namodelujte čtyři možné východiska modelu ()
 
-
 % %https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x*(1-x/10000)-5*0.00001*x*y&dydt=0.25*y*(1-y/6000)-3*0.00001*x*y&x=0,10000,20&y=0,6000,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B4907.407407407408,5229.428571428572%5D,%5B7444.444444444444,3746.6985645933014%5D,%5B8407.407407407407,2633.9712918660284%5D,%5B9259.25925925926,1111.2918660287078%5D,%5B9648.148148148148,423.1578947368416%5D,%5B3240.740740740741,306.0287081339711%5D,%5B1407.4074074074074,935.5980861244016%5D,%5B4611.111111111111,203.5406698564584%5D,%5B5518.518518518518,57.129186602870504%5D
 -->
-
 
 ### Puštík obecný
 
@@ -148,11 +137,9 @@ Vyjádřete tyto vztahy matematickým modelem.
 
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snížené úmrtnosti v případě, že puštík má přístup k potravě._
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 $$
 \begin{aligned}
@@ -165,9 +152,7 @@ $$
 
 ```
 
-
 ### Kůň Převalského
-
 
 ![Kůň Převalského](prevalski.jpg)
 
@@ -187,7 +172,6 @@ _Podle Wikipedie kůň Převalského přežil jenom díky péči zoologických z
 :class: dropdown
 :nonumber:
 
-
 $$
 \begin{aligned}
   \frac{\mathrm dx}{\mathrm dt}&=0.15 x-0.01x-0.02xy\\
@@ -206,7 +190,6 @@ $$
 % https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?O&S,29,F,80,10;H,0,T,290,100;M,0,T,130,200;R,0,T,325,280;O,0,T,490,230&S,H,S*15/2900;M,H,M*38/1180;H,R,H*68/850;R,O,R*85/116;O,s,O*99/393&The%20compartments%20represent%20levels%20of%20some%20pollutant%20in%20the%20Great%20Lakes.%20%28R%20%3D%20Erie%2C%20because%20E%20is%20not%20an%20allowed%20variable%20name.%29%20The%20model%20assumes%20that%20the%20initial%20concentration%20of%20the%20pollutant%20is%20the%20same%20in%20all%20the%20lakes%2C%20so%20the%20initial%20value%20is%20proportional%20to%20the%20lake%27s%20volume.%20No%20more%20of%20that%20pollutant%20is%20being%20introduced%2C%20and%20pure%20%28rain%29%20water%20flows%20in%20to%20the%20lakes%2C%20with%20the%20resulting%20mixture%20flowing%20from%20each%20lake%20into%20the%20next%2C%20and%20eventually%20to%20the%20ocean.%20From%20Fundamentals%20of%20Differential%20Equations%20%28Nagle%20and%20Saff%2C%201996%29%2C%20page%20317.
 -->
 
-
 ## Analýza 2D systému pomocí vlastních čísel
 
 https://youtu.be/bEc6CTxRB3g
@@ -223,7 +206,6 @@ má stacionární bod $(1,1)$. Najděte Jacobiho matici v tomto bodě, vlastní 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Platí
 $$

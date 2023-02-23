@@ -1,8 +1,5 @@
 # Základní integrální věty z vektorové analýzy
 
-
-
-
 > Anotace.
 >
 > * V přednášce se seznámíme s nástrojem, který umožňuje předvádět mezi sebou křivkové a dvojné integrály. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
@@ -14,13 +11,9 @@
 > * Pro pochopení odvození rovnice kontinuity v integrálním tvaru je nutné znát význam dvojného integrálu hustoty a umět pomocí křivkového integrálu vypočítat tok.
 > * Dostaneme se jinou cestou ke stejné rovnici, kterou jsme poznali dříve jako difuzní rovnici. Je vhodné si ujasnit fyzikální význam jednotlivých členů této rovnice a jak se ve speciálních případech tyto členy mohou redukovat na členy jednodušší (izotropní materiál, homogenní materiál, materiál s lineárními vlastnostmi, stacionární děj, proces bez zdrojů).
 
-
-
 ## Úvod 
 
-
 V této přednášce se seznámíme s nástroji pro pohodlný výpočet křivkového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového integrálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo publikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
-
 
 V\ následujících větách si ukážeme některé souvislosti mezi
 studovanými pojmy. Tyto souvislosti existují, pokud objekty se kterými
@@ -63,7 +56,6 @@ konzervativní právě tehdy, když je jeho rotace nulová a to je právě
 tehdy, když pro toto pole existuje kmenová funkce a je tedy možno
 zavést potenciál (záporně vzatá kmenová funkce).
 
-
 >  Věta (o\ nezávislosti integrálu na integrační cestě).
 >  Uvažujme vektorovou funkci $\vec F$, křivku $C$ a oblast $\Omega$ 
 >  v\ $\mathbb{R}^3$. Následující výroky jsou ekvivalentní za předpokladu
@@ -87,7 +79,6 @@ zavést potenciál (záporně vzatá kmenová funkce).
 >  $$
 >  kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
 >  kmenová funkce vektorového pole $\vec F$.
-
 
 manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na intergrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné= zavést potenciální energii.
 
@@ -139,9 +130,7 @@ ww:problems/krivkovy_integral/40_06.pg
 
 \iffalse
 
-
 ### Závislost a nezávislost integrálu na integrační cestě
-
 
 \fi
 
@@ -153,9 +142,7 @@ ww:problems/krivkovy_integral/40_06.pg
 
 </div>
 
-
 \iffalse
-
 
 * [online výpočet integrálů z\ obrázků](https://sagecell.sagemath.org/?z=eJx1kcFOhDAQhu88xaSB2K7V3bI3s_VoTLjswRuypkLXJSBgW1Z4FB_I93KKmHVjbNK0k_-fma_TozJALwY-cnfBgq6ttQAJ9Gpc2jfj6LCLL8ddzPhwHn9b49l6ssFwCoAFQS4kFVeOOxbksaR5a2lXLtzSW23Z_ARozdffTnC7NSYWeg-VKY9VexyfysbpF6NqoN2KQyc4VHhWgt0EgMto15uGNv2rNmWu6jP_te2fLR2kzxgl5iyKcr-nGDp22Yn_ZIEyX3HB0lWGOPvWwBbKBiv6ESGEf_7c3x7ad3pwrzUlm4O59ZvghM4lg1p8u8W0GwgfjzqHO0kjyyPLws0SJRIBrZXTA936nvznLjLG_IB8Oaee-7pSMk1J8vmB01GEk_u2aFqnSJZNHo-aTKg5cuYx7vUM-qvEteo63RQ0NSQcZGRDDuE4n-6xbFJ8exaSaEZKfiElExL_8zsTNwdPzCGZ7pM1Y9j2NA0EqDWdMTgctCq0eTLtu3wwvWbsC89xv1o=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * [online výpočet rotace nekonzervativního pole z\ obrázku](https://sagecell.sagemath.org/?z=eJyNUsFywiAQvTvjP-w42sBI2pg71_5Eoxk0QZkhISVoQcd_L2Am6dgeygF22bc89u1a4siVXphGiQUH1wTPZ_MZRzbcY4pS99Z_aoPsLl-7XY6JffKzmGAb0RKwDbMEXLSdt4FCRmBD4h5glbhwiirBOeIf2ZZYvB6czZa40cm3nhu_9qLppOCu5Gcpkec5nLWcvgZoyr3idMp1v3PJCM4Dazp94Q-iCZyFx9KJxv4GQ6y_P6kvdDKNRHqxLPb1UbQ3JsWxras7FJf6AO8vFFY9FAUU8xkAFA0zJ9Xd4qmbm5fmfv8XUiszIoEGZN1WI9tysYpZSDJTW-Tlol4wGrrsSyXwuA6NeI4MoUHknzG_QpGdVKb0vEbpkotaVihKFBuSYRIUGuwgoSVxKMJMBNeROBfu4bK-8--UmhmhqB-Qg5JK02Qvz3WCvwFPt855&lang=sage&interacts=eJyLjgUAARUAuQ==)
@@ -186,7 +173,6 @@ https://youtu.be/L9iF8H43feQ
 
 [online výpočet](https://sagecell.sagemath.org/?z=eJy1VcuO2zYU3RvwP7CCDZMx7diTnREGmCabwBNEaptNLcegRlRGNSU51CMiDH9IlvmAfkJXg_5XSVGvGXsGXbQGLF_dc5-H99IFFXBSAgmyCRoOhoOCpF9FBpez8vOVUuRkMRxQ_fDIcjiwyUy-fDUcOKTUPz4LQHqXRRyWaDUcAPURLMtFrLTJN1gjVVxjZr2-e_Xmd-rf_4jv_3z9Ur1YqMHEZOR-jNgXStwjLLFEbhi7Ec3uPO_4y-nz1Wqcupx9BSWofsYpBrVGNhr3NJqMIacZKyFF2AgewsBIeSsVCLV5rZFdpSPjdGSNDW73YecMdjpYqJbEG93WuyL5I77_C4Rxxr6I-x_8cX_WyA0EvT26ByqykHLgnDq5PJ1l8cMggA4u0TwNowMPA7kLcs4hQs_EtHsx5RMxbaW8FHM4MLXT2AcEdPnBDLR-Z47V0MiUM5_td7U_z0mcR0yEt5S3OnUukedTUK7A06BcAdcMUlvKPM29FJakxEASiTDMWw3CRScDhDaLLYYUe5WkC-vzFKqIu6MZsdOzJzF7ltO6vmo0RXT0T2Unyj7X56z0V6EbnPXf38NinxQXZ8cs2V5UFrINBdRhAAeD_UJ9l83yNRnJBYaVR8OVdpJEub2ojlW9ZmjqPIUuFYoXeGk47e142yAGwjJN0BUYlUSvpqyemdrhjfLdKlLqvdwvmsVUKZB2VUejTuYtsP1y6vg1hc0YqM9DNjWHWqup-fXTh2t9N2nNcLBfEDrNXkBvRpGx2C9JOywtpPzX5IzQh3zWofVjuq76_u36508362uy2aw3yy1eb66222rEVFbPZAsDAONuOj00KzoZ_URiuJgvUHNW_dqUqSruKU9j_y9q1maP69a6uvY5PRxY7MNeB6jpYPaYt66A2X_B2zO56UX2aI8DepG9Hjzts_fI8_9mz2xzRj3OYG2KwR2jPhM7kXwjm2Y1LGy9b9bb2vbv8LeM71mkVsdNqk14sAhm-nVN5vawb8iBJxnMsbrc9V2HQRByTgpUYfbNtIKLDr5NeCLIRDB_8sBmV7DbLBG7IGTch4oORxkrL_tmXkZhDJGRaAn1nkKpX2ULSANUEefV3z1NDyrgTtAsTMgS_QPNIoky&lang=sage&interacts=eJyLjgUAARUAuQ==) - pro množiny typu $\Omega=\{(x,y)\in\mathbb{R}^2: a\leq x \leq b, u(x)\leq y \leq v(x)\}$
 
-
 Použijeme-li pro funkci $\vec F$ vystupující v\ Greenově větě
 třídimenzionální rozšíření (třetí komponenta nulová),
 vidíme, že vpravo v\ dvojném integrálu figuruje třetí komponenta rotace
@@ -202,7 +188,6 @@ principu fungují planimetry.
 \fi
 
 ### Varianta Greenovy věty pro tok křivkou 
-
 
 Nahradíme-li formálně vektorové pole $P\vec i+Q\vec j$ vektorovým polem $-Q\vec
 i+P\vec j$, dostáváme následující vztah mezi dvojným integrálem

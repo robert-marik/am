@@ -5,18 +5,15 @@
 > * V úvodu si zkusíme vypočítat několik rotací pro získání určité míry jistoty při práci s tímto operátorem. 
 > * V další části se budeme věnovat hledání kmenové funkce vektorového pole. Rotace informuje o tom, zda tato úloha má řešení, k nalezení tohoto řešení však už nijak nepřispívá. Protože však vzhledem k výše uvedenému problematika k rotaci logicky patří, jsou tyto úlohy zařazeny pospolu. Protože ve dvourozměrném poli se rotace výrazně zjednodušuje, může být nulovost rotace nahrazena rovností mezi jistými dvěma parciálními derivacemi.
 
-
 ## Rotace vektorového pole v rovině
 
 https://youtu.be/IRjknyO2_yo
-
 
 Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
 
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
  $$
  \begin{aligned}
@@ -30,12 +27,9 @@ Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
 \end{aligned}
  $$
 
-
-
 ```
 
 ## Rotace vektorového pole v prostoru
-
 
 https://youtu.be/U_USLTQF5fM
 
@@ -44,7 +38,6 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
  $$
  \begin{aligned}
@@ -61,12 +54,9 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
 \end{aligned}
  $$
 
-
-
 ```
 
 ## Divergence a rotace 2D funkce s parametrem
-
 
 https://youtu.be/ZRIHxmBzf5s
 
@@ -75,7 +65,6 @@ Vypočtěte divergenci a rotaci funkce $\vec F=ax^2y^3\vec \imath + (x^2+y)\vec\
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 $$\nabla\cdot \vec F=\pdv{x}(ax^2y^3)+\pdv{y}(x^2+y)=2axy^3+1$$
 
@@ -89,7 +78,6 @@ $$\nabla\cdot \vec F=\pdv{x}(ax^2y^3)+\pdv{y}(x^2+y)=2axy^3+1$$
 
 ```
 
-
 ## Nalezení kmenové funkce 1/3
 
 https://youtu.be/cjN80-0M77Q
@@ -100,7 +88,6 @@ Pro vektorové pole $$\frac 45 x y^3\vec \imath + \frac 65x^2y^2\vec\jmath$$ naj
 :class: dropdown
 :nonumber:
 
-
 Platí $\pdv {\varphi}{x}=\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2$.
 
 Odsud
@@ -109,7 +96,6 @@ a
 $$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 \,\mathrm dy=\frac 65 {x^2}\frac{y^3}3=\frac 25 x^2y^3+C_2(x).$$
 Porovnáním musí být $C_1(y)=C_2(x)=C\in\mathbb R$ a
 $$\varphi(x,y)=\frac 25 x^2y^3+C,\quad C\in\mathbb R.$$
-
 
 ```
 
@@ -122,7 +108,6 @@ Pro vektorové pole $$\left(x^2+\frac 45 x y^3\right)\vec \imath + \left(\frac 6
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Platí $\pdv {\varphi}{x}=x^2+\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2+y$.
 
@@ -141,12 +126,9 @@ https://youtu.be/mgZl8AScBgI
 
 Pro vektorové pole $$\left(y+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x^2y^2+x^2\right)\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
 
-
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Platí $\pdv {\varphi}{x}=y+\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2+x^2$.
 
@@ -167,5 +149,4 @@ $$\pdv{x}\qty(\frac 65 x^2y^2+x^2)=\frac {12}5 xy^2+2x$$
 a protože obě parciální derivace jsou různé, kmenová funkce neexistuje.
 
 ```
-
 

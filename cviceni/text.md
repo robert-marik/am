@@ -13,7 +13,6 @@ Vypočtěte následující parciální derivace
 1. $\frac{\partial }{\partial x}\frac x{x^2+y^2}$
 1. $\frac{\partial }{\partial y}\frac x{x^2+y^2}$
 
-
 <div class=reseni>
 
 1. $\frac{\partial }{\partial x}(x^2y+2xy^3+x+1)=2x\cdot y+2y^3+1+0=2xy+2y^3+1$
@@ -26,14 +25,11 @@ Vypočtěte následující parciální derivace
 1. $\pdv {x} \frac x{x^2+y^2}=\frac{1(x^2+y^2)-x(2x+0)}{(x^2+y^2)^2}=\cdots$ (derivace podílu)
 1. $\pdv{y} \frac x{x^2+y^2}=\pdv {y} x(x^2+y^2)^{-1}=x(-1)(x^2+y^2)^{-2}(0+2y)=\cdots$ (derivace konstantního násobku mocninné funkce s vnitřní složkou)
 
-
 </div>
-
 
 ![](blizzard.jpg)
 
 ### Parciální derivace, pocitová teplota analyticky
-
 
 Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je
 $$
@@ -84,7 +80,6 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 
 </div>
 
-
 ![Zdroj: Wood handbook](wood_heat_capacity.png)
 
 ### Parciální derivace, tepelná kapacita dřeva
@@ -103,8 +98,6 @@ Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané tep
 $$\pdv{c}{w}=\frac{1.9-1.7}{20-12}=0.025 \,\mathrm{kJ}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}=25 \,\mathrm{J}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}$$
 Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané teploty a vlhkosti při zvýšení obsahu vody o jedno procento.
 
-
-
 Průměr centrální a zpětné diference:
 $$
   \frac{\frac{f(x)-f(x-h)}{h} + \frac{f(x+h)-f(x)}{h}}{2}=
@@ -113,7 +106,6 @@ $$
 $$
 
 </div>
-
 
 ### Veličiny z rovnice vedení tepla
 
@@ -150,7 +142,6 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 </div>
 
-
 ### Okrajové podmínky pro rovnici vedení tepla
 
 K modelu stěny pomocí rovnice vedení tepla je ještě nutné přidat podmínky související s počátečním stavem (počáteční podmínky) a s chováním na okrajích (okrajové podmínky).
@@ -176,7 +167,6 @@ _Zpracováno podle Cengel: Mass and heat transfer._
 Všimněte si, že poslední dvě podmínky se liší znaménkem u veličiny $T$. To proto, že v jednom případě je kladný směr toku tepla do materiálu a jednou z materiálu. Pokud chceme mít popis jednotný, nebo nezávislý na zvolené souřadné soustavě, formulujeme podmínky pro tok tepla ven z materiálu. Tento tok získáme tak, že tok tepla vynásobíme skalárně s jednotkovým vektorem směřujícím ven z materiálu kolmo na jeho povrch. V tomto případě by pro tok ze stěny do místnosti bylo $k\frac{\partial T}{\partial x}(0)=h(T-T_{\text{místnost}})$. Tento tok by byl záporný, protože ve skutečnosti teplo uniká z místnosti stěnou ven.
 
 </div>
-
 
 ## Gradient
 
@@ -229,12 +219,9 @@ $$\begin{aligned}
 Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spojnice se středem a tedy je kolmý k vrstevnici.
 </div>
 
-
-
 ### Gradient funkce s paprskovitými vrstevnicemi
 
 Určete gradient funkce $z=\mathop{\mathrm{arctg}} \frac yx$ a zkontrolujte, že je v každém bodě tečný ke kružnici se středem v počátku. Využijte toho, že tečna je kolmá na poloměr.
-
 
 <div class=reseni>
 
@@ -248,8 +235,6 @@ $$
 
 Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$ a míří směrem od počátku, tj. k poloměru. Proto je tečný ke kružnici.
 </div>
-
-
 
 ### Tečná rovina atd.
 
@@ -287,7 +272,6 @@ $$
 
 </div>
 
-
 ### Linearizace vektorové funkce, Jacobiho matice
 
 Jacobiho matice se používá k linearizaci vektorových funkcí, které
@@ -320,9 +304,7 @@ V bodě $(0,0)$ potom
   \end{pmatrix}.
 \end{equation*}
 
-
 </div>
-
 
 ![Zdroj: Wood handbook](anatomicke_smery_dreva.png)
 
@@ -338,7 +320,6 @@ Uvažujte součinitel tepelné vodivosti $$\lambda =
   2&0\\0&3
 \end{pmatrix}$$
 a vypočtěte tok tepla v bodech $A$, $B$, $C$. Porovnejte směr tohoto toku se směrem gradientu a vysvětlete svá pozorování. Snaží se matice usměrnit teplo do  směru osy $x$ nebo do  směru osy $y$? Odpovídá situace spíše dřevu s podélným směrem v ose $x$ nebo v ose $y$?
-
 
 <div class=reseni>
 
@@ -363,13 +344,9 @@ Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\fra
 
 </div>
 
-
-
 ## Divergence, rovnice vedení tepla
 
-
 ### Divegrence vektorového pole
-
 
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.$$
@@ -409,7 +386,6 @@ Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\fra
 Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycené v určitém okamžiku termokamerou je popsána rovnicí
   $$T(x,y)=(2x-y)^2+x^4.$$
   Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)
-
 
 1. Vypočtěte gradient $\nabla T$  a tok tepla $-k \cdot \nabla T.$
 Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $k=
@@ -488,7 +464,6 @@ $$
 
 ## Rotace, kmenová funkce gradientu
 
-
 ### Rotace vektorového pole v rovině
 
 Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
@@ -507,8 +482,6 @@ Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
  =\vec k(2y-2xy)\\&=2y(1-x)\vec k
 \end{aligned}
  $$
-
-
 
 </div>
 
@@ -535,8 +508,6 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
 \end{aligned}
  $$
 
-
-
 </div>
 
 ### Divergence a rotace 2D funkce s parametrem
@@ -557,7 +528,6 @@ $$\nabla\cdot \vec F=\pdv{x}(ax^2y^3)+\pdv{y}(x^2+y)=2axy^3+1$$
 
 </div>
 
-
 ### Nalezení kmenové funkce 1/3
 
 Pro vektorové pole $$\frac 45 x y^3\vec \imath + \frac 65x^2y^2\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
@@ -574,7 +544,6 @@ $$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 \,\mathrm dy
 =\frac 65 {x^2}\frac{y^3}3=\frac 25 x^2y^3+C_2(x).$$
 Porovnáním musí být $C_1(y)=C_2(x)=C\in\mathbb R$ a
 $$\varphi(x,y)=\frac 25 x^2y^3+C,\quad C\in\mathbb R.$$
-
 
 </div>
 
@@ -601,8 +570,6 @@ $$\varphi(x,y)=\frac {1}{3}x^3+\frac 25 x^2y^3+\frac 12 y^2+C,\quad C\in\mathbb 
 
 Pro vektorové pole $$\left(y+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x^2y^2+x^2\right)\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
 
-
-
 <div class=reseni>
 
 Platí $\pdv {\varphi}{x}=y+\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2+x^2$.
@@ -626,7 +593,6 @@ $$\pdv{x}\qty(\frac 65 x^2y^2+x^2)=\frac {12}5 xy^2+2x$$
 a protože obě parciální derivace jsou různé, kmenová funkce neexistuje.
 
 </div>
-
 
 ## Křivkové integrály
 
@@ -660,8 +626,6 @@ a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{\frac \pi 2}1\,\mathrm dt=\frac \pi 2,$$
 kde poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.
 
-
-
 **Křivka $C_2$.**
 Derivací křivky $\vec r=(1-t,t)$ podle $t$ dostáváme
 $$\frac{\mathrm d\vec r}{\mathrm dt}=(-1,1).$$
@@ -675,8 +639,6 @@ Odsud formálně $$\vec F\mathrm d\vec r=1\mathrm dt$$
 a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{1}1\,\mathrm dt=1,$$
 kde ani v tomto případě poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.
-
-
 
 **Křivka $C_3$.**
 Derivací křivky $\vec r=(1-t^2,t)$ podle $t$ dostáváme
@@ -693,7 +655,6 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=
 \qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
 $$
 
-
 ![vlastní](priklad_5_1_prace.png)
 
 **Interpretace jako práce, srovnání.**
@@ -703,7 +664,6 @@ Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je 
 Integrál fyzikálně znamená práci vektorového pole $(-y,x)$ po zadané křivce. Toto vektorové pole míří po kružnicích okolo počátku proti směru hodinových ručiček. Délka vektoru je rovna vzdálenosti od počátku.
 
 Křivka $C_1$ je nejdále od počátku a vektorové pole je na ní nejsilnější. Navíc v každém bodě je síla ve směru křivky a proto se projeví ve výsledném příspěvku bez redukování. Díky tomu můžeme integrál po kružnici počítat stejně jako práci na přímce, tj. součinem délky  křivky $\frac \pi 2$ a velikosti síly $|\vec F|=1$. Po dalších křivkách je síla menší (křivky jdou blíže ke středu) a navíc se neuplatní celá velikost síly, protože síla svírá s křivkou nenulový úhel a při práci se projeví pouze tečná komponenta.
-
 
 ![vlastní](priklad_5_1.png)
 
@@ -719,12 +679,9 @@ Integrál fyzikálně znamená tok vektorového pole $(x,y)$ křivkou. Toto vekt
 
 Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce $C_1$ (kružnice) je tok v každém bodě kolmý ke křivce a stejně velký a proto je celkový tok snadné určit jako součin velikosti vektorového pole na křivce ($|\vec F|=1$) a délky křivky $\frac \pi 2$.
 
-
 </div>
 
-
 ### Křivkový integrál druhého druhu po parabole
-
 
 Vypočtěte $$\int_{C} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=x^2\vec \imath + (x+y)\vec\jmath$$ po části paraboly
 $$\begin{aligned}
@@ -737,8 +694,6 @@ po zadané křivce $C$.
 <div class=reseni>
 
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
-
-
 
 Derivací křivky $\vec r=(t,t^2)$ podle $t$ dostáváme
 $$\frac{\mathrm d\vec r}{\mathrm dt}=(1,2t).$$
@@ -755,11 +710,7 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt
 
 </div>
 
-
-
-
 ### Křivkový integrál druhého druhu po kubické parabole
-
 
 Vypočtěte $$\int_{C} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=2y\vec \imath + x^2y\vec\jmath$$ po části kubické paraboly
 $$\begin{aligned}
@@ -772,8 +723,6 @@ po zadané křivce $C$.
 <div class=reseni>
 
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
-
-
 
 Derivací křivky $\vec r=(t,t^3)$ podle $t$ dostáváme
 $$\frac{\mathrm d\vec r}{\mathrm dt}=(1,3t^2).$$
@@ -790,16 +739,11 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt
 
 </div>
 
-
-
-
-
 \obrazek[vlastní]{priklad_5_4.png}
 
 ### Tok vektorového pole uzavřenou křivkou
 
 Vypočtěte tok vektorového pole $$\vec \Phi_1=(x+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
-
 
 \textit{Návod:} $$\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi$$
 a tento integrál je možno najít například grafickou cestou.
@@ -821,18 +765,13 @@ a integrál má tvar
 $$\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos^2 t)\,\mathrm dt= \pi ,$$
 kde poslední Riemannův integrál není nutné počítat, protože integrál z první části je nulový díky geometrické interpretaci integrálu a periodicitě funkce $\cos t$ a integrál z druhého sčítance byl součástí zadání.
 
-
 </div>
-
-
-
 
 \obrazek[vlastní]{priklad_5_5.png}
 
 ### Tok vektorového pole uzavřenou křivkou
 
 Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
-
 
 \textit{Návod:} $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0$$
 
@@ -856,10 +795,7 @@ Integrál z prvního sčítance můžeme vypočítat pomocí primitivní funkce
 $$\int_0^{2\pi} 2\cos x\,\mathrm dx=\qty[2\sin x]_0^{2\pi}=2\sin(2\pi)-2\sin 0 =0$$ a integrál z druhého sčítance je nulový, proto je nulový i celý integrál.
 $$\int_C\vec F\mathrm d\vec r=0$$
 
-
 </div>
-
-
 
 \definecolor{zelena}{HTML}{0A5028}
 ## Dvojné integrály
@@ -896,7 +832,6 @@ $$
 \end{aligned}
 $$
 
-
 </div>
 
 ### Kvadratický moment pro obdélník
@@ -916,7 +851,6 @@ $$
 $$
 
 <div class=reseni>
-
 
 $$
 \begin{aligned}
@@ -959,14 +893,12 @@ $$
   =\frac 1{n+1}
 \end{aligned}$$
 
-
 Správnost můžeme ověřit pomocí vzorců pro obsah  $$I_0=1$$ a polohu težiště $$\frac{I_1}{I_0}=\frac 12,$$
 což porovnáme s očekávanými výsledky. Dalším využitím je působiště tlakové síly na přehradu (viz přednáška), které je při orientaci osy $y$ od hladiny směrem dolů v místě
 $$\frac{I_2}{I_1}=\frac {\frac 13}{\frac 12}=\frac 23,$$
 tj. ve dvou třetinách hloubky.
 
 </div>
-
 
 ### Integrál přes trojúhelník
 
@@ -981,7 +913,6 @@ tj. ve dvou třetinách hloubky.
   \end{scope}
 \end{tikzpicture}
 }
-
 
 Vypočtěte integrál
 $$  \iint_\Omega xy^2\,\mathrm dx \mathrm dy
@@ -1015,7 +946,6 @@ $$
 
 </div> 
 
-
 ### Integrál pod parabolou
 
 \Tobrazek{\begin{tikzpicture}[scale=3]
@@ -1029,7 +959,6 @@ $$
   \end{scope}
 \end{tikzpicture}
 }
-
 
 Vypočtěte integrály
 $$
@@ -1097,7 +1026,6 @@ Obsah je $\frac 23$ a souřadnice těžiště jsou $\left[\frac 38,\frac 4{10}\r
   \end{scope}
 \end{tikzpicture}
 }
-
 
 Vypočtěte integrály
 $$
@@ -1181,7 +1109,6 @@ To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že sn�
 
 </div>
 
-
 <!--
 %
 
@@ -1200,9 +1127,7 @@ To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že sn�
 
 ## Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity
 
-
 ### Křivkový integrál pomocí kmenové funkce
-
 
 Určete, pro jako hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
 
@@ -1243,7 +1168,6 @@ $$
 Porovnáním dostáváme kmenovou funkci $$\varphi (x,y)=x^3y+y+C,$$ kde $C$ je integrační konstanta. Integrál po křivce (tvar není důležitý, vzhledem k nezávislosti na integrační cestě stačí počáteční a koncový bod) je
 $$\int _C \vec F\mathrm d\vec r=\varphi(1,2)-\varphi(0,0)=2+2-0=4.$$
 
-
 </div>
 
 ### Křivkový integrál pomocí kmenové funkce 2
@@ -1276,7 +1200,6 @@ má hodnotu
 $$\varphi(1,3)-\varphi(2,1)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
 
 </div>
-
 
 ### Kmenová funkce pomocí křivkového integrálu
 
@@ -1334,7 +1257,6 @@ Rovnice vedení tepla v ortotropním materiálu umístěném do souřadné soust
 $$c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}{y}) . $$
 Za jakých okolností je možno veličiny $\lambda_x$ a $\lambda_y$ napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace? 
 
-
 <div class=reseni>
 
 V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být homogenní. Závislost na poloze nesmí být ani zprostředkovaná přes teplotu. Tyto veličiny tedy nesmí být ani funkcemi teploty. Jinými slovy, konstanta úměrnosti ve Fourierově zákoně se nesmí měnit s teplotou, vztah z Fourierova zákona musí být opřesěn lineární a takové materiály se nazvají materiály s lineární materiálovou odezvou (zkráceně lineární materiály). Veličiny  $\lambda_x$ a $\lambda_y$  se dají napsat před vnější derivace pouze pokud je materiál homogenní a lineární.
@@ -1355,13 +1277,11 @@ teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu 
 
 $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
 
-
 Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.
 
 </div>
 
 ## Diferenciální rovnice I
-
 
 ### Řešení ODE a IVP 
 
@@ -1374,7 +1294,6 @@ Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, 
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2$
 
 _Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech._
-
 
 <div class=reseni>
 
@@ -1417,8 +1336,6 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
   která nás zajímá, je jasné, že kvantitativní model bude obsahovat
   derivaci. Zatím se učíme model zapsat, později ho budeme umět i vyřešit._
 
-
-
 <div class=reseni>
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar
 $$\dv {L}{t}=k (L_{\max}-L).$$
@@ -1440,7 +1357,6 @@ modelu.
 $$\dv {y}{t}=-0.08y-30.$$
 
 </div>
-
 
 <!--
 % \obrazek{lov.jpg}
@@ -1466,8 +1382,6 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 -->
 
-
-
 ![pixabay.com, autor Free-Photos](deer.jpg)
 
 ### Populace jelenů
@@ -1480,7 +1394,6 @@ matematický model pro velikost populace jelenů v tomto parku.
 Je-li $x$ velikost populace jelenů, platí
 $$ \dv {x}{t}=0.10 x-50, $$ kde $t$ je čas v letech.
 </div>
-
 
 ### Hrubý model chřipkové epidemie
 
@@ -1519,7 +1432,6 @@ Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je
 $$\dv {L}{t}=k (L_{\max}-L).$$
 </div>
 
-
 ![](ledni_medved.jpg)
 
 ### Tloušťka ledu
@@ -1540,12 +1452,7 @@ h\,\mathrm dh&=k\, \mathrm dt\\
 \end{aligned}
 $$
 
-
-
 </div> 
-
-
-
 
 ![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
 
@@ -1565,7 +1472,6 @@ nádrž \textbf{cylindrického tvaru} (válec postavený na podstavu),
 nádrž ve tvaru
 \textbf{kvádru} 
 a nádrž ve tvaru \textbf{kužele} otočeného vrcholem dolů (trychtýř). 
-
 
 \textit{V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky.}
 
@@ -1589,12 +1495,9 @@ $$\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{3k_3}h^{-3/2}$$
 a po přeznačení konstanty má model pro kuželovou nádrž tvar
 $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
-
 </div>
 
-
 ![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
-
 
 ### Problematika jednoznačnosti v modelu vypouštění nádrže
 
@@ -1641,9 +1544,7 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 
 <!--
 
-
 % \obrazek[vlastní]{pokros.jpg}
-
 
 % ## Stavebniny vedle čebínského nádraží: model Hromada sypkého
 % materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný
@@ -1667,9 +1568,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 % kde $r$ a $k=k_0k_1$ jsou konstanty.
 
 % </div>
-
-
-
 
 % \obrazek[vlastní]{pokros.jpg}[-30pt]
 
@@ -1698,10 +1596,8 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 
 % </div>
 
-
 % 
 % \obrazek[http://ecoursesonline.iasri.res.in]{aq.png}[-10pt]
-
 
 % ## Pokles hladiny podzemní vody při ustáleném rovinném proudění
 
@@ -1746,10 +1642,7 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 % \end{enumerate}
 % </div>
 
-
-
 % \obrazek[http://ecoursesonline.iasri.res.in]{well.png}[-25pt]
-
 
 % ## Studna s volnou hladinou
 
@@ -1759,7 +1652,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 % \end{equation}
 % odvozenou v \ref{pokles} B. Tentokrát budeme studovat studnu s volnou hladinou\footnote{Zjednodušeně, voda ve studni je na úrovni hladiny podzemní vody. Studna nevznikla navrtáním nepropustné vrstvy, kdy by byla voda natlakovaná a vystoupila do výšky odpovídající tomuto tlaku.} Je-li studna čerpána konstantní rychlostí $Q$, je tok na jednotku délky na kružnici o poloměru $x$ roven $q=-\frac {Q}{2\pi x}$ (voda teče dovnitř, tj. ve směru ve kterém klesá $x$). Dosaďte tento vztah do rovnice \eqref{*} a rovnici vyřešte s počáteční podmínkou $h(R)=H$, kde $H$ odpovídá hladině vody ve studni a $R$ je poloměr studny (na obrázku $h_w$ a $r_w$). Dostanete rovnici \textit{snížení hladiny v okolí studny} čerpané rychlostí $Q$ (depresní křivka).
 % (\textit{Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Analogickým způsobem se počítají tepelné ztráty při prostupu tepla válcovou stěnou (viz \url{https://youtu.be/rvyogmaUmUQ}).})
-
 
 % <div class=reseni>
 % $$
@@ -1821,7 +1713,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 % \includegraphics[width=0.99\linewidth]{phraq.jpg}
   
 % \end{minipage}
-
 
 % Zapište pomocí vhodných veličin, operátorů a rovnic následující vztahy, zákony nebo pozorování,
 % odpovězte na otázky a splňte úkoly.
@@ -1918,7 +1809,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 %   pro $h$ jako funkci proměnné  $x$, kde čárka značí derivaci podle $x$. Výsledkem bude podmínka, kterou musí splňovat funkce $h^2$ a odsud již najdete hledanou křivku snížení piezometrické hladiny. (Pokud je $h$ závislé jenom na $x$, plocha ohraničující zvodnělou vrstvu se z bočního pohledu promítne do křivky.)
 % \end{enumerate}
 
-
 % <div class=reseni>
 % \begin{enumerate}[A)]
 % 1. $$S_s\frac{\partial h}{\partial t}=\sigma + \frac{\partial }{\partial x}\left (T \frac{\partial h}{\partial x} \right)
@@ -1947,7 +1837,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 ## Autonomní rovnice a systémy
 
 ![Zdroj: vlastní](pokros.jpg)
-
 
 ### Stavebniny vedle čebínského nádraží: model
 
@@ -1984,8 +1873,6 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 </div>
 
-
-
 ![Zdroj: vlastní](trolejbus.jpg)
 
 ### Časový rozestup mezi trolejbusy
@@ -2004,7 +1891,6 @@ Předpokládejme, že **(1)** pokud žádní pasažéři nečekají na druhý v�
   intervalem mezi oběma vozy.
 
 Navrhněte model pro rozestup trolejbusů, najděte stacionární řešení a posuďte jeho stabilitu.
-
 
 <div class=reseni>
 
@@ -2026,7 +1912,6 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 </div>
 
-
 ![](kost.jpg)
 
 ### Propeptid kolagenu
@@ -2046,7 +1931,6 @@ $$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P$$
 
 </div>
 
-
 ![Jelen a los](moose.jpg)
 
 ### Jelen a los
@@ -2054,8 +1938,6 @@ $$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P$$
 Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu. \textbf{(1)} Bez konkurence by populace jelena rostla rychlostí $3$ a  populace losa rychlostí $2$ na jeden kus. \textbf{(2)} Vnitrodruhová konkurence se projevuje v obou populacích stejně a je rovna druhé mocnině příslušné velikosti populace. \textbf{(3)} Mezidruhová konkurence je vyjádřena členem rovným součinu velikosti populací a tato konkurence se projeví s koeficientem 0.5 v populaci losa a s koeficientem 1 v populaci jelena.
 
 Sestavte matematický model a otestujte jej numerickým experimentem na stabilitu stacionárních bodů. Poté zdvojnásobte parametry mezidruhové konkurence a sledujte změnu odezvy. 
-
-
 
 <div class=reseni>
 
@@ -2078,7 +1960,6 @@ $$
 
 % Konkurence je častý jev v přírodě. Například v lese si konkurují listnaté a jehličnaté stormy z hlediska prostoru, slunečního světla a vody. Stromy se liší rychlostí růstu, nosnou kapacitou prostředí a tím, jak ovlivňují své konkurenty. Předpokládejte logistický růst v obou konkurujících si populacích, předpokládejte člen vyjadřující zbrždění vlivem konkurenta přímo úměrný velikosti obou populací  a namodelujte čtyři možné východiska modelu ()
 
-
 % %https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x*(1-x/10000)-5*0.00001*x*y&dydt=0.25*y*(1-y/6000)-3*0.00001*x*y&x=0,10000,20&y=0,6000,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B4907.407407407408,5229.428571428572%5D,%5B7444.444444444444,3746.6985645933014%5D,%5B8407.407407407407,2633.9712918660284%5D,%5B9259.25925925926,1111.2918660287078%5D,%5B9648.148148148148,423.1578947368416%5D,%5B3240.740740740741,306.0287081339711%5D,%5B1407.4074074074074,935.5980861244016%5D,%5B4611.111111111111,203.5406698564584%5D,%5B5518.518518518518,57.129186602870504%5D
 -->
 
@@ -2096,7 +1977,6 @@ Vyjádřete tyto vztahy matematickým modelem.
 
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snižené úmrtnosti v případě, že puštík má přístup k potravě._
 
-
 <div class=reseni>
 
 $$
@@ -2109,7 +1989,6 @@ $$
 [Sage](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x%20-%200.025*x-0.01*x*y&dydt=-0.1*y+0.05*x*y&x=0,10,20&y=0,40,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.7894736842105263,10.577142857142857%5D,%5B1.795774647887324,12.09377990430622%5D,%5B0.7394366197183099,22.830622009569378%5D)
 
 </div>
-
 
 ![Kůň Převalského](prevalski.jpg)
 
@@ -2134,7 +2013,6 @@ $$
 \end{aligned}
 $$
 
-
 [Sage](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=x-x*y&dydt=-y+x*y&x=0,4,20&y=0,3,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.6714285714285717,0.6442105263157893%5D,%5B1.1571428571428575,0.6002870813397125%5D,%5B0.9857142857142858,1.155933014354067%5D,%5B0.7142857142857143,2.1442105263157893%5D,%5B2.992857142857143,2.01244019138756%5D,%5B2.7,1.382870813397129%5D)
 
 </div>
@@ -2149,7 +2027,6 @@ $$
 % https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?O&S,29,F,80,10;H,0,T,290,100;M,0,T,130,200;R,0,T,325,280;O,0,T,490,230&S,H,S*15/2900;M,H,M*38/1180;H,R,H*68/850;R,O,R*85/116;O,s,O*99/393&The%20compartments%20represent%20levels%20of%20some%20pollutant%20in%20the%20Great%20Lakes.%20%28R%20%3D%20Erie%2C%20because%20E%20is%20not%20an%20allowed%20variable%20name.%29%20The%20model%20assumes%20that%20the%20initial%20concentration%20of%20the%20pollutant%20is%20the%20same%20in%20all%20the%20lakes%2C%20so%20the%20initial%20value%20is%20proportional%20to%20the%20lake%27s%20volume.%20No%20more%20of%20that%20pollutant%20is%20being%20introduced%2C%20and%20pure%20%28rain%29%20water%20flows%20in%20to%20the%20lakes%2C%20with%20the%20resulting%20mixture%20flowing%20from%20each%20lake%20into%20the%20next%2C%20and%20eventually%20to%20the%20ocean.%20From%20Fundamentals%20of%20Differential%20Equations%20%28Nagle%20and%20Saff%2C%201996%29%2C%20page%20317.
 
 -->
-
 
 ### Analýza pomocí vlastních čísel
 
@@ -2204,5 +2081,4 @@ $$\lambda_{1,2}=\frac{11\pm\sqrt{121-12}}{2}$$
 ## Více diferenciálních rovnic
 
 ## Shrnutí
-
 

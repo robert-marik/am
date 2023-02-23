@@ -1,8 +1,5 @@
 # Dvojný integrál
 
-
-
-
 > Anotace.
 >
 > * V předchozí přednášce jsme si ukázali rozšíření integrálu, které nám umožnilo počítat integrál nejenom po úsečce, ale i po libovolné křivce. V této přednášce se naučíme integrovat přes dvourozměrný obrazec v rovině. Seznámíme se s dvojným integrálem.
@@ -28,7 +25,6 @@ U křivkového integrálu jsme se setkali s momentem setrvačnosti. Ukázali jsm
 
 Řešení uvedených nesnází je stejné: další rozšíření integrálního počtu a zavedení  dvojného integrálu. Ten si nyní představíme.
 
-
 https://youtu.be/DYySq6o6WTk
 
 \def\maxwidth{5cm}
@@ -37,13 +33,11 @@ https://youtu.be/DYySq6o6WTk
 
 ## Motivace 1 (hmotnost nehomogenní desky)
 
-
 <div class='obtekat'>
 
 ![Deska s nekonstantní plošnou hustotou. Zdroj:  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0](table.jpg)
 
 </div>
-
 
 * Hmotnost $m$ desky $\Omega$ je možno vypočítat jako součin plošné
   hustoty $\sigma$ (hmotnost na jednotku obsahu) a obsahu $S$ desky podle vzorce $$m=\sigma S.$$
@@ -59,10 +53,7 @@ https://youtu.be/DYySq6o6WTk
   vybudujeme aparát, který nám umožní psát
   $$m=\iint_\Omega \sigma \,\mathrm dS.$$
 
-
-
 ## Motivace 2 (objem vody v jezeře)
-
 
 <div class='obtekat'>
 
@@ -200,7 +191,6 @@ integrál. Mají název **Fubiniovy věty**.
 > $$
 > 
 
-
 #### Záměna pořadí integrace
 
 <div class='obtekat'>
@@ -208,7 +198,6 @@ integrál. Mají název **Fubiniovy věty**.
 ![Oblast, pro kterou jsou možná obě pořadí integrace.](fub_4.png)
 
 </div>
-
 
 Často je možné oblast integrace zapsat pomocí obou možností uvedených
 na předchozích slidech. Například oblast na obrázku je možno zapsat
@@ -230,7 +219,6 @@ $$\int_0^4 \int _{\sqrt y}^{2} f(x,y)\;\mathrm{d}x\;\mathrm{d}y.$$
 
 Všimněte si, že nestačí prosté prohození integrálů. Je nutno přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako funkce proměnné $x$ a jednou jako funkce proměnné $y$. V důsledku tohoto dochází v průběhu výpočtu dvěma různými způsoby k\ tomu, že pracujeme se dvěma různými integrály. Výsledky jsou samozřejmě stejné, ale nemusí být dosažitelné srovnatelnou námahou. Jedna z cest může být snazší.
 
-
 ## Výpočet (obdélníková oblast)
 
 https://youtu.be/o38mi3tTAvw
@@ -239,7 +227,6 @@ https://youtu.be/o38mi3tTAvw
 ![Integrál přes obdélník.](fub_3.png)
 
 </div>
-
 
 Výše uvedené problémy se stanovením a případným přepočítáváním mezí
 při záměně pořadí integrace se nevyskytují při integrování přes
@@ -263,8 +250,6 @@ obdélníkovou oblast.
 https://youtu.be/8YS2Fn8st5I
 
 #### Matematické aplikace dvojného integrálu
-
-
 
 * **Obsah** $\mu(\Omega)$ množiny $\Omega$ vypočteme jako integrál
     $$\mu(\Omega)=\iint_\Omega \mathrm{d}x \mathrm{d}y.$$
@@ -301,8 +286,6 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   
 #### Fyzikální aplikace dvojného integrálu
 
-
-
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x
   \mathrm{d}y,$$ kde $\sigma(x,y)$ je **plošná hustota** (hmotnost
   vztažená na jednotku povrchu).
@@ -322,9 +305,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   osu $x$ je $\rho(x,y)=y$ a pro osu $y$ je $\rho (x,y)=x$. Pro osu
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
-
 #### Technické aplikace dvojného integrálu
-
 
 \iffalse
 
@@ -332,19 +313,13 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 ![Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR [realizována 2011](https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico). Zdroj: https://www.taus.eu](I-nosniky.jpg)
 
-
 ![Větrné turbíny jsou konstruovány podobně jako I nosníky, pevný materiál na vnějších stranách a materiál s menší pevností uvnitř. Například balzové dřevo. A podobně jsou "konstruovány" například listy rostlin. Zdroj: pixabay.com, tpsdave](vetrna_turbina.jpg)
 
 </div>
 
-
 manimp:beam|Odvození ohybové rovnice nosníku.
 
-
 \fi
-
-
-
 
 * **Souřadnice těžiště** množiny jsou podílem lineárních momentů a
   celkové hmotnosti množiny.
@@ -365,10 +340,7 @@ manimp:beam|Odvození ohybové rovnice nosníku.
   kde $S=\mu (M)$ je obsah množiny $M$.
   Poloha těžiště je tedy střední hodnotou funkcí $x$ a $y$.
 
-
-
 #### Tuhost nosníků, stabilita stromů
-
 
 \iffalse
 
@@ -378,12 +350,9 @@ manimp:beam|Odvození ohybové rovnice nosníku.
 
 ![Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník](vanocni_strom.jpg)
 
-
 </div>
 
 \fi
-
-
 
 Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce $b$ a
 šířce $a$ je dána kvadratickým momentem obdélníkového průřezu vzhledem
@@ -447,7 +416,6 @@ těžišti jednotlivých částí.
 
 Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
 je již snadné.
-
 
 #### Steinerova věta
 
@@ -529,7 +497,6 @@ hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak
 v\ těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
 poznatek nijak vázán na konkrétní tvar hráze. Musí být však splněna
 podmínka, že všechny body hráze leží v\ jedné rovině.
-
 
 \iffalse
 
@@ -624,7 +591,6 @@ určíme vzdálenost $r$ bodu od počátku soustavy souřadnic $O$ a úhel
 $\varphi$, který svírá spojnice bodů $O$ a $A$ s\ kladnou částí osy
 $x$.
 
-
 \def\maxfactor{0.3}
 
 ![Polární souřadnice.](polarni_souradnice.png)
@@ -704,7 +670,6 @@ th {text-align: center;}
 
 </div>
 
-
 Chceme-li převést dvojný integrál do polárních souřadnic, provádíme v\ něm vlastně substituci $x=r\cos \varphi$ a $y=r\sin \varphi$. Přitom
 se transformují i\ diferenciály $\mathrm{d}x$ a $\mathrm{d}y$.  Při
 změně úhlu o $\mathrm{d}\varphi$ a změně vzdálenosti o $\mathrm{d}r$
@@ -730,9 +695,6 @@ kružnici nebo její část (např. mezikruží či kruhová výseč). V\ takov�
 případě mají totiž integrály které vzniknou po transformaci dvojného
 integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je
 zpravidla jednodušší. 
-
-
-
 
 ## Z ptačí perspektivy
 

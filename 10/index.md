@@ -1,7 +1,5 @@
 # Autonomní rovnice a systémy
 
-
-
 <!--
 ## Instrukce k online výuce prosinec 2021
 
@@ -58,20 +56,15 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt}$ a toto řešení se pro velká $t$ blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty $k$. Pravou stranu rovnice, funkci $f(y)$, je možné aproximovat vztahem $f(y)\approx f'(y_0)(y-y_0)$ a odsud a z poznatku, že malá změna rovnice vetšinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech) a proto rovnice $y'=f(y)$ kopíruje v okolí bodu $y_0$ chování rovnice $(y-y_0)'=f'(y_0)(y-y_0)$, pokud vynecháme patologické případy, což je zde $f'(y_0)=0$. Řešení je tedy $y\approx y_0+Ce^{f'(y_0)t}$ a tato funkce buď konverguje k $y_0$ nebo roste neohraničeně, v závislosti na znaménku derivace $f'(y_0)$.
 
-
 ### Logistická diferenciální rovnice s konstantním lovem
 
-
 manim:Logistic|NyLkjOTYzVQ|Logistická rovnice s lovem.
-
-
 
 <div class='obtekat'>
 
 ![Pravá strana k modelu lovu s konstantní intenzitou.](logisticka-lov.png)
 
 </div>
-
 
 Logistická diferenciální rovnice s konstantním lovem $h$, tj. rovnice
 $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,$$ má pro
@@ -98,13 +91,11 @@ Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodo
 
 ### Model metapopulací
 
-
 [viz zde](https://robert-marik.github.io/dmp/cviceni/cviceni_08.html)
 
 ### Model soupeření jestřábí a holubičí povahy
 
 manim:Hawk_and_dove_game|zAzZrIShj9U|Model soupeření dvou povah. Ukazuje, že vždy bude v přírodě určité procento agrasivního vzorce chování. Někdy dokonce tento vzorech chování bude jediný. 
-
 
 \iffalse 
 
@@ -117,7 +108,6 @@ manim:Hawk_and_dove_game|zAzZrIShj9U|Model soupeření dvou povah. Ukazuje, že 
 </div>
 
 \fi
-
 
 Cílem tohoto modelu je studovat typy chování živočichů a rostlin a
 zjistit, zda některý typ chování přináší jeho nositelům evoluční
@@ -174,14 +164,11 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
   populace složené ze samých jestřábů je les. Náklady na boj spočívají
   ve vytvoření vyššího kmene, užitkem je světlo.*
 
-
-
 ## Autonomní rovnice s pravou stranou ve tvaru rozdílu
 
 https://youtu.be/ccWuBp4kies
 
 > Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
-
 
 ### Teplotní bilance Země
 
@@ -196,11 +183,9 @@ $$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\t
 
 [Online model.](http://user.mendelu.cz/marik/aromamath/Teplotni_bilance_Zeme.html)
 
-
 ### Logistická diferenciální rovnice s predátory
 
 manim:Obalec|iFmQWcR_JX4|Model populace pro preddačním tlakem využijeme například při studiu škůdce. Model vykazuje bifurkaci (malá změna vstupních dat může zcela změnit chování modelu) a hysterezi (stav souvisí i s historií modelu).
-
 
 <div class='obtekat'>
 
@@ -246,9 +231,6 @@ hodnoty, že predátoři jsou nasycení a nestačí populaci redukovat,
 odpovídá to posunu nestabilního stacionárního bodu pod hodnotu
 velikosti populace a dojde k přemnožení. Toto přemnožení má
 devastující účinky pro les.
-
-
-
 
 ## Autonomní systém $X'=f(X)$
 
@@ -332,7 +314,6 @@ Taková rovnice nemá řešení v množině reálných čísel a vlastní čísl
 
 ## Autonomní systém ve dvou dimenzích
 
-
 <div class='obtekat'>
 
 ![Trajektorie pro stacionární body spojené s reálnými vlastními čísly.](sp_real.png)
@@ -340,8 +321,6 @@ Taková rovnice nemá řešení v množině reálných čísel a vlastní čísl
 ![Trajektorie pro stacionární body spojené s nereálnými vlastními čísly.](sp_complex.png)
 
 </div>
-
-
 
 Ve dvou dimenzích je autonomní systém možno psát ve tvaru 
 $$ \begin{aligned}
@@ -423,7 +402,6 @@ Tento systém vychází z logistické rovnice pro každou z populací s doplněn
 
 manim:Predator_prey|zihShrEOJAU|Model dravce a kořisti vysvětluje kolísání populací okolo rovnovážné polohy. Jde o stabilitu, která však nespočívá s konstantních hodnotách stavů, ale v periodickém průběhu. 
 
-
 Skutečnost kdy žijí ve společné lokalitě a přítomnost jednoho druhu umožňuje přežití druhého je modelována autonomním systémem
 $$
 \begin{aligned}
@@ -432,9 +410,6 @@ $$
 \end{aligned}
 $$
 V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$, (tj. pro nenažrané dravce kteří nejsou nikdy saturováni a bez vnitrodruhové konkurence v populaci kořisti) dostáváme klasický Lotkův-Voterrův model, který v jistém smyslu odstartoval využití matematiky v modelování biologických systémů. Povedlo se mu vysvětlit oscilace mezi populacemi kořisti a dravce. Přes tento úspěch se však pro praktické modelování využívají dokonalejší modely. Zejména je nutno uvažovat ohraničenou trofickou funkci.
-
-
-
 
 ## Vícerozměrné autonomní systémy, kompartmentové modely
 

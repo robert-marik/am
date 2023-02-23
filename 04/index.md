@@ -1,7 +1,5 @@
 # Rotace vektorového pole
 
-
-
 > Anotace.
 >
 > * Již nějakou dobu studujeme vektorová pole. V této přednášce si několik typických zkusíme vizualizovat. 
@@ -146,9 +144,7 @@ potential](https://en.wikipedia.org/wiki/Velocity_potential)). To je
 na rozdíl od rychlosti veličina, která není vektorová a proto se s ní
 lépe pracuje.
 
-
 ## Divergence rotace je nula
-
 
 Buď $\vec F:\mathbb{R}^3\to\mathbb{R}^3$ hladké vektorové pole. Vypočtěte $\nabla \cdot (\nabla \times \vec F)$
 
@@ -227,11 +223,9 @@ Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a
 
 -->
 
-
 ## Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
 https://youtu.be/52W524bSOKQ
-
 
 \iffalse 
 
@@ -299,9 +293,7 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 * [Online výpočet Sage.](https://sagecell.sagemath.org/?z=eJx1jEEKgzAQRfeCdxA3zqgJJmJKF7nFgItSoTQVXFTbVOb8jUitXXT3_3t_hi8eMio5wzhqIQS0qpZKF5U0WjU5CaVkfci5g0oqg4HXRxP4RuLIkW2lG_oeCIGtNiXZcIZ5JXWw_LH8a5s4evhhnBNoV56sAjeeCiHSb3W0y_x39nr6GZZxp4tl1-ndS75d58nDyVHp-IxynPwdEN_qCUOs&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * [Online výpočet Python.](https://gist.github.com/robert-marik/7bdb6817bde21432434ca8877a49bd56)
 
-
 \fi 
-
 
 <!--
 \iffalse
@@ -333,7 +325,6 @@ $$\begin{aligned}\nabla \vec F & = \nabla(f\vec G) \\&= \frac {1}{(x^2+y^2+z^2)^
 \\&= \frac {3-2n}{(x^2+y^2+z^2)^n}.
 \end{aligned}$$
 
-
 Divergence je nulová pro $n=\frac 32.$ V tomto případě máme $$\vec
 F=\frac{1}{x^2+y^2+z^2} \cdot \frac{(x,y,z)}{\sqrt{x^2+y^2+z^2}}$$ a
 velikost vektorového pole je nepřímo úměrná druhé mocnině vzdálenosti
@@ -350,7 +341,6 @@ od počátku.
 
 ## Shrnutí diferenciálních operátorů
 
-
 <style>
 table, th, td {
    border: 2px solid green;
@@ -362,7 +352,6 @@ table {
     border-collapse: collapse;
 }
 </style>
-
 
 * **Skalární funkce $f(x,y,z)$**
 
@@ -391,7 +380,6 @@ table {
   každou složku vektoru samostatně a takový zápis představuje tři
   nezávislé rovnice zapsané v jedné vektorové rovnici. Příkladem je Navierova-Stokesova rovnice níže.
 
-
 ## Popis pole
 
 Následující popis je pro jednoduchost a konkrétnost proveden pro
@@ -409,9 +397,7 @@ nahradíme příslušné veličiny a charakteristiky objektů.
     - Gravitační pole je úplně popsáno intenzitou gravitačního pole.
     - Potenciál gravitačního pole je možné ze zadané intenzity počítat hledáním totálního diferenciálu zpětným integrováním nebo pomocí křivkového integrálu druhého druhu (viz později v semestru).
 
-
 ## Ukázky použití - rovnice matematické fyziky 1/2
-
 
 ##### *Rovnice kontinuity* 
 
@@ -423,7 +409,6 @@ první Kirchhofův zákon nebo rovnice spojitosti v hydrodynamice.
 $$    
 \frac{\partial\rho}{\partial t}+\nabla \vec \jmath=s
 $$
-
 
 ##### *Rovnice difuze, rovnice vedení tepla* 
 
@@ -446,8 +431,6 @@ těle a pruhy na ocase, ale žádné zvíře nemá kresbu srsti naopak? Pokud
 má srst zvíře pruhy na těle, je pruhovaný i ocas. I toto plyne z
 rovnice difuze.
 
-
-
 ##### *Navierova-Stokesova rovnice*
 
 Rovnice popisující proudění viskozní Newtonovské tekutiny. Jeden z
@@ -458,10 +441,6 @@ $$
 \frac{\partial \vec v}{\partial t}+(\vec v\cdot \nabla) \vec v
   =g-\frac{\nabla p}{\rho}+\mu\nabla^2\vec v 
 $$
-
-
-
-
 
 ## Ukázky použití - rovnice matematické fyziky 2/2
 
@@ -480,7 +459,6 @@ $$
 \end{aligned}
 $$
 
-
 ##### *Vlnová rovnice* 
 
 Popisuje vlnění, stojaté i postupné vlny. Pro elektromagnetickou vlnu
@@ -489,7 +467,6 @@ jde rovnice odvodit z Maxwellových rovnic.
 $$
 \frac 1{c^2}\frac{\partial^2 z}{\partial t^2}=\nabla^2 z
 $$
-
 
 ##### *Schrödingerova rovnice* 
 
@@ -500,14 +477,9 @@ $$
   i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar}{2m}\nabla^2 \psi +V\psi 
 $$
 
-
 \fi
 
-
-
 ## Shrnutí vzorců pro výpočty
-
-
 
 <style>
 table, th, td {
@@ -543,9 +515,6 @@ Použité označení:
 * Výraz $\nabla f(x_0,y_0)$ je gradient v bodě $(x_0, y_0)$. Je nutno zderivovat funkci $f$, sestavit gradient v bodě $(x,y)$ a dosadit $x=x_0$ a $y=y_0$.
 * Operace $(a,b)\cdot (c,d)=ac+bd$ je skalární součin vektorů.
 
-
-
-
 ## Proč je gradient kolmý na vrstevnice?
 
 <div class='sloupce'>
@@ -576,7 +545,6 @@ gradient. Odvodíme vztah mezi vrstevnicemi a gradientem.
   skalární součin je nula). Zbývá zjistit, jak vypadá vektor
   $(x'(t),y'(t))$.
 
-
 </div>
 
 -----
@@ -598,7 +566,6 @@ bodem.
 
 ## Implicitně definovaná funkce 
 
-
 <div class='sloupce'>
 
 Mějme funkci $f(x,y)$ dvou proměnných a její vstevnici na úrovni $C$
@@ -618,12 +585,9 @@ tj. $f(x_0,y_0)=C$.
 
 <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>
 
-
-
 </div>
 
 ## Implicitně definovaná funkce  (pokračování)
-
 
 <div class='sloupce'>
 
@@ -640,8 +604,6 @@ tj. $f(x_0,y_0)=C$.
   vrstevnice funkce $f$ na úrovni $C$ přepsat do tvaru $$g(x,y)=0. $$
 
 ![Tečna k vrstevnici](implicitni_2.png) 
-
-
 
 </div>
 
@@ -666,14 +628,9 @@ tj. $f(x_0,y_0)=C$.
 
 ![Tečna k vrstevnici](implicitni_3.png) 
 
-
 </div>
 
-
-
 ## Separace proměnných
-
-
 
 Některé funkce dvou proměnných je možno zapsat jako součin dvou funkcí
 jedné proměnné, například $\varphi(x,y)=\sin(x^2+1)\frac{\ln y}{y}$. U některých funkcí toto možné není, například funkce
@@ -693,7 +650,6 @@ vlastnost.
 >  $$
 >   tj. pokud na množině $G$ platí $$\begin{vmatrix}\varphi & \frac {\partial \varphi}{\partial x}\\ \frac {\partial \varphi}{\partial y} &
 > \frac {\partial^2 \varphi}{\partial x\partial y}\end{vmatrix}=0$$
-
 
  Naznačíme část důkazu. Pokud platí $$\varphi(x,y)=f(x)g(y),$$ je
   $$\ln \varphi(x,y)=\ln(f(x))+\ln(g(y)).$$ Derivací podle $x$ dostáváme
@@ -748,11 +704,9 @@ následující věta.
 
 </div>
 
-
 -----
 
 ## Zákon šíření chyb  (chyba nepřímo měřené veličiny)
-
 
 * V praxi často měříme nepřímo veličinu $f$ tak, že měříme veličiny
 $x_1$, $x_2$, \dots, $x_n$ a hodnotu veličiny $f$ určíme pomocí vzorce
@@ -774,12 +728,7 @@ označovaný **zákon šíření chyb**.
 [Příklad](https://sagecell.sagemath.org/?z=eJyVks9vmzAUx-_-K54SUO2UwcqkHaJ5l6laL7n2VCVysDusYJzaJm3619eGAm7VahsHw_v19ee9x_K2qQ_aOjgJ4Eb4s3buuC4K0eaP8iCPgkuWa_OnCFZx_dDJRu6N7NROaWldZ8Su0q0TrUNog1WmNCcUqy_hXfgDIaR2teatdox-y797q6rPe0a_5qUPaT4FS-8I9hi-QsjW-hHXTjXYXCTJhqY2SSBJlP-4O6rR0ny2LxD4J8UNc-IJByAIJCQbHBMKyWD09PdNCTPQnDJCEf8gxIWRJ1aJnaKbnMv7e6xIbru9xYpO-v21NFbDJKr0sbHW0_1bNRoHtZnbyOIcWF5ybdmzaCXqea8o87rzrauxWbiEtxHNV3OXfoBL8HDCiLaSrBnESmofjMMfyW1LL_iZ2rYkQe-ZHXQLVnpNCSESb3dxM7SwhtQu0rEf8iblR21-Lt75fhvGpf_11oBTm6WWLNIII4MYKewuKv3lEc5x3Wsz_eindccVt4089eTQMjidbSO4OHygsIoJJrHVe5a_9RYAGRy10pWMt9ENQxoW_L86_RZYvIZIrSTkBXa0WeY=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 (vzorec na výpočet vlhkosti dřeva podle [Wikipedie](http://en.wikipedia.org/wiki/Equilibrium_moisture_content)): $M=\frac{m-m_{od}}{m_{od}}$, $m=3.6\pm0.2$, $m_{od}=2.2\pm0.1$
 
-
-
 -->
-
-
-
 
 ## Z ptačí perspektivy
 
@@ -790,7 +739,6 @@ označovaný **zákon šíření chyb**.
 ![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
 
 </div>
-
 
 \fi
 

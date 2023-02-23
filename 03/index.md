@@ -1,13 +1,10 @@
 # Divergence vektorového pole, rovnice kontinuity
 
-
-
 > Anotace.
 >
 > * Představíme si univerzální nástroj umožňující popsat libovolný transportní děj v přírodě. Tedy transport energie (vedení tepla), transport vody (sušení dřeva, proudění podzemní vody, proudění tzv. mělké vody) a transport látky obecně (pohyb sedimentů, pohyb tektonických vrstev).
 > * Aparát z této přednášky se věnuje základním principům transportních dějů. Budeme se zaměřovat především na transport energie nebo látky materiálem. Naučíme se základní představu o fungování těchto dějů naformulovat matematicky. Vzniklé rovnice řešit nebudeme, což vůbec nevadí. Řešení za nás zvládnou počítače. Role člověka je nezastupitelná při tom nejdůležitějším, při formulaci modelu. To bude i naším hlavním úkolem.
 > * Během analýzy transportních jevů si představíme nový diferenciální operátor: operátor divergence. Divergence vyjadřuje, zda tok zesiluje a nabírá na intenzitě (tj. z daného místa více vytéká, než teče dovnitř) nebo naopak.
-
 
 > Prerekvizity.
 >
@@ -46,11 +43,9 @@ https://youtu.be/cXT6ULeZFJs
 
 \iffalse 
 
-
 manim:Divergence|Vk8OAq3_40g|Divergence umožňuje identifikovat, zda tok sílí či slábne. Tato znalost je důležitým stavebním kamenem do matematického modelu liboovolného transportního děje probíhajícího v přírodě (rovnice kontinuity a difuzní rovnice).
 
 <div class='obtekat'>
-
 
 ![Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence_kostka.png)
 
@@ -121,7 +116,6 @@ Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar.
 
 Viz [cvičení](http://user.mendelu.cz/marik/am/slidy/cviceni/cviceni03.md.html). Jedná se o prosté derivování se následným sečtením derivací.
 
-
 ## Rovnice kontinuity
 
 https://youtu.be/HiOmERpTdV0
@@ -135,7 +129,6 @@ https://youtu.be/HiOmERpTdV0
 </div>
 
 \fi 
-
 
 * Přírůstek stavové veličiny za jednotku času v jednotkovém objemu
   (nebo ploše, nebo délce, podle dimenzionality úlohy) je derivace
@@ -164,7 +157,6 @@ $$
 >* Pokud studujeme systém v ustáleném stavu, kdy se stavová veličina nemění v čase, je člen $\frac{\partial u}{\partial t}$ na levé straně nulový. V tomto případě mluvíme o *stacionárním stavu* a *stacionární rovnici kontinuity*. Stacionární rovnice kontinuity typicky popisuje systémy, které byly dostatečně dlouhou dobu ve stabilních podmínkách a dosáhly rovnovážného stavu. Stacionární rovnici poznáme tak, že v ní nefiguruje člen s derivací podle času.
 >* Viděli jsme, že za určitých podmínek mohou některé členy v rovnici kontinuty chybět. Naopak člen $\nabla\cdot \vec j$ charakterizující změny v toku je v rovnici kontinuity přítomen vždy. Bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
 
-
 V matematice často rovnici kontinuity uvažujeme ve výše uvedeném tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
@@ -184,7 +176,6 @@ vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang
 pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
-
 
 ## Rovnice mělké vody
 
@@ -305,8 +296,6 @@ V některých případech člen charakterizující zdroje nemusí být nulový.
 
 ![Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.](rtb.png)
 
-
-
 </div>
 
 \fi
@@ -349,7 +338,6 @@ Takový materiál má dva charakteristické směry související s rovinami sym
 Situace je stejná jako předchozí případ, ale $k_x$ a $k_y$ jsou navíc konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=k_x\frac{\partial^2 T}{\partial x^2}+k_y\frac{\partial^2 T}{\partial y^2}.$$
 
-
 ## Voda v porézním materiálu 
 
 \iffalse
@@ -361,8 +349,6 @@ $$\rho c\frac{\partial T}{\partial t}=k_x\frac{\partial^2 T}{\partial x^2}+k_y\f
 </div>
 
 \fi
-
-
 
 V porézním materiálu voda prostupuje materiálem a zachovává se její
 množství. Množství vody bude představovat stavovou veličinu. Hustotu tohoto množství, tj. obsah vody v jednotce
@@ -387,7 +373,6 @@ používáme Fickův zákon, ovšem složky difuzního koeficientu
 nepovažujeme za konstanty. Jsou závislé na $c$ a jejím prostřednictvím
 i na $x$.
 
-
 ## Rovnice podzemní vody
 
 \iffalse
@@ -399,7 +384,6 @@ i na $x$.
 </div>
 
 \fi
-
 
 Proudění podzemní vody je vlastně úloha s řekou se zasypaným
 korytem. Taková voda teče ve srovnání s povrchovou vodou velmi pomalu,
@@ -443,7 +427,6 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 * Jiné běžné označení Laplaceova operátoru je $\Delta f$. Toto je bohužel stejné označení jako změna funkce $f$ a je nutné tyto dva významy symbolu $\Delta$ nezaměňovat. 
 * Laplaceův operátor vystupuje například v problémech popsaných difuzní rovnicí a lineárním konstitučním vztahem s konstantním skalárním difuzním koeficientem (homogenní izotropní prostředí s lineární materiálovou odezvou).
 
-
 ## Z ptačí perspektivy
 
 \iffalse
@@ -453,7 +436,6 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 ![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
 
 </div>
-
 
 \fi
 

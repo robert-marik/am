@@ -7,8 +7,6 @@
 > * Poté se zaměříme tok vektorového pole křivkou a ukážeme si souvislost výsledného toku s grafickým znázorněním situace.
 > * Odhadu křivkového integrálu a toku křivkou se budeme věnovat v posledním příkladě. Naučíme se, čeho si všímat, když chceme zjistit, zda je výsledný integrál nebo tok kladný nebo záporný.
 
-
-
 ## Křivkový integrál druhého druhu po třech různých křivkách
 
 https://youtu.be/i-y8bRLmopE
@@ -27,7 +25,6 @@ po třech zadaných křivkách $C_1$, $C_2$ a $C_3$.
 :class: dropdown
 :nonumber:
 
-
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
 
 **Křivka $C_1$.**
@@ -43,8 +40,6 @@ a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{\frac \pi 2}1\,\mathrm dt=\frac \pi 2,$$
 kde poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.
 
-
-
 **Křivka $C_2$.**
 Derivací křivky $\vec r=(1-t,t)$ podle $t$ dostáváme
 $$\frac{\mathrm d\vec r}{\mathrm dt}=(-1,1).$$
@@ -57,8 +52,6 @@ Odsud formálně $$\vec F\mathrm d\vec r=1\mathrm dt$$
 a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{1}1\,\mathrm dt=1,$$
 kde ani v tomto případě poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.
-
-
 
 **Křivka $C_3$.**
 Derivací křivky $\vec r=(1-t^2,t)$ podle $t$ dostáváme
@@ -73,7 +66,6 @@ a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=\qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
 $$
 
-
 ![Zdroj: vlastní](priklad_5_1_prace.png)
 
 **Interpretace jako práce, srovnání.**
@@ -83,7 +75,6 @@ Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je 
 Integrál fyzikálně znamená práci vektorového pole $(-y,x)$ po zadané křivce. Toto vektorové pole míří po kružnicích okolo počátku proti směru hodinových ručiček. Délka vektoru je rovna vzdálenosti od počátku.
 
 Křivka $C_1$ je nejdále od počátku a vektorové pole je na ní nejsilnější. Navíc v každém bodě je síla ve směru křivky a proto se projeví ve výsledném příspěvku bez redukování. Díky tomu můžeme integrál po kružnici počítat stejně jako práci na přímce, tj. součinem délky  křivky $\frac \pi 2$ a velikosti síly $|\vec F|=1$. Po dalších křivkách je síla menší (křivky jdou blíže ke středu) a navíc se neuplatní celá velikost síly, protože síla svírá s křivkou nenulový úhel a při práci se projeví pouze tečná komponenta.
-
 
 ![Zdroj: vlastní](priklad_5_1.png)
 
@@ -99,9 +90,7 @@ Integrál fyzikálně znamená tok vektorového pole $(x,y)$ křivkou. Toto vekt
 
 Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce $C_1$ (kružnice) je tok v každém bodě kolmý ke křivce a stejně velký a proto je celkový tok snadné určit jako součin velikosti vektorového pole na křivce ($|\vec F|=1$) a délky křivky $\frac \pi 2$.
 
-
 ```
-
 
 ## Křivkový integrál druhého druhu po parabole
 
@@ -119,10 +108,7 @@ po zadané křivce $C$.
 :class: dropdown
 :nonumber:
 
-
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
-
-
 
 Derivací křivky $\vec r=(t,t^2)$ podle $t$ dostáváme
 $$\frac{\mathrm d\vec r}{\mathrm dt}=(1,2t).$$
@@ -137,11 +123,7 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt=\qty[t^3+\frac 1
 
 ```
 
-
-
-
 ## Křivkový integrál druhého druhu po kubické parabole
-
 
 Vypočtěte $$\int_{C} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=2y\vec \imath + x^2y\vec\jmath$$ po části kubické paraboly
 $$\begin{aligned}
@@ -155,10 +137,7 @@ po zadané křivce $C$.
 :class: dropdown
 :nonumber:
 
-
 Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
-
-
 
 Derivací křivky $\vec r=(t,t^3)$ podle $t$ dostáváme
 $$\frac{\mathrm d\vec r}{\mathrm dt}=(1,3t^2).$$
@@ -173,11 +152,9 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt=\qty[\frac 12 t^
 
 ```
 
-
 ww:problems/krivkovy_integral/09.pg
 
 ww:problems/krivkovy_integral/10.pg
-
 
 ## Tok vektorového pole uzavřenou křivkou
 
@@ -185,9 +162,7 @@ https://youtu.be/nqbi-7hwcD4
 
 ![Zdroj: vlastní](priklad_5_4.png)
 
-
 Vypočtěte tok vektorového pole $$\vec \Phi_1=(x+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
-
 
 **Návod:** Platí $$\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi$$
 a tento integrál je možno najít například grafickou cestou.
@@ -211,17 +186,13 @@ a integrál má tvar
 $$\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos^2 t)\,\mathrm dt= \pi ,$$
 kde poslední Riemannův integrál není nutné počítat, protože integrál z první části je nulový díky geometrické interpretaci integrálu a periodicitě funkce $\cos t$ a integrál z druhého sčítance byl součástí zadání.
 
-
 ```
-
 
 ## Tok vektorového pole uzavřenou křivkou II
 
 ![Zdroj: vlastní](priklad_5_5.png)
 
-
 Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
-
 
 **Návod:** Platí $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0.$$
 
@@ -269,12 +240,10 @@ ww:problems/krivkovy_integral/30_03.pg
 
 ww:problems/krivkovy_integral/30_04.pg
 
-
 ### Tok
 
 * Pravidla pro souvislost toku s intenzitou pole a délkou křivky jsou analogická jako u křivkového integrálu (delší křivka a intenzivnější vektorové pole způsobují větší tok).
 * Pokud se díváme ve směru křivky a pole přestupuje přes křivku zleva doprava, je tok kladný, v opačném případě záporný.
 
 ww:problems/krivkovy_integral/30_08.pg
-
 

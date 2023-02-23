@@ -1,8 +1,5 @@
 # Lineární operátory a lineární diferenciální rovnice
 
-
-
-
 > Anotace.
 >
 > * Pasáže o lineární diferenciální rovnici prvního řádu jsou omezeny na rovnici s konstantními koeficienty. Rovnicím s nekonstantními koeficienty se nevěnujte. V tomto textu nejsou pokryty, nebudou ve cvičeních, nebudou v domácích úlohách ani písemkách. Pokud na ně narazíte při počítání starších písemek, nevěnujte se jim. Tato úprava souvisí s tím, že se více věnujeme aplikačnímu potenciálu než se tak činilo v letech minulých.
@@ -11,14 +8,12 @@
 > * Naučíme se posoudit, jak se chovají řešení diferenciálních rovnic, kde pravá strana je lineární. Toto se později využije tak, že pomocí těchto rovnic budeme aproximovat obecnější nelineární modely.
 > * Pokud vám jde o to, pochopit proč výpočty fungují tak jak fungují, projděte si všechny materiály. Pokud máte ambice nižší, můžete se věnovat jenom pasáži "Lineární diferenciální rovnice prvního řádu s konstantními koeficienty" a k ostatním pasážím se vrátit, jakmile je budete potřebovat (pokud vůbec). Důležité pasáže jsou poptávány ve WeBWorKových úlohách a problematika toho, jak se chovají řešení nelineárních systémů, je lineárním systémům nadřazena a bude součástí příští přednášky. Pokud budete ovládat nelineární systémy, lineární systémy se dají chápat jako jejich podmnožina.
 
-
 > Prerekvizity.
 >
 > * Co se týká využitých metod studia lineárních operátorů, je přednáška relativně nezávislá. Nemá v tomto ohledu žádné prerekvizity. 
 > * Užitečnost linearity si ukážeme na příkladech diferenciálních rovnic několika typů. Proto je vhodné si zopakovat význam derivace, využití derivace v modelech založených a na diferenciálních rovnicích a interpretaci členů difuzní rovnice. 
 > * Lineární systémy je vhodné zapisovat a studovat maticově. Budeme proto potřebovat maticový součin, maticovou formulaci soustavy lineárních rovnic, nutnou a postačující podmínku jednoznačné řešitelnosti této soustavy pomocí determinantu. 
 > * Studentům obeznámeným s komplexními čísly se bude hodit Eulerova identita. Ostatní studenti budou muset příslušné pasáže akceptovat jako fakt.
-
 
 ## Lineární operátory
 
@@ -60,7 +55,6 @@ zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiá
 
 \fi
 
-
 * Operátor derivace, tj. operátor definovaný vztahem $L[y]=\frac{\mathrm dy}{\mathrm dx}$ je lineární. Toto plyne ze vzorců pro derivaci součtu a konstantního násobku.
 * Buď dána funkce $a(x)$. Operátor násobení funkcí $a(x)$, tj. $L[y](x)=a(x)y(x)$ je lineární. To plyne z komutativity násobení a z distributivního zákona (roznásobování závorek).
 * Složení (postupná aplikace) lineárních operátorů je lineární operátor. Například tedy
@@ -87,7 +81,6 @@ $$ {S_S\frac{\partial h}{\partial t} - \nabla\cdot \bigl(kh\nabla h\bigr)=  \sig
       $$h\frac{\partial h}{\partial x}=\frac 12 \frac{\partial h^2}{\partial x}$$ a analogickou rovnost i pro další parciální derivace, je ve stacionárním případě (derivace podle času je nulová) rovnici možno přepsat do tvaru 
 $$ - \frac 12 \nabla\cdot \bigl(k\nabla (h^2)\bigr)= \sigma $$
 a levá strana definuje lineární operátor v proměnné $h^2$.
-
 
 ### Princip superpozice
 
@@ -120,7 +113,6 @@ Následující věta vlastně vyjadřuje totéž co princip superpozice z předc
 > Věta (princip superpozice při řešení rovnic). Jsou-li funkce $x_1(t)$ a $x_2(t)$ po řadě řešeními rovnic $$L[x]=b_1(t),\quad L[x]=b_2(t),$$
 > Je funkce $$x(t)=C_1 x_1(t)+C_2 x_2(t)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
 
-
 Pro $b_1(t)=b_2(t)=0$ všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí. 
 
 Pro $b_1(t)=0$ a $C_2=1$ jsou obě nehomogenní rovnice stejné a pokud k řešení rovnice přičteme řešení asociované homogenní rovnice (se stejným operátorem na levé straně, ale nulou na pravé straně), dostaneme řešení stejné rovnice.
@@ -130,7 +122,6 @@ Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
 * Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením. 
 * Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice. 
 * U nehomogenní rovnice se úloha najít všechna řešení dá rozdělit na dvě dílčí úlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho řešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
-
 
 ### Příklad využití linearity v jedné dimenzi
 
@@ -166,8 +157,6 @@ Například  $x_1(t)=e^t$ a $x_2(t)=e^{-t}$ nejsou jedno násobkem druhého a ob
 $$x(t)=C_1 e^t+C_2 e^{-t},$$
 kde $C_{1,2}\in\mathbb{R}.$ Funkce $x=-t$ splňuje rovnici $$x''-x=t$$ a všechna řešení této rovnice jsou $$x(t)=C_1 e^t+C_2 e^{-t}-t.$$
 Rovnicím majícím derivace vyššího řádu se budeme věnovat později.
-
-
 
 <!--
 
@@ -268,7 +257,6 @@ požadované vlastnosti.
 </div>
 </div>
 
-
 #### Obecné řešení homogenní LDE
 
 Uvažujme homogenní LDE
@@ -279,8 +267,6 @@ a přímým dosazením vidíme, že
 $$y_{p0}=e^{-\int a(x)\mathrm{d}x}$$
 je řešením této rovnice. Obecné řešení rovnice (HLDE) je potom 
 $$y=Ce^{-\int a(x)\mathrm{d}x}.$$
-
-
 
 -->
 
@@ -303,7 +289,6 @@ $$y_0=C y_{p0}(x_0)$$ a tuto rovnici je možno vyřešit vzhledem k $C$ vždy, p
 **Závěr:** Obecné řešení rovnice (HLDE) je 
 $$y(x)=C e^{-\int a(x)\mathrm{d}x}.$$
 
-
 #### Obecné řešení nehomogenní LDE pomocí partikulárního řešení
 
 Je-li $y_p$ řešením nehomogenní LDE
@@ -316,15 +301,12 @@ kde $Cy_{p0}(x)$ je obecným řešením asociované homogenní LDE.
   pevnou strukturu, dokážeme z těchto informací napsat libovolné
   řešení.
 
-
 * Vskutku, jestliže $L[y_p]=b(x)$ a $L[y_{p0}(x)]=0$, potom 
   \dm$$L[y]=L[Cy_{p0}+y_p]=CL[y_{p0}]+L[y_p]=C\cdot 0+b(x)=b(x).$$
   Funkce $y(x)$ tedy je řešením.
 * Pokud potřebujeme splnit libovolnou počáteční podmínku $y(x_0)=y_0$,
   kde $x_0,y_0\in\mathbb{R}$, stačí vzít řešení
   $$y(x)=\frac{y_0-y_{p}(x_0)}{y_{p0}(x_0)}y_{p0}(x)+y_p(x),$$
-
-
 
 #### Obecné řešení nehomogenní LDE ještě jednou a prakticky
 
@@ -372,13 +354,11 @@ funkce a řešení asociované homogenní rovnice* – a provádíme všechny
 
 </div>
 
-
  <div class=sloupce> 
 Pokud v předchozím volíme $u=e^{-\int a(x)\mathrm{d}x}$, je $$v'=b(x)e^{\int a(x)\mathrm{d}x}$$ a odsud $$v=\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.$$ Partikulární řešení je $$uv=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$ a obecné řešení LDE
 $$y'+a(x)y=b(x)$$ je 
 $$y=Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$
 </div>
-
 
 -->
 
@@ -412,7 +392,6 @@ https://youtu.be/AjpQ0Zh1jkU
 
 Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice $$\frac{\mathrm dX}{\mathrm dt}-AX= B$$ operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice $A$ a $B$ nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat za chvíli. Pro tyto rovnice je souvislost mezi   homogenní a nehomogenní rovnicí obdobná jako v minulých   případech. Řešením nehomogenní úlohy najdeme jedno řešení (bod v prostoru) a řešením asociované úlohy najdeme směry definující množinu všech řešení. Vzhledem k vícedimenzionalitě úlohy bude těchto řešení více. Situace je podobná jako to, že v geometrii je rovina dána dvěma směry. Nakonec dané informace můžeme využít k vygenerování množiny všech řešení. Popsaná metoda je komplikovanější na konkrétní použití, ale často se ani nemusí provádět. Často stačí například informace o chování řešení v nekonečnu. To je také to, na co se omezíme na příští přednášce. 
 
-
 ### Lineární autonomní systém ve dvou dimenzích
 
 Následující příklad je mírně modifikovaný příklad z [kurzu MIT o diferenciálních rovnicích](https://youtu.be/MCrDzhpu3-s?t=671). Ve formulaci s vařením vajíčka se zdá triviální a prakticky neužitečný. Toto je však voleno pro jednoduchost výkladu a snadnou představu povahy zkoumaného jevu. V praxi se stejným modelem předává teplo vrstveným materiálem (jako je tepelná ochrana domů nebo raketoplánů) nebo chemické látky vstupující do dalších reakcí (jako například řetěz reakcí vedoucí k syntéze bílkovin, které buňka v reakci na okolní prostředí potřebuje k přežití).
@@ -423,12 +402,9 @@ Následující příklad je mírně modifikovaný příklad z [kurzu MIT o difer
 
 ![Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com](vajicko.jpg)
 
-
 </div>
 
 \fi
-
-
 
 Budeme modelovat ohřívání vejce ve vodě o konstantní teplotě $T_0$. Na počátku mají bílek a žloutek teplotu $T_1$ a $T_2$. Žloutek přebírá teplo od bílku rychlostí úměrnou rozdílu teplot žloutku a bílku. Bílek přebírá teplo od vodní lázně rychlostí úměrnou rozdílu teplot a předává teplo žloutku procesem popsaným v předchozí větě. Vody je hodně a její teplota se nemění. Proces můžeme modelovat soustavou diferenciálních rovnic $$\begin{aligned}T_1^\prime &= k_1(T_0-T_1)-k_2(T_1-T_2) \\ T_2^\prime&=k_2(T_1-T_2)\end{aligned}$$
 Tento systém je možno přepsat do tvaru
@@ -468,18 +444,15 @@ manimp:AS_vlastni_cisla|O chování trajektorií v okolí stacionárního bodu r
 
 Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté každé z nich generuje řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacionárního bodu. Pokud jsou vlastní čísla komplexní se zápornou reálnou částí, je situace stejná, ale řešení navíc konvergují do stacionárního bodu postupnými oscilacemi. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují a pokud jsou všechny vlastní hodnoty komplexní s kladnou reálnou částí, probíhá toto vzdalování oscilacemi s narůstající amplitudou.
 
-
 \iffalse 
 
 <div class='obtekat'>
 
 ![Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156](krvinky.jpg)
 
-
 </div>
 
 \fi
-
 
 **Příklad.** Model ohřívání vajíčka (V) z předchozí části této přednášky má (v posunuté teplotní stupnici, na které teplota varu vody odpovídá nule) stacionární bod $(0,0)$.  Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
 $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
@@ -502,7 +475,6 @@ https://youtu.be/8KQ9qG1eQtU
 ![Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur](houpacka.jpg)
 
 ![Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE](kmity_stromu.png)
-
 
 </div>
 

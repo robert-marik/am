@@ -1,6 +1,5 @@
 # Derivace funkce více proměnných
 
-
 <!-- 
 > Anotace.
 >
@@ -9,7 +8,6 @@
 > * Naučíme se sledovat rychlost, s jakou se mění veličina, která je objektem našeho zájmu. 
 > * U veličin závisejících na několika parametrech budeme schopni sledovat reakci těchto veličin na změny parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou. 
 > * Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme *rovnici vedení tepla*. Rovnice vedení tepla je jednou z nejdůležitějších rovnic matematické fyziky. Jedná se o matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice správně vystihují realitu.
-
 
 > Prerekvizity.
 >
@@ -22,9 +20,7 @@
 
 https://youtu.be/zhaebxHbqhs
 
-
 \iffalse 
-
 
 <div class='obtekat'>
 
@@ -32,11 +28,9 @@ https://youtu.be/zhaebxHbqhs
 
 </div>
 
-
 manimp:Spojitost|Derivace a její definice pomocí limity.
 
 \fi
-
 
 Základní informace o funkci jedné proměnné a její derivaci si můžete osvěžit v materiálech k předmětu [Matematika](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/). Následuje neformální připomenutí pojmu derivace.
 
@@ -83,10 +77,7 @@ Derivace derivace je rychlost s jakou se mění rychlost změny a nazývá se dr
 >
 > Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů a pomocí rovnic s derivacemi je modelována naprostá většina fyzikálních procesů, existují propracované nástroje pro řešení těchto rovnic na počítači. Z pedagogických důvodů si však může kdokoliv daný matematický model naskriptovat tak, že předpokládá časové skoky, v jejichž rámci je rychlost neměnná a změny veličin jsou počítat běžnými operacemi násobení a sčítání. Například [Sage](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==) je založen na široce rozšířeném jazyce Python, případně [Octave](https://sagecell.sagemath.org/?z=eJwtj81qwzAQhO8CvcNeAlKTFLtQCDY59g18Kz2o1oYK_ayR1wbn6SvZEQjEzsy3I8twh-a97aGeE1gM3oDP5Bcpdq2z3H00fRVX9EwZZhjNTOsWHTyTGb2J7gLeIvwuFiPCRKNjw8A4BSqYoWCemGlWs3uiYq0P2sYrZUzuxV1gynSEeCsp1eoSvB2rZzaZaTWjgz-yidgUR1P0vVp1HEED5Ck4Kfz-r8-XOJlsInKuLgwJy_KIaQMppDjB1xJKvdVAsZA1Zfoo33T3tktLxKAGfW2lqKRBufNeqzw0nMEyvIEvVw3Ntc50LwUmW7m1juLLoKXYgovquwGXHj_6H6tibEk=&lang=octave&interacts=eJyLjgUAARUAuQ==) jako opensource alternativa programu Matlab.
 
-
-
 > Poznámka (lineární aproximace, materiálové vztahy). Změna $\Delta x$ v proměnné $x$ vyvolá změnu $\Delta y\approx f'(x) \Delta x$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Lineární aproximace má poté tvar $$f(x)\approx f'(0)x=kx.$$ Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu a blíže se jim budeme věnovat později. Podobně je možno chápat Newtonův zákon tepelné výměny z předchozí poznámky jako lineární aproximaci případného obecného vztahu. Srovnejte obecný vztah $$\frac{\mathrm dT}{\mathrm dt}= \Phi(T_0-T), \quad \Phi(0)=0$$ a formálně sice podobný vztah $$\frac{\mathrm dT}{\mathrm dt}= k\times(T_0-T), \quad k=\Phi'(0),$$ který ale místo obecné a složitě identifikovatelné funkce $\Phi$ obsahuje jenom násobení vcelku jednoduše měřitelnou konstantou $k$.
-
 
 > Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right).$$ V této rovnice vystupuje celková nosná kapacita prostředí $K$ a rovnice vyjadřuje, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Volnou kapacitu prostředí počítáme jako doplněk obsazené části prostředí do sta procent. Obsazenou část prostředí počítáme jako podíl velikosti populace a nosné kapacity prostředí.
 
@@ -127,7 +118,6 @@ místě (jedna až tři prostorové proměnné). Už pro základní fyzikální
 
 \fi
 
-
 Příkladem skalární funkce dvou prostorových proměnných je teplota v určitém okamžiku na dvourozměrném povrchu. Aparát funkcí dvou proměnných se tedy jistě uplatní při studiu tepelných ostrovů souvisejících s urbanizací a kvalitou života ve městech.
 
 Příkladem skalární funkce dvou proměnných, kdy každá z proměnných má
@@ -137,13 +127,9 @@ polohou (vnější a vnitřní okraj stěny mají teplotu přibližně podle
 teploty venku a teploty uvnitř budovy, uvnitř stěny se teplota spojitě
 mění).
 
-
-
 ## Parciální derivace
 
-
 https://youtu.be/Vw7OF5Fj8G4
-
 
 Pokud sledujeme například ve stěně měnící se teplotní profil, zajímá nás, jak se teplota v jednotlivých místech stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti rozumné oddělit obě změny. Buď v daném bodě fixovat polohu a sledovat časový vývoj v tomto bodě, nebo v daném čase udělat něco jako teplotní snímek a srovnávat teplotu ve vybraném bodě s okolními teplotami ve stejném čase. To vede k následujícímu přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné jediné veličiny. 
 
@@ -187,7 +173,6 @@ Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou prom
     že ve směru osy $x$ teplota klesá takovou rychlostí, že na
     centimetru délky tyče klesne o dva stupně Celsia.
 
-
 ## Interpretace parciálních derivací, brzdná dráha
 
 https://youtu.be/UE_nkyDe7bw
@@ -229,13 +214,9 @@ dráha vychází v metrech.
 
 \fi
 
-
-
 ## Interpretace parciálních derivací, pohyb ještěrky
 
-
 https://youtu.be/lk-LRBKth3Q
-
 
 \iffalse
 
@@ -273,7 +254,6 @@ ww:problems/parcialni_derivace/povrch_tela.pg
 
 \fi
 
-
 V [publikaci](https://www.jstor.org/stable/1939225)  Deborah T. Crouse, Larry B. Crowder, Hal Caswell: A Stage-Based Population Model for Loggerhead Sea Turtles and Implications for Conservation, Ecology, Vol. 68, No. 5 (Oct., 1987), pp. 1412-1423 je představen model populace želvy Karety obecné, kdy je populace rozdělena do sedmi vývojových stadií a jsou sledovány počty jedinců v jednotlivých stadiích. Funkce popisující vývoj v dalším období na základě situace v období předchozím je funkcí sedmi proměnných a je možné ji maticově vyjádřit ve tvaru $$N(t+1)=AN(t),$$ kde $N(t)$ je sedmirozměrný vektor obsahující velikosti jednotlivých populačních tříd a $A$ je matice projekční matice modelující vývoj populace. Má tvar$$ A=\begin{pmatrix}
   0   &   0   &   0   &   0   & 127   &   4   &  80   \\
   0.6747&   0.737 &   0   &   0   &   0   &   0   &   0   \\
@@ -285,18 +265,15 @@ V [publikaci](https://www.jstor.org/stable/1939225)  Deborah T. Crouse, Larry B.
 \end{pmatrix}$$ 
 V této matici jsou zohledněny počty potomků želv v plodné fázi, pravděpodobnost přechodu želv do následující vývojové fáze a pravděpodobnost setrvání ve stávající vývojové fázi. Tato čísla se mění v závislosti na tom, kolik má želva nepřátel, jak složité je pro ni přežít, jak obtížné je pro ni se rozmnožovat. Například vysoká čísla v prvním řádku značí, že želvy mají hodně potomků. Číslo v prvním řádku a předposledním sloupci je menší, protože v tomto předposledním stadiu je želva jenom jeden rok a má málo potomků. Dynamika růstu populace je dána dominantní vlastní hodnotu matice. Tuto vlastní hodnotu označíme $\lambda$. Velikost populace roste přibližně geometrickou řadou s kvocientem $\lambda$. Pokud je tato hodnota větší něž jedna, velikost populace roste, v opačném případě populace vymírá. Pro uvedenou matici je $\lambda=0.95$ a populace se tedy mezi jednotlivými obdobími snižuje o pět procent. Hodnota $\lambda$ závisí na třinácti nenulových komponentách matice $A$ a je tedy funkcí třinácti proměnných. Pokud označíme prvky matice $A$ jako $a_{ij}$, je pro biology nesmírně zajímavá veličina $\frac{\partial \lambda}{\partial a_{ij}}$, která udává citlivost koeficientu řídícího růst populace na velikosti komponent matice $A$. Ještě častěji se pracuje s relativní změnou a v tomto případě sledujeme veličinu $\frac{a_{ij}}{\lambda}\frac{\partial \lambda}{\partial a_{ij}},$ která se nazývá elasticita a je bez jednotky. Proto se udává v procentech. Jedná se tedy o třináct parciálních derivací a třináct elasticit (pracujeme jenom s nenulovými komponentami matice). Je pozoruhodné, že hodnoty elasticity spojené s rozmnožováním a přežíváním vajíček a mláďat jsou řádově jednotky procent, ale hodnoty spojené s dospíváním jsou přes deset procent. To znamená, že pro ochranu populace je důležité nepodcenit ochranu dospívajících větších želv. Ochrana vajíček a čerstvě narozených želv má na celkovou kondici malý vliv a posílení těchto parametrů sama o sobě k udržení populace želv nestačí. Proto bylo vyvinuto zařízení [Turtle excluder device](https://en.wikipedia.org/wiki/Turtle_excluder_device), které umožní větším želvám uniknout z rybářských sítí a zvýší tak jejich šanci na přežití.
 
-
 ## Linearita parciální derivace
 
 Následující poznámka je nenápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic s derivacemi. Stejné věty zformulujeme i u dalších operací s funkcemi a později se je naučíme využívat.
 
 > Poznámka (linearita parciální derivace). Parciální derivace zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí $$\frac{\partial (f+g)}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}, \qquad \frac{\partial (cf)}{\partial x}=c\frac{\partial f}{\partial x}$$ a analogicky pro libovolnou jinou proměnnou.
 
-
 ## Rovnice vedení tepla  v 1D
 
 <!-- https://youtu.be/tZDKXyomaJE -->
-
 
 https://youtu.be/ilAaBQNoySI
 
@@ -306,7 +283,6 @@ Pokusíme se odvodit matematický model vedení tepla. Řešením takového
 modelu bude funkce $T$. Po vyřešení modelu bychom tedy měli vzorec
 udávající teplotu v libovolném bodě tyče a v libovolném čase. Nejprve
 ovšem musíme požadovnou rovnici sestavit.
-
 
 > Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
 >
@@ -322,7 +298,6 @@ manim:Heat|1tbe5YUvoqg|Rovnice vedení tepla. Animace jak se chová teplo při j
 ![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například tok tepla oknem nebo stěnou domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
 
 ![Ukázka možné vizualizace výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle je čas a barva označuje teplotu. Dole je počáteční stav, kdy je podél celé tyče nulová teplota. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh ukazující, jak v jednotlivých bodech roste teplota, získáme řešením rovnice vedení tepla. Rozložení teploty v tyči pro vybrané časy získáme na vodorovných řezech v obrázku. Časový vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
-
 
 </div>
 
@@ -363,7 +338,6 @@ se projeví zvýšením teploty v místě, kde k zeslabení došlo.
 |$\color{red}\displaystyle\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$|Upravený výraz z předchozího řádku. Rychlost s jakou klesá tok tepla podél tyče.|
 |Rovnice vedení tepla|Červené výrazy jsou si úměrné.|
 
-
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
 
 **Numerické modelování.**
@@ -388,9 +362,7 @@ ve které figuruje druhá derivace podle polohy.
 
 \iffalse 
 
-
 <div class='obtekat'>
-
 
 ![Příklad ondatry, která se jako invazivní druh rychle rozšířila z dobříšského panství do celé Evropy, bývá tradičně součástí naprosté většiny učebnic ekologie. Modelování invaze je velice podobné modelování vedení tepla nebo libovolného jiného transportního děje. Foto: rawpixel.com.](ondatra.jpg)
 
@@ -410,7 +382,6 @@ Tato rovnice byla původně navržena jako model šíření výhodného genu pop
 
 Uvedená rovnice zřejmě nebude fungovat tam, kde se populace chová jinak, než teplo, například pokud jedinci téhož druhu mají tendenci se shlukovat, což některé druhy jak známo činí. Rovnice a celý přístup jsou dostatečně flexibilní na to, aby zvládly úpravu i na takové případy, to ale již přesahuje ambice tohoto textu.
 
-
 ## Numerická aproximace derivací: konečné diference 
 
 https://youtu.be/iGohx4i95FI
@@ -421,11 +392,9 @@ https://youtu.be/iGohx4i95FI
 
 </div>
 
-
 ### Dopředná diference
 
 Základním přístupem při numerickém odhadu derivace je vynechání limitního přechodu v definici derivace. Pro funkci jedné proměnné a její derivaci $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$ tedy dostáváme $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá *dopředná poměrná diference* nebo zkráceně *dopředná diference*. Pokud  použijeme tento postup pro parciální derivace, dostáváme $$\frac{\partial f}{\partial x}\approx\frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}$$ a $$\frac{\partial f}{\partial y}\approx\frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}.$$
-
 
 ### Centrální diference
 
@@ -444,7 +413,6 @@ Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciá
   Platí následující aproximace derivace podle $x$. $$\begin{aligned}\frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x-h,y)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial x^2}&=  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}+O(h^2)\end{aligned}$$
   Platí následující aproximace derivace podle $y$. $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
 
-
 ww:problems/parcialni_derivace/centralni_diference.pg
 
 <div class="shorten" data-text="Konečné diference je možné použít k převedení parciální diferenciální rovnice (úloha v počítači obtížně řešitelná) na soustavu lineárních rovnic (úloha snadno řešitelná na počítačích).">
@@ -459,14 +427,12 @@ Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým mod
 >
 > Ještě existuje metoda založená na zpětné diferenci v čase namísto dopředné, tj. $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$ a odsud $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$ Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči. Tedy v prakticky využitelných úlohách počty rovnic a proměnných začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích než při explicitní metodě. Programová realizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) Tento přístup se nazývá [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
 
-
 <!--
 
 % Rovnice vedeni tepla pro jednorozmernou tyc s fixovanymi teplotami na koncich a konstantni pocatecni teplotou.
 % Teplota se v tyci rozlozi rovnomerne (linearni profil).
 % Teplotni profil pred dosazenim rovnovazenho stavu pro ruzne casy ziskame z rovnice vedeni tepla.
 % Nize je aproximace reseni pomoci konecnych diferenci explicitni metodou - jednoducha na implementaci, ale nestabilni, pokud neni casovy krok dostatecne maly
-
 
 % 
 %  Nastaveni
@@ -490,7 +456,6 @@ u(1,1:nx+1) = T;    % vychozi stav
 A = toeplitz([-2,1,zeros(1,nx-1)]);  % vytvoreni matice pro iterace
 A(1,:) = zeros(1,nx+1);              % vynulovani prvniho radku matice A
 A(end,:) = zeros(1,nx+1);            % vynulovani posledniho radku matice A
-
 
 %
 %  Vlastní výpočet a uložení do paměti
@@ -518,14 +483,12 @@ ylabel('t')
 
 -->
 
-
 <!--
 
 % Rovnice vedeni tepla pro jednorozmernou tyc s fixovanymi teplotami na koncich a konstantni pocatecni teplotou.
 % Teplota se v tyci rozlozi rovnomerne (linearni profil).
 % Teplotni profil pred dosazenim rovnovazenho stavu pro ruzne casy ziskame z rovnice vedeni tepla.
 % Nize je aproximace reseni pomoci konecnych diferenci explicitni metodou - jednoducha na implementaci, ale nestabilni, pokud neni casovy krok dostatecne maly
-
 
 % 
 %  Nastaveni
@@ -549,7 +512,6 @@ u(1,1:nx+1) = T;    % vychozi stav
 A = toeplitz([-2,1,zeros(1,nx-1)]);  % vytvoreni matice pro iterace
 A(1,:) = zeros(1,nx+1);              % vynulovani prvniho radku matice A
 A(end,:) = zeros(1,nx+1);            % vynulovani posledniho radku matice A
-
 
 %
 %  Vlastní výpočet a uložení do paměti
@@ -576,7 +538,6 @@ xlabel('x')
 ylabel('t')
 
 -->
-
 
 ## Vzdálenost a pojmy s ní související
 
@@ -594,7 +555,6 @@ https://youtu.be/owfHzLBonRA
 
 \fi
 
-
 V dalším budeme pracovat s pojmy jako množina a její hranice, množina
 obsahující hranici, množina neobsahující hranici, spojitá funkce
 apod. Ač v technicky nejvýznamnějších aplikacích často můžeme tyto
@@ -603,9 +563,7 @@ je nezbytná.
 
 V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy přesně definovanému pojmu dáme název, který lidé znají z prostého života. Například hranice, oblast, spojitost, uzávěr, okolí, ... Podrobný rozbor ukazuje, že tyto definice jsou v jednoduchých případech v souladu s intuicí. 
 
-
 ### Euklidovský metrický prostor
-
 
 > Definice (metrický prostor, metrika).
   Množina $\mathbb{E}^3$ prvků z $\mathbb{R}^3$ s metrikou $\rho$ definovanou pro
@@ -660,7 +618,6 @@ V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq\mathbb{E}
 **Spojitost skalární funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}$ je skalární funkce $n$ proměnných definovaná v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, pokud pro každé okolí $O(f(A))$ bodu $f(A)$ existuje okolí $\overline O(A)$ bodu $A$ takové, že obrazy všech bodů z tohoto okolí bodu $A$ leží v okolí bodu $O(f(A))$, tj.  pro všechna $X\in \overline O(A)$ platí $f(X)\in O(f(A))$.
 
 **Spojitost vektorové funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}^m$ je vektorová funkce $n$ proměnných definovaná  v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, jestliže je v tomto bodě spojitá každá její komponenta.
-
 
 **Elementární funkce**: Všechny mnohočleny, goniometrické, cyklometrické, exponenciální a  logaritmické funkce a obecná mocnina se nazývají *základní elementární funkce*   Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání, odečítání, násobení, dělení a skládání těchto funkcí navzájem se nazývají *elementární funkce*.
 

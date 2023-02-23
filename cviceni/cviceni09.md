@@ -1,13 +1,11 @@
 # Lineární diferenciální rovnice
 
-
 > Anotace.
 >
 > * Ve všech úvodních příkladech se budeme věnovat asi nejjednodušší diferenciální rovnici: lineární s konstantními koeficienty. Tato tovnice má jediné konstantní řešení, kdy se nic neděje. Nekonstantná řešení jsou popsány exponenciálními funkcemi.
 > * Ve dvou úvodních příkladech se podíváme na řešení rovnice popisující radioaktivní rozpad a exponenciální pokles aktivity. V jednom případě je pokles k nule (radioaktivní prvek se časem rozpadne) a ve druhém případě k nenulové hodnotě (množství radioaktivního prvku je doplňováno difuzí a nastolí se rovnováha).
 > * V dalších dvou příkladech si ukážeme modely vedoucí k rovnici popisující exponenciální růst, resp. exponenciální vzdalování se od konstantního řešení. Ve druhém příkladě si zkusíme numericky demonstrovat intenzitu exponenciálního růstu.
 > * V posledním příkladě se zaměříme na vektorový případ a ukážeme, že zpětná vazba reagující na hodnoty sledované veličiny je vhodnou taktikou pro udržení konstantního stavu této veličina a podle povahy může a nemusí vést k oscilacím. Ukážeme si toto na příkladě regulace teploty ale v podstatě stejně je udržována rovnováha enzymů a proteinů v tělech rostlin a živočichů.
-
 
 ## Radioaktivní rozpad 
 
@@ -22,7 +20,6 @@ Množství radioaktivního materiálu se snižuje rychlostí úměrnou tomuto mn
 :class: dropdown
 :nonumber:
 
-
 1. Modelem je rovnice $$\frac{\mathrm dy}{\mathrm dt}=-ky$$ s jedním řešením 
 $$y=e^{-kt}$$ a obecným řešením
 $$y=Ce^{-kt}.$$
@@ -35,7 +32,6 @@ $$T=\frac 1k \ln 2.$$ Tato hodnota se nazývá poločas rozpadu a je $\ln2$ nás
 
 ```
 
-
 ## Radioaktivní rozpad a radon v budovách
 
 Radon je po kouření druhou nejčastější přinou rakoviny plic.
@@ -43,7 +39,6 @@ Radon je po kouření druhou nejčastější přinou rakoviny plic.
 https://youtu.be/26EwlUHLqUc
 
 ![V případě malého rizika stačí izolace proti radonu jako na obrázku. V oblastech s vyšším rizikem je nutná sofistikovanější ochrana. Zdroj: https://www.estav.cz/cz/5599.ochrana-proti-pronikani-radonu-do-objektu-protiradonova-izolace](radon.jpg)
-
 
 V zemích s přirozenou radioaktivitou je nebezpečím radon. Na rozdíl od ostatních radioaktivních prvků je plynný a může prostupovat do budov, kde se hromadí zejména v nižších patrech, protože má poměrně velkou hustotu. 
 
@@ -113,7 +108,6 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 :class: dropdown
 :nonumber:
 
-
 Situaci je možno modelovat diferenciální rovnicí
 $$ 
   \frac{\mathrm dx}{\mathrm  dt}=\beta x-\alpha,
@@ -165,13 +159,11 @@ přijede několik trolejbusů těsně za sebou.
 
 ```
 
-
 ## Pásová brzda
 
 https://youtu.be/XlUuxd3Ws10
 
 ![Pásová brzda v provedení pro majitele jachet. Zdroj: https://www.sailspar.co.uk/yacht-products/scott-boomlock/](boomlock-shot.jpg)
-
 
 ![Nechtěný princip pásové brzdy v tomto případě znesnadňuje ovládání rolety. Zdroj: wikipedia, autor: Laelele](example_no_knowledge_of_capstan_equation.png)
 
@@ -186,11 +178,9 @@ Poznámky.
 * Zařízení zkoumané v tomto příkladě se nazývá [pásová brzda](https://cs.wikipedia.org/wiki/P%C3%A1sov%C3%A1_brzda). Uplatnění najde ve strojírenství, v praktických úlohách každodenního života (zejména života lezců či námořníků), ale například i při posouzení soudržnosti splétaných lan.
 * Exponenciální růst využívají arboristé u spouštěcího bubnu nebo námořníci u ráhnové brzdy. Na principu více brzd spojených za sebou pracuje slaňovací osma a její zdokonalené varianty. V tomto případě je materiálem kov s nízkým koeficientem tření, které se vyrovná několika otáčkami. Počtem otoček je možné regulovat účinnost.
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. Jedná se o klasickou homogenní lineární diferenciální rovnici s konstantním koeficientem. Jedno řešení je $$T=e^{\mu\theta}$$ a obecné řešení $$T=Ce^{\mu\theta}.$$ Pro $\theta = 0$ dostáváme $T=C$ a je-li $T_0$ tah na jenom konci (méně namáhaném), je tah na druhém konci $$T=T_0 e^{\mu\theta}.$$ Tah se tedy zvýší multiplikativním faktorem $e^{\mu\theta}.$ Pokud brzdné účinky definujeme jako podíl tahů na obou koncích, dostáváme 
 $$\frac{T(\theta)}{T_0}=e^{\mu\theta}$$ a tento podíl roste exponenciálně s úhlem $\theta$.
@@ -208,10 +198,7 @@ $$e^{\mu\theta_1}e^{\mu\theta_2}=e^{\mu(\theta_1+\theta_2)}.$$ Tah se tedy měn�
 
 ```
 
-
 <!-- https://pixabay.com/photos/abseiling-adventure-carabiner-1842180/ -->
-
-
 
 ## Regulace stacionárního stavu a jeho robustnost
 
@@ -237,11 +224,9 @@ $$\frac{\mathrm dP}{\mathrm dt}=\alpha P-k T + \gamma.$$
 Ukažte, že stacionární stav je robustní (roven $T_0=\frac\gamma k$ a nezávislý na ostatních parametrech) tehdy a jen tehdy, když platí $\alpha =0$.
 4. Najděte vlastní čísla autonomního systému vytvořeného v tomto modelu a okomentujte, jak se budou chovat řešení. Ukažte, že parametry systému je možné shluknout do jednoho bezrozměrného parametru, jehož hodnota dokáže odlišit kvalitativně různá chování systému. Všimněte si, že situace je skoro stejná jako u soustavy popisující [kmity tlumeného oscilátoru v přednášce](../09/#mechanick%C3%BD-oscil%C3%A1tor).
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. Modelem je rovnice $$\frac{\mathrm dT}{\mathrm dt}=aP+S-bT$$ a stacionární řešení pro konstantní výkon $P$ získáme řešením rovnice
 $$0=aP+S-bT,$$

@@ -1,6 +1,5 @@
 # Gradient
 
-
 > Anotace.
 >
 > * V úvodu si osaháme gradient a jeho využití k lineární aproximaci a jeho vztah k vrstevnicím.
@@ -21,7 +20,6 @@ $$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovo
 :class: dropdown
 :nonumber:
 
-
 Přímým použitím vzorce pro lineární aproximaci dostáváme
 $$
 W=-20.2+1.289(T-(-11))-0.163(v-26)=-20.2+1.289(T+11)-0.163(v-26),
@@ -29,7 +27,6 @@ $$
 přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kilometry za hodinu).
 
 ```
-
 
 ## Parciální derivace, gradient
 
@@ -40,7 +37,6 @@ Určete gradient funkcí $z=ax^2y-2xy^2$ a $h=\frac {ax}{y^2}+5x^3y^2$, kde $a\i
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 $$
 \begin{aligned}
@@ -57,9 +53,7 @@ $$
 
 ## Gradient funkce s vrstevnicemi ve tvaru kružnic
 
-
 https://youtu.be/irOsyX_k620
-
 
 Určete gradient funkce $z=x^2+y^2$ a zkontrolujte, že je v každém bodě kolmý ke kružnici se středem v počátku. Využijte toho, že spojnice bodu na kružnici se středem kružnice je kolmá k této kružnici. 
 
@@ -81,7 +75,6 @@ Určete gradient funkce $z=\mathop{\mathrm{arctg}} \frac yx$ a zkontrolujte, že
 :class: dropdown
 :nonumber:
 
-
 $$
 \begin{aligned}
   \pdv{z}{x} &= \frac1{1+\frac {y^2}{x^2}}y\frac {(-1)}{x^2}=-\frac{y}{x^2+y^2}\\
@@ -92,8 +85,6 @@ $$
 
 Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$. Proto je tečný ke kružnici.
 ```
-
-
 
 ## Tečná rovina atd.
 
@@ -114,7 +105,6 @@ _V tomto příkladě ukazujeme, že někdy je vhodné úlohu řešit v rámci ob
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. $\nabla f=\left(2x+\frac 1{y^2},-2\frac x{y^3}\right)$
 1. $\nabla f(2,1)=(5,-4)$
@@ -146,7 +136,6 @@ ww:problems/gradient/05.pg
 
 ww:problems/gradient/06.pg
 
-
 ## Linearizace vektorové funkce, Jacobiho matice
 
 https://youtu.be/y66fyasf8iw
@@ -160,7 +149,6 @@ Najděte Jacobiho matici pro funkci $$\vec F(x,y)=(x^2+xy+6y)\vec i + e^{3x}\vec
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Platí
 $$\begin{aligned}
@@ -181,11 +169,9 @@ $$
 
 ```
 
-
 ww:problems/gradient/07.pg
 
 ww:problems/gradient/08.pg
-
 
 ## Parciální derivace, gradient a násobení matic
 
@@ -203,11 +189,9 @@ Uvažujte součinitel tepelné vodivosti $$\lambda =\begin{pmatrix}
 \end{pmatrix}$$
 a vypočtěte tok tepla v bodech $A$, $B$, $C$. Porovnejte směr tohoto toku se směrem gradientu a vysvětlete svá pozorování. Snaží se matice usměrnit teplo do  směru osy $x$ nebo do  směru osy $y$? Odpovídá situace spíše dřevu s podélným směrem v ose $x$ nebo v ose $y$?
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Platí $$\pdv{T}{x}=-\frac 12 (x^2+y^2)^{-\frac 12}(2x)=-\frac{x}{\sqrt{x^2+y^2}}$$
 a ze symetrie 
@@ -227,7 +211,6 @@ Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\fra
 
 ```
 
-
 ww:problems/gradient/10.pg
 
 ww:problems/gradient/11.pg
@@ -237,7 +220,6 @@ ww:problems/gradient/12.pg
 ## Gradient numericky
 
 https://youtu.be/A13omrC6i2I
-
 
 $T$|$-30$|$-25$|$-20$|$-15$|$-10$|$-5$|$0$|$5$|$10$|$15$|$20$|$25$|$30$
 |--|---|---|---|---|---|--|-|-|--|--|--|--|--|
@@ -257,8 +239,6 @@ $30$|106.29|109.04|111.29|113.04|114.29|115.04|115.29|115.04|114.29|113.04|111.2
 
 Tabulka $T(x,y)$, vodorovně $x$, svisle $y$
 
-
-
 !["Termosnímek" k tabulce. Pozor na to, že v tabulce rostou hodnoty $y$ směrem dolů, ale v grafu nahoru.](gradient_num.png)
 
 Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku dáno tabulkou. Situace může vypadat například jako v tomto zadání. Určete gradient teploty v bodě o souřadnicích $x=20$ a $y=5$. Pro výpočet parciálních derivací použijte centrální diferenci.
@@ -271,7 +251,6 @@ Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku
 :class: dropdown
 :nonumber:
 
-
 Pomocí centrální diference odhadneme parciální derivace pro $x=20$ a $y=5$.
 $$\frac{\partial T}{\partial x}\approx \frac{98.67-102.67}{2\times 5}=-0.4$$
 $$\frac{\partial T}{\partial y}\approx \frac{102.99-98.84}{2\times 5}=0.415$$
@@ -279,7 +258,6 @@ Gradient je $$\nabla T=\begin{pmatrix} -0.400\\ 0.415\end{pmatrix}.$$
 Směřuje tedy doleva nahoru. To koresponduje s obrázkem, v bodě $x=20$ a $y=5$ teplota roste směrem doleva a nahoru.
 
 ```
-
 
 ww:problems/gradient/gradient_numericky.pg
 

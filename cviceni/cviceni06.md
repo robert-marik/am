@@ -6,8 +6,6 @@
 > * Další příklady jsou věnovány integraci na jiných než obdélníkových množinách. Zde je nutné dvojný integrál převést na dvojnásobný, tj. integrál z integrálu.
 > * Poslední dva příklady jsou věnovány integraci v jiných než kartézských souřadnicích. Suveréně nejčastěji se vedle kartézských souřadnic používají souřadnice polární a proto se zaměříme právě na ně. 
 
-
-
 ## Integrál přes obdélník
 
 https://youtu.be/oFbhyqFRjmQ
@@ -25,7 +23,6 @@ $$
 :class: dropdown
 :nonumber:
 
-
 $$
 \begin{aligned}
   \iint_\Omega xy^2\mathrm dx\mathrm dy
@@ -34,7 +31,6 @@ $$
 \\&=\left[\frac 92-0\right]\times \left [\frac 13 2^3 - \frac 13 \right]=\frac 92 \times \frac 73 = \frac {21}2
 \end{aligned}
 $$
-
 
 ```
 
@@ -59,8 +55,6 @@ $$
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
-
 
 $$
 \begin{aligned}
@@ -88,7 +82,6 @@ v závislosti na parametru $n\geq 0$.
 :class: dropdown
 :nonumber:
 
-
 $$
 \begin{aligned}
   \iint_\Omega y^n\mathrm dx\mathrm dy
@@ -97,7 +90,6 @@ $$
   =\frac 1{n+1}
 \end{aligned}$$
 
-
 Správnost můžeme ověřit pomocí vzorců pro obsah  $$I_0=1$$ a polohu težiště $$\frac{I_1}{I_0}=\frac 12,$$
 což porovnáme s očekávanými výsledky. Dalším využitím je působiště tlakové síly na přehradu (viz přednáška), které je při orientaci osy $y$ od hladiny směrem dolů v místě
 $$\frac{I_2}{I_1}=\frac {\frac 13}{\frac 12}=\frac 23,$$
@@ -105,13 +97,11 @@ tj. ve dvou třetinách hloubky.
 
 ```
 
-
 ## Integrál přes trojúhelník
 
 https://youtu.be/w0iqtpQvhAE
 
 ![Nákres integrační množiny](fig2.png)
-
 
 Vypočtěte integrál
 $$  \iint_\Omega xy^2\,\mathrm dx \mathrm dy
@@ -121,7 +111,6 @@ přes trojúhelník $\Omega$ s vrcholy v bodech $(0,0)$, $(1,0)$ a $(0,1)$.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Rovnice přímky, ve které leží přepona trojúhelníka, je
 $$y=1-x$$ a trojúhelník tedy je možno zapsat soustavou nerovností
@@ -148,13 +137,11 @@ $$
 
 ``` 
 
-
 ## Integrál pod parabolou
 
 https://youtu.be/Sur6lhdR3ts
 
 ![Nákres integrační množiny](fig3.png)
-
 
 Vypočtěte integrály
 $$
@@ -176,7 +163,6 @@ Určete obsah a polohu těžiště této množiny.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 $$
 \begin{aligned}
@@ -213,13 +199,11 @@ Obsah je $\frac 23$ a souřadnice těžiště jsou $\left[\frac 38,\frac 4{10}\r
 
 ``` 
 
-
 ## Integrál přes čtvrtkruh
 
 https://youtu.be/_YT3FDpfZsQ
 
 ![Nákres integrační množiny](fig4.png)
-
 
 Vypočtěte integrály
 $$
@@ -235,7 +219,6 @@ Určete obsah a polohu těžiště tohoto čtvrtkruhu.
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 V polárních souřadnicích daných rovnicemi $$
 \begin{aligned}
@@ -284,7 +267,6 @@ Vypočtěte kvadratický moment kruhu o poloměru $R$ vzhledem k ose procházej�
 :class: dropdown
 :nonumber:
 
-
 Vypočteme kvadratický moment kruhu daného v polárních souřadnicích nerovnicemi
 $$
 \begin{aligned}
@@ -309,7 +291,6 @@ kde při výpočtu integrálu přes proměnnou $\varphi$ využijeme nápovědu, 
 To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Devadesát šest procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
 
 ```
-
 
 <!--%
 

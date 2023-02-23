@@ -14,7 +14,6 @@ má pouze nulové řešení.
 :class: dropdown
 :nonumber:
 
-
 Charakteristcká rovnice je $$\lambda^2-m=0$$ s reálnými kořeny $\lambda_{1,2}=-\sqrt m$.
 Obecným řešením je funkce 
 $$y(t)=C_1 e^{\sqrt m t} + C_2 e^{-\sqrt m t}$$
@@ -45,7 +44,6 @@ Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 Jedná se o nehomogenní rovnici 
 $$\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = -\frac {h}{\lambda} T_0.$$ 
@@ -94,5 +92,4 @@ $$\frac {\psi''(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=
 * Druhá rovnice představuje lineární diferenciální rovnici druhého řádu $$\varphi''+\lambda^2\varphi=0$$ a okrajové podmínky si  vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji použili [v přednášce](http://user.mendelu.cz/marik/am/slidy/11/). Řešením je funkce $\varphi(x)=\sin\left (k\frac{\pi}l x\right)$, kde $k\in\mathbb N$.
 * Spojením obdržených výsledků dostáváme rovnici popisující kmity na $k$-t0 vlastní frekvenci ve tvaru $$u_k(x,t)=\psi(t)\varphi(x)=\left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ 
 * Spojením kmitů na všech frekvencích dostaneme řešení rovnice ve tvaru $$u(x,t) = \sum_{k=1}^\infty \left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ Tento vzorec je dostatečně flexibilní, abychom dokázali splnit libovolné počáteční podmínky a proto v sobě obsahuje všechna řešení. Praktická využitelnost vzorce v reálných případech je diskutabilní, proto často používáme numerické simulace využívající numerické řešení zadané rovnice za daných počátečních a okrajových podmínek. 
-
 

@@ -1,12 +1,10 @@
 # Diferenciální rovnice
 
-
 > Anotace.
 >
 > * V úvodním příkladu si natrénujeme nejdůležitější schopnost související s diferenciálními rovnicemi: schopnost přepsat slovní formulaci modelu do kvantitativní formy, která umožňuje detailní kvantitativní analýzu. Schopnost sestavit diferenciální rovnici podle slovního zadání.
 > * V dalších úlohách se budeme zabývat problematikou existence a jednoznačnosti řešení. 
 > * Nakonec se naučíme řešit diferenciální rovnice se separovanými proměnnými dvojím integrováním.
-
 
 ## Jednoduché modely založené na diferenciálních rovnicích
 
@@ -27,8 +25,6 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
   která nás zajímá, je jasné, že kvantitativní model bude obsahovat
   derivaci. Zatím se učíme model zapsat, později ho budeme umět i vyřešit._
 
-
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
@@ -37,9 +33,7 @@ Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky ch
 $$\dv {L}{t}=k (L_{\max}-L).$$
 Konstanta $k$ vyjadřuje rychlost s jakou roste délka při jednotkovém rozdílu mezi aktuální délkou a délkou maximální.
 
-
 ```
-
 
 ### Kontaminace a čištění
 
@@ -60,7 +54,6 @@ _Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na 
 $$\dv {y}{t}=-0.08y-30.$$
 
 ```
-
 
 <!--
 % \obrazek{lov.jpg}
@@ -88,9 +81,6 @@ $$\dv {y}{t}=-0.08y-30.$$
 % ```
 -->
 
-
-
-
 ### Populace jelenů
 
 ![pixabay.com, autor Free-Photos](deer.jpg)
@@ -107,7 +97,6 @@ Je-li $x$ velikost populace jelenů, platí
 $$ \dv {x}{t}=0.10 x-50, $$ kde $t$ je čas v letech.
 ```
 
-
 ### Hrubý model chřipkové epidemie
 
 Rychlost s jakou roste počet nemocných chřipkou je úměrný současně
@@ -123,7 +112,6 @@ _Toto je současně model popisující šíření informace v populaci, stačí 
 Je-li $M$ velikost populace a $y$ počet nemocných, je v populaci $M-y$ zdravých a model má tvar
 $$\dv {y}{t}=ky(M-y).$$
 ```
-
 
 ### Ropná skvrna
 
@@ -155,8 +143,6 @@ Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je
 $$\dv {L}{t}=k (L_{\max}-L).$$
 ```
 
-
-
 ### Tloušťka ledu
 
 ![pixabay.com](ledni_medved.jpg)
@@ -181,13 +167,7 @@ h\,\mathrm dh&=k\, \mathrm dt\\
 \end{aligned}
 $$
 
-
-
 ``` 
-
-
-
-
 
 ## Model vypouštění nádrže
 
@@ -209,7 +189,6 @@ nádrž _cylindrického tvaru_ (válec postavený na podstavu),
 nádrž ve tvaru
 _kvádru_
 a nádrž ve tvaru _kužele_ otočeného vrcholem dolů (trychtýř). 
-
 
 _V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
 
@@ -236,9 +215,7 @@ $$\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{3k_3}h^{-3/2}$$
 a po přeznačení konstanty má model pro kuželovou nádrž tvar
 $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
-
 ```
-
 
 ## Problematika jednoznačnosti v modelu vypouštění nádrže
 
@@ -264,7 +241,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 :class: dropdown
 :nonumber:
 
-
 1. Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
     * _Podle obecné věty o jednoznačnosti:_ Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle $h$. Protože platí
     $$\frac{\partial }{\partial h}(k\sqrt h)=k\frac 12
@@ -288,7 +264,6 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 
 ```
 
-
 ## Řešení ODE a IVP 
 
 https://youtu.be/XUKvuqSgA6U
@@ -303,11 +278,9 @@ https://youtu.be/XUKvuqSgA6U
 
 _Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (stacionární řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová)._
 
-
 ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot y^2$
    *  Konstantní řešení jsou řešení rovnice $$ y^2=0,$$ tj. je jediné konstantní řešení $$ y=0.$$
@@ -333,12 +306,9 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 ```
 
-
-
 <!--
 
 % \obrazek[vlastní]{pokros.jpg}
-
 
 % ## Stavebniny vedle čebínského nádraží: model Hromada sypkého
 % materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný
@@ -365,9 +335,6 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % kde $r$ a $k=k_0k_1$ jsou konstanty.
 
 % ```
-
-
-
 
 % \obrazek[vlastní]{pokros.jpg}[-30pt]
 
@@ -399,10 +366,8 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 % ```
 
-
 % 
 % \obrazek[http://ecoursesonline.iasri.res.in]{aq.png}[-10pt]
-
 
 % ## Pokles hladiny podzemní vody při ustáleném rovinném proudění
 
@@ -434,7 +399,6 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 :class: dropdown
 :nonumber:
 
-
 % \begin{enumerate}[A)]
 %   1.  $$v_f=-k\derivace {h}x$$
 %   1. $$q=-kh\derivace hx$$
@@ -450,10 +414,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % \end{enumerate}
 % ```
 
-
-
 % \obrazek[http://ecoursesonline.iasri.res.in]{well.png}[-25pt]
-
 
 % ## Studna s volnou hladinou
 
@@ -463,7 +424,6 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % \end{equation}
 % odvozenou v \ref{pokles} B. Tentokrát budeme studovat studnu s volnou hladinou\footnote{Zjednodušeně, voda ve studni je na úrovni hladiny podzemní vody. Studna nevznikla navrtáním nepropustné vrstvy, kdy by byla voda natlakovaná a vystoupila do výšky odpovídající tomuto tlaku.} Je-li studna čerpána konstantní rychlostí $Q$, je tok na jednotku délky na kružnici o poloměru $x$ roven $q=-\frac {Q}{2\pi x}$ (voda teče dovnitř, tj. ve směru ve kterém klesá $x$). Dosaďte tento vztah do rovnice \eqref{*} a rovnici vyřešte s počáteční podmínkou $h(R)=H$, kde $H$ odpovídá hladině vody ve studni a $R$ je poloměr studny (na obrázku $h_w$ a $r_w$). Dostanete rovnici \textit{snížení hladiny v okolí studny} čerpané rychlostí $Q$ (depresní křivka).
 % (\textit{Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Analogickým způsobem se počítají tepelné ztráty při prostupu tepla válcovou stěnou (viz \url{https://youtu.be/rvyogmaUmUQ}).})
-
 
 % ```{prf:example} Řešení
 :class: dropdown
@@ -529,7 +489,6 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
   
 % \end{minipage}
 
-
 % Zapište pomocí vhodných veličin, operátorů a rovnic následující vztahy, zákony nebo pozorování,
 % odpovězte na otázky a splňte úkoly.
 % \begin{enumerate}[A)]
@@ -574,7 +533,6 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 % ```{prf:example} Řešení
 :class: dropdown
 :nonumber:
-
 
 % \begin{enumerate}[A)]
 % 1. $\vec q=-T \nabla h$ kde $T$ je koeficient průtočnosti a $-\nabla h$
@@ -627,7 +585,6 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 %   $(h^2)'=2 h h'$
 %   pro $h$ jako funkci proměnné  $x$, kde čárka značí derivaci podle $x$. Výsledkem bude podmínka, kterou musí splňovat funkce $h^2$ a odsud již najdete hledanou křivku snížení piezometrické hladiny. (Pokud je $h$ závislé jenom na $x$, plocha ohraničující zvodnělou vrstvu se z bočního pohledu promítne do křivky.)
 % \end{enumerate}
-
 
 % ```{prf:example} Řešení
 :class: dropdown

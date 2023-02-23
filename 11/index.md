@@ -1,7 +1,5 @@
 # Lineární diferenciální rovnice druhého řádu
 
-
-
 > Anotace.
 >
 > * Lineární diferenciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
@@ -41,7 +39,6 @@ https://youtu.be/PcNc0tfv7Q0
 <div class='obtekat'>
 
 ![Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com](pruzina.jpg)
-
 
 ![Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE](kmity_stromu.png)
 </div>
@@ -166,7 +163,6 @@ například $y=\sin x$, $y=\cos x$. Z linearity plyne
 
 ## Kdy pomocí linearity získáme obecné řešení?
 
-
 Budeme studovat homogenní LDE druhého řádu, tj.
 rovnici 
 $$y''+p(x)y'+q(x)y=0,$$
@@ -200,11 +196,9 @@ soustavy, tj. matice $\begin{pmatrix}
 determinant je nenulový a to nastane právě tehdy když jeden sloupec není
 násobkem druhého. 
 
-
 ## Homogenní LDE 2. řádu (wronskián, lineárně nezávislá řešení)
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
-
 
 > Definice (lineární (ne-)závislost funkcí). Buďte $y_1$ a $y_2$ funkce definované
 > na intervalu $I$. Řekneme, že funkce $y_1$ a $y_2$ jsou na intervalu $I$
@@ -216,8 +210,6 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 > V\ opačném případě říkáme, že funkce $y_1$, $y_2$ jsou na intervalu $I$
 > *lineárně nezávislé*.
 
-
-
 > Definice (Wronskián). Buďte $y_1(x)$ a $y_2(x)$ dvě libovolná
 > řešení homogenní rovnice (LDE0). *Wronskiánem* funkcí $y_1(x)$,
 > $y_2(x)$ rozumíme determinant
@@ -226,7 +218,6 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 >       y_1(x)&y_2(x)\\y_1'(x)&y_2'(x)
 >     \end{vmatrix}.
 >  $$
-
 
 > Věta (o lineární (ne)závislostí řešení). Buďte $y_1(x)$ a $y_2(x)$ dvě řešení rovnice
 > (LDE0) na intervalu $I$. Tato řešení jsou lineárně nezávislá právě
@@ -266,7 +257,6 @@ Protože exponenciální faktor na pravé straně je vždy nenulový, bude
 výraz na pravé straně roven nule pokud bude splněna podmínka
 $$z^2+pz+q=0.$$
 Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
-
 
 ## Homogenní LDE 2. řádu s\ konstantními koeficienty
 

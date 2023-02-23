@@ -1,0 +1,717 @@
+\documentclass{article}
+\usepackage[landscape, margin = 0.8cm, bottom=1.5cm, top=1.3cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage{amsmath, amsfonts}
+
+\usepackage{multicol, enumerate, tikz}
+\setlength{\columnseprule}{0.4pt}
+\everymath{\displaystyle}
+
+\def\dx{\,dx}
+\def\dy{\,dy}
+\def\dr{\,dr}
+\def\dphi{\,d\phi}
+\def\dA{\,dA}
+\def\tg{\mathop{\mathrm{tg}}}
+\def\arctg{\mathop{\mathrm{arctg}}}
+\def\cotg{\mathop{\mathrm{cotg}}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+
+\abovedisplayskip 3 pt
+\belowdisplayskip 3 pt
+\let\phi\varphi
+\footnotesize
+\parindent 0 pt
+\parskip 10 pt
+\begin{multicols}{3}
+\rightskip 0 pt plus 1 fill
+
+{\centering \parskip 0 pt
+\textbf{Cheat sheet Aplikovaná matematika}
+
+(Robert Maøík, \today)
+
+}
+
+
+\textbf{Determinanty}
+
+\let\oldtextbf\textbf
+\def\textbf{\smallskip\hrule\oldtextbf}
+\vspace*{-10pt}
+
+Determinant 2$\times$2 \hfill$
+\begin{vmatrix}
+  a & b \\ c &d
+\end{vmatrix}
+=ad-bc
+$
+
+Determinant 3$\times$3 \\\null\hfill$
+\begin{vmatrix}
+  a & b & c \\ d & e &f \\ g & h & i
+\end{vmatrix}
+=aei-afh+bfg-bdi+cdh-ceg
+$\hfill\null
+
+\textbf{Vektory}, $\vec a=(a_1,a_2,a_3)$, $\vec b=(b_1,b_2,b_3)$, 
+
+Skalární souèin vektorù
+$\vec a\cdot\vec b=a_1 b_1 + a_2 b_2+a_3b_3$
+
+Vektorový souèin vektorù
+\vspace*{-8pt}
+$$\vec a\times \vec b=
+\begin{vmatrix}
+  \vec i & \vec j & \vec k\\
+  a_1 & a_2 & a_3 \\
+  b_1 & b_2 & b_3
+\end{vmatrix}
+$$
+
+Délka vektoru  $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
+
+\newcount\formulacount
+\def\hopla{\advance\formulacount by 1 {\scriptsize ({\the\formulacount})\ }}
+\def\derivace#1;#2\par{\kern 1pt\hopla $\displaystyle{(#1)'=#2}$\par\kern 2pt}
+\def\integral#1;#2\par{\kern 1pt\hopla $\displaystyle{\int #1\dx=#2+c}$\par}
+
+
+\textbf{Vzorce pro derivování}
+
+{\parskip 0 pt
+
+\vspace*{-15pt}
+
+\begin{multicols}2
+  \derivace c;0
+
+  \derivace x^n;n x^{n-1}
+
+  \derivace e^x;e^x
+
+  \derivace \ln x;\frac 1x
+
+  \derivace \sin x;\cos x
+
+  \derivace \cos x;-\sin x
+
+  \derivace \tg x;\frac 1{\cos^2 x}
+
+  \derivace \cotg x;-\frac 1{\sin^2 x}
+
+  \derivace \arcsin x;\frac{1}{\sqrt {1-x^2}}
+
+  \derivace \arccos x;-\frac{1}{\sqrt {1-x^2}}
+
+  \derivace \arctg x;\frac 1{1+x^2}
+
+\bigskip
+
+\parskip 5 pt
+
+1. $(u\pm v)'=u'\pm v'$
+
+2. $(cu)'=cu'$
+
+3. $(uv)'=u'v+uv'$
+
+4. $\displaystyle{\Bigl(\frac {u}{v}\Bigr)'=\frac{u'v-uv'}{v^2}}$
+
+5. $\displaystyle{\Bigl(u(v(x))\Bigr)'=u'(v(x))v'(x)}$
+
+\end{multicols}
+
+}
+
+\vspace*{-10pt}
+
+
+
+\textbf{Vzorce pro integrování}
+
+\vspace*{-8pt}
+{
+\parskip 0 pt
+\hbox to \linewidth{
+\begin{minipage}[t]{0.42\linewidth}
+  \integral ;x
+
+  \integral x^n; \frac{x^{n+1}}{n+1}
+
+  \integral \frac 1x;\ln |x|
+
+  \integral e^x;e^x
+
+  \integral \sin x;-\cos x
+
+  \integral \cos x;\sin x
+
+\end{minipage}\hfil\vrule\hfil
+\begin{minipage}[t]{0.53\linewidth}
+\formulacount=6
+\parskip 3pt
+
+  \integral \frac 1{\cos^2 x};\tg x
+
+  \integral \frac 1{\sin^2 x};-\cotg x
+
+
+  \integral \frac1{\sqrt{1-x^2}};\arcsin x
+
+  \integral \frac 1{1+x^2};\arctg x
+
+  \integral \frac 1{1-x^2};\frac 1{2}\ln\left|\frac{1+x}{1-x}\right|
+
+\end{minipage}}
+}
+
+\penalty -500
+
+\textbf{Parciální derivace} 
+
+\vspace*{-10pt}
+
+Gradient\hfill $\mathop{\mathrm{grad}}f=\nabla f= \left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)$
+
+Laplaceùv operátor\hfill $\nabla^2 f=\frac{\partial^2 }{(\partial x)^2}f+\frac{\partial^2 }{(\partial y)^2}f+\frac{\partial^2 }{(\partial z)^2}f$
+
+Lineární aproximace
+\begin{align*}
+  f(x,y)&\approx f(x_0, y_0)\\&\quad+\frac{\partial f (x_0,y_0)}{\partial
+    x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0) \\
+  f(x,y)&\approx f(x_0, y_0)+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0)
+\end{align*}
+
+
+Teèna k vrstevnici $f(x,y)=C$ v bodì $(x_0,y_0)$
+$$     \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0)=0$$
+
+
+Zákon ¹íøení chyb
+\vspace*{-10pt}
+$$
+  \Delta f(x_1,x_2,\dots x_n)\approx\sqrt{\left(\frac{\partial f}{\partial x_1}\Delta x_1\right)^2+\cdots+\left(\frac{\partial f}{\partial x_n}\Delta x_n\right)^2}
+$$
+
+Schwarzova vìta
+\vspace*{-10pt}
+$$ \frac{\partial }{\partial x}
+  \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}
+  \frac{\partial f}{\partial x}$$
+
+\textbf{Vektorová analýza}\hfill $\vec F=(P,Q,R)=P\vec i+Q\vec j + R\vec k$
+
+Divergence \hfill$\mathop{\mathrm{div}}\vec F=\nabla \cdot \vec F=\frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R}{\partial z}$
+
+Rotace \hfill $
+\begin{aligned}[t]
+  \mathop{\mathrm{rot}}\vec F&=\nabla \times \vec F = \begin{vmatrix}
+    \vec i & \vec j &\vec k\\
+    \frac{\partial }{\partial x} & \frac{\partial }{\partial y} &
+    \frac{\partial }{\partial z}\\ P &Q &R
+  \end{vmatrix}\\& \kern - 1cm
+  =\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\vec i + \left(
+    \frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\vec j + \left(
+    \frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\vec k
+\end{aligned}
+$
+
+
+\medskip
+
+
+\textbf{Slovní vyjádøení}
+
+
+\medskip
+{\parskip 0 pt
+\textit{Parciální derivace} vyjadøuje rychlost s jakou se mení funkèní hodnoty funkce pøi zmìnì jedné její promìnné. Té¾ citlivost na zmìny ve vstupních datech.
+
+\textit{Gradient} vyjadøuje smìr a rychlost maximálního rùstu sklalární velièiny.
+
+\textit{Divergence} vektorového toku vyjadøuje intenzitu zesílení tohoto toku.
+
+\textit{Rotace} vektorového toku vyjadøuje, zda tìlesa uná¹ená tokem mají tendenci rotovat okolo vlastní osy. Souvisí zejména s mo¾ností zavést pro dané pole sklalární potenciál.
+
+V¹echny uvedené velièiny jsou lokální a vztahují se k danému bodu v daném èase. Pokles je záporný rùst, zeslabení toku je záporné zesílení.
+
+}
+
+\vfill\null
+
+\columnbreak
+
+\textbf{Rovnice matematické fyziky} 
+
+
+Rovnice kontinuity\hfill
+$    
+   \frac{\partial u}{\partial t}=\sigma-\nabla \cdot \vec j
+$
+
+
+Konstituèní vztah\hfill $ \vec j=-D\nabla u$
+
+Difuzní rovnice\hfill
+$    
+   \frac{\partial u}{\partial t}=\sigma + \nabla (D\nabla u)
+$
+
+
+Rovnice vedení tepla\hfill
+$
+  \rho c \frac{\partial T}{\partial t}=\nabla(\lambda\nabla T)
+$
+
+
+\textbf{Difuzní rovnice v kartézských souøadnicích}
+
+
+Budeme uva¾ovat diagonální difuzní koeficient. Napøíklad homogenní materiál, nebo otrotropní materiál ve kterém volíme osy v souladu s materiálovými vlastnostmi.
+
+Obecný tvar difuzní rovnice v kartézských souøadnicích je
+$$\frac{\partial u}{\partial t}=\sigma +
+\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)
++
+\frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right)
++
+\frac{\partial }{\partial z}\left(D_z \frac{\partial u}{\partial z}\right).
+$$
+
+Ve \textit{stacionárním pøípadì} (sledujeme stav po dosa¾ení rovnováhy) polo¾íme navíc $\frac{\partial u}{\partial t}=0$.
+
+Pro \textit{bezzdrojový pøípad} (stavová velièina nemù¾e vznikat ani zanikat) polo¾íme navíc $\sigma=0$.
+
+Studujeme-li materiál souèasnì \textit{homogenní} a s \textit{lineárními materiálovými vlastnostmi} (v v¹ech místech má materiál stejné vlastnosti a ty se nemìní pøi zmìnì stavové velièiny), potom kvaziderivace
+$$\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)$$
+upravíme a pou¾ijeme druhé derivace
+$$D_x \frac{\partial^2 u}{\partial x^2}$$ (a pro ostatní promìnné analogicky).
+
+U \textit{izotropního materiálu} (má ve v¹ech smìrech stejné vlastnosti) nerozli¹ujeme materiálové charakteristiky v jednolivých smìrech, klademe $D_x=D_y=D_z=D.$
+
+Pro ménì dimenzí  pou¾ijeme pouze odpovídající poèet difuzních èlenù. Jednotlivé pøedpoklady je mo¾no libovolnì kombinovat.
+
+\vfill\null
+
+\columnbreak
+
+\textbf{Køivkový integrál}
+
+
+\vspace*{-10pt}
+{\leftskip 0.5cm
+\def\mtextit{\hspace*{-0.5cm}\textit}
+\mtextit{Vektorový zápis køivky a její derivace}
+
+$\vec r(t)=\phi(t)\vec i+\psi(t)\vec j$, $t\in[a,b]$,
+\hfill
+$\frac{d\vec r}{dt}= \phi'\vec i+\psi'\vec j$, \hfil
+
+\bigskip
+
+\mtextit{Køivkový integrál prvního druhu}
+\abovedisplayskip 0 pt
+\begin{gather*}
+  ds=|d\vec r|= \sqrt{(\phi')^2+(\psi')^2}dt\\
+  \int_C fds= \int_a^b f \sqrt{(\phi')^2+(\psi')^2} dt
+\end{gather*}
+V integrálu napravo jsou do funkce $f$ za $x$ a $y$ dosazeny funkce $\varphi(t)$ a $\psi(t)$. Analogicky pro prostorové køivky.
+
+\bigskip
+
+\mtextit{Køivkový integrál druhého druhu}
+\abovedisplayskip 0 pt
+\begin{gather*}
+  \vec F=P\vec i + Q\vec j\ ,\qquad
+  % $\frac{d\vec r}{dt}= \phi'\vec i+\psi'\vec j$, \hfil
+  % $d\vec r= (\phi'\vec i +\psi'\vec j )dt$,\hfil
+  \vec F\cdot d\vec r= P\phi'dt+Q\psi'dt\\
+  \int_C \vec Fd\vec r= \int_C Pdx+Qdy=\int_a^b (P\phi'+Q\psi') dt
+\end{gather*}
+
+V integrálu napravo jsou do slo¾ek $P$ a $Q$ funkce $\vec F$ za $x$ a $y$ dosazeny funkce $\varphi(t)$ a $\psi(t)$.
+ Analogicky pro prostorové køivky.
+
+\bigskip
+
+\mtextit{Greenova vìta}% pro vektorové pole $\vec F=P\vec i + Q\vec j$
+
+\vspace*{-25pt}
+\begin{gather*}
+  \oint_{\partial \Omega} \vec Fd\vec r=  \underbrace{\oint_{\partial \Omega}P\mathrm{d}x +Q\mathrm{d}y }_{\text{\kern - 1 cm Cirkulace $\vec F$ po hranici $\partial \Omega$\kern -1 cm}}=   \iint_{\Omega}\overbrace{\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)}^{[\mathop{\mathrm{rot}} (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y \\
+  \underbrace{\oint_{\partial \Omega}-Q\mathrm{d}x +P\mathrm{d}y
+  }_{\text{Tok $\vec F$ pøes hranici $\partial \Omega$}}=
+  \iint_{\Omega}\underbrace{\left(\frac{\partial P}{\partial
+        x}+\frac{\partial Q}{\partial
+        y}\right)}_{\mathop{\mathrm{div}} (P\vec i +Q\vec
+    j)}\mathrm{d}x \mathrm{d}y
+\end{gather*}
+
+
+}
+\textbf{Nezávislost integrálu na integraèní cestì}
+
+$C\vec r(t)=\phi(t)\vec i+\psi(t)\vec j$, $t\in[a,b]$
+
+Následující výroky jsou ekvivalentní.
+
+\vspace*{-15pt}
+\null\hfill\begin{minipage}[t]{0.9\linewidth}
+  \begin{enumerate}[(i)]
+  \item Integrál $\int_C \vec F\mathrm{d}\vec r$ nezávisí v $\Omega$
+    na integraèní cestì.
+  \item $\oint_C \vec F\mathrm{d}\vec r=0$ po libovolné uzavøené
+    køivce $C$ v $\Omega$.
+  \item $\mathop{\mathrm{rot}} \vec F =0$
+  \item Existuje funkce $\varphi$ s\ vlastností
+    $\nabla\varphi=\vec F$.
+  \end{enumerate}
+\end{minipage}
+\vspace*{-10pt}
+  Jsou-li tyto podmínky splnìny, platí
+  $
+    \int_C \vec F\mathrm{d}\vec r=\varphi(\vec r(b))-\varphi(\vec {r}(a)).
+  $
+
+\columnbreak
+\textbf{Dvojný integrál} \hfill $\text{$\iint_M f(x,y)\dx\dy$ resp. $\iint_M f(x,y)\dA$}$
+
+
+(1) Integrál pøes obdélník $R=[a,b]\times [c,d]$
+
+$\begin{aligned}
+  \iint_R f(x,y)\dx\dy&=\int_a^b \int_c^d f(x,y) \dy \dx \\&=\int_c^d
+  \int_a^b f(x,y) \dx \dy\\ \iint_R f(x)g(y)\dx\dy&=\int_a^b f(x)\dx
+  \int_c^d g(y) \dy
+\end{aligned}$
+
+
+\vbox to 0 pt{\vss\hbox to \hsize{\hss \begin{tikzpicture}[x=0.5cm,y=0.5cm]
+  \draw[->](0,0)--(3.4,0)node[right]{$x$};
+  \draw[->](0,0)--(0,4.5)node[above]{$y$};
+  \draw[fill=lightgray] (1,1)--(3,1)--(3,4)--(1,4)--cycle;
+  \draw[dashed] (1,1)--(1,0) node[below]{$a$};
+  \draw[dashed] (3,1)--(3,0) node[below]{$b$};
+  \draw[dashed] (1,1)--(0,1) node[left]{$c$};
+  \draw[dashed] (1,4)--(0,4) node[left]{$d$};
+\end{tikzpicture}}}
+
+\def\mezera{\hbox to\hsize{\color{gray}\kern 2cm \leaders \hrule height 0.1pt depth 0 pt\hfill\relax\kern 2cm }}
+
+
+\mezera
+
+(2) Oblast mezi funkcemi promìnné $x$
+
+$M_1$ $a\leq x \leq b$, $\phi(x)\leq y \leq \psi(x)$ 
+
+$\iint_{M_1}f(x,y)\dx\dy=\int_a^b \int_{\phi(x)}^{\psi(x)} f(x,y) \dy \dx$
+
+
+\vbox to 0 pt{\vss\hbox to \hsize{\hss \begin{tikzpicture}[x=0.5cm,y=0.45cm]
+  \draw[->](0,0)--(3.4,0)node[right]{$x$};
+  \draw[->](0,0)--(0,4.5)node[above]{$y$};
+  \draw[fill=lightgray, domain=1:3] plot ({\x},{0.4*\x*(\x-1)+1})-- plot ({4-\x},{4-0.2*\x*(\x-1)}) -- cycle;
+  \draw[dashed] (1,1)--(1,0) node[below]{$a$};
+  \draw[dashed] (3,4)--(3,0) node[below]{$b$};
+  % \draw[dashed] (1,1)--(0,1) node[left]{$c$};
+  % \draw[dashed] (3,4)--(0,4) node[left]{$d$};
+\end{tikzpicture}}\vspace*{-0.4cm}}
+
+\mezera
+
+(3) Oblast mezi funkcemi promìnné $y$
+
+$M_2$ $a\leq y \leq b$, $\phi(y)\leq x \leq \psi(y)$ 
+
+$\iint_{M_2}f(x,y)\dx\dy=\int_a^b \int_{\phi(y)}^{\psi(y)} f(x,y) \dx \dy$
+
+
+
+\vbox to 0 pt{\vss\hbox to \hsize{\hss \begin{tikzpicture}[x=0.5cm,y=0.45cm]
+  \draw[->](0,0)--(3.4,0)node[right]{$x$};
+  \draw[->](0,0)--(0,4.5)node[above]{$y$};
+  \draw[fill=lightgray, domain=0.5:4] plot ({-0.5+0.15*\x*(\x-1)+1},{\x})-- plot ({3-0.3*\x*(\x-3)},{4.5-\x}) -- cycle;
+  % \draw[dashed] (1,1)--(1,0) node[below]{$a$};
+  % \draw[dashed] (3,4)--(3,0) node[below]{$b$};
+   \draw[dashed] (1,0.5)--(0,0.5) node[left]{$c$};
+   \draw[dashed] (3,4)--(0,4) node[left]{$d$};
+\end{tikzpicture}}\vspace*{-0.2cm}}
+
+\mezera
+
+
+(4) Oblast mezi kruhy nebo kruhovými výseky
+
+$M_3$ $r_1\leq r\leq r_2$, $\phi_1\leq \phi\leq \phi_2$
+
+$\iint_{M_3}f(x,y)\dx\dy=\int_{\phi_1}^{\phi_2} \int_{r_1}^{r_2} f(r,\phi) r \dphi  \dr$
+
+\vbox to 0 pt{\vss\hbox to \hsize{\hss \begin{tikzpicture}[x=0.5cm,y=0.45cm]
+  \begin{scope}
+    \clip (0,0) rectangle (4,4);
+    \draw [fill=gray!50!white] (0,0) circle (3);
+    \draw [fill=white] (0,0) circle (1.5);
+  \end{scope}
+  \draw[->](0,0)--(3.4,0)node[right]{$x$};
+  \draw[->](0,0)--(0,4)node[above]{$y$};
+  %\draw[fill=lightgray, domain=0.54] plot ({-0.5+0.15*\x*(\x-1)+1},{\x})-- plot ({3-0.3*\x*(\x-3)},{4.5-\x}) -- cycle;
+  % \draw[dashed] (1,1)--(1,0) node[below]{$a$};
+  % \draw[dashed] (3,4)--(3,0) node[below]{$b$};
+  % \draw[dashed] (1,0.5)--(0,0.5) node[left]{$c$};
+  % \draw[dashed] (3,4)--(0,4) node[left]{$d$};
+\end{tikzpicture}}\vspace*{-0.1cm}}
+
+
+
+
+\textbf{Separovatelné ODR}
+
+\vspace*{-0.7cm}
+\null\hfill$y'=\frac{dy}{dx}=f(x)g(y)$
+\hfill$\implies$\hfill$
+\begin{cases}
+\text{$y(x)=y_i$, kde $g(y_i)=0$}\\[8pt]
+\text{$\int \frac{1}{g(y)}dy = C+\int f(x)dx$}
+\end{cases}
+$\hfill\null
+
+\textbf{Lineární operátory}
+
+(1) $L[y_1+y_2]=L[y_1]+L[y_2]$ \quad a \quad $L[Cy]=CL[y]$
+
+(2) $L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$
+
+\columnbreak
+
+
+\textbf{Lineární DR 1. øádu s konstantními koeficienty}
+$$\frac{\mathrm dy}{\mathrm dt}+ay=b,\quad a,b\in\mathbb{R}$$ 
+
+Konstantní (stacionární) øe¹ení: $y(t)=\frac ba$
+
+Obecné øe¹ení: $$y = Ce^{-at}+ \frac ba$$
+
+Obecné øe¹ení konverguje ke stacionárnímu pokud $a>0.$
+
+
+\textbf{Autonomní DR 1. øádu}
+$$\frac{\mathrm dy}{\mathrm dt}=f(y)$$ 
+
+Konstantních øe¹ení je tolik, kolik je nulových bodù funkce $f(y)$.
+
+Stabilní konstantní øe¹ení jsou v bodech, kde je funkce $f$ klesající. 
+
+Netabilní konstantní øe¹ení jsou v bodech, kde je funkce $f$ rostoucí. 
+
+
+\textbf{Lineární autonomní systémy}\hfill
+$\frac{\mathrm dX}{\mathrm dt}=AX$\hfill\null
+
+Má-li matice $A$ vlastní vektor pøíslu¹ný vlastní hodnotì $\lambda$, má soustava øe¹ení $$X(t)=v e^{\lambda t},$$ kde $v$ je pøíslu¹ný vlastní vektor. Toto øe¹ení konverguje k poèátku pro $\lambda<0$ a roste neohranièenì pro $\lambda>0$.
+
+Má-li $A$ celkem $n$ rùzných vlastních hodnot, dostaneme takto $n$ nezávislých øe¹ení, ze kterých díky linearitì slo¾íme øe¹ení obecné.
+
+Je-li vlastní hodnota $\lambda$ komplexní, je i pøíslu¹ný vlastní vektor $v$ komplexní a øe¹eními jsou reálná a imaginární èást $X(t)=v e^{\lambda t},$ pøièem¾ $$\Re (e^{(\alpha+i\beta)t})= e^{\alpha t}\cos(\beta t) \quad\text{ a }\quad \Im (e^{(\alpha+i\beta)t})= e^{\alpha t}\sin(\beta t).$$ Øe¹ení v tomto pøípadì oscilují a mezi konvergencí a divergencí rozhoduje znaménko $\Re(\lambda)=\alpha$.
+
+Pro $A=
+\begin{pmatrix}
+  a& b \\ c &d
+\end{pmatrix}
+$
+je $\lambda$ øe¹ením rovnice $\lambda^2-(a+d)\lambda + (ad-bc)=0.$
+
+
+\columnbreak
+
+\textbf{Linearizace nelineárního autonomního systému}
+$$\frac{\mathrm dX}{\mathrm dt}=F(X)$$
+$X=(x_1,\dots, x_n)^T$, $F(X)=(F_1(X),\dots,F_n(X))^T$
+
+Nech» $X_0$ je bod takový, ¾e $F(X_0)=0$. Buï $J(X_0)=\left(\frac{\partial F_i(X_0)}{\partial x_j}\right)$ Jacobiho matice funkce $F$ v bodì $X_0$. Je-li $|J(X_0)|\neq 0$, mají autonomní systémy
+$$\frac{\mathrm dX}{\mathrm dt}=F(X)\qquad \text{a}\qquad \frac{\mathrm dX}{\mathrm dt}=J(X_0) X$$ v bodì $X_0$ stejný typ stacionárního bodu, pokud jsou vlastní hodnoty mimo hranièní a patologické pøípady (vlastní hodnoty nejsou násobné, nejsou nulové a komplexní vlastní hodnoty nemají nulové reálné èásti).
+
+\textbf{Lineární DR 2. øádu s konstantními koeficienty}
+
+\textit{(a) homogenní rovnice $y''+py'+qy=0$}
+
+{\leftskip 2em
+Obecné øe¹ení je 
+$$y=C_1y_1+C_2y_2,$$
+kde $y_i$ jsou libovolná lineárnì nezávislá øe¹ení. 
+
+Charakteristická rovnice $\lambda^2+p\lambda+q=0$
+
+(1) Jsou-li $\lambda_1,\lambda_2\in\mathbb{R}$ dva rùzné reálné koøeny charakteristické
+     rovnice, lze polo¾it $${y_1=e^{\lambda_1 x}}, \qquad{y_2=e^{\lambda_2 x}}.$$
+ 
+(2)   Je-li $\lambda_1\in\mathbb{R}$ dvojnásobným koøenem charakteristické
+     rovnice, lze polo¾it  $${y_1=e^{\lambda_1 x}}, \qquad{y_2=xe^{\lambda_1 x}}.$$
+
+(3)   Jsou-li $\lambda_{1,2}=\alpha\pm i\beta\not\in\mathbb{R}$ dva komplexnì sdru¾ené
+     koøeny charakteristické rovnice, lze polo¾it  $${y_1(x)=e^{\alpha x}\cos(\beta x)}, \qquad
+     {y_2(x)=e^{\alpha x}\sin(\beta x)}.$$
+
+}
+\textit{(b) nehomogenní rovnice $y''+py'+qy=f(x)$}
+
+{\leftskip 2em
+Obecné øe¹ení je 
+$$y=C_1y_1+C_2y_2+y_p,$$
+kde $y_1$ a $y_2$ jsou nezávislá øe¹ení asociované homogenní rovnice a
+$y_p$ jedno øe¹ení nehomogenní rovnice. Je-li $f$ polynom a $q\neq 0$,
+je jedno z partikulárních øe¹ení polynom stejného stupnì.
+
+}
+
+% \textbf{Polární souøadnice}
+% $$
+% \begin{aligned}
+%   x&=r\cos\phi\\  y&=r\sin\phi, \quad r\in[0,\infty),\ \phi\in[0,2\pi)
+% \end{aligned}
+% $$
+% Diferenciální operátory v polárních souøadnicích viz literatura
+
+% Dvojný integrál v polárních souøadnicích viz Dvojný integrál (5).
+
+
+
+\textbf{Parametrizace bì¾ných køivek}
+
+(1) Úseèka z $[a_1,a_2]$ do $[b_1,b_2]$
+$$
+\begin{aligned}
+  x&=a_1+t(b_1-a_1)\\
+  y&=a_2+t(b_2-a_2),\ t\in[0,1]
+\end{aligned}
+$$
+
+(2) Kru¾nice se støedem v poèátku a polomìrem $r$
+$$
+\begin{aligned}
+  x&=r\cos(t)\\
+  y&=r\sin(t),\ t\in[0,2\pi]
+\end{aligned}
+$$
+
+(3) Èást grafu funkce $y=f(x)$ nad intervalem $[a,b]$
+$$
+\begin{aligned}
+  x&=t\\
+  y&=f(t),\ t\in[a,b]
+\end{aligned}
+$$
+
+
+
+
+\textbf{Separace promìnných v PDR}  
+(Pro jednoduchost uva¾ujme rovnici v 1D s Dirichletovou úlohou a homogenními okrajovými podmínkami.)
+
+% Øe¹ení PDR hledáme jako souèin funkce závislé jenom na èase a funkce
+% závislé jenom na prostorové souøadnici. Úloha vede na nekoneènì mnoho
+% øe¹ení a øe¹ením je jejich libovolná lineární kombinace. Koeficienty
+% lineární kombinace urèíme tak, aby byla splnìna poèáteèní podmínka.
+
+
+
+\textit{A) Rovnice vedení tepla, bez zdrojù.}
+\begin{equation*}
+\left[
+\begin{gathered}
+  \frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}
+  \\
+  u(0,t)=0
+  \\
+  u(1,t)=0
+  \\
+  u(x,0)=\varphi(x)
+\end{gathered}
+\right]
+\implies
+\left[
+\begin{gathered}
+  u(x,t)=F(x)G(t)\\
+  F''+\lambda^2 F=0\\
+  F(0)=F(1)=0\\
+  G'+\lambda^2 G=0\\
+  \lambda\in\mathbb{R}
+\end{gathered}\right]
+\end{equation*}
+
+{\leftskip 1 cm Okrajová úloha pro funkci $F$ má nekoneènì mnoho
+  netriviálních øe¹ení $F_n=\sin(\lambda_n x)$ pro vlastní èísla $\lambda_n=n\pi$. Pro ka¾dé
+  takové $\lambda_n$ urèíme $G_n(t)=e^{-\lambda_n^2 t}$. Jedno øe¹ení zadané PDR
+  je $$u_n(x,t)=\sin(n \pi x) e^{-n^2 \pi^2 t},$$ ale také libovolná lineární kombinace
+  tìchto funkcí. Koeficienty $c_n$ lineární kombinace urèíme tak, aby
+  platilo $u(x,0)=\varphi(x)$.
+
+}
+\textit{B) Vlnová rovnice.}
+\begin{equation*}
+\left[
+\begin{gathered}
+  \frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}
+  \\
+  u(0,t)=0
+  \\
+  u(1,t)=0
+  \\
+  u(x,0)=\varphi_1(x)
+  \\
+  \frac{\partial u}{\partial t}(x,0)=\varphi_2(x)
+\end{gathered}
+\right]
+\implies
+\left[
+\begin{gathered}
+  u(x,t)=F(x)G(t)\\
+  F''+\lambda^2 F=0\\
+  F(0)=F(1)=0\\
+  G''+\lambda^2 G=0\\
+  \lambda\in\mathbb{R}
+\end{gathered}\right]
+\end{equation*}
+
+{\leftskip 1 cm 
+Podobnì jako u rovnice vedení tepla, ale máme dvì poèáteèní podmínky a diferenciální rovnici druhého øádu pro èasovou slo¾ku.
+
+}
+\vfill\vfill\vfill\vfill\vfill\vfill
+\null
+\columnbreak
+
+\vfill\vfill\vfill\vfill\vfill\vfill
+\null
+
+
+% Vlnová rovnice\hfill
+% $
+%    \frac 1{c^2}\frac{\partial^2 u}{\partial t^2}=\nabla^2 u
+% $
+
+
+% Maxwellovy rovnice
+% $$
+% \begin{aligned}
+%       \mathop{\mathrm{div}}\vec E&=\frac{\rho}{\epsilon_0}&&&
+%       \mathop{\mathrm{div}} \vec B&=0\\
+%       \mathop{\mathrm{rot}}\vec E&=-\frac{\partial \vec B}{\partial t}&&&
+%       \mathop{\mathrm{rot}}\vec B&=\mu_0\vec j+\mu_0\epsilon_0\frac{\partial\vec E}{\partial t}
+% \end{aligned}
+% $$
+
+
+
+\end{multicols}
+\end{document}
+
+
+\end{multicols}
+\end{document}

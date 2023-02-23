@@ -1,6 +1,6 @@
-% Gradient, lineární aproximace
-% Robert Mařík
-% 2020,2021, 2022
+# Gradient, lineární aproximace
+
+
 
 
 > Anotace.
@@ -18,7 +18,7 @@
 > * Před snahou o lineární aproximaci funkce více proměnných je vhodné si zopakovat [lineární aproximaci funkce jedné proměnné.](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/)
 
 
-# Opakování
+## Opakování
 
 <div class="obtekat">
 
@@ -30,15 +30,15 @@
 
 </div>
 
-## Vrstevnice
+### Vrstevnice
 
 * Pro funkci dvou proměnných jsou vrstevnice křivky, které spojují místa se stejnou funkční hodnotou. 
 
-##  Geometrie
+###  Geometrie
 
 * Skalární součin dvou vektorů je definován vztahem $$(u_1,u_2)\cdot (v_1,v_2)=u_1v_1+u_2v_2.$$ Pro kolmé vektory je skalární součin nulový. Má-li jeden z vektor jednotkovou délku, je skalární součin průmětem druhého vektoru do směru daného uvažovaným jednotkovým vektorem. 
 
-## Lineární algebra
+### Lineární algebra
 
 manimp:MatrixMultiplication|Maticové násobení.
 
@@ -49,14 +49,14 @@ manimp:MatrixMultiplication|Maticové násobení.
 * Matice s vlastními vektory se směru souřadných os je diagonální. Skutečně, například použitím definice maticového součinu a použitím definice vlastního vektoru a čísla dostáváme $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}.$$ To si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
 
 
-# Diferenciální operátory
+## Diferenciální operátory
 
 Parciální derivace se vyskytují ve většině důležitých rovnic popisujících fyzikální svět okolo nás. Vztahy ze středoškolské fyziky nebo tabulek pro inženýry jsou jenom důsledky odvozené pro hodně speciální situace. Všude tam, kde se zajímáme o fyzikální podstatu děje a máme ambice popsat děj přesně, nestačí středoškolský aparát, protože je nutné pracovat s okamžitou rychlostí změn fyzikálních veličin. A tyto jsou vyjádřeny právě parciálními derivacemi. 
 
 Parciální derivace umožňují sledovat závislost stavových veličin v závislosti na souřadnicích nebo čase, a to pro každou souřadnici samostatně. Nicméně souřadný systém je něco, co do popisu vnášíme uměle a proto by fyzikální proces neměl být na tomto souřadném systému závislý. *Proto často spojujeme parciální derivace do složitějších výrazů -- diferenciálních operátorů. Zde teprve vynikne síla parciálních derivací.*
 
 
-# Gradient
+## Gradient
 
 https://youtu.be/9RwaJnV5TUs
 
@@ -97,7 +97,7 @@ Gradient je v každém bodě kolmý k vrstevnici (ve 2D) resp. k ekvipotenciáln
 > Poznámka (linearita gradientu). Gradient zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí
 > $$\nabla (f+g)=\nabla f +\nabla g, \qquad \nabla (cf)=c\nabla f.$$
 
-# Gradient v přírodě
+## Gradient v přírodě
 
 https://youtu.be/Mpb4EAdIPPM
 
@@ -125,14 +125,14 @@ https://youtu.be/Mpb4EAdIPPM
 <!-- Pro jednorozměrnou úlohu a těleso v potenciálové jámě (tj. v rovnovážném stavu, kdy je minimum potenciální energie) můžeme potenciál v okolí minima aproximovat pomocí Taylorova rozvoje $$V(x)\approx V_0+\frac 12 V''(0)x^2+\cdots $$ (souřadnice volíme tak, že toto minimum je pro $x=0$) a je-li $|xV'''(0)|\ll V''(0)$, potom -->
 <!-- $$\vec F=-\nabla V=-V''(0)x=-kx.$$ To znamená, že síla je úměrná výchylce, stejně jako u tělesa na pružině. Podobně ve vícerozměrném případě. -->
 
-# Lineární aproximace
+## Lineární aproximace
 
 Z diferenciálního počtu funkcí jedné proměnné víme, že platí přibližný vzorec $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).$$ Tento vzorec rozšíříme do světa funkcí více proměnných a do světa vektorových funkcí.
 
 https://youtu.be/3wTwWTtbkis
 
 
-## Lineární aproximace skalární funkce
+### Lineární aproximace skalární funkce
 
 * Lineární aproximací funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ je
 \dm $$      f(x,y)\approx f(x_0, y_0)+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0)$$
@@ -146,7 +146,7 @@ $$      z= z_0+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
 
 
 
-## Lineární aproximace vektorové funkce
+### Lineární aproximace vektorové funkce
 
 Lineární aproximací vektorové funkce je lineární aproximace jednotlivých komponent. To jsou skalární funkce a je na ně možné aplikovat postup z předchozího bodu. Tedy pro funkci $\vec F(x,y)=f_1(x,y)\vec \imath + f_2(x,y)\vec\jmath$ máme v bodě $(x_0, y_0)$ lineární aproximace
 \dm $$      f_1(x,y)\approx f_1(x_0, y_0)+\frac{\partial f_1 (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f_1 (x_0,y_0)}{\partial y}(y-y_0)$$
@@ -168,7 +168,7 @@ V materiálovém inženýrství často provádíme linearizaci v okolí nuly a p
 \begin{pmatrix}x\\ y\end{pmatrix}.$$ 
 
 
-# Vícerozměrné konstitutivní zákony
+## Vícerozměrné konstitutivní zákony
 
 
 https://youtu.be/uTzCAxOOye8
@@ -184,7 +184,7 @@ nebudeme.)
 
 **Aby měly konstitutivní vztahy níže smysl, uvažujeme v nich gradient jako sloupcový vektor.** 
 
-## Fickův zákon (difuze)
+### Fickův zákon (difuze)
 
 V roce 1855 německý lékař A. Fick objevil, že difuzní tok $\vec J$
 (množství látky které projde při difuzi jednotkovou plochou za
@@ -197,7 +197,7 @@ stejné, je $D$ tenzor. Z fyzikálních důvodů je tenzor $D$ symetrický.
 
 Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 
-## Darcyho zákon (proudění podzemní vody)
+### Darcyho zákon (proudění podzemní vody)
 
 
 \iffalse
@@ -212,7 +212,7 @@ Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 
 V letech 1855 a 1856 francouzský inženýr H. Darcy pokusy prokázal přímou úměru mezi rozdílem tlaků na koncích trubice naplněné porézní zeminou (jednalo se vlastně o rozdíl výšek pro šikmou trubici) a rychlostí proudění vody touto trubicí. Pro tok podzemní vody je vhodné rozdíl tlaků vyjadřovat pomocí veličiny nazývané *piezometrická výška* $h$. Do této veličiny se sčítá vliv nadmořské výšky, tlaku geologických vrstev a případné další efekty. Tok (množství vody, která proteče jednotkovou plochou za jednotku času) je dán vztahem $$\vec q=-K\nabla h,$$ kde $h$ je piezometrická výška a $K$ je koeficient filtrace. Veličina $K$ je v obecném případě symetrický tenzor. V izotropním případě má tok $\vec q$ opačný směr než gradient veličiny $h$ a v takovém případě se $K$ redukuje na skalární hodnotu.
 
-## Fourierův zákon (vedení tepla)
+### Fourierův zákon (vedení tepla)
 
 \iffalse
 
@@ -236,7 +236,7 @@ jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
 Veličina $k$ se nazývá součinitel tepelné vodivosti, koeficient tepelné vodivosti nebo Fourierův koeficient.
 
 
-## Různé podoby Fourierova zákona
+### Různé podoby Fourierova zákona
 
 V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivních zákonů. Tento zákon udává tok tepla vyvolaný teplotním gradientem. Je to velmi používaný zákon a proto má několik variant. Začneme od nejjednodušší formulace (F.1), kterou můžeme formulovat pomocí základních matematických operací, násobení a dělení. Tento tvar se snadno používá, ale je vhodný jenom pro jednoduché výpočty, jako například teplotní únik stěnou domu. Složitější formulace (F.2) a (F.3), využívající derivace, dokáží modelovat i to, co se děje uvnitř stěny a jak vypadá teplotní profil. Nejsou však užitečné při studiu vedení tepla v rovině nebo v prostoru. K tomu je nutno použít ještě obecnější (a složitější) formulaci (F.4), využívající gradient místo derivace. I zde jsou však omezení: je-li součinitel tepelné vodivosti skalární hodnota, je možné takto spolehlivě modelovat pouze izotropní materiály. Není možné zohlednit skutečnost, že v některém směru je přenos tepla snadnější než ve směru jiném. Tuto nesnáz odstraňuje až nejobecnější tenzorová formulace (F.5), která kromě gradientu používá i tenzorový tvar součinitele tepelné vodivosti a díky tomu dovoluje modelovat i anizotropní materiály. 
 
@@ -283,13 +283,13 @@ th {
 
 \iffalse
 
-## Soretův efekt (termodifuze)
+### Soretův efekt (termodifuze)
 
 Většinou je hybatelem transportního děje nerovnoměrnost v rozložení té stejné veličiny, která se tímto dějem transportuje. Například tok tepla (vnitřní energie) je vyvolaný nerovnoměrným rozložením vnitřní energie, kterou vyjadřujeme pohodlněji pomocí teplotu. Nebo difuze chemické látky je vyvolána nerovnoměrným rozložením koncentrace této látky. Nemusí tomu však být vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$ kde $s$ je koeficient termodifuze. 
 
 Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. To je v kontrastu s ostatními konstitutivními zákony, kde tok stavové veličiny směřuje vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis.
 
-## Ohmův zákon
+### Ohmův zákon
 
 <div class='obtekat'>
 
@@ -304,7 +304,7 @@ Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v příp
 
 \fi
 
-# Speciální případy vztahu mezi gradientem a tokem
+## Speciální případy vztahu mezi gradientem a tokem
 
 https://youtu.be/vrPhbc-GJqc
 
@@ -325,10 +325,9 @@ $$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}
 a ve 2D
 $$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}\right)^T.$$ 
 
-## Obecný případ (anizotropní)
+### Obecný případ (anizotropní)
 
-Veličina $K$ je matice $$K=
-\begin{pmatrix}
+Veličina $K$ je matice $$K=\begin{pmatrix}
   k_{11}& k_{12} & k_{13}\\
   k_{21}& k_{22} & k_{23}\\
   k_{31}& k_{32} & k_{33}
@@ -347,7 +346,7 @@ $$
 $$
 což zjistíme prostým maticovým násobením. Prostor pro další úpravu není.
 
-## Ortotropní případ, vhodně zvolené osy
+### Ortotropní případ, vhodně zvolené osy
 
 \iffalse
 
@@ -361,8 +360,7 @@ což zjistíme prostým maticovým násobením. Prostor pro další úpravu nen�
 
 V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor $K$ byl diagonální. Pokud je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), bude tato diagonalita tenzoru $K$ v případě, že zvolíme souřadnice v souladu s těmito charakteristickými směry. 
 
-$$K=
-\begin{pmatrix}
+$$K=\begin{pmatrix}
   k_{11}& 0 & 0\\
  0& k_{22} & 0\\
   0& 0 & k_{33}
@@ -392,17 +390,17 @@ soustavu souřadnic tak, aby matice byla diagonální, máme alespoň
 jistotu, že vlastní čísla zůstanou stejná. 
 
 
-## Ortotropní případ ve 2D
+### Ortotropní případ ve 2D
 
 Stejné jako ve 3D, pouze chybí třetí rovnice.
 
-## Izotropní případ
+### Izotropní případ
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
 $\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, na rozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě. Toto je nejjednodušší případ. Proto je studium izotropních materiálů mnohem mnohem jednodušší, než studium materiálů obecnějších. To je nejzásadnější vlastnost, která činí studium biologických materiálů mnohem komplikovanějším, než je třeba studium vlastností kovů. Biologické materiály mají typicky určitou vnitřní strukturu, která jim dává v různých směrech různé vlastnosti. Postupy odvozené pro izotropní materiály zde nefungují.
 
 
-# Tečna k vrstevnici
+## Tečna k vrstevnici
 
 https://youtu.be/tc8pmUNyhhI
 
@@ -427,7 +425,7 @@ V řezu vodorovnou rovinou $z=0$ z grafu funkce a z tečné roviny zůstanou vrs
 \fi
 
 
-# Implicitně definovaná funkce 
+## Implicitně definovaná funkce 
 
 
 
@@ -452,7 +450,7 @@ Pokud tečna k vrstevnici není rovnoběžná s osou $y$, je možno vrstevnici c
 
 
 
-# Lokální extrémy funkce více proměnných
+## Lokální extrémy funkce více proměnných
 
 \iffalse
 
@@ -476,7 +474,7 @@ Funkce jedné proměnné určitě nemá lokální extrém v bodě, ve kterém m�
 *V bodě lokálního extrému hladké funkce je tedy nulový gradient.*
 
 
-# Tenzor malých deformací
+## Tenzor malých deformací
 
 
 <div class="obtekat">
@@ -518,7 +516,7 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 
 
-# Z ptačí perspektivy
+## Z ptačí perspektivy
 
 \iffalse
 

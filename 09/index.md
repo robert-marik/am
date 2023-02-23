@@ -1,6 +1,6 @@
-% Lineární operátory a lineární diferenciální rovnice
-% Robert Mařík
-% 2014–2021
+# Lineární operátory a lineární diferenciální rovnice
+
+
 
 
 > Anotace.
@@ -20,7 +20,7 @@
 > * Studentům obeznámeným s komplexními čísly se bude hodit Eulerova identita. Ostatní studenti budou muset příslušné pasáže akceptovat jako fakt.
 
 
-# Lineární operátory
+## Lineární operátory
 
 https://youtu.be/_PcHv1GeEq4
 
@@ -44,7 +44,7 @@ funkcí a násobek konstantou, tj. platí $$L[y_1+y_2]=L[y_1]+L[y_2]$$ a
 $$L[C y_1]=C L[y_1]$$ pro libovolné reálné číslo $C$ a libovolné
 funkce $y_1$ a $y_2$ z definičního oboru operátoru $L$.
 
-## Příklady lineárních operátorů
+### Příklady lineárních operátorů
 
 Linearitu se naučíme využívat k tomu, abychom úlohu najít řešení
 rovnice rozkouskovali na řešení jednodušších úloh. Například je možné
@@ -89,7 +89,7 @@ $$ - \frac 12 \nabla\cdot \bigl(k\nabla (h^2)\bigr)= \sigma $$
 a levá strana definuje lineární operátor v proměnné $h^2$.
 
 
-## Princip superpozice
+### Princip superpozice
 
 > Věta (princip superpozice). Každý lineární operátor zachovává lineární kombinaci funkcí, tj. platí
 > $$L[C_1 y_1+C_2 y_2]=C_1 L[y_1]+C_2 L[y_2]$$
@@ -97,14 +97,12 @@ a levá strana definuje lineární operátor v proměnné $h^2$.
 
 Plyne přímo rozepsáním
 $$
-\begin{aligned}L[C_1 y_1+C_2 y_2]&=
-L[C_1 y_1]+L[C_2 y_2]\\
-&=
-C_1 L[y_1]+C_2 L[y_2]
+\begin{aligned}L[C_1 y_1+C_2 y_2]&=L[C_1 y_1]+L[C_2 y_2]\\
+&=C_1 L[y_1]+C_2 L[y_2]
 \end{aligned}
 $$
 
-# Operátorové rovnice s lineárním operátorem
+## Operátorové rovnice s lineárním operátorem
 
 https://youtu.be/i3By7KBu6ec
 
@@ -134,7 +132,7 @@ Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
 * U nehomogenní rovnice se úloha najít všechna řešení dá rozdělit na dvě dílčí úlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho řešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
 
 
-## Příklad využití linearity v jedné dimenzi
+### Příklad využití linearity v jedné dimenzi
 
 Pro konkrétnost specifikujeme myšlenky z předchozího textu na příkladě.
 
@@ -144,7 +142,7 @@ asociované homogenní rovnice. Toto jedno řešení vlastně udává pozici v p
 splňuje rovnici $$x'-x=0$$ a funkce $x=-\pi$ splňuje rovnici
 $$x'-x=\pi.$$ Všechna řešení rovnice $$x'-x=\pi$$ jsou tvaru $x=Ce^t-\pi$
   
-# Lineární diferenciální rovnice prvního řádu s konstantními koeficienty  
+## Lineární diferenciální rovnice prvního řádu s konstantními koeficienty  
   
 V aplikacích často vídáme rovnici tvaru  $$\frac{\mathrm dx}{\mathrm dt}+ax=b,\tag{N}$$ která vznikne například úpravou rovnice $$\frac{\mathrm dx}{\mathrm dt}=b-ax.$$  
 Podobně jako v předchozím příkladě stačí najít jedno řešení rovnice (N) a jedno nenulové řešení rovnice 
@@ -159,7 +157,7 @@ je proto $$x(t)=\frac ba+Ce^{-at}.$$ Pro $t$ jdoucí do nekonečna toto řešen�
 
 Obrat, že stacionární řešení je globálně atraktivní znamená, že všechna řešení k tomuto stacionárním stavu konvergují nezávisle na počáteční podmínce.
 
-## Další lineární rovnice
+### Další lineární rovnice
 
 Pro skalární lineární diferenciální rovnice druhého řádu je situace
 obdobná, pouze pro řešení asociované homogenní diferenciální rovnice
@@ -173,7 +171,7 @@ Rovnicím majícím derivace vyššího řádu se budeme věnovat později.
 
 <!--
 
-# Lineární diferenciální rovnice prvního řádu
+## Lineární diferenciální rovnice prvního řádu
 
 > Definice (Lineární diferenciální rovnice prvního řádu). Nechť funkce $a$, $b$ jsou spojité na intervalu $I$.
 > Rovnice
@@ -201,7 +199,7 @@ ověřit přímým dosazením. Toto řešení se nazývá *triviální řešení
 
 <!--
 
-### Operátorová symbolika a linearita operátoru
+#### Operátorová symbolika a linearita operátoru
 
 Definujeme-li na množině všech funkcí
 diferencovatelných na intervalu $I$ operátor $L$ vztahem
@@ -239,7 +237,7 @@ multiplikativní konstanty. To jsou obraty dobře známé při výpočtu
 derivací a je možné je použít i při dosazování do lineárního
 operátoru.
 
-### Násobek řešení homogenní LDE je řešením téže LDE
+#### Násobek řešení homogenní LDE je řešením téže LDE
 
 <div class=sloupce>
 Buď $y_{p0}(x)$ řešením rovnice $$L[y]=0,$$ tj. nechť platí
@@ -271,7 +269,7 @@ požadované vlastnosti.
 </div>
 
 
-### Obecné řešení homogenní LDE
+#### Obecné řešení homogenní LDE
 
 Uvažujme homogenní LDE
 $$y'+a(x)y=0. \tag{HLDE}$$
@@ -287,7 +285,7 @@ $$y=Ce^{-\int a(x)\mathrm{d}x}.$$
 -->
 
 <!-- 
-### Obecné řešení homogenní LDE
+#### Obecné řešení homogenní LDE
 
 Uvažujme homogenní LDE
 $$y'+a(x)y=0. \tag{HLDE}$$
@@ -306,7 +304,7 @@ $$y_0=C y_{p0}(x_0)$$ a tuto rovnici je možno vyřešit vzhledem k $C$ vždy, p
 $$y(x)=C e^{-\int a(x)\mathrm{d}x}.$$
 
 
-### Obecné řešení nehomogenní LDE pomocí partikulárního řešení
+#### Obecné řešení nehomogenní LDE pomocí partikulárního řešení
 
 Je-li $y_p$ řešením nehomogenní LDE
 $$y'+a(x)y=b(x),$$ je obecným řešením této rovnice
@@ -328,7 +326,7 @@ kde $Cy_{p0}(x)$ je obecným řešením asociované homogenní LDE.
 
 
 
-### Obecné řešení nehomogenní LDE ještě jednou a prakticky
+#### Obecné řešení nehomogenní LDE ještě jednou a prakticky
 
 Slovně:
 
@@ -349,7 +347,7 @@ sestavíme obecné řešení zadané rovnice.
 -->
 <!--
 
-### Nehomogenní LDE – metoda variace konstanty
+#### Nehomogenní LDE – metoda variace konstanty
  
  <div class=sloupce>
 Než začneme hledat řešení
@@ -385,7 +383,7 @@ $$y=Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\ma
 -->
 
 <!--
-### Nehomogenní LDE – metoda integračního faktoru
+#### Nehomogenní LDE – metoda integračního faktoru
 
 Zůstává otázka, jak najít partikulární řešení nehomogenní rovnice.
 
@@ -408,14 +406,14 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 
 -->
 
-# Lineární autonomní systémy
+## Lineární autonomní systémy
 
 https://youtu.be/AjpQ0Zh1jkU
 
 Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice $$\frac{\mathrm dX}{\mathrm dt}-AX= B$$ operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice $A$ a $B$ nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat za chvíli. Pro tyto rovnice je souvislost mezi   homogenní a nehomogenní rovnicí obdobná jako v minulých   případech. Řešením nehomogenní úlohy najdeme jedno řešení (bod v prostoru) a řešením asociované úlohy najdeme směry definující množinu všech řešení. Vzhledem k vícedimenzionalitě úlohy bude těchto řešení více. Situace je podobná jako to, že v geometrii je rovina dána dvěma směry. Nakonec dané informace můžeme využít k vygenerování množiny všech řešení. Popsaná metoda je komplikovanější na konkrétní použití, ale často se ani nemusí provádět. Často stačí například informace o chování řešení v nekonečnu. To je také to, na co se omezíme na příští přednášce. 
 
 
-## Lineární autonomní systém ve dvou dimenzích
+### Lineární autonomní systém ve dvou dimenzích
 
 Následující příklad je mírně modifikovaný příklad z [kurzu MIT o diferenciálních rovnicích](https://youtu.be/MCrDzhpu3-s?t=671). Ve formulaci s vařením vajíčka se zdá triviální a prakticky neužitečný. Toto je však voleno pro jednoduchost výkladu a snadnou představu povahy zkoumaného jevu. V praxi se stejným modelem předává teplo vrstveným materiálem (jako je tepelná ochrana domů nebo raketoplánů) nebo chemické látky vstupující do dalších reakcí (jako například řetěz reakcí vedoucí k syntéze bílkovin, které buňka v reakci na okolní prostředí potřebuje k přežití).
 
@@ -435,20 +433,16 @@ Následující příklad je mírně modifikovaný příklad z [kurzu MIT o difer
 Budeme modelovat ohřívání vejce ve vodě o konstantní teplotě $T_0$. Na počátku mají bílek a žloutek teplotu $T_1$ a $T_2$. Žloutek přebírá teplo od bílku rychlostí úměrnou rozdílu teplot žloutku a bílku. Bílek přebírá teplo od vodní lázně rychlostí úměrnou rozdílu teplot a předává teplo žloutku procesem popsaným v předchozí větě. Vody je hodně a její teplota se nemění. Proces můžeme modelovat soustavou diferenciálních rovnic $$\begin{aligned}T_1^\prime &= k_1(T_0-T_1)-k_2(T_1-T_2) \\ T_2^\prime&=k_2(T_1-T_2)\end{aligned}$$
 Tento systém je možno přepsat do tvaru
 $$\begin{aligned}T_1^\prime &= -(k_1+k_2)T_1+k_2T_2+T_0k_1 \\ T_2^\prime&=k_2T_1-k_2T_2\end{aligned}$$
-a zapsat maticově $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
-\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
-\begin{pmatrix}T_1\\T_2\end{pmatrix}
-+
-\begin{pmatrix}k_1T_0\\0\end{pmatrix}.
+a zapsat maticově $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix}+\begin{pmatrix}k_1T_0\\0\end{pmatrix}.
 $$
 Pokud zvolíme teplotní stupnici tak, že teplota vroucí vody je v naší nové stupnici nula, můžeme dokonce eliminovat druhý člen a dostáváme
-$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
-\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
+$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix} \tag{V}
 $$
 tj. symbolicky $X'=AX$, kde $X=(T_1,T_2)^T$ je vektorová funkce (sloupcový vektor) a $A$ je $2\times 2$ matice.
 
-## Systém $X'=AX$
+### Systém $X'=AX$
 
 Je-li determinant matice nenulový, má soustava $AX=0$ pouze nulové řešení a systém $$X'=AX\tag{1}$$ má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.
 
@@ -488,8 +482,7 @@ Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté
 
 
 **Příklad.** Model ohřívání vajíčka (V) z předchozí části této přednášky má (v posunuté teplotní stupnici, na které teplota varu vody odpovídá nule) stacionární bod $(0,0)$.  Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
-$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
-\begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
+$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix}.
 $$
 Charakteristická rovnice je 
@@ -498,7 +491,7 @@ se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$.
 
 ww:problems/autonomni_systemy/13.pg
 
-# Mechanický oscilátor
+## Mechanický oscilátor
 
 https://youtu.be/8KQ9qG1eQtU
 

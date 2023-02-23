@@ -1,2 +1,2 @@
-% Více diferenciálních rovnic
+# Více diferenciálních rovnic
 

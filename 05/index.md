@@ -1,6 +1,6 @@
-% Křivkový integrál
-% Robert Mařík
-% 2020
+# Křivkový integrál
+
+
 
 
 > Anotace.
@@ -14,7 +14,7 @@
 >
 > * Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
 
-# Křivkový integrál
+## Křivkový integrál
 
 https://youtu.be/n2roVUrXgcw
 
@@ -30,7 +30,7 @@ Křivkový integrál je rozšíření Riemannova integrálu na případ, kdy mno
 
 Rozeznáváme dva druhy křivkových integrálů. První z nich používáme při práci se skalárními veličinami. Příkladem je kvadratický moment. (Objekty s velkým kvadratickým momentem jsou při rotačních pohybech obdobou objektů velké hmotnosti při posuvných pohybech.) Druhý z křivkových integrálů používáme při práci ve vektorovém poli. Příkladem je výpočet práce vykonané po křivce nebo tok křivkou.
 
-# Parametrické rovnice křivky
+## Parametrické rovnice křivky
 
 https://youtu.be/MRk4HRAWlA4
 
@@ -47,7 +47,7 @@ Nejprve představíme matematický aparát pro popis křivek.  Rovinné křivky 
 * Parametrizace kružnice, úsečky a grafu funkce jedné proměnné jsou v [cheatsheetu.](https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf)
 
 
-# Křivkový integrál prvního druhu
+## Křivkový integrál prvního druhu
 
 https://youtu.be/ZRed88fgDkI
 
@@ -72,7 +72,7 @@ drátu rovna součinu $$m=fs.$$ Pokud by drát nebyl homogenní, je nutné v tom
 V limitním procesu můžeme nechat délku  kousíčků konvergovat k nule. Poté dostáváme objekt, který se nazývá *křivkový integrál prvního druhu*, označuje $$ \int_C f\;\mathrm{d} s $$ a fyzikálně vyjadřuje hmotnost drátu z výše uvažované úlohy. Pokud počáteční a koncový bod křivky $C$ splývají, píšeme též $$ \oint_C f\;\mathrm{d} s $$ a integrál nazýváme *integrálem po uzavřené křivce*.
 
 
-## Převod na Riemannův integrál (rovinná křivka)
+### Převod na Riemannův integrál (rovinná křivka)
 
 <div class='obtekat'>
 
@@ -101,7 +101,7 @@ $$
 $$
 
 
-## Převod na Riemannův integrál (prostorová  křivka)
+### Převod na Riemannův integrál (prostorová  křivka)
 
 S křivkovým integrálu po křivce  
 $$
@@ -115,7 +115,7 @@ a integrál má tvar
 \dm$$ \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{(\varphi^{\prime}(t))^2+(\psi^{\prime }(t))^2+(\xi^{\prime }(t))^2}\;\mathrm{d} t. $$
 
 
-## Aplikace křivkového integrálu prvního druhu
+### Aplikace křivkového integrálu prvního druhu
 
 <style>
 table, th, td {
@@ -162,7 +162,7 @@ th {
 \fi
 
 
-## Vlastnosti křivkového integrálu prvního druhu
+### Vlastnosti křivkového integrálu prvního druhu
 
 > Věta (nezávislost na zvolené parametrizaci). Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci křivky $C$. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.
   
@@ -179,7 +179,7 @@ $$
 \int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
 $$
 
-## Proč trubky praskají podélně?
+### Proč trubky praskají podélně?
 
 <div class='obtekat'>
 
@@ -217,7 +217,7 @@ To však je možné očekávat i ze symetrie.
 
 Pokud se chcete dozvědět o problematice více, nebo si prohlédnout obrázky válcových nádrží, které selhaly vlivem vysokého nebo nízkého tlaku, zkuste Google a heslo "hoop stress".
 
-# Křivkový integrál druhého druhu
+## Křivkový integrál druhého druhu
 
 https://youtu.be/GeJgtBHy_sM
 
@@ -252,7 +252,7 @@ x+Q(x,y)\mathrm{d} y.  $$
 
 Protože při pohybu tělesa po křivce jedním směrem se práce koná a při pohybu opačným směrem spotřebovává, je nutné, aby křivka figurující v křivkovém integrálu druhého druhu byla orientovaná. Musíme tedy prohlásit jeden koncový bod za *počáteční* a druhý za *koncový*. Vždy budeme předpokládat, že křivka je *orientovaná v souladu se svým parametrickým vyjádřením*, tj. že počáteční bod křivky odpovídá hodnotě parametru $t=\alpha$ a koncový bod odpovídá hodnotě parametru $t=\beta$.
 
-# Převod na Riemannův integrál
+## Převod na Riemannův integrál
 
 <div class="obtekat">
 
@@ -275,8 +275,7 @@ po křivce $C$ zapsat
 následovně 
 $$
 \begin{aligned}
-\int_C\vec F\;\mathrm{d}\vec r&=
-\int_\alpha^\beta\Bigl[ P(\varphi(t),\psi(t))\varphi'(t)\\ &\qquad +Q(\varphi(t),\psi(t))\psi'(t)\Bigr]\;\mathrm{d}t.
+\int_C\vec F\;\mathrm{d}\vec r&=\int_\alpha^\beta\Bigl[ P(\varphi(t),\psi(t))\varphi'(t)\\ &\qquad +Q(\varphi(t),\psi(t))\psi'(t)\Bigr]\;\mathrm{d}t.
 \end{aligned}
 $$ 
 Vektorově
@@ -284,7 +283,7 @@ $$\int_C \vec F\;\mathrm d\vec r =
 \int_\alpha^\beta \vec F(\vec r(t)) \cdot \frac{\mathrm d\vec r(t)}{\mathrm dt}\; \mathrm dt.
 $$
 
-# Vlastnosti křivkového integrálu druhého druhu
+## Vlastnosti křivkového integrálu druhého druhu
 
 > Věta (souvislost křivkového integrálu a orientace křivky). Změnou orientace křivky křivkový integrál druhého druhu mění znaménko.
 
@@ -306,7 +305,7 @@ $$
 \int_{C} \vec F\;\mathrm{d}\vec{r} = \int_{C_1} \vec F\;\mathrm{d}\vec{r} + \int_{C_2} \vec F\;\mathrm{d}\vec{r} .
 $$
 
-# Aplikace křivkového integrálu druhého druhu
+## Aplikace křivkového integrálu druhého druhu
 
 manimp:integracni_cesta|Křivkový integrál může a nemusí záviset na integrační cestě. Pokud na ní nezávisí, je možné v takovém poli nadefinovat potenciální energii.
 
@@ -337,7 +336,7 @@ i+Q(x,y)\vec\jmath$ křivkou $C$
   $$\oint_{\partial\Omega}x\mathrm{d}y\qquad\text{a}\qquad\oint_{\partial\Omega}y\mathrm{d}x$$
   udává (až na případné znaménko) obsah množiny $\Omega$. Na tomto principu fungují planimetry.
 
-# Shrnutí: vlastnosti křivkových integrálů
+## Shrnutí: vlastnosti křivkových integrálů
 
 * Oba křivkové integrály jsou **aditivní vzhledem k oboru integrace**. Je možno křivku rozdělit na konečný počet navzájem disjunktních částí, vypočítat integrál na každé části samostatně a výsledky sečíst.  
 * Křivkový integrál prvního ani druhého druhu **nezávisí na konkrétní parametrizaci křivky**.
@@ -348,7 +347,7 @@ i+Q(x,y)\vec\jmath$ křivkou $C$
 
 \iffalse
 
-# Steinerova věta
+## Steinerova věta
 
 <div class="sloupce">
 
@@ -382,9 +381,9 @@ rovnoběžné osy.
 
 -->
 
-# Závěrečné informace
+## Závěrečné informace
 
-## Parametrizace úsečky
+### Parametrizace úsečky
 
 * Hledejme parametrické rovnice orientované úsečky $AB$, kde je dán počáteční bod $A=[x_A,y_A]$ a koncový bod $B=[x_B,y_B]$.
 * Leží-li bod $X$ na úsečce $AB$, potom vektor $\vec {AX}$ má stejný směr (včetně orientace) jako vektor $\vec {AB}$ a nejvýše stejnou délku.
@@ -394,7 +393,7 @@ rovnoběžné osy.
 
 \iffalse
 
-## Online výpočet křivkového integrálu
+### Online výpočet křivkového integrálu
 
 * Křivkový integrál druhého druhu, [numerický výpočet, Python.](https://gist.github.com/robert-marik/6e203ee18958a4154ef0f2151d823bd1)
 * Křivkový integrál prvního druhu, [výpočet pomocí Sage (derivace symbolicky, integrace numericky).](https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&lang=sage)
@@ -418,7 +417,7 @@ column-count:3;}
 .sloupce4 ul li {display:inline-block; max-width:100%;}
 </style>
 
-# Z ptačí perspektivy
+## Z ptačí perspektivy
 
 \iffalse
 

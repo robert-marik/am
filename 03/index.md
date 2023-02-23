@@ -1,6 +1,6 @@
-% Divergence vektorového pole, rovnice kontinuity
-% Robert Mařík
-% 2020, 2021
+# Divergence vektorového pole, rovnice kontinuity
+
+
 
 > Anotace.
 >
@@ -15,7 +15,7 @@
 > * Ukážeme si, jak se v matematickém popisu transportu zohlední izotropie nebo homogenita materiálu. Ukážeme si, jak se liší popis stacionárních a nestacionárních jevů a jak se liší popis materiálů s lineárními a nelineárními materiálovými vlastnostmi. Pokud se budete při používání nematematických pojmů (jako například izotropie) cítit zaskočeni, můžete si oživit znalosti například na Wikipedii.
 > * Rovnici vedení tepla v jedné dimenzi, kterou jsme si odvodili v úvodní přednášce, si zobecníme do dvoudimenzionálního a třídimenzionálního tvaru. Je proto vhodné si základní fakta o této rovnici zopakovat.
 
-# Transportní děje
+## Transportní děje
 
 https://youtu.be/p1Qu89EKc94
 
@@ -40,7 +40,7 @@ Zákon zachování (se zohledněním toku a zdrojů) je vlastně celková bilanc
 
 Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj. Umožní jednotným způsobem popsat řadu zcela odlišných dějů. Pro použití v matematickém modelu ale musíme jednotlivé pojmy nejprve kvantifikovat. Měřit rychlost změny množství veličiny v daném místě umíme pomocí derivace podle času. Měřit změny v _jednodimenzionálním_ toku přenášejícím sledovanou veličinu jsme se naučili jako jednu z prvních aplikací parciálních derivací: jedná se o derivaci toku podle prostorové proměnné. Ještě se musíme naučit měřit změny v toku ve dvou nebo třech dimenzích.
 
-# Změna toku vektorového pole
+## Změna toku vektorového pole
 
 https://youtu.be/cXT6ULeZFJs
 
@@ -84,14 +84,13 @@ Celkový tok $\vec q=(0,q_y,q_z)$ do krychle na obrázku je součtem toků levou
 $$Q_{in}=-q _y\Delta x \Delta z - q _z\Delta x \Delta y.$$
 Podobně tok ven z krychle je  $$Q_{out}=\left(q_z+\frac {\partial q_z}{\partial z}\Delta z\right)\Delta x\Delta y + \left(q_y+\frac {\partial q_y}{\partial y}\Delta y\right)\Delta x\Delta z$$
 a celková bilance je 
-$$Q_{in}+Q_{out}=
-\left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
+$$Q_{in}+Q_{out}=\left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
 $$
 V případě proudění i v ose $x$ bude přítomen ještě další analogický člen charakterizující tuto dodatečnou položku. 
 
 -->
 
-# Divergence
+## Divergence
 
 https://youtu.be/ejDQx3QjgfI
 
@@ -118,12 +117,12 @@ Pokud se při transportu v daném místě množství veličiny ani tok nemění 
 
 Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar. Ty začínají ve zdrojích a končí ve spotřebičích. Siločáry stacionárního nezřídlového pole nikde nezačínají ani nekončí a jsou to uzavřené křivky. Například stacionární magnetické pole je nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší plnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.
 
-# Výpočet divergence
+## Výpočet divergence
 
 Viz [cvičení](http://user.mendelu.cz/marik/am/slidy/cviceni/cviceni03.md.html). Jedná se o prosté derivování se následným sečtením derivací.
 
 
-# Rovnice kontinuity
+## Rovnice kontinuity
 
 https://youtu.be/HiOmERpTdV0
 
@@ -187,7 +186,7 @@ pro rovnici popisující vedení tepla na stranách 88 a 89.
 V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
 
 
-# Rovnice mělké vody
+## Rovnice mělké vody
 
 <div class='obtekat'>
 
@@ -205,7 +204,7 @@ $$
 $$
 a nazývá se Saint-Venantova rovnice nebo též *rovnice mělké vody*. Tato rovnice se používá při popisu *proudění v korytě* nebo při modelování *vln tsunami*.
 
-# Difuzní rovnice
+## Difuzní rovnice
 
 https://youtu.be/p2FTgyAWzA4
 
@@ -243,7 +242,7 @@ To jsme viděli již v první přednášce, jenom bez zdrojů.
 
 ww:problems/difuzni_rce/interpretace_clenu.pg
 
-# Vedení tepla
+## Vedení tepla
 
 \iffalse
 
@@ -294,7 +293,7 @@ V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřev�
 
 V některých případech člen charakterizující zdroje nemusí být nulový. Teplo může vznikat například při tření nebo při průchodu elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
 
-# Rovnice vedení tepla ve 2D v různých podmínkách
+## Rovnice vedení tepla ve 2D v různých podmínkách
 
 \iffalse
 
@@ -315,12 +314,12 @@ V některých případech člen charakterizující zdroje nemusí být nulový.
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.
 $$\rho c\frac{\partial T}{\partial t}=\nabla \cdot (k\nabla T)\tag{***}$$
 
-## Stacionární stav
+### Stacionární stav
 
 Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (***) se redukuje na 
 $$\nabla \cdot (k\nabla T)=0.$$
 
-## Homogenní izotropní materiál a lineární materiálové vztahy
+### Homogenní izotropní materiál a lineární materiálové vztahy
 
 Nejjednodušší tvar má rovnice vedení tepla v prostředí, které je homogenní a izotropní (má ve všech místech a ve všech směrech stejné vlastnosti). Veličina $k$ je v takovém případě skalární veličina (reálná konstanta).
 
@@ -336,23 +335,22 @@ $$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\part
 
 \fi
 
-## Ortotropní materiál, nehomogenní nebo nelineární
+### Ortotropní materiál, nehomogenní nebo nelineární
 
 Dvourozměrný ortotropní materiál má dva charakteristické směry související s rovinami symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
 směru vlastních vektorů.
 
 Veličina $k$ je v takovém případě diagonální matice. Pro $$k=\begin{pmatrix}k_x & 0\\ 0& k_y\end{pmatrix}$$ je tvar rovnice (***) ve složkách
-$$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(k_x\frac{\partial T}{\partial x}\right)
-+\frac{\partial }{\partial y}\left(k_y\frac{\partial T}{\partial y}\right).$$
+$$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(k_x\frac{\partial T}{\partial x}\right)+\frac{\partial }{\partial y}\left(k_y\frac{\partial T}{\partial y}\right).$$
 
-## Homogenní ortotropní materiál a lineární materiálové vztahy
+### Homogenní ortotropní materiál a lineární materiálové vztahy
 
 Takový materiál má dva charakteristické směry související s rovinami symetrie (ortotropní) a materiálové charakteristiky jsou ve všech místech stejné a nezávislé na $T$ (homogenní a lineární).
 Situace je stejná jako předchozí případ, ale $k_x$ a $k_y$ jsou navíc konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=k_x\frac{\partial^2 T}{\partial x^2}+k_y\frac{\partial^2 T}{\partial y^2}.$$
 
 
-# Voda v porézním materiálu 
+## Voda v porézním materiálu 
 
 \iffalse
 
@@ -390,7 +388,7 @@ nepovažujeme za konstanty. Jsou závislé na $c$ a jejím prostřednictvím
 i na $x$.
 
 
-# Rovnice podzemní vody
+## Rovnice podzemní vody
 
 \iffalse
 
@@ -437,7 +435,7 @@ provozů*. Aplikace jsou dále v detekci zdroje kontaminace pitné vody a odhad
 U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. *confined aquifer*) transmisitiva závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. *unconfined aquifer*) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí $T=kh$, kde $k$ závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru
 $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\bigr).}$$
 
-# Laplaceův operátor
+## Laplaceův operátor
 
 > Definice (Laplaceův operátor). Laplaceovým operátorem $\nabla ^2$ rozumíme divergenci gradientu, tj. $$\nabla^2 f=\nabla\cdot(\nabla f).$$
 
@@ -446,7 +444,7 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 * Laplaceův operátor vystupuje například v problémech popsaných difuzní rovnicí a lineárním konstitučním vztahem s konstantním skalárním difuzním koeficientem (homogenní izotropní prostředí s lineární materiálovou odezvou).
 
 
-# Z ptačí perspektivy
+## Z ptačí perspektivy
 
 \iffalse
 

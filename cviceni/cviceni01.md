@@ -1,4 +1,4 @@
-% Parciální derivace
+# Parciální derivace
 
 > Anotace.
 >
@@ -7,7 +7,7 @@
 > * V dalších dvou příkladech si vyzkoušíme numerické derivování. Pokud Vám to však bude připadat jako naivní počítání pomocí trojčlenky a selské logiky, gratuluji. Nic jiného to totiž vlastně není, jenom je to teď pevněji uchopeno pro případné použití v matematických modelech.
 > * Základním modelem postaveným na parciálních derivacích je rovnice vedení tepla v jedné dimenzi. V tomto případě spád teploty podél jednorozměrné tyče vyvolá tok tepla. Změny v toku tepla v různých místech tyče zase určují, jestli se mezi těmito průřezy teplo kumuluje, ubývá, či zachovává. Tento fakt ovlivní teplotu v daném místě a ta zase má vliv na spád teploty podél tyče. Tím se uzavře jakási zpětná vazba řídící celý proces. Situace je dostatečně jednoduchá na představu, ideální pro popis pomocí parciálních derivací a současně dostatečně obecná, aby se později dala zobecnit je libovolný transportní děj přenášející energii nebo hmotu. Abychom formulaci co nejlépe porozuměli a za možná děsivě vyhlížejícími symboly viděli opravdu vyjádření používaná v tomto odstavci, ještě jednou si rovnici tepla rozebereme. Ať již z hlediska slovní interpretace jednotlivých členů, či z hlediska formulace okrajových podmínek pro zachycení vlivu okolního prostředí.
 
-# Výpočet pomocí vzorců
+## Výpočet pomocí vzorců
 
 https://youtu.be/KykczBw2Kcg
 
@@ -44,7 +44,7 @@ ww:problems/parcialni_derivace/parcialni_derivace_s_parametrem.pg
 
 ww:problems/parcialni_derivace/parcialni_derivace_druheho_radu.pg
 
-# Parciální derivace, pocitová teplota analyticky
+## Parciální derivace, pocitová teplota analyticky
 
 https://youtu.be/VdtIj5TGBZE
 
@@ -88,7 +88,7 @@ pocitové teploty přibližně o $0.16$ stupně.
 
 </div>
 
-# Pocitová teplota numericky
+## Pocitová teplota numericky
 
 https://youtu.be/J0pTAxDwZj8
 
@@ -112,7 +112,7 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 
 
 
-# Parciální derivace, tepelná kapacita dřeva
+## Parciální derivace, tepelná kapacita dřeva
 
 https://youtu.be/PjPYisnQa0A
 
@@ -144,7 +144,7 @@ $$
 </div>
 
 
-# Veličiny z rovnice vedení tepla
+## Veličiny z rovnice vedení tepla
 
 https://youtu.be/YvAFRS8zeos
 
@@ -184,7 +184,7 @@ _Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasn
 </div>
 
 
-# Okrajové podmínky pro rovnici vedení tepla
+## Okrajové podmínky pro rovnici vedení tepla
 
 https://youtu.be/8OMwzxEZSvU
 

@@ -1,6 +1,6 @@
-% Základní integrální věty z vektorové analýzy
-% Robert Mařík
-% 2020
+# Základní integrální věty z vektorové analýzy
+
+
 
 
 > Anotace.
@@ -16,7 +16,7 @@
 
 
 
-# Úvod 
+## Úvod 
 
 
 V této přednášce se seznámíme s nástroji pro pohodlný výpočet křivkového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového integrálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo publikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
@@ -54,7 +54,7 @@ možno nalézt v literatuře.
 * Oblast se nazývá **jednoduše souvislá**, pokud je souvislá a
   neobsahuje otvory.
 
-# Věta o\ nezávislosti integrálu na integrační cestě
+## Věta o\ nezávislosti integrálu na integrační cestě
 
 https://youtu.be/zQorgqarHG4
 
@@ -97,7 +97,7 @@ Tato věta je použitelná na mnoho způsobů.
 * Věta přímo udává, jak ze znalosti kmenové funkce snadno určit hodnotu křivkového integrálu. Stačí vypočítat změnu kmenové funkce (změnu skalárního potenciálu) mezi počátečním a koncovým bodem křivky.
 * Věta také udává, jak vypočítat skalární potenciál pomocí křivkového integrálu. Ač se ve sbírkách příkladů studenti setkávají s výpočtem křivkového integrálu pomocí skalárního potenciálu, je toto typické využití jenom v případech s analyticky snadným řešením. V případě numerických výpočtů s naměřenými daty je hledání skalárního potenciálu v podstatě nemožné provést klasickou cestou. Pomocí křivkového integrálu to je naopak snadné. Stačí si vybrat výchozí bod a počítat křivkové integrály po libovolných křivkách (zpravidla úsečky) do bodů, kde chceme znát skalární potenciál. Tomuto je věnován [Jupyter zápisník ilustrující uvedenou větu](http://user.mendelu.cz/marik/aromamath/Nezavislost_na_integracni_ceste.html).
 
-## Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
+### Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
 
 Větu je možno formálně vyslovit i\ pro jiný než trojrozměrný
 prostor. Pokud je pole v\ předchozí větě pouze v\ rovině, tj. $\vec
@@ -140,7 +140,7 @@ ww:problems/krivkovy_integral/40_06.pg
 \iffalse
 
 
-## Závislost a nezávislost integrálu na integrační cestě
+### Závislost a nezávislost integrálu na integrační cestě
 
 
 \fi
@@ -171,7 +171,7 @@ ww:problems/krivkovy_integral/40_06.pg
 
 \fi
 
-# Greenova věta
+## Greenova věta
 
 https://youtu.be/L9iF8H43feQ
 
@@ -201,7 +201,7 @@ principu fungují planimetry.
 
 \fi
 
-## Varianta Greenovy věty pro tok křivkou 
+### Varianta Greenovy věty pro tok křivkou 
 
 
 Nahradíme-li formálně vektorové pole $P\vec i+Q\vec j$ vektorovým polem $-Q\vec
@@ -230,7 +230,7 @@ ani spotřebičů je tok dovnitř křivky stejný jako tok ven (co do
 uzavřeného prostoru vteče, to i\ vyteče ven) a divergence je rovna
 nule.
 
-## Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
+### Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
 
 ww:problems/dvojny_integral/13.pg
 

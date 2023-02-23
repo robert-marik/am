@@ -1,7 +1,7 @@
-% Derivace funkce více proměnných
-% Robert Mařík
-% 2020,2021,2022
+# Derivace funkce více proměnných
 
+
+<!-- 
 > Anotace.
 >
 >  \iffalse <div class='obtekat'> ![Důležitou aplikací parciálních derivací je formulace rovnic matematické fyziky. Rovnice vedení tepla je mezi rovnicemi matematické fyziky jedou z nejdůležitějších.](chata.jpg) </div> \fi
@@ -10,13 +10,15 @@
 > * U veličin závisejících na několika parametrech budeme schopni sledovat reakci těchto veličin na změny parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou. 
 > * Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme *rovnici vedení tepla*. Rovnice vedení tepla je jednou z nejdůležitějších rovnic matematické fyziky. Jedná se o matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice správně vystihují realitu.
 
+
 > Prerekvizity.
 >
 > * Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména je nutné si připomenout definici, využití a výpočet derivace.
 > * Zopakujte si fyzikální (praktický) význam derivace a pro osahání si konkrétních příkladů také základní metody výpočtu.
 
+-->
 
-# Funkce jedné proměnné
+## Funkce jedné proměnné
 
 https://youtu.be/zhaebxHbqhs
 
@@ -60,12 +62,12 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 Derivace derivace je rychlost s jakou se mění rychlost změny a nazývá se druhá derivace. Je označována nejčastěji některým z následujících způsobů. $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y.$$
 
-> Poznámka (Newtonův zákon tepelné výměny). <div class='obtekat'> ![Sobi karibu
+> Poznámka (Newtonův zákon tepelné výměny). ![Sobi karibu
 > v polárních krajích nepotřebují sněhule a přesto jim není zima. Jak to dělají?
 > Minimalizují teplotní rozdíl mezi svým krevním oběhem a povrchem, po němž
 > chodí. Mají v nohách zabudovaný protiproudý tepelný výměník. Tím minimalizují teplotní ztráty. Podle
 > <https://twitter.com/fuseknowledge/status/1215796937657479168>](karibu.jpeg)
-> </div>  Je-li $T(t)$ teplota tělesa v čase $t$, je
+> Je-li $T(t)$ teplota tělesa v čase $t$, je
 > $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj.
 > rychlost s jakou roste teplota. Například pro čas v minutách a teplotu ve
 > stupních Celsia hodnota derivace v šesté minutě může být $$\frac{\mathrm
@@ -95,7 +97,7 @@ Derivace derivace je rychlost s jakou se mění rychlost změny a nazývá se dr
 
 \fi
 
-# Funkce dvou proměnných, graf
+## Funkce dvou proměnných, graf
 
 <div class='obtekat'>
 
@@ -137,7 +139,7 @@ mění).
 
 
 
-# Parciální derivace
+## Parciální derivace
 
 
 https://youtu.be/Vw7OF5Fj8G4
@@ -165,7 +167,7 @@ proměnné. Ostatní proměnné, podle kterých se nederivuje, mají  vlastně r
 
 > Poznámka (derivace teploty podle času a polohy). Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
 
-# Interpretace parciální derivace, vedení tepla  v 1D
+## Interpretace parciální derivace, vedení tepla  v 1D
 
 Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou proměnných: polohy $x$ a času $t$. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává, jak rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase. Například v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce roste teplota ve směru osy $x$. Tato derivace může být vyjádřena například ve stupních Celsia na centimetr.
 
@@ -186,7 +188,7 @@ Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou prom
     centimetru délky tyče klesne o dva stupně Celsia.
 
 
-# Interpretace parciálních derivací, brzdná dráha
+## Interpretace parciálních derivací, brzdná dráha
 
 https://youtu.be/UE_nkyDe7bw
 
@@ -229,7 +231,7 @@ dráha vychází v metrech.
 
 
 
-# Interpretace parciálních derivací, pohyb ještěrky
+## Interpretace parciálních derivací, pohyb ještěrky
 
 
 https://youtu.be/lk-LRBKth3Q
@@ -259,7 +261,7 @@ a pro výše uvažované hodnoty dostáváme $$\frac{\partial E}{\partial m}(400
 
 ww:problems/parcialni_derivace/povrch_tela.pg
 
-# Využití parciálních derivací, ochrana želv
+## Využití parciálních derivací, ochrana želv
 
 \iffalse
 
@@ -284,14 +286,14 @@ V [publikaci](https://www.jstor.org/stable/1939225)  Deborah T. Crouse, Larry B.
 V této matici jsou zohledněny počty potomků želv v plodné fázi, pravděpodobnost přechodu želv do následující vývojové fáze a pravděpodobnost setrvání ve stávající vývojové fázi. Tato čísla se mění v závislosti na tom, kolik má želva nepřátel, jak složité je pro ni přežít, jak obtížné je pro ni se rozmnožovat. Například vysoká čísla v prvním řádku značí, že želvy mají hodně potomků. Číslo v prvním řádku a předposledním sloupci je menší, protože v tomto předposledním stadiu je želva jenom jeden rok a má málo potomků. Dynamika růstu populace je dána dominantní vlastní hodnotu matice. Tuto vlastní hodnotu označíme $\lambda$. Velikost populace roste přibližně geometrickou řadou s kvocientem $\lambda$. Pokud je tato hodnota větší něž jedna, velikost populace roste, v opačném případě populace vymírá. Pro uvedenou matici je $\lambda=0.95$ a populace se tedy mezi jednotlivými obdobími snižuje o pět procent. Hodnota $\lambda$ závisí na třinácti nenulových komponentách matice $A$ a je tedy funkcí třinácti proměnných. Pokud označíme prvky matice $A$ jako $a_{ij}$, je pro biology nesmírně zajímavá veličina $\frac{\partial \lambda}{\partial a_{ij}}$, která udává citlivost koeficientu řídícího růst populace na velikosti komponent matice $A$. Ještě častěji se pracuje s relativní změnou a v tomto případě sledujeme veličinu $\frac{a_{ij}}{\lambda}\frac{\partial \lambda}{\partial a_{ij}},$ která se nazývá elasticita a je bez jednotky. Proto se udává v procentech. Jedná se tedy o třináct parciálních derivací a třináct elasticit (pracujeme jenom s nenulovými komponentami matice). Je pozoruhodné, že hodnoty elasticity spojené s rozmnožováním a přežíváním vajíček a mláďat jsou řádově jednotky procent, ale hodnoty spojené s dospíváním jsou přes deset procent. To znamená, že pro ochranu populace je důležité nepodcenit ochranu dospívajících větších želv. Ochrana vajíček a čerstvě narozených želv má na celkovou kondici malý vliv a posílení těchto parametrů sama o sobě k udržení populace želv nestačí. Proto bylo vyvinuto zařízení [Turtle excluder device](https://en.wikipedia.org/wiki/Turtle_excluder_device), které umožní větším želvám uniknout z rybářských sítí a zvýší tak jejich šanci na přežití.
 
 
-# Linearita parciální derivace
+## Linearita parciální derivace
 
 Následující poznámka je nenápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic s derivacemi. Stejné věty zformulujeme i u dalších operací s funkcemi a později se je naučíme využívat.
 
 > Poznámka (linearita parciální derivace). Parciální derivace zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí $$\frac{\partial (f+g)}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}, \qquad \frac{\partial (cf)}{\partial x}=c\frac{\partial f}{\partial x}$$ a analogicky pro libovolnou jinou proměnnou.
 
 
-# Rovnice vedení tepla  v 1D
+## Rovnice vedení tepla  v 1D
 
 <!-- https://youtu.be/tZDKXyomaJE -->
 
@@ -377,7 +379,7 @@ ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg
 **Numerické modelování.**
 Rovnici je možno použít k simulaci časového vývoje teploty například [takto.](https://sagecell.sagemath.org/?z=eJx1U0tv2zAMvgfIf-CliNw6bRTslELA0nMxDEOxFdgLis00ah0pkyjD9q8fJTtrMWw-WB_f_CjqAj651poKocUarQHCU6Ph5B08Y22dd8MRvXURqK8gwN50rtW2P46ejjQjq-HF2cpUB8gokLbEuU6u0oSVPfu6eD2fXcDDGAiBi6a0BrhK44Z0ttalegiiMRa1T1m825umeBP6R8kH1lC7oAfu_TjGt0k4OOAu2piZ-DhwxkqHHgYTXvQRYci-f_PONT6YAZk8aA7tzFGzj8eAmc_RcbfMkEn1zLY2e_TIzOez-exeyVvaq9X1u9v5TKv3ggpYMdyNUK6S8MRCN-prYt-VTKg7I92cDlrVdFN3P9Ys207dM06IFO1vamJIUq02NW1oz0KXhW5zzziqAb0LwtKVLG13JYukFJtSFkoLkouzjLYu1O5VI8tNoZ5ElwN4Bsv_fGz6guB2AX2LQAcE_BU1GWdByAJMAGNh7_zxJ2wvo6CyK9SSz6VkxMHb5CJSZ2N7ENKsA-fwyFtE3nTz2VZhj-LcPmcDo9YbyxbgbytMaZZyY9isvuZ5wVIu15cjzP_vHMcUMxUY20iFayRerWh5ZQL3jZaMbpr-TQ2e21jlLrXNZXgui9tRldXMUrGhzK29avM8kz6BPMKzLUpQYvvtjtPAqE1uiU4BKkqRUTLlfv89eNZ_5K0nY5_yzHkbY0PhOtV5lOrFOyt4Jad7l0U53uPDW9M08HK68so1fEv6BAdH89kpi-JRlg-yjEXKGw66TvWM5ZmdpoCd9rx9hhoUi8996575dcUdHuL0vvvpPS84RdfoHTZi0SWhnwRKwjAJcVH8Bv3_UjQ=&lang=octave&interacts=eJyLjgUAARUAuQ==) (Pokud si rozkliknete odkaz, neuvidíte rovnici s počátečními podmínkami a příkaz k jejímu vyřešení, ale poměrně dlouhý kód převádějící řešení rovnice vedení tepla na řešení vhodné soustavy lineárních rovnic. V tomto případě se čtyřicetkrát řeší soustava 100 rovnic o 100 neznámých. V inženýrsky zajímavých aplikacích bývají takových rovnic tisíce.)
 
-# Druhá derivace
+## Druhá derivace
 
 https://youtu.be/vJVRrik3EAw
 
@@ -392,7 +394,7 @@ konstantní, redukuje se rovnice na rovnici
 $$\rho c\frac{\partial T}{\partial t} = k \frac{\partial^2 T}{\partial x^2},$$
 ve které figuruje druhá derivace podle polohy.
 
-## Fisherova–KPP rovnice
+### Fisherova–KPP rovnice
 
 \iffalse 
 
@@ -419,7 +421,7 @@ Tato rovnice byla původně navržena jako model šíření výhodného genu pop
 Uvedená rovnice zřejmě nebude fungovat tam, kde se populace chová jinak, než teplo, například pokud jedinci téhož druhu mají tendenci se shlukovat, což některé druhy jak známo činí. Rovnice a celý přístup jsou dostatečně flexibilní na to, aby zvládly úpravu i na takové případy, to ale již přesahuje ambice tohoto textu.
 
 
-# Numerická aproximace derivací: konečné diference 
+## Numerická aproximace derivací: konečné diference 
 
 https://youtu.be/iGohx4i95FI
 
@@ -430,12 +432,12 @@ https://youtu.be/iGohx4i95FI
 </div>
 
 
-## Dopředná diference
+### Dopředná diference
 
 Základním přístupem při numerickém odhadu derivace je vynechání limitního přechodu v definici derivace. Pro funkci jedné proměnné a její derivaci $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$ tedy dostáváme $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá *dopředná poměrná diference* nebo zkráceně *dopředná diference*. Pokud  použijeme tento postup pro parciální derivace, dostáváme $$\frac{\partial f}{\partial x}\approx\frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}$$ a $$\frac{\partial f}{\partial y}\approx\frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}.$$
 
 
-## Centrální diference
+### Centrální diference
 
 > Poznámka (Taylorův polynom). V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Touto aproximací je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d). S jeho využitím pro aproximaci kvadratickou funkcí platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
@@ -457,7 +459,7 @@ ww:problems/parcialni_derivace/centralni_diference.pg
 
 <div class="shorten" data-text="Konečné diference je možné použít k převedení parciální diferenciální rovnice (úloha v počítači obtížně řešitelná) na soustavu lineárních rovnic (úloha snadno řešitelná na počítačích).">
 
-## Diskretizace diferenciálních rovnic pomocí konečných diferencí
+### Diskretizace diferenciálních rovnic pomocí konečných diferencí
 
 Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a ani v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximaci derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jaké jsou zhruba požadavky na výpočetní prostředky.
 
@@ -588,7 +590,7 @@ ylabel('t')
 
 </div>
 
-# Vzdálenost a pojmy s ní související
+## Vzdálenost a pojmy s ní související
 
 V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovském prostoru se ujistíme, že dokážeme dát přesný obsah tak běžným pojmům, jako vzdálenost nebo hranice množiny. Protože matematické pojetí těchto pojmů plně vystihuje a zobecňuje základní představu z běžného života, není v tuto chvíli nutné se učit jednotlivé definice. Jenom si rámcově odneste přehled, jak jsou tyto pojmy definovány a jaké pojmy vlastně používáme. V případě nutnosti se k těmto definicím můýžete kdykoliv vrátit. 
 
@@ -614,7 +616,7 @@ je nezbytná.
 V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy přesně definovanému pojmu dáme název, který lidé znají z prostého života. Například hranice, oblast, spojitost, uzávěr, okolí, ... Podrobný rozbor ukazuje, že tyto definice jsou v jednoduchých případech v souladu s intuicí. 
 
 
-## Euklidovský metrický prostor
+### Euklidovský metrický prostor
 
 
 > Definice (metrický prostor, metrika).
@@ -638,7 +640,7 @@ Analogicky je možno definovat metriku v prostoru libovolné konečné dimenze.
   $\overline O_\varepsilon(A)$ definovanou $$\overline O_\varepsilon(A)=O_\varepsilon(A)\setminus\{A\},$$
   tj. $\varepsilon$-okolí bodu $A$, s vyloučením bodu $A$.
 
-## Významné vlastnosti množin v Euklidovském prostoru
+### Významné vlastnosti množin v Euklidovském prostoru
 
 V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq\mathbb{E}^n$ podmnožina v Euklidovském prostoru $\mathbb{E}^n$ ($n=2$ nebo $3$). Abstraktně je možno s těmito pojmy pracovat i v prostorech libovolné konečné dimenze.
 
@@ -655,7 +657,7 @@ V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq\mathbb{E}
 
 **Oblast, uzavřená oblast,  kompaktní množina**: Otevřená souvislá množina se nazývá *oblast*. Uzavřená souvislá množina se nazývá *uzavřená oblast*. Uzavřená    ohraničená  množina se nazývá *kompaktní*.
 
-# Spojitost funkce
+## Spojitost funkce
 
 \iffalse 
 
@@ -686,13 +688,13 @@ Následující věta ukazuje, že u elementárních funkcí je spojitost v libov
 
 > Věta (spojitost elementárních funkcí). Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
 
-# Schwarzova věta
+## Schwarzova věta
 
 > Věta (Schwarzova). Jsou-li smíšené derivace spojité na otevřené množině, jsou zde stejné, tj. platí  $$\frac{\partial }{\partial x}   \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}   \frac{\partial f}{\partial x}.$$
 
 Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát $$\frac{\partial^2 f}{\partial x^2},\quad \frac{\partial^2 f}{\partial x \partial y},\quad \frac{\partial^2 f}{\partial y^2},$$ nebo $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
-# Z ptačí perspektivy
+## Z ptačí perspektivy
 
 \iffalse
 
@@ -711,3 +713,4 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 * Kvalitativní představa může být, že teplo teče do studenějšího místa a v místě, kam se dodává teplo, roste teplota. Toto je pouze hrubý model. Pomocí parciálních derivací tento děj umíme namodelovat kvantitativně. Můžeme si tak sestrojit model, porovnat s experimentem a přesvědčit se, že naše metody kvantitativního vyjádření fyzikálních zákonů jsou správné. Tím si potvrzujeme, že jsou správné naše představy o fungování materiálů.
 * V praxi často derivace počítáme pro funkce dané tabulkou. V tomto případě používáme numerickou aproximaci derivace. Nejčastěji pomocí centrální diference.
 
+		

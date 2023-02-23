@@ -1,4 +1,4 @@
-% Gradient
+# Gradient
 
 
 > Anotace.
@@ -8,7 +8,7 @@
 > * V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku. Tato linearizace je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
 > * Poslední příklad nás zavede do světa zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
 
-# Linearizace pocitové teploty
+## Linearizace pocitové teploty
 
 https://youtu.be/NFymct4-4jQ
 
@@ -28,7 +28,7 @@ přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kil
 </div>
 
 
-# Parciální derivace, gradient
+## Parciální derivace, gradient
 
 https://youtu.be/Gnl5liHh2fA
 
@@ -49,7 +49,7 @@ $$
 
 </div>
 
-# Gradient funkce s vrstevnicemi ve tvaru kružnic
+## Gradient funkce s vrstevnicemi ve tvaru kružnic
 
 
 https://youtu.be/irOsyX_k620
@@ -62,7 +62,7 @@ $$\begin{aligned} \pdv{z}{x} &= 2x\\ \pdv{z}{y} &= 2y\\ \nabla z &= (2x, 2y) = 2
 Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spojnice se středem a tedy je kolmý k vrstevnici.
 </div>
 
-# Gradient funkce s paprskovitými vrstevnicemi
+## Gradient funkce s paprskovitými vrstevnicemi
 
 https://youtu.be/OeEuQqRGeBY
 
@@ -83,7 +83,7 @@ Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$. Proto je tečný ke
 
 
 
-# Tečná rovina atd.
+## Tečná rovina atd.
 
 https://youtu.be/FpvNOIR56Vs
 
@@ -132,7 +132,7 @@ ww:problems/gradient/05.pg
 ww:problems/gradient/06.pg
 
 
-# Linearizace vektorové funkce, Jacobiho matice
+## Linearizace vektorové funkce, Jacobiho matice
 
 https://youtu.be/y66fyasf8iw
 
@@ -171,7 +171,7 @@ ww:problems/gradient/07.pg
 ww:problems/gradient/08.pg
 
 
-# Parciální derivace, gradient a násobení matic
+## Parciální derivace, gradient a násobení matic
 
 https://youtu.be/mNKV8TUgY8Q
 
@@ -219,7 +219,7 @@ ww:problems/gradient/11.pg
 
 ww:problems/gradient/12.pg
 
-# Gradient numericky
+## Gradient numericky
 
 https://youtu.be/A13omrC6i2I
 

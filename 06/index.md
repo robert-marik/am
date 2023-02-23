@@ -1,6 +1,6 @@
-% Dvojný integrál
-% Robert Mařík
-% 2020
+# Dvojný integrál
+
+
 
 
 > Anotace.
@@ -35,7 +35,7 @@ https://youtu.be/DYySq6o6WTk
 
 \iffalse
 
-# Motivace 1 (hmotnost nehomogenní desky)
+## Motivace 1 (hmotnost nehomogenní desky)
 
 
 <div class='obtekat'>
@@ -63,7 +63,7 @@ https://youtu.be/DYySq6o6WTk
 
 
 
-# Motivace 2 (objem vody v jezeře)
+## Motivace 2 (objem vody v jezeře)
 
 
 <div class='obtekat'>
@@ -83,7 +83,7 @@ https://youtu.be/DYySq6o6WTk
   dokonce nemožné. Potom místo součtu konečně mnoha příspěvků
   použijeme dvojný integrál a dostáváme $$V=\iint_\Omega h\mathrm dS.$$
 
-# Motivace 3 (průtok)
+## Motivace 3 (průtok)
 
 <div class='obtekat'>
 
@@ -104,7 +104,7 @@ https://youtu.be/DYySq6o6WTk
 
 \fi
 
-# Dvojný integrál
+## Dvojný integrál
 
 https://youtu.be/tPf-7dZ4Il0
 
@@ -142,7 +142,7 @@ $$ \iint_\Omega f(x,y)\mathrm{d}A$$
 nebo 
 $$ \iint_\Omega f(x,y)\mathrm{d}S.$$ 
 
-# Linearita a aditivita
+## Linearita a aditivita
 
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
@@ -153,13 +153,13 @@ konstantou. Přesněji, platí následující věty.
 
 > Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 
-# Výpočet dvojného integrálu
+## Výpočet dvojného integrálu
 
 https://youtu.be/ItTWxJGD3sY
 
 Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jedné proměnné.
 
-### Výpočet (oblast mezi funkcemi proměnné $x$)
+#### Výpočet (oblast mezi funkcemi proměnné $x$)
 
 <div class='obtekat'>
 
@@ -183,7 +183,7 @@ integrál. Mají název **Fubiniovy věty**.
 >   f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
 > $$
 
-### Výpočet (oblast mezi funkcemi proměnné $y$)
+#### Výpočet (oblast mezi funkcemi proměnné $y$)
 
 <div class='obtekat'>
 ![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
@@ -204,7 +204,7 @@ integrál. Mají název **Fubiniovy věty**.
 > 
 
 
-### Záměna pořadí integrace
+#### Záměna pořadí integrace
 
 <div class='obtekat'>
 
@@ -234,7 +234,7 @@ $$\int_0^4 \int _{\sqrt y}^{2} f(x,y)\;\mathrm{d}x\;\mathrm{d}y.$$
 Všimněte si, že nestačí prosté prohození integrálů. Je nutno přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako funkce proměnné $x$ a jednou jako funkce proměnné $y$. V důsledku tohoto dochází v průběhu výpočtu dvěma různými způsoby k\ tomu, že pracujeme se dvěma různými integrály. Výsledky jsou samozřejmě stejné, ale nemusí být dosažitelné srovnatelnou námahou. Jedna z cest může být snazší.
 
 
-# Výpočet (obdélníková oblast)
+## Výpočet (obdélníková oblast)
 
 https://youtu.be/o38mi3tTAvw
 
@@ -251,10 +251,8 @@ obdélníkovou oblast.
 >   Věta (Fubiniova věta na obdélníku). Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
 >   $f$ funkce definovaná a spojitá na $R$. Pak platí
 >   $$    \begin{aligned}\iint_R f(x,y)\mathrm{d}x \mathrm{d}y 
->     &=
->     \int_a^b\Bigl[\int_c^d f(x,y)\mathrm{d}y \Bigr]\mathrm{d}x 
->     \\&=
->     \int_c^d\Bigl[\int_a^b f(x,y)\mathrm{d}x \Bigr]\mathrm{d}y .\end{aligned}
+>     &=>     \int_a^b\Bigl[\int_c^d f(x,y)\mathrm{d}y \Bigr]\mathrm{d}x 
+>     \\&=>     \int_c^d\Bigl[\int_a^b f(x,y)\mathrm{d}x \Bigr]\mathrm{d}y .\end{aligned}
 >   $$
 > 
 >   Platí-li dokonce rovnost $f(x,y)=g(x)h(y)$, pak
@@ -263,11 +261,11 @@ obdélníkovou oblast.
 >   $$
 > 
 
-# Aplikace dvojného integrálu
+## Aplikace dvojného integrálu
 
 https://youtu.be/8YS2Fn8st5I
 
-### Matematické aplikace dvojného integrálu
+#### Matematické aplikace dvojného integrálu
 
 
 
@@ -279,7 +277,7 @@ https://youtu.be/8YS2Fn8st5I
   kde $\mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y$ je obsah
   množiny $\Omega$.
 
-### Objem kopce nebo jezera pomocí vrstevnic
+#### Objem kopce nebo jezera pomocí vrstevnic
 
 \iffalse
 
@@ -304,7 +302,7 @@ výškou.
 ambice vyjadřovat vrstevnice v analytickém tvaru a integrovat pomocí
 Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   
-### Fyzikální aplikace dvojného integrálu
+#### Fyzikální aplikace dvojného integrálu
 
 
 
@@ -328,7 +326,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
 
-### Technické aplikace dvojného integrálu
+#### Technické aplikace dvojného integrálu
 
 
 \iffalse
@@ -372,7 +370,7 @@ manimp:beam|Odvození ohybové rovnice nosníku.
 
 
 
-### Tuhost nosníků, stabilita stromů
+#### Tuhost nosníků, stabilita stromů
 
 
 \iffalse
@@ -393,13 +391,9 @@ manimp:beam|Odvození ohybové rovnice nosníku.
 Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce $b$ a
 šířce $a$ je dána kvadratickým momentem obdélníkového průřezu vzhledem
 k vodorovné ose procházející těžištěm. 
-$$\begin{aligned}I_x&=
-\iint_{\left[-\frac a2,\frac a2\right]\times \left[-\frac b2,\frac b2\right]} y^2\,\mathrm dx\mathrm dy\\
-&=
-\int_{-\frac a2}^{\frac a2} \,\mathrm dx\int_{-\frac b2}^{\frac b2}
-y^2 \,\mathrm dy=
-a\left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}
-=\frac 1{12}ab^3
+$$\begin{aligned}I_x&=\iint_{\left[-\frac a2,\frac a2\right]\times \left[-\frac b2,\frac b2\right]} y^2\,\mathrm dx\mathrm dy\\
+&=\int_{-\frac a2}^{\frac a2} \,\mathrm dx\int_{-\frac b2}^{\frac b2}
+y^2 \,\mathrm dy=a\left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}=\frac 1{12}ab^3
 \end{aligned}
 $$
 Odsud máme okamžitě několik pozorování
@@ -424,7 +418,7 @@ Odsud máme okamžitě několik pozorování
 
 \iffalse 
 
-### Těžiště složeného obrazce
+#### Těžiště složeného obrazce
 
 Uvažujme množinu $M$ s jednotkovou plošnou hustotou, rozdělenou na dvě
 disjunktní části $M_1$ a $M_2$. Tyto množiny mají $x$-ovou polohu
@@ -458,7 +452,7 @@ Zobecnění výše uvedených myšlenek na množinu rozdělenou na více část�
 je již snadné.
 
 
-### Steinerova věta
+#### Steinerova věta
 
 Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
 že vzhledem k ose procházející těžištěm je nejmenší moment
@@ -478,14 +472,11 @@ I_{xT}&=\iint_M
 y^2\sigma(x,y)\,\mathrm dx\mathrm dy
 -2y_0
 \iint_M
-y\sigma(x,y)\,\mathrm dx\mathrm dy
-+y_0^2
+y\sigma(x,y)\,\mathrm dx\mathrm dy+y_0^2
 \iint_M
 \sigma(x,y)\,\mathrm dx\mathrm dy\\
 &=I_{x0}
--2y_0 m y_0
-+
-y_0^2 m
+-2y_0 m y_0+y_0^2 m
 \\
 &=I_{x0}
 -m y_0^2.
@@ -500,7 +491,7 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 
 \fi
 
-### Tlak na svislou plochu
+#### Tlak na svislou plochu
 
 \iffalse
 
@@ -571,7 +562,7 @@ Nikde ve výpočtu jsme nepoužili konkrétní meze pro integraci. Výsledek
 tedy platí nejenom pro hráz dosahující k hladině, ale například i pro
 poklop výpusti, který je celý pod vodou.
 
-### Působiště tlakové síly
+#### Působiště tlakové síly
 
 Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
 tlakové síly.
@@ -616,11 +607,11 @@ $y$-ové polohy těžiště $y_0$.
 
 \fi
 
-# Dvojný integrál v\ polárních souřadnicích
+## Dvojný integrál v\ polárních souřadnicích
 
 https://youtu.be/lEObYHpX72w
 
-### Polární souřadnice
+#### Polární souřadnice
 
 <div class='sloupce'>
 
@@ -647,7 +638,7 @@ $x$.
 
 \newpage
 
-### Množiny s jednoduchým vyjádřením v polárních souřadnicích
+#### Množiny s jednoduchým vyjádřením v polárních souřadnicích
 
 Nejsnáze se při výpočtu dvojného integrálu pracuje s obdélníkovými
 množinami, tj. s množinami charakterizovanými nerovnostmi pro jednotlivé
@@ -706,7 +697,7 @@ th {text-align: center;}
 
 \fi
 
-### Převod dvojného integrálu do polárních souřadnic
+#### Převod dvojného integrálu do polárních souřadnic
 
 \def\maxwidth{5cm}
 
@@ -746,7 +737,7 @@ zpravidla jednodušší.
 
 
 
-# Z ptačí perspektivy
+## Z ptačí perspektivy
 
 \iffalse
 

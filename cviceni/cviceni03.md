@@ -1,4 +1,4 @@
-% Divergence, rovnice vedení tepla
+# Divergence, rovnice vedení tepla
 
 > Anotace.
 >
@@ -6,7 +6,7 @@
 > * Poté vypočteme divergenci vektorového pole, které dostaneme jako záporně vzatý gradient stavové veličiny vynásobený difuzní maticí. Přesně takto se s divergencí pracuje v aplikacích, abychom zjistili, kde tok nabývá na intenzitě a kde naopak slábne.
 > * V závěru si zopakujeme difuzní rovnici a jak se některé členy této rovnice mohou za speciálních podmínek zjednodušit. 
 
-# Divergence vektorového pole
+## Divergence vektorového pole
 
 https://youtu.be/bdnxbITOIrM
 
@@ -26,7 +26,7 @@ https://youtu.be/bdnxbITOIrM
 
 </div>
 
-# Divegrence vektorového pole s parametrem
+## Divegrence vektorového pole s parametrem
 
 https://youtu.be/zwYPRlEIrHI
 
@@ -43,7 +43,7 @@ https://youtu.be/zwYPRlEIrHI
 
 </div>
 
-# Rovnice vedení tepla v dvourozměrném materiálu
+## Rovnice vedení tepla v dvourozměrném materiálu
 
 
 https://youtu.be/U9_0wbKT_2I
@@ -112,7 +112,7 @@ $$
 % show((-k*T.gradient())[0].diff(x)+(-k*T.gradient())[1].diff(y))
 -->
 
-# Vedení tepla v různých materiálech
+## Vedení tepla v různých materiálech
 
 https://youtu.be/MnThGZphPps
 

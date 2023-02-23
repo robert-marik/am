@@ -1,4 +1,4 @@
-% Diferenciální rovnice
+# Diferenciální rovnice
 
 
 > Anotace.
@@ -8,11 +8,11 @@
 > * Nakonec se naučíme řešit diferenciální rovnice se separovanými proměnnými dvojím integrováním.
 
 
-# Jednoduché modely založené na diferenciálních rovnicích
+## Jednoduché modely založené na diferenciálních rovnicích
 
 https://youtu.be/QckWe55HikI
 
-## Model růstu úměrného velikosti chybějícího množství
+### Model růstu úměrného velikosti chybějícího množství
 
 ![pixabay.com](mladata.jpg)
 
@@ -38,7 +38,7 @@ Konstanta $k$ vyjadřuje rychlost s jakou roste délka při jednotkovém rozdíl
 </div>
 
 
-## Kontaminace a čištění
+### Kontaminace a čištění
 
 ![pixabay.com](kontaminace.jpg)
 
@@ -83,7 +83,7 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 
 
-## Populace jelenů
+### Populace jelenů
 
 ![pixabay.com, autor Free-Photos](deer.jpg)
 
@@ -97,7 +97,7 @@ $$ \dv {x}{t}=0.10 x-50, $$ kde $t$ je čas v letech.
 </div>
 
 
-## Hrubý model chřipkové epidemie
+### Hrubý model chřipkové epidemie
 
 Rychlost s jakou roste počet nemocných chřipkou je úměrný současně
 počtu nemocných a počtu zdravých jedinců. Sestavte model takového
@@ -111,7 +111,7 @@ $$\dv {y}{t}=ky(M-y).$$
 </div>
 
 
-## Ropná skvrna
+### Ropná skvrna
 
 ![pixabay.com](olej.jpg)
 
@@ -124,7 +124,7 @@ Je-li $r$ poloměr, je $r^2$ druhá mocnina a protože se jedná o nepřímou ú
 $$\dv {r}{t}=\frac{k}{r^2}.$$ Konstanta $k$ vyjadřuje rychlost s jakou roste ropná skvrna ve fázi, kdy má jednotkový poloměr $r$.
 </div>
 
-## Model učení
+### Model učení
 
 Rychlost učení (tj. časová změna objemu osvojené látky nebo procento z
 maximální manuální zručnosti) je úměrná objemu dosud nenaučené
@@ -137,7 +137,7 @@ $$\dv {L}{t}=k (L_{\max}-L).$$
 
 
 
-## Tloušťka ledu
+### Tloušťka ledu
 
 ![pixabay.com](ledni_medved.jpg)
 
@@ -166,7 +166,7 @@ $$
 
 
 
-# Model vypouštění nádrže
+## Model vypouštění nádrže
 
 https://youtu.be/K08zq2cC0DM
 
@@ -214,7 +214,7 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 </div>
 
 
-# Problematika jednoznačnosti v modelu vypouštění nádrže
+## Problematika jednoznačnosti v modelu vypouštění nádrže
 
 https://youtu.be/FAatA34JeEo
 
@@ -262,7 +262,7 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 </div>
 
 
-# Řešení ODE a IVP 
+## Řešení ODE a IVP 
 
 https://youtu.be/XUKvuqSgA6U
 

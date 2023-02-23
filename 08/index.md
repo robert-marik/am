@@ -1,6 +1,6 @@
-% Diferenciální rovnice 
-% Robert Mařík
-% 2020
+# Diferenciální rovnice 
+
+
 
 <style>
 .volitelne {font-size:small;}
@@ -29,11 +29,11 @@ h2 {clear:both;}
 
 
 
-# Modely založené na rychlostech (derivacích)
+## Modely založené na rychlostech (derivacích)
 
 https://youtu.be/08uAuAgY-lw
 
-## Tepelná výměna, káva v hrnku
+### Tepelná výměna, káva v hrnku
 
 \iffalse
 
@@ -61,7 +61,7 @@ https://youtu.be/08uAuAgY-lw
   \frac{\mathrm d\tau}{\mathrm dt}=-k\tau,$$
   tedy na model, kdy rychlost změny je úměrná funkční hodnotě.
 
-## Radioaktivní rozpad, radon ve sklepě 
+### Radioaktivní rozpad, radon ve sklepě 
 
 \iffalse
 
@@ -94,7 +94,7 @@ https://youtu.be/08uAuAgY-lw
   v tomto případě používají látky s\ delším poločasem rozpadu.
 * Optikou běžného života je nejzajímavější aplikací této rovnice model rozpadu v radioaktivní radě uranu, kdy vzniká plynný radon, který může působit problémy ve stavbách a v rizikových lokalitách je potřeba vhodnými konstrukčními přístupy nebo aktivními zařízeními na lapání a odvětrávání radonu.
 
-## Samočištění jezer, kontaminace v jezeře
+### Samočištění jezer, kontaminace v jezeře
 
 \iffalse
 
@@ -142,7 +142,7 @@ https://youtu.be/08uAuAgY-lw
 \iffalse
 
 
-## Akutní normovolemická hemodiluce aneb o krvinky neradi přicházíme
+### Akutní normovolemická hemodiluce aneb o krvinky neradi přicházíme
 
 
 <div class='obtekat'>
@@ -188,7 +188,7 @@ https://youtu.be/08uAuAgY-lw
 
 \fi
 
-## RC obvod a chytré stěny ve dřevostavbách.
+### RC obvod a chytré stěny ve dřevostavbách.
 
 \iffalse
 
@@ -219,7 +219,7 @@ RC obvod jako takový má však důležité místo i dnes. Dokáže například 
 
 Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
 
-## Vývoj populace a její ekologický lov
+### Vývoj populace a její ekologický lov
 
 \iffalse
 
@@ -252,7 +252,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 \iffalse
 
-## Lovci meteoritů z ČSSR a ČR
+### Lovci meteoritů z ČSSR a ČR
 
 <div class='obtekat'>
 
@@ -273,7 +273,7 @@ Jedná se o rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotn
 
 \fi
 
-# Obyčejná diferenciální rovnice prvního řádu
+## Obyčejná diferenciální rovnice prvního řádu
 
 https://youtu.be/3HTs6zJ0gMk
 
@@ -335,7 +335,7 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 **Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení (4) a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je
   $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec (4) popisuje dokonce **všechna** řešení rovnice (3).
 
-## Obecné a partikulární řešení
+### Obecné a partikulární řešení
 
 Řešení diferenciální rovnice je nekonečně mnoho. Zpravidla je dokážeme
 zapsat pomocí jediného vzorce, který obsahuje nějakou (alespoň do
@@ -360,13 +360,13 @@ splňující diferenciální rovnici.
 
 \fi
 
-# Úvod do problematiky numerického řešení diferenciálních rovnic
+## Úvod do problematiky numerického řešení diferenciálních rovnic
 
 Nejprve si naznačíme možnosti numerického řešení. To vychází z grafické interpretace diferenciální rovnice a odpovídá v podstatě modelování, kdy postupně prodlužujeme řešení od zadané počáteční podmínky dopředu či dozadu v čase. Přitom musíme řešit situaci vždy pro konkrétní numerické hodnoty počáteční podmínky a všech parametrů. Naštěstí se dá vhodnou transformací (resp. vhodnou volbou jednotek) počet parametrů zredukovat a tím se zvýší obecná použitelnost numerického výpočtu.
 
 https://youtu.be/7tm1QbNDiz8
 
-## Geometrická interpretace ODE
+### Geometrická interpretace ODE
 
 <div class='obtekat'>
 
@@ -397,7 +397,7 @@ konstantní, nazývají **izokliny**.
 
 \iffalse
 
-## Numerické řešení IVP
+### Numerické řešení IVP
 
 manim:Diference|r_Ae2mGnfFs|Numerické řešení diferenciální ronvice je zpravidla založeno na aproximaci derivace konečnou diferencí a postupným prodlužováním řešení od počáteční podmínky směrem dopředu nebo dozadu v čase.
 
@@ -457,7 +457,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 \fi
 
-## Transformace diferenciální rovnice
+### Transformace diferenciální rovnice
 
 manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parametrů v rovnici a tím usnadnit numerické simulace. Nematematická cesta k transformaci je vhodná volba jednotek pro sledované veličiny.
 
@@ -516,7 +516,7 @@ znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řeše
 
 <!--
 
-# Malá odbočka - zaokrouhlovací chyby v numerických výpočtech
+## Malá odbočka - zaokrouhlovací chyby v numerických výpočtech
 
 <div class='obtekat'>
 
@@ -565,7 +565,7 @@ Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-
 
 <!-- 
 
-# ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$
+## ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$
 
 Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
 autonomní, nebo též nezávislá na čase. Je speciálním případem rovnice
@@ -607,7 +607,7 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
   tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
 
-#  Příklad - časový rozestup mezi trolejbusy
+##  Příklad - časový rozestup mezi trolejbusy
 
 \iffalse
 
@@ -658,7 +658,7 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 --> 
 
-# ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(x)g(y)$ (rovnice se separovanými proměnnými)
+## ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(x)g(y)$ (rovnice se separovanými proměnnými)
 
 https://youtu.be/yH6jzK_999E
 
@@ -675,7 +675,7 @@ Najít řešení obecné diferenciální rovnice je nemožné, ani však takové
   Rovnice $$y'=x^2-y^2$$ není rovnice se separovatelnými proměnnými.
 
 
-# Řešení ODE se separovanými proměnnými
+## Řešení ODE se separovanými proměnnými
 
 
 1.  Má-li algebraická rovnice $g(y)=0$ řešení $k_1$, $k_2$, …, $k_n$,
@@ -717,13 +717,13 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 > rovnici $$\frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y)$$ uvedenou výše a potom je řešení určeno jednoznačně, pokud má funkce
 > $g$ v okolí počáteční podmínky ohraničenou derivaci.
 
-# Redukce parciální diferenciální rovnice na obyčejnou
+## Redukce parciální diferenciální rovnice na obyčejnou
 
 https://youtu.be/vDEQBp8y6Jk
 
 V předchozích týdnech jsme se seznámili s modely založenými na parciálních derivacích, zejména s difuzní rovnicí. V případě, kdy hledaná stavová veličina je funkcí jenom jedné proměnné se parciální derivace redukují na obyčejné derivace a můžeme takové modely řešit v rámci obyčejných diferenciálních rovnic.
 
-## Jednorozměrný případ
+### Jednorozměrný případ
 
 Ukážeme si , že parciální diferenciální rovnice popisující tok tepla nebo tok podzemní vody se ve speciálních případech redukují na diferenciální rovnice, jaké jsme se právě naučili řešit.
 
@@ -735,7 +735,7 @@ V ustáleném stavu je $T$ funkcí jedné proměnné $x$ a parciální derivace 
 $$\frac{\mathrm d}{\mathrm d x}\left(k\frac{\mathrm d T}{\mathrm d x}\right)=0.$$
 Po integraci dostáváme $$k\frac{\mathrm d T}{\mathrm d x}=C_1.$$ Tuto rovnici budeme řešit ve dvou různých situacích, a to pro lineární a nelineární materiálové vztahy.
 
-### Lineární materiálové vztahy, tj. konstantní materiálová charakteristika
+#### Lineární materiálové vztahy, tj. konstantní materiálová charakteristika
 
 * Je-li $k$ konstantní, dostáváme
 $$\frac{\mathrm dT}{\mathrm dx}=\frac {C_1}k$$
@@ -744,7 +744,7 @@ $$T=\frac {C_1}k x + C_2.$$
 Konstanty $C_1$ a $C_2$ určíme z podmínek na teplotu na jednotlivých stranách stěny. Vidíme, že teplota ve stěně klesá lineárně.
 * Stejná rovnice a stejné řešení vychází i pro piezometrickou hladinu při rovinném ustáleném proudění podzemní vody v případě, že materiálová charakteristika je konstantní, tj. při proudění s napjatou hladinou (podzemní kolektor s nepropustným stropem a pod tlakem).
 
-### Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika
+#### Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika
 
 * Zopakujme předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův (Darcyho v případě podzemní vody) zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=aT+b.$$
 Poté má rovnice tvar 
@@ -755,7 +755,7 @@ a
 $$\frac 12 aT^2+bT=C_1x+C_2.$$ Teplotní profil není lineární, ale parabolický s parabolou otočenou naležato. Kterou polovinu paraboly vybrat poznáme z toho, že teplota uvnitř stěny je mezi teplotami na okrajích.
 * Stejný výpočet pro $b=0$ odpovídá proudění podzemní vody s volnou hladinou. Toto je jiným způsobem (přímé odvození rovnice z Darcyho zákona) odvozeno v textu Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Hladina podzemní vody tedy klesá jako ležatá parabola.
 
-## Dvourozměrný radiálně symetrický případ
+### Dvourozměrný radiálně symetrický případ
 
 Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi je stacionární děj v rovině, kdy je situace radiálně symetrická. K tomu je nutno transformovat divergenci a gradient do polárních souřadnic. Příslušné vzorce nebudeme odvozovat, dodá je [Wikipedie](https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates#Del_formula).
 
@@ -797,7 +797,7 @@ rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace
 z chemické výroby do vodárensky využívaných vod). V tomto případě je však situace komplikovanější, protože je nutné zkombinovat dostředivé proudění k čerpanému vrtu s rovinným prouděním podzemní vody. Toto se naučíme v příští přednášce a využijeme linearitu. 
 
 
-# Diferenciální rovnice růstu vodní kapky
+## Diferenciální rovnice růstu vodní kapky
 
 https://youtu.be/gJoOmF39rbw
 

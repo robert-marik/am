@@ -1,4 +1,4 @@
-% Lineární diferenciální rovnice
+# Lineární diferenciální rovnice
 
 
 > Anotace.
@@ -9,7 +9,7 @@
 > * V posledním příkladě se zaměříme na vektorový případ a ukážeme, že zpětná vazba reagující na hodnoty sledované veličiny je vhodnou taktikou pro udržení konstantního stavu této veličina a podle povahy může a nemusí vést k oscilacím. Ukážeme si toto na příkladě regulace teploty ale v podstatě stejně je udržována rovnováha enzymů a proteinů v tělech rostlin a živočichů.
 
 
-# Radioaktivní rozpad 
+## Radioaktivní rozpad 
 
 https://youtu.be/G7jb5MyMUHM
 
@@ -33,7 +33,7 @@ $$T=\frac 1k \ln 2.$$ Tato hodnota se nazývá poločas rozpadu a je $\ln2$ nás
 </div>
 
 
-# Radioaktivní rozpad a radon v budovách
+## Radioaktivní rozpad a radon v budovách
 
 Radon je po kouření druhou nejčastější přinou rakoviny plic.
 
@@ -76,7 +76,7 @@ $$y=\frac {q}{k+d} - Ke^{-(k+d)t}.$$
 4. Izolace sníží rychlost s jakou radon prostupuje do budovy a sníží tedy konstantu $q$. Větrání zvýší rychlost difuze ven a zvýší koeficient $d$. Každý z těchto efektů nezávisle sníží čitatel resp. zvýší jmenovatel podílu $$\frac {q}{k+d},$$ což vede k menší hodnotě. Hodnota ve stacionárním stavu klesne.
 </div>
 
-# Časový rozestup mezi trolejbusy
+## Časový rozestup mezi trolejbusy
 
 https://youtu.be/DvHpllR2zLg
 
@@ -157,7 +157,7 @@ přijede několik trolejbusů těsně za sebou.
 </div>
 
 
-# Pásová brzda
+## Pásová brzda
 
 https://youtu.be/XlUuxd3Ws10
 
@@ -201,7 +201,7 @@ $$e^{\mu\theta_1}e^{\mu\theta_2}=e^{\mu(\theta_1+\theta_2)}.$$ Tah se tedy měn�
 
 
 
-# Regulace stacionárního stavu a jeho robustnost
+## Regulace stacionárního stavu a jeho robustnost
 
 Následující příklad je z knihy _Uri Alon, An introduction to systems biology, Design principles of biological circuits._ Kniha popisuje svět syntéz bílkovin a dalších sloučenin nutných pro život i tak jednoduchých organismů, jako je buňka. Aby byly buňky a živé organismy schopny reagovat na vnější podněty, musí syntéza potřebných bílkovin probíhat včas, rychle a stacionární stavy musí být robustní (nezávislé na změnách parametrů). 
 

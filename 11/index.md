@@ -1,6 +1,6 @@
-% Lineární diferenciální rovnice druhého řádu
-% Robert Mařík
-% 2020
+# Lineární diferenciální rovnice druhého řádu
+
+
 
 > Anotace.
 >
@@ -10,7 +10,7 @@
 > * [Numerické experimenty](https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html) s rovnicí.
 > * Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neurčitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu případně až v poslední fázi. 
 
-# Lineární diferenciální rovnice druhého řádu
+## Lineární diferenciální rovnice druhého řádu
 
 https://youtu.be/PcNc0tfv7Q0
 
@@ -34,7 +34,7 @@ https://youtu.be/PcNc0tfv7Q0
 
 **Zkratky:** LDE - lineární diferenciální rovnice, IC - počáteční podmínka, IVP - počáteční úloha 
 
-# Příklad - těleso na pružině
+## Příklad - těleso na pružině
 
 \iffalse 
 
@@ -68,7 +68,7 @@ polohy.
 
 Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciální energie uvažovaná v tomto odstavci může být jiného charakteru. Něco podobného jsme viděli již u autonomních systémů, kdy systém modelující tlumený oscilátor z přednášky byl stejný jako systém modelující regulaci topení ze cvičení a tento systém byl jenom lépe představitelnou realizací systému regulace syntézy proteinů.
 
-# Řešitelnost LDE druhého řádu
+## Řešitelnost LDE druhého řádu
 
 https://youtu.be/sw5EvXHFtA0
 
@@ -99,7 +99,7 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 > $C_2\in\mathbb{R}$. Takovýto předpis se nazývá *obecné řešení rovnice (LDE)*.
 
 <!--
-# Operátorová symbolika
+## Operátorová symbolika
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 
@@ -126,7 +126,7 @@ diferencovatelné funkci přiřazuje levou stranu rovnice (LDE). Rovnici
 
 -->
 
-# Důsledky linearity
+## Důsledky linearity
 
 Nechť $L$ je lineární diferenciální operátor druhého řádu.
 Jako speciální případ vztahu  $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$ dostáváme následující. 
@@ -143,7 +143,7 @@ Jako speciální případ vztahu  $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$ dost�
     obecným řešením nehomogenní rovnice, protože se podaří splnit
     libovolnou počáteční podmínku.
 
-# Důsledky linearity prakticky
+## Důsledky linearity prakticky
 
 Vztah
 $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$
@@ -164,7 +164,7 @@ například $y=\sin x$, $y=\cos x$. Z linearity plyne
 
 <!--
 
-# Kdy pomocí linearity získáme obecné řešení?
+## Kdy pomocí linearity získáme obecné řešení?
 
 
 Budeme studovat homogenní LDE druhého řádu, tj.
@@ -201,7 +201,7 @@ determinant je nenulový a to nastane právě tehdy když jeden sloupec není
 násobkem druhého. 
 
 
-# Homogenní LDE 2. řádu (wronskián, lineárně nezávislá řešení)
+## Homogenní LDE 2. řádu (wronskián, lineárně nezávislá řešení)
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 
@@ -222,8 +222,7 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 > řešení homogenní rovnice (LDE0). *Wronskiánem* funkcí $y_1(x)$,
 > $y_2(x)$ rozumíme determinant
 > $$
->     W[y_1, y_2](x)=
->     \begin{vmatrix}
+>     W[y_1, y_2](x)=>     \begin{vmatrix}
 >       y_1(x)&y_2(x)\\y_1'(x)&y_2'(x)
 >     \end{vmatrix}.
 >  $$
@@ -235,7 +234,7 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 
 -->
 
-# Homogenní LDE 2. řádu (obecné řešení)
+## Homogenní LDE 2. řádu (obecné řešení)
 
 $$y''+p(x)y'+q(x)y=0 \tag{LDE0}$$
 
@@ -251,7 +250,7 @@ Dvojicí lineárně nezávislých řešení rozumíme dvě řešení taková, ž
 > Definice (fundamentální systém řešení). Dvojici funkcí $y_1$ a $y_2$ z\ předchozí
 > věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
 
-# Homogenní LDE 2. řádu s\ konstantními koeficienty
+## Homogenní LDE 2. řádu s\ konstantními koeficienty
 
 \iffalse 
 
@@ -269,7 +268,7 @@ $$z^2+pz+q=0.$$
 Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
 
 
-# Homogenní LDE 2. řádu s\ konstantními koeficienty
+## Homogenní LDE 2. řádu s\ konstantními koeficienty
 
 -->
 
@@ -279,8 +278,7 @@ Rovnici $$y''+py'+qy=0$$ je možno přepsat na
 $$(y')^\prime=-qy-py'$$
 a tato rovnice je po substituci
 $x_1=y$, $x_2=y'$ ekvivalentní autonomnímu systému
-$$\begin{pmatrix}x_1\\x_2\end{pmatrix}'=
-\begin{pmatrix}0 &1\\ -q &-p\end{pmatrix}
+$$\begin{pmatrix}x_1\\x_2\end{pmatrix}'=\begin{pmatrix}0 &1\\ -q &-p\end{pmatrix}
 \begin{pmatrix}x_1\\x_2\end{pmatrix}
 $$
 
@@ -307,7 +305,7 @@ U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matic
 > Potom obecné řešení rovnice (1) je
 > $$y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.$$
 
-# Nehomogenní LDE 2. řádu
+## Nehomogenní LDE 2. řádu
 
 > Věta (o obecném řešení nehomogenní LDE). Součet libovolného partikulárního řešení
 > nehomogenní lineární diferenciální rovnice a obecného řešení asociované
@@ -327,7 +325,7 @@ koeficienty a polynomiální pravou stranu.
 V\ praxi polynom který má být řešením napíšeme s\ neurčitými koeficienty a
 dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
 
-# Dirichletova okrajová úloha, vlastní čísla
+## Dirichletova okrajová úloha, vlastní čísla
 
 https://youtu.be/9rFZAfiOM5Y
 
@@ -358,9 +356,9 @@ hodnoty parametru $\lambda$.
 > se nazývá *vlastní hodnota okrajové úlohy* a příslušné řešení se
 > nazývá *vlastní funkce okrajové úlohy*.
 
-# Výpočet vlastních hodnot
+## Výpočet vlastních hodnot
 
-## Případ $\lambda>0$
+### Případ $\lambda>0$
 
 Je-li $\lambda>0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
 funkce
@@ -375,7 +373,7 @@ která je splněna pokud $C_1=0$, nebo $\sqrt\lambda=k\pi$, $k\in\mathbb{Z}$
 Okrajová úloha $$y''+\lambda y=0, \quad y(0)=0=y(1)$$ má vlastní hodnoty 
 $\lambda=(k\pi)^2$, $k\in\mathbb{Z}$
 
-## Případ $\lambda<0$
+### Případ $\lambda<0$
 
 Je-li $\lambda<0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
 funkce
@@ -386,7 +384,7 @@ Z\ podmínky $y(1)=0$ dostáváme
 $$C_1e^{\sqrt {-\lambda}}+C_2 e^{-\sqrt {-\lambda}}=0.$$
 Protože jedna rovnice není násobkem druhé, má soustava jediné řešení $C_1=C_2=0$ a okrajová úloha má v případě $\lambda<0$ pouze triviální nulové řešení. Nemá tedy žádné vlastní hodnoty.
 
-## Obvyklá formulace
+### Obvyklá formulace
 
 V praktických úlohách, kdy požadujeme existenci nenulového řešení, zpravidla pracujeme s rovnicí ve tvaru
 $$y''+\lambda^2 y=0,$$ abychom zdůraznili kladnou hodnotu parametru a abychom dostávali řešení formálně bez druhé odmocniny. 
@@ -394,7 +392,7 @@ Tedy okrajová úloha
 $$y''+\lambda^2 y=0,\quad y(0)=0=y(1)$$
 má vlastní čísla $\lambda=k\pi$, kde $k$ je kladné celé číslo.
 
-# Kmity struny
+## Kmity struny
 
 \iffalse
 
@@ -419,7 +417,7 @@ slyšíme. Podmínka (\*\*\*) určuje spektrum slyšitelných frekvencí, na
 kterých může struna kmitat, výsledný pohyb (a zvuk) je díky linearitě složením
 jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je možné [rozeznívat více způsoby](https://www.youtube.com/watch?v=kn92TLYA4rE) a dosahovat různý výsledný zvuk. 
 
-# Vzpěry
+## Vzpěry
 
 <div class='obtekat'>
 
@@ -445,7 +443,7 @@ a
 $$F=\frac{\pi^2 EI}{l^2}.$$
 Toto je pro daný nosník kritická síla a ta je pro daný materiál nepřímo úměrná druhé mocnině délky a přímo úměrná kvadratickému momentu $I$.
 
-# Neumannova a smíšená okrajová úloha
+## Neumannova a smíšená okrajová úloha
 
 \iffalse
 
@@ -475,7 +473,7 @@ upevněným a jedním volným koncem je přirozené formulovat **smíšenou
 okrajovou podmínku** $$y(a)=0,\quad y'(b)=0,$$ kde $a$ je upevněný konec a
 $b$ volný konec.
 
-# Fourierova metoda separace proměnných
+## Fourierova metoda separace proměnných
 
 https://youtu.be/wfvY6bwlxaw
 

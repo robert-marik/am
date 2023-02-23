@@ -1,4 +1,4 @@
-% Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity
+# Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity
 
 > Anotace.
 >
@@ -7,7 +7,7 @@
 > * V příkladě se vrátíme i k difuzní rovnici.
 
 
-# Křivkový integrál pomocí kmenové funkce
+## Křivkový integrál pomocí kmenové funkce
 
 https://youtu.be/-VCnGpRz3K0
 
@@ -53,7 +53,7 @@ $$\int _C \vec F\mathrm d\vec r=\varphi(1,2)-\varphi(0,0)=2+2-0=4.$$
 
 </div>
 
-# Křivkový integrál pomocí kmenové funkce 2
+## Křivkový integrál pomocí kmenové funkce 2
 
 https://youtu.be/WtLoQ79wUdo
 
@@ -87,7 +87,7 @@ $$\varphi(1,3)-\varphi(2,1)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
 </div>
 
 
-# Kmenová funkce pomocí křivkového integrálu
+## Kmenová funkce pomocí křivkového integrálu
 
 
 https://youtu.be/y-gTOlGVRXI
@@ -124,7 +124,7 @@ $$\varphi(x,y)=2x^3y+\frac 12 x^2+xy+C.$$
 
 </div>
 
-# Greenova věta
+## Greenova věta
 
 https://youtu.be/J6BVkOzg0mg
 
@@ -145,7 +145,7 @@ $$
 
 </div>
 
-# Rovnice vedení tepla v materiálech různých vlastností
+## Rovnice vedení tepla v materiálech různých vlastností
 
 https://youtu.be/CKZNkuyDd5Y
 
@@ -163,7 +163,7 @@ V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být
 </div>
 
 
-# Stacionární vedení tepla v žebru chladiče
+## Stacionární vedení tepla v žebru chladiče
 
 https://youtu.be/zvs3TsvBrho
 

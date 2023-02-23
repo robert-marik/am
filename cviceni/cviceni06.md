@@ -1,4 +1,4 @@
-% Dvojné integrály
+# Dvojné integrály
 
 > Anotace.
 >
@@ -8,7 +8,7 @@
 
 
 
-# Integrál přes obdélník
+## Integrál přes obdélník
 
 https://youtu.be/oFbhyqFRjmQ
 
@@ -36,7 +36,7 @@ $$
 
 </div>
 
-# Kvadratický moment pro obdélník
+## Kvadratický moment pro obdélník
 
 https://youtu.be/ykJy7r7Ena4
 
@@ -67,7 +67,7 @@ $$
 
 </div>
 
-# Integrál závislý na parametru
+## Integrál závislý na parametru
 
 https://youtu.be/GhdGvrx_pks
 
@@ -100,7 +100,7 @@ tj. ve dvou třetinách hloubky.
 </div>
 
 
-# Integrál přes trojúhelník
+## Integrál přes trojúhelník
 
 https://youtu.be/w0iqtpQvhAE
 
@@ -140,7 +140,7 @@ $$
 </div> 
 
 
-# Integrál pod parabolou
+## Integrál pod parabolou
 
 https://youtu.be/Sur6lhdR3ts
 
@@ -202,7 +202,7 @@ Obsah je $\frac 23$ a souřadnice těžiště jsou $\left[\frac 38,\frac 4{10}\r
 </div> 
 
 
-# Integrál přes čtvrtkruh
+## Integrál přes čtvrtkruh
 
 https://youtu.be/_YT3FDpfZsQ
 
@@ -259,7 +259,7 @@ což odpovídá tomu, že těžište je posunuto doprava nahoru ve srovnání t�
 
 </div>
 
-# Kvadratický moment kruhu
+## Kvadratický moment kruhu
 
 https://youtu.be/OPqy2AU-SKU
 

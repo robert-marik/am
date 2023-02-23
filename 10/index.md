@@ -1,15 +1,15 @@
-% Autonomní rovnice a systémy
-% Robert Mařík
-% 2020-2021
+# Autonomní rovnice a systémy
+
+
 
 <!--
-# Instrukce k online výuce prosinec 2021
+## Instrukce k online výuce prosinec 2021
 
 * Budeme se věnovat autonomním diferenciálním rovnicím. To jsou rovnice, kde pravá strana explicitně nezáleží na čase. Typické je využití například pro modelování populací, kdy závisí jenom na podmínkách ve kterých se populace nachází (například velikost populace, nosná kapacita prostředí a podobně) a nezáleží na tom, jaký je čas, je-li středa nebo pátek. 
 * V těchto případech je snadné u rovnic s jednou neznámou určit pomocí pravé strany rovnice znaménko derivace, odsud zda řešení roste nebo klesá a najít stabilní stacionární body (pod nimi řešení a nad nimi klesá, proto se přibližujeme ke stacionárnímu stavu) a nestabilní stacionární body (pod nimi řešení klesá, nad nimi roste, tedy se řešení vzdaluje od tohoto stavu). K provedení takové analýzy stačí vědět, kdy je pravá strana nulová, kdy kladná a kdy záporná. Na takovou informaci stačí obrázek. Můžeme mít například graf pravé strany. Někdy je pravá strana ve formě rozdílu a potom nás zajímá, která funkce je výš a která níž, protože potom poznáme, je-li rozdíl funkcí kladný nebo záporný. (Nula je pochopitelně tam, kde se funkce protnou.)
 * Poslední část přednášky se vztahuje k diferenciálním rovnicím více neznámými proměnnými. Například dvě populace (konkurence nebo potravní řetězec), enzymy řídící biochemickou reakci, ... . Opět si všímáme nulových bodů pravých stran, ale místo jedné rovnice máme soustavu. Také monotonie nemá smysl, ale ukazuje se, že se dá nahradit jinou relativně dobře zjistitelnou informací: vlastními čísly Jacobiho matice vypočtené ve stacionárním bodě.
 
-# Opakování
+## Opakování
 
 * Maticový součin
 * Řešitelnost homogenní soustavy lineárních rovnic
@@ -20,7 +20,7 @@
 
 -->
 
-# Úmluva
+## Úmluva
 
 V celé přednášce budeme jako nezávislou proměnnou uvažovat čas
 $t$. Autonomní znamená v tomto kontextu nezávislý na čase. Budeme
@@ -30,7 +30,7 @@ jednoznačnost řešení. To je například, pokud funkce na pravé straně
 rovnice má ohraničené parciální derivace, což bude v níže uvedených
 příkladech vždy splněno.
 
-# Autonomní diferenciální rovnice
+## Autonomní diferenciální rovnice
 
 https://youtu.be/9PbghCvHQ5c
 
@@ -59,7 +59,7 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt}$ a toto řešení se pro velká $t$ blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty $k$. Pravou stranu rovnice, funkci $f(y)$, je možné aproximovat vztahem $f(y)\approx f'(y_0)(y-y_0)$ a odsud a z poznatku, že malá změna rovnice vetšinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech) a proto rovnice $y'=f(y)$ kopíruje v okolí bodu $y_0$ chování rovnice $(y-y_0)'=f'(y_0)(y-y_0)$, pokud vynecháme patologické případy, což je zde $f'(y_0)=0$. Řešení je tedy $y\approx y_0+Ce^{f'(y_0)t}$ a tato funkce buď konverguje k $y_0$ nebo roste neohraničeně, v závislosti na znaménku derivace $f'(y_0)$.
 
 
-## Logistická diferenciální rovnice s konstantním lovem
+### Logistická diferenciální rovnice s konstantním lovem
 
 
 manim:Logistic|NyLkjOTYzVQ|Logistická rovnice s lovem.
@@ -92,16 +92,16 @@ Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodo
 
 > Poznámka (strukturální stabilita modelu, bifurkace). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je přirozené chování, kdy malá změna parametrů modelu způsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.
 
-## Model ostrovní biogeografie
+### Model ostrovní biogeografie
 
 [viz zde](https://robert-marik.github.io/dmp/prednaska/03.html#model-ostrovni-biogeografie)
 
-## Model metapopulací
+### Model metapopulací
 
 
 [viz zde](https://robert-marik.github.io/dmp/cviceni/cviceni_08.html)
 
-## Model soupeření jestřábí a holubičí povahy
+### Model soupeření jestřábí a holubičí povahy
 
 manim:Hawk_and_dove_game|zAzZrIShj9U|Model soupeření dvou povah. Ukazuje, že vždy bude v přírodě určité procento agrasivního vzorce chování. Někdy dokonce tento vzorech chování bude jediný. 
 
@@ -176,14 +176,14 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
 
 
 
-# Autonomní rovnice s pravou stranou ve tvaru rozdílu
+## Autonomní rovnice s pravou stranou ve tvaru rozdílu
 
 https://youtu.be/ccWuBp4kies
 
 > Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
 
 
-## Teplotní bilance Země
+### Teplotní bilance Země
 
 <div class='obtekat'>
 
@@ -197,7 +197,7 @@ $$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\t
 [Online model.](http://user.mendelu.cz/marik/aromamath/Teplotni_bilance_Zeme.html)
 
 
-## Logistická diferenciální rovnice s predátory
+### Logistická diferenciální rovnice s predátory
 
 manim:Obalec|iFmQWcR_JX4|Model populace pro preddačním tlakem využijeme například při studiu škůdce. Model vykazuje bifurkaci (malá změna vstupních dat může zcela změnit chování modelu) a hysterezi (stav souvisí i s historií modelu).
 
@@ -250,7 +250,7 @@ devastující účinky pro les.
 
 
 
-# Autonomní systém $X'=f(X)$
+## Autonomní systém $X'=f(X)$
 
 https://youtu.be/udATObf0s8I
 
@@ -289,7 +289,7 @@ od něj.
   změně koeficientů v systému se nezmění typ singulárních bodů se
   nazývá *strukturální stabilita*.
 
-## Bruselátor
+### Bruselátor
 
 \iffalse 
 
@@ -327,11 +327,10 @@ $$
 Jacobiho matice je $$J(X,Y)=\begin{pmatrix}2XY-5 & X^2 \\ 4-2XY & -X^2\end{pmatrix}$$
 a $$J(1,4)=\begin{pmatrix}3& 1\\-4 & -1\end{pmatrix}.$$
 Vlastní čísla jsou řešením rovnice
-$$0=\begin{vmatrix}3-\lambda & 1\\-4 & -1-\lambda\end{vmatrix}
-=\lambda^2- 2\lambda+4=(\lambda-1)^2+3.$$
+$$0=\begin{vmatrix}3-\lambda & 1\\-4 & -1-\lambda\end{vmatrix}=\lambda^2- 2\lambda+4=(\lambda-1)^2+3.$$
 Taková rovnice nemá řešení v množině reálných čísel a vlastní čísla jsou komplexně sdružená $$\lambda_{1,2}=1\pm \sqrt {3}i.$$ Protože reálná část $\Re(\lambda_i)=1>0$, řešení se v oscilacích vzdalují od rovnovážného bodu. Protože systém je druhého řádu a tímto postupem je možno získat dvě nezávislá řešení, lineárními kombinacemi vygenerujeme všechna řešení. Proto se v oscilacích budou od stacionárního bodu vzdalovat všechna řešení. Další stacionární bod neexistuje a koncentrace určitě zůstanou ohraničené z fyzikálních důvodů. Proto neexistuje stabilní stav, a systém je nestabilní. Je možné ukázat, že systém není chaotický, ale oscilacemi se přibližuje k periodickému řešení. Taková analýza je však již nad rámec základního seznámení se s aparátem autonomních systémů. 
 
-# Autonomní systém ve dvou dimenzích
+## Autonomní systém ve dvou dimenzích
 
 
 <div class='obtekat'>
@@ -403,11 +402,11 @@ ww:problems/autonomni_systemy/12.pg
 
 ww:problems/autonomni_systemy/14.pg
 
-# Základní modely populační ekologie
+## Základní modely populační ekologie
 
 Populační ekologie je součást ekologie zabývající se modelováním vývoje populací. Základním vyjadřovacím jazykem jsou diferenciální rovnice nebo jejich diskrétní obdoba, kdy se čas mění po skocích, diferenční rovnice. Málokdy uvažujeme jedinou populaci, většinou studujeme bohatší ekosystémy, což vede na soustavy rovnic. Dva nejklasičtější si zde stručně uvedeme a prostudujeme ve cvičení.
 
-## Model konkurence dvou druhů
+### Model konkurence dvou druhů
 
 manimp:Konkurence_druhu|Při konkurenci dvou druhů může dojít (podle nastavení parametrů) ke koexistenci nebo ke konkurenčnímu vyloučení. Model ukazuje, jak se konkurence projevuje v nejjednodušším případě, při sledování konkurence dvou populací.
 
@@ -420,7 +419,7 @@ $$
 $$
 Tento systém vychází z logistické rovnice pro každou z populací s doplněním členů $r_1 bxy$ a $r_2 cxy$, které charakterizují mezidruhovou konkurenci. Ukazuje se, že tento systém má kapacitu popsat všechny v přírodě pozorované druhy interakcí (slabá konkurence, silná konkurence, dominance jednoho z druhů) a je výchozím systémem pro veškeré modely používané v populační ekologii.
 
-## Model dravce a kořisti
+### Model dravce a kořisti
 
 manim:Predator_prey|zihShrEOJAU|Model dravce a kořisti vysvětluje kolísání populací okolo rovnovážné polohy. Jde o stabilitu, která však nespočívá s konstantních hodnotách stavů, ale v periodickém průběhu. 
 
@@ -437,7 +436,7 @@ V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$, (tj. pro
 
 
 
-# Vícerozměrné autonomní systémy, kompartmentové modely
+## Vícerozměrné autonomní systémy, kompartmentové modely
 
 Kompartmentové modely jsou modely, kde se je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým případem v roce 2020 je model epidemie, například [SIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie) nebo [SEIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=karantena).
 

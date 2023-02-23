@@ -1,4 +1,4 @@
-% Křivkové integrály
+# Křivkové integrály
 
 > Anotace.
 >
@@ -9,7 +9,7 @@
 
 
 
-# Křivkový integrál druhého druhu po třech různých křivkách
+## Křivkový integrál druhého druhu po třech různých křivkách
 
 https://youtu.be/i-y8bRLmopE
 
@@ -104,7 +104,7 @@ Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce $C_1
 </div>
 
 
-# Křivkový integrál druhého druhu po parabole
+## Křivkový integrál druhého druhu po parabole
 
 https://youtu.be/udS4xy2WIws
 
@@ -140,7 +140,7 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt
 
 
 
-# Křivkový integrál druhého druhu po kubické parabole
+## Křivkový integrál druhého druhu po kubické parabole
 
 
 Vypočtěte $$\int_{C} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=2y\vec \imath + x^2y\vec\jmath$$ po části kubické paraboly
@@ -178,7 +178,7 @@ ww:problems/krivkovy_integral/09.pg
 ww:problems/krivkovy_integral/10.pg
 
 
-# Tok vektorového pole uzavřenou křivkou
+## Tok vektorového pole uzavřenou křivkou
 
 https://youtu.be/nqbi-7hwcD4
 
@@ -212,7 +212,7 @@ kde poslední Riemannův integrál není nutné počítat, protože integrál z 
 </div>
 
 
-# Tok vektorového pole uzavřenou křivkou II
+## Tok vektorového pole uzavřenou křivkou II
 
 ![Zdroj: vlastní](priklad_5_5.png)
 
@@ -244,13 +244,13 @@ $$\int_C\vec F\mathrm d\vec r=0$$
 
 </div>
 
-# Křivkový integrál a tok graficky
+## Křivkový integrál a tok graficky
 
 https://youtu.be/h_LWsGTTUl4
 
 Vyřešte příklady na následujících odkazech. Řiďte se popsaným pravidlem, nebo pravidlem uvedeným ve videokomentáři.
 
-## Křivkový integrál
+### Křivkový integrál
 
 * Pokud křivka a vektorové pole svírají ostrý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně stejným směrem (nulový úhel) je příspěvek roven součinu.
 * Pokud křivka a vektorové pole svírají tupý úhel, je příspěvek k celkové hodnotě integrálu záporný. Pokud jsou přesně opačným směrem (úhel $180^\circ$) je příspěvek roven záporně vzatém součinu.
@@ -265,7 +265,7 @@ ww:problems/krivkovy_integral/30_03.pg
 ww:problems/krivkovy_integral/30_04.pg
 
 
-## Tok
+### Tok
 
 * Pravidla pro souvislost toku s intenzitou pole a délkou křivky jsou analogická jako u křivkového integrálu (delší křivka a intenzivnější vektorové pole způsobují větší tok).
 * Pokud se díváme ve směru křivky a pole přestupuje přes křivku zleva doprava, je tok kladný, v opačném případě záporný.

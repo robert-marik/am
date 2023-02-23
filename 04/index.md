@@ -1,6 +1,6 @@
-% Rotace vektorového pole
-% Robert Mařík
-% 2020
+# Rotace vektorového pole
+
+
 
 > Anotace.
 >
@@ -14,7 +14,7 @@
 > * I zde budeme pracovat s diferenciálními operátory. Je žádoucí umět spolehlivě derivovat.
 > * Budeme počítat vektorový součin vektorů. Ten je nejsnazší počítat pomocí determinantů třetího řádu. Tuto dovednost tedy využijeme.
 
-# Vektorová pole
+## Vektorová pole
 
 * Studujeme funkce $\mathbb{R}^2\to\mathbb{R}^2$ nebo $\mathbb{R}^3\to\mathbb{R}^3$.
 * Uspořádané dvojice nebo trojice na vstupu vektorového pole chápeme jako body v rovině nebo v prostoru. Uspořádané dvojice nebo trojice na výstupu chápeme jako vektory. Bodům v rovině nebo v prostoru jsou tedy přiřazeny vektory. Můžeme proto vektorové pole interpretovat jako rychlostní pole nebo silové pole. 
@@ -23,7 +23,7 @@
 * 3D: $\vec F:\mathbb {R}^3 \to \mathbb {R}^3$. Ve složkách píšeme
   $$ \vec F = (P, Q, R) = P\vec \imath + Q\vec \jmath + R\vec k,$$ kde $P$, $Q$ a $R$ jsou (skalární) funkce tří  proměnných.
 
-# Příklady vektorových polí v rovině
+## Příklady vektorových polí v rovině
 
 https://youtu.be/KR42PRY-72U
 
@@ -41,13 +41,12 @@ https://youtu.be/KR42PRY-72U
   stěnám. Tekutinu proudící doprava je možné pro $y\in [0,1]$
   modelovat vektorovým polem $$\vec F_6=(y(1-y),0)=y(1-y)\vec \imath.$$
 
-# Totální diferenciál
+## Totální diferenciál
 
 https://youtu.be/nD_nqakTN-A
 
 > Definice (totální diferenciál). Totálním diferenciálem funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ nazýváme výraz
-$$      \mathrm{d}f=
-\nabla f (x_0,y_0) \cdot (\mathrm{d}x,\mathrm{d}y)=\frac{\partial f (x_0,y_0)}{\partial x}\mathrm{d}x+\frac{\partial f (x_0,y_0)}{\partial y}\mathrm{d}y.
+$$      \mathrm{d}f=\nabla f (x_0,y_0) \cdot (\mathrm{d}x,\mathrm{d}y)=\frac{\partial f (x_0,y_0)}{\partial x}\mathrm{d}x+\frac{\partial f (x_0,y_0)}{\partial y}\mathrm{d}y.
 $$
 
 V souvislosti s totálním diferenciálem často vyvstává otázka, zda pro
@@ -63,7 +62,7 @@ předpokladu dostatečně hladkých funkcí na otevřené množině.
 
 Jeden směr implikace v předchozí větě je snadný a plyne hned ze Schwarzovy věty.
 
-# Skalární a vektorový součin
+## Skalární a vektorový součin
 
 Diferenciální operátor divergence jsme poznali v minulé přednášce v
 souvislosti s difuzní rovnicí. Formálně jde o skalární součin operátoru $\nabla$ definovaného vztahem
@@ -74,15 +73,14 @@ Vektorovým součinem $\vec a \times \vec b$ vektorů $\vec
 a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor 
 \dm $$\vec a\times\vec b=\begin{vmatrix} \vec \imath & \vec \jmath &\vec k \\ a_1&a_2&a_3 \\ b_1& b_2& b_3\end{vmatrix}=(a_2b_3-a_3b_2)\vec\imath+(a_3b_1-a_1b_3)\vec\jmath+(a_1b_2-a_2b_1)\vec k.$$
 
-# Rotace
+## Rotace
 
 https://youtu.be/ev3eFilaGpw
 
 > Definice (rotace vektorového pole). Pro vektorovou funkci tří proměnných  $$\vec
   F=P\vec \imath+Q\vec \jmath+R\vec k$$ definujeme operátor _rotace_ vztahem
   $$
-  \mathop{\mathrm{rot}} \vec F=\nabla \times \vec F=
-  \begin{vmatrix}
+  \mathop{\mathrm{rot}} \vec F=\nabla \times \vec F=  \begin{vmatrix}
     \vec \imath & \vec \jmath &\vec k\\
     \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\ P &Q &R
   \end{vmatrix}.
@@ -108,7 +106,7 @@ manimp:Curl|Rotace vektorového pole pomocí Sarussova pravidla.
 
 <!-- ![Nevírové pole](nevirove.svg)	 -->
 
-# Rotace významných polí
+## Rotace významných polí
 
 https://youtu.be/JChhJ4nDAtw
 
@@ -117,7 +115,7 @@ https://youtu.be/JChhJ4nDAtw
 * Rotace pole kolmého na dostředivé pole závisí na mocnině, se kterou toto pole ubývá. Pro $$\vec F(x,y)=\frac{-y\vec \imath +x\vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=-\frac{2(n-1)}{(x^2+y^2)^n}\vec k.$$ Pro různé $n$ toto pole cirkuluje okolo počátku proti směru hodinových ručiček. Rotace (ve smyslu operátoru rotace) však může být kladná i záporná, což je určeno znaménkem výrazu $n-1$. Pokud bychom takovým polem nechali unášet drobný míček, v jednom případě by jej pole otáčelo po směru a v jiném případě proti směru hodinových ručiček. Pro $n=1$ by se míček neroztočil okolo vlastní osy vůbec, rotace je nulová. [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3U16iIM9KujDPSjMvTqUDhGQAVFmfkl2tAVMN4GgopmWlpGm7RhrFgcZ0KTV2oiAFUpFJTQVOvODO3ICczrTI-rTQnRwMoAgB8XCfD&lang=sage) [Nakreslit online.](https://sagecell.sagemath.org/?z=eJztVNFOwjAUfV-yf7iJmLWzDIEXQjL_AoIhxJRRsLHrZtdp-_e2hQVZUJ-N3jXr3T1n3d3pSXlZV0qDbMvaAm1A1nHEj7WS6lpUWvBtVlufebwWOo78teeH3D1kbm4VQ2OCZmSGMcQRNZCDK2eHgiIcR55lXoqdz-PIlFwSMCU1BGzIbRneGE4JuBEmT3SI4CXXDhqPJgTus3EcNc_VO3rWpUDJQOa3zSC5FVQzgyTGYfkd28Nub5AhFs9BMd0qCWhoR8ik6eTOuhtOU4k7pu0xzXXii2KN4PqCfCY-hEZP3xeaupbvs0kcrcgjWZBlvt6QbgTpKgUGuHRiZ1RReWDosyphCTyPI3DhufaSe1atx_XBe72eER-ru3xtNpe1R1ezvdrC1ToVe9AyQLaDjtv72vI3ptDpfwkUlahUnmwT7O2QNUw_0aZmhUYJe22pSAgkO6qp0y05OSTsbJDw5npMj777bAsCYy_zj6b4DbbwGhRif5Tg3yHfOuQLj_Ts4c6MSTb9t8efsscHFNPTYw==&lang=sage)
 
 <!--
-# Rotace gradientu je nulový vektor
+## Rotace gradientu je nulový vektor
 
 Buď $\varphi(x,y,z):\mathbb{R}^3\to\mathbb{R}^3$ skalární funkce a buď $\vec F(x,y,z)=\nabla \varphi(x,y,z)$. Vypočtěte $\nabla\times\vec F$.
 
@@ -131,12 +129,8 @@ $$\begin{aligned}
     \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\
 \frac{\partial\varphi}{\partial x} &\frac{\partial\varphi}{\partial y} &\frac{\partial\varphi}{\partial z}
 \end{vmatrix}
-\\&=
-\vec \imath \left( \frac{\partial}{\partial y}\frac{\partial\varphi}{\partial z} - \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial y} \right)
-+
-\vec \jmath \left( \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial x} - \frac{\partial}{\partial x}\frac{\partial\varphi}{\partial z} \right)
-\\&\quad +
-\vec k \left( \frac{\partial}{\partial x}\frac{\partial\varphi}{\partial y} - \frac{\partial}{\partial y}\frac{\partial\varphi}{\partial x} \right)
+\\&=\vec \imath \left( \frac{\partial}{\partial y}\frac{\partial\varphi}{\partial z} - \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial y} \right)+\vec \jmath \left( \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial x} - \frac{\partial}{\partial x}\frac{\partial\varphi}{\partial z} \right)
+\\&\quad +\vec k \left( \frac{\partial}{\partial x}\frac{\partial\varphi}{\partial y} - \frac{\partial}{\partial y}\frac{\partial\varphi}{\partial x} \right)
 \end{aligned}
 $$
 Podle Schwarzovy věty (nezáleží na pořadí derivování) je každá závorka rovna nule. Proto platí $\nabla\times\vec F=0$.
@@ -153,7 +147,7 @@ na rozdíl od rychlosti veličina, která není vektorová a proto se s ní
 lépe pracuje.
 
 
-# Divergence rotace je nula
+## Divergence rotace je nula
 
 
 Buď $\vec F:\mathbb{R}^3\to\mathbb{R}^3$ hladké vektorové pole. Vypočtěte $\nabla \cdot (\nabla \times \vec F)$
@@ -164,12 +158,9 @@ Buď $\vec F:\mathbb{R}^3\to\mathbb{R}^3$ hladké vektorové pole. Vypočtěte $
 
 Použijeme definici divergence, větu o derivaci součtu a přeskupíme sčítance.
   $$
-\begin{aligned}  \nabla\cdot (\nabla\times \vec F )&=
-\frac{\partial }{\partial x}\left(\frac{\partial R}{\partial y}-\frac{\partial
-    Q}{\partial z}\right) +
-    \frac{\partial }{\partial y}\left( \frac{\partial P}{\partial z}-\frac{\partial
-    R}{\partial x}\right) +
-    \frac{\partial }{\partial z} \left( \frac{\partial Q}{\partial x}-\frac{\partial
+\begin{aligned}  \nabla\cdot (\nabla\times \vec F )&=\frac{\partial }{\partial x}\left(\frac{\partial R}{\partial y}-\frac{\partial
+    Q}{\partial z}\right) +    \frac{\partial }{\partial y}\left( \frac{\partial P}{\partial z}-\frac{\partial
+    R}{\partial x}\right) +    \frac{\partial }{\partial z} \left( \frac{\partial Q}{\partial x}-\frac{\partial
     P}{\partial y}\right)
 \\
   &=\frac{\partial }{\partial x}\frac{\partial R}{\partial y}
@@ -237,7 +228,7 @@ Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a
 -->
 
 
-# Zákon šíření chyb  (chyba nepřímo měřené veličiny)
+## Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
 https://youtu.be/52W524bSOKQ
 
@@ -265,7 +256,7 @@ jednotlivými veličinami $x_i$. Častěji se však používá následující vz
 \dm $$  \Delta f(x_1,x_2,\dots x_n)\approx\sqrt{\left(\frac{\partial f}{\partial x_1}\Delta x_1\right)^2+\left(\frac{\partial f}{\partial x_2}\Delta x_2\right)^2+\cdots+\left(\frac{\partial f}{\partial x_n}\Delta x_n\right)^2}$$
 označovaný **zákon šíření chyb**.
 
-# Zákon šíření chyb (příklad)
+## Zákon šíření chyb (příklad)
 
 \iffalse 
 
@@ -278,8 +269,7 @@ označovaný **zákon šíření chyb**.
 \fi
 
 Kanadský empirický vzorec pro pocitovou teplotu v zimě ([wind-chill
-factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
-13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},$$ kde $T$ je teplota
+factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},$$ kde $T$ je teplota
 (ve stupních Celsia) a $v$ je rychlost větru (v km/hod). Teplota byla
 změřena $-11.0\,{}^\circ\!\text{C}$ s chybou $0.2\,{}^\circ\!\text{C}$ a rychlost $26
 \,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využitím zákona šíření
@@ -316,7 +306,7 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 <!--
 \iffalse
 
-# Mocnina se kterou ubývá nezřídlové vektorové pole (1/2)
+## Mocnina se kterou ubývá nezřídlové vektorové pole (1/2)
 
 Pro jaké $n$ má vektorové pole 
 $$\vec F=\frac{1}{(x^2+y^2+z^2)^n} (x,y,z)$$
@@ -333,7 +323,7 @@ a
 $$\frac{\partial f}{\partial z}=-\frac {2nz}{(x^2+y^2+z^2)^{n+1}}.$$
 Odsud dostáváme gradient $$\nabla f= -\frac {2n}{(x^2+y^2+z^2)^{n+1}} (x,y,z).$$
 
-# Mocnina se kterou ubývá nezřídlové vektorové pole (2/2)
+## Mocnina se kterou ubývá nezřídlové vektorové pole (2/2)
 
 Pro $\vec G=(x,y,z)$ dostáváme snadno divergenci $\nabla \vec G = 1+1+1=3$.
 
@@ -358,7 +348,7 @@ od počátku.
   gravitační zákon je v pořádku, což víme například ze studia pohybu
   planet.
 
-# Shrnutí diferenciálních operátorů
+## Shrnutí diferenciálních operátorů
 
 
 <style>
@@ -402,7 +392,7 @@ table {
   nezávislé rovnice zapsané v jedné vektorové rovnici. Příkladem je Navierova-Stokesova rovnice níže.
 
 
-# Popis pole
+## Popis pole
 
 Následující popis je pro jednoduchost a konkrétnost proveden pro
 gravitační pole. Je však plně obecný, pokud odpovídajícím způsobem
@@ -420,10 +410,10 @@ nahradíme příslušné veličiny a charakteristiky objektů.
     - Potenciál gravitačního pole je možné ze zadané intenzity počítat hledáním totálního diferenciálu zpětným integrováním nebo pomocí křivkového integrálu druhého druhu (viz později v semestru).
 
 
-# Ukázky použití - rovnice matematické fyziky 1/2
+## Ukázky použití - rovnice matematické fyziky 1/2
 
 
-#### *Rovnice kontinuity* 
+##### *Rovnice kontinuity* 
 
 Zákon zachování veličiny která může vznikat, zanikat a téct, veličina
 $\rho$ vyjadřuje prostorovou hustotu a $\vec \jmath$ tok a $s$ intenzita
@@ -435,7 +425,7 @@ $$
 $$
 
 
-#### *Rovnice difuze, rovnice vedení tepla* 
+##### *Rovnice difuze, rovnice vedení tepla* 
 
 Tato rovnice rovněž vystihuje chování difundující látky v trojrozměrné
 oblasti. Jedná se vlastně o rovnici kontinuity doplněnou o předpoklad,
@@ -458,7 +448,7 @@ rovnice difuze.
 
 
 
-#### *Navierova-Stokesova rovnice*
+##### *Navierova-Stokesova rovnice*
 
 Rovnice popisující proudění viskozní Newtonovské tekutiny. Jeden z
 [Millennium Prize
@@ -473,9 +463,9 @@ $$
 
 
 
-# Ukázky použití - rovnice matematické fyziky 2/2
+## Ukázky použití - rovnice matematické fyziky 2/2
 
-#### *Maxwellovy rovnice* 
+##### *Maxwellovy rovnice* 
 
 Úplně popisují elektromagnetické vlnění. Jejich důsledkem jsou
 (přidáme-li materiálové vztahy) například zákon odrazu a lomu světla,
@@ -491,7 +481,7 @@ $$
 $$
 
 
-#### *Vlnová rovnice* 
+##### *Vlnová rovnice* 
 
 Popisuje vlnění, stojaté i postupné vlny. Pro elektromagnetickou vlnu
 jde rovnice odvodit z Maxwellových rovnic.
@@ -501,7 +491,7 @@ $$
 $$
 
 
-#### *Schrödingerova rovnice* 
+##### *Schrödingerova rovnice* 
 
 Základní rovnice kvantové mechaniky, popisuje chování částice v
 potenciálovém poli $V$, řešením je vlnová funkce částice $\psi$.
@@ -515,7 +505,7 @@ $$
 
 
 
-# Shrnutí vzorců pro výpočty
+## Shrnutí vzorců pro výpočty
 
 
 
@@ -556,7 +546,7 @@ Použité označení:
 
 
 
-# Proč je gradient kolmý na vrstevnice?
+## Proč je gradient kolmý na vrstevnice?
 
 <div class='sloupce'>
 
@@ -575,8 +565,7 @@ gradient. Odvodíme vztah mezi vrstevnicemi a gradientem.
   x}{\mathrm{d} t}+\frac{\partial f}{\partial y}\frac{\mathrm{d}
   y}{\mathrm{d} t} $$ (derivace složené funkce více proměnných)
 * Platí 
-  $$\begin{aligned}0=\frac{\mathrm{d}F}{\mathrm{d}t}&=
-  \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial
+  $$\begin{aligned}0=\frac{\mathrm{d}F}{\mathrm{d}t}&=  \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial
   y}\right)\cdot\left(\frac{\mathrm{d} x}{\mathrm{d} t},
   \frac{\mathrm{d} x}{\mathrm{d} t}\right) \\&= \nabla
   f(x,y)\cdot(x'(t),y'(t))\end{aligned}$$ (derivace konstanty z
@@ -592,7 +581,7 @@ gradient. Odvodíme vztah mezi vrstevnicemi a gradientem.
 
 -----
 
-### Vztah mezi gradientem a vrstevnicemi
+#### Vztah mezi gradientem a vrstevnicemi
 
 <div class='sloupce'>
 Z předchozího plyne
@@ -607,7 +596,7 @@ bodem.
 
 </div>
 
-# Implicitně definovaná funkce 
+## Implicitně definovaná funkce 
 
 
 <div class='sloupce'>
@@ -633,7 +622,7 @@ tj. $f(x_0,y_0)=C$.
 
 </div>
 
-# Implicitně definovaná funkce  (pokračování)
+## Implicitně definovaná funkce  (pokračování)
 
 
 <div class='sloupce'>
@@ -656,7 +645,7 @@ tj. $f(x_0,y_0)=C$.
 
 </div>
 
-# Implicitně definovaná funkce  (závěr)
+## Implicitně definovaná funkce  (závěr)
 
 <div class='sloupce_'>
 
@@ -682,7 +671,7 @@ tj. $f(x_0,y_0)=C$.
 
 
 
-# Separace proměnných
+## Separace proměnných
 
 
 
@@ -709,19 +698,17 @@ vlastnost.
  Naznačíme část důkazu. Pokud platí $$\varphi(x,y)=f(x)g(y),$$ je
   $$\ln \varphi(x,y)=\ln(f(x))+\ln(g(y)).$$ Derivací podle $x$ dostáváme
 $$
-    \frac {\frac{\partial }{\partial x}\varphi(x,y)}{\varphi (x,y)}=
-    \frac{f'(x)}{f(x)}.
+    \frac {\frac{\partial }{\partial x}\varphi(x,y)}{\varphi (x,y)}=    \frac{f'(x)}{f(x)}.
 $$
   Protože pravá strana nezávisí na $y$, dostáváme derivováním podle $y$
 $$
-    \frac {\left(\frac{\partial^2 \varphi (x,y)}{\partial y\partial x}\right)\varphi(x,y)-\left(\frac{\partial \varphi (x,y)}{\partial x\vphantom{y}}\right)\left(\frac{\partial \varphi (x,y)}{\partial y}\right)}{\varphi^2(x,y)}=
-    0
+    \frac {\left(\frac{\partial^2 \varphi (x,y)}{\partial y\partial x}\right)\varphi(x,y)-\left(\frac{\partial \varphi (x,y)}{\partial x\vphantom{y}}\right)\left(\frac{\partial \varphi (x,y)}{\partial y}\right)}{\varphi^2(x,y)}=    0
 $$
   Výraz v čitateli je uveden v tvrzení věty.
 
 </div>
 
-# Lokální extrémy funkce více proměnných
+## Lokální extrémy funkce více proměnných
 
 <div class='sloupce'>
 
@@ -751,7 +738,7 @@ následující věta.
 
 -----
 
-#### Lokální extrémy funkce více proměnných (pokračování)
+##### Lokální extrémy funkce více proměnných (pokračování)
 
 <div class='sloupce'>
 
@@ -764,7 +751,7 @@ následující věta.
 
 -----
 
-# Zákon šíření chyb  (chyba nepřímo měřené veličiny)
+## Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
 
 * V praxi často měříme nepřímo veličinu $f$ tak, že měříme veličiny
@@ -794,7 +781,7 @@ označovaný **zákon šíření chyb**.
 
 
 
-# Z ptačí perspektivy
+## Z ptačí perspektivy
 
 \iffalse
 

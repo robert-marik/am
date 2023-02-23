@@ -1,4 +1,4 @@
-% Diferenciální rovnice druhého řádu
+# Diferenciální rovnice druhého řádu
 
 <!--
 
@@ -6,7 +6,7 @@ https://youtu.be/a308Zs_6bq0
 
 -->
 
-# Okrajová úloha
+## Okrajová úloha
 
 Ukažte, že úloha
 $$y''-my=0, \quad y(0)=0=y(1), \ m>0$$
@@ -31,7 +31,7 @@ $$y(t)=0 e^{\sqrt m t} + 0 e^{-\sqrt m t}=0$$
 tj. na konstantní nulovou funkci.
 </div>
 
-# Okrajová úloha pro rovnici žebra chladiče
+## Okrajová úloha pro rovnici žebra chladiče
 
 *V určitých speciálních případech má smysl formulovat i jiné typy okrajových podmínek, než podmínky na funkční hodnotu (Dirichletova) nebo derivaci (Neumannova) případně na jejich kombinace. Například může být přirozené požadovat ohraničenost.*
 
@@ -69,7 +69,7 @@ Pro zadané pevné $x$ a kladné $C$ je funkce $$T=T_0+C e^{-\sqrt{\frac h\lambd
 
 </div>
 
-# Separce proměnných ve vlnové rovnici, kmity struny
+## Separce proměnných ve vlnové rovnici, kmity struny
 
 Rovnice kmitů struny je (po eliminaci konstant)
 $$\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}$$

@@ -1,10 +1,10 @@
-% Autonomní rovnice a systémy
+# Autonomní rovnice a systémy
 
 K cvičení je k dispozici [Jupyter zápisník s numerickými simulacemi](http://user.mendelu.cz/marik/aromamath/Autonomni_rovnice_a_systemy.html) zde představených modelů. Tento zápisník je možné si naklonovat a samostatně modifikovat příkazy nebo texty a zkoušet vlastní numerické simulace.
 
 <!--
 
-## Instrukce k online výuce prosinec 2021
+### Instrukce k online výuce prosinec 2021
 
 * V úlohách bude podstatná schopnost sestavení diferenciální rovnice a umění detekovat, zda kde je pravá strana rovnice nulová, kde kladná  a  kde záporná. To je dostatečná informace k tomu, abychom dokázali odhalit stacionární body (to jsou stavy kdy je systém v rovnováze a do jednoho s těchto stavů časem dospěje), nestabilní stacionární body (stavy, kdy je systém v křehké rovnováze, která je narušena i malým výkyvem) a stabilní stacionární body (systém je v robustní rovnováze, která se po malých výchylkách sama automaticky obnovuje). V první úloze je možné uvažovat pravou stranu jako celek a zakreslit si situaci graficky. Ve druhé úloze je členů více a je výhodnější pravou stranu uvažovat jako rozdíl dvou funkcí a hledat průsečíky a intervaly, kdy je jedna funkce nad druhou a naopak. 
 * Ve třetí úloze si ukážeme, jak se dají namodelovat soustavy rovnic diferenciálních rovnic. Použijeme k tomu lehce představitelný případ konkurence populací v ekosystému. Kromě sestavení rovnice si ukážeme nástroj umožňující pohodlné modelování, jak se budou chovat řešení. (Význam tohoto nástroje je čistě pedagogický. V praxi je nutné aby toto modelování bylo stavebním kamenem nějaké celkové analýzy, zahrnující jednotlivé scénáře, pravděpodobnostní rozložení hodnot parametrů a podobně. Zde jakýkoliv interaktivní nástroj nemá šanci na uplatnitelnost.)
@@ -12,7 +12,7 @@ K cvičení je k dispozici [Jupyter zápisník s numerickými simulacemi](http:/
 
 -->
 
-# Skladování stavebního recyklátu
+## Skladování stavebního recyklátu
 
 https://youtu.be/5gOGLPv8BeU
 
@@ -51,7 +51,7 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 
 
-# Propeptid kolagenu
+## Propeptid kolagenu
 
 https://youtu.be/yAHdtic9b18
 
@@ -79,12 +79,12 @@ s rozdílem klesající a rostoucí funkce na pravé straně. Tyto funkce mají 
 </div>
 
 
-# Modely interagujících populací
+## Modely interagujících populací
 
 
 https://youtu.be/Rd_5KC2iFtE
 
-## Jelen a los
+### Jelen a los
 
 ![Jelen a los](moose.jpg)
 
@@ -126,7 +126,7 @@ $$
 -->
 
 
-## Puštík obecný
+### Puštík obecný
 
 ![wikimedia](pustik.jpg)
 
@@ -156,7 +156,7 @@ $$
 </div>
 
 
-## Kůň Převalského
+### Kůň Převalského
 
 
 ![Kůň Převalského](prevalski.jpg)
@@ -196,7 +196,7 @@ $$
 -->
 
 
-# Analýza 2D systému pomocí vlastních čísel
+## Analýza 2D systému pomocí vlastních čísel
 
 https://youtu.be/bEc6CTxRB3g
 

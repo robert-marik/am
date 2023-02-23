@@ -1,0 +1,32 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Přednášky
+    numbered: true
+    chapters:
+    - file: 01/index.md
+    - file: 02/index.md
+    - file: 03/index.md
+    - file: 04/index.md
+    - file: 05/index.md
+    - file: 06/index.md
+    - file: 07/index.md
+    - file: 08/index.md
+    - file: 09/index.md
+    - file: 10/index.md
+    - file: 11/index.md
+  - caption: Cvičení
+    numbered: true
+    chapters:
+    - file: cviceni/cviceni01.md
+    - file: cviceni/cviceni02.md
+    - file: cviceni/cviceni03.md
+    - file: cviceni/cviceni04.md
+    - file: cviceni/cviceni05.md
+    - file: cviceni/cviceni06.md
+    - file: cviceni/cviceni07.md
+    - file: cviceni/cviceni08.md
+    - file: cviceni/cviceni09.md
+    - file: cviceni/cviceni10.md
+    - file: cviceni/cviceni11.md
+ 

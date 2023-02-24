@@ -231,6 +231,7 @@ Ukažte, že stacionární stav je robustní (roven $T_0=\frac\gamma k$ a nezáv
 1. Modelem je rovnice $$\frac{\mathrm dT}{\mathrm dt}=aP+S-bT$$ a stacionární řešení pro konstantní výkon $P$ získáme řešením rovnice
 $$0=aP+S-bT,$$
 tj. $$T=\frac{aP+S}{b}.$$ Evidentně toto řešení závisí na parametrech systému.
+
 1. Vztah $$\frac{\mathrm dP}{\mathrm dt}=-k(T-T_0)$$ modeluje regulaci výkonu topného zařízení tak, aby se výkon snižoval při teplotě větší než $T_0$ a zvyšoval při teplotě menší. Rychlost změny výkonu je úměrná odchylce aktuální teploty od teploty $T_0$.
 Spojením rovnic získáme systém 
 $$\begin{aligned}
@@ -245,8 +246,8 @@ $$\begin{aligned}
 \end{aligned}
 $$
 Druhá rovnice okamžitě dává $T=T_0$ a toto řešení evidentně nezávisí na parametrech jako $a$, $b$, $k$ nebo $S$.
-2. 
-Systém 
+
+2. Systém 
 $$\begin{aligned}
 \frac{\mathrm dT}{\mathrm dt}&=aP+S-bT\\
 \frac{\mathrm dP}{\mathrm dt}&=\alpha P-k T+\gamma 
@@ -264,6 +265,7 @@ a odsud
 $$T=\frac{\alpha S-a\gamma}{\alpha b-ak}.$$
 Aby řešení nezáviselo na $S$, musí být $\alpha =0.$ Potom dostáváme 
 $$T=\frac{\gamma}{k}.$$ V označení podle předchozího bodu máme $\gamma=kT_0$, tj. $$T=T_0$$ a řešení nezávisí na parametrech $a$, $b$, $k$ nebo $S$. Tomu říkáme, že stacionární stav je robustní.
+
 2. Model 
 $$\begin{aligned}
 \frac{\mathrm dT}{\mathrm dt}&=aP+S-bT\\

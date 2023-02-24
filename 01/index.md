@@ -324,10 +324,12 @@ modelu bude funkce $T$. Po vyřešení modelu bychom tedy měli vzorec
 udávající teplotu v libovolném bodě tyče a v libovolném čase. Nejprve
 ovšem musíme požadovnou rovnici sestavit.
 
-> Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
->
-> * Rozdílem teplot je vyvolán tok tepla. Velikost toku tepla je úměrná teplotnímu rozdílu a teplo teče z místa s větší teplotou do místa s menší teplotou.
-> * Teplota se zvyšuje dodáním tepla. Změna teploty je úměrná dodanému teplu.
+```{prf:remark}
+Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
+
+* Rozdílem teplot je vyvolán tok tepla. Velikost toku tepla je úměrná teplotnímu rozdílu a teplo teče z místa s větší teplotou do místa s menší teplotou.
+* Teplota se zvyšuje dodáním tepla. Změna teploty je úměrná dodanému teplu.
+```
 
 \iffalse
 

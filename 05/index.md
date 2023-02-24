@@ -1,15 +1,17 @@
 # Křivkový integrál
 
-> Anotace.
->
-> * V přednášce se seznámíme s rozšířením Riemannova integrálu. Riemannův integrál umožňuje sečíst příspěvky na úsečce. Zobecníme si tento nástroj tak, že umožní sečíst příspěvky podél křivky. Seznámíme se s křivkovým integrálem.
-> * Zaměříme se na křivkový integrál druhého druhu. V cizojazyčné literatuře je tento integrál nazývaný též integrál vektorového pole. Umožňuje vypočítat práci nebo obecně potenciál a tím přejít (pokud to jde) ke skalárnímu popisu pole namísto vektorového. Tím se popis studovaných systémů zjednoduší.
-> * Další aplikací křivkového integrálu druhého druhu je tok vektorového pole křivkou. Ten využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
-> * Motivací pro zavedení křivkového integrálu druhého druhu je i výpočet [toku přes hranici množiny.](http://user.mendelu.cz/marik/aromamath/Krivkovy_integral.html)
+```{admonition} Anotace
 
-> Prerekvizity.
->
-> * Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+* V přednášce se seznámíme s rozšířením Riemannova integrálu. Riemannův integrál umožňuje sečíst příspěvky na úsečce. Zobecníme si tento nástroj tak, že umožní sečíst příspěvky podél křivky. Seznámíme se s křivkovým integrálem.
+* Zaměříme se na křivkový integrál druhého druhu. V cizojazyčné literatuře je tento integrál nazývaný též integrál vektorového pole. Umožňuje vypočítat práci nebo obecně potenciál a tím přejít (pokud to jde) ke skalárnímu popisu pole namísto vektorového. Tím se popis studovaných systémů zjednoduší.
+* Další aplikací křivkového integrálu druhého druhu je tok vektorového pole křivkou. Ten využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+* Motivací pro zavedení křivkového integrálu druhého druhu je i výpočet [toku přes hranici množiny.](http://user.mendelu.cz/marik/aromamath/Krivkovy_integral.html)
+```
+
+```{admonition} Prerekvizity
+
+* Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+```
 
 ## Křivkový integrál
 
@@ -109,34 +111,8 @@ a integrál má tvar
 
 ### Aplikace křivkového integrálu prvního druhu
 
-<style>
-table, th, td {
-   border: 0px solid green;
-} 
-table {width:97%;}
-td {padding:10px}
-table {
-    border-collapse: collapse;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-}
-
-th {
-    border-bottom: 2px solid black;
-    text-align: left;
-    }
-
-</style>
 
 \iffalse
-
-\maxwidthdefault
-\def\velkatabulka{Aplikace křivkového integrálu prvního druhu jsou shrnuty v tabulce.\begin{table*}\setlength{\columnwidth}{18cm}}
-\def\velkatabulkakonec{\caption{Aplikace křivkového integrálu prvního druhu}\end{table*}}
-
-\velkatabulka
 
 |Funkce $f(x,y)$        |Integrál $\int_C f\;\mathrm{d}s$                                                                         |
 |----------------|-----------------------------------------|
@@ -147,8 +123,6 @@ th {
 |$y^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $x$|
 |$\rho^2(x,y)\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k obecné ose, kde $\rho(x,y)$ je vzdálenost bodu $[x,y]$ od osy otáčení.|
 
-\velkatabulkakonec
-
 \fi
 
 ### Vlastnosti křivkového integrálu prvního druhu
@@ -156,6 +130,7 @@ th {
 ```{prf:theorem} nezávislost na zvolené parametrizaci
 :nonumber:
  Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci křivky $C$. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.
+``` 
   
 ```{prf:theorem} linearita
 :nonumber:

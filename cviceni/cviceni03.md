@@ -69,20 +69,9 @@ Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $
 
 1. Gradient je vektor složený z parciálních derivací. $$\nabla T=\qty(
   4(2x-y)+4x^3,-2(2x-y))^T$$ Tok je tenzor vodivosti maticově vynásobený s gradientem teploty a faktorem $(-1)$.
-  $$-k\cdot \nabla T=-  \begin{pmatrix}
-    4&1\\1&6
-  \end{pmatrix}
-  \begin{pmatrix}
-    4(2x-y)+4x^3\\-2(2x-y)
-  \end{pmatrix} =-  \begin{pmatrix}
-    14(2x- y)+16x^3\\-8(2x- y)+4x^3
-  \end{pmatrix}
-$$
+  $$-k\cdot \nabla T=-  \begin{pmatrix}     4&1\\1&6  \end{pmatrix}  \begin{pmatrix}    4(2x-y)+4x^3\\-2(2x-y)  \end{pmatrix} =-  \begin{pmatrix}    14(2x- y)+16x^3\\-8(2x- y)+4x^3  \end{pmatrix}$$
 1. Do vztahu pro tok dosadíme rovnici levého okraje desky, tj. $x=0$.
-  $$-k\cdot \nabla T (x=0)=  \begin{pmatrix}
-    14y\\-8y
-  \end{pmatrix}
-  $$
+  $$-k\cdot \nabla T (x=0)=  \begin{pmatrix}    14y\\-8y  \end{pmatrix}  $$
   Na levém okraji desky je $y>0$ a proto $14y>0$. Tok míří doprava a teplo teče na tomto okraji do desky.
 1.  Vypočteme divergenci toku určeného v prvním bodě. $$
   \begin{aligned}

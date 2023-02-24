@@ -138,13 +138,11 @@ ww:problems/krivkovy_integral/40_06.pg
 
 \fi
 
-<div class='sloupce'>
 
 ![Křivkový integrál v nekonzervativním poli (obsahy jsou různé)](nezavislost_na_ceste_1.png)
 
 ![Křivkový integrál v konzervativním poli (obsahy jsou stejné)](nezavislost_na_ceste_2.png)
 
-</div>
 
 \iffalse
 

@@ -2,7 +2,7 @@
 
 ```{admonition} Anotace.
 * V úvodu si ukážeme vektorové pole, kde výpočet po třech různých křivkách mezi stejnými body, vede ke třem různým výsledkům.
-> * Poté zkusíme vypočítat bez bližšího kontextu několik křivkových integrálů pro pro získání určité míry jistoty při práci s tímto integrálem. 
+* Poté zkusíme vypočítat bez bližšího kontextu několik křivkových integrálů pro pro získání určité míry jistoty při práci s tímto integrálem. 
 * Poté se zaměříme tok vektorového pole křivkou a ukážeme si souvislost výsledného toku s grafickým znázorněním situace.
 * Odhadu křivkového integrálu a toku křivkou se budeme věnovat v posledním příkladě. Naučíme se, čeho si všímat, když chceme zjistit, zda je výsledný integrál nebo tok kladný nebo záporný.
 ```
@@ -21,7 +21,7 @@ Tj. počítáme
 $$\int_{C_i} -y\,\mathrm dx + x\,\mathrm dy$$
 po třech zadaných křivkách $C_1$, $C_2$ a $C_3$.
 
-```{prf:example} Řešení
+````{prf:example} Řešení
 :class: dropdown
 :nonumber:
 
@@ -66,7 +66,9 @@ a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=\qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
 $$
 
-![Zdroj: vlastní](priklad_5_1_prace.png)
+```{figure} priklad_5_1_prace.png
+Zdroj: vlastní
+```
 
 **Interpretace jako práce, srovnání.**
 
@@ -76,7 +78,9 @@ Integrál fyzikálně znamená práci vektorového pole $(-y,x)$ po zadané kři
 
 Křivka $C_1$ je nejdále od počátku a vektorové pole je na ní nejsilnější. Navíc v každém bodě je síla ve směru křivky a proto se projeví ve výsledném příspěvku bez redukování. Díky tomu můžeme integrál po kružnici počítat stejně jako práci na přímce, tj. součinem délky  křivky $\frac \pi 2$ a velikosti síly $|\vec F|=1$. Po dalších křivkách je síla menší (křivky jdou blíže ke středu) a navíc se neuplatní celá velikost síly, protože síla svírá s křivkou nenulový úhel a při práci se projeví pouze tečná komponenta.
 
-![Zdroj: vlastní](priklad_5_1.png)
+```{figure} priklad_5_1.png
+Zdroj: vlastní
+```
 
 <!--
 %https://sagecell.sagemath.org/?z=eJx1kMFuwjAQRO-R8g8rgRRHMW3snH3iB3LgRmgUEkMNxo5sQ5u_r01SlbbhtCPN7hvN3hqDkiFJ40hcem0cqOulH-LIEXZXL1Io2zctRzkGhXrxSlNM8twfODqzQiZzTdh222qLRIqtUH7s4KANCBAKHNn5Deo3yEpg8ejQ4BSj80b_eyVhUlhX91I7tCYYgjhpoXjHNubKMUh-5KqrZbPnkplkua5J1WqpFSA_LThc2UBLl0laxVH2gKMzuHBqWGJ4l8yx6chGZOXwHLJ4jjwaztUstPiB-h_csXHku1MWWPWNt06b-iC47BD6xEOKwY8ckyCGSUwpe9m053Bv3_UHKklW-paN7T2jNo0TmpE7PI4WZTHHHzKK8zFhRb4jJvWriccsxpCsLP5mYHDCSe77bfQZei05LCsfBCc2JfiSX8c_x8Q=&lang=sage&interacts=eJyLjgUAARUAuQ==
@@ -90,7 +94,7 @@ Integrál fyzikálně znamená tok vektorového pole $(x,y)$ křivkou. Toto vekt
 
 Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce $C_1$ (kružnice) je tok v každém bodě kolmý ke křivce a stejně velký a proto je celkový tok snadné určit jako součin velikosti vektorového pole na křivce ($|\vec F|=1$) a délky křivky $\frac \pi 2$.
 
-```
+````
 
 ## Křivkový integrál druhého druhu po parabole
 

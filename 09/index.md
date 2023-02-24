@@ -143,12 +143,19 @@ $$x'-x=\pi.$$ Všechna řešení rovnice $$x'-x=\pi$$ jsou tvaru $x=Ce^t-\pi$
   
 ## Lineární diferenciální rovnice prvního řádu s konstantními koeficienty  
   
-V aplikacích často vídáme rovnici tvaru  $$\frac{\mathrm dx}{\mathrm dt}+ax=b,\tag{N}$$ která vznikne například úpravou rovnice $$\frac{\mathrm dx}{\mathrm dt}=b-ax.$$  
-Podobně jako v předchozím příkladě stačí najít jedno řešení rovnice (N) a jedno nenulové řešení rovnice 
-$$\frac{\mathrm dx}{\mathrm dt}+ax=0.\tag{H}$$ První z řešení udává bod v prostoru funkcí, druhé řešení jakýsi směr a společně definují jakousi přímku obsahující všechna řešení.  Rovnici (N)
-splňuje konstantní funkce $x(t)=\frac ba$ a rovnici (H)
+V aplikacích často vídáme rovnici tvaru  
+
+$$\frac{\mathrm dx}{\mathrm dt}+ax=b,$$ (9-N)
+
+která vznikne například úpravou rovnice $$\frac{\mathrm dx}{\mathrm dt}=b-ax.$$  
+Podobně jako v předchozím příkladě stačí najít jedno řešení rovnice {eq}`9-N` a jedno nenulové řešení rovnice 
+
+$$\frac{\mathrm dx}{\mathrm dt}+ax=0.$$ (9-H)
+
+První z řešení udává bod v prostoru funkcí, druhé řešení jakýsi směr a společně definují jakousi přímku obsahující všechna řešení.  Rovnici {eq}`9-N`
+splňuje konstantní funkce $x(t)=\frac ba$ a rovnici {eq}`9-H`
  exponenciální funkce $x(t)=e^{-at}.$
-Obecné řešení rovnice (N)
+Obecné řešení rovnice {eq}`9-N`
 je proto $$x(t)=\frac ba+Ce^{-at}.$$ Pro $t$ jdoucí do nekonečna toto řešení za předpokladu $a>0$ konverguje ke stacionárnímu řešení $\frac ba$. Partikulární řešení odpovídající počáteční podmínce $x(0)=0$ je $$x(t)=\frac ba-\frac bae^{-at}=\frac ba\Bigl(1-e^{-at}\Bigr).$$ To znamená, že řešení se exponenciálně přibližuje ke stacionárnímu řešení. Pro $a<0$ se naopak od stacionárního řešení exponenciálně vzdaluje. 
 
 ```{prf:theorem} řešení lineární diferenciální rovnice prvního řádu s konstantními koeficienty
@@ -437,14 +444,18 @@ a zapsat maticově $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-(k_1+
 \begin{pmatrix}T_1\\T_2\end{pmatrix}+\begin{pmatrix}k_1T_0\\0\end{pmatrix}.
 $$
 Pokud zvolíme teplotní stupnici tak, že teplota vroucí vody je v naší nové stupnici nula, můžeme dokonce eliminovat druhý člen a dostáváme
-$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
-\begin{pmatrix}T_1\\T_2\end{pmatrix} \tag{V}
-$$
+
+$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix} \begin{pmatrix}T_1\\T_2\end{pmatrix} $$ (9-V)
+
 tj. symbolicky $X'=AX$, kde $X=(T_1,T_2)^T$ je vektorová funkce (sloupcový vektor) a $A$ je $2\times 2$ matice.
 
 ### Systém $X'=AX$
 
-Je-li determinant matice nenulový, má soustava $AX=0$ pouze nulové řešení a systém $$X'=AX\tag{1}$$ má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.
+Je-li determinant matice nenulový, má soustava $AX=0$ pouze nulové řešení a systém 
+
+$$X'=AX$$ (9-1)
+
+má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.
 
 Tento  systém můžeme přepsat na $$X'-AX=0$$ a tento systém je lineární, protože díky distributivnímu zákonu pro matice pro operátor $L[X]=X'-AX$ platí
 \dm$$\begin{aligned}L[X_1+X_2]&=(X_1+X_2)'-A(X_1+X_2)\\&=X_1^\prime+X_2^\prime-AX_1 -AX_2\\&=(X_1^\prime -AX_1)+(X_2^\prime-AX_2)\\&=L[X_1]+L[X_2]\end{aligned}$$
@@ -459,12 +470,16 @@ Je možné ukázat, že každá počáteční úloha je jednoznačně řešiteln
 ```
 
 
-Systém $$X'=AX+B\tag{2}$$ je možno na tvar (1) převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)$, kde $X_0$ je řešením soustavy $AX+B=0$, což odpovídá posunu stacionárního bodu do počátku.
+Systém 
+
+$$X'=AX+B$$ (9-2)
+
+je možno na tvar {eq}`9-1` převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)$, kde $X_0$ je řešením soustavy $AX+B=0$, což odpovídá posunu stacionárního bodu do počátku.
 
 ```{prf:remark} vlastní hodnoty a řešení
 :nonumber:
- Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému (2), tj. $$X'=AX+B.$$ 
->
+ Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému {eq}`9-2`, tj. $$X'=AX+B.$$ 
+
 * Jakmile má matice $A$ reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.
 * Jakmile má matice $A$ reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.
 * Jakmile má matice $A$ komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
@@ -486,7 +501,7 @@ Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté
 
 \fi
 
-**Příklad.** Model ohřívání vajíčka (V) z předchozí části této přednášky má (v posunuté teplotní stupnici, na které teplota varu vody odpovídá nule) stacionární bod $(0,0)$.  Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
+**Příklad.** Model ohřívání vajíčka {eq}`9-V` z předchozí části této přednášky má (v posunuté teplotní stupnici, na které teplota varu vody odpovídá nule) stacionární bod $(0,0)$.  Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
 $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=\begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix}.
 $$

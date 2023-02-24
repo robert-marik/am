@@ -1,17 +1,19 @@
 # Gradient, lineární aproximace
 
-> Anotace.
->
-> * Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. V této přednášce se zaměříme na prakticky nejlépe využitelný případ, kdy budeme sledovat závislost na prostorových proměnných. 
-> * Aparát představený v této přednášce má smysl zejména ve dvourozměrném a trojrozměrném světě. Budeme schopni sledovat, v jakém směru veličina roste a klesá maximální rychlostí. Tato veličina v mnoha případech determinuje rychlost s jakou probíhají fyzikální procesy typu difuze nebo vedení tepla. 
-> * Obecněji tento aparát slouží k lineární aproximaci funkce. Naučíme se lineární aproximaci použít i pro vektorové funkce. To nám umožní formulovat fyzikální zákony dávajících do souvislosti tok a gradient veličiny (spád veličiny) i v případě, kdy tyto vektory nemají stejný směr. Bez této dovednosti se neobjedeme, chceme-li realisticky popsat vlastnosti anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají při vyjádření v souřadnicích podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
-> * Jako vedlejší produkt slouží gradient k nalezení lokální extrémů funkce.
+```{admonition} Anotace.
 
-> Prerekvizity.
->
-> * Navážeme na znalosti parciálních derivací z minulé přednášky.
-> * Pro efektivní formulaci využijeme maticový součin. Ten většina studentů pozná v úvodních přednáškách z matematiky. Například [zde](http://user.mendelu.cz/marik/mtk/mat-slidy/matice/).
-> * Před snahou o lineární aproximaci funkce více proměnných je vhodné si zopakovat [lineární aproximaci funkce jedné proměnné.](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/)
+* Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. V této přednášce se zaměříme na prakticky nejlépe využitelný případ, kdy budeme sledovat závislost na prostorových proměnných. 
+* Aparát představený v této přednášce má smysl zejména ve dvourozměrném a trojrozměrném světě. Budeme schopni sledovat, v jakém směru veličina roste a klesá maximální rychlostí. Tato veličina v mnoha případech determinuje rychlost s jakou probíhají fyzikální procesy typu difuze nebo vedení tepla. 
+* Obecněji tento aparát slouží k lineární aproximaci funkce. Naučíme se lineární aproximaci použít i pro vektorové funkce. To nám umožní formulovat fyzikální zákony dávajících do souvislosti tok a gradient veličiny (spád veličiny) i v případě, kdy tyto vektory nemají stejný směr. Bez této dovednosti se neobjedeme, chceme-li realisticky popsat vlastnosti anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají při vyjádření v souřadnicích podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
+* Jako vedlejší produkt slouží gradient k nalezení lokální extrémů funkce.
+```
+
+```{admonition}  Prerekvizity.
+
+* Navážeme na znalosti parciálních derivací z minulé přednášky.
+* Pro efektivní formulaci využijeme maticový součin. Ten většina studentů pozná v úvodních přednáškách z matematiky. Například [zde](http://user.mendelu.cz/marik/mtk/mat-slidy/matice/).
+* Před snahou o lineární aproximaci funkce více proměnných je vhodné si zopakovat [lineární aproximaci funkce jedné proměnné.](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/)
+```
 
 ## Opakování
 
@@ -161,8 +163,7 @@ kde
 $$J(x,y)=\begin{pmatrix} \frac{\partial f_1}{\partial x}(x ,y ) & \frac{\partial f_1}{\partial y}(x ,y )\\\frac{\partial f_2}{\partial x}(x ,y ) & \frac{\partial f_2}{\partial y}(x ,y )\end{pmatrix}$$
 je Jacobiho matice funkce $\vec F$. 
 
-V materiálovém inženýrství často provádíme linearizaci v okolí nuly a pro funkci, která je v nule nulová. Tedy máme $x_0=y_0=\vec F(0,0)=0$. Výsledná lineární aproximace se poté redukuje na tvar $$\vec F(x,y)\approx J(0,0)
-\begin{pmatrix}x\\ y\end{pmatrix}.$$ 
+V materiálovém inženýrství často provádíme linearizaci v okolí nuly a pro funkci, která je v nule nulová. Tedy máme $x_0=y_0=\vec F(0,0)=0$. Výsledná lineární aproximace se poté redukuje na tvar $$\vec F(x,y)\approx J(0,0) \begin{pmatrix}x\\ y\end{pmatrix}.$$ 
 
 ## Vícerozměrné konstitutivní zákony
 
@@ -232,36 +233,32 @@ Veličina $k$ se nazývá součinitel tepelné vodivosti, koeficient tepelné vo
 
 V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivních zákonů. Tento zákon udává tok tepla vyvolaný teplotním gradientem. Je to velmi používaný zákon a proto má několik variant. Začneme od nejjednodušší formulace (F.1), kterou můžeme formulovat pomocí základních matematických operací, násobení a dělení. Tento tvar se snadno používá, ale je vhodný jenom pro jednoduché výpočty, jako například teplotní únik stěnou domu. Složitější formulace (F.2) a (F.3), využívající derivace, dokáží modelovat i to, co se děje uvnitř stěny a jak vypadá teplotní profil. Nejsou však užitečné při studiu vedení tepla v rovině nebo v prostoru. K tomu je nutno použít ještě obecnější (a složitější) formulaci (F.4), využívající gradient místo derivace. I zde jsou však omezení: je-li součinitel tepelné vodivosti skalární hodnota, je možné takto spolehlivě modelovat pouze izotropní materiály. Není možné zohlednit skutečnost, že v některém směru je přenos tepla snadnější než ve směru jiném. Tuto nesnáz odstraňuje až nejobecnější tenzorová formulace (F.5), která kromě gradientu používá i tenzorový tvar součinitele tepelné vodivosti a díky tomu dovoluje modelovat i anizotropní materiály. 
 
-* Jednodimenzionální tvar, kde se nezohledňuje směr toku tepla ani rozložení teploty je $$q=\lambda \frac{\Delta T}{\Delta x},\tag{F.1}$$ kde $\lambda$ je materiálová konstanta, $q$ je tok tepla, $\Delta T$ je teplotní rozdíl na vrstvě materiálu tloušťky $\Delta x$. Toto je nejjednodušší tvar, umožňující základní výpočty i aparátem střední školy, jako například teplotní ztráty stěnou. 
-* Zohledníme-li v předešlé formulaci i směr toku tepla (proti růstu teploty, tj. z horkého místa do místa studeného), má Fourierův zákon tvar $$q=-\lambda \frac{\Delta T}{\Delta x}.\tag{F.2}$$
-* Zohledníme-li v předešlé formulaci i možnost, že teplotní profil je nerovnoměrný, musíme změnu teploty počítat derivací místo podílu a poté má Fourierův zákon tvar $$q=-\lambda \frac{\mathrm d T}{\mathrm d x}.\tag{F.3}$$
-* Chceme-li v předešlé formulaci zachytit i vedení tepla v rovinném materiálu či v trojrozměrném tělese, musíme derivaci teploty nahradit gradientem a poté má Fourierův zákon tvar $$\vec q=-\lambda \nabla{T}.\tag{F.4}$$ V souřadnicích potom $$ q_i=-\lambda \frac{\partial T}{\partial x_i}.$$
-* Chceme-li v předešlé formulaci zachytit i vedení tepla v anizotropním materiálu (v různých směrech různé vlastnosti), má Fourierův zákon formálně opět tvar $$\vec q=-\lambda \nabla{T},\tag{F.5}$$ ale veličina $\lambda$ už není skalární veličina, je to matice. V souřadnicích potom $$ q_i=-\sum_{j}\lambda_{ij} \frac{\partial T}{\partial x_j}.$$ Tento vztah se zpravidla zapisuje pomocí zkrácené Einsteinovy notace (přes opakovaný index se sčítá a vynechává se znaménko pro sumu) ve tvaru $$ q_i=-\lambda_{ij} \frac{\partial T}{\partial x_j}.$$
+* Jednodimenzionální tvar, kde se nezohledňuje směr toku tepla ani rozložení teploty je 
 
-Tvar (F.5) je nejobecnější. Pokud je materiál iztropní, redukuje se (F.5) na (F.4). Pokud je úloha jednodimenzionální, redukují se (F.4) a (F.5) automaticky na (F.3). Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na (F.2) nebo (pokud nás zajímá velikost a ne směr) na (F.1).
+  $$q=\lambda \frac{\Delta T}{\Delta x}, $$ (F.1)
 
-<style>
-table, th, td {
-   border: 0px solid green;
-} 
-table {min-width:97%;}
-td {padding:10px}
-table {
-    border-collapse: collapse;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-}
+  kde $\lambda$ je materiálová konstanta, $q$ je tok tepla, $\Delta T$ je teplotní rozdíl na vrstvě materiálu tloušťky $\Delta x$. Toto je nejjednodušší tvar, umožňující základní výpočty i aparátem střední školy, jako například teplotní ztráty stěnou. 
+* Zohledníme-li v předešlé formulaci i směr toku tepla (proti růstu teploty, tj. z horkého místa do místa studeného), má Fourierův zákon tvar 
 
-th {
-    border-bottom: 2px solid black;
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;    
-    }
+  $$q=-\lambda \frac{\Delta T}{\Delta x}.$$ (F.2)
 
-</style>
+* Zohledníme-li v předešlé formulaci i možnost, že teplotní profil je nerovnoměrný, musíme změnu teploty počítat derivací místo podílu a poté má Fourierův zákon tvar 
+
+  $$q=-\lambda \frac{\mathrm d T}{\mathrm d x}.$$ (F.3)
+
+* Chceme-li v předešlé formulaci zachytit i vedení tepla v rovinném materiálu či v trojrozměrném tělese, musíme derivaci teploty nahradit gradientem a poté má Fourierův zákon tvar 
+
+  $$\vec q=-\lambda \nabla{T}.$$ (F.4)
+
+  V souřadnicích potom $$ q_i=-\lambda \frac{\partial T}{\partial x_i}.$$
+* Chceme-li v předešlé formulaci zachytit i vedení tepla v anizotropním materiálu (v různých směrech různé vlastnosti), má Fourierův zákon formálně opět tvar 
+
+  $$\vec q=-\lambda \nabla{T},$$ (F.5)
+
+  ale veličina $\lambda$ už není skalární veličina, je to matice. V souřadnicích potom $$ q_i=-\sum_{j}\lambda_{ij} \frac{\partial T}{\partial x_j}.$$ Tento vztah se zpravidla zapisuje pomocí zkrácené Einsteinovy notace (přes opakovaný index se sčítá a vynechává se znaménko pro sumu) ve tvaru $$ q_i=-\lambda_{ij} \frac{\partial T}{\partial x_j}.$$
+
+Tvar {eq}`F.5` je nejobecnější. Pokud je materiál iztropní, redukuje se {eq}`F.5` na {eq}`F.4`. Pokud je úloha jednodimenzionální, redukují se {eq}`F.4` a {eq}`F.5` automaticky na {eq}`F.3`. Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na {eq}`F.2` nebo (pokud nás zajímá velikost a ne směr) na {eq}`F.1`.
+
 
 |Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Zachytí i nelineární průběh teploty|Udává směr toku tepla|Odlišnost od předchozí formulace (o řádek výše)|
 |--|--|--|--|--|--|

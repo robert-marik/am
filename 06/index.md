@@ -1,15 +1,17 @@
 # Dvojný integrál
 
-> Anotace.
->
-> * V předchozí přednášce jsme si ukázali rozšíření integrálu, které nám umožnilo počítat integrál nejenom po úsečce, ale i po libovolné křivce. V této přednášce se naučíme integrovat přes dvourozměrný obrazec v rovině. Seznámíme se s dvojným integrálem.
-> * Mezi aplikace spadá střední hodnota na dvourozměrné oblasti.
-> * Pomocí dvojného integrálu je definován kvadratický moment průřezu nosníku, což je zásadní veličina ovlivňující tuhost a chování těchto nosníků při deformaci.
-> * Pomocí dvojného integrálu je možné určit množství veličiny ze znalosti její plošné hustoty. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+```{admonition} Anotace
 
-> Prerekvizity.
->
-> * Dvojný integrál počítáme převodem na dva jednorozměrné Riemannovy integrály. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+* V předchozí přednášce jsme si ukázali rozšíření integrálu, které nám umožnilo počítat integrál nejenom po úsečce, ale i po libovolné křivce. V této přednášce se naučíme integrovat přes dvourozměrný obrazec v rovině. Seznámíme se s dvojným integrálem.
+* Mezi aplikace spadá střední hodnota na dvourozměrné oblasti.
+* Pomocí dvojného integrálu je definován kvadratický moment průřezu nosníku, což je zásadní veličina ovlivňující tuhost a chování těchto nosníků při deformaci.
+* Pomocí dvojného integrálu je možné určit množství veličiny ze znalosti její plošné hustoty. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+```
+
+```{admonition} Prerekvizity
+
+* Dvojný integrál počítáme převodem na dva jednorozměrné Riemannovy integrály. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+```
 
 <!-- [Motivace pro dvojný integrál](http://user.mendelu.cz/marik/aromamath/Dvojny_integral.html) - ve výpočetním prostředí Jupyter notebooku numericky určíme parametry, jaké zdroje tepla je potřeba dodat do rovinné desky vedoucí teplo tak, aby teplotní profil byl takový, jaký požadujeme. Vyjde, že výkon zdrojů se liší podle toho, v jakém bodě je zdroj umístěn. Pokud chceme celkový výkon, musíme sečíst příspěvky k celkovému výkonu. Tyto příspěvky jsou spojitě rozloženy na dvourozměrné množině a prostý součet konečného počtu sčítanců nestačí. Nástrojem, který takové příspěvky umí sečíst je dvojný integrál. -->
 
@@ -155,7 +157,7 @@ https://youtu.be/ItTWxJGD3sY
 
 Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jedné proměnné.
 
-#### Výpočet (oblast mezi funkcemi proměnné $x$)
+### Výpočet (oblast mezi funkcemi proměnné $x$)
 
 <div class='obtekat'>
 
@@ -183,7 +185,7 @@ $$
 ```
 
 
-#### Výpočet (oblast mezi funkcemi proměnné $y$)
+### Výpočet (oblast mezi funkcemi proměnné $y$)
 
 <div class='obtekat'>
 ![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
@@ -207,7 +209,7 @@ $$
 ```
 
 
-#### Záměna pořadí integrace
+### Záměna pořadí integrace
 
 <div class='obtekat'>
 
@@ -269,7 +271,7 @@ $$
 
 https://youtu.be/8YS2Fn8st5I
 
-#### Matematické aplikace dvojného integrálu
+### Matematické aplikace dvojného integrálu
 
 * **Obsah** $\mu(\Omega)$ množiny $\Omega$ vypočteme jako integrál
     $$\mu(\Omega)=\iint_\Omega \mathrm{d}x \mathrm{d}y.$$
@@ -279,7 +281,7 @@ https://youtu.be/8YS2Fn8st5I
   kde $\mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y$ je obsah
   množiny $\Omega$.
 
-#### Objem kopce nebo jezera pomocí vrstevnic
+### Objem kopce nebo jezera pomocí vrstevnic
 
 \iffalse
 
@@ -304,7 +306,7 @@ výškou.
 ambice vyjadřovat vrstevnice v analytickém tvaru a integrovat pomocí
 Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   
-#### Fyzikální aplikace dvojného integrálu
+### Fyzikální aplikace dvojného integrálu
 
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x
   \mathrm{d}y,$$ kde $\sigma(x,y)$ je **plošná hustota** (hmotnost
@@ -325,7 +327,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   osu $x$ je $\rho(x,y)=y$ a pro osu $y$ je $\rho (x,y)=x$. Pro osu
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
-#### Technické aplikace dvojného integrálu
+### Technické aplikace dvojného integrálu
 
 \iffalse
 
@@ -360,7 +362,7 @@ manimp:beam|Odvození ohybové rovnice nosníku.
   kde $S=\mu (M)$ je obsah množiny $M$.
   Poloha těžiště je tedy střední hodnotou funkcí $x$ a $y$.
 
-#### Tuhost nosníků, stabilita stromů
+### Tuhost nosníků, stabilita stromů
 
 \iffalse
 
@@ -404,7 +406,7 @@ Odsud máme okamžitě několik pozorování
 
 \iffalse 
 
-#### Těžiště složeného obrazce
+### Těžiště složeného obrazce
 
 Uvažujme množinu $M$ s jednotkovou plošnou hustotou, rozdělenou na dvě
 disjunktní části $M_1$ a $M_2$. Tyto množiny mají $x$-ovou polohu
@@ -437,7 +439,7 @@ těžišti jednotlivých částí.
 Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
 je již snadné.
 
-#### Steinerova věta
+### Steinerova věta
 
 Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
 že vzhledem k ose procházející těžištěm je nejmenší moment
@@ -476,7 +478,7 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 
 \fi
 
-#### Tlak na svislou plochu
+### Tlak na svislou plochu
 
 \iffalse
 
@@ -546,7 +548,7 @@ Nikde ve výpočtu jsme nepoužili konkrétní meze pro integraci. Výsledek
 tedy platí nejenom pro hráz dosahující k hladině, ale například i pro
 poklop výpusti, který je celý pod vodou.
 
-#### Působiště tlakové síly
+### Působiště tlakové síly
 
 Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
 tlakové síly.
@@ -595,9 +597,8 @@ $y$-ové polohy těžiště $y_0$.
 
 https://youtu.be/lEObYHpX72w
 
-#### Polární souřadnice
+### Polární souřadnice
 
-<div class='sloupce'>
 
 Dosud jsme používali pouze kartézské souřadnice: dvojici čísel
 udávající vzdálenost bodu od osy $y$ a od osy $x$, která jednoznačně
@@ -611,17 +612,11 @@ určíme vzdálenost $r$ bodu od počátku soustavy souřadnic $O$ a úhel
 $\varphi$, který svírá spojnice bodů $O$ a $A$ s kladnou částí osy
 $x$.
 
-\def\maxfactor{0.3}
 
 ![Polární souřadnice.](polarni_souradnice.png)
 
-\def\maxfactor{0.6}
 
-</div>
-
-\newpage
-
-#### Množiny s jednoduchým vyjádřením v polárních souřadnicích
+### Množiny s jednoduchým vyjádřením v polárních souřadnicích
 
 Nejsnáze se při výpočtu dvojného integrálu pracuje s obdélníkovými
 množinami, tj. s množinami charakterizovanými nerovnostmi pro jednotlivé
@@ -630,59 +625,21 @@ snadno pracovat v polárních souřadnicích s množinami, které by se staly
 obdélníky pro překreslení do souřadné soustavy $r$ a $\varphi$. Takové
 množiny jsou zobrazeny na následujících obrázcích.
 
-<style>
-table, th, td {
-   border: 2px solid green;
-} 
-table {width:97%;}
-td {padding:10px}
-tr td:nth-child(2) {color:green; background: #E9E9E9;}
-table {
-    border-collapse: collapse;
-}
-</style>
-
-<style>
-table, th, td {
-   border: 2px solid green;
-} 
-table {width:97%;}
-td {padding:10px}
-tr td:nth-child(2) {color:green; background: #E9E9E9;}
-table {
-    border-collapse: collapse;
-}
-
-th {
-    background-color: green;
-    color: white;
-    border-color: gray;
-}
-
-th {text-align: center;}
-</style>
 
 \iffalse
 
-\maxwidthdefault
-\def\velkatabulka{\begin{table*}\setlength{\columnwidth}{18cm}}
-\def\velkatabulkakonec{\caption{Množiny s jednoduchým zápisem v polárních souřadnících}\end{table*}}
-
-\velkatabulka
 
 |Obrázek        | Popis v polárních souřadnicích | Popis v kartézských souřadnicích |
 |----------------|-----------------------|-----------------------|
-| \vspace*{0pt} ![](polarni_2.png)   | $$\begin{gathered}0\leq r\leq 1 \\ 0\leq \varphi\leq 2\pi\end{gathered}$$  | $$\begin{gathered}-1\leq x\leq 1\\ -\sqrt{1-x^2}\leq y\leq \sqrt{1-x^2}\end{gathered}$$  |
-|  \vspace*{0pt} ![](polarni_1.png)   | $$\begin{gathered}1\leq r\leq 2 \\ 0\leq \varphi\leq \frac \pi2\end{gathered}$$  | Nelze zapsat pomocí jedné dvojice nerovností |
-|  \vspace*{0pt} ![](polarni_3.png)  | $$\begin{gathered}0\leq r\leq 1 \\ \frac\pi 4\leq \varphi\leq \frac\pi 2\end{gathered}$$  | $$\begin{gathered}0\leq x\leq \frac {\sqrt 2}2 \\ x\leq y\leq \sqrt{1-x^2}\end{gathered}$$ |
+| ![](polarni_2.png)   | $$\begin{gathered}0\leq r\leq 1 \\ 0\leq \varphi\leq 2\pi\end{gathered}$$  | $$\begin{gathered}-1\leq x\leq 1\\ -\sqrt{1-x^2}\leq y\leq \sqrt{1-x^2}\end{gathered}$$  |
+| ![](polarni_1.png)   | $$\begin{gathered}1\leq r\leq 2 \\ 0\leq \varphi\leq \frac \pi2\end{gathered}$$  | Nelze zapsat pomocí jedné dvojice nerovností |
+| ![](polarni_3.png)  | $$\begin{gathered}0\leq r\leq 1 \\ \frac\pi 4\leq \varphi\leq \frac\pi 2\end{gathered}$$  | $$\begin{gathered}0\leq x\leq \frac {\sqrt 2}2 \\ x\leq y\leq \sqrt{1-x^2}\end{gathered}$$ |
 
-\velkatabulkakonec
 
 \fi
 
-#### Převod dvojného integrálu do polárních souřadnic
+### Převod dvojného integrálu do polárních souřadnic
 
-\def\maxwidth{5cm}
 
 <div class='obtekat'>
 

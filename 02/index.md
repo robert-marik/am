@@ -85,7 +85,7 @@ Význam a postavení gardientu ilustruje následující příklad, který je pot
 
 </div>
 
-Symbol $\nabla$ je operátor nabla definovaný formálně vztahem $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right)$$ nebo $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)$$ (v závislosti na počtu proměnných funkce $f$). "Násobení" $\frac{\partial }{\partial x}$ s\ funkcí $f$ přitom chápeme jako parciální derivaci $\frac{\partial f}{\partial x}$.
+Symbol $\nabla$ je operátor nabla definovaný formálně vztahem $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right)$$ nebo $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)$$ (v závislosti na počtu proměnných funkce $f$). "Násobení" $\frac{\partial }{\partial x}$ s funkcí $f$ přitom chápeme jako parciální derivaci $\frac{\partial f}{\partial x}$.
 
 Někdy je vhodné formulovat fyzikální zákony pomocí prostředků lineární algebry, zejména pomocí maticového součinu. V takovém případě gradient zapisujeme jako sloupcový vektor. 
   
@@ -118,7 +118,7 @@ https://youtu.be/Mpb4EAdIPPM
 * V matematice se gradientem rozumí vektor z parciálních derivací podle všech proměnných. V aplikacích tomu bývá poněkud jinak. Často je funkce popisující studovaný systém funkcí času i prostorových proměnných. V takovém případě gradientem rozumíme vektor složený jenom z parciálních derivací podle prostorových proměnných. Čas při výpočtu gradientu za proměnnou nepovažujeme.
 * V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
 * S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu. Tedy ve směru gradientu. Například žralok ve vodě takto sleduje koncentraci krve. 
-* Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže nám velikost gradientu k posouzení rychlosti změny  veličiny v\ prostoru (gradient je velký, jestliže se funkce mění rychle a jsou-li tím pádem vrstevnice nahusto).
+* Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže nám velikost gradientu k posouzení rychlosti změny  veličiny v prostoru (gradient je velký, jestliže se funkce mění rychle a jsou-li tím pádem vrstevnice nahusto).
 * Při proudění podzemní vody sledujeme hydroizohypsy, křivky spojující místa se stejnou hladinou podzemní vody nebo obecněji se stejnou piezometrickou výškou. Tok vody je v homogenním prostředí kolmý na tyto křivky a intenzivní podle hustoty křivek. Zjednodušeně řečeno, i podzemní voda má snahu téct "z kopce", ale "z kopce" je ve smyslu nejrychlejšího poklesu piezometrické výšky. Anizotropní prostředí tento tok může odklánět do směru, ve kterém půda klade toku podzemní vody menší odpor. Podobně jako dřevo stáčí tok tepla nebo vlhkosti do podélného směru.
 <!-- * *Síla* ($\vec F$) působící na těleso v silovém poli ve kterém je možno zavést potenciální energii ($V$) je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient). -->
 <!-- $$\vec F=-\nabla V$$ -->

@@ -48,7 +48,7 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
  \end{vmatrix}\\
  &=\vec \imath \ \qty[\pdv {(-3x^2z)}{y}-\pdv {5x^2y}{z}]
  +\vec \jmath \ \qty[\pdv {xyz}{z}-\pdv {(-3x^2z)}{x}] 
- +\vec k\ \qty[{\pdv {5x^2y}{x}-\pdv {xyz}{y}}]\\
+ +\vec k \qty[{\pdv {5x^2y}{x}-\pdv {xyz}{y}}]\\
  &=(xy+6xz)\vec\jmath + (10xy-xz)\vec k
 \\&=x(y+6z)\vec\jmath + x(10y-z)\vec k
 \end{aligned}

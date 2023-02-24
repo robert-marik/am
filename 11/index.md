@@ -22,7 +22,7 @@ se nazývá *lineární diferenciální rovnice druhého řádu*. *Řešením
 rovnice* (nebo též *integrálem rovnice*) na intervalu $I$ rozumíme
 funkci, která má spojité derivace do řádu $2$ na
 intervalu $I$ a po dosazení identicky splňuje rovnost (LDE) na $I$.
-Úloha nalézt řešení rovnice, které splňuje v\ bodě $x_0\in I$ *počáteční
+Úloha nalézt řešení rovnice, které splňuje v bodě $x_0\in I$ *počáteční
 podmínky*
 $$\tag{IC}
 \begin{cases}
@@ -49,7 +49,7 @@ kde $y_0$ a $y'_0$ jsou reálná čísla, se nazývá *počáteční úloha*
 
 \fi
 
-Kmity tělesa o\ hmotnosti $m$ pružně připevněného k\ nehybné podložce
+Kmity tělesa o hmotnosti $m$ pružně připevněného k nehybné podložce
 spojem tuhosti $k$ jsou popsány diferenciální rovnicí ${\ddot x+\frac
 km x=0}.$ Zde navíc používáme fyzikální úzus označovat derivace podle
 času pomocí tečky a ne čárky. Symbol $\ddot x$ tedy značí druhou
@@ -85,12 +85,12 @@ jednoznačně a toto řešení je definované na celém intervalu $I$.
 
 ```{prf:definition} speciální typy LDE druhého řádu
 :nonumber:
- Platí-li v\ rovnici (LDE) $f(x)=0$
-pro všechna $x\in I$, nazývá se rovnice (LDE) *homogenní*, v\ opačném
+ Platí-li v rovnici (LDE) $f(x)=0$
+pro všechna $x\in I$, nazývá se rovnice (LDE) *homogenní*, v opačném
 případě *nehomogenní*. 
 
 Jsou-li koeficienty $p(x)$ a $q(x)$ na intervalu
-$I$ konstantní funkce, nazývá se (LDE) *rovnice s\ konstantními
+$I$ konstantní funkce, nazývá se (LDE) *rovnice s konstantními
 koeficienty*.
 ```
 
@@ -104,10 +104,10 @@ homogenní LDE druhého řádu $$y''+p(x)y'+q(x)y=0$$ vždy, bez ohledu na tvar 
 
 ```{prf:definition} asociovaná homogenní rovnice
 :nonumber:
- Nahradíme-li v\ nehomogenní LDE
+ Nahradíme-li v nehomogenní LDE
 pravou stranu (tj. funkci $f$) nulovou funkcí obdržíme rovnici
 $$ y''+p(x)y'+q(x)y=0.$$
-Tato rovnice se nazývá *asociovaná homogenní rovnice k\ rovnici (LDE)*.
+Tato rovnice se nazývá *asociovaná homogenní rovnice k rovnici (LDE)*.
 ```
 
 
@@ -129,7 +129,7 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 <div>
 
 Podobně jako lineární diferenciální rovnice
-prvního řádu, i\ u (LDE) často pravou stranu rovnice často zkracujeme do
+prvního řádu, i u (LDE) často pravou stranu rovnice často zkracujeme do
 tvaru $L[y](x)$. Definujeme-li tedy
 $$  L[y](x)=y''(x)+p(x)y'(x)+q(x)y(x),$$
 je tímto předpisem definován operátor, který každé dvakrát
@@ -203,7 +203,7 @@ obecným řešením. Derivováním tohoto vztahu získáváme
 $$y'(x)=C_1y'_1(x)+C_2y'_2(x)$$
 
 a dosazení počátečních podmínek $y(\alpha)=\beta$, $y'(\alpha)=\gamma$
-vede k\ následující soustavě lineárních rovnic s\ neznámými $C_1$, $C_2$
+vede k následující soustavě lineárních rovnic s neznámými $C_1$, $C_2$
 
 $$
 \begin{aligned}
@@ -211,7 +211,7 @@ $$
   \gamma&{}=C_1y'_1(\alpha)+C_2y'_2(\alpha).
 \end{aligned}$$
 
-Jak je známo z\ lineární algebry, tato soustava má právě jedno řešení pro
+Jak je známo z lineární algebry, tato soustava má právě jedno řešení pro
 libovolnou volbu čísel $\beta$, $\gamma$ právě tehdy, když matice
 soustavy, tj. matice $\begin{pmatrix}
   y_1(\alpha)&y_2(\alpha)\\
@@ -228,12 +228,12 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 :nonumber:
  Buďte $y_1$ a $y_2$ funkce definované
 na intervalu $I$. Řekneme, že funkce $y_1$ a $y_2$ jsou na intervalu $I$
-*lineárně závislé*, jestliže jedna z\ nich je na intervalu $I$ násobkem
-druhé, tj. jestliže existuje reálné číslo $k\in\mathbb{R}$ s\ vlastností
+*lineárně závislé*, jestliže jedna z nich je na intervalu $I$ násobkem
+druhé, tj. jestliže existuje reálné číslo $k\in\mathbb{R}$ s vlastností
 $$y_1(x)=ky_2(x) \qquad\text{pro všechna $x\in I$},$$
 nebo
 $$y_2(x)=ky_1(x) \qquad\text{pro všechna $x\in I$}.$$
-V\ opačném případě říkáme, že funkce $y_1$, $y_2$ jsou na intervalu $I$
+V opačném případě říkáme, že funkce $y_1$, $y_2$ jsou na intervalu $I$
 *lineárně nezávislé*.
 ```
 
@@ -280,12 +280,12 @@ Dvojicí lineárně nezávislých řešení rozumíme dvě řešení taková, ž
 
 ```{prf:definition} fundamentální systém řešení
 :nonumber:
- Dvojici funkcí $y_1$ a $y_2$ z\ předchozí
+ Dvojici funkcí $y_1$ a $y_2$ z předchozí
 věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
 ```
 
 
-## Homogenní LDE 2. řádu s\ konstantními koeficienty
+## Homogenní LDE 2. řádu s konstantními koeficienty
 
 \iffalse 
 
@@ -300,9 +300,9 @@ $$y''+py'+qy=e^{zx}(z^2+pz+q).$$
 Protože exponenciální faktor na pravé straně je vždy nenulový, bude
 výraz na pravé straně roven nule pokud bude splněna podmínka
 $$z^2+pz+q=0.$$
-Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
+Pouze v tomto případě bude uvažovaná funkce řešením rovnice (1).
 
-## Homogenní LDE 2. řádu s\ konstantními koeficienty
+## Homogenní LDE 2. řádu s konstantními koeficienty
 
 -->
 
@@ -321,12 +321,12 @@ U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matic
 ```{prf:definition} charakteristická rovnice
 :nonumber:
  Kvadratická rovnice
-$$z^2+pz+q=0$$ s\ neznámou $z$ se nazývá *charakteristická rovnice*
+$$z^2+pz+q=0$$ s neznámou $z$ se nazývá *charakteristická rovnice*
 pro rovnici $$y''+py'+qy=0.$$
 ```
 
 
-```{prf:theorem} o obecném řešení LDE s\ konstantními koeficienty
+```{prf:theorem} o obecném řešení LDE s konstantními koeficienty
 :nonumber:
 
 Uvažujme LDE $$y''+py'+qy=0,\tag{1}$$ a její charakteristickou rovnici
@@ -357,7 +357,7 @@ homogenní rovnice je obecným řešením původní nehomogenní rovnice
 ```
 
 
-Následující věta udává jednu z\ metod nalezení partikulárního řešení,
+Následující věta udává jednu z metod nalezení partikulárního řešení,
 pokud je diferenciální rovnice do jisté míry speciální: má konstantní
 koeficienty a polynomiální pravou stranu.
 
@@ -372,7 +372,7 @@ partikulárním řešením této diferenciální rovnice.
 ```
 
 
-V\ praxi polynom který má být řešením napíšeme s\ neurčitými koeficienty a
+V praxi polynom který má být řešením napíšeme s neurčitými koeficienty a
 dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
 
 ## Dirichletova okrajová úloha, vlastní čísla
@@ -401,7 +401,7 @@ Odlišnost Dirichletovy úlohy od (Cauchyovy) počáteční úlohy je v tom,
 že nezadáváme funkční hodnotu a derivaci v jednom bodě, ale funkční
 hodnotu ve dvou různých bodech.
 
-Jedno z\ řešení Dirichletovy úlohy je triviální řešení
+Jedno z řešení Dirichletovy úlohy je triviální řešení
 $y(x)=0$. Ukazuje se, že netriviální řešení existuje jen pro některé
 hodnoty parametru $\lambda$.
 
@@ -421,10 +421,10 @@ nazývá *vlastní funkce okrajové úlohy*.
 Je-li $\lambda>0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
 funkce
 $$y(x)=C_1\sin(\sqrt \lambda x)+C_2\cos(\sqrt \lambda x).$$
-Z\ podmínky $y(0)=0$ dostáváme $C_2=0$. Tedy
+Z podmínky $y(0)=0$ dostáváme $C_2=0$. Tedy
 $$y(x)=C_1\sin(\sqrt\lambda x).$$
 
-Z\ podmínky $y(1)=0$ dostáváme 
+Z podmínky $y(1)=0$ dostáváme 
 $$0=C_1\sin(\sqrt\lambda),$$
 která je splněna pokud $C_1=0$, nebo $\sqrt\lambda=k\pi$, $k\in\mathbb{Z}$
 
@@ -436,9 +436,9 @@ $\lambda=(k\pi)^2$, $k\in\mathbb{Z}$
 Je-li $\lambda<0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
 funkce
 $$y(x)=C_1e^{\sqrt {-\lambda} x}+C_2 e^{-\sqrt {-\lambda} x}.$$
-Z\ podmínky $y(0)=0$ dostáváme $$C_1+C_2=0.$$ 
+Z podmínky $y(0)=0$ dostáváme $$C_1+C_2=0.$$ 
 
-Z\ podmínky $y(1)=0$ dostáváme 
+Z podmínky $y(1)=0$ dostáváme 
 $$C_1e^{\sqrt {-\lambda}}+C_2 e^{-\sqrt {-\lambda}}=0.$$
 Protože jedna rovnice není násobkem druhé, má soustava jediné řešení $C_1=C_2=0$ a okrajová úloha má v případě $\lambda<0$ pouze triviální nulové řešení. Nemá tedy žádné vlastní hodnoty.
 
@@ -466,7 +466,7 @@ Při kmitání struny délky $l$ upevněné na koncích se ukazuje, že proces
 je možno modelovat okrajovou úlohou $$y''+\lambda^2 y=0,\quad
 y(0)=0=y(l),$$
 kde $y$ je amplituda kmitů v místě $x$ a $\lambda$ souvisí s frekvencí. Rovnice má obecné řešení $$y(x)=C_1\sin(
-\lambda x)+C_2\cos( \lambda x)$$ Z\ podmínky $y(0)=0$ dostáváme $C_2=0$ a z
+\lambda x)+C_2\cos( \lambda x)$$ Z podmínky $y(0)=0$ dostáváme $C_2=0$ a z
 podmínky $y(l)=0$ dostáváme $$y(x)=C_1\sin(\lambda x)$$ pokud
 $$\lambda l=k\pi \tag{***}$$ a $y=0$ jinak. Při podrobnějším popisu
 se ukazuje, že $\lambda$
@@ -526,7 +526,7 @@ nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto
 podmínky splňuje se nazývá **Neumannova okrajová úloha**, též
 **Neumannova úloha**.
 
-Existují i smíšené úlohy, například při kmitání tělesa s\ jedním
+Existují i smíšené úlohy, například při kmitání tělesa s jedním
 upevněným a jedním volným koncem je přirozené formulovat **smíšenou
 okrajovou podmínku** $$y(a)=0,\quad y'(b)=0,$$ kde $a$ je upevněný konec a
 $b$ volný konec.

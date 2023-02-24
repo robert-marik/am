@@ -63,24 +63,24 @@ https://youtu.be/08uAuAgY-lw
 \fi
 
 * Radioaktivní prvky se rozpadají
-  rychlostí, která je úměrná množství dosud nerozpadnutého materiálu. Rychlost, s\ jakou se mění množství (a tedy i\ koncentrace $y$ v daném
+  rychlostí, která je úměrná množství dosud nerozpadnutého materiálu. Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
   vzorku) nerozpadnutého radioaktivního materiálu je tedy popsána matematickým modelem
   $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
   kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
   důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
   stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
-  pravděpodobnost se s\ časem nemění.
+  pravděpodobnost se s časem nemění.
 * Nejznámější aplikací této rovnice je datování archeologických vzorků pomocí radioaktivního uhlíku $^{14}C$. V tomto případě se sleduje vzájemná relace mezi množstvím tohoto nestabilního uhlíku a množstvím stabilního $^{12}C$. Počáteční podmínka je známa (předpokládáme stejný poměr zastoupení jako relativně
   nedávno, před průmyslovou revolucí) a díky tomu můžeme najít funkci
-  udávající, jak s\ časem klesá zastoupení radioaktivního uhlíku. Obsah
-  radioaktivního i\ stabilního uhlíku je možné změřit a tím získáme
+  udávající, jak s časem klesá zastoupení radioaktivního uhlíku. Obsah
+  radioaktivního i stabilního uhlíku je možné změřit a tím získáme
   odhad, kolik procent radioaktivního
   uhlíku se rozpadlo. Řešení počáteční úlohy poté použijeme pro odhad
   doby, kdy organismus přestal spotřebovávat uhlík z atmosféry,
   tj. odhad stáří vzorku.
 * Při pokusu o datování kostí dinosaurů klesne množství
   radioaktivního uhlíku pod měřitelnou úroveň. Proto se
-  v tomto případě používají látky s\ delším poločasem rozpadu.
+  v tomto případě používají látky s delším poločasem rozpadu.
 * Optikou běžného života je nejzajímavější aplikací této rovnice model rozpadu v radioaktivní radě uranu, kdy vzniká plynný radon, který může působit problémy ve stavbách a v rizikových lokalitách je potřeba vhodnými konstrukčními přístupy nebo aktivními zařízeními na lapání a odvětrávání radonu.
 
 ### Samočištění jezer, kontaminace v jezeře
@@ -95,20 +95,20 @@ https://youtu.be/08uAuAgY-lw
 
 \fi
 
-* Nechť veličina $y$ udává množství látky, která znečišťuje vodu v\ jezeře o\ objemu $V$.
+* Nechť veličina $y$ udává množství látky, která znečišťuje vodu v jezeře o objemu $V$.
 * Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
-  odtéká voda s\ nečistotami (hladina se nemění, je v\ ustáleném
-  stavu). Nechť veličina $r$ udává, jaký objem vody se v\ jezeře takto
+  odtéká voda s nečistotami (hladina se nemění, je v ustáleném
+  stavu). Nechť veličina $r$ udává, jaký objem vody se v jezeře takto
   vymění za jeden den.  Předpokládejme dále (poněkud nerealisticky),
-  že rozdělení znečišťujících částic v\ jezeře je rovnoměrné.
+  že rozdělení znečišťujících částic v jezeře je rovnoměrné.
 * Úbytek hmotnosti nečistot za časovou jednotku je dán derivací
   $\frac{\mathrm dy}{\mathrm dt}$.
 * Protože koncentrace nečistot v jezeře a v odtékající vodě je $\frac
   yV$, je úbytek znečištění možno vyjádřit též ve tvaru $\frac
   rVy$. Podíl $\frac rV$ je pro dané jezero kladná konstanta
-  udávající, jak velká část z\ celkového množství vody se v\ jezeře
+  udávající, jak velká část z celkového množství vody se v jezeře
   vymění za časovou jednotku.  Označíme-li tuto konstantu symbolem
-  $k$, je proces úbytku nečistot v\ jezeře popsán vztahem
+  $k$, je proces úbytku nečistot v jezeře popsán vztahem
   $$
   \frac{\mathrm dy}{\mathrm dt}  =-ky.
   $$
@@ -117,7 +117,7 @@ https://youtu.be/08uAuAgY-lw
   popisuje radioaktivní rozpad nebo změnu rozdílu mezi teplotou
   horkého nápoje a místnosti při chladnutí nápoje.
 * Stejnou rovnicí je možné popsat nejenom odbourávání nečistot z
-  životního prostředí, ale i\ odbourávání léků nebo drog z
+  životního prostředí, ale i odbourávání léků nebo drog z
   těla. Považujme krevní oběh za jezero a lék nebo drogu za
   znečišťující látku. V případě, že rychlost odbourávání je úměrná
   koncentraci (platí pro farmakokinetiku prvního řádu, toto splňuje
@@ -135,12 +135,12 @@ https://youtu.be/08uAuAgY-lw
 </div>
 
 * Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
-  ní i\ krvinky. Při konstantní intenzitě krvácení to znamená, že
+  ní i krvinky. Při konstantní intenzitě krvácení to znamená, že
   pacient ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně na
   krvinky v krvi můžeme pohlížet stejně jako na znečištění
   jezera. Jedná se o stejný proces vyplavování látek obsažených v
   tekutině, jenom měníme interpretaci veličin.
-* Pokud očekáváme takový průběh operace, že i\ po uvedeném poklesu bude
+* Pokud očekáváme takový průběh operace, že i po uvedeném poklesu bude
   pořád množství krvinek nad minimální přípustnou hodnotou, je možné
   před operací toto množství snížit tím, že se část krve odebere a
   krev se poté doplní vhodnými roztoky.
@@ -148,10 +148,10 @@ https://youtu.be/08uAuAgY-lw
   menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
   během operace je menší. Na konci operace se pacientovi vrátí dříve
   odebraná krev. Výsledkem je, že po operaci v jeho těle koluje více
-  krvinek, než pokud by byl operován s\ "původní krví".
+  krvinek, než pokud by byl operován s "původní krví".
 * Aby metoda fungovala, je nutné odhadnout ztrátu krve během
   operace. Modelování pomocí matematických metod dokáže
-  předpovědět, kolik krve odebrat na začátku tak, aby i\ po plánované
+  předpovědět, kolik krve odebrat na začátku tak, aby i po plánované
   době operace zůstaly krevní hodnoty pacienta v bezpečných
   mezích. Pokud na začátku operace část krve dáme bokem a poté tekutiny
   doplňujeme fyziologickým roztokem (s tím, že vlastní krev vrátíme po
@@ -163,7 +163,7 @@ https://youtu.be/08uAuAgY-lw
   široké využití v řadě operačních oborů. Poskytuje totiž možnost
   vyhnout se podání alogenní krevní transfuze a tím eliminovat rizika
   z ní vyplývající. Současně je tato metoda výrazně finančně levnější
-  a její přínos je tak i\ ekonomický. (Podle https://zdravi.euro.cz/)
+  a její přínos je tak i ekonomický. (Podle https://zdravi.euro.cz/)
 
 \fi
 
@@ -205,11 +205,11 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 \fi
 
-* Zkoumejme velikost $y$ určité populace v prostředí s\ nosnou kapacitou $K$.
-* Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s\ omezenými úživnými
-  vlastnostmi specifická míru růstu populace (rychlost s\ jakou
+* Zkoumejme velikost $y$ určité populace v prostředí s nosnou kapacitou $K$.
+* Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s omezenými úživnými
+  vlastnostmi specifická míru růstu populace (rychlost s jakou
   se velikost populace zvětšuje vztažená na jednotkové množství
-  populace) klesá s\ tím, jak se velikost populace přibližuje k nosné
+  populace) klesá s tím, jak se velikost populace přibližuje k nosné
   kapacitě, a rychlost růstu populace je modelována funkcí $ry\left(1-\frac yK\right)$.  Podle
   velkosti koeficientů v této funkci dělíme živočichy na [r-stratégy
   a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
@@ -250,9 +250,9 @@ Jedná se o rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotn
 https://youtu.be/3HTs6zJ0gMk
 
 Obyčejná diferenciální rovnice je rovnice, kde vystupuje neznámá
-funkce a její derivace. Setkáváme se s\ ní například všude tam, kde
-rychlost růstu nebo poklesu veličiny souvisí s\ její
-velikostí. Například rychlost s\ jakou se mění teplota horkého tělesa
+funkce a její derivace. Setkáváme se s ní například všude tam, kde
+rychlost růstu nebo poklesu veličiny souvisí s její
+velikostí. Například rychlost s jakou se mění teplota horkého tělesa
 je funkcí teploty samotné. Rychlost tepelné výměny mezi dvěma tělesy
 je totiž úměrná rozdílu jejich teplot (Newtonův zákon). Takto se
 přirozeně diferenciální rovnice objevují v modelech nejrůznějších dějů
@@ -280,7 +280,7 @@ dvou proměnných.
 
 **Příklad.**  Najděte všechny funkce splňující $y'=2xy$. (Naučíme se řešit později.)
 
-Diferenciální rovnice udává scénář vývoje systému. K\ jednoznačnému
+Diferenciální rovnice udává scénář vývoje systému. K jednoznačnému
 předpovězení budoucího stavu je ovšem nutno znát nejenom, jaký
 mechanismus ovlivňuje vývoj systému, ale také stav současný.
 
@@ -371,7 +371,7 @@ křivka. Má-li každá počáteční úloha jediné řešení (což bude pro n�
 velice častý případ), znamená to, že integrální křivky se *nikde
 neprotínají*.
 
-Křivky s\ konstantní hodnotou $\varphi(x,y)$ mají tu vlastnost, že je
+Křivky s konstantní hodnotou $\varphi(x,y)$ mají tu vlastnost, že je
 všechna řešení protínají pod stejným úhlem, měřeným od kladné části
 osy $x$. Například v bodech kde platí $\varphi(x,y)=0$ míří všechny
 integrální křivky vodorovně. Proto se křivky, kde je $\varphi(x,y)$
@@ -385,9 +385,9 @@ manim:Diference|r_Ae2mGnfFs|Numerické řešení diferenciální ronvice je zpra
 
 <div class='obtekat'>
 
-![Eulerova metoda s\ velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
+![Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
 
-![Metoda Runge Kutta s\ velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.](rk.png)
+![Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.](rk.png)
 
 </div>
 
@@ -478,7 +478,7 @@ Výše uvedené výpočty je možno shrnout do pravidla v následující poznám
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
 
-**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
+**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
 vydělit konstantou $k$
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{k\mathrm dt}=-\frac{T-T_\infty}{T_0-T_\infty}$$
@@ -529,20 +529,20 @@ bychom v námi běžně používané dvojkové soustavě třikrát sečetli jedn
 reprezentovaném konečným počtem desetinných míst, tj. například
 třikrát sečetli číslo $0.33333333$. Nedostaneme přesně jedničku. 
 
-Tento efekt měl i\ tragický důsledek. Software protiraketového
+Tento efekt měl i tragický důsledek. Software protiraketového
 systému Patriot počítal čas postupným přičítáním desetiny
 sekundy. Protože systém byl vytvořen a testován na mobilním zařízení,
 které se často restartovalo a běželo krátkou dobu, ničemu to
 nevadilo. Nasazení v systému Patriot však byla chyba. Při ostrém
 nasazení systém běžel dlouho, zaokrouhlovací chyba se kumulovala
-například 100 hodin. I\ když za tu dobu chyba dosáhla pouze zlomku
+například 100 hodin. I když za tu dobu chyba dosáhla pouze zlomku
 sekundy, raketa letící vysokou rychlostí již byla jinde, než systém
 Patriot propočítal.  Dne 25.2.1991 systém Patriot během operace
 Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
 útočící raketu Scud a ta zabila 28 vojáků osvobozující armády a okolo
 100 osob zranila.
 
-S chybami plynoucími ze zaokrouhlování se setkáme i\ při výpočtech mimo modelování diferenciálních rovnic. Viz například [Floating-point arithmetic may give
+S chybami plynoucími ze zaokrouhlování se setkáme i při výpočtech mimo modelování diferenciálních rovnic. Viz například [Floating-point arithmetic may give
 inaccurate results in
 Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel).
 
@@ -557,7 +557,7 @@ autonomní, nebo též nezávislá na čase. Je speciálním případem rovnice
 se separovanými proměnnými, která je uvedena na dalším slidu a naučíme
 se ji řešit analytickou cestou. Proto se nyní nebudeme zaměřovat na
 hledání obecného řešení, ale pokusíme se popsat chování řešení, aniž
-bychom tato řešení znali. Pokusíme se s\ co nejmenší námahou říct, jak
+bychom tato řešení znali. Pokusíme se s co nejmenší námahou říct, jak
 se budou řešení chovat.
 
 * Je-li $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ řešením rovnice
@@ -579,7 +579,7 @@ se budou řešení chovat.
 
 Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
-má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie pravé strany.
+má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z monotonie pravé strany.
 
 **Příklad.** Logistická diferenciální rovnice s konstantním lovem
   $h$, tj. rovnice
@@ -590,7 +590,7 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
   je funkce rostoucí a tento stacionární bod je nestabilní. Ve druhém
   stacionárním bodě je funkce klesající a tento stacionární bod je
   stabilní. Jak se zvyšuje faktor $h$, graf paraboly se posouvá směrem
-  dolů a oba stacionární body se posouvají směrem k sobě a k\  vrcholu. Jejich stabilita zůstává neporušena. To znamená, že sice
+  dolů a oba stacionární body se posouvají směrem k sobě a k  vrcholu. Jejich stabilita zůstává neporušena. To znamená, že sice
   pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu se
   tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
@@ -601,7 +601,7 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 <div class='obtekat'>
 
-![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s\ IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
+![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
 
 </div>
 
@@ -610,7 +610,7 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
 $x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
 zastávce v čase $t$, druhý trolejbus na tuto zastávku dorazí v čase
-$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s\ rostoucím $t$.
+$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s rostoucím $t$.
 
 Předpokládejme, že
 
@@ -618,9 +618,9 @@ Předpokládejme, že
 * pokud žádní pasažéři nečekají na druhý vůz, druhý vůz se
   pohybuje rychleji než první vůz a oba vozy se "sjedou", tj. $x(t)$
   klesá, pokud na druhý vůz nečekají žádní pasažéři
-* rychlost druhého vozu klesá s\ rostoucím počtem pasažérů, kteří
+* rychlost druhého vozu klesá s rostoucím počtem pasažérů, kteří
   čekají na zastávce 
-* počet pasažérů kteří čekají na zastávce roste s\ rostoucím
+* počet pasažérů kteří čekají na zastávce roste s rostoucím
   intervalem mezi oběma vozy.
 
 Uvažujme, že všechny závislosti popsané výše jsou lineární (přímá
@@ -684,7 +684,7 @@ se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
     explicitního tvaru (vyjádříme odsud $y$).
 
 Poslední krok (převod do explicitního tvaru) je volitelný, zpravidla
-záleží na tom, co dalšího hodláme s\ řešením dělat. Pro většinu výpočtů
+záleží na tom, co dalšího hodláme s řešením dělat. Pro většinu výpočtů
 je však explicitní tvar vhodnější než tvar implicitní a proto se o něj
 vždy snažíme.
 
@@ -826,21 +826,21 @@ $$V=\left(k_0t+ c\right)^3,$$
 kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená rychlostí
 kondenzace a integrační konstanta.
 
-Všimněte si, že počáteční úloha s\ počáteční podmínkou $V(0)=0$ má
+Všimněte si, že počáteční úloha s počáteční podmínkou $V(0)=0$ má
 konstantní nulové řešení $$V(t)=0$$ a nenulové řešení
 $$V(t)=(k_0t)^3.$$ Máme zde tedy nejednoznačnost v řešení počáteční
-úlohy. Tato nejednoznačnost není v rozporu s\ větou o existenci a
+úlohy. Tato nejednoznačnost není v rozporu s větou o existenci a
 jednoznačnosti řešení, protože pravá strana je nulová (podmínka pro
 separovatelnou rovnici není splněna) a nemá ohraničenou derivaci podle
-$V$ (podmínka pro obecnou rovnici také není splněna). A\ nejednoznačnost má v tomto případě dokonce fyzikální význam. Plynné
-skupenství může existovat i\ pod bodem kondenzace. Takovému jevu se
+$V$ (podmínka pro obecnou rovnici také není splněna). A nejednoznačnost má v tomto případě dokonce fyzikální význam. Plynné
+skupenství může existovat i pod bodem kondenzace. Takovému jevu se
 říká přechlazená pára. Aby došlo ke kondenzaci, musí být k dispozici
 kondenzační jádra, například nečistoty ve vzduchu. Proto ve
 znečištěném ovzduší dochází častěji ke kondenzaci a tvorbě mlhy. Své
 by o tom mohli vyprávět obyvatelé Londýna, kteří se proslulých mlh
 zbavili poté, co se omezilo topení uhlím. My dnes spíše známe
 přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
-plíškem spustí přeměna skupenství na pevné spojená s\ intenzivním
+plíškem spustí přeměna skupenství na pevné spojená s intenzivním
 uvolněním tepla.
 
 

@@ -197,7 +197,7 @@ intervalu $I$.
 ```{prf:definition} asociovaná homogenní rovnice
 :nonumber:
  Buď dána lineární diferenciální rovnice. Homogenní rovnice, která
-vznikne z\ rovnice nahrazením pravé strany nulovou funkcí, tj.
+vznikne z rovnice nahrazením pravé strany nulovou funkcí, tj.
 rovnice
 $$    y'+a(x)y=0$$
 se nazývá *homogenní rovnice, asociovaná s nehomogenní rovnicí (LDE)*
@@ -219,8 +219,8 @@ diferencovatelných na intervalu $I$ operátor $L$ vztahem
 
 $$L[y](x)=y'(x)+a(x)y(x)$$
 
-pro každé $x\in I$, je možno LDE a s\ ní
-asociovanou homogenní rovnici zapsat v\ krátkém tvaru $L[y]=b(x)$ a
+pro každé $x\in I$, je možno LDE a s ní
+asociovanou homogenní rovnici zapsat v krátkém tvaru $L[y]=b(x)$ a
 $L[y]=0$.
 
 Operátor $L$ splňuje pro všechna
@@ -343,7 +343,7 @@ Slovně:
     řešení asociované homogenní lineární rovnice je obecným řešením dané
     nehomogenní rovnice.
 
-Stačí tedy najít dvě (do jisté míry speciální) řešení a z\ nich snadno
+Stačí tedy najít dvě (do jisté míry speciální) řešení a z nich snadno
 sestavíme obecné řešení zadané rovnice. 
 
 **Příklad.** Rovnice $$y'+y=3 \tag{*}$$ má partikulární řešení $y=3$ (vidíme
@@ -358,7 +358,7 @@ sestavíme obecné řešení zadané rovnice.
  <div class=sloupce>
 Než začneme hledat řešení
 nehomogenní rovnice, prozkoumejme, jak se lineární operátor $L$ chová
-vzhledem k\ součinu funkcí. Buďte $u=u(x)$ a $v=v(x)$ funkce. Platí
+vzhledem k součinu funkcí. Buďte $u=u(x)$ a $v=v(x)$ funkce. Platí
 $$\begin{aligned}
   L[u\cdot v]&{}=\Bigl(uv\Bigr)'+auv\\
   &{}=u'v+uv'+auv\\
@@ -371,10 +371,10 @@ kde funkce $v(x)$ splňuje vztah
 $$\begin{aligned}b(x)&=L[u\cdot v]\\&=vL[u]+uv'\\&=0+uv'\\&=uv'.\end{aligned}$$
 tj. $$v'(x)=\frac{b(x)}{u(x)}.$$ Odsud však funkci $v$ můžeme nalézt již
 pouhou integrací a součin $u(x)v(x)$ poté bude řešením nehomogenní
-rovnice. V\ praxi je také obvyklé, že si pamatujeme pouze hlavní myšlenku
+rovnice. V praxi je také obvyklé, že si pamatujeme pouze hlavní myšlenku
 – *budeme hledat řešení nehomogenní rovnice ve tvaru součinu nějaké
 funkce a řešení asociované homogenní rovnice* – a provádíme všechny
-úvahy pro konkrétní funkce $a$, $b$ v\ běžném neoperátorovém označení.
+úvahy pro konkrétní funkce $a$, $b$ v běžném neoperátorovém označení.
 
 </div>
 

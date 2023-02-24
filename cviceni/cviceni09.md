@@ -86,7 +86,7 @@ https://youtu.be/DvHpllR2zLg
 Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
 $x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
 zastávce v čase $t$, druhý trolejbus na tuto zastávku dorazí v čase
-$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s\ rostoucím $t$.
+$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s rostoucím $t$.
 
 Předpokládejme, že
 

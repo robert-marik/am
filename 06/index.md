@@ -109,23 +109,23 @@ https://youtu.be/tPf-7dZ4Il0
 </div>
 
 Pro dvojný integrál použijeme podobnou myšlenkovou konstrukci jako
-u\ křivkového integrálu prvního druhu, pouze místo drátu s\ danou
-lineární hustotou budeme uvažovat rovinnou ohraničenou desku s\ danou
+u křivkového integrálu prvního druhu, pouze místo drátu s danou
+lineární hustotou budeme uvažovat rovinnou ohraničenou desku s danou
 plošnou hustotou.
 
 * Pokud je hustota desky konstantní, je možno její hmotnost získat
   jednoduše jako součin plošné hustoty a obsahu.
-* Pokud se hustota desky mění a v\ obecném bodě $(x,y)$ je dána funkcí
-  $f(x,y)$, můžeme myšlenkově rozdělit desku na malé kousky, v\ rámci
+* Pokud se hustota desky mění a v obecném bodě $(x,y)$ je dána funkcí
+  $f(x,y)$, můžeme myšlenkově rozdělit desku na malé kousky, v rámci
   každého malého kousku hustotu aproximovat konstantou, vypočítat
   hmotnost každého kousku jako součin hustoty a obsahu a všechny
   hmotnosti sečíst.
 * Získaná veličina je aproximací celkové hmotnosti.
 
-V\ limitním přechodu kdy rozměry všech kousků na něž je deska dělena
-jdou k\ nule dostáváme **dvojný integrál** 
+V limitním přechodu kdy rozměry všech kousků na něž je deska dělena
+jdou k nule dostáváme **dvojný integrál** 
 $$ \iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y , $$ 
-kde $\Omega$ je oblast v\ rovině $(x,y)$ definovaná uvažovanou deskou. V aplikacích je častý též zápis
+kde $\Omega$ je oblast v rovině $(x,y)$ definovaná uvažovanou deskou. V aplikacích je častý též zápis
 $$ \iint_\Omega f(x,y)\mathrm{d}A$$ 
 nebo 
 $$ \iint_\Omega f(x,y)\mathrm{d}S.$$ 
@@ -163,14 +163,14 @@ Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jed
 
 </div>
 
-V\ závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
+V závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
 můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
 věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
 integrál. Mají název **Fubiniovy věty**.
 
 ```{prf:theorem} Fubiniova věta
 :nonumber:
- Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+ Nechť $f$ je funkce spojitá v uzavřené oblasti
 $$  
 \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
 {\varphi (x)\leq y\leq \psi (x)}\}.$$ 
@@ -192,7 +192,7 @@ $$
 
 ```{prf:theorem} Fubiniova věta pro jiné pořadí integrace
 :nonumber:
- Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+ Nechť $f$ je funkce spojitá v uzavřené oblasti
 $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
 {\varphi (y)\leq x\leq
 \psi (y)}\}.
@@ -233,7 +233,7 @@ $$\int_0^2 \int _0^{x^2} f(x,y)\;\mathrm{d}y\;\mathrm{d}x$$
 anebo
 $$\int_0^4 \int _{\sqrt y}^{2} f(x,y)\;\mathrm{d}x\;\mathrm{d}y.$$
 
-Všimněte si, že nestačí prosté prohození integrálů. Je nutno přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako funkce proměnné $x$ a jednou jako funkce proměnné $y$. V důsledku tohoto dochází v průběhu výpočtu dvěma různými způsoby k\ tomu, že pracujeme se dvěma různými integrály. Výsledky jsou samozřejmě stejné, ale nemusí být dosažitelné srovnatelnou námahou. Jedna z cest může být snazší.
+Všimněte si, že nestačí prosté prohození integrálů. Je nutno přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako funkce proměnné $x$ a jednou jako funkce proměnné $y$. V důsledku tohoto dochází v průběhu výpočtu dvěma různými způsoby k tomu, že pracujeme se dvěma různými integrály. Výsledky jsou samozřejmě stejné, ale nemusí být dosažitelné srovnatelnou námahou. Jedna z cest může být snazší.
 
 ## Výpočet (obdélníková oblast)
 
@@ -316,10 +316,10 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   s teplotou, je $$\frac{\mathrm d}{\mathrm d t}\left(\iint_M u\,\mathrm
   dx\mathrm dy\right)$$
   a odsud odvozujeme rovnici vedení tepla.
-* **Lineární momenty** hmotné množiny $M$ vzhledem k\ osám $y$ a $x$
+* **Lineární momenty** hmotné množiny $M$ vzhledem k osám $y$ a $x$
   jsou rovny $$\iint_M x\sigma(x,y)\mathrm{d}x \mathrm{d}y$$ a
   $$\iint_M y\sigma(x,y)\mathrm{d}x \mathrm{d}y.$$
-* **Moment setrvačnosti** hmotné množiny $M$ vzhledem k\ ose je
+* **Moment setrvačnosti** hmotné množiny $M$ vzhledem k ose je
   $$J=\iint_M \rho^2(x,y)\sigma(x,y)\mathrm{d}x \mathrm{d}y ,$$ kde
   $\rho(x,y)$ je vzdálenost bodu $(x,y)$ od osy otáčení. Například pro
   osu $x$ je $\rho(x,y)=y$ a pro osu $y$ je $\rho (x,y)=x$. Pro osu
@@ -345,11 +345,11 @@ manimp:beam|Odvození ohybové rovnice nosníku.
   celkové hmotnosti množiny.
 * **Kvadratický moment průřezu** (což je moment setrvačnosti pro
   $\sigma(x,y)=1$, anglicky *second moment of area*) je veličina,
-  která hraje podstatnou roli v\ mechanice (nábytek, stavby) při
+  která hraje podstatnou roli v mechanice (nábytek, stavby) při
   dimenzování (polic, nosných tyčí, nosníků).
 * V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné je bez újmy na obecnosti nahradit jedničkou. Vzorce pro obsah, $x$-ovou souřadnici těžiště ($x_0$), $y$-ovou
-  souřadnici těžiště ($y_0$), kvadratický moment vzhledem k\ ose $x$
-  ($I_x$) a kvadratický moment vzhledem k\ ose $y$ ($I_y$) (pro množinu $M$ s plošnou hustotou $1$) jsou
+  souřadnici těžiště ($y_0$), kvadratický moment vzhledem k ose $x$
+  ($I_x$) a kvadratický moment vzhledem k ose $y$ ($I_y$) (pro množinu $M$ s plošnou hustotou $1$) jsou
   $$
   \begin{alignedat}{2}
 	  %  S&=\iint_M\mathrm{d}x \mathrm{d}y \\
@@ -391,11 +391,11 @@ Odsud máme okamžitě několik pozorování
   mocninou rozměrů. Obsah (a tedy i hmotnost) roste s druhou
   mocninou. Uvažujme tři nosníky. První má čtvercový průřez. Druhý také, ale průřez má dvojnásobný obsah. (Strana je tedy $\sqrt 2$-krát delší.) Třetí nosník bude krabicový nosník. Bude mít vnější rozměry stejné jako větší nosník, ale uvnitř bude čtvercová dutina o rozměrech prvního nosníku. Tuhost prvního nosníku bude referenční, označme ji $I$. Tuhost druhého nosníku bude čtyřnásobná, tj. $4I$ a za toto navýšení tuhosti "platíme" použitím dvojnásobného množství materiálu. Tuhost třetího nosníku najdeme jako rozdíl prvních dvou, tj. $3I$, protože i geometricky největší nosník vznikne zasunutím prvního nosníku do dutiny ve třetím krabicovém nosníku. Nyní porovnjeme původní nosník a krabicový nosník. Oba používají stejné množství materiálu, ale tuhost krabicového nosníku je trojnásobná. To proto, že část materiálu je dál od osy symetrie průřezu. Podobně se dá zdůvodnit a výpočtem ukázat, že profil ve tvaru písmene I, známé íčko, je tužší než tyč vykovaná ze stejného množství materiálu.
 * Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky
-  strany. Podobná závislost musí být u\ každého průřezu
-  jednoparametrického tvaru, například pro kruh. Jako na nosník s\ kruhovým průřezem můžeme pohlížet i\ na stromy. Například strom, ve
-  kterém je dutina o\ velikosti poloviny průměru kmene většinou vyvolá
+  strany. Podobná závislost musí být u každého průřezu
+  jednoparametrického tvaru, například pro kruh. Jako na nosník s kruhovým průřezem můžeme pohlížet i na stromy. Například strom, ve
+  kterém je dutina o velikosti poloviny průměru kmene většinou vyvolá
   obavy ze stability. I když taková dutina vypadá obrovská, tuhost se
-  sníží o\ původní tuhost vynásobenou koeficientem
+  sníží o původní tuhost vynásobenou koeficientem
   $$(0.5)^4=0.0625\approx 6\%.$$ 
   Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost 
   $94\%$ původní tuhosti (za předpokladu dutiny uprostřed
@@ -426,7 +426,7 @@ x_0&=\frac 1{S_1+S_2}\iint _{M} x\,\mathrm dx\mathrm dy\\
 \end{aligned}
 $$
 Totéž je možné provést pro $y$-ovou souřadnici, nebo pro libovolný
-konečný počet částí. Podobně je možné odvodit vzorec s\ obecnou
+konečný počet částí. Podobně je možné odvodit vzorec s obecnou
 nekonstantní plošnou hustotou.  Poloha těžiště složeného obrazce je
 tedy *váženým průměrem* těžišť jednotlivých složek, kde váha každé
 složky je určena její hmotností. Protože se jedná o vážený průměr,
@@ -514,9 +514,9 @@ kde $S$ je obsah hráze. Formálně tento vztah odpovídá vzorci
 $$F=p_0 S,\tag{H1}\label{H1}$$
 kde $p_0=\rho g y_0$ je tlak v těžišti. *Proto v praxi stačí znát těžiště
 hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak
-v\ těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
+v těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
 poznatek nijak vázán na konkrétní tvar hráze. Musí být však splněna
-podmínka, že všechny body hráze leží v\ jedné rovině.
+podmínka, že všechny body hráze leží v jedné rovině.
 
 \iffalse
 
@@ -555,8 +555,8 @@ Tlaková síla působící na svislou hráz má celkový nulový moment
 vzhledem k ose procházející působištěm. Je-li hráz definována množinou
 $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
 tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
-součin $(y_c-y)y\rho g\Delta S$ je příspěvek k\ otáčivému momentu
-vzhledem k\ ose, procházející vodorovně působištěm tlakové
+součin $(y_c-y)y\rho g\Delta S$ je příspěvek k otáčivému momentu
+vzhledem k ose, procházející vodorovně působištěm tlakové
 síly. Součet všech těchto příspěvků se nuluje, tedy musí platit
 $$\iint_M (y_c-y)y\rho g\,\mathrm dx\mathrm dy=0.$$
 Odsud po vydělení konstantami $\rho g$ dostáváme
@@ -591,7 +591,7 @@ $y$-ové polohy těžiště $y_0$.
 
 \fi
 
-## Dvojný integrál v\ polárních souřadnicích
+## Dvojný integrál v polárních souřadnicích
 
 https://youtu.be/lEObYHpX72w
 
@@ -601,14 +601,14 @@ https://youtu.be/lEObYHpX72w
 
 Dosud jsme používali pouze kartézské souřadnice: dvojici čísel
 udávající vzdálenost bodu od osy $y$ a od osy $x$, která jednoznačně
-určuje polohu bodu v\ rovině. V\ praxi je někdy výhodnější použít
-i\ jiný způsob jak pomocí dvojice čísel charakterizovat polohu bodu
-v\ rovině - takové souřadnice potom nazýváme **křivočaré** souřadnice.
+určuje polohu bodu v rovině. V praxi je někdy výhodnější použít
+i jiný způsob jak pomocí dvojice čísel charakterizovat polohu bodu
+v rovině - takové souřadnice potom nazýváme **křivočaré** souřadnice.
 
-Z\ křivočarých souřadnic jsou nejdůležitější **polární
+Z křivočarých souřadnic jsou nejdůležitější **polární
 souřadnice**. Při jejich použití polohu bodu $A$ zadáváme tak, že
 určíme vzdálenost $r$ bodu od počátku soustavy souřadnic $O$ a úhel
-$\varphi$, který svírá spojnice bodů $O$ a $A$ s\ kladnou částí osy
+$\varphi$, který svírá spojnice bodů $O$ a $A$ s kladnou částí osy
 $x$.
 
 \def\maxfactor{0.3}
@@ -690,8 +690,8 @@ th {text-align: center;}
 
 </div>
 
-Chceme-li převést dvojný integrál do polárních souřadnic, provádíme v\ něm vlastně substituci $x=r\cos \varphi$ a $y=r\sin \varphi$. Přitom
-se transformují i\ diferenciály $\mathrm{d}x$ a $\mathrm{d}y$.  Při
+Chceme-li převést dvojný integrál do polárních souřadnic, provádíme v něm vlastně substituci $x=r\cos \varphi$ a $y=r\sin \varphi$. Přitom
+se transformují i diferenciály $\mathrm{d}x$ a $\mathrm{d}y$.  Při
 změně úhlu o $\mathrm{d}\varphi$ a změně vzdálenosti o $\mathrm{d}r$
 má odpovídající část roviny rozměry $\mathrm{d}r$ a
 $r\mathrm{d}\varphi$ a její obsah je $r\mathrm{d}\varphi\mathrm{d}r$
@@ -700,18 +700,18 @@ A=\mathrm{d} x\mathrm{d}y$ se transformuje na $\mathrm{d}
 A=r\mathrm{d}\varphi\mathrm{d}r$. Podíl
 $\frac{\mathrm{d}\varphi\mathrm{d}r }{\mathrm{d}x \mathrm{d}y }$
 udává, kolikrát se změní obsah elementární oblasti při změně souřadnic
-a nazývá se **jakobián**. V\ případě polárních souřadnic je jakobián
+a nazývá se **jakobián**. V případě polárních souřadnic je jakobián
 jak vidíme roven $r$ a platí tedy
 $$
   \iint_{\Omega}f(x,y){\mathrm{d}x \mathrm{d}y }=\iint_{\Omega}f(r\cos \varphi ,
   r\sin\varphi ){r\mathrm{d}\varphi\mathrm{d}r }.
 $$
   
-V\ diferenciálním počtu polární souřadnice používáme především tam, kde
+V diferenciálním počtu polární souřadnice používáme především tam, kde
 má problém radiální symetrii. Například při studiu ochlazování nebo
-kmitů kruhových desek či válcovitých součástek. V\ integrálním počtu
-tyto souřadnice použijeme zejména v\ případě, kdy integrujeme přes
-kružnici nebo její část (např. mezikruží či kruhová výseč). V\ takovém
+kmitů kruhových desek či válcovitých součástek. V integrálním počtu
+tyto souřadnice použijeme zejména v případě, kdy integrujeme přes
+kružnici nebo její část (např. mezikruží či kruhová výseč). V takovém
 případě mají totiž integrály které vzniknou po transformaci dvojného
 integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je
 zpravidla jednodušší. 

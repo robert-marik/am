@@ -502,7 +502,7 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
  &=
 \vec \imath \ \qty[\pdv x{-3x^2z}-\pdv z{5x^2y}]
  +\vec \jmath \ \qty[\pdv z{xyz}-\pdv x{-3x^2z}] 
- +\vec k\ \qty({\pdv x{5x^2y}-\pdv y{xyz}})\\
+ +\vec k \qty({\pdv x{5x^2y}-\pdv y{xyz}})\\
  &=(xy+6xz)\vec\jmath + (10xy-xz)\vec k
 \\&=x(y+6z)\vec\jmath + x(10y-z)\vec k
 \end{aligned}
@@ -1880,7 +1880,7 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
 $x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
 zastávce v čase $t$, druhý trolejbus na tuto zastávku dorazí v čase
-$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s\ rostoucím $t$.
+$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s rostoucím $t$.
 
 Předpokládejme, že **(1)** pokud žádní pasažéři nečekají na druhý vůz, druhý vůz se
   pohybuje rychleji než první vůz a oba vozy se "sjedou", tj. $x(t)$

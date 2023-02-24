@@ -38,7 +38,7 @@ Autonomní diferenciální rovnice je rovnice tvaru $$\frac{\mathrm dy}{\mathrm 
 proměnnými a umíme ji řešit
 analytickou cestou. Proto se nyní nebudeme zaměřovat na hledání
 obecného řešení, ale pokusíme se popsat chování řešení, aniž bychom
-tato řešení znali. Pokusíme se s\ co nejmenší námahou říct, jak se
+tato řešení znali. Pokusíme se s co nejmenší námahou říct, jak se
 budou řešení chovat.
 
 Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Nazývají *se stacionární body*. Je užitečné umět posoudit chování řešení v okolí stacionárních bodů, což umožní následující věta.
@@ -58,7 +58,7 @@ Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Naz�
 
 Pro grafickou interpretaci věty je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
-má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie pravé strany.
+má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z monotonie pravé strany.
 
 Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt}$ a toto řešení se pro velká $t$ blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty $k$. Pravou stranu rovnice, funkci $f(y)$, je možné aproximovat vztahem $f(y)\approx f'(y_0)(y-y_0)$ a odsud a z poznatku, že malá změna rovnice vetšinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech) a proto rovnice $y'=f(y)$ kopíruje v okolí bodu $y_0$ chování rovnice $(y-y_0)'=f'(y_0)(y-y_0)$, pokud vynecháme patologické případy, což je zde $f'(y_0)=0$. Řešení je tedy $y\approx y_0+Ce^{f'(y_0)t}$ a tato funkce buď konverguje k $y_0$ nebo roste neohraničeně, v závislosti na znaménku derivace $f'(y_0)$.
 
@@ -80,7 +80,7 @@ prvním stacionárním bodě je funkce rostoucí a tento stacionární bod je
 nestabilní. Ve druhém stacionárním bodě je funkce klesající a tento
 stacionární bod je stabilní. Jak se zvyšuje faktor $h$, graf paraboly
 se posouvá směrem dolů a oba stacionární body se posouvají směrem k
-sobě a k\ vrcholu. Jejich stabilita zůstává neporušena. To znamená, že
+sobě a k vrcholu. Jejich stabilita zůstává neporušena. To znamená, že
 sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
 se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
 a rovnováha je tedy poněkud křehká.

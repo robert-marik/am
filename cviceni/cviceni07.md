@@ -1,10 +1,10 @@
 # Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity
 
-> Anotace.
->
-> * V úvodních příkladech ilustrujeme výpočet křivkového integrálu pomocí kmenové funkce. Příkladů je několik, aby se zapsalo do paměti to nejdůležitější: že se křivkový integrál dá v některých případech vypočítat snadno pomocí kmenové funkce. Jak konkrétně postupovat je již dovednost navazující.
-> * Greenova věta pro nás bude mít spíše teoretický význam. Umožňuje přepis křivkového integrálu na dvojný. Vlastní použití není těžké a osaháme si jej i v domácích úlohách. I zde je důležité v první řadě vědět, že to jde a teprve potom přemýšlet nad tím, jak konkrétně se to dělá.
-> * V příkladě se vrátíme i k difuzní rovnici.
+```{admonition} Anotace.
+* V úvodních příkladech ilustrujeme výpočet křivkového integrálu pomocí kmenové funkce. Příkladů je několik, aby se zapsalo do paměti to nejdůležitější: že se křivkový integrál dá v některých případech vypočítat snadno pomocí kmenové funkce. Jak konkrétně postupovat je již dovednost navazující.
+* Greenova věta pro nás bude mít spíše teoretický význam. Umožňuje přepis křivkového integrálu na dvojný. Vlastní použití není těžké a osaháme si jej i v domácích úlohách. I zde je důležité v první řadě vědět, že to jde a teprve potom přemýšlet nad tím, jak konkrétně se to dělá.
+* V příkladě se vrátíme i k difuzní rovnici.
+```
 
 ## Křivkový integrál pomocí kmenové funkce
 

@@ -1,10 +1,10 @@
 # Diferenciální rovnice
 
-> Anotace.
->
-> * V úvodním příkladu si natrénujeme nejdůležitější schopnost související s diferenciálními rovnicemi: schopnost přepsat slovní formulaci modelu do kvantitativní formy, která umožňuje detailní kvantitativní analýzu. Schopnost sestavit diferenciální rovnici podle slovního zadání.
-> * V dalších úlohách se budeme zabývat problematikou existence a jednoznačnosti řešení. 
-> * Nakonec se naučíme řešit diferenciální rovnice se separovanými proměnnými dvojím integrováním.
+```{admonition} Anotace.
+* V úvodním příkladu si natrénujeme nejdůležitější schopnost související s diferenciálními rovnicemi: schopnost přepsat slovní formulaci modelu do kvantitativní formy, která umožňuje detailní kvantitativní analýzu. Schopnost sestavit diferenciální rovnici podle slovního zadání.
+* V dalších úlohách se budeme zabývat problematikou existence a jednoznačnosti řešení. 
+* Nakonec se naučíme řešit diferenciální rovnice se separovanými proměnnými dvojím integrováním.
+```
 
 ## Jednoduché modely založené na diferenciálních rovnicích
 

@@ -1,10 +1,10 @@
 # Dvojné integrály
 
-> Anotace.
->
-> * V úvodu si osaháme integrační metody. Nejprve pro obdélník. Tam se dá často (ujistěte se, že perfektně poznáte kdy) úloha na výpočet dvojného integrálu redukovat na nezávislý výpočet dvou jednoduchých integrálů, které se mezi sebou vynásobí.
-> * Další příklady jsou věnovány integraci na jiných než obdélníkových množinách. Zde je nutné dvojný integrál převést na dvojnásobný, tj. integrál z integrálu.
-> * Poslední dva příklady jsou věnovány integraci v jiných než kartézských souřadnicích. Suveréně nejčastěji se vedle kartézských souřadnic používají souřadnice polární a proto se zaměříme právě na ně. 
+```{admonition} Anotace.
+* V úvodu si osaháme integrační metody. Nejprve pro obdélník. Tam se dá často (ujistěte se, že perfektně poznáte kdy) úloha na výpočet dvojného integrálu redukovat na nezávislý výpočet dvou jednoduchých integrálů, které se mezi sebou vynásobí.
+* Další příklady jsou věnovány integraci na jiných než obdélníkových množinách. Zde je nutné dvojný integrál převést na dvojnásobný, tj. integrál z integrálu.
+* Poslední dva příklady jsou věnovány integraci v jiných než kartézských souřadnicích. Suveréně nejčastěji se vedle kartézských souřadnic používají souřadnice polární a proto se zaměříme právě na ně. 
+```
 
 ## Integrál přes obdélník
 

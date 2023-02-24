@@ -24,8 +24,10 @@ sed -i 's/Remark/Poznámka/' $directory/*/index.html
 sed -i 's/Definition/Definice/' $directory/*/index.html
 sed -i 's/Example/Příklad/' $directory/*/index.html
 sed -i 's/\\dm//' $directory/*/index.html
+sed -i 's/\\(/\\(\\displaystyle /' $directory/*/index.html
+sed -i 's/\\(/\\(\\displaystyle /' $directory/*/cviceni*.html
 
-sed -i 's/<p>ww:\(.*\)<\/p>/<a onclick=otevrit("\1"); target="_blank" class="WWotazka">Testová otázka<\/a>/' $directory/*/index.html
+sed -i 's/<p>ww:\(.*\)<\/p>/<a onclick=otevrit("\1"); target="_blank" class="WWotazka">Testová otázka<\/a>/' $directory/*/*.html
 
 sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' $directory/*/*.html
 

@@ -1,11 +1,11 @@
 # Lineární diferenciální rovnice
 
-> Anotace.
->
-> * Ve všech úvodních příkladech se budeme věnovat asi nejjednodušší diferenciální rovnici: lineární s konstantními koeficienty. Tato tovnice má jediné konstantní řešení, kdy se nic neděje. Nekonstantná řešení jsou popsány exponenciálními funkcemi.
-> * Ve dvou úvodních příkladech se podíváme na řešení rovnice popisující radioaktivní rozpad a exponenciální pokles aktivity. V jednom případě je pokles k nule (radioaktivní prvek se časem rozpadne) a ve druhém případě k nenulové hodnotě (množství radioaktivního prvku je doplňováno difuzí a nastolí se rovnováha).
-> * V dalších dvou příkladech si ukážeme modely vedoucí k rovnici popisující exponenciální růst, resp. exponenciální vzdalování se od konstantního řešení. Ve druhém příkladě si zkusíme numericky demonstrovat intenzitu exponenciálního růstu.
-> * V posledním příkladě se zaměříme na vektorový případ a ukážeme, že zpětná vazba reagující na hodnoty sledované veličiny je vhodnou taktikou pro udržení konstantního stavu této veličina a podle povahy může a nemusí vést k oscilacím. Ukážeme si toto na příkladě regulace teploty ale v podstatě stejně je udržována rovnováha enzymů a proteinů v tělech rostlin a živočichů.
+```{admonition} Anotace.
+* Ve všech úvodních příkladech se budeme věnovat asi nejjednodušší diferenciální rovnici: lineární s konstantními koeficienty. Tato tovnice má jediné konstantní řešení, kdy se nic neděje. Nekonstantná řešení jsou popsány exponenciálními funkcemi.
+* Ve dvou úvodních příkladech se podíváme na řešení rovnice popisující radioaktivní rozpad a exponenciální pokles aktivity. V jednom případě je pokles k nule (radioaktivní prvek se časem rozpadne) a ve druhém případě k nenulové hodnotě (množství radioaktivního prvku je doplňováno difuzí a nastolí se rovnováha).
+* V dalších dvou příkladech si ukážeme modely vedoucí k rovnici popisující exponenciální růst, resp. exponenciální vzdalování se od konstantního řešení. Ve druhém příkladě si zkusíme numericky demonstrovat intenzitu exponenciálního růstu.
+* V posledním příkladě se zaměříme na vektorový případ a ukážeme, že zpětná vazba reagující na hodnoty sledované veličiny je vhodnou taktikou pro udržení konstantního stavu této veličina a podle povahy může a nemusí vést k oscilacím. Ukážeme si toto na příkladě regulace teploty ale v podstatě stejně je udržována rovnováha enzymů a proteinů v tělech rostlin a živočichů.
+```
 
 ## Radioaktivní rozpad 
 

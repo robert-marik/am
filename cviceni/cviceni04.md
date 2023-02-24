@@ -1,9 +1,9 @@
 # Rotace, kmenová funkce gradientu
 
-> Anotace.
->
-> * V úvodu si zkusíme vypočítat několik rotací pro získání určité míry jistoty při práci s tímto operátorem. 
-> * V další části se budeme věnovat hledání kmenové funkce vektorového pole. Rotace informuje o tom, zda tato úloha má řešení, k nalezení tohoto řešení však už nijak nepřispívá. Protože však vzhledem k výše uvedenému problematika k rotaci logicky patří, jsou tyto úlohy zařazeny pospolu. Protože ve dvourozměrném poli se rotace výrazně zjednodušuje, může být nulovost rotace nahrazena rovností mezi jistými dvěma parciálními derivacemi.
+```{admonition} Anotace.
+* V úvodu si zkusíme vypočítat několik rotací pro získání určité míry jistoty při práci s tímto operátorem. 
+* V další části se budeme věnovat hledání kmenové funkce vektorového pole. Rotace informuje o tom, zda tato úloha má řešení, k nalezení tohoto řešení však už nijak nepřispívá. Protože však vzhledem k výše uvedenému problematika k rotaci logicky patří, jsou tyto úlohy zařazeny pospolu. Protože ve dvourozměrném poli se rotace výrazně zjednodušuje, může být nulovost rotace nahrazena rovností mezi jistými dvěma parciálními derivacemi.
+```
 
 ## Rotace vektorového pole v rovině
 

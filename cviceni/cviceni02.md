@@ -1,11 +1,11 @@
 # Gradient
 
-> Anotace.
->
-> * V úvodu si osaháme gradient a jeho využití k lineární aproximaci a jeho vztah k vrstevnicím.
-> * Komplexnější je příklad číslo 5. Ukazuje mimo jiné, že někdy je výhodnější řešit úlohu v rámci obecnější teorie. 
-> * V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku. Tato linearizace je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
-> * Poslední příklad nás zavede do světa zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
+```{admonition} Anotace.
+* V úvodu si osaháme gradient a jeho využití k lineární aproximaci a jeho vztah k vrstevnicím.
+* Komplexnější je příklad číslo 5. Ukazuje mimo jiné, že někdy je výhodnější řešit úlohu v rámci obecnější teorie. 
+* V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku. Tato linearizace je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
+* Poslední příklad nás zavede do světa zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
+```
 
 ## Linearizace pocitové teploty
 
@@ -198,15 +198,7 @@ a ze symetrie
 $$\pdv{T}{y}=-\frac{y}{\sqrt{x^2+y^2}}.$$
 Odsud $$\nabla T=\qty(-\frac{x}{\sqrt{x^2+y^2}},-\frac{y}{\sqrt{x^2+y^2}})^T=-\frac 1{\sqrt{x^2+y^2}}(x,y)^T.$$
 Tok tepla je
-$$\vec q=-\lambda \nabla T=\frac 1{\sqrt{x^2+y^2}}\begin{pmatrix}
-  2&0\\0&3
-\end{pmatrix}
-\begin{pmatrix}
-  x\\y
-\end{pmatrix}=\frac 1{\sqrt{x^2+y^2}} \begin{pmatrix}
-  2x\\3y
-\end{pmatrix}
-$$
+$$\vec q=-\lambda \nabla T=\frac 1{\sqrt{x^2+y^2}}\begin{pmatrix}   2&0\\0&3 \end{pmatrix} \begin{pmatrix}   x\\y \end{pmatrix}=\frac 1{\sqrt{x^2+y^2}} \begin{pmatrix}   2x\\3y \end{pmatrix} $$
 Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\frac 1{\sqrt{2}}(2,3)^T$. Porovnáním s gradientem $\nabla T(A)=-(0,1)^T$, $\nabla T(B)=-(1,0)^T$ a $\nabla T(C)=-\frac 1{\sqrt 2}(1,1)^T$ vidíme, že v bodech $A$  a $B$ je tok proti směru gradientu, v bodě $C$ se tok stáčí do směru osy $y$. Protože ve ose $y$ má dřevo větší vodivost, jedná se o podélný směr. To je ale vlastně vidět už ze zadané matice.
 
 ```

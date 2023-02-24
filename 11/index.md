@@ -12,23 +12,27 @@
 
 https://youtu.be/PcNc0tfv7Q0
 
-> Definice (Lineární diferenciální rovnice druhého řádu). Buďte $p$, $q$ a $f$
-> funkce definované a spojité na intervalu $I$. Diferenciální rovnice
-> $$
->     y''+p(x)y'+q(x)y=f(x) \tag{LDE}\label{LDE}$$
-> se nazývá *lineární diferenciální rovnice druhého řádu*. *Řešením
-> rovnice* (nebo též *integrálem rovnice*) na intervalu $I$ rozumíme
-> funkci, která má spojité derivace do řádu $2$ na
-> intervalu $I$ a po dosazení identicky splňuje rovnost (LDE) na $I$.
-> Úloha nalézt řešení rovnice, které splňuje v\ bodě $x_0\in I$ *počáteční
-> podmínky*
-> $$\tag{IC}
->     \begin{cases}
->       y(x_0)=y_0,\\y'(x_0)=y'_0,
->     \end{cases}$$
-> kde $y_0$ a $y'_0$ jsou reálná čísla, se nazývá *počáteční úloha*
-> (*Cauchyova úloha*). Řešení počáteční úlohy se nazývá *partikulární
-> řešení rovnice.*
+```{prf:definition} Lineární diferenciální rovnice druhého řádu
+:nonumber:
+ Buďte $p$, $q$ a $f$
+funkce definované a spojité na intervalu $I$. Diferenciální rovnice
+$$
+y''+p(x)y'+q(x)y=f(x) \tag{LDE}\label{LDE}$$
+se nazývá *lineární diferenciální rovnice druhého řádu*. *Řešením
+rovnice* (nebo též *integrálem rovnice*) na intervalu $I$ rozumíme
+funkci, která má spojité derivace do řádu $2$ na
+intervalu $I$ a po dosazení identicky splňuje rovnost (LDE) na $I$.
+Úloha nalézt řešení rovnice, které splňuje v\ bodě $x_0\in I$ *počáteční
+podmínky*
+$$\tag{IC}
+\begin{cases}
+y(x_0)=y_0,\\y'(x_0)=y'_0,
+\end{cases}$$
+kde $y_0$ a $y'_0$ jsou reálná čísla, se nazývá *počáteční úloha*
+(*Cauchyova úloha*). Řešení počáteční úlohy se nazývá *partikulární
+řešení rovnice.*
+```
+
 
 **Zkratky:** LDE - lineární diferenciální rovnice, IC - počáteční podmínka, IVP - počáteční úloha 
 
@@ -71,29 +75,49 @@ https://youtu.be/sw5EvXHFtA0
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 
-> Věta (o existenci a jednoznačnosti řešení LDE druhého řádu). Každá
-> počáteční úloha pro LDE druhého řádu má řešení, které je určeno
-> jednoznačně a toto řešení je definované na celém intervalu $I$.
+```{prf:theorem} o existenci a jednoznačnosti řešení LDE druhého řádu
+:nonumber:
+ Každá
+počáteční úloha pro LDE druhého řádu má řešení, které je určeno
+jednoznačně a toto řešení je definované na celém intervalu $I$.
+```
 
-> Definice (speciální typy LDE druhého řádu). Platí-li v\ rovnici (LDE) $f(x)=0$
-> pro všechna $x\in I$, nazývá se rovnice (LDE) *homogenní*, v\ opačném
-> případě *nehomogenní*. 
-> 
-> Jsou-li koeficienty $p(x)$ a $q(x)$ na intervalu
-> $I$ konstantní funkce, nazývá se (LDE) *rovnice s\ konstantními
-> koeficienty*.
 
-> Definice (triviální řešení). Funkce $y(x)\equiv 0$ je řešením
-> homogenní LDE druhého řádu $$y''+p(x)y'+q(x)y=0$$ vždy, bez ohledu na tvar koeficientů $p$, $q$. Toto řešení nazýváme *triviální řešení*.
+```{prf:definition} speciální typy LDE druhého řádu
+:nonumber:
+ Platí-li v\ rovnici (LDE) $f(x)=0$
+pro všechna $x\in I$, nazývá se rovnice (LDE) *homogenní*, v\ opačném
+případě *nehomogenní*. 
 
-> Definice (asociovaná homogenní rovnice). Nahradíme-li v\ nehomogenní LDE
-> pravou stranu (tj. funkci $f$) nulovou funkcí obdržíme rovnici
-> $$ y''+p(x)y'+q(x)y=0.$$
-> Tato rovnice se nazývá *asociovaná homogenní rovnice k\ rovnici (LDE)*.
+Jsou-li koeficienty $p(x)$ a $q(x)$ na intervalu
+$I$ konstantní funkce, nazývá se (LDE) *rovnice s\ konstantními
+koeficienty*.
+```
 
-> Definice (obecné řešení). Všechna řešení LDE druhého řádu 
-> lze vyjádřit ve tvaru obsahujícím dvě nezávislé konstanty $C_1$,
-> $C_2\in\mathbb{R}$. Takovýto předpis se nazývá *obecné řešení rovnice (LDE)*.
+
+```{prf:definition} triviální řešení
+:nonumber:
+ Funkce $y(x)\equiv 0$ je řešením
+homogenní LDE druhého řádu $$y''+p(x)y'+q(x)y=0$$ vždy, bez ohledu na tvar koeficientů $p$, $q$. Toto řešení nazýváme *triviální řešení*.
+```
+
+
+```{prf:definition} asociovaná homogenní rovnice
+:nonumber:
+ Nahradíme-li v\ nehomogenní LDE
+pravou stranu (tj. funkci $f$) nulovou funkcí obdržíme rovnici
+$$ y''+p(x)y'+q(x)y=0.$$
+Tato rovnice se nazývá *asociovaná homogenní rovnice k\ rovnici (LDE)*.
+```
+
+
+```{prf:definition} obecné řešení
+:nonumber:
+ Všechna řešení LDE druhého řádu 
+lze vyjádřit ve tvaru obsahujícím dvě nezávislé konstanty $C_1$,
+$C_2\in\mathbb{R}$. Takovýto předpis se nazývá *obecné řešení rovnice (LDE)*.
+```
+
 
 <!--
 ## Operátorová symbolika
@@ -200,28 +224,40 @@ násobkem druhého.
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 
-> Definice (lineární (ne-)závislost funkcí). Buďte $y_1$ a $y_2$ funkce definované
-> na intervalu $I$. Řekneme, že funkce $y_1$ a $y_2$ jsou na intervalu $I$
-> *lineárně závislé*, jestliže jedna z\ nich je na intervalu $I$ násobkem
-> druhé, tj. jestliže existuje reálné číslo $k\in\mathbb{R}$ s\ vlastností
-> $$y_1(x)=ky_2(x) \qquad\text{pro všechna $x\in I$},$$
-> nebo
-> $$y_2(x)=ky_1(x) \qquad\text{pro všechna $x\in I$}.$$
-> V\ opačném případě říkáme, že funkce $y_1$, $y_2$ jsou na intervalu $I$
-> *lineárně nezávislé*.
+```{prf:definition} lineární (ne-)závislost funkcí
+:nonumber:
+ Buďte $y_1$ a $y_2$ funkce definované
+na intervalu $I$. Řekneme, že funkce $y_1$ a $y_2$ jsou na intervalu $I$
+*lineárně závislé*, jestliže jedna z\ nich je na intervalu $I$ násobkem
+druhé, tj. jestliže existuje reálné číslo $k\in\mathbb{R}$ s\ vlastností
+$$y_1(x)=ky_2(x) \qquad\text{pro všechna $x\in I$},$$
+nebo
+$$y_2(x)=ky_1(x) \qquad\text{pro všechna $x\in I$}.$$
+V\ opačném případě říkáme, že funkce $y_1$, $y_2$ jsou na intervalu $I$
+*lineárně nezávislé*.
+```
 
-> Definice (Wronskián). Buďte $y_1(x)$ a $y_2(x)$ dvě libovolná
-> řešení homogenní rovnice (LDE0). *Wronskiánem* funkcí $y_1(x)$,
-> $y_2(x)$ rozumíme determinant
-> $$
->     W[y_1, y_2](x)=>     \begin{vmatrix}
->       y_1(x)&y_2(x)\\y_1'(x)&y_2'(x)
->     \end{vmatrix}.
->  $$
 
-> Věta (o lineární (ne)závislostí řešení). Buďte $y_1(x)$ a $y_2(x)$ dvě řešení rovnice
-> (LDE0) na intervalu $I$. Tato řešení jsou lineárně nezávislá právě
-> tehdy když je jejich Wronskián různý od nuly na intervalu $I$.
+```{prf:definition} Wronskián
+:nonumber:
+ Buďte $y_1(x)$ a $y_2(x)$ dvě libovolná
+řešení homogenní rovnice (LDE0). *Wronskiánem* funkcí $y_1(x)$,
+$y_2(x)$ rozumíme determinant
+$$
+W[y_1, y_2](x)=\begin{vmatrix}
+y_1(x)&y_2(x)\\y_1'(x)&y_2'(x)
+\end{vmatrix}.
+$$
+```
+
+
+```{prf:theorem} o lineární (ne)závislostí řešení
+:nonumber:
+ Buďte $y_1(x)$ a $y_2(x)$ dvě řešení rovnice
+(LDE0) na intervalu $I$. Tato řešení jsou lineárně nezávislá právě
+tehdy když je jejich Wronskián různý od nuly na intervalu $I$.
+```
+
 
 -->
 
@@ -229,17 +265,25 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 
 $$y''+p(x)y'+q(x)y=0 \tag{LDE0}$$
 
-> Věta (obecné řešení homogenní LDE). Jsou-li $y_1$ a $y_2$ dvě
-> netriviální lineárně nezávislá řešení rovnice (LDE0) na intervalu
-> $I$, pak funkce $y$ definovaná vztahem
-> $$    y(x, C_1, C_2)=C_1y_1(x)+C_2y_2(x),$$
-> kde $C_{1,2}\in\mathbb{R}$, je obecným řešením rovnice (LDE0) na intervalu
-> $I$.
+```{prf:theorem} obecné řešení homogenní LDE
+:nonumber:
+ Jsou-li $y_1$ a $y_2$ dvě
+netriviální lineárně nezávislá řešení rovnice (LDE0) na intervalu
+$I$, pak funkce $y$ definovaná vztahem
+$$    y(x, C_1, C_2)=C_1y_1(x)+C_2y_2(x),$$
+kde $C_{1,2}\in\mathbb{R}$, je obecným řešením rovnice (LDE0) na intervalu
+$I$.
+```
+
 
 Dvojicí lineárně nezávislých řešení rozumíme dvě řešení taková, že jedno není násobkem druhého.
 
-> Definice (fundamentální systém řešení). Dvojici funkcí $y_1$ a $y_2$ z\ předchozí
-> věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
+```{prf:definition} fundamentální systém řešení
+:nonumber:
+ Dvojici funkcí $y_1$ a $y_2$ z\ předchozí
+věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
+```
+
 
 ## Homogenní LDE 2. řádu s\ konstantními koeficienty
 
@@ -274,43 +318,59 @@ $$
 
 U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matice soustavy, která je obsažena v následující definici.
 
-> Definice (charakteristická rovnice). Kvadratická rovnice
-> $$z^2+pz+q=0$$ s\ neznámou $z$ se nazývá *charakteristická rovnice*
-> pro rovnici $$y''+py'+qy=0.$$
+```{prf:definition} charakteristická rovnice
+:nonumber:
+ Kvadratická rovnice
+$$z^2+pz+q=0$$ s\ neznámou $z$ se nazývá *charakteristická rovnice*
+pro rovnici $$y''+py'+qy=0.$$
+```
 
-> Věta (o obecném řešení LDE s\ konstantními koeficienty).
->  Uvažujme LDE $$y''+py'+qy=0,\tag{1}$$ a její charakteristickou rovnici
->  $$z^2+pz+q=0.$$
-> 
-> -   Jsou-li $z_1,z_2\in\mathbb{R}$ dva různé reálné kořeny charakteristické
->     rovnice, definujme $${y_1=e^{z_1 x}}, \qquad{y_2=e^{z_2 x}}.$$
-> 
-> -   Je-li $z_1\in\mathbb{R}$ dvojnásobným kořenem charakteristické
->     rovnice, definujme $${y_1=e^{z_1 x}}, \qquad{y_2=xe^{z_1 x}}.$$
-> 
-> -   Jsou-li $z_{1,2}=\alpha\pm i\beta\not\in\mathbb{R}$ dva komplexně sdružené
->     kořeny charakteristické rovnice, definujme $${y_1(x)=e^{\alpha x}\cos(\beta x)}, \qquad
->     {y_2(x)=e^{\alpha x}\sin(\beta x)}.$$
-> 
-> Potom obecné řešení rovnice (1) je
-> $$y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.$$
+
+```{prf:theorem} o obecném řešení LDE s\ konstantními koeficienty
+:nonumber:
+
+Uvažujme LDE $$y''+py'+qy=0,\tag{1}$$ a její charakteristickou rovnici
+$$z^2+pz+q=0.$$
+
+-   Jsou-li $z_1,z_2\in\mathbb{R}$ dva různé reálné kořeny charakteristické
+rovnice, definujme $${y_1=e^{z_1 x}}, \qquad{y_2=e^{z_2 x}}.$$
+
+-   Je-li $z_1\in\mathbb{R}$ dvojnásobným kořenem charakteristické
+rovnice, definujme $${y_1=e^{z_1 x}}, \qquad{y_2=xe^{z_1 x}}.$$
+
+-   Jsou-li $z_{1,2}=\alpha\pm i\beta\not\in\mathbb{R}$ dva komplexně sdružené
+kořeny charakteristické rovnice, definujme $${y_1(x)=e^{\alpha x}\cos(\beta x)}, \qquad
+{y_2(x)=e^{\alpha x}\sin(\beta x)}.$$
+
+Potom obecné řešení rovnice (1) je
+$$y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.$$
+```
+
 
 ## Nehomogenní LDE 2. řádu
 
-> Věta (o obecném řešení nehomogenní LDE). Součet libovolného partikulárního řešení
-> nehomogenní lineární diferenciální rovnice a obecného řešení asociované
-> homogenní rovnice je obecným řešením původní nehomogenní rovnice
+```{prf:theorem} o obecném řešení nehomogenní LDE
+:nonumber:
+ Součet libovolného partikulárního řešení
+nehomogenní lineární diferenciální rovnice a obecného řešení asociované
+homogenní rovnice je obecným řešením původní nehomogenní rovnice
+```
+
 
 Následující věta udává jednu z\ metod nalezení partikulárního řešení,
 pokud je diferenciální rovnice do jisté míry speciální: má konstantní
 koeficienty a polynomiální pravou stranu.
 
-> Věta (metoda neurčitých koeficientů). Uvažujme lineární diferenciální rovnici
-> druhého řádu
-> $$y''+py'+qy=P_n(x),$$
-> kde $p\in\mathbb{R}$ je konstanta, $q\in\mathbb{R}\setminus\{0\}$ je nenulová konstanta
-> a $P_n(x)$ je polynom stupně $n$. Existuje polynom stupně $n$, který je
-> partikulárním řešením této diferenciální rovnice.
+```{prf:theorem} metoda neurčitých koeficientů
+:nonumber:
+ Uvažujme lineární diferenciální rovnici
+druhého řádu
+$$y''+py'+qy=P_n(x),$$
+kde $p\in\mathbb{R}$ je konstanta, $q\in\mathbb{R}\setminus\{0\}$ je nenulová konstanta
+a $P_n(x)$ je polynom stupně $n$. Existuje polynom stupně $n$, který je
+partikulárním řešením této diferenciální rovnice.
+```
+
 
 V\ praxi polynom který má být řešením napíšeme s\ neurčitými koeficienty a
 dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
@@ -329,9 +389,13 @@ $$y''+\lambda y=0 \tag{*}$$
 splňující podmínky
 $$y(0)=0=y(1). \tag{**}$$
 
-> Definice (okrajová úloha). Úloha najít řešení diferenciální
-> rovnice (\*), které splňuje podmínky (\*\*) se nazývá (Dirichletova)
-> *okrajová úloha*.
+```{prf:definition} okrajová úloha
+:nonumber:
+ Úloha najít řešení diferenciální
+rovnice (\*), které splňuje podmínky (\*\*) se nazývá (Dirichletova)
+*okrajová úloha*.
+```
+
 
 Odlišnost Dirichletovy úlohy od (Cauchyovy) počáteční úlohy je v tom,
 že nezadáváme funkční hodnotu a derivaci v jednom bodě, ale funkční
@@ -341,10 +405,14 @@ Jedno z\ řešení Dirichletovy úlohy je triviální řešení
 $y(x)=0$. Ukazuje se, že netriviální řešení existuje jen pro některé
 hodnoty parametru $\lambda$.
 
-> Definice (vlastní funkce, vlastní hodnota okrajové úlohy). Hodnota $\lambda$,
-> pro kterou existuje netriviální řešení Dirichletovy okrajové úlohy
-> se nazývá *vlastní hodnota okrajové úlohy* a příslušné řešení se
-> nazývá *vlastní funkce okrajové úlohy*.
+```{prf:definition} vlastní funkce, vlastní hodnota okrajové úlohy
+:nonumber:
+ Hodnota $\lambda$,
+pro kterou existuje netriviální řešení Dirichletovy okrajové úlohy
+se nazývá *vlastní hodnota okrajové úlohy* a příslušné řešení se
+nazývá *vlastní funkce okrajové úlohy*.
+```
+
 
 ## Výpočet vlastních hodnot
 
@@ -518,3 +586,4 @@ Poznámka: Podobná situace a možnost separace proměnných je u rovnice
 kmitů struny
 $$\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}$$
 nebo jejího zobecnění na kmity desek a chvění těles. Opět separace vede k LDR druhého řádu pro složku závisející na $x$. V tomto případě je druhého řádu i rovnice pro složku závislou na čase.
+

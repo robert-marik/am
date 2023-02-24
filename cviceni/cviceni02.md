@@ -261,3 +261,4 @@ Směřuje tedy doleva nahoru. To koresponduje s obrázkem, v bodě $x=20$ a $y=5
 
 ww:problems/gradient/gradient_numericky.pg
 
+

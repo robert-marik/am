@@ -43,9 +43,13 @@ https://youtu.be/KR42PRY-72U
 
 https://youtu.be/nD_nqakTN-A
 
-> Definice (totální diferenciál). Totálním diferenciálem funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ nazýváme výraz
+```{prf:definition} totální diferenciál
+:nonumber:
+ Totálním diferenciálem funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ nazýváme výraz
 $$      \mathrm{d}f=\nabla f (x_0,y_0) \cdot (\mathrm{d}x,\mathrm{d}y)=\frac{\partial f (x_0,y_0)}{\partial x}\mathrm{d}x+\frac{\partial f (x_0,y_0)}{\partial y}\mathrm{d}y.
 $$
+```
+
 
 V souvislosti s totálním diferenciálem často vyvstává otázka, zda pro
 zadané vektorové pole $$\vec F(x,y)=(P(x,y),Q(x,y))$$ existuje
@@ -56,7 +60,11 @@ se v tomto kontextu nazývá **skalární potenciál** vektorového pole $\vec F
 nebo také **kmenová funkce**.  Následující věta platí za
 předpokladu dostatečně hladkých funkcí na otevřené množině.
 
->  Věta (nutná a postačující podmínka pro existenci kmenové funkce ve 2D).  Vektor   $$\vec F(x,y) = \left(   P(x,y) , Q(x,y)\right)$$ je gradientem nějaké funkce $f(x,y)$ právě tehdy, když platí   $$\frac{\partial }{\partial y}P(x,y)=\frac{\partial}{\partial x}Q(x,y).$$ 
+```{prf:theorem} nutná a postačující podmínka pro existenci kmenové funkce ve 2D
+:nonumber:
+  Vektor   $$\vec F(x,y) = \left(   P(x,y) , Q(x,y)\right)$$ je gradientem nějaké funkce $f(x,y)$ právě tehdy, když platí   $$\frac{\partial }{\partial y}P(x,y)=\frac{\partial}{\partial x}Q(x,y).$$ 
+```
+
 
 Jeden směr implikace v předchozí větě je snadný a plyne hned ze Schwarzovy věty.
 
@@ -75,7 +83,9 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 
 https://youtu.be/ev3eFilaGpw
 
-> Definice (rotace vektorového pole). Pro vektorovou funkci tří proměnných  $$\vec
+```{prf:definition} rotace vektorového pole
+:nonumber:
+ Pro vektorovou funkci tří proměnných  $$\vec
   F=P\vec \imath+Q\vec \jmath+R\vec k$$ definujeme operátor _rotace_ vztahem
   $$
   \mathop{\mathrm{rot}} \vec F=\nabla \times \vec F=  \begin{vmatrix}
@@ -83,6 +93,8 @@ https://youtu.be/ev3eFilaGpw
     \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\ P &Q &R
   \end{vmatrix}.
   $$
+```
+
 
 * Výsledkem rotace je tedy vektorové pole, jehož komponenty jsou \dm$$\nabla \times \vec F=\left(\frac{\partial R}{\partial y}-\frac{\partial    Q}{\partial z}\right)\vec \imath +\left( \frac{\partial P}{\partial z}-\frac{\partial    R}{\partial x}\right)\vec \jmath + \left( \frac{\partial Q}{\partial x}-\frac{\partial    P}{\partial y}\right)\vec k.$$
 
@@ -99,8 +111,12 @@ manimp:Curl|Rotace vektorového pole pomocí Sarussova pravidla.
 * Představme si vektorové pole charakterizující rychlost proudící       tekutiny. Rotace udává, zda má pole tendenci uvést do rotace objekt unášený tímto prouděním. Jedná se o lokální charakteristiku a nesouvisí se směrem proudění. Rotace může být nulová i pro tok cirkulující okolo jednoho bodu (uvidíme níže). Naopak, pro to v přímce může být rotace nenulová. Příkladem je přímý tok v řece, kdy rychlost u břehu klesá. V důsledku toho se loďka, která odrazí od břehu kolmo stočí po proudu. Mimo středovou osu má pole nenulovou rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUUFuwyAQvEfKH1ZRUkNLWlz1yrWfqCOLxJAgYWNhkkKi_L1ALLvqqRzMDjO76531JJAru3CLCg8BrgVeLpYLiXx6xwxR4p9RufX4pXz7IDSzvlUdAd9yTyDkOMQYGFACJcnfJGvURTLUKCmR_KI7EmuMoNyRMIH3XWyEXwfV9lrJUMuz1ij2OZytnv8D5tQr3s6pAROYkZ8omnQTRZNwO5fwGPIkw8l8o5NrNbKrdbUXR9XduFbHTjR3qC7iAJ9PDDYDVBVUywUAVC13J9Pf8m3bWxzyfv-X0ho3KYElpeiaqdt6tclZSHMnPIqDszg6S8uJ7hB4PCdL_zIjNdr1m4snDdlr4-rY1xlbSyV0g7Ij2VqKSTJkjGO1GOX1pu0mGEjecHhAPvSxTm25U4bFVR-MNpYVe30WBf4BTyS0Gg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * Pozor: anglický výraz pro rotaci je "curl".
 
-> Poznámka (linearita rotace). Rotace zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí
-> $$\nabla \times (\vec F+\vec G)=\nabla \times \vec F +\nabla \times \vec G, \qquad \nabla \times (c\vec F)=c\nabla \times \vec F.$$
+```{prf:remark} linearita rotace
+:nonumber:
+ Rotace zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí
+$$\nabla \times (\vec F+\vec G)=\nabla \times \vec F +\nabla \times \vec G, \qquad \nabla \times (c\vec F)=c\nabla \times \vec F.$$
+```
+
 
 <!-- ![Nevírové pole](nevirove.svg)	 -->
 
@@ -133,7 +149,11 @@ $$\begin{aligned}
 $$
 Podle Schwarzovy věty (nezáleží na pořadí derivování) je každá závorka rovna nule. Proto platí $\nabla\times\vec F=0$.
 
->  Věta (rotace gradietu). Rotace gradientu je nulový vektor.
+```{prf:theorem} rotace gradietu
+:nonumber:
+ Rotace gradientu je nulový vektor.
+```
+
 
 Později uvidíme, že platí do jisté míry i obrácená vlastnost: pokud je
 rotace vektorového pole nulová, je toto pole gradientem nějaké
@@ -191,7 +211,11 @@ Odsud dostáváme
   \nabla\cdot (\nabla \times  \vec F ) 
  =0.$$
 
-> Věta (divergence rotace). Divergence rotace je nula. 
+```{prf:theorem} divergence rotace
+:nonumber:
+ Divergence rotace je nula. 
+```
+
 
 Dá se ukázat, že platí do jisté míry i opačná vlastnost a pro pole s
 nulovou divergencí se dá často toto pole psát jako rotace nějaké
@@ -746,3 +770,4 @@ označovaný **zákon šíření chyb**.
 * Ve dvourozměrné formulaci je nulovost rotace nutná a současně postačující podmínka k možnosti zavedení skalárního potenciálu. V takovém případě je možno přejít od vektorového popisu pole ke skalárnímu popisu (skalární je jednodušší).
 * Rotace je jedním z vyjadřovacích prostředků, které použijeme později pro formulaci Greenovy věty. Ta zprostředkovává přechod mezi difuzní rovnicí v bodě (v nekonečně malém objemu) a bilancí stavové veličiny v měřitelném makroskopickém tělese.
 * V závěru přednášky, bez souvislosti s operátorem rotace, jsme se seznámili s dovedností analyzovat vliv nepřesností ve vstupních datech na nepřesnost na výstupu. Zákon šíření chyb umožní naplánovat experiment zaměřený na stanovení nepřímo měřené veličiny a umožní identifikovat ty části procesu, které podstatně ovlivňují spolehlivost výsledku.
+

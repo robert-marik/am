@@ -93,3 +93,4 @@ $$\frac {\psi''(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=
 * Spojením obdržených výsledků dostáváme rovnici popisující kmity na $k$-t0 vlastní frekvenci ve tvaru $$u_k(x,t)=\psi(t)\varphi(x)=\left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ 
 * Spojením kmitů na všech frekvencích dostaneme řešení rovnice ve tvaru $$u(x,t) = \sum_{k=1}^\infty \left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ Tento vzorec je dostatečně flexibilní, abychom dokázali splnit libovolné počáteční podmínky a proto v sobě obsahuje všechna řešení. Praktická využitelnost vzorce v reálných případech je diskutabilní, proto často používáme numerické simulace využívající numerické řešení zadané rovnice za daných počátečních a okrajových podmínek. 
 
+

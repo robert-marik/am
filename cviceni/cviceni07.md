@@ -194,3 +194,4 @@ Máme rovnici, kde neznámou je funkce a v rovnici figuruje druhá derivace tét
 
 ```
 
+

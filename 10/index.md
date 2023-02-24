@@ -43,12 +43,18 @@ budou řešení chovat.
 
 Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Nazývají *se stacionární body*. Je užitečné umět posoudit chování řešení v okolí stacionárních bodů, což umožní následující věta.
 
-> Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
+```{prf:theorem} stabilita konstantních řešení
+:nonumber:
+ Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
   $$\frac{\mathrm dy}{\mathrm dt}=f(y).$$ Toto řešení je stabilní
   pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
   
-> Poznámka (stabilita řešení). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu *stabilitou* stacionárního bodu budeme rozumět, že malá výchylka od stacionárního bodu vede na řešení, které konverguje zpět k tomuto stacionárnímu bodu. Přesněji se tento typ stability jmenuje *asymptotická stabilita*. 
+```{prf:remark} stabilita řešení
+:nonumber:
+ Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu *stabilitou* stacionárního bodu budeme rozumět, že malá výchylka od stacionárního bodu vede na řešení, které konverguje zpět k tomuto stacionárnímu bodu. Přesněji se tento typ stability jmenuje *asymptotická stabilita*. 
+```
+
 
 Pro grafickou interpretaci věty je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
@@ -83,7 +89,11 @@ a rovnováha je tedy poněkud křehká.
 
 Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
 
-> Poznámka (strukturální stabilita modelu, bifurkace). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je přirozené chování, kdy malá změna parametrů modelu způsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.
+```{prf:remark} strukturální stabilita modelu, bifurkace
+:nonumber:
+ Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je přirozené chování, kdy malá změna parametrů modelu způsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.
+```
+
 
 ### Model ostrovní biogeografie
 
@@ -168,7 +178,11 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
 
 https://youtu.be/ccWuBp4kies
 
-> Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
+```{prf:remark} autonomní rovnice s rozdílem na pravé straně
+:nonumber:
+ Rovnice $$\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
+```
+
 
 ### Teplotní bilance Země
 
@@ -264,12 +278,16 @@ mezi konvergencí a vzdalování přepíná podle znaménka reálné části
 vlastních hodnot a řešení oscilují směrem ke stacionárnímu bodu nebo
 od něj.
 
-> Poznámka (stabilita a strukturální stabilita řešení). *Stabilitou*
+```{prf:remark} stabilita a strukturální stabilita řešení
+:nonumber:
+ *Stabilitou*
   stacionárního bodu budeme rozumět, stejně jako výše, že malá
   výchylka od stacionárního bodu vede na řešení, které konverguje zpět
   k tomuto stacionárnímu bodu. Stabilita vyjadřující, že při malé
   změně koeficientů v systému se nezmění typ singulárních bodů se
   nazývá *strukturální stabilita*.
+```
+
 
 ### Bruselátor
 
@@ -414,4 +432,5 @@ V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$, (tj. pro
 ## Vícerozměrné autonomní systémy, kompartmentové modely
 
 Kompartmentové modely jsou modely, kde se je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým případem v roce 2020 je model epidemie, například [SIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie) nebo [SEIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=karantena).
+
 

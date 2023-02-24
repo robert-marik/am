@@ -306,3 +306,4 @@ To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že sn�
 % mezi polárními a kartézskými souřadnicemi.
 -->
 
+

@@ -280,3 +280,4 @@ Až na konstantní člen na pravé straně je systém stejný jako systém pro m
 
 ```
 
+

@@ -84,9 +84,13 @@ a levá strana definuje lineární operátor v proměnné $h^2$.
 
 ### Princip superpozice
 
-> Věta (princip superpozice). Každý lineární operátor zachovává lineární kombinaci funkcí, tj. platí
-> $$L[C_1 y_1+C_2 y_2]=C_1 L[y_1]+C_2 L[y_2]$$
-> vždy, když $C_{1,2}\in\mathbb{R}$ a $y_{1,2}$ jsou funkce z definičního oboru operátoru $L$.
+```{prf:theorem} princip superpozice
+:nonumber:
+ Každý lineární operátor zachovává lineární kombinaci funkcí, tj. platí
+$$L[C_1 y_1+C_2 y_2]=C_1 L[y_1]+C_2 L[y_2]$$
+vždy, když $C_{1,2}\in\mathbb{R}$ a $y_{1,2}$ jsou funkce z definičního oboru operátoru $L$.
+```
+
 
 Plyne přímo rozepsáním
 $$
@@ -110,8 +114,12 @@ $$\frac{\mathrm dx}{\mathrm dt}=x.$$
 
 Následující věta vlastně vyjadřuje totéž co princip superpozice z předchozího textu, pouze v jiných pojmech: v pojmech řešení rovnice s lineárním operátorem. 
 
-> Věta (princip superpozice při řešení rovnic). Jsou-li funkce $x_1(t)$ a $x_2(t)$ po řadě řešeními rovnic $$L[x]=b_1(t),\quad L[x]=b_2(t),$$
-> Je funkce $$x(t)=C_1 x_1(t)+C_2 x_2(t)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
+```{prf:theorem} princip superpozice při řešení rovnic
+:nonumber:
+ Jsou-li funkce $x_1(t)$ a $x_2(t)$ po řadě řešeními rovnic $$L[x]=b_1(t),\quad L[x]=b_2(t),$$
+Je funkce $$x(t)=C_1 x_1(t)+C_2 x_2(t)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
+```
+
 
 Pro $b_1(t)=b_2(t)=0$ všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí. 
 
@@ -143,8 +151,12 @@ splňuje konstantní funkce $x(t)=\frac ba$ a rovnici (H)
 Obecné řešení rovnice (N)
 je proto $$x(t)=\frac ba+Ce^{-at}.$$ Pro $t$ jdoucí do nekonečna toto řešení za předpokladu $a>0$ konverguje ke stacionárnímu řešení $\frac ba$. Partikulární řešení odpovídající počáteční podmínce $x(0)=0$ je $$x(t)=\frac ba-\frac bae^{-at}=\frac ba\Bigl(1-e^{-at}\Bigr).$$ To znamená, že řešení se exponenciálně přibližuje ke stacionárnímu řešení. Pro $a<0$ se naopak od stacionárního řešení exponenciálně vzdaluje. 
 
-> Věta (řešení lineární diferenciální rovnice prvního řádu s konstantními koeficienty).
-> Obecným řešením rovnice $$\frac{\mathrm dx}{\mathrm dt}+ax=b$$ je $$x(t)=x_{\text{st}}+Ce^{-at},$$ kde $x_{\text{st}}=\frac ba$ je stacionárním řešením této rovnice. Pro $a>0$ je toto řešení stabilní a globálně atraktivní. Pro $a<0$ je nestabilní.
+```{prf:theorem} řešení lineární diferenciální rovnice prvního řádu s konstantními koeficienty
+:nonumber:
+
+Obecným řešením rovnice $$\frac{\mathrm dx}{\mathrm dt}+ax=b$$ je $$x(t)=x_{\text{st}}+Ce^{-at},$$ kde $x_{\text{st}}=\frac ba$ je stacionárním řešením této rovnice. Pro $a>0$ je toto řešení stabilní a globálně atraktivní. Pro $a<0$ je nestabilní.
+```
+
 
 Obrat, že stacionární řešení je globálně atraktivní znamená, že všechna řešení k tomuto stacionárním stavu konvergují nezávisle na počáteční podmínce.
 
@@ -162,23 +174,35 @@ Rovnicím majícím derivace vyššího řádu se budeme věnovat později.
 
 ## Lineární diferenciální rovnice prvního řádu
 
-> Definice (Lineární diferenciální rovnice prvního řádu). Nechť funkce $a$, $b$ jsou spojité na intervalu $I$.
-> Rovnice
-> $$  y'+a(x)y=b(x) \tag{LDE}$$
-> se nazývá *obyčejná lineární diferenciální rovnice prvního řádu*
-> (zkráceně píšeme LDE). Je-li navíc $b(x)\equiv 0$ na $I$, nazývá se
-> rovnice *homogenní*, v opačném případě *nehomogenní*.
+```{prf:definition} Lineární diferenciální rovnice prvního řádu
+:nonumber:
+ Nechť funkce $a$, $b$ jsou spojité na intervalu $I$.
+Rovnice
+$$  y'+a(x)y=b(x) \tag{LDE}$$
+se nazývá *obyčejná lineární diferenciální rovnice prvního řádu*
+(zkráceně píšeme LDE). Je-li navíc $b(x)\equiv 0$ na $I$, nazývá se
+rovnice *homogenní*, v opačném případě *nehomogenní*.
+```
 
-> Věta (o řešitelnosti LDE prvního řádu). Jsou-li funkce $a$, $b$ spojité na
-> intervalu $I$, $x_0\in I$ a $y_0\in\mathbb{R}$ libovolné, má každá počáteční
-> úloha právě jedno řešení definované na celém
-> intervalu $I$.
 
-> Definice (asociovaná homogenní rovnice). Buď dána lineární diferenciální rovnice. Homogenní rovnice, která
-> vznikne z\ rovnice nahrazením pravé strany nulovou funkcí, tj.
-> rovnice
-> $$    y'+a(x)y=0$$
-> se nazývá *homogenní rovnice, asociovaná s nehomogenní rovnicí (LDE)*
+```{prf:theorem} o řešitelnosti LDE prvního řádu
+:nonumber:
+ Jsou-li funkce $a$, $b$ spojité na
+intervalu $I$, $x_0\in I$ a $y_0\in\mathbb{R}$ libovolné, má každá počáteční
+úloha právě jedno řešení definované na celém
+intervalu $I$.
+```
+
+
+```{prf:definition} asociovaná homogenní rovnice
+:nonumber:
+ Buď dána lineární diferenciální rovnice. Homogenní rovnice, která
+vznikne z\ rovnice nahrazením pravé strany nulovou funkcí, tj.
+rovnice
+$$    y'+a(x)y=0$$
+se nazývá *homogenní rovnice, asociovaná s nehomogenní rovnicí (LDE)*
+```
+
 
 Homogenní LDE má vždy (bez
 ohledu na konkrétní tvar funkce $a(x)$) konstantní řešení $y=0$, jak lze
@@ -429,16 +453,24 @@ a díky komutativitě při násobení s konstantou $C\in\mathbb R$ také
 
 Je možné ukázat, že každá počáteční úloha je jednoznačně řešitelná a pro obecné řešení stačí najít tolik nezávislých řešení, kolik komponent má neznámá vektorová funkce $X$. Platí následující věta, kterou je možno ověřit přímo dosazením.
 
-> Věta (souvislost vlastních čísel matice a řešení lineárního autonomního systému). Má-li matice $A$ vlastní číslo $\lambda$ a příslušný vlastní vektor je $v$, tj. platí $A v =\lambda v$, je funkce $X(t)=v e^{\lambda t}$ řešením systému $X'=AX.$ Jsou-li $\lambda$ a $v$ komplexní, je řešením i samostatně reálná část a imaginární část.
+```{prf:theorem} souvislost vlastních čísel matice a řešení lineárního autonomního systému
+:nonumber:
+ Má-li matice $A$ vlastní číslo $\lambda$ a příslušný vlastní vektor je $v$, tj. platí $A v =\lambda v$, je funkce $X(t)=v e^{\lambda t}$ řešením systému $X'=AX.$ Jsou-li $\lambda$ a $v$ komplexní, je řešením i samostatně reálná část a imaginární část.
+```
+
 
 Systém $$X'=AX+B\tag{2}$$ je možno na tvar (1) převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)$, kde $X_0$ je řešením soustavy $AX+B=0$, což odpovídá posunu stacionárního bodu do počátku.
 
-> Poznámka (vlastní hodnoty a řešení). Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému (2), tj. $$X'=AX+B.$$ 
+```{prf:remark} vlastní hodnoty a řešení
+:nonumber:
+ Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému (2), tj. $$X'=AX+B.$$ 
 >
-> * Jakmile má matice $A$ reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.
-> * Jakmile má matice $A$ reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.
-> * Jakmile má matice $A$ komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
-> * Jakmile má matice $A$ komplexní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.
+* Jakmile má matice $A$ reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.
+* Jakmile má matice $A$ reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.
+* Jakmile má matice $A$ komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
+* Jakmile má matice $A$ komplexní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.
+```
+
 
 manimp:AS_vlastni_cisla|O chování trajektorií v okolí stacionárního bodu rozhoduje znaménko vlastních čísel (u reálných vlastních čísel), nebo znaménko reálné části (u komplexně sdružených vlastních čísel)
 
@@ -494,7 +526,12 @@ Systém se tedy bez oscilací překlopí do rovnovážného stavu. Při opačné
 $$\lambda_{1,2}=-\frac{b}{2} \pm \frac 12 i \sqrt{-b^2+\frac{4k}{m}}$$
 komplexní se zápornou reálnou částí a systém osciluje okolo rovnovážné polohy. Pro $b>0$ mají tyto kořeny zápornou reálnou  část a systém osciluje okolo rovnovážné polohy se zmenšující se amplitudou. Pro $b=0$ se amplituda nezmenšuje a oscilátor kmitá do nekonečna. Případ $b<0$ neuvažujeme, protože odpor prostředí je síla působící proti pohybu.
 
-> Poznámka (diferenciální rovnice druhého řádu). Uvažovaný systém se v literatuře často vyskytuje ve tvaru, kdy je rychlost $v$ dosazena do druhé rovnice a poté dostáváme model ve tvaru
+```{prf:remark} diferenciální rovnice druhého řádu
+:nonumber:
+ Uvažovaný systém se v literatuře často vyskytuje ve tvaru, kdy je rychlost $v$ dosazena do druhé rovnice a poté dostáváme model ve tvaru
 $$\frac{\mathrm d^2 x}{\mathrm dt^2}=-\frac km x - b \frac{\mathrm dx}{\mathrm dt}, $$
 tj. ve tvaru rovnice obsahující první dvě derivace neznámé funkce. V podstatě celá klasická mechanika je založena právě na rovnicích tohoto typu.
+```
+
+
 

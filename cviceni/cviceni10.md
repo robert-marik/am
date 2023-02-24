@@ -238,3 +238,4 @@ $$\lambda_{1,2}=\frac{11\pm\sqrt{121-12}}{2}$$
 ```
 
 ww:problems/autonomni_systemy/14.pg
+

@@ -136,3 +136,4 @@ Pomůže [cheatsheet](https://github.com/robert-marik/apl-slidy/blob/master/chea
 ```
 
 ww:problems/difuzni_rce/napis_rovnici.pg
+

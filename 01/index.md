@@ -56,35 +56,51 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 Derivace derivace je rychlost s jakou se mění rychlost změny a nazývá se druhá derivace. Je označována nejčastěji některým z následujících způsobů. $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y.$$
 
-> Poznámka (Newtonův zákon tepelné výměny). ![Sobi karibu
-> v polárních krajích nepotřebují sněhule a přesto jim není zima. Jak to dělají?
-> Minimalizují teplotní rozdíl mezi svým krevním oběhem a povrchem, po němž
-> chodí. Mají v nohách zabudovaný protiproudý tepelný výměník. Tím minimalizují teplotní ztráty. Podle
-> <https://twitter.com/fuseknowledge/status/1215796937657479168>](karibu.jpeg)
-> Je-li $T(t)$ teplota tělesa v čase $t$, je
-> $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj.
-> rychlost s jakou roste teplota. Například pro čas v minutách a teplotu ve
-> stupních Celsia hodnota derivace v šesté minutě může být $$\frac{\mathrm
-> dT}{\mathrm dt}(6)=2 ^\circ \mathrm {C}/\mathrm{min}. $$ To znamená, že v čase
-> $6$ minut roste teplota okamžitou rychlostí $2$ stupně Celsia za minutu. Pokud
-> tento růst vydrží celou minutu, bude v čase $7$ minut teplota o dva stupně
-> Celsia vyšší. Pokud tato rychlost růstu vydrží deset minut, jsme schopni
-> podobně určit změnu teploty i za delší časový úsek.
->
->V reálných dějích však konstantní rychlosti vídáme zřídka. Například u tepelné výměny se dynamika procesu zastavuje tím, jak se teploty postupně vyrovnávají. Rychlost, s jakou roste teplota chladného tělesa při tepelné výměně s teplejším tělesem není konstantní, ale mění se. Nejčastějším modelem reálné situace je, že tato rychlost je úměrná rozdílu teplot těles zapojených do tepelné výměny. Roli teplejšího tělesa hraje většinou okolí. Pokud je tedy teplota okolí konstantní a rovna $T_0$, je kvantitativním modelem procesu tepelné výměny rovnice $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T).$$ To platí pro ohřev (teplota okolí je vyšší a teplota tělesa roste). Analogicky můžeme naformulovat model $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).
->
-> Tento model se naučíme časem vyřešit, to však není to nejdůlěžitější. Obrovským úspěchem je již to, že *s derivacemi dostala věda nástroj umožňující kvantitativně pracovat s okamžitou rychlostí změny libovolné veličiny*. Derivace umožňují vymanit se z omezení používaných ve středoškolské fyzice, která se týká zpravidla velmi specifických podmínek, a věnovat se popisu reálného světa. 
->
-> Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů a pomocí rovnic s derivacemi je modelována naprostá většina fyzikálních procesů, existují propracované nástroje pro řešení těchto rovnic na počítači. Z pedagogických důvodů si však může kdokoliv daný matematický model naskriptovat tak, že předpokládá časové skoky, v jejichž rámci je rychlost neměnná a změny veličin jsou počítat běžnými operacemi násobení a sčítání. Například [Sage](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==) je založen na široce rozšířeném jazyce Python, případně [Octave](https://sagecell.sagemath.org/?z=eJwtj81qwzAQhO8CvcNeAlKTFLtQCDY59g18Kz2o1oYK_ayR1wbn6SvZEQjEzsy3I8twh-a97aGeE1gM3oDP5Bcpdq2z3H00fRVX9EwZZhjNTOsWHTyTGb2J7gLeIvwuFiPCRKNjw8A4BSqYoWCemGlWs3uiYq0P2sYrZUzuxV1gynSEeCsp1eoSvB2rZzaZaTWjgz-yidgUR1P0vVp1HEED5Ck4Kfz-r8-XOJlsInKuLgwJy_KIaQMppDjB1xJKvdVAsZA1Zfoo33T3tktLxKAGfW2lqKRBufNeqzw0nMEyvIEvVw3Ntc50LwUmW7m1juLLoKXYgovquwGXHj_6H6tibEk=&lang=octave&interacts=eJyLjgUAARUAuQ==) jako opensource alternativa programu Matlab.
+```{prf:remark} Newtonův zákon tepelné výměny
+:nonumber:
+ ![Sobi karibu
+v polárních krajích nepotřebují sněhule a přesto jim není zima. Jak to dělají?
+Minimalizují teplotní rozdíl mezi svým krevním oběhem a povrchem, po němž
+chodí. Mají v nohách zabudovaný protiproudý tepelný výměník. Tím minimalizují teplotní ztráty. Podle
+<https://twitter.com/fuseknowledge/status/1215796937657479168>](karibu.jpeg)
+Je-li $T(t)$ teplota tělesa v čase $t$, je
+$\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj.
+rychlost s jakou roste teplota. Například pro čas v minutách a teplotu ve
+stupních Celsia hodnota derivace v šesté minutě může být $$\frac{\mathrm
+dT}{\mathrm dt}(6)=2 ^\circ \mathrm {C}/\mathrm{min}. $$ To znamená, že v čase
+$6$ minut roste teplota okamžitou rychlostí $2$ stupně Celsia za minutu. Pokud
+tento růst vydrží celou minutu, bude v čase $7$ minut teplota o dva stupně
+Celsia vyšší. Pokud tato rychlost růstu vydrží deset minut, jsme schopni
+podobně určit změnu teploty i za delší časový úsek.
 
-> Poznámka (lineární aproximace, materiálové vztahy). Změna $\Delta x$ v proměnné $x$ vyvolá změnu $\Delta y\approx f'(x) \Delta x$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Lineární aproximace má poté tvar $$f(x)\approx f'(0)x=kx.$$ Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu a blíže se jim budeme věnovat později. Podobně je možno chápat Newtonův zákon tepelné výměny z předchozí poznámky jako lineární aproximaci případného obecného vztahu. Srovnejte obecný vztah $$\frac{\mathrm dT}{\mathrm dt}= \Phi(T_0-T), \quad \Phi(0)=0$$ a formálně sice podobný vztah $$\frac{\mathrm dT}{\mathrm dt}= k\times(T_0-T), \quad k=\Phi'(0),$$ který ale místo obecné a složitě identifikovatelné funkce $\Phi$ obsahuje jenom násobení vcelku jednoduše měřitelnou konstantou $k$.
+V reálných dějích však konstantní rychlosti vídáme zřídka. Například u tepelné výměny se dynamika procesu zastavuje tím, jak se teploty postupně vyrovnávají. Rychlost, s jakou roste teplota chladného tělesa při tepelné výměně s teplejším tělesem není konstantní, ale mění se. Nejčastějším modelem reálné situace je, že tato rychlost je úměrná rozdílu teplot těles zapojených do tepelné výměny. Roli teplejšího tělesa hraje většinou okolí. Pokud je tedy teplota okolí konstantní a rovna $T_0$, je kvantitativním modelem procesu tepelné výměny rovnice $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T).$$ To platí pro ohřev (teplota okolí je vyšší a teplota tělesa roste). Analogicky můžeme naformulovat model $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).
 
-> Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right).$$ V této rovnice vystupuje celková nosná kapacita prostředí $K$ a rovnice vyjadřuje, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Volnou kapacitu prostředí počítáme jako doplněk obsazené části prostředí do sta procent. Obsazenou část prostředí počítáme jako podíl velikosti populace a nosné kapacity prostředí.
+Tento model se naučíme časem vyřešit, to však není to nejdůlěžitější. Obrovským úspěchem je již to, že *s derivacemi dostala věda nástroj umožňující kvantitativně pracovat s okamžitou rychlostí změny libovolné veličiny*. Derivace umožňují vymanit se z omezení používaných ve středoškolské fyzice, která se týká zpravidla velmi specifických podmínek, a věnovat se popisu reálného světa. 
+
+Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů a pomocí rovnic s derivacemi je modelována naprostá většina fyzikálních procesů, existují propracované nástroje pro řešení těchto rovnic na počítači. Z pedagogických důvodů si však může kdokoliv daný matematický model naskriptovat tak, že předpokládá časové skoky, v jejichž rámci je rychlost neměnná a změny veličin jsou počítat běžnými operacemi násobení a sčítání. Například [Sage](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==) je založen na široce rozšířeném jazyce Python, případně [Octave](https://sagecell.sagemath.org/?z=eJwtj81qwzAQhO8CvcNeAlKTFLtQCDY59g18Kz2o1oYK_ayR1wbn6SvZEQjEzsy3I8twh-a97aGeE1gM3oDP5Bcpdq2z3H00fRVX9EwZZhjNTOsWHTyTGb2J7gLeIvwuFiPCRKNjw8A4BSqYoWCemGlWs3uiYq0P2sYrZUzuxV1gynSEeCsp1eoSvB2rZzaZaTWjgz-yidgUR1P0vVp1HEED5Ck4Kfz-r8-XOJlsInKuLgwJy_KIaQMppDjB1xJKvdVAsZA1Zfoo33T3tktLxKAGfW2lqKRBufNeqzw0nMEyvIEvVw3Ntc50LwUmW7m1juLLoKXYgovquwGXHj_6H6tibEk=&lang=octave&interacts=eJyLjgUAARUAuQ==) jako opensource alternativa programu Matlab.
+```
+
+
+```{prf:remark} lineární aproximace, materiálové vztahy
+:nonumber:
+ Změna $\Delta x$ v proměnné $x$ vyvolá změnu $\Delta y\approx f'(x) \Delta x$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Lineární aproximace má poté tvar $$f(x)\approx f'(0)x=kx.$$ Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu a blíže se jim budeme věnovat později. Podobně je možno chápat Newtonův zákon tepelné výměny z předchozí poznámky jako lineární aproximaci případného obecného vztahu. Srovnejte obecný vztah $$\frac{\mathrm dT}{\mathrm dt}= \Phi(T_0-T), \quad \Phi(0)=0$$ a formálně sice podobný vztah $$\frac{\mathrm dT}{\mathrm dt}= k\times(T_0-T), \quad k=\Phi'(0),$$ který ale místo obecné a složitě identifikovatelné funkce $\Phi$ obsahuje jenom násobení vcelku jednoduše měřitelnou konstantou $k$.
+```
+
+
+```{prf:remark} logistický růst populace
+:nonumber:
+ Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right).$$ V této rovnice vystupuje celková nosná kapacita prostředí $K$ a rovnice vyjadřuje, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Volnou kapacitu prostředí počítáme jako doplněk obsazené části prostředí do sta procent. Obsazenou část prostředí počítáme jako podíl velikosti populace a nosné kapacity prostředí.
+```
+
 
 \iffalse
 
-> Poznámka (pohybová rovnice). <div class='obtekat'> ![Při pádu kočky z okna je kritická výška sedmého patra. Čím je toto patro speciální?](kocka.jpeg) 
-> </div> Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde $F$ je výsledná síla působící na objekt. *Objevení této zákonitosti byl obrovský skok v poznání.* Newton zjistil, že síla souvisí se zrychlením (tedy s časovou změnou rychlosti, v dnešní terminologii s  derivací rychlosti podle času nebo /ekvivalentně/ s druhou derivací polohy podle času). Dříve lidé měli za to, že síla souvisí s rychlostí pohybu (v dnešní terminologii tedy s derivací polohy podle času). To ale byla špatná představa, takto příroda nefunguje. Newton ukázal, jaká je správná cesta a dokázal své myšlenky tím, že pohybové zákony planet, které byly známé z vyhodnocení astronomických pozorování (Mikuláš Kopernik), odvodil ryze matematickou cestou. Pohybová rovnice funguje stejně pro planety jako pro objekty na Zemi a umí vysvětlit i zřejmé i méně zřejmé efekty. Například v práci [Problém ohnuté kolejnice a kouzlo numerické matematiky.](https://www.dml.cz/handle/10338.dmlcz/147070) je rovnice použita k vysvětlení toho, proč je při pádu kočky kritická výška sedmého patra. (Podle záznamů newyorských lékařů je při pádu kočky z výšky sedmého patra největší pravděpodobnost úmrtí. Vyšší nebo nižší patro kočka "zvládá" lépe a případná zraněnní nejsou tak závažná. Více v uvedeném odkaze.)
+```{prf:remark} pohybová rovnice
+:nonumber:
+![Při pádu kočky z okna je kritická výška sedmého patra. Čím je toto patro speciální?](kocka.jpeg) 
+Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde $F$ je výsledná síla působící na objekt. *Objevení této zákonitosti byl obrovský skok v poznání.* Newton zjistil, že síla souvisí se zrychlením (tedy s časovou změnou rychlosti, v dnešní terminologii s  derivací rychlosti podle času nebo /ekvivalentně/ s druhou derivací polohy podle času). Dříve lidé měli za to, že síla souvisí s rychlostí pohybu (v dnešní terminologii tedy s derivací polohy podle času). To ale byla špatná představa, takto příroda nefunguje. Newton ukázal, jaká je správná cesta a dokázal své myšlenky tím, že pohybové zákony planet, které byly známé z vyhodnocení astronomických pozorování (Mikuláš Kopernik), odvodil ryze matematickou cestou. Pohybová rovnice funguje stejně pro planety jako pro objekty na Zemi a umí vysvětlit i zřejmé i méně zřejmé efekty. Například v práci [Problém ohnuté kolejnice a kouzlo numerické matematiky.](https://www.dml.cz/handle/10338.dmlcz/147070) je rovnice použita k vysvětlení toho, proč je při pádu kočky kritická výška sedmého patra. (Podle záznamů newyorských lékařů je při pádu kočky z výšky sedmého patra největší pravděpodobnost úmrtí. Vyšší nebo nižší patro kočka "zvládá" lépe a případná zraněnní nejsou tak závažná. Více v uvedeném odkaze.)
+```
+
 
 \fi
 
@@ -133,25 +149,45 @@ https://youtu.be/Vw7OF5Fj8G4
 
 Pokud sledujeme například ve stěně měnící se teplotní profil, zajímá nás, jak se teplota v jednotlivých místech stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti rozumné oddělit obě změny. Buď v daném bodě fixovat polohu a sledovat časový vývoj v tomto bodě, nebo v daném čase udělat něco jako teplotní snímek a srovnávat teplotu ve vybraném bodě s okolními teplotami ve stejném čase. To vede k následujícímu přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné jediné veličiny. 
 
-> Definice (parciální derivace). Buď $f(x,y)\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných $x$ a $y$. Výraz $$\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}{h}$$  se nazývá *parciální derivace funkce $f$ podle $x$*. 
+```{prf:definition} parciální derivace
+:nonumber:
+ Buď $f(x,y)\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných $x$ a $y$. Výraz $$\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}{h}$$  se nazývá *parciální derivace funkce $f$ podle $x$*. 
 Výraz $$\frac{\partial f}{\partial y}:=\lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}{h}$$ se nazývá *parciální derivace funkce $f$ podle $y$*.
+```
+
 
 Podobně můžeme definovat parciální derivaci pro funkce libovolného
 konečného počtu proměnných. V těchto parciálních derivacích vlastně
 sledujeme, jak reaguje veličina $f$ na změny jenom v jedné
 proměnné. Ostatní proměnné, podle kterých se nederivuje, mají  vlastně roli parametru a nijak se nemění.
 
-> Poznámka (stavební kameny z definice derivace).
+```{prf:remark} stavební kameny z definice derivace
+:nonumber:
+
 >
-> * Výraz $$f(x+h,y)-f(x,y)$$ z čitatele je změna veličiny $f$ na intervalu $[x,x+h]$ při konstantní veličině $y$. Tento čitatel často označujeme též $\Delta f$.
-> * Podíl $$\frac{f(x+h,y)-f(x,y)}h$$ je změna veličiny $f$ na intervalu $[x,x+h]$  při konstantní veličině $y$ přepočítaná na jednotku veličiny $x$. Je to tedy průměrná rychlost změny funkce $f$ vzhledem k $x$ na intervalu $[x,x+h]$. Často označujeme též $\frac{\Delta f}{\Delta x}$.
-> * Limita v definici derivace stahuje délku intervalu pro výpočet průměrné rychlosti k nule. Tím se z průměrné rychlosti stane okamžitá rychlost. Parciální derivace je tedy okamžitá rychlost, s jakou se mění funkce $f$ při změnách jedné proměnné.
+* Výraz $$f(x+h,y)-f(x,y)$$ z čitatele je změna veličiny $f$ na intervalu $[x,x+h]$ při konstantní veličině $y$. Tento čitatel často označujeme též $\Delta f$.
+* Podíl $$\frac{f(x+h,y)-f(x,y)}h$$ je změna veličiny $f$ na intervalu $[x,x+h]$  při konstantní veličině $y$ přepočítaná na jednotku veličiny $x$. Je to tedy průměrná rychlost změny funkce $f$ vzhledem k $x$ na intervalu $[x,x+h]$. Často označujeme též $\frac{\Delta f}{\Delta x}$.
+* Limita v definici derivace stahuje délku intervalu pro výpočet průměrné rychlosti k nule. Tím se z průměrné rychlosti stane okamžitá rychlost. Parciální derivace je tedy okamžitá rychlost, s jakou se mění funkce $f$ při změnách jedné proměnné.
+```
 
-> Poznámka (jednotka parciální derivace). Jednotka derivace $\frac{\partial f}{\partial x}$ je stejná, jako jednotka podílu $\frac {f}x$. Jednotka derivace $\frac{\partial f}{\partial y}$ je stejná, jako jednotka podílu $\frac {f}y$.
 
-> Poznámka (slovní interpretace parciální derivace). Derivace $\frac{\partial f}{\partial x}$ udává, jak se mění veličina $f$ při změnách veličiny $x$ a za předpokladu konstantní veličiny $y$. Interpretace derivace v nematematických disciplínách je proto okamžitá rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
+```{prf:remark} jednotka parciální derivace
+:nonumber:
+ Jednotka derivace $\frac{\partial f}{\partial x}$ je stejná, jako jednotka podílu $\frac {f}x$. Jednotka derivace $\frac{\partial f}{\partial y}$ je stejná, jako jednotka podílu $\frac {f}y$.
+```
 
-> Poznámka (derivace teploty podle času a polohy). Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
+
+```{prf:remark} slovní interpretace parciální derivace
+:nonumber:
+ Derivace $\frac{\partial f}{\partial x}$ udává, jak se mění veličina $f$ při změnách veličiny $x$ a za předpokladu konstantní veličiny $y$. Interpretace derivace v nematematických disciplínách je proto okamžitá rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
+```
+
+
+```{prf:remark} derivace teploty podle času a polohy
+:nonumber:
+ Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
+```
+
 
 ## Interpretace parciální derivace, vedení tepla  v 1D
 
@@ -269,7 +305,11 @@ V této matici jsou zohledněny počty potomků želv v plodné fázi, pravděpo
 
 Následující poznámka je nenápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic s derivacemi. Stejné věty zformulujeme i u dalších operací s funkcemi a později se je naučíme využívat.
 
-> Poznámka (linearita parciální derivace). Parciální derivace zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí $$\frac{\partial (f+g)}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}, \qquad \frac{\partial (cf)}{\partial x}=c\frac{\partial f}{\partial x}$$ a analogicky pro libovolnou jinou proměnnou.
+```{prf:remark} linearita parciální derivace
+:nonumber:
+ Parciální derivace zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí $$\frac{\partial (f+g)}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}, \qquad \frac{\partial (cf)}{\partial x}=c\frac{\partial f}{\partial x}$$ a analogicky pro libovolnou jinou proměnnou.
+```
+
 
 ## Rovnice vedení tepla  v 1D
 
@@ -398,7 +438,11 @@ Základním přístupem při numerickém odhadu derivace je vynechání limitní
 
 ### Centrální diference
 
-> Poznámka (Taylorův polynom). V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Touto aproximací je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d). S jeho využitím pro aproximaci kvadratickou funkcí platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
+```{prf:remark} Taylorův polynom
+:nonumber:
+ V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Touto aproximací je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d). S jeho využitím pro aproximaci kvadratickou funkcí platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
+```
+
 
 Přesnější aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů $$f(x+h)\approx f(x)+f'(x)h+\frac 12 f''(x)h^2$$ a $$f(x-h)\approx f(x)-f'(x)h+\frac 12 f''(x)h^2.$$ Pokud tyto vztahy sečteme a odečteme, dostaneme $$f(x+h)+f(x-h)\approx2f(x)+ f''(x)h^2$$ a $$f(x+h)-f(x-h)\approx2f'(x)h.$$ Odsud dostáváme aproximace první a druhé derivace $$f'(x)=\frac{\mathrm d f}{\mathrm dx}\approx  \frac{f(x+h)-f(x-h)}{2h}  $$ a $$f''(x)=\frac{\mathrm d^2f}{\mathrm dx^2}\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 Analogicky pro parciální derivaci podle $x$
@@ -409,9 +453,13 @@ Tato aproximace první derivace se nazývá *centrální diference* a je přesn�
 
 Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciální derivaci podle $x$ i $y$. Dva vzorce pro každou parciální derivaci prvního řádu a jeden vzorec pro parciální derivaci druhého řádu. Aproximace uvedeme ve tvaru, ze kterého je možno současně vidět i chybu při použití dané aproximace. (Pro určení chyby u druhé derivace aproximujeme polynomem o řád vyšším.)
 
-> Věta (aproximace parciálních derivací pomocí konečných diferencí).
+```{prf:theorem} aproximace parciálních derivací pomocí konečných diferencí
+:nonumber:
+
   Platí následující aproximace derivace podle $x$. $$\begin{aligned}\frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x-h,y)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial x^2}&=  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}+O(h^2)\end{aligned}$$
   Platí následující aproximace derivace podle $y$. $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
+```
+
 
 ww:problems/parcialni_derivace/centralni_diference.pg
 
@@ -421,11 +469,15 @@ ww:problems/parcialni_derivace/centralni_diference.pg
 
 Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a ani v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximaci derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jaké jsou zhruba požadavky na výpočetní prostředky.
 
-> Poznámka (explicitní metoda řešení rovnice vedení tepla).
-> Po převedení derivací z rovnice vedení tepla $$\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}$$ bychom dostali $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$ kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud $$T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]$$ a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou _explicitní_ metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://sagecell.sagemath.org/?z=eJyVVUGO4zYQvBvwH_pijOzR7NoD5DKGf7DIIRgsAgTJghY5a1oUKUikIOlPeUU-lmqKsjUzhyA-WKJEVldXV7c29JvrrC4UdUoqq8mr2giqG0dXJa1r3FipxrpAfiiopTfdu07YoZp2Oi9wZwWVzha6uFC8a72wHli1K4RXhZ33uvBlvdrQ63SQWgRlWE2IYtzI1846jqcoM9oq0TBK49602S6O3h7ioiRJ14oR3KvpfMeLiyOw6ELMpAkjEAvRDjTqthSVojHu_Zh3jPGrHhWSJ4Gjva4E9jSqVTGfyoEtMkRSA7KV-k01CpmT6mujC83UKuWdhGBPk4IyFBfBEumqNqpS1otC5ySMIqvA8ayNxbp2ZZB4AgAQdd1AZeNKpOajhIoqYYb1CgQjR8HZYXNcr1ff6ESHI02_DUllSsHSqvXKx1frle1x88v-mLagNsrTGfRSEXIoQaVXDSd2DhJUeZNG_FS-ABAfQSaUGYSJMgp4I57kON--2v44bWmQAmyUEqKsGyVyt3hKsoNMrQstdDqze5jOFhAc5ct-v-eUNks9ctIWFDth4MWrKIdqptqRFFZVDKGoNUrCB55gXjsk-lCPlr93wFSFVtN58PRB8pyu2gq8B66Z6jMXjYUPYDoq5JhZ_3jIbf942B5nfA2DaWH0yB6CECBjVY4IUWc1Uw-lEfKmcizy648OZeCWONF-B7-12R18Azel8t9bDOpdHOzmF4czZeWWy58KNrH6r8MoT8txbzDHhWTLlGL-4HV4icw-H9lQQFtzpPR47ko-mZz8fZhMhIYrhtKENp9MSKFy421ysL3QdmWjPPd5LLKIF1BPDuIsuiGM2sem7xLwTdUNMJA7rBGuSKKayg_LOEyEUZdxODGvN9fQ9YSs_D3v2MreaO4R2GW42T2aKomWHban_b0LeSaiurIZw5XrbJfDEWTTAC0u7zC4ZqdUsf-F8cHeS6NHS9t__p7FmMTxAIyHOGF9ekYZP529gcomXMQPqRrdsZtPlN1tplH9p-fd4sH2cbF4Omy39JVk_9fzlNRisjIs_hPsLdoshn7nKl4-fmSyI-mPn3hvZmWiFyZLp3ZP5Y6xIHYSP4U4pcj3KkapMAWh_AzJfUv40GB6zW06f-AiWsiumAUv4P4JbW4IZlW7Uapry90BY8OY00iZON3aY36FXezdMiSX_vH7IX89_Al9KtVefjZaZvsX2aOIO9nnuPUw8E76LWZ_4YxrKlGjy9HidVxm8XzO83a9ai9Cavtzmq51OnAWDT4f2huVPXwfOncF63BWl3C3UfxyPACiN-KsTPbQ82JIC_-w_ReYO7Kb&lang=octave&interacts=eJyLjgUAARUAuQ==). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://sagecell.sagemath.org/?z=eJyFVMFu2zgQvRvwP8zFsJworR1gLwn2kHvRw8IIFii6AC2OY1oUKUgUYekf9gMWe9oP2E_YvbT5r76hZCcpCtRBbFEk37x582YW9JuPzhRMkTU7Q4Frq6huPB1ZO9_4oeLG-Y5CX1BLe3PyUbm-Gk_6oPDkFJXeFaY4UHpqg3IBWLUvVODCnc_67t18tqDteJFaBBVYQ4hi_SC_0XmJx5RZ41g1gtL4vbGrV1cvL_HDmrRv1QDu1Xg_yuLgCSxilzJpugGIhWp7GkxbqoppSGe_zzvF-GgGRvKkcPVkKoUzDbec8qk82CJDJNUjW2323DAyJz7V1hRGqFUcvIZgN6OCuisOSiQyVW25YhdUYXJSlskxOO6MdVjXvuw03gAARH3sqWx8KbmFpCFTpWw_n8nfguSfPipJETewktcf6Ffa3NP4WZBmWyrRl2XTnbD7y_p-2kRpONAO7KYa5BCCysCN5LXrNJjKIYPoU_U6gIQEMqKcQYSnoIA2ImmJ8-G9O92PRxokABed88nioJG6w1vSESq1vmsh007MI3RWgJAo79brtSSzeC1HTsaBYlQWVjyqcqjOVCNp5bgSCKbWsoYNAsG7rh_pz2f0-vMGlqquNbTrw_dy53Q0TmEfqHYszrliomkHngMjw8yF603uTteb1f0Z38BdRlkziIEgA6g4zhEhqcxn4l1plb5onAq8Bez6CiZrsxfQBSw0lfulr6DZwcNjISfXWY8KTjAUW8BLcgjhxH6pQYGdsdMrMcpUxZ8jT30uNy6dnrIHu81d4ge87eSJCP9IKwuinHrAXvCAMGHIPt3c5pt8lExSu9msPo_JxT5E3wiFSgUzKkYGQimx7wNO360uar-V-qWksU8qqDQf0N0YAo3SMOeE-SBIyP9nWG-RvNjph2CpF1MrPlpI6L78S_HLf7X_-ifaQhEQnv9neYui16r6-nc4t-reN3QEh9s7tNQlapoXwZqYKlf2l6bCrphiS9ekw_tMn_64XdEVZQ_42i5XyyThqBYYxwFKFiDeDSYqtJkqG3FYo1xbozYFbAh5gx9EZlV0RzFim9JDS1SYBCV6lqtxSqV8xVuwid9Jifade8KlVKPW-q5O2-OtPrHtsuP1j9wBSQYexzf4DZqPaLzYlxiwNg0yVAcAF2Efz1sQ8fkvfv5HniYNP_2-ybebz0CvuD08NUZn6zt9QswrfcrxGCDulQ6r-_ms8NY3laph6jCf1WmZpfu5TJz5rD0obdzTOF_q6cJONfNZMMFytnzsoz-Cd7fjQ_fSZml2LgFxsmrHNlueZNFPi7BcfQPOnGh8&lang=octave&interacts=eJyLjgUAARUAuQ==), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
+```{prf:remark} explicitní metoda řešení rovnice vedení tepla
+:nonumber:
+
+Po převedení derivací z rovnice vedení tepla $$\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}$$ bychom dostali $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$ kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud $$T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]$$ a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou _explicitní_ metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://sagecell.sagemath.org/?z=eJyVVUGO4zYQvBvwH_pijOzR7NoD5DKGf7DIIRgsAgTJghY5a1oUKUikIOlPeUU-lmqKsjUzhyA-WKJEVldXV7c29JvrrC4UdUoqq8mr2giqG0dXJa1r3FipxrpAfiiopTfdu07YoZp2Oi9wZwWVzha6uFC8a72wHli1K4RXhZ33uvBlvdrQ63SQWgRlWE2IYtzI1846jqcoM9oq0TBK49602S6O3h7ioiRJ14oR3KvpfMeLiyOw6ELMpAkjEAvRDjTqthSVojHu_Zh3jPGrHhWSJ4Gjva4E9jSqVTGfyoEtMkRSA7KV-k01CpmT6mujC83UKuWdhGBPk4IyFBfBEumqNqpS1otC5ySMIqvA8ayNxbp2ZZB4AgAQdd1AZeNKpOajhIoqYYb1CgQjR8HZYXNcr1ff6ESHI02_DUllSsHSqvXKx1frle1x88v-mLagNsrTGfRSEXIoQaVXDSd2DhJUeZNG_FS-ABAfQSaUGYSJMgp4I57kON--2v44bWmQAmyUEqKsGyVyt3hKsoNMrQstdDqze5jOFhAc5ct-v-eUNks9ctIWFDth4MWrKIdqptqRFFZVDKGoNUrCB55gXjsk-lCPlr93wFSFVtN58PRB8pyu2gq8B66Z6jMXjYUPYDoq5JhZ_3jIbf942B5nfA2DaWH0yB6CECBjVY4IUWc1Uw-lEfKmcizy648OZeCWONF-B7-12R18Azel8t9bDOpdHOzmF4czZeWWy58KNrH6r8MoT8txbzDHhWTLlGL-4HV4icw-H9lQQFtzpPR47ko-mZz8fZhMhIYrhtKENp9MSKFy421ysL3QdmWjPPd5LLKIF1BPDuIsuiGM2sem7xLwTdUNMJA7rBGuSKKayg_LOEyEUZdxODGvN9fQ9YSs_D3v2MreaO4R2GW42T2aKomWHban_b0LeSaiurIZw5XrbJfDEWTTAC0u7zC4ZqdUsf-F8cHeS6NHS9t__p7FmMTxAIyHOGF9ekYZP529gcomXMQPqRrdsZtPlN1tplH9p-fd4sH2cbF4Omy39JVk_9fzlNRisjIs_hPsLdoshn7nKl4-fmSyI-mPn3hvZmWiFyZLp3ZP5Y6xIHYSP4U4pcj3KkapMAWh_AzJfUv40GB6zW06f-AiWsiumAUv4P4JbW4IZlW7Uapry90BY8OY00iZON3aY36FXezdMiSX_vH7IX89_Al9KtVefjZaZvsX2aOIO9nnuPUw8E76LWZ_4YxrKlGjy9HidVxm8XzO83a9ai9Cavtzmq51OnAWDT4f2huVPXwfOncF63BWl3C3UfxyPACiN-KsTPbQ82JIC_-w_ReYO7Kb&lang=octave&interacts=eJyLjgUAARUAuQ==). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://sagecell.sagemath.org/?z=eJyFVMFu2zgQvRvwP8zFsJworR1gLwn2kHvRw8IIFii6AC2OY1oUKUgUYekf9gMWe9oP2E_YvbT5r76hZCcpCtRBbFEk37x582YW9JuPzhRMkTU7Q4Frq6huPB1ZO9_4oeLG-Y5CX1BLe3PyUbm-Gk_6oPDkFJXeFaY4UHpqg3IBWLUvVODCnc_67t18tqDteJFaBBVYQ4hi_SC_0XmJx5RZ41g1gtL4vbGrV1cvL_HDmrRv1QDu1Xg_yuLgCSxilzJpugGIhWp7GkxbqoppSGe_zzvF-GgGRvKkcPVkKoUzDbec8qk82CJDJNUjW2323DAyJz7V1hRGqFUcvIZgN6OCuisOSiQyVW25YhdUYXJSlskxOO6MdVjXvuw03gAARH3sqWx8KbmFpCFTpWw_n8nfguSfPipJETewktcf6Ffa3NP4WZBmWyrRl2XTnbD7y_p-2kRpONAO7KYa5BCCysCN5LXrNJjKIYPoU_U6gIQEMqKcQYSnoIA2ImmJ8-G9O92PRxokABed88nioJG6w1vSESq1vmsh007MI3RWgJAo79brtSSzeC1HTsaBYlQWVjyqcqjOVCNp5bgSCKbWsoYNAsG7rh_pz2f0-vMGlqquNbTrw_dy53Q0TmEfqHYszrliomkHngMjw8yF603uTteb1f0Z38BdRlkziIEgA6g4zhEhqcxn4l1plb5onAq8Bez6CiZrsxfQBSw0lfulr6DZwcNjISfXWY8KTjAUW8BLcgjhxH6pQYGdsdMrMcpUxZ8jT30uNy6dnrIHu81d4ge87eSJCP9IKwuinHrAXvCAMGHIPt3c5pt8lExSu9msPo_JxT5E3wiFSgUzKkYGQimx7wNO360uar-V-qWksU8qqDQf0N0YAo3SMOeE-SBIyP9nWG-RvNjph2CpF1MrPlpI6L78S_HLf7X_-ifaQhEQnv9neYui16r6-nc4t-reN3QEh9s7tNQlapoXwZqYKlf2l6bCrphiS9ekw_tMn_64XdEVZQ_42i5XyyThqBYYxwFKFiDeDSYqtJkqG3FYo1xbozYFbAh5gx9EZlV0RzFim9JDS1SYBCV6lqtxSqV8xVuwid9Jifade8KlVKPW-q5O2-OtPrHtsuP1j9wBSQYexzf4DZqPaLzYlxiwNg0yVAcAF2Efz1sQ8fkvfv5HniYNP_2-ybebz0CvuD08NUZn6zt9QswrfcrxGCDulQ6r-_ms8NY3laph6jCf1WmZpfu5TJz5rD0obdzTOF_q6cJONfNZMMFytnzsoz-Cd7fjQ_fSZml2LgFxsmrHNlueZNFPi7BcfQPOnGh8&lang=octave&interacts=eJyLjgUAARUAuQ==), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
 >
 >
-> Ještě existuje metoda založená na zpětné diferenci v čase namísto dopředné, tj. $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$ a odsud $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$ Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči. Tedy v prakticky využitelných úlohách počty rovnic a proměnných začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích než při explicitní metodě. Programová realizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) Tento přístup se nazývá [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
+Ještě existuje metoda založená na zpětné diferenci v čase namísto dopředné, tj. $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$ a odsud $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$ Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči. Tedy v prakticky využitelných úlohách počty rovnic a proměnných začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích než při explicitní metodě. Programová realizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) Tento přístup se nazývá [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
+```
+
 
 <!--
 
@@ -565,7 +617,9 @@ V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy př
 
 ### Euklidovský metrický prostor
 
-> Definice (metrický prostor, metrika).
+```{prf:definition} metrický prostor, metrika
+:nonumber:
+
   Množina $\mathbb{E}^3$ prvků z $\mathbb{R}^3$ s metrikou $\rho$ definovanou pro
   $A=(a_x,a_y,a_z)\in\mathbb{R}^3$ a $B=(b_x, b_y, b_z)\in\mathbb{R}^3$
   vztahem
@@ -574,10 +628,14 @@ V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy př
   $\mathbb{E}^3$ budeme nazývat *body*. Funkce $\rho$ se nazývá
   *Euklidovská metrika*. Číslo $\rho(A,B)$ se nazývá
   *Euklidovská vzdálenost* bodů $A$, $B$.
+```
+
 
 Analogicky je možno definovat metriku v prostoru libovolné konečné dimenze.
 
-> Definice (okolí).
+```{prf:definition} okolí
+:nonumber:
+
   Buď $A\in \mathbb{E}^n$ bod z $\mathbb{E}^n$ a $\varepsilon>0$ kladné reálné
   číslo. *Epsilonovým okolím bodu $X$* rozumíme množinu
   označenou $O_\varepsilon(A)$ skládající se z bodů, jejichž vzdálenost od
@@ -585,6 +643,8 @@ Analogicky je možno definovat metriku v prostoru libovolné konečné dimenze.
   *Ryzím epsilonovým okolím bodu $A$* rozumíme množinu
   $\overline O_\varepsilon(A)$ definovanou $$\overline O_\varepsilon(A)=O_\varepsilon(A)\setminus\{A\},$$
   tj. $\varepsilon$-okolí bodu $A$, s vyloučením bodu $A$.
+```
+
 
 ### Významné vlastnosti množin v Euklidovském prostoru
 
@@ -631,11 +691,19 @@ Následující věta ukazuje, že u elementárních funkcí je spojitost v libov
 
 \fi
 
-> Věta (spojitost elementárních funkcí). Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
+```{prf:theorem} spojitost elementárních funkcí
+:nonumber:
+ Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
+```
+
 
 ## Schwarzova věta
 
-> Věta (Schwarzova). Jsou-li smíšené derivace spojité na otevřené množině, jsou zde stejné, tj. platí  $$\frac{\partial }{\partial x}   \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}   \frac{\partial f}{\partial x}.$$
+```{prf:theorem} Schwarzova
+:nonumber:
+ Jsou-li smíšené derivace spojité na otevřené množině, jsou zde stejné, tj. platí  $$\frac{\partial }{\partial x}   \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}   \frac{\partial f}{\partial x}.$$
+```
+
 
 Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát $$\frac{\partial^2 f}{\partial x^2},\quad \frac{\partial^2 f}{\partial x \partial y},\quad \frac{\partial^2 f}{\partial y^2},$$ nebo $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
@@ -657,3 +725,4 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 * Přírodní zákony jsou formulovány buď přibližně, pomocí součinů, podílů a průměrných rychlostí, nebo přesně pomocí derivací a okamžitých rychlostí. Nám jde o detailní popis, tj. o přesnou fomrulaci.
 * Kvalitativní představa může být, že teplo teče do studenějšího místa a v místě, kam se dodává teplo, roste teplota. Toto je pouze hrubý model. Pomocí parciálních derivací tento děj umíme namodelovat kvantitativně. Můžeme si tak sestrojit model, porovnat s experimentem a přesvědčit se, že naše metody kvantitativního vyjádření fyzikálních zákonů jsou správné. Tím si potvrzujeme, že jsou správné naše představy o fungování materiálů.
 * V praxi často derivace počítáme pro funkce dané tabulkou. V tomto případě používáme numerickou aproximaci derivace. Nejčastěji pomocí centrální diference.
+

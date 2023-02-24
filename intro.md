@@ -1,0 +1,1 @@
+# Aplikovaná matematika

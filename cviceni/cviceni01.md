@@ -217,3 +217,4 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u veličiny $T$
 
 ```
 
+

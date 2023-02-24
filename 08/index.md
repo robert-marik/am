@@ -262,10 +262,14 @@ poté poslouží k analýze, jaké jsou pozorovatelné důsledky a tím se
 ověří, jestli příslušná aplikovaná věda správně vystihuje podstatu
 modelovaného děje.
 
-> Definice (diferenciální rovnice). *Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
-> k derivaci* (stručněji též diferenciální rovnicí, DR) s neznámou $y$
-> rozumíme rovnici tvaru $$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) \tag{1}$$ kde $\varphi$ je funkce
-> dvou proměnných.
+```{prf:definition} diferenciální rovnice
+:nonumber:
+ *Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
+k derivaci* (stručněji též diferenciální rovnicí, DR) s neznámou $y$
+rozumíme rovnici tvaru $$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) \tag{1}$$ kde $\varphi$ je funkce
+dvou proměnných.
+```
+
 
 (anglicky ordinary differential equation, ODE)
 
@@ -280,22 +284,30 @@ Diferenciální rovnice udává scénář vývoje systému. K\ jednoznačnému
 předpovězení budoucího stavu je ovšem nutno znát nejenom, jaký
 mechanismus ovlivňuje vývoj systému, ale také stav současný.
 
-> Definice (počáteční podmínka, Cauchyova úloha). Nechť $x_0$, $y_0$ jsou reálná čísla. Úloha najít
-> řešení rovnice  
-> $$  \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y), \tag{1}$$
-> které splňuje zadanou *počáteční podmínku*
-> $$  y(x_0)=y_0 \tag{2}$$
-> se nazývá *počáteční* (též *Cauchyova*) *úloha*. 
-> 
-> Řešení Cauchyovy úlohy nazýváme též *partikulárním řešením
-> rovnice*. Graf libovolného partikulárního řešení se nazývá *integrální
-> křivka*.
+```{prf:definition} počáteční podmínka, Cauchyova úloha
+:nonumber:
+ Nechť $x_0$, $y_0$ jsou reálná čísla. Úloha najít
+řešení rovnice  
+$$  \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y), \tag{1}$$
+které splňuje zadanou *počáteční podmínku*
+$$  y(x_0)=y_0 \tag{2}$$
+se nazývá *počáteční* (též *Cauchyova*) *úloha*. 
+
+Řešení Cauchyovy úlohy nazýváme též *partikulárním řešením
+rovnice*. Graf libovolného partikulárního řešení se nazývá *integrální
+křivka*.
+```
+
 
 (anglicky initial condition, IC, initial value problem, IVP)
 
 **Příklad.** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$. (Naučíme se řešit později.)
 
-> Věta (existence a jednoznačnost řešení Cauchyovy úlohy). Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha (1)-(2) právě jedno řešení definované v nějakém okolí počáteční podmínky.
+```{prf:theorem} existence a jednoznačnost řešení Cauchyovy úlohy
+:nonumber:
+ Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha (1)-(2) právě jedno řešení definované v nějakém okolí počáteční podmínky.
+```
+
 
 **Příklad.** Rovnice $$y'=y\tag{3}$$ má řešení $y=e^x$, což nahlédneme
   snadno, protože exponenciální funkce se nemění
@@ -458,7 +470,11 @@ uvedeme si je v kontextu vhodném pro studium diferenciálních rovnic.
 
 Výše uvedené výpočty je možno shrnout do pravidla v následující poznámce.
 
-> Poznámka (transformace diferenciální rovnice do jiných jednotek). Pro $Y=k_1(y-y_0)$ a $X=k_2 x$ platí   $$  \frac{\mathrm d Y}{\mathrm d X} =   \frac{\mathrm d \Bigl(k_1(y-y_0)\Bigr)}{\mathrm d (k_2 x)} = \frac{k_1}{k_2} \frac{\mathrm dy}{\mathrm dx}$$ a podobně (všimněte si druhé mocniny u $k_2$ díky druhé derivaci) $$  \frac{\mathrm d^2 Y}{\mathrm d X^2} = \frac{k_1}{k_2^2} \frac{\mathrm d^2y}{\mathrm dx^2}.$$   Výraz nalevo neobsahuje konstanty, které jsou ve výrazu   napravo. Tyto konstanty jsou v definici nových veličin $X$ a $Y$. 
+```{prf:remark} transformace diferenciální rovnice do jiných jednotek
+:nonumber:
+ Pro $Y=k_1(y-y_0)$ a $X=k_2 x$ platí   $$  \frac{\mathrm d Y}{\mathrm d X} =   \frac{\mathrm d \Bigl(k_1(y-y_0)\Bigr)}{\mathrm d (k_2 x)} = \frac{k_1}{k_2} \frac{\mathrm dy}{\mathrm dx}$$ a podobně (všimněte si druhé mocniny u $k_2$ díky druhé derivaci) $$  \frac{\mathrm d^2 Y}{\mathrm d X^2} = \frac{k_1}{k_2^2} \frac{\mathrm d^2y}{\mathrm dx^2}.$$   Výraz nalevo neobsahuje konstanty, které jsou ve výrazu   napravo. Tyto konstanty jsou v definici nových veličin $X$ a $Y$. 
+```
+
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
 
@@ -476,10 +492,14 @@ rovnici (*). Tuto informaci je však nutno interpretovat v kontextu
 definice nových proměnných. Například to, že všechna řešení rovnice (**) konvergují k nule
 znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řešení rovnice (**) klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice (*) od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
-> Poznámka (nondimenzinalizace, rozměrová analýza).  Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
+```{prf:remark} nondimenzinalizace, rozměrová analýza
+:nonumber:
+  Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
 >
 >V této úloze bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
 *Horáček, Fyzikální a mechanické vlastnosti dřeva I* je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
+```
+
 
 <!--
 
@@ -548,10 +568,14 @@ se budou řešení chovat.
   se vrátit do původního stavu, nebo se od původního stavu dále
   odchylovat. Na tuto otázku dává odpověď následující věta.
 
-> Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
+```{prf:theorem} stabilita konstantních řešení
+:nonumber:
+ Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
   $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je stabilní
   pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
+```
+
 
 Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
@@ -626,10 +650,14 @@ https://youtu.be/yH6jzK_999E
 
 Najít řešení obecné diferenciální rovnice je nemožné, ani však takové ambice mít nemusíme. V praxi se setkáváme s poměrně speciálními druhy diferenciálních rovnic a pro ně jsou metody řešení k dispozici. Jeden takový jednoduše řešitelný druh diferenciální rovnice je představen v následujícím textu.
 
-> Definice (ODE se separovanými proměnnými). Diferenciální rovnice tvaru
-> $$    \frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y) \tag{S}$$
-> kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
-> se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
+```{prf:definition} ODE se separovanými proměnnými
+:nonumber:
+ Diferenciální rovnice tvaru
+$$    \frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y) \tag{S}$$
+kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
+se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
+```
+
 
 **Příklad:** Rovnice $$y'+xy +xy^2=0$$ je rovnicí se separovanými
   proměnnými, protože je možno ji zapsat ve tvaru $$y'=-xy(y+1).$$
@@ -660,21 +688,33 @@ záleží na tom, co dalšího hodláme s\ řešením dělat. Pro většinu výp
 je však explicitní tvar vhodnější než tvar implicitní a proto se o něj
 vždy snažíme.
 
-> Poznámka (zápis partikulárního řešení pomocí určitého integrálu). V případě počáteční podmínky $y(x_0) = y_0$ je možné spojit třetí a čtvrtý krok a použít určitý integrál
+```{prf:remark} zápis partikulárního řešení pomocí určitého integrálu
+:nonumber:
+ V případě počáteční podmínky $y(x_0) = y_0$ je možné spojit třetí a čtvrtý krok a použít určitý integrál
 $$
 \int_{y_0}^y \frac{\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t.
 $$
+```
+
 
 Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
 
-> Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
+```{prf:theorem} existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými
+:nonumber:
+ Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
+```
 
-> Poznámka (existence a jednoznačnost konstantního řešení). Je-li $g(y_0)=0$,
-> potom má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad
-> y(x_0)=y_0$$ konstantní řešení $y(t)=y_0,$ ale z předchozí věty neplyne nic o
-> jednoznačnosti tohoto řešení. Je možné použít větu o jednoznačnosti platnou pro obecnější
-> rovnici $$\frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y)$$ uvedenou výše a potom je řešení určeno jednoznačně, pokud má funkce
-> $g$ v okolí počáteční podmínky ohraničenou derivaci.
+
+```{prf:remark} existence a jednoznačnost konstantního řešení
+:nonumber:
+ Je-li $g(y_0)=0$,
+potom má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad
+y(x_0)=y_0$$ konstantní řešení $y(t)=y_0,$ ale z předchozí věty neplyne nic o
+jednoznačnosti tohoto řešení. Je možné použít větu o jednoznačnosti platnou pro obecnější
+rovnici $$\frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y)$$ uvedenou výše a potom je řešení určeno jednoznačně, pokud má funkce
+$g$ v okolí počáteční podmínky ohraničenou derivaci.
+```
+
 
 ## Redukce parciální diferenciální rovnice na obyčejnou
 
@@ -802,4 +842,5 @@ zbavili poté, co se omezilo topení uhlím. My dnes spíše známe
 přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
 plíškem spustí přeměna skupenství na pevné spojená s\ intenzivním
 uvolněním tepla.
+
 

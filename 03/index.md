@@ -91,30 +91,54 @@ https://youtu.be/ejDQx3QjgfI
 
 Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci. Ale je v ní  skryta hlavní myšlenka vedoucí k zavedení pojmu divergence.)
 
-> Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
+```{prf:definition} divergence
+:nonumber:
+ *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
+```
 
-> Věta (výpočet divergence). Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\mathop{\mathrm {div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
-> Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
 
-> Poznámka (linearita divergence). Divergence zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí $$\nabla \cdot (\vec F+\vec G)=\nabla \cdot \vec F +\nabla \cdot \vec G \quad\text{a}\quad \nabla \cdot (c\vec F)=c\nabla \cdot \vec F.$$
+```{prf:theorem} výpočet divergence
+:nonumber:
+ Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\mathop{\mathrm {div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
+Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
+```
 
-> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+
+```{prf:remark} linearita divergence
+:nonumber:
+ Divergence zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí $$\nabla \cdot (\vec F+\vec G)=\nabla \cdot \vec F +\nabla \cdot \vec G \quad\text{a}\quad \nabla \cdot (c\vec F)=c\nabla \cdot \vec F.$$
+```
+
+
+```{prf:remark} fyzikální interpretace divergence
+:nonumber:
+ Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+```
+
 
 Divergence je lokální veličina. Udává informaci o proudění v daném bodě. Pro měření však je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. Vzájemný vztah mezi lokální veličinou a konečným objemem je založený na předpokladu, že podmínky se nemění skokem a okolí každého bodu jsou nepříliš odlišné od podmínek v okolních bodech.
 
-> Poznámka (fyzikální interpretace divergence v měřitelných pojmech). Tok přes hranici umíme měřit u těles. Zajímá-li nás divergence v nějakém bodě, představíme si okolo tohoto bodu nějaké těleso. Například kouli nebo krychli. Poté určíme tok přes hranici. Tok hranicí ven počítáme kladně a dovnitř záporně. Celkový tok hranicí určíme jako součet přes všechny části hranice. Podíl celkového toku přes hranici tělesa a objemu tohoto tělesa je odhad pro divergenci v daném bodě. Tento odhad je tím přesnější, čím je objem tělesa menší. Naopak, ze známé divergence je možno odhadnout zesílení toku v malé oblasti okolo studovaného bodu jako součin divergence a objemu (nebo obsahu ve 2D) oblasti.
+```{prf:remark} fyzikální interpretace divergence v měřitelných pojmech
+:nonumber:
+ Tok přes hranici umíme měřit u těles. Zajímá-li nás divergence v nějakém bodě, představíme si okolo tohoto bodu nějaké těleso. Například kouli nebo krychli. Poté určíme tok přes hranici. Tok hranicí ven počítáme kladně a dovnitř záporně. Celkový tok hranicí určíme jako součet přes všechny části hranice. Podíl celkového toku přes hranici tělesa a objemu tohoto tělesa je odhad pro divergenci v daném bodě. Tento odhad je tím přesnější, čím je objem tělesa menší. Naopak, ze známé divergence je možno odhadnout zesílení toku v malé oblasti okolo studovaného bodu jako součin divergence a objemu (nebo obsahu ve 2D) oblasti.
+```
+
 
 Přesnou divergenci získáme postupem uvedeným v předchozí poznámce, pokud limitním přechodem stáhneme rozměry uvažovaného tělesa k nule. 
 
 Pokud se při transportu v daném místě množství veličiny ani tok nemění s časem,  mluvíme o stacionárním proudění a stacionárním poli. V takovém případě se situace zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.
 
-> Poznámka (praktická interpretace divergence stacionárního pole). Pokud je při ustáleném proudění v některém místě divergence kladná, znamená to, že v tomto místě je zdroj této veličiny. Pokud je záporná, je v daném místě spotřebič. Vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. To proto, že pokud toto pole popisuje stacionární tok, tak se jedná o tok v prostředí bez zdrojů a spotřebičů. (Zkráceně říkáme jenom "bez zdrojů", protože jak jsme uvedli na začátku, spotřebiče považujeme za zdroje se zápornou vydatností.)
+```{prf:remark} praktická interpretace divergence stacionárního pole
+:nonumber:
+ Pokud je při ustáleném proudění v některém místě divergence kladná, znamená to, že v tomto místě je zdroj této veličiny. Pokud je záporná, je v daném místě spotřebič. Vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. To proto, že pokud toto pole popisuje stacionární tok, tak se jedná o tok v prostředí bez zdrojů a spotřebičů. (Zkráceně říkáme jenom "bez zdrojů", protože jak jsme uvedli na začátku, spotřebiče považujeme za zdroje se zápornou vydatností.)
+```
+
 
 Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar. Ty začínají ve zdrojích a končí ve spotřebičích. Siločáry stacionárního nezřídlového pole nikde nezačínají ani nekončí a jsou to uzavřené křivky. Například stacionární magnetické pole je nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší plnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.
 
 ## Výpočet divergence
 
-Viz [cvičení](http://user.mendelu.cz/marik/am/slidy/cviceni/cviceni03.md.html). Jedná se o prosté derivování se následným sečtením derivací.
+Viz cvičení. Jedná se o prosté derivování se následným sečtením derivací.
 
 ## Rovnice kontinuity
 
@@ -257,12 +281,16 @@ teploty a tokem tepla  zprostředkovává
 $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(k\nabla T\bigr)}$$
 a nazývá se _rovnice vedení tepla_.
 
-> Poznámka (interpretace rovnice vedení tepla).
+```{prf:remark} interpretace rovnice vedení tepla
+:nonumber:
+
 >
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste v daném bodě hustota vnitřní energie tělesa.
 >* Výraz $k\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-k\nabla T$.
 >* Člen $\nabla\cdot(k\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
 >* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divergence toku $\nabla\cdot (-k\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (k\nabla T)$ je proto záporný.
+```
+
 
 \iffalse
 
@@ -421,7 +449,11 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 
 ## Laplaceův operátor
 
-> Definice (Laplaceův operátor). Laplaceovým operátorem $\nabla ^2$ rozumíme divergenci gradientu, tj. $$\nabla^2 f=\nabla\cdot(\nabla f).$$
+```{prf:definition} Laplaceův operátor
+:nonumber:
+ Laplaceovým operátorem $\nabla ^2$ rozumíme divergenci gradientu, tj. $$\nabla^2 f=\nabla\cdot(\nabla f).$$
+```
+
 
 * V\ kartézských souřadnicích a trojrozměrném prostoru je Laplaceův operátor $\nabla^2$ dán vztahem $$\nabla^2 f=\frac{\partial^2 }{\partial x^2}f+\frac{\partial^2 }{\partial y^2}f+\frac{\partial^2 }{\partial z^2}f.$$ V prostorech jiné dimenze postupujeme analogicky, jenom vynecháme nebo přidáme derivace podle dalších proměnných.
 * Jiné běžné označení Laplaceova operátoru je $\Delta f$. Toto je bohužel stejné označení jako změna funkce $f$ a je nutné tyto dva významy symbolu $\Delta$ nezaměňovat. 
@@ -443,3 +475,4 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 * Formulováním bilance dávající do souvislosti intenzitu změny toku s vydatností zdrojů a s časovou změnou je možno formulovat matematické modely popisující transportní jevy. Nezáleží na charakteru přenášené veličiny, může se jednat o energii i o látku. Nezáleží ani na tom, pomocí jakého parametru množství přenášené tokem měříme. Výsledkem je rovnice kontinuity.
 * Rovnici kontinuity často spojujeme ještě s konstitutivním zákonem. Výsledným spojením je difuzní rovnice. 
 * Difuzní rovnice je základním nástrojem pro popis transportu vody ve dřevě nebo v propustných vrstvách půdy. Je také základním nástrojem pro modelování vedení tepla, tj. například pro popis tepelného namáhání stěny domu, detailu okna či dveří, ulice v rozpáleném městě nebo krajiny, ve které jsou umístěny lesy, pole, města.
+

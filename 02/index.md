@@ -53,19 +53,27 @@ Parciální derivace umožňují sledovat závislost stavových veličin v závi
 
 https://youtu.be/9RwaJnV5TUs
 
-> Definice (gradient). *Gradient* skalární funkce dvou proměnných $f(x,y)$ je vektorové pole označené a definované následovně.
+```{prf:definition} gradient
+:nonumber:
+ *Gradient* skalární funkce dvou proměnných $f(x,y)$ je vektorové pole označené a definované následovně.
   $$\nabla f=\left(\frac{\partial f}{\partial
   x}, \frac{\partial f}{\partial y}\right)$$
 Podobně je definován gradient skalární funkce tří proměnných $f(x,y,z)$.
   $$\nabla f=\left(\frac{\partial
   f}{\partial x}, \frac{\partial f}{\partial y},
   \frac{\partial f}{\partial z}\right)$$
+```
+
 
 Význam a postavení gardientu ilustruje následující příklad, který je poté zobecněn do poznámky shrnující fyzikální význam gradientu.
 
 **Příklad.** Pokud je teplota v rovině v bodě $(x,y)$ dána předpisem $$T=(x^2-xy^2)^\circ\mathrm C,$$ je gradientem vektor $$\nabla T=\begin{pmatrix}2x-y^2, -2xy\end{pmatrix} {}^\circ\mathrm C \mathrm m^{-1}.$$ V bodě $(1,1)$ je gradient $$\nabla T(1,1)=\begin{pmatrix}1,-2\end{pmatrix}{}^{\circ}\mathrm C \mathrm m^{-1}.$$ To znamená, že v tomto bodě roste teplota ve směru osy $x$ rychlostí jeden stupeň Celsia na každý metr délky a ve směru osy $y$ klesá rychlostí dva stupně Celsia na každý metr délky. Vektor definovaný tímto gradientem má směr doprava dolů (pod úhlem splňujícím podmínku $\tan \varphi = -2$) a délku $\sqrt{(1)^2+(-2)^2}=\sqrt 5\approx 2.2$. To znamená, že maximální nárůst teploty je směrem doprava dolů a tento nárůst je $2.2$ stupně Celsia na každý metr délky.
 
-> Poznámka (fyzikální význam gradientu). Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat. Například vedení tepla vyrovnává nerovnoměrné rozložení teploty a difuze vyrovnává nerovnoměrnosti v koncentraci. Teplota se vyrovnává tak, že teplo teče z místa s vysokou teplotou do místa s malou teplotou. Difuze směřuje  z místa s vyšší koncentrací do místa s nižší koncentrací. V praxi nás proto většinou místo směru maximálního růstu zajímá směr maximálního poklesu, tj. $-\nabla f$.
+```{prf:remark} fyzikální význam gradientu
+:nonumber:
+ Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat. Například vedení tepla vyrovnává nerovnoměrné rozložení teploty a difuze vyrovnává nerovnoměrnosti v koncentraci. Teplota se vyrovnává tak, že teplo teče z místa s vysokou teplotou do místa s malou teplotou. Difuze směřuje  z místa s vyšší koncentrací do místa s nižší koncentrací. V praxi nás proto většinou místo směru maximálního růstu zajímá směr maximálního poklesu, tj. $-\nabla f$.
+```
+
 
 <div class="obtekat">
 
@@ -84,8 +92,12 @@ Někdy je vhodné formulovat fyzikální zákony pomocí prostředků lineární
 Gradient úzce souvisí s vrstevnicemi, s křivkami, které spojují místa se stejnou funkční hodnotou funkce dvou proměnných. Někdy místo pojmu vrstevnice používáme výraz, který obsahuje i povahu sledované veličiny, například se používají názvy jako izotermy, izobary, hydroizopsy, hydroizopiezy atd. Pro funkce tří proměnných máme plochy spojující místa se stejnou funkční hodnotou ekvipotenciální plochy.
 Gradient je v každém bodě kolmý k vrstevnici (ve 2D) resp. k ekvipotenciální ploše (ve 3D). [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
 
-> Poznámka (linearita gradientu). Gradient zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí
-> $$\nabla (f+g)=\nabla f +\nabla g, \qquad \nabla (cf)=c\nabla f.$$
+```{prf:remark} linearita gradientu
+:nonumber:
+ Gradient zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí
+$$\nabla (f+g)=\nabla f +\nabla g, \qquad \nabla (cf)=c\nabla f.$$
+```
+
 
 ## Gradient v přírodě
 
@@ -411,11 +423,15 @@ V řezu vodorovnou rovinou $z=0$ z grafu funkce a z tečné roviny zůstanou vrs
 
 Pokud tečna k vrstevnici není rovnoběžná s osou $y$, je možno vrstevnici chápat jako graf funkce jedné proměnné. Taková funkce je do jisté míry určena jednoznačně, jak ukazuje následující věta.
 
->  Věta (o implicitní funkci). Uvažujme funkci $f(x,y)$ dvou proměnných, splňující v nějakém bodě
->  $(x_0, y_0)$ podmínku $f(x_0, y_0)=0$ a mající v okolí bodu $(x_0,
->  y_0)$ spojité parciální derivace. Platí-li $$\frac{\partial f (x_0,y_0)}{\partial y}\neq 0,$$ je rovnicí
->    $$f(x,y)=0$$ v okolí bodu $(x_0, y_0)$ implicitně určena
->    **právě jedna spojitá funkce** $y=g(x)$.
+```{prf:theorem} o implicitní funkci
+:nonumber:
+ Uvažujme funkci $f(x,y)$ dvou proměnných, splňující v nějakém bodě
+$(x_0, y_0)$ podmínku $f(x_0, y_0)=0$ a mající v okolí bodu $(x_0,
+y_0)$ spojité parciální derivace. Platí-li $$\frac{\partial f (x_0,y_0)}{\partial y}\neq 0,$$ je rovnicí
+$$f(x,y)=0$$ v okolí bodu $(x_0, y_0)$ implicitně určena
+**právě jedna spojitá funkce** $y=g(x)$.
+```
+
 
 ## Lokální extrémy funkce více proměnných
 
@@ -433,10 +449,14 @@ Pro funkce více proměnných definujeme  **lokální extrémy** stejně jako pr
 
 Funkce jedné proměnné určitě nemá lokální extrém v bodě, ve kterém má kladnou derivaci (protože tam funkce roste). Stejně tak nemá lokální extrém v bodě, ve kterém má zápornou derivaci (protože tam funkce klesá). Derivace v bodě lokálního extrému tedy musí být buď nulová nebo nesmí existovat. Stejná myšlenková úvaha se dá provést pro křivky vzniklé na svislých řezech funkce dvou proměnných. Proto platí následující věta.
 
-> Věta (Fermatova nutná podmínka pro lokální extrémy).
-> Jestliže funkce více proměnných má v nějakém bodě svůj lokální
-> extrém, pak každá parciální derivace, která v tomto bodě existuje,
-> je nulová.
+```{prf:theorem} Fermatova nutná podmínka pro lokální extrémy
+:nonumber:
+
+Jestliže funkce více proměnných má v nějakém bodě svůj lokální
+extrém, pak každá parciální derivace, která v tomto bodě existuje,
+je nulová.
+```
+
 
 *V bodě lokálního extrému hladké funkce je tedy nulový gradient.*
 

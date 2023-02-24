@@ -150,3 +150,4 @@ a protože obě parciální derivace jsou různé, kmenová funkce neexistuje.
 
 ```
 
+

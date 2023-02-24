@@ -153,20 +153,30 @@ th {
 
 ### Vlastnosti křivkového integrálu prvního druhu
 
-> Věta (nezávislost na zvolené parametrizaci). Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci křivky $C$. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.
+```{prf:theorem} nezávislost na zvolené parametrizaci
+:nonumber:
+ Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci křivky $C$. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.
   
-> Věta (linearita). Pro funkce $f$ a $g$ a konstantu $k$ platí následující.
+```{prf:theorem} linearita
+:nonumber:
+ Pro funkce $f$ a $g$ a konstantu $k$ platí následující.
 $$
 \begin{aligned}
 \int_C f+g\;\mathrm{d}s & = \int_C f\;\mathrm{d}s + \int_C g\;\mathrm{d}s \\
 \int_C kf\;\mathrm{d}s & = k\int_C f\;\mathrm{d}s\\
 \end{aligned}
 $$
+```
 
-> Věta (aditivita vzhledem k integračnímu oboru). Nechť je křivka $C$ rozdělena na dvě křivky $C_1$ a $C_2$, které jsou disjunktní (až na koncové body). Potom platí
+
+```{prf:theorem} aditivita vzhledem k integračnímu oboru
+:nonumber:
+ Nechť je křivka $C$ rozdělena na dvě křivky $C_1$ a $C_2$, které jsou disjunktní (až na koncové body). Potom platí
 $$
 \int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
 $$
+```
+
 
 ### Proč trubky praskají podélně?
 
@@ -270,13 +280,23 @@ $$
 
 ## Vlastnosti křivkového integrálu druhého druhu
 
-> Věta (souvislost křivkového integrálu a orientace křivky). Změnou orientace křivky křivkový integrál druhého druhu mění znaménko.
+```{prf:theorem} souvislost křivkového integrálu a orientace křivky
+:nonumber:
+ Změnou orientace křivky křivkový integrál druhého druhu mění znaménko.
+```
 
-> Věta (nezávislost na zvolené parametrizaci). Křivkový integrál druhého druhu nezávisí na konkrétní parametrizaci  křivky $C$. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.
+
+```{prf:theorem} nezávislost na zvolené parametrizaci
+:nonumber:
+ Křivkový integrál druhého druhu nezávisí na konkrétní parametrizaci  křivky $C$. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.
+```
+
 
 Následující vlastnosti jsou stejné jako u křivkového integrálu prvního druhu.
 
-> Věta (linearita a aditivita vzhledem k integračnímu oboru). Křivkový integrál druhého druhu je lineární vzhledem k funkci a
+```{prf:theorem} linearita a aditivita vzhledem k integračnímu oboru
+:nonumber:
+ Křivkový integrál druhého druhu je lineární vzhledem k funkci a
   aditivní vzhledem k oboru integrace. Přesněji, pro funkce $\vec F$ a $\vec G$
   a konstantu $k$ platí následující.
 $$
@@ -289,6 +309,8 @@ Je-li křivka $C$ rozdělena na dvě disjunktní (až na koncové body) křivky 
 $$
 \int_{C} \vec F\;\mathrm{d}\vec{r} = \int_{C_1} \vec F\;\mathrm{d}\vec{r} + \int_{C_2} \vec F\;\mathrm{d}\vec{r} .
 $$
+```
+
 
 ## Aplikace křivkového integrálu druhého druhu
 
@@ -415,3 +437,4 @@ column-count:3;}
 
 * Křivkový integrál druhého druhu souvisí s prací silového pole. Vzhledem ke zkušenostem z mechaniky by toto měla být cesta ke skalárnímu popisu vektorového pole. Protože v minulém týdnu jsme jednu takovou cestu otevřeli (pojem rotace a její nulovost či nenulovost), dá se očekávat, že obě problematiky budou souviset. Tuto souvislost si ukážeme později, za dva týdny (Greenova věta).
 * Křivkový integrál druhého druhu může souviset s i s tokem vektorového pole křivkou a to je zase doména difuzní rovnice a divergence vektorového pole. Oba pojmy, křivkový integrál a divergence spolu opravdu souvisí a přesvědčí nás o tom později opět Greenova věta.
+

@@ -56,29 +56,33 @@ konzervativní právě tehdy, když je jeho rotace nulová a to je právě
 tehdy, když pro toto pole existuje kmenová funkce a je tedy možno
 zavést potenciál (záporně vzatá kmenová funkce).
 
->  Věta (o\ nezávislosti integrálu na integrační cestě).
->  Uvažujme vektorovou funkci $\vec F$, křivku $C$ a oblast $\Omega$ 
->  v\ $\mathbb{R}^3$. Následující výroky jsou ekvivalentní za předpokladu
->  hladkosti funkcí, regulárnosti křivek a jednoduše souvislé oblasti
->  $\Omega$.
+```{prf:theorem} o\ nezávislosti integrálu na integrační cestě
+:nonumber:
+
+Uvažujme vektorovou funkci $\vec F$, křivku $C$ a oblast $\Omega$ 
+v\ $\mathbb{R}^3$. Následující výroky jsou ekvivalentní za předpokladu
+hladkosti funkcí, regulárnosti křivek a jednoduše souvislé oblasti
+$\Omega$.
 >
->  a. Integrál $\int_C \vec F\mathrm{d}\vec r$ nezávisí v $\Omega$ na
->    integrační cestě.
->  b. Křivkový integrál $\oint_C \vec F\mathrm{d}\vec r$ po libovolné
->    uzavřené křivce $C$ v $\Omega$ je roven nule.
->  c. Rotace $\nabla\times \vec F$ vektorového pole $\vec F$ je v\ $\Omega$
->    rovna nulovému vektoru.
->  d. Existuje funkce $\varphi$ s\ vlastností $\nabla\varphi=\vec F$
->    na $\Omega$.
+a. Integrál $\int_C \vec F\mathrm{d}\vec r$ nezávisí v $\Omega$ na
+integrační cestě.
+b. Křivkový integrál $\oint_C \vec F\mathrm{d}\vec r$ po libovolné
+uzavřené křivce $C$ v $\Omega$ je roven nule.
+c. Rotace $\nabla\times \vec F$ vektorového pole $\vec F$ je v\ $\Omega$
+rovna nulovému vektoru.
+d. Existuje funkce $\varphi$ s\ vlastností $\nabla\varphi=\vec F$
+na $\Omega$.
 >
->  Pokud jsou předchozí podmínky splněny (platnost jedné z\ nich vynutí
->  platnost i\ všech ostatních), je možno křivkový integrál vypočítat
->  podle vzorce
->  $$
->    \int_C \vec F\mathrm{d}\vec r=\varphi(B)-\varphi(A),
->  $$
->  kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
->  kmenová funkce vektorového pole $\vec F$.
+Pokud jsou předchozí podmínky splněny (platnost jedné z\ nich vynutí
+platnost i\ všech ostatních), je možno křivkový integrál vypočítat
+podle vzorce
+$$
+\int_C \vec F\mathrm{d}\vec r=\varphi(B)-\varphi(A),
+$$
+kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
+kmenová funkce vektorového pole $\vec F$.
+```
+
 
 manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na intergrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné= zavést potenciální energii.
 
@@ -162,12 +166,16 @@ ww:problems/krivkovy_integral/40_06.pg
 
 https://youtu.be/L9iF8H43feQ
 
-> Věta (Greenova věta).  Nechť $\Omega\subseteq\mathbb{R}^2$ je jednoduše souvislá regulární oblast, jejíž hranicí je po částech regulární křivka $\partial \Omega$
-> orientovaná tak, že při obíhání podél křivky $\partial \Omega$ je
-> oblast $\Omega$ vlevo. Nechť vektorová funkce $\vec
-> F(x,y)=P(x,y)\vec i+Q(x,y)\vec j$ je hladká uvnitř nějaké oblasti,
-> obsahující množinu $\Omega$ a její hranici $\partial \Omega$. Platí
-> \dm$$   \underbrace{\oint_{\partial \Omega}P(x,y)\mathrm{d}x +Q(x,y)\mathrm{d}y }_{\text{Cirkulace po hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}\right)}_{[\nabla \times (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y. $$
+```{prf:theorem} Greenova věta
+:nonumber:
+  Nechť $\Omega\subseteq\mathbb{R}^2$ je jednoduše souvislá regulární oblast, jejíž hranicí je po částech regulární křivka $\partial \Omega$
+orientovaná tak, že při obíhání podél křivky $\partial \Omega$ je
+oblast $\Omega$ vlevo. Nechť vektorová funkce $\vec
+F(x,y)=P(x,y)\vec i+Q(x,y)\vec j$ je hladká uvnitř nějaké oblasti,
+obsahující množinu $\Omega$ a její hranici $\partial \Omega$. Platí
+\dm$$   \underbrace{\oint_{\partial \Omega}P(x,y)\mathrm{d}x +Q(x,y)\mathrm{d}y }_{\text{Cirkulace po hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}\right)}_{[\nabla \times (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y. $$
+```
+
 
 \iffalse
 
@@ -239,4 +247,5 @@ Toto je stejná rovnice jako rovnice odvozená lokálními úvahami v přednáš
 $$\vec J=-D\nabla u$$
 obdržet difuzní rovnici
 \dm$$\frac{\partial u}{\partial t}= \sigma+\nabla\cdot (D\nabla u).$$
+
 

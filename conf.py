@@ -52,7 +52,7 @@ oznameni = """
 Toto jsou webové stránky předmětu Aplikovaná matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/am-old">https://robert-marik.github.io/am-old</a> a nebude již udržována.
 """
 html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/am', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': 'Powered by <a href="https://jupyterbook.org">Jupyter Book</a>', 'home_page_in_toc': True, 'announcement': oznameni, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False}
-html_title = 'Matematika'
+html_title = 'Aplikovaná matematika'
 jupyter_cache = ''
 jupyter_execute_notebooks = 'auto'
 latex_engine = 'xelatex'

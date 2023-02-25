@@ -24,21 +24,18 @@ exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', 'Thumbs.db','_build', '
 #execution_timeout = 30
 extensions = [
     'sphinx_togglebutton',
-    #'sphinx_copybutton',
-    'myst_nb',
+    'sphinx_copybutton',
     'notfound.extension',    
+    'myst_nb',
     #'jupyter_book',
-    #'sphinx_comments',
+    'sphinx_comments',
     'sphinx_external_toc',
     'sphinx.ext.intersphinx',
     'sphinx_design',
-    #'sphinx_book_theme',
+    'sphinx_book_theme',
     'sphinx_proof',
-    #'sphinx_jupyterbook_latex',
-    #'sphinx_rtd_theme',
-    #'sphinx_rtd_size',
+    #'sphinx_jupyterbook_latex'
 ]
-#sphinx_rtd_size_width = "100%"
 external_toc_exclude_missing = False
 external_toc_path = '_toc.yml'
 html_baseurl = ''
@@ -47,11 +44,10 @@ html_logo = ''
 html_show_copyright = False
 html_sourcelink_suffix = ''
 html_theme = 'sphinx_book_theme'
-#html_theme = 'sphinx_rtd_theme'
 oznameni = """
 Toto jsou webové stránky předmětu Aplikovaná matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/am-old">https://robert-marik.github.io/am-old</a> a nebude již udržována.
 """
-html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/am', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': 'Powered by <a href="https://jupyterbook.org">Jupyter Book</a>', 'home_page_in_toc': True, 'announcement': oznameni, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False}
+html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/am', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': 'Powered by <a href="https://jupyterbook.org">Jupyter Book</a>', 'home_page_in_toc': False, 'announcement': oznameni, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False}
 html_title = 'Aplikovaná matematika'
 jupyter_cache = ''
 jupyter_execute_notebooks = 'auto'
@@ -70,7 +66,7 @@ html_css_files = ['custom.css']
 language = 'cs'
 myst_footnote_transition = False
 latex_elements = {
-    'extrapackages': r'\usepackage{comment}', 
+    'extrapackages': r'\usepackage{comment}\usepackage{physics}', 
     'papersize': 'a4paper',
     'preamble':r'\input custom_preamble.tex'
     }
@@ -85,32 +81,5 @@ mathjax3_config = {
   'loader': {'load': ['[tex]/physics']},
   'tex': {'packages': {'[+]': ['physics']}}
 }
-
-
-#### Tema
-
-#html_theme = "furo"
-
-# import guzzle_sphinx_theme
-
-# html_theme_path = guzzle_sphinx_theme.html_theme_path()
-# html_theme = 'guzzle_sphinx_theme'
-
-# # Register the theme as an extension to generate a sitemap.xml
-# extensions.append("guzzle_sphinx_theme")
-
-# # Guzzle theme options (see theme.conf for more information)
-# html_theme_options = {
-#     # Set the name of the project to appear in the sidebar
-#     "project_nav_name": "Aplikovaná matematika",
-#     # Visible levels of the global TOC; -1 means unlimited
-#     "globaltoc_depth": 2,
-
-#     # If False, expand all TOC entries
-#     "globaltoc_collapse": True,
-
-#     # If True, show hidden TOC entries
-#     "globaltoc_includehidden": True,
-#     }
 
 notfound_urls_prefix = '/am/'

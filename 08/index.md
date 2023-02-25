@@ -66,6 +66,7 @@ https://youtu.be/08uAuAgY-lw
 ```
 
 </div>
+
 \fi
 
 * Radioaktivní prvky se rozpadají
@@ -894,5 +895,3 @@ zbavili poté, co se omezilo topení uhlím. My dnes spíše známe
 přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
 plíškem spustí přeměna skupenství na pevné spojená s intenzivním
 uvolněním tepla.
-
-

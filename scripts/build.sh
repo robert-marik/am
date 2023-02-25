@@ -40,7 +40,7 @@ sed -i 's/<p>manim:\(.*\)|\(.*\)|\(.*\)<\/p>/<div class="obtekat"><figure><a hre
 
 sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/*/index.html
 sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
-sed -i 's/<body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
+#sed -i 's/<body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
 
 # Copy custom css file
 cp custom.css $directory/_static/styles/

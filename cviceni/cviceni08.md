@@ -12,9 +12,13 @@ https://youtu.be/QckWe55HikI
 
 ### Model růstu úměrného velikosti chybějícího množství
 
+\iffalse
+
 ```{figure} mladata.jpg
  pixabay.com
 ```
+
+\fi
 
 Mnoho
 živočichů roste tak, že mohou dorůstat jisté maximální délky a
@@ -39,9 +43,13 @@ Konstanta $k$ vyjadřuje rychlost s jakou roste délka při jednotkovém rozdíl
 
 ### Kontaminace a čištění
 
+\iffalse
+
 ```{figure} kontaminace.jpg
  pixabay.com
 ```
+
+\fi
 
 Znečišťující látky se v kontaminované oblasti rozkládají tak, že za den se samovolně rozloží 
 $8\%$ aktuálního znečištění. Kromě toho pracovníci odstraňují látky rychlostí $30$
@@ -87,9 +95,13 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 ### Populace jelenů
 
+\iffalse
+
 ```{figure} deer.jpg
  pixabay.com, autor Free-Photos
 ```
+
+\fi
 
 Populace jelenů v národním parku přibývá rychlostí 10\% za
 rok. Správa parku každý rok odebere 50 jedinců. Napište
@@ -121,9 +133,13 @@ $$\dv {y}{t}=ky(M-y).$$
 
 ### Ropná skvrna
 
+\iffalse
+
 ```{figure} olej.jpg
  pixabay.com
 ```
+
+\fi
 
 Kruhová ropná skvrna na hladině se rozšiřuje tak, že její poloměr jako
 funkce času roste rychlostí, která je nepřímo úměrná druhé mocnině
@@ -153,9 +169,13 @@ $$\dv {L}{t}=k (L_{\max}-L).$$
 
 ### Tloušťka ledu
 
+\iffalse
+
 ```{figure} ledni_medved.jpg
  pixabay.com
 ```
+
+\fi
 
 Takzvaný Stefanův zákon (J. Stefan, Uber die Theorie der Eisbildung, insbesondere uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
 stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
@@ -183,9 +203,13 @@ $$
 
 https://youtu.be/K08zq2cC0DM
 
+\iffalse
+
 ```{figure} voda_plastovky.jpg
  Zdroj: www.rodovystatek.cz
 ```
+
+\fi
 
 Z fyziky je známo, že rychlost s jakou
 vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
@@ -233,9 +257,13 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
 https://youtu.be/FAatA34JeEo
 
+\iffalse
+
 ```{figure} voda_plastovky.jpg
  Zdroj: www.rodovystatek.cz
 ```
+
+\fi
 
 Dříve jsme odvodili rovnici
 $$\dv {h}{t}=-k\sqrt h$$

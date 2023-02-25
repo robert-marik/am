@@ -13,6 +13,12 @@ sed -i 's/sphinxShadowBox/comment/' python.tex
 sed -i 's/sphinxtheindex/comment/' python.tex
 sed -i 's/documentclass\[/documentclass[twocolumn,/' python.tex
 
+sed -i 's/\\chapter{Parciální derivace}/\\part{Cvičení}\\input cviceni_definice.tex\n\\chapter{Parciální derivace}/' python.tex
+sed -i 's/\\chapter{Derivace funkce více proměnných}/\\part{Přednášky}\\input prednasky_definice.tex\n\\chapter{Derivace funkce více proměnných}/' python.tex
+
+sed -i 's/\\def\\sphinxdocclass{report}/\\def\\sphinxdocclass{book}/' python.tex
+
+
 sed -z -i 's/\\sphinxAtStartPar\n\\textbackslash{}iffalse/\\iffalse/g' python.tex
 sed -z -i 's/\\sphinxAtStartPar\n\\textbackslash{}fi/\\fi/g' python.tex
 
@@ -35,7 +41,7 @@ sed -i 's/\\usepackage{unicode-math}//' python.tex
 
 vlna python.tex
 
-sed -i "s/title{Python}/title{Matematika}/" python.tex
+sed -i "s/title{Python}/title{Aplikovaná matematika}/" python.tex
 sed -i 's/Corollary/Důsledek/' python.tex
 sed -i 's/Theorem/Věta/' python.tex
 sed -i 's/Remark/Poznámka/' python.tex
@@ -48,7 +54,7 @@ xelatex python
 xelatex python
 
 cd -
-cp $directory/python.pdf Matematika.pdf
+cp $directory/python.pdf Aplikovana_matematika.pdf
 
 #echo "Pro upload na server spustit nasledujici prikaz"
 #echo "scp Dynamicke_modely_populaci_text.pdf cornus.mendelu.cz:html/dmp/"

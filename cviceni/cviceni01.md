@@ -48,9 +48,13 @@ ww:problems/parcialni_derivace/parcialni_derivace_druheho_radu.pg
 
 https://youtu.be/VdtIj5TGBZE
 
+\iffalse
+
 ```{figure} blizzard.jpg
  Zdroj: pixabay.com
 ```
+
+\fi
 
 Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento odjakživa známý efekt byl v roce 2001 proměřen a původní vzorec z roku 1961 byl nahrazen vzorcem 
 $$
@@ -95,9 +99,13 @@ pocitové teploty přibližně o $0.16$ stupně.
 
 https://youtu.be/J0pTAxDwZj8
 
+\iffalse
+
 ```{figure} air-temperature.jpg
  
 ```
+
+\fi
 
 Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minulého příkladu pomocí výše uvedeného vzorce, ale má tabulku jako je na obrázku. Nám tato tabulka poslouží jako model funkce dvou proměnných zadané funkčními hodnotami v konečném počtu bodů. 
 

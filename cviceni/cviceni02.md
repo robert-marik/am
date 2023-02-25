@@ -2,7 +2,7 @@
 
 ```{admonition} Anotace.
 * V úvodu si osaháme gradient a jeho využití k lineární aproximaci a jeho vztah k vrstevnicím.
-* Komplexnější je příklad číslo 5. Ukazuje mimo jiné, že někdy je výhodnější řešit úlohu v rámci obecnější teorie. 
+* Komplexnější je pátý příklad. Ukazuje mimo jiné, že někdy je výhodnější řešit úlohu v rámci obecnější teorie. 
 * V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku. Tato linearizace je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
 * Poslední příklad nás zavede do světa zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
 ```
@@ -11,9 +11,13 @@
 
 https://youtu.be/NFymct4-4jQ
 
+\iffalse
+
 ```{figure} blizzard.jpg
  Zdroj: pixabay.com
 ```
+
+\fi
 
 Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
 $$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
@@ -179,9 +183,13 @@ ww:problems/gradient/08.pg
 
 https://youtu.be/mNKV8TUgY8Q
 
+\iffalse
+
 ```{figure} anatomicke_smery_dreva.png
  Zdroj: Wood handbook
 ```
+
+\fi
 
 Vypočtěte gradient funkce $$T=10-\sqrt{x^2+y^2}$$ definující teplotu ve dvourozměrném materiálu. Ukažte, že vrstevnice
 této funkce jsou kružnice se středem v počátku, nakreslete obrázek s

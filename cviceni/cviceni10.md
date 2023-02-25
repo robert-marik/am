@@ -14,9 +14,13 @@ K cvičení je k dispozici [Jupyter zápisník s numerickými simulacemi](http:/
 
 https://youtu.be/5gOGLPv8BeU
 
+\iffalse
+
 ```{figure} pokros.jpg
  Zdroj: vlastní
 ```
+
+\fi
 
 Hromada sypkého
 materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný
@@ -55,9 +59,13 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 https://youtu.be/yAHdtic9b18
 
+\iffalse
+
 ```{figure} kost.jpg
  pixabay.com
 ```
+
+\fi
 
 Kolagen je klíčový protein pojivových tkání. Jeden z kroků při syntéze
 kolagenu spočívá v reakci tří molekul propeptidu kolagenu, zkráceně
@@ -88,9 +96,13 @@ https://youtu.be/Rd_5KC2iFtE
 
 ### Jelen a los
 
+\iffalse
+
 ```{figure} moose.jpg
  Jelen a los
 ```
+
+\fi
 
 Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu. 
 
@@ -130,9 +142,13 @@ $$
 
 ### Puštík obecný
 
+\iffalse
+
 ```{figure} pustik.jpg
  wikimedia
 ```
+
+\fi
 
 Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.
 
@@ -162,9 +178,13 @@ $$
 
 ### Kůň Převalského
 
+\iffalse
+
 ```{figure} prevalski.jpg
  Kůň Převalského
 ```
+
+\fi
 
 Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tyto koně loveni vlky. Napište matematický model založený na následujících předpokladech.
 

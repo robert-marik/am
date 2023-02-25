@@ -335,18 +335,19 @@ V některých případech člen charakterizující zdroje nemusí být nulový.
 \fi
 
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.
-$$\rho c\frac{\partial T}{\partial t}=\nabla \cdot (k\nabla T)\tag{***}$$
+
+$$\rho c\frac{\partial T}{\partial t}=\nabla \cdot (k\nabla T)$$ (3-*)
 
 ### Stacionární stav
 
-Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (***) se redukuje na 
+Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice {eq}`3-*` se redukuje na 
 $$\nabla \cdot (k\nabla T)=0.$$
 
 ### Homogenní izotropní materiál a lineární materiálové vztahy
 
 Nejjednodušší tvar má rovnice vedení tepla v prostředí, které je homogenní a izotropní (má ve všech místech a ve všech směrech stejné vlastnosti). Veličina $k$ je v takovém případě skalární veličina (reálná konstanta).
 
-Podle pravidla derivace konstantního násobku se rovnice vedení tepla (***)  v takovém případě redukuje na  
+Podle pravidla derivace konstantního násobku se rovnice vedení tepla {eq}`3-*`  v takovém případě redukuje na  
 $$\rho c\frac{\partial T}{\partial t}=k\nabla \cdot (\nabla T)$$
 a ve složkách
 $$\rho c\frac{\partial T}{\partial t}=k\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
@@ -363,13 +364,13 @@ $$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\part
 Dvourozměrný ortotropní materiál má dva charakteristické směry související s rovinami symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
 směru vlastních vektorů.
 
-Veličina $k$ je v takovém případě diagonální matice. Pro $$k=\begin{pmatrix}k_x & 0\\ 0& k_y\end{pmatrix}$$ je tvar rovnice (***) ve složkách
+Veličina $k$ je v takovém případě diagonální matice. Pro $$k=\begin{pmatrix}k_x & 0\\ 0& k_y\end{pmatrix}$$ je tvar rovnice {eq}`3-*` ve složkách
 $$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(k_x\frac{\partial T}{\partial x}\right)+\frac{\partial }{\partial y}\left(k_y\frac{\partial T}{\partial y}\right).$$
 
 ### Homogenní ortotropní materiál a lineární materiálové vztahy
 
 Takový materiál má dva charakteristické směry související s rovinami symetrie (ortotropní) a materiálové charakteristiky jsou ve všech místech stejné a nezávislé na $T$ (homogenní a lineární).
-Situace je stejná jako předchozí případ, ale $k_x$ a $k_y$ jsou navíc konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
+Situace je stejná jako předchozí případ, ale $k_x$ a $k_y$ jsou navíc konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice {eq}`3-*` redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=k_x\frac{\partial^2 T}{\partial x^2}+k_y\frac{\partial^2 T}{\partial y^2}.$$
 
 ## Voda v porézním materiálu 

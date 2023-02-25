@@ -1,24 +1,26 @@
 # Diferenciální rovnice 
 
-> Anotace.
->
-> * V přednášce se seznámíme s rovnicemi, obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
-> * Typickým příkladem je radioaktivita, protože množství rozpadlých atomů je dáno množstvím nestabilních atomů. Aplikace potom můžeme najít například při ochraně budov před radioaktivním radonem.
-> * Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu. 
-> * Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně se mění podle intenzity toku a ta se mění s teplotním rozdílem. 
-> * Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.
-> * Důležité dovednosti, které se naučíme v souvislosti s diferenciálními
->   rovnicemi, jsou zejména 
->      * schopnost naformulovat diferenciální rovnici podle slovního popisu
->        mechanismu modelovaného děje, 
->      * dovednost posoudit existenci a jednoznačnost řešení, 
->      * dovednost snížit transformací počet parametrů rovnice 
->      * a až v poslední řadě najít řešení numericky nebo analytickou cestou.
+```{admonition} Anotace.
 
-> Prerekvizity.
->
-> * Diferenciální rovnice souvisí s derivacemi. Pro úspěšné rozhodnutí, zda se úloha dá modelovat pomocí diferenciální rovnice nutně potřebujeme spolehlivě znát využití derivace. V podstatě s jistotou všude tam, kde se mluví o rychlostech, ale aplikace jsou i jinde. 
-> * Pro nalezení analytického řešení diferenciální je třeba ovládat integrál funkce jedné proměnné.
+* V přednášce se seznámíme s rovnicemi, obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
+* Typickým příkladem je radioaktivita, protože množství rozpadlých atomů je dáno množstvím nestabilních atomů. Aplikace potom můžeme najít například při ochraně budov před radioaktivním radonem.
+* Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu. 
+* Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně se mění podle intenzity toku a ta se mění s teplotním rozdílem. 
+* Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.
+* Důležité dovednosti, které se naučíme v souvislosti s diferenciálními
+   rovnicemi, jsou zejména 
+      * schopnost naformulovat diferenciální rovnici podle slovního popisu
+        mechanismu modelovaného děje, 
+      * dovednost posoudit existenci a jednoznačnost řešení, 
+      * dovednost snížit transformací počet parametrů rovnice 
+      * a až v poslední řadě najít řešení numericky nebo analytickou cestou.
+```
+
+```{admonition} Prerekvizity.
+
+* Diferenciální rovnice souvisí s derivacemi. Pro úspěšné rozhodnutí, zda se úloha dá modelovat pomocí diferenciální rovnice nutně potřebujeme spolehlivě znát využití derivace. V podstatě s jistotou všude tam, kde se mluví o rychlostech, ale aplikace jsou i jinde. 
+* Pro nalezení analytického řešení diferenciální je třeba ovládat integrál funkce jedné proměnné.
+```
 
 ## Modely založené na rychlostech (derivacích)
 
@@ -266,14 +268,18 @@ modelovaného děje.
 :nonumber:
  *Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
 k derivaci* (stručněji též diferenciální rovnicí, DR) s neznámou $y$
-rozumíme rovnici tvaru $$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) \tag{1}$$ kde $\varphi$ je funkce
+rozumíme rovnici tvaru 
+
+$$ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) $$ (08-1)
+
+kde $\varphi$ je funkce
 dvou proměnných.
 ```
 
 
 (anglicky ordinary differential equation, ODE)
 
-**Další formy zápisu** rovnice (1) jsou
+**Další formy zápisu** rovnice {eq}`08-1` jsou
   $$y'=\varphi(x,y),$$
   $${\mathrm{d}y}=\varphi(x,y)\mathrm{d}x,$$
   $${\mathrm{d}y}-\varphi(x,y)\mathrm{d}x=0.$$
@@ -288,9 +294,11 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 :nonumber:
  Nechť $x_0$, $y_0$ jsou reálná čísla. Úloha najít
 řešení rovnice  
-$$  \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y), \tag{1}$$
+$$  \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y),$$
 které splňuje zadanou *počáteční podmínku*
-$$  y(x_0)=y_0 \tag{2}$$
+
+$$  y(x_0)=y_0 $$ (08-2)
+
 se nazývá *počáteční* (též *Cauchyova*) *úloha*. 
 
 Řešení Cauchyovy úlohy nazýváme též *partikulárním řešením
@@ -305,17 +313,24 @@ křivka*.
 
 ```{prf:theorem} existence a jednoznačnost řešení Cauchyovy úlohy
 :nonumber:
- Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha (1)-(2) právě jedno řešení definované v nějakém okolí počáteční podmínky.
+ Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha {eq}`08-1`-{eq}`08-2` právě jedno řešení definované v nějakém okolí počáteční podmínky.
 ```
 
 
-**Příklad.** Rovnice $$y'=y\tag{3}$$ má řešení $y=e^x$, což nahlédneme
-  snadno, protože exponenciální funkce se nemění
-  derivováním. Dosazením je možné ukázat, že má dokonce řešení
-  $$y=Ce^x,\tag{4}$$ kde $C$ je libovolné číslo.
+**Příklad.** Rovnice 
 
-**Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení (4) a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je
-  $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec (4) popisuje dokonce **všechna** řešení rovnice (3).
+$$y'=y$$ (08-3)
+
+má řešení $y=e^x$, což nahlédneme
+snadno, protože exponenciální funkce se nemění
+derivováním. Dosazením je možné ukázat, že má dokonce řešení
+  
+$$y=Ce^x,$$ (08-4)
+
+kde $C$ je libovolné číslo.
+
+**Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení {eq}`08-4` a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je
+  $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec {eq}`08-4` popisuje dokonce **všechna** řešení rovnice {eq}`08-3`.
 
 ### Obecné a partikulární řešení
 
@@ -478,19 +493,25 @@ Výše uvedené výpočty je možno shrnout do pravidla v následující poznám
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
 
-**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
+**Příklad.** Diferenciální rovnice tepelné výměny 
+
+$$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0$$ (08-*)
+
+obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
 vydělit konstantou $k$
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{k\mathrm dt}=-\frac{T-T_\infty}{T_0-T_\infty}$$
 a přeškálovat pomocí konstanty $k$ čas
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm d(kt)}=-\frac{T-T_\infty}{T_0-T_\infty}.$$
 Po substituci $y=\frac{T-T_\infty}{T_0-T_\infty}$, $x=kt$ má úloha tvar
-$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1. \tag{**}$$
+
+$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (08-**)
+
 Nová rovnice (**) *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
-rovnici (*). Tuto informaci je však nutno interpretovat v kontextu
-definice nových proměnných. Například to, že všechna řešení rovnice (**) konvergují k nule
-znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řešení rovnice (**) klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice (*) od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
+rovnici {eq}`08-*`. Tuto informaci je však nutno interpretovat v kontextu
+definice nových proměnných. Například to, že všechna řešení rovnice {eq}`08-*` konvergují k nule
+znamená, že všechna řešení rovnice {eq}`08-*` konvergují k $T_0$. To, že řešení rovnice {eq}`08-**` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`08-*` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
 ```{prf:remark} nondimenzinalizace, rozměrová analýza
 :nonumber:
@@ -652,7 +673,7 @@ Najít řešení obecné diferenciální rovnice je nemožné, ani však takové
 ```{prf:definition} ODE se separovanými proměnnými
 :nonumber:
  Diferenciální rovnice tvaru
-$$    \frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y) \tag{S}$$
+$$    \frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y)$$ 
 kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
 se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 ```

@@ -18,7 +18,7 @@
 
 -->
 
-## Úmluva
+```{admonition} Úmluva
 
 V celé přednášce budeme jako nezávislou proměnnou uvažovat čas
 $t$. Autonomní znamená v tomto kontextu nezávislý na čase. Budeme
@@ -27,6 +27,7 @@ které mají dostatečně pěkná data na to, aby byla zaručena
 jednoznačnost řešení. To je například, pokud funkce na pravé straně
 rovnice má ohraničené parciální derivace, což bude v níže uvedených
 příkladech vždy splněno.
+```
 
 ## Autonomní diferenciální rovnice
 

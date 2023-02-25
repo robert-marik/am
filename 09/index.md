@@ -1,19 +1,21 @@
 # Lineární operátory a lineární diferenciální rovnice
 
-> Anotace.
->
-> * Pasáže o lineární diferenciální rovnici prvního řádu jsou omezeny na rovnici s konstantními koeficienty. Rovnicím s nekonstantními koeficienty se nevěnujte. V tomto textu nejsou pokryty, nebudou ve cvičeních, nebudou v domácích úlohách ani písemkách. Pokud na ně narazíte při počítání starších písemek, nevěnujte se jim. Tato úprava souvisí s tím, že se více věnujeme aplikačnímu potenciálu než se tak činilo v letech minulých.
-> * Řešením lineární rovnice $y=ax+b$ je přímka a k jejímu zadání stačí jediný bod a jediný směr. Ukážeme si, že podobná tvrzení platí i pro celou řadu dalších rovnic, včetně diferenciálních rovnic a soustav diferenciálních rovnic.
-> * Výstupem bude dovednost popsat u některých speciálních rovnic množinu řešení tak, že nalezneme dva nebo více relativně jednoduše nalezitelné objekty a pomocí nich sestavíme všechna řešení. Podobně jako dokážeme z jednoho bodu a směru zrekonstruovat všechny body přímky.
-> * Naučíme se posoudit, jak se chovají řešení diferenciálních rovnic, kde pravá strana je lineární. Toto se později využije tak, že pomocí těchto rovnic budeme aproximovat obecnější nelineární modely.
-> * Pokud vám jde o to, pochopit proč výpočty fungují tak jak fungují, projděte si všechny materiály. Pokud máte ambice nižší, můžete se věnovat jenom pasáži "Lineární diferenciální rovnice prvního řádu s konstantními koeficienty" a k ostatním pasážím se vrátit, jakmile je budete potřebovat (pokud vůbec). Důležité pasáže jsou poptávány ve WeBWorKových úlohách a problematika toho, jak se chovají řešení nelineárních systémů, je lineárním systémům nadřazena a bude součástí příští přednášky. Pokud budete ovládat nelineární systémy, lineární systémy se dají chápat jako jejich podmnožina.
+```{admonition} Anotace.
 
-> Prerekvizity.
->
-> * Co se týká využitých metod studia lineárních operátorů, je přednáška relativně nezávislá. Nemá v tomto ohledu žádné prerekvizity. 
-> * Užitečnost linearity si ukážeme na příkladech diferenciálních rovnic několika typů. Proto je vhodné si zopakovat význam derivace, využití derivace v modelech založených a na diferenciálních rovnicích a interpretaci členů difuzní rovnice. 
-> * Lineární systémy je vhodné zapisovat a studovat maticově. Budeme proto potřebovat maticový součin, maticovou formulaci soustavy lineárních rovnic, nutnou a postačující podmínku jednoznačné řešitelnosti této soustavy pomocí determinantu. 
-> * Studentům obeznámeným s komplexními čísly se bude hodit Eulerova identita. Ostatní studenti budou muset příslušné pasáže akceptovat jako fakt.
+* Pasáže o lineární diferenciální rovnici prvního řádu jsou omezeny na rovnici s konstantními koeficienty. Rovnicím s nekonstantními koeficienty se nevěnujte. V tomto textu nejsou pokryty, nebudou ve cvičeních, nebudou v domácích úlohách ani písemkách. Pokud na ně narazíte při počítání starších písemek, nevěnujte se jim. Tato úprava souvisí s tím, že se více věnujeme aplikačnímu potenciálu než se tak činilo v letech minulých.
+* Řešením lineární rovnice $y=ax+b$ je přímka a k jejímu zadání stačí jediný bod a jediný směr. Ukážeme si, že podobná tvrzení platí i pro celou řadu dalších rovnic, včetně diferenciálních rovnic a soustav diferenciálních rovnic.
+* Výstupem bude dovednost popsat u některých speciálních rovnic množinu řešení tak, že nalezneme dva nebo více relativně jednoduše nalezitelné objekty a pomocí nich sestavíme všechna řešení. Podobně jako dokážeme z jednoho bodu a směru zrekonstruovat všechny body přímky.
+* Naučíme se posoudit, jak se chovají řešení diferenciálních rovnic, kde pravá strana je lineární. Toto se později využije tak, že pomocí těchto rovnic budeme aproximovat obecnější nelineární modely.
+* Pokud vám jde o to, pochopit proč výpočty fungují tak jak fungují, projděte si všechny materiály. Pokud máte ambice nižší, můžete se věnovat jenom pasáži "Lineární diferenciální rovnice prvního řádu s konstantními koeficienty" a k ostatním pasážím se vrátit, jakmile je budete potřebovat (pokud vůbec). Důležité pasáže jsou poptávány ve WeBWorKových úlohách a problematika toho, jak se chovají řešení nelineárních systémů, je lineárním systémům nadřazena a bude součástí příští přednášky. Pokud budete ovládat nelineární systémy, lineární systémy se dají chápat jako jejich podmnožina.
+```
+
+```{admonition} Prerekvizity.
+
+* Co se týká využitých metod studia lineárních operátorů, je přednáška relativně nezávislá. Nemá v tomto ohledu žádné prerekvizity. 
+* Užitečnost linearity si ukážeme na příkladech diferenciálních rovnic několika typů. Proto je vhodné si zopakovat význam derivace, využití derivace v modelech založených a na diferenciálních rovnicích a interpretaci členů difuzní rovnice. 
+* Lineární systémy je vhodné zapisovat a studovat maticově. Budeme proto potřebovat maticový součin, maticovou formulaci soustavy lineárních rovnic, nutnou a postačující podmínku jednoznačné řešitelnosti této soustavy pomocí determinantu. 
+* Studentům obeznámeným s komplexními čísly se bude hodit Eulerova identita. Ostatní studenti budou muset příslušné pasáže akceptovat jako fakt.
+```
 
 ## Lineární operátory
 

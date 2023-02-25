@@ -513,7 +513,9 @@ $$F=\rho g\iint _M y \,\mathrm d x\mathrm dy.$$
 Využijeme-li vzorec pro $y$-ovou souřadnici těžiště, má výsledný vztah tvar
 $$F=\rho g y_0 S,$$
 kde $S$ je obsah hráze. Formálně tento vztah odpovídá vzorci
-$$F=p_0 S,\tag{H1}\label{H1}$$
+
+$$F=p_0 S,$$ (06-H1)
+
 kde $p_0=\rho g y_0$ je tlak v těžišti. *Proto v praxi stačí znát těžiště
 hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak
 v těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
@@ -528,7 +530,7 @@ i s kartézskými souřadnicemi pootočíme okolo osy procházející
 hladinou, hloubka všech bodů se sníží faktorem $\sin \alpha$, kde
 $\alpha$ je úhel mezi vodorovnou hladinou a rovinou hráze. Formálně
 tato operace dopadne stejně, jako kdybychom tekutinu nahradili tekutinou
-s hustotou $\sin\alpha$-krát nižší. Protože však vztah $\eqref{H1}$
+s hustotou $\sin\alpha$-krát nižší. Protože však vztah {eq}`06-H1`
 nezávisí na hustotě, nic se na něm nezmění. Také zobecnění na několik rovin
 je snadné. Zobecnění na zakřivenou plochu je náročnější a vyžaduje
 jiný typ integrálu.

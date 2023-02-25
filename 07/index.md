@@ -1,15 +1,17 @@
 # Základní integrální věty z vektorové analýzy
 
-> Anotace.
->
-> * V přednášce se seznámíme s nástrojem, který umožňuje předvádět mezi sebou křivkové a dvojné integrály. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
-> * Dále se seznámíme s vektorovou obdobou Newtonovy-Leibnizovy věty. Naučíme se počítat křivkový integrál druhého druhu pomocí rozdílu potenciálu v koncových bodech. Tato možnost není k dispozici automaticky (pouze pro vektorová pole s nulovou rotací, pro která existuje kmenová funkce), ale pokud je možné touto cestou jít, bývá to velké ulehčení.
+```{admonition} Anotace.
 
-> Prerekvizity.
->
-> * Křivkový integrál převádíme na dvojný integrál. Je proto dobré ovládat výpočet dvojného integrálu.
-> * Pro pochopení odvození rovnice kontinuity v integrálním tvaru je nutné znát význam dvojného integrálu hustoty a umět pomocí křivkového integrálu vypočítat tok.
-> * Dostaneme se jinou cestou ke stejné rovnici, kterou jsme poznali dříve jako difuzní rovnici. Je vhodné si ujasnit fyzikální význam jednotlivých členů této rovnice a jak se ve speciálních případech tyto členy mohou redukovat na členy jednodušší (izotropní materiál, homogenní materiál, materiál s lineárními vlastnostmi, stacionární děj, proces bez zdrojů).
+* V přednášce se seznámíme s nástrojem, který umožňuje předvádět mezi sebou křivkové a dvojné integrály. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+* Dále se seznámíme s vektorovou obdobou Newtonovy-Leibnizovy věty. Naučíme se počítat křivkový integrál druhého druhu pomocí rozdílu potenciálu v koncových bodech. Tato možnost není k dispozici automaticky (pouze pro vektorová pole s nulovou rotací, pro která existuje kmenová funkce), ale pokud je možné touto cestou jít, bývá to velké ulehčení.
+```
+
+```{admonition} Prerekvizity.
+
+* Křivkový integrál převádíme na dvojný integrál. Je proto dobré ovládat výpočet dvojného integrálu.
+* Pro pochopení odvození rovnice kontinuity v integrálním tvaru je nutné znát význam dvojného integrálu hustoty a umět pomocí křivkového integrálu vypočítat tok.
+* Dostaneme se jinou cestou ke stejné rovnici, kterou jsme poznali dříve jako difuzní rovnici. Je vhodné si ujasnit fyzikální význam jednotlivých členů této rovnice a jak se ve speciálních případech tyto členy mohou redukovat na členy jednodušší (izotropní materiál, homogenní materiál, materiál s lineárními vlastnostmi, stacionární děj, proces bez zdrojů).
+```
 
 ## Úvod 
 

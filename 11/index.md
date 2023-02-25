@@ -1,12 +1,13 @@
 # Lineární diferenciální rovnice druhého řádu
 
-> Anotace.
->
-> * Lineární diferenciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
-> * Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělesa a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 
-> * Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.
-> * [Numerické experimenty](https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html) s rovnicí.
-> * Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neurčitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu případně až v poslední fázi. 
+```{admonitions} Anotace.
+
+* Lineární diferenciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
+* Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělesa a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 
+* Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.
+* [Numerické experimenty](https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html) s rovnicí.
+ Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neurčitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu případně až v poslední fázi. 
+```
 
 ## Lineární diferenciální rovnice druhého řádu
 

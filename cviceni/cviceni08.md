@@ -12,7 +12,9 @@ https://youtu.be/QckWe55HikI
 
 ### Model růstu úměrného velikosti chybějícího množství
 
-![pixabay.com](mladata.jpg)
+```{figure} mladata.jpg
+ pixabay.com
+```
 
 Mnoho
 živočichů roste tak, že mohou dorůstat jisté maximální délky a
@@ -37,7 +39,9 @@ Konstanta $k$ vyjadřuje rychlost s jakou roste délka při jednotkovém rozdíl
 
 ### Kontaminace a čištění
 
-![pixabay.com](kontaminace.jpg)
+```{figure} kontaminace.jpg
+ pixabay.com
+```
 
 Znečišťující látky se v kontaminované oblasti rozkládají tak, že za den se samovolně rozloží 
 $8\%$ aktuálního znečištění. Kromě toho pracovníci odstraňují látky rychlostí $30$
@@ -83,7 +87,9 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 ### Populace jelenů
 
-![pixabay.com, autor Free-Photos](deer.jpg)
+```{figure} deer.jpg
+ pixabay.com, autor Free-Photos
+```
 
 Populace jelenů v národním parku přibývá rychlostí 10\% za
 rok. Správa parku každý rok odebere 50 jedinců. Napište
@@ -115,7 +121,9 @@ $$\dv {y}{t}=ky(M-y).$$
 
 ### Ropná skvrna
 
-![pixabay.com](olej.jpg)
+```{figure} olej.jpg
+ pixabay.com
+```
 
 Kruhová ropná skvrna na hladině se rozšiřuje tak, že její poloměr jako
 funkce času roste rychlostí, která je nepřímo úměrná druhé mocnině
@@ -145,7 +153,9 @@ $$\dv {L}{t}=k (L_{\max}-L).$$
 
 ### Tloušťka ledu
 
-![pixabay.com](ledni_medved.jpg)
+```{figure} ledni_medved.jpg
+ pixabay.com
+```
 
 Takzvaný Stefanův zákon (J. Stefan, Uber die Theorie der Eisbildung, insbesondere uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
 stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
@@ -173,7 +183,9 @@ $$
 
 https://youtu.be/K08zq2cC0DM
 
-![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
+```{figure} voda_plastovky.jpg
+ Zdroj: www.rodovystatek.cz
+```
 
 Z fyziky je známo, že rychlost s jakou
 vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
@@ -221,7 +233,9 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
 https://youtu.be/FAatA34JeEo
 
-![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
+```{figure} voda_plastovky.jpg
+ Zdroj: www.rodovystatek.cz
+```
 
 Dříve jsme odvodili rovnici
 $$\dv {h}{t}=-k\sqrt h$$

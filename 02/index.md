@@ -21,7 +21,9 @@
 
 \iffalse
 
-![Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevně rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material.](vrstevnice_drevo.png)
+```{figure} vrstevnice_drevo.png
+ Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevně rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material.
+```
 
 \fi
 
@@ -81,7 +83,9 @@ Význam a postavení gardientu ilustruje následující příklad, který je pot
 
 \iffalse
 
-![Gradient je kolmý na vrstevnice](gradient.svg)
+```{figure} gradient.svg
+ Gradient je kolmý na vrstevnice
+```
 
 \fi
 
@@ -109,9 +113,13 @@ https://youtu.be/Mpb4EAdIPPM
 
 <div class='obtekat'>
 
-![U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů nebo tuku, nebo znát trik na snížení teplotního gradientu. Například ptáci se v zimě umí proměnit v načepýřené koule. Zdroj: pixabay.com](ptacek.jpg)
+```{figure} ptacek.jpg
+ U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů nebo tuku, nebo znát trik na snížení teplotního gradientu. Například ptáci se v zimě umí proměnit v načepýřené koule. Zdroj: pixabay.com
+```
 
-![Hydroizohypsy. Křivky spojující místa se stejnou výškou podzemní vody.  Zdroj: Principles of GW Flow https://web.viu.ca/earle/geol304/geol-304-c.pdf](flow.png)
+```{figure} flow.png
+ Hydroizohypsy. Křivky spojující místa se stejnou výškou podzemní vody.  Zdroj: Principles of GW Flow https://web.viu.ca/earle/geol304/geol-304-c.pdf
+```
 
 </div>
 
@@ -199,7 +207,9 @@ Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 
 <div class='obtekat'>
 
-![Vodárna [Káraný](http://www.vodarnakarany.cz/) infiltruje vodu do podzemí. Pro funkci je nezbytná znalost toho, co se tam s vodou děje a kudy a jak teče. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová](karany.jpg)
+```{figure} karany.jpg
+ Vodárna [Káraný](http://www.vodarnakarany.cz/) infiltruje vodu do podzemí. Pro funkci je nezbytná znalost toho, co se tam s vodou děje a kudy a jak teče. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová
+```
 
 </div>
 
@@ -213,7 +223,9 @@ V letech 1855 a 1856 francouzský inženýr H. Darcy pokusy prokázal přímou 
 
 <div class='obtekat'>
 
-![Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rozhrani.png)
+```{figure} rozhrani.png
+ Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
 </div>
 
@@ -280,7 +292,9 @@ Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k tran
 
 <div class='obtekat'>
 
-![Všechny zde uvedené konstitutivní zákony mají stejný charakter. Proto můžeme vedení tepla znázorňovat stejně jako vedení elektrického proudu.  Zdroj: pixabay.com, T_Tide.](elektricky_obvod.jpg)
+```{figure} elektricky_obvod.jpg
+ Všechny zde uvedené konstitutivní zákony mají stejný charakter. Proto můžeme vedení tepla znázorňovat stejně jako vedení elektrického proudu.  Zdroj: pixabay.com, T_Tide.
+```
 
 </div>
 
@@ -298,7 +312,9 @@ https://youtu.be/vrPhbc-GJqc
 
 <div class='obtekat'>
 
-![Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rezistory.png)
+```{figure} rezistory.png
+ Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
 </div>
 
@@ -336,7 +352,9 @@ což zjistíme prostým maticovým násobením. Prostor pro další úpravu nen�
 
 <div class='obtekat'>
 
-![Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com](lepenka.jpg)
+```{figure} lepenka.jpg
+ Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -390,7 +408,9 @@ https://youtu.be/tc8pmUNyhhI
 
 <div class="obtekat">
 
-![Tečna k vrstevnici](tecna.png)	
+```{figure} tecna.png
+ Tečna k vrstevnici
+```	
 
 </div>
 
@@ -412,7 +432,9 @@ V řezu vodorovnou rovinou $z=0$ z grafu funkce a z tečné roviny zůstanou vrs
 
 <div class='obtekat'>
 
-![Tečna k vrstevnici](implicitni_3.png) 
+```{figure} implicitni_3.png
+ Tečna k vrstevnici
+``` 
 
 </div>
 
@@ -436,7 +458,9 @@ $$f(x,y)=0$$ v okolí bodu $(x_0, y_0)$ implicitně určena
 
 <div class='obtekat'>
 
-![V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu](extrem_2.png) 
+```{figure} extrem_2.png
+ V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu
+``` 
 
 </div>
 
@@ -463,7 +487,9 @@ je nulová.
 
 \iffalse
 
-![Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.](beer-mugs-deformace.jpg)
+```{figure} beer-mugs-deformace.jpg
+ Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.
+```
 
 \fi
 
@@ -500,7 +526,9 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 <div class='obtekat'>
 
-![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+```{figure} ../falcon.jpg
+ Ještě pohled s trochou nadhledu. Zdroj: pixabay.com
+```
 
 </div>
 

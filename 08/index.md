@@ -32,7 +32,9 @@ https://youtu.be/08uAuAgY-lw
 
 <div class='obtekat'>
 
-![Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,  https://pixabay.com](hot.jpg)
+```{figure} hot.jpg
+ Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,  https://pixabay.com
+```
 
 </div>
 
@@ -59,7 +61,9 @@ https://youtu.be/08uAuAgY-lw
 
 <div class='obtekat'>
 
-![Model úbytku rychlostí úměrnou množství modeluje radioaktivní rozpad. V České republice nás zajímá radioaktivní rozpad například z hlediska nežádoucího hromadění radonu v obytných budovách. Zdroj: pixabay.com, rabedirkwennigsen](nuclear-waste.jpg)
+```{figure} nuclear-waste.jpg
+ Model úbytku rychlostí úměrnou množství modeluje radioaktivní rozpad. V České republice nás zajímá radioaktivní rozpad například z hlediska nežádoucího hromadění radonu v obytných budovách. Zdroj: pixabay.com, rabedirkwennigsen
+```
 
 </div>
 \fi
@@ -91,7 +95,9 @@ https://youtu.be/08uAuAgY-lw
 
 <div class='obtekat'>
 
-![Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot  je úměrná míře znečištění.  https://pixabay.com](voda.jpg)
+```{figure} voda.jpg
+ Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot  je úměrná míře znečištění.  https://pixabay.com
+```
 
 </div>
 
@@ -132,7 +138,9 @@ https://youtu.be/08uAuAgY-lw
 
 <div class='obtekat'>
 
-![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com](chirurg.jpg)
+```{figure} chirurg.jpg
+ Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com
+```
 
 </div>
 
@@ -176,10 +184,14 @@ https://youtu.be/08uAuAgY-lw
 <div class='obtekat'>
 
 <!--
-![RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$  Zdroj: Wikipedia](RC_circuit.png)
+```{figure} RC_circuit.png
+ RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$  Zdroj: Wikipedia
+```
  -->
 
-![Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
+```{figure} RC_circuit_drevostavba.jpg
+ Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)
+```
 
 </div>
 
@@ -201,7 +213,9 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 <div class='obtekat'>
 
-![Při intenzivním lovu může dojít ke zničení populace  https://pixabay.com](kralik.jpg)
+```{figure} kralik.jpg
+ Při intenzivním lovu může dojít ke zničení populace  https://pixabay.com
+```
 
 </div>
 
@@ -230,7 +244,9 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 <div class='obtekat'>
 
-![Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/](benesov.jpeg)
+```{figure} benesov.jpeg
+ Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/
+```
 
 </div>
 
@@ -367,7 +383,9 @@ https://youtu.be/7tm1QbNDiz8
 
 <div class='obtekat'>
 
-![Směrové pole diferenciální rovnice, integrální křivky, isokliny](smerove_pole_2.png)
+```{figure} smerove_pole_2.png
+ Směrové pole diferenciální rovnice, integrální křivky, isokliny
+```
 
 </div>
 
@@ -400,9 +418,13 @@ manim:Diference|r_Ae2mGnfFs|Numerické řešení diferenciální ronvice je zpra
 
 <div class='obtekat'>
 
-![Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
+```{figure} euler.png
+ Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.
+```
 
-![Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.](rk.png)
+```{figure} rk.png
+ Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.
+```
 
 </div>
 
@@ -459,7 +481,9 @@ manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parame
 
 <div class='obtekat'>
 
-![Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://youtu.be/BK5uwnVCeCw?t=2156) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 3706 dokumentu jsou "tým techniků odhaduje nejvyšší možnou reálnou rychlost sesuvu půdy na jednu minutu, kterou pro simulaci přepočítají na čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.](Vajont.jpg)
+```{figure} Vajont.jpg
+ Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://youtu.be/BK5uwnVCeCw?t=2156) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 3706 dokumentu jsou "tým techniků odhaduje nejvyšší možnou reálnou rychlost sesuvu půdy na jednu minutu, kterou pro simulaci přepočítají na čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.
+```
 
 </div>
 
@@ -527,7 +551,9 @@ V této úloze bylo zavedení nových veličin přirozené. I u méně zřejmýc
 
 <div class='obtekat'>
 
-![Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.](patriot.jpg)
+```{figure} patriot.jpg
+ Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.
+```
 
 </div>
 
@@ -621,7 +647,9 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z monotonie 
 
 <div class='obtekat'>
 
-![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
+```{figure} trolejbus.jpg
+ Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.
+```
 
 </div>
 
@@ -780,7 +808,9 @@ Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi je
 
 <div class='obtekat'>
 
-![Radiální proudění směrem k čerpanému vrtu. Zdroj: http://ecoursesonline.iasri.res.in.](well.png)
+```{figure} well.png
+ Radiální proudění směrem k čerpanému vrtu. Zdroj: http://ecoursesonline.iasri.res.in.
+```
 
 </div>
 
@@ -821,7 +851,9 @@ https://youtu.be/gJoOmF39rbw
 
 <div class='obtekat'>
 
-![Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.](london.jpg)
+```{figure} london.jpg
+ Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.
+```
 
 </div>
 

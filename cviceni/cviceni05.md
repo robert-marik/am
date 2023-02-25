@@ -66,6 +66,7 @@ a integrál má tvar
 $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=\qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
 $$
 
+
 ```{figure} priklad_5_1_prace.png
 Zdroj: vlastní
 ```
@@ -164,7 +165,9 @@ ww:problems/krivkovy_integral/10.pg
 
 https://youtu.be/nqbi-7hwcD4
 
-![Zdroj: vlastní](priklad_5_4.png)
+```{figure} priklad_5_4.png
+ Zdroj: vlastní
+```
 
 Vypočtěte tok vektorového pole $$\vec \Phi_1=(x+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
 
@@ -194,7 +197,9 @@ kde poslední Riemannův integrál není nutné počítat, protože integrál z 
 
 ## Tok vektorového pole uzavřenou křivkou II
 
-![Zdroj: vlastní](priklad_5_5.png)
+```{figure} priklad_5_5.png
+ Zdroj: vlastní
+```
 
 Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
 

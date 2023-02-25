@@ -38,7 +38,9 @@ Radon je po kouření druhou nejčastější přinou rakoviny plic.
 
 https://youtu.be/26EwlUHLqUc
 
-![V případě malého rizika stačí izolace proti radonu jako na obrázku. V oblastech s vyšším rizikem je nutná sofistikovanější ochrana. Zdroj: https://www.estav.cz/cz/5599.ochrana-proti-pronikani-radonu-do-objektu-protiradonova-izolace](radon.jpg)
+```{figure} radon.jpg
+ V případě malého rizika stačí izolace proti radonu jako na obrázku. V oblastech s vyšším rizikem je nutná sofistikovanější ochrana. Zdroj: https://www.estav.cz/cz/5599.ochrana-proti-pronikani-radonu-do-objektu-protiradonova-izolace
+```
 
 V zemích s přirozenou radioaktivitou je nebezpečím radon. Na rozdíl od ostatních radioaktivních prvků je plynný a může prostupovat do budov, kde se hromadí zejména v nižších patrech, protože má poměrně velkou hustotu. 
 
@@ -81,7 +83,9 @@ $$y=\frac {q}{k+d} - Ke^{-(k+d)t}.$$
 
 https://youtu.be/DvHpllR2zLg
 
-![Zdroj: vlastní](trolejbus.jpg)
+```{figure} trolejbus.jpg
+ Zdroj: vlastní
+```
 
 Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
 $x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
@@ -163,9 +167,13 @@ přijede několik trolejbusů těsně za sebou.
 
 https://youtu.be/XlUuxd3Ws10
 
-![Pásová brzda v provedení pro majitele jachet. Zdroj: https://www.sailspar.co.uk/yacht-products/scott-boomlock/](boomlock-shot.jpg)
+```{figure} boomlock-shot.jpg
+ Pásová brzda v provedení pro majitele jachet. Zdroj: https://www.sailspar.co.uk/yacht-products/scott-boomlock/
+```
 
-![Nechtěný princip pásové brzdy v tomto případě znesnadňuje ovládání rolety. Zdroj: wikipedia, autor: Laelele](example_no_knowledge_of_capstan_equation.png)
+```{figure} example_no_knowledge_of_capstan_equation.png
+ Nechtěný princip pásové brzdy v tomto případě znesnadňuje ovládání rolety. Zdroj: wikipedia, autor: Laelele
+```
 
 Lano je částečně obtočeno okolo dřevěného kůlu.  Fyzikální rozbor ukazuje, že třecí sílou mezi lanem a kůlem se mění tah $T$ v laně a tím je způsobeno to, že tah na jednom konci lana se přes kůl sníží a na druhém konci lana pociťujeme tah menší. Je tak možno omotáním okolo kůlu o vhodný úhel vyrovnat s malým úsilím i působení velkých sil. Tah ve vlákně je funkcí úhlu $\theta$ udávajícího míru obtočení a splňuje diferenciální rovnici $$\frac{\mathrm dT}{\mathrm d\theta}=\mu T,$$ kde $\mu$ je součinitel smykového tření mezi lanem a kůlem a úhel měříme ve směru rostoucího tahu.
 
@@ -206,7 +214,9 @@ Následující příklad je z knihy _Uri Alon, An introduction to systems biolog
 
 https://youtu.be/NH2A3ycWezc
 
-![V chemických procesech probíhajících v živých organizmech je jistá setrvačnost a pro životaschopnost organismů je nutné udržovat rovnováhu důležitých enzymů a dalších látek. Trošku by to mohlo připomínat vytápění krbem, kde není zapínání a vypínání tak pružné, jako u plynového kotle a proto je potřeba mít pro řízení teploty vhodný plán. V případě buněk takový plán vyvinula evoluce. Zdroj: pixabay.com, autor joseclaudioguima](room-1706801_960_720.jpg)
+```{figure} room-1706801_960_720.jpg
+ V chemických procesech probíhajících v živých organizmech je jistá setrvačnost a pro životaschopnost organismů je nutné udržovat rovnováhu důležitých enzymů a dalších látek. Trošku by to mohlo připomínat vytápění krbem, kde není zapínání a vypínání tak pružné, jako u plynového kotle a proto je potřeba mít pro řízení teploty vhodný plán. V případě buněk takový plán vyvinula evoluce. Zdroj: pixabay.com, autor joseclaudioguima
+```
 
 Pro jednoduchost si naformulujeme problematiku pro jednoduše představitelný případ regulace teploty v místnosti. Podobné mechanismy se však dlouhodobou evolucí vyvinuly a optimalizovaly i v buňkách a fungují tedy v tělech rostlin a živočichů. 
 

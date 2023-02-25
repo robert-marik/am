@@ -37,7 +37,9 @@ https://youtu.be/DYySq6o6WTk
 
 <div class='obtekat'>
 
-![Deska s nekonstantní plošnou hustotou. Zdroj:  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0](table.jpg)
+```{figure} table.jpg
+ Deska s nekonstantní plošnou hustotou. Zdroj:  https://www.flickr.com/photos/svacher, licence CC BY-NC-ND  2.0
+```
 
 </div>
 
@@ -59,7 +61,9 @@ https://youtu.be/DYySq6o6WTk
 
 <div class='obtekat'>
 
-![Nádrž s proměnnou hloubkou. Zdroj: https://www.pixabay.com](lake.jpg)
+```{figure} lake.jpg
+ Nádrž s proměnnou hloubkou. Zdroj: https://www.pixabay.com
+```
 
 </div>
 
@@ -78,7 +82,9 @@ https://youtu.be/DYySq6o6WTk
 
 <div class='obtekat'>
 
-![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji  než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com](pipe.jpg)
+```{figure} pipe.jpg
+ Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji  než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com
+```
 
 </div>
 
@@ -104,7 +110,9 @@ https://youtu.be/tPf-7dZ4Il0
 
 \iffalse
 
-![](dvojny_integral.png)
+```{figure} dvojny_integral.png
+ 
+```
 
 \fi
 
@@ -161,7 +169,9 @@ Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jed
 
 <div class='obtekat'>
 
-![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
+```{figure} fub_1.png
+ Oblast mezi funkcemi proměnné $x$.
+```
 
 </div>
 
@@ -188,7 +198,9 @@ $$
 ### Výpočet (oblast mezi funkcemi proměnné $y$)
 
 <div class='obtekat'>
-![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
+```{figure} fub_2.png
+ Oblast mezi funkcemi proměnné $y$.
+```
 
 </div>
 
@@ -213,7 +225,9 @@ $$
 
 <div class='obtekat'>
 
-![Oblast, pro kterou jsou možná obě pořadí integrace.](fub_4.png)
+```{figure} fub_4.png
+ Oblast, pro kterou jsou možná obě pořadí integrace.
+```
 
 </div>
 
@@ -242,7 +256,9 @@ Všimněte si, že nestačí prosté prohození integrálů. Je nutno přepočí
 https://youtu.be/o38mi3tTAvw
 
 <div class='obtekat'>
-![Integrál přes obdélník.](fub_3.png)
+```{figure} fub_3.png
+ Integrál přes obdélník.
+```
 
 </div>
 
@@ -287,7 +303,9 @@ https://youtu.be/8YS2Fn8st5I
 
 <div class='obtekat'>
 
-![Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic. Zdroj: https://www.pixabay.com](fuji.jpg)
+```{figure} fuji.jpg
+ Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic. Zdroj: https://www.pixabay.com
+```
 
 </div>
 
@@ -333,9 +351,13 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 <div class='obtekat'>
 
-![Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR [realizována 2011](https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico). Zdroj: https://www.taus.eu](I-nosniky.jpg)
+```{figure} I-nosniky.jpg
+ Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR [realizována 2011](https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico). Zdroj: https://www.taus.eu
+```
 
-![Větrné turbíny jsou konstruovány podobně jako I nosníky, pevný materiál na vnějších stranách a materiál s menší pevností uvnitř. Například balzové dřevo. A podobně jsou "konstruovány" například listy rostlin. Zdroj: pixabay.com, tpsdave](vetrna_turbina.jpg)
+```{figure} vetrna_turbina.jpg
+ Větrné turbíny jsou konstruovány podobně jako I nosníky, pevný materiál na vnějších stranách a materiál s menší pevností uvnitř. Například balzové dřevo. A podobně jsou "konstruovány" například listy rostlin. Zdroj: pixabay.com, tpsdave
+```
 
 </div>
 
@@ -368,9 +390,13 @@ manimp:beam|Odvození ohybové rovnice nosníku.
 
 <div class='obtekat'>
 
-![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com](beam.jpg)
+```{figure} beam.jpg
+ Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com
+```
 
-![Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník](vanocni_strom.jpg)
+```{figure} vanocni_strom.jpg
+ Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník
+```
 
 </div>
 
@@ -484,7 +510,9 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 
 <div class='obtekat'>
 
-![Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.](bobri.jpeg)
+```{figure} bobri.jpeg
+ Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.
+```
 
 </div>
 
@@ -614,9 +642,13 @@ určíme vzdálenost $r$ bodu od počátku soustavy souřadnic $O$ a úhel
 $\varphi$, který svírá spojnice bodů $O$ a $A$ s kladnou částí osy
 $x$.
 
+<div class='obtekat'>
 
-![Polární souřadnice.](polarni_souradnice.png)
+```{figure} polarni_souradnice.png
+ Polární souřadnice.
+```
 
+</div>
 
 ### Množiny s jednoduchým vyjádřením v polárních souřadnicích
 
@@ -645,7 +677,9 @@ množiny jsou zobrazeny na následujících obrázcích.
 
 <div class='obtekat'>
 
-![Element plochy v polárních souřadnicích](jakobian.png)
+```{figure} jakobian.png
+ Element plochy v polárních souřadnicích
+```
 
 </div>
 
@@ -681,7 +715,9 @@ zpravidla jednodušší.
 
 <div class='obtekat'>
 
-![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+```{figure} ../falcon.jpg
+ Ještě pohled s trochou nadhledu. Zdroj: pixabay.com
+```
 
 </div>
 

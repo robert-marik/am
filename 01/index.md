@@ -1,20 +1,25 @@
 # Derivace funkce více proměnných
 
-<!-- 
-> Anotace.
->
->  \iffalse <div class='obtekat'> ![Důležitou aplikací parciálních derivací je formulace rovnic matematické fyziky. Rovnice vedení tepla je mezi rovnicemi matematické fyziky jedou z nejdůležitějších.](chata.jpg) </div> \fi
->
-> * Naučíme se sledovat rychlost, s jakou se mění veličina, která je objektem našeho zájmu. 
-> * U veličin závisejících na několika parametrech budeme schopni sledovat reakci těchto veličin na změny parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou. 
-> * Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme *rovnici vedení tepla*. Rovnice vedení tepla je jednou z nejdůležitějších rovnic matematické fyziky. Jedná se o matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice správně vystihují realitu.
+````{admonition} Anotace
 
-> Prerekvizity.
->
-> * Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména je nutné si připomenout definici, využití a výpočet derivace.
-> * Zopakujte si fyzikální (praktický) význam derivace a pro osahání si konkrétních příkladů také základní metody výpočtu.
+ \iffalse
+ 
+ ```{figure} chata.jpg
+ Důležitou aplikací parciálních derivací je formulace rovnic matematické fyziky. Rovnice vedení tepla je mezi rovnicemi matematické fyziky jedou z nejdůležitějších.
+```
 
--->
+\fi
+
+* Naučíme se sledovat rychlost, s jakou se mění veličina, která je objektem našeho zájmu. 
+* U veličin závisejících na několika parametrech budeme schopni sledovat reakci těchto veličin na změny parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou. 
+* Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme *rovnici vedení tepla*. Rovnice vedení tepla je jednou z nejdůležitějších rovnic matematické fyziky. Jedná se o matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice správně vystihují realitu.
+````
+
+```{admonition} Prerekvizity
+* Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména je nutné si připomenout definici, využití a výpočet derivace.
+* Zopakujte si fyzikální (praktický) význam derivace a pro osahání si konkrétních příkladů také základní metody výpočtu.
+```
+
 
 ## Funkce jedné proměnné
 
@@ -24,7 +29,9 @@ https://youtu.be/zhaebxHbqhs
 
 <div class='obtekat'>
 
-![2d graf funkce jedné proměnné.](2D_graf.png)
+```{figure} 2D_graf.png
+ 2d graf funkce jedné proměnné.
+```
 
 </div>
 
@@ -56,13 +63,14 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 Derivace derivace je rychlost s jakou se mění rychlost změny a nazývá se druhá derivace. Je označována nejčastěji některým z následujících způsobů. $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y.$$
 
-```{prf:remark} Newtonův zákon tepelné výměny
+````{prf:remark} Newtonův zákon tepelné výměny
 :nonumber:
- ![Sobi karibu
-v polárních krajích nepotřebují sněhule a přesto jim není zima. Jak to dělají?
-Minimalizují teplotní rozdíl mezi svým krevním oběhem a povrchem, po němž
-chodí. Mají v nohách zabudovaný protiproudý tepelný výměník. Tím minimalizují teplotní ztráty. Podle
-<https://twitter.com/fuseknowledge/status/1215796937657479168>](karibu.jpeg)
+ 
+ ```{figure} karibu.jpeg 
+ 
+ Sobi karibu v polárních krajích nepotřebují sněhule a přesto jim není zima. Jak to dělají? Minimalizují teplotní rozdíl mezi svým krevním oběhem a povrchem, po němž chodí. Mají v nohách zabudovaný protiproudý tepelný výměník. Tím minimalizují teplotní ztráty. Podle <https://twitter.com/fuseknowledge/status/1215796937657479168>
+ ```
+ 
 Je-li $T(t)$ teplota tělesa v čase $t$, je
 $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj.
 rychlost s jakou roste teplota. Například pro čas v minutách a teplotu ve
@@ -78,7 +86,7 @@ V reálných dějích však konstantní rychlosti vídáme zřídka. Například
 Tento model se naučíme časem vyřešit, to však není to nejdůlěžitější. Obrovským úspěchem je již to, že *s derivacemi dostala věda nástroj umožňující kvantitativně pracovat s okamžitou rychlostí změny libovolné veličiny*. Derivace umožňují vymanit se z omezení používaných ve středoškolské fyzice, která se týká zpravidla velmi specifických podmínek, a věnovat se popisu reálného světa. 
 
 Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů a pomocí rovnic s derivacemi je modelována naprostá většina fyzikálních procesů, existují propracované nástroje pro řešení těchto rovnic na počítači. Z pedagogických důvodů si však může kdokoliv daný matematický model naskriptovat tak, že předpokládá časové skoky, v jejichž rámci je rychlost neměnná a změny veličin jsou počítat běžnými operacemi násobení a sčítání. Například [Sage](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==) je založen na široce rozšířeném jazyce Python, případně [Octave](https://sagecell.sagemath.org/?z=eJwtj81qwzAQhO8CvcNeAlKTFLtQCDY59g18Kz2o1oYK_ayR1wbn6SvZEQjEzsy3I8twh-a97aGeE1gM3oDP5Bcpdq2z3H00fRVX9EwZZhjNTOsWHTyTGb2J7gLeIvwuFiPCRKNjw8A4BSqYoWCemGlWs3uiYq0P2sYrZUzuxV1gynSEeCsp1eoSvB2rZzaZaTWjgz-yidgUR1P0vVp1HEED5Ck4Kfz-r8-XOJlsInKuLgwJy_KIaQMppDjB1xJKvdVAsZA1Zfoo33T3tktLxKAGfW2lqKRBufNeqzw0nMEyvIEvVw3Ntc50LwUmW7m1juLLoKXYgovquwGXHj_6H6tibEk=&lang=octave&interacts=eJyLjgUAARUAuQ==) jako opensource alternativa programu Matlab.
-```
+````
 
 
 ```{prf:remark} lineární aproximace, materiálové vztahy
@@ -95,11 +103,13 @@ Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů
 
 \iffalse
 
-```{prf:remark} pohybová rovnice
+````{prf:remark} pohybová rovnice
 :nonumber:
-![Při pádu kočky z okna je kritická výška sedmého patra. Čím je toto patro speciální?](kocka.jpeg) 
+```{figure} kocka.jpeg
+ Při pádu kočky z okna je kritická výška sedmého patra. Čím je toto patro speciální?
+``` 
 Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde $F$ je výsledná síla působící na objekt. *Objevení této zákonitosti byl obrovský skok v poznání.* Newton zjistil, že síla souvisí se zrychlením (tedy s časovou změnou rychlosti, v dnešní terminologii s  derivací rychlosti podle času nebo /ekvivalentně/ s druhou derivací polohy podle času). Dříve lidé měli za to, že síla souvisí s rychlostí pohybu (v dnešní terminologii tedy s derivací polohy podle času). To ale byla špatná představa, takto příroda nefunguje. Newton ukázal, jaká je správná cesta a dokázal své myšlenky tím, že pohybové zákony planet, které byly známé z vyhodnocení astronomických pozorování (Mikuláš Kopernik), odvodil ryze matematickou cestou. Pohybová rovnice funguje stejně pro planety jako pro objekty na Zemi a umí vysvětlit i zřejmé i méně zřejmé efekty. Například v práci [Problém ohnuté kolejnice a kouzlo numerické matematiky.](https://www.dml.cz/handle/10338.dmlcz/147070) je rovnice použita k vysvětlení toho, proč je při pádu kočky kritická výška sedmého patra. (Podle záznamů newyorských lékařů je při pádu kočky z výšky sedmého patra největší pravděpodobnost úmrtí. Vyšší nebo nižší patro kočka "zvládá" lépe a případná zraněnní nejsou tak závažná. Více v uvedeném odkaze.)
-```
+````
 
 
 \fi
@@ -108,7 +118,9 @@ Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je $\frac{\math
 
 <div class='obtekat'>
 
-![3d graf funkce dvou proměnných](3D_graf_b.png)
+```{figure} 3D_graf_b.png
+ 3d graf funkce dvou proměnných
+```
 
 </div>
 
@@ -128,7 +140,9 @@ místě (jedna až tři prostorové proměnné). Už pro základní fyzikální
 
 <div class='obtekat'>
 
-![Kvalita života ve městech souvisí s hospodařením s teplem a tzv. tepelnými ostrovy. Zdroj: pixabay.com](park.jpg)
+```{figure} park.jpg
+ Kvalita života ve městech souvisí s hospodařením s teplem a tzv. tepelnými ostrovy. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -217,7 +231,9 @@ https://youtu.be/UE_nkyDe7bw
 
 \iffalse 
 
-![Brzdy v autě musí absorbovat kinetickou energii, která je lineární funkcí hmotnosti a kvadratickou funkcí rychlosti. Zdroj: pixabay.com](car.jpg)
+```{figure} car.jpg
+ Brzdy v autě musí absorbovat kinetickou energii, která je lineární funkcí hmotnosti a kvadratickou funkcí rychlosti. Zdroj: pixabay.com
+```
 
 \fi
 
@@ -258,7 +274,9 @@ https://youtu.be/lk-LRBKth3Q
 
 <div class='obtekat'>
 
-![Energie potřebná pro překonání pevné vzdálenosti závisí na hmotnosti jedince a na rychlosti, kterou vyvíjí. Zdroj: pixabay.com](lizard.jpg)
+```{figure} lizard.jpg
+ Energie potřebná pro překonání pevné vzdálenosti závisí na hmotnosti jedince a na rychlosti, kterou vyvíjí. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -284,7 +302,9 @@ ww:problems/parcialni_derivace/povrch_tela.pg
 
 <div class='obtekat'>
 
-![Máme pro ochranu želv chránit vajíčka a malé želvičky, nebo dospělé jedince? Parciální derivace dokážou tuto problematiku rozlousknout. Zdroj: wikimedia.org, Brocken Inaglory ](zelva.jpg)
+```{figure} zelva.jpg
+ Máme pro ochranu želv chránit vajíčka a malé želvičky, nebo dospělé jedince? Parciální derivace dokážou tuto problematiku rozlousknout. Zdroj: wikimedia.org, Brocken Inaglory 
+```
 
 </div>
 
@@ -337,9 +357,13 @@ manim:Heat|1tbe5YUvoqg|Rovnice vedení tepla. Animace jak se chová teplo při j
 
 <div class='obtekat'>
 
-![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například tok tepla oknem nebo stěnou domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
+```{figure} domek.png
+ Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například tok tepla oknem nebo stěnou domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
-![Ukázka možné vizualizace výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle je čas a barva označuje teplotu. Dole je počáteční stav, kdy je podél celé tyče nulová teplota. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh ukazující, jak v jednotlivých bodech roste teplota, získáme řešením rovnice vedení tepla. Rozložení teploty v tyči pro vybrané časy získáme na vodorovných řezech v obrázku. Časový vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
+```{figure} octave.png
+ Ukázka možné vizualizace výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle je čas a barva označuje teplotu. Dole je počáteční stav, kdy je podél celé tyče nulová teplota. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh ukazující, jak v jednotlivých bodech roste teplota, získáme řešením rovnice vedení tepla. Rozložení teploty v tyči pro vybrané časy získáme na vodorovných řezech v obrázku. Časový vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.
+```
 
 </div>
 
@@ -406,7 +430,9 @@ ve které figuruje druhá derivace podle polohy.
 
 <div class='obtekat'>
 
-![Příklad ondatry, která se jako invazivní druh rychle rozšířila z dobříšského panství do celé Evropy, bývá tradičně součástí naprosté většiny učebnic ekologie. Modelování invaze je velice podobné modelování vedení tepla nebo libovolného jiného transportního děje. Foto: rawpixel.com.](ondatra.jpg)
+```{figure} ondatra.jpg
+ Příklad ondatry, která se jako invazivní druh rychle rozšířila z dobříšského panství do celé Evropy, bývá tradičně součástí naprosté většiny učebnic ekologie. Modelování invaze je velice podobné modelování vedení tepla nebo libovolného jiného transportního děje. Foto: rawpixel.com.
+```
 
 </div>
 
@@ -430,7 +456,9 @@ https://youtu.be/iGohx4i95FI
 
 <div class='obtekat'>
 
-![V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.](diference.png)
+```{figure} diference.png
+ V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.
+```
 
 </div>
 
@@ -465,9 +493,9 @@ Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciá
 
 ww:problems/parcialni_derivace/centralni_diference.pg
 
-<div class="shorten" data-text="Konečné diference je možné použít k převedení parciální diferenciální rovnice (úloha v počítači obtížně řešitelná) na soustavu lineárních rovnic (úloha snadno řešitelná na počítačích).">
-
 ### Diskretizace diferenciálních rovnic pomocí konečných diferencí
+
+<div class="shorten" data-text="Konečné diference je možné použít k převedení parciální diferenciální rovnice (úloha v počítači obtížně řešitelná) na soustavu lineárních rovnic (úloha snadno řešitelná na počítačích).">
 
 Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a ani v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximaci derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jaké jsou zhruba požadavky na výpočetní prostředky.
 
@@ -480,6 +508,7 @@ Po převedení derivací z rovnice vedení tepla $$\rho c\frac{\partial T}{\part
 Ještě existuje metoda založená na zpětné diferenci v čase namísto dopředné, tj. $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$ a odsud $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$ Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči. Tedy v prakticky využitelných úlohách počty rovnic a proměnných začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích než při explicitní metodě. Programová realizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) Tento přístup se nazývá [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
 ```
 
+</div>
 
 <!--
 
@@ -603,7 +632,9 @@ https://youtu.be/owfHzLBonRA
 
 <div class='obtekat'>
 
-![Názvosloví a terminologie jsou nejnudnější pasáže. Prolétneme je pro rychlé seznámení a můžeme se se vrátit, kdykoliv bude potřeba. Zdroj: pixabay.com, chudamay](bored_cat.jpg)
+```{figure} bored_cat.jpg
+ Názvosloví a terminologie jsou nejnudnější pasáže. Prolétneme je pro rychlé seznámení a můžeme se se vrátit, kdykoliv bude potřeba. Zdroj: pixabay.com, chudamay
+```
 
 </div>
 
@@ -671,7 +702,9 @@ V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq\mathbb{E}
 
 <div class='obtekat'>
 
-![Spojitost dokáže potrápit i u funkce jedné proměnné. Například Weistrassova funkce je spojitá, ale její graf není možné nakreslit ani jedním tahem, ani nijak jinak. To rozhodně jde proti intuitivnímu chápání spojitosti ze střední školy či běžného života. Zdroj: pixabay.com](epmty.jpg)
+```{figure} epmty.jpg
+ Spojitost dokáže potrápit i u funkce jedné proměnné. Například Weistrassova funkce je spojitá, ale její graf není možné nakreslit ani jedním tahem, ani nijak jinak. To rozhodně jde proti intuitivnímu chápání spojitosti ze střední školy či běžného života. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -715,7 +748,9 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 
 <div class='obtekat'>
 
-![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+```{figure} ../falcon.jpg
+ Ještě pohled s trochou nadhledu. Zdroj: pixabay.com
+```
 
 </div>
 

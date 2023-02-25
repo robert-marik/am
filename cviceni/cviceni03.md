@@ -49,7 +49,9 @@ https://youtu.be/zwYPRlEIrHI
 
 https://youtu.be/U9_0wbKT_2I
 
-![Zdroj: pixabay.com](drevo_textura.jpg)
+```{figure} drevo_textura.jpg
+ Zdroj: pixabay.com
+```
 
 Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycené v určitém okamžiku termokamerou je popsána rovnicí
   $$T(x,y)=(2x-y)^2+x^4.$$

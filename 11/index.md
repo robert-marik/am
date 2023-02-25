@@ -43,9 +43,13 @@ kde $y_0$ a $y'_0$ jsou reálná čísla, se nazývá *počáteční úloha*
 
 <div class='obtekat'>
 
-![Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com](pruzina.jpg)
+```{figure} pruzina.jpg
+ Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com
+```
 
-![Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE](kmity_stromu.png)
+```{figure} kmity_stromu.png
+ Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE
+```
 </div>
 
 \fi
@@ -313,9 +317,7 @@ Rovnici $$y''+py'+qy=0$$ je možno přepsat na
 $$(y')^\prime=-qy-py'$$
 a tato rovnice je po substituci
 $x_1=y$, $x_2=y'$ ekvivalentní autonomnímu systému
-$$\begin{pmatrix}x_1\\x_2\end{pmatrix}'=\begin{pmatrix}0 &1\\ -q &-p\end{pmatrix}
-\begin{pmatrix}x_1\\x_2\end{pmatrix}
-$$
+$$\begin{pmatrix}x_1\\x_2\end{pmatrix}'=\begin{pmatrix}0 &1\\ -q &-p\end{pmatrix} \begin{pmatrix}x_1\\x_2\end{pmatrix} $$
 
 U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matice soustavy, která je obsažena v následující definici.
 
@@ -325,7 +327,6 @@ U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matic
 $$z^2+pz+q=0$$ s neznámou $z$ se nazývá *charakteristická rovnice*
 pro rovnici $$y''+py'+qy=0.$$
 ```
-
 
 ```{prf:theorem} o obecném řešení LDE s konstantními koeficienty
 :nonumber:
@@ -457,7 +458,9 @@ má vlastní čísla $\lambda=k\pi$, kde $k$ je kladné celé číslo.
 
 <div class='obtekat'>
 
-![Kmitání jednorozměrných objektů je popsáno lineární diferenciální rovnicí druhého řádu. Zdroj: pixabay.com](housle.jpg)
+```{figure} housle.jpg
+ Kmitání jednorozměrných objektů je popsáno lineární diferenciální rovnicí druhého řádu. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -482,7 +485,9 @@ jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je mož
 
 \iffalse
 
-![Nosníky, ať už samostatné vzpěry, nebo součásti příhradových konstrukcí, je nutné posuzovat i z hlediska axiálního namáhání. Ignorování tohoto způsobu namáhání vedlo v 19. století k pádu několika příhradových železničních mostů a následnému stržení řady [chybně dimenzovaných mostů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures). Zdroj: pixabay.com](vzpera.jpg)
+```{figure} vzpera.jpg
+ Nosníky, ať už samostatné vzpěry, nebo součásti příhradových konstrukcí, je nutné posuzovat i z hlediska axiálního namáhání. Ignorování tohoto způsobu namáhání vedlo v 19. století k pádu několika příhradových železničních mostů a následnému stržení řady [chybně dimenzovaných mostů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures). Zdroj: pixabay.com
+```
 
 \fi
 
@@ -508,7 +513,9 @@ Toto je pro daný nosník kritická síla a ta je pro daný materiál nepřímo 
 
 <div class='obtekat'>
 
-![Array mbira - [hudební nástroj](https://www.youtube.com/watch?v=5fAAGheYTFA) se smíšenou okrajovou úlohou](array_mbira.jpg) 
+```{figure} array_mbira.jpg
+ Array mbira - [hudební nástroj](https://www.youtube.com/watch?v=5fAAGheYTFA) se smíšenou okrajovou úlohou
+``` 
 
 </div>
 

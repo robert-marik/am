@@ -102,7 +102,9 @@ https://youtu.be/ev3eFilaGpw
 
 <div class="obtekat">
 
-![Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka, která odrazí od břehu kolmo, stáčí po proudu.](tok.png)
+```{figure} tok.png
+ Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka, která odrazí od břehu kolmo, stáčí po proudu.
+```
 
 </div>
 
@@ -120,7 +122,9 @@ $$\nabla \times (\vec F+\vec G)=\nabla \times \vec F +\nabla \times \vec G, \qqu
 ```
 
 
-<!-- ![Nevírové pole](nevirove.svg)	 -->
+<!-- ```{figure} nevirove.svg
+ Nevírové pole
+```	 -->
 
 ## Rotace významných polí
 
@@ -235,13 +239,21 @@ Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a
 
 <div class='sloupce'>
 
-![Radiální tok. Nestačí jenom směr. Rychlost musí ubývat přesnou mocninou, aby proudění mělo potenciál.](stream0.png)
+```{figure} stream0.png
+ Radiální tok. Nestačí jenom směr. Rychlost musí ubývat přesnou mocninou, aby proudění mělo potenciál.
+```
 
-![Tok po kružnicích. Nestačí jenom směr. Rychlost musí ubývat přesnou mocninou, aby proudění mělo potenciál.](stream1.png)
+```{figure} stream1.png
+ Tok po kružnicích. Nestačí jenom směr. Rychlost musí ubývat přesnou mocninou, aby proudění mělo potenciál.
+```
 
-![Homogenní tok](stream2.png)
+```{figure} stream2.png
+ Homogenní tok
+```
 
-![V případě, že toky můžeme charakterizovat rychlostním potenciálem (tj. bezvírové proudění nestlačitelné dokonale tekuté kapaliny), je snadné je sčítat. To se využívá například při studiu obtékání těles.](stream3.png)
+```{figure} stream3.png
+ V případě, že toky můžeme charakterizovat rychlostním potenciálem (tj. bezvírové proudění nestlačitelné dokonale tekuté kapaliny), je snadné je sčítat. To se využívá například při studiu obtékání těles.
+```
 
 </div>
 
@@ -282,7 +294,9 @@ označovaný **zákon šíření chyb**.
 
 <div class='obtekat'>
 
-![Pocitová teplota v zimě závisí na skutečné teplotě a na síle větru. Zdroj: pixabay.com](zima.jpg)
+```{figure} zima.jpg
+ Pocitová teplota v zimě závisí na skutečné teplotě a na síle větru. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -586,7 +600,9 @@ Z předchozího plyne
 Tedy gradient v daném bodě je kolmý na vrstevnici procházející tímto
 bodem.
 
-![Gradient je kolmý k vrstevnicím](../derivace/gradient.svg)
+```{figure} ../derivace/gradient.svg
+ Gradient je kolmý k vrstevnicím
+```
 
 </div>
 
@@ -607,7 +623,9 @@ tj. $f(x_0,y_0)=C$.
   tj.
   $$ 0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0),$$
 
-![Tečna k vrstevnici](implicitni_1.png) 
+```{figure} implicitni_1.png
+ Tečna k vrstevnici
+``` 
 
 <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>
 
@@ -629,7 +647,9 @@ tj. $f(x_0,y_0)=C$.
   pokud definujeme $g(x,y)=f(x,y)-C$, potom je možno rovnici
   vrstevnice funkce $f$ na úrovni $C$ přepsat do tvaru $$g(x,y)=0. $$
 
-![Tečna k vrstevnici](implicitni_2.png) 
+```{figure} implicitni_2.png
+ Tečna k vrstevnici
+``` 
 
 </div>
 
@@ -652,7 +672,9 @@ tj. $f(x_0,y_0)=C$.
 >      g'(x_0)=-\frac{\frac{\partial f}{\partial x}(x_0, y_0)}{\frac{\partial f}{\partial y}(x_0, y_0)}.
 >   $$
 
-![Tečna k vrstevnici](implicitni_3.png) 
+```{figure} implicitni_3.png
+ Tečna k vrstevnici
+``` 
 
 </div>
 
@@ -714,7 +736,9 @@ následující věta.
 >  extrém, pak každá parciální derivace, která v tomto bodě existuje,
 >  je nulová.
 
-![Pokud je některá z parciálních derivací nenulová, extrém nenastává](extrem_1.png) 
+```{figure} extrem_1.png
+ Pokud je některá z parciálních derivací nenulová, extrém nenastává
+``` 
 
 </div>
 
@@ -724,9 +748,13 @@ následující věta.
 
 <div class='sloupce'>
 
-![V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu](extrem_2.png) 
+```{figure} extrem_2.png
+ V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu
+``` 
 
-![Nulovost parciálních derivací nemusí stačit k existenci lokálního extrému - funkce může mít sedlový bod](extrem_3.png) 
+```{figure} extrem_3.png
+ Nulovost parciálních derivací nemusí stačit k existenci lokálního extrému - funkce může mít sedlový bod
+``` 
 
 </div>
 
@@ -762,7 +790,9 @@ označovaný **zákon šíření chyb**.
 
 <div class='obtekat'>
 
-![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+```{figure} ../falcon.jpg
+ Ještě pohled s trochou nadhledu. Zdroj: pixabay.com
+```
 
 </div>
 

@@ -50,12 +50,12 @@ Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Naz�
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
   $$\frac{\mathrm dy}{\mathrm dt}=f(y).$$ Toto řešení je stabilní
   pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
-  
+```
+
 ```{prf:remark} stabilita řešení
 :nonumber:
  Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu *stabilitou* stacionárního bodu budeme rozumět, že malá výchylka od stacionárního bodu vede na řešení, které konverguje zpět k tomuto stacionárnímu bodu. Přesněji se tento typ stability jmenuje *asymptotická stabilita*. 
 ```
-
 
 Pro grafickou interpretaci věty je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
@@ -69,7 +69,9 @@ manim:Logistic|NyLkjOTYzVQ|Logistická rovnice s lovem.
 
 <div class='obtekat'>
 
-![Pravá strana k modelu lovu s konstantní intenzitou.](logisticka-lov.png)
+```{figure} logisticka-lov.png
+ Pravá strana k modelu lovu s konstantní intenzitou.
+```
 
 </div>
 
@@ -112,9 +114,13 @@ manim:Hawk_and_dove_game|zAzZrIShj9U|Model soupeření dvou povah. Ukazuje, že 
 
 <div class='obtekat'>
 
-![V modelu jestřáb-holubice (hawk-dove) nejde o skutečné živočišné druhy, ale o strategii chování. Předmětem modelu je jestřábí a holubičí povaha u jedinců téhož druhu. Zdroj: pixabay.com](harris-hawk.jpg)
+```{figure} harris-hawk.jpg
+ V modelu jestřáb-holubice (hawk-dove) nejde o skutečné živočišné druhy, ale o strategii chování. Předmětem modelu je jestřábí a holubičí povaha u jedinců téhož druhu. Zdroj: pixabay.com
+```
 
-![Pravá strana modelu v závislosti na hodnotě parametrů.](chovani.png)
+```{figure} chovani.png
+ Pravá strana modelu v závislosti na hodnotě parametrů.
+```
 
 </div>
 
@@ -189,7 +195,9 @@ https://youtu.be/ccWuBp4kies
 
 <div class='obtekat'>
 
-![Funkce z pravé strany rovnice pro teplotní bilanci Země](img_earth_balance_2.png) 
+```{figure} img_earth_balance_2.png
+ Funkce z pravé strany rovnice pro teplotní bilanci Země
+``` 
 
 </div>
 
@@ -206,13 +214,19 @@ manim:Obalec|iFmQWcR_JX4|Model populace pro preddačním tlakem využijeme např
 
 \iffalse
 
-![Model obaleče byl publikován v D. Ludwig, D.D. Jones and C.S. Holling, Qualitative analysis of insect outbreak systems: the spruce budworm and forest, Journal of Animal Ecology 47(1): 315–332, February 1978 a v tomto odstavci je zpracován podle knihy [Brauer, Kribs, Dynamical systems for biological modelling](https://katalog.mendelu.cz/documents/223086?back=https%3A%2F%2Fkatalog.mendelu.cz%2Fsearch%3Ftype%3Dglobal%26q%3DDYNAMICAL%2BSYSTEMS%2BFOR%2BBIOLOGICAL%2BMODELING&group=223086,175427,175821), plný text je pro uživatele MENDELU zdarma. zdroj: Wikimedia.org](obalec.jpg)
+```{figure} obalec.jpg
+ Model obaleče byl publikován v D. Ludwig, D.D. Jones and C.S. Holling, Qualitative analysis of insect outbreak systems: the spruce budworm and forest, Journal of Animal Ecology 47(1): 315–332, February 1978 a v tomto odstavci je zpracován podle knihy [Brauer, Kribs, Dynamical systems for biological modelling](https://katalog.mendelu.cz/documents/223086?back=https%3A%2F%2Fkatalog.mendelu.cz%2Fsearch%3Ftype%3Dglobal%26q%3DDYNAMICAL%2BSYSTEMS%2BFOR%2BBIOLOGICAL%2BMODELING&group=223086,175427,175821), plný text je pro uživatele MENDELU zdarma. zdroj: Wikimedia.org
+```
 
 \fi
 
-![Pravá strana diferenciální rovnice modelu obaleče jako funkce proměnné $y$.](budworm.png)
+```{figure} budworm.png
+ Pravá strana diferenciální rovnice modelu obaleče jako funkce proměnné $y$.
+```
 
-![Křivky udávající znaménko pravé strany diferenciální rovnice z modelu obaleče.](budworm2.png)
+```{figure} budworm2.png
+ Křivky udávající znaménko pravé strany diferenciální rovnice z modelu obaleče.
+```
 
 </div>
 
@@ -296,9 +310,13 @@ od něj.
 
 <div class='obtekat'>
 
-![Bělousova-Žabotinského reakce vytváří periodicky se měnící obrazce. Autor: Stephen Morris, flickr.com](bz-reakce.jpg)
+```{figure} bz-reakce.jpg
+ Bělousova-Žabotinského reakce vytváří periodicky se měnící obrazce. Autor: Stephen Morris, flickr.com
+```
 
-![Fázový portrét brusselátoru. Zdroj: Wikipedia](Bruesselator.png)
+```{figure} Bruesselator.png
+ Fázový portrét brusselátoru. Zdroj: Wikipedia
+```
 
 </div>
 
@@ -335,9 +353,13 @@ Taková rovnice nemá řešení v množině reálných čísel a vlastní čísl
 
 <div class='obtekat'>
 
-![Trajektorie pro stacionární body spojené s reálnými vlastními čísly.](sp_real.png)
+```{figure} sp_real.png
+ Trajektorie pro stacionární body spojené s reálnými vlastními čísly.
+```
 
-![Trajektorie pro stacionární body spojené s nereálnými vlastními čísly.](sp_complex.png)
+```{figure} sp_complex.png
+ Trajektorie pro stacionární body spojené s nereálnými vlastními čísly.
+```
 
 </div>
 

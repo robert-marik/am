@@ -19,9 +19,13 @@ https://youtu.be/n2roVUrXgcw
 
 <div class='obtekat'>
 
-![Křivkový integrál prvního druhu](krivkovy_integral_prvniho_druhu_1.png)
+```{figure} krivkovy_integral_prvniho_druhu_1.png
+ Křivkový integrál prvního druhu
+```
 
-![Křivkový integrál druhého druhu](krivkovy_integral_druheho_druhu_1.png)
+```{figure} krivkovy_integral_druheho_druhu_1.png
+ Křivkový integrál druhého druhu
+```
 
 </div>
 
@@ -35,7 +39,9 @@ https://youtu.be/MRk4HRAWlA4
 
 <div class='obtekat'>
 
-![Dvě různé parametrizace jednotkové kružnice](parametricke_krivky.png)
+```{figure} parametricke_krivky.png
+ Dvě různé parametrizace jednotkové kružnice
+```
 
 </div>
 
@@ -53,7 +59,9 @@ https://youtu.be/ZRed88fgDkI
 
 \iffalse
 
-![Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>](krivkovy_integral_prvniho_druhu_1.png)
+```{figure} krivkovy_integral_prvniho_druhu_1.png
+ Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>
+```
 
 \fi
 
@@ -74,11 +82,10 @@ V limitním procesu můžeme nechat délku  kousíčků konvergovat k nule. Pot�
 
 \iffalse
 
-\def\maxfactor{0.4}
+```{figure} delkovy_element.png
+ Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky
+```
 
-![Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky](delkovy_element.png)
-
-\def\maxfactor{0.6}
 \fi
 
 </div>
@@ -157,13 +164,19 @@ $$
 
 <div class='obtekat'>
 
-![Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
+```{figure} hoop_stress.png
+ Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.
+```
 
 \iffalse 
 
-![Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.](impregnacni_komora.jpg)
+```{figure} impregnacni_komora.jpg
+ Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.
+```
 
-![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
+```{figure} popraskane_trubky.jpg
+ Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.
+```
 
 \fi
 
@@ -198,7 +211,9 @@ https://youtu.be/GeJgtBHy_sM
 
 \iffalse
 
-![Křivkový integrál druhého druhu. Výška plochy je v každém bodě  křivky určena skalárním součinem tečného vektoru jednotkové délky a  vektorem zadaného vektorového  pole.](krivkovy_integral_druheho_druhu_1.png)
+```{figure} krivkovy_integral_druheho_druhu_1.png
+ Křivkový integrál druhého druhu. Výška plochy je v každém bodě  křivky určena skalárním součinem tečného vektoru jednotkové délky a  vektorem zadaného vektorového  pole.
+```
 
 \fi
 
@@ -226,13 +241,14 @@ Protože při pohybu tělesa po křivce jedním směrem se práce koná a při p
 
 <div class="obtekat">
 
-\def\maxfactor{0.4}
+
 \iffalse
 
-![Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky](element_posunuti.png)
+```{figure} element_posunuti.png
+ Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky
+```
 
 \fi
-\def\maxfactor{0.6}
 
 </div>
 
@@ -404,7 +420,9 @@ column-count:3;}
 
 <div class='obtekat'>
 
-![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+```{figure} ../falcon.jpg
+ Ještě pohled s trochou nadhledu. Zdroj: pixabay.com
+```
 
 </div>
 

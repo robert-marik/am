@@ -164,7 +164,9 @@ V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být
 
 https://youtu.be/zvs3TsvBrho
 
-![pixabay.com](chladic.jpg)
+```{figure} chladic.jpg
+ pixabay.com
+```
 
 Někdy jsme nuceni do rovnice vedení tepla zahrnout i zdroje.
 Modelujte vedení tepla jednom v žebru chladiče.

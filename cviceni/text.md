@@ -27,7 +27,9 @@ Vypočtěte následující parciální derivace
 
 </div>
 
-![](blizzard.jpg)
+```{figure} blizzard.jpg
+ 
+```
 
 ### Parciální derivace, pocitová teplota analyticky
 
@@ -64,7 +66,9 @@ pocitové teploty přibližně o $0.16$ stupně.
 
 ### Pocitová teplota numericky
 
-![](air-temperature.jpg)
+```{figure} air-temperature.jpg
+ 
+```
 
 1. Vypočtěte pomocí centrální diference parciální derivaci
 $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost větru $40\,\mathrm{km}\,\mathrm{hod}^{-1}$ a intepretujte výsledek slovně.
@@ -80,7 +84,9 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 
 </div>
 
-![Zdroj: Wood handbook](wood_heat_capacity.png)
+```{figure} wood_heat_capacity.png
+ Zdroj: Wood handbook
+```
 
 ### Parciální derivace, tepelná kapacita dřeva
 
@@ -170,7 +176,9 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u veličiny $T$
 
 ## Gradient
 
-![](blizzard.jpg)
+```{figure} blizzard.jpg
+ 
+```
 
 ### Linearizace pocitové teploty
 
@@ -306,7 +314,9 @@ V bodě $(0,0)$ potom
 
 </div>
 
-![Zdroj: Wood handbook](anatomicke_smery_dreva.png)
+```{figure} anatomicke_smery_dreva.png
+ Zdroj: Wood handbook
+```
 
 ### Parciální derivace, gradient a násobení matic
 
@@ -379,7 +389,9 @@ Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\fra
 
 </div>
 
-![](drevo_textura.jpg)
+```{figure} drevo_textura.jpg
+ 
+```
 
 ### Rovnice vedení tepla v dvourozměrném materiálu
 
@@ -655,7 +667,9 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=
 \qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
 $$
 
-![vlastní](priklad_5_1_prace.png)
+```{figure} priklad_5_1_prace.png
+ vlastní
+```
 
 **Interpretace jako práce, srovnání.**
 
@@ -665,7 +679,9 @@ Integrál fyzikálně znamená práci vektorového pole $(-y,x)$ po zadané kři
 
 Křivka $C_1$ je nejdále od počátku a vektorové pole je na ní nejsilnější. Navíc v každém bodě je síla ve směru křivky a proto se projeví ve výsledném příspěvku bez redukování. Díky tomu můžeme integrál po kružnici počítat stejně jako práci na přímce, tj. součinem délky  křivky $\frac \pi 2$ a velikosti síly $|\vec F|=1$. Po dalších křivkách je síla menší (křivky jdou blíže ke středu) a navíc se neuplatní celá velikost síly, protože síla svírá s křivkou nenulový úhel a při práci se projeví pouze tečná komponenta.
 
-![vlastní](priklad_5_1.png)
+```{figure} priklad_5_1.png
+ vlastní
+```
 
 <!--
 %https://sagecell.sagemath.org/?z=eJx1kMFuwjAQRO-R8g8rgRRHMW3snH3iB3LgRmgUEkMNxo5sQ5u_r01SlbbhtCPN7hvN3hqDkiFJ40hcem0cqOulH-LIEXZXL1Io2zctRzkGhXrxSlNM8twfODqzQiZzTdh222qLRIqtUH7s4KANCBAKHNn5Deo3yEpg8ejQ4BSj80b_eyVhUlhX91I7tCYYgjhpoXjHNubKMUh-5KqrZbPnkplkua5J1WqpFSA_LThc2UBLl0laxVH2gKMzuHBqWGJ4l8yx6chGZOXwHLJ4jjwaztUstPiB-h_csXHku1MWWPWNt06b-iC47BD6xEOKwY8ckyCGSUwpe9m053Bv3_UHKklW-paN7T2jNo0TmpE7PI4WZTHHHzKK8zFhRb4jJvWriccsxpCsLP5mYHDCSe77bfQZei05LCsfBCc2JfiSX8c_x8Q=&lang=sage&interacts=eJyLjgUAARUAuQ==
@@ -1341,7 +1357,9 @@ Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky ch
 $$\dv {L}{t}=k (L_{\max}-L).$$
 </div>
 
-![](kontaminace.jpg)
+```{figure} kontaminace.jpg
+ 
+```
 
 ### Kontaminace a čištění
 
@@ -1382,7 +1400,9 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 -->
 
-![pixabay.com, autor Free-Photos](deer.jpg)
+```{figure} deer.jpg
+ pixabay.com, autor Free-Photos
+```
 
 ### Populace jelenů
 
@@ -1408,7 +1428,9 @@ Je-li $M$ velikost populace a $y$ počet nemocných, je v populaci $M-y$ zdravý
 $$\dv {y}{t}=ky(M-y).$$
 </div>
 
-![](olej.jpg)
+```{figure} olej.jpg
+ 
+```
 
 ### Ropná skvrna
 
@@ -1432,7 +1454,9 @@ Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je
 $$\dv {L}{t}=k (L_{\max}-L).$$
 </div>
 
-![](ledni_medved.jpg)
+```{figure} ledni_medved.jpg
+ 
+```
 
 ### Tloušťka ledu
 
@@ -1454,7 +1478,9 @@ $$
 
 </div> 
 
-![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
+```{figure} voda_plastovky.jpg
+ Zdroj: www.rodovystatek.cz
+```
 
 ### Model vypouštění nádrže
 
@@ -1497,7 +1523,9 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
 </div>
 
-![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
+```{figure} voda_plastovky.jpg
+ Zdroj: www.rodovystatek.cz
+```
 
 ### Problematika jednoznačnosti v modelu vypouštění nádrže
 
@@ -1836,7 +1864,9 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 
 ## Autonomní rovnice a systémy
 
-![Zdroj: vlastní](pokros.jpg)
+```{figure} pokros.jpg
+ Zdroj: vlastní
+```
 
 ### Stavebniny vedle čebínského nádraží: model
 
@@ -1873,7 +1903,9 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 </div>
 
-![Zdroj: vlastní](trolejbus.jpg)
+```{figure} trolejbus.jpg
+ Zdroj: vlastní
+```
 
 ### Časový rozestup mezi trolejbusy
 
@@ -1912,7 +1944,9 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 </div>
 
-![](kost.jpg)
+```{figure} kost.jpg
+ 
+```
 
 ### Propeptid kolagenu
 
@@ -1931,7 +1965,9 @@ $$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P$$
 
 </div>
 
-![Jelen a los](moose.jpg)
+```{figure} moose.jpg
+ Jelen a los
+```
 
 ### Jelen a los
 
@@ -1963,7 +1999,9 @@ $$
 % %https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x*(1-x/10000)-5*0.00001*x*y&dydt=0.25*y*(1-y/6000)-3*0.00001*x*y&x=0,10000,20&y=0,6000,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B4907.407407407408,5229.428571428572%5D,%5B7444.444444444444,3746.6985645933014%5D,%5B8407.407407407407,2633.9712918660284%5D,%5B9259.25925925926,1111.2918660287078%5D,%5B9648.148148148148,423.1578947368416%5D,%5B3240.740740740741,306.0287081339711%5D,%5B1407.4074074074074,935.5980861244016%5D,%5B4611.111111111111,203.5406698564584%5D,%5B5518.518518518518,57.129186602870504%5D
 -->
 
-![wikimedia](pustik.jpg)
+```{figure} pustik.jpg
+ wikimedia
+```
 
 ### Puštík obecný
 
@@ -1990,7 +2028,9 @@ $$
 
 </div>
 
-![Kůň Převalského](prevalski.jpg)
+```{figure} prevalski.jpg
+ Kůň Převalského
+```
 
 ### Kůň Převalského
 

@@ -11,7 +11,9 @@
 
 https://youtu.be/NFymct4-4jQ
 
-![Zdroj: pixabay.com](blizzard.jpg)
+```{figure} blizzard.jpg
+ Zdroj: pixabay.com
+```
 
 Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
 $$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
@@ -177,7 +179,9 @@ ww:problems/gradient/08.pg
 
 https://youtu.be/mNKV8TUgY8Q
 
-![Zdroj: Wood handbook](anatomicke_smery_dreva.png)
+```{figure} anatomicke_smery_dreva.png
+ Zdroj: Wood handbook
+```
 
 Vypočtěte gradient funkce $$T=10-\sqrt{x^2+y^2}$$ definující teplotu ve dvourozměrném materiálu. Ukažte, že vrstevnice
 této funkce jsou kružnice se středem v počátku, nakreslete obrázek s
@@ -231,7 +235,9 @@ $30$|106.29|109.04|111.29|113.04|114.29|115.04|115.29|115.04|114.29|113.04|111.2
 
 Tabulka $T(x,y)$, vodorovně $x$, svisle $y$
 
-!["Termosnímek" k tabulce. Pozor na to, že v tabulce rostou hodnoty $y$ směrem dolů, ale v grafu nahoru.](gradient_num.png)
+```{figure} gradient_num.png
+ "Termosnímek" k tabulce. Pozor na to, že v tabulce rostou hodnoty $y$ směrem dolů, ale v grafu nahoru.
+```
 
 Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku dáno tabulkou. Situace může vypadat například jako v tomto zadání. Určete gradient teploty v bodě o souřadnicích $x=20$ a $y=5$. Pro výpočet parciálních derivací použijte centrální diferenci.
 

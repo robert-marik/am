@@ -141,9 +141,13 @@ ww:problems/krivkovy_integral/40_06.pg
 \fi
 
 
-![Křivkový integrál v nekonzervativním poli (obsahy jsou různé)](nezavislost_na_ceste_1.png)
+```{figure} nezavislost_na_ceste_1.png
+ Křivkový integrál v nekonzervativním poli (obsahy jsou různé)
+```
 
-![Křivkový integrál v konzervativním poli (obsahy jsou stejné)](nezavislost_na_ceste_2.png)
+```{figure} nezavislost_na_ceste_2.png
+ Křivkový integrál v konzervativním poli (obsahy jsou stejné)
+```
 
 
 \iffalse

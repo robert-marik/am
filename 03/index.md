@@ -52,7 +52,9 @@ manim:Divergence|Vk8OAq3_40g|Divergence umožňuje identifikovat, zda tok sílí
 
 <div class='obtekat'>
 
-![Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence_kostka.png)
+```{figure} divergence_kostka.png
+ Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.
+```
 
 </div>
 
@@ -153,7 +155,9 @@ https://youtu.be/HiOmERpTdV0
 
 <div class='obtekat'>
 
-![V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově.](stacionarni_vedeni_tepla_Utechov.jpg)
+```{figure} stacionarni_vedeni_tepla_Utechov.jpg
+ V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově.
+```
 
 </div>
 
@@ -213,7 +217,9 @@ V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i�
 
 \iffalse 
 
-![Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.](ricka.jpg)
+```{figure} ricka.jpg
+ Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.
+```
 
 \fi
 
@@ -269,7 +275,9 @@ ww:problems/difuzni_rce/interpretace_clenu.pg
 
 <div class='obtekat'>
 
-![Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.](teplo.jpg)
+```{figure} teplo.jpg
+ Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.
+```
 
 </div>
 
@@ -302,7 +310,9 @@ a nazývá se _rovnice vedení tepla_.
 
 <div class='obtekat'>
 
-![Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](vrstvy.png)
+```{figure} vrstvy.png
+ Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.
+```
 
 </div>
 
@@ -324,11 +334,17 @@ V některých případech člen charakterizující zdroje nemusí být nulový.
 
 <div class='obtekat'>
 
-![Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.](VCJR_modifikace_pravidelne.jpg)
+```{figure} VCJR_modifikace_pravidelne.jpg
+ Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.
+```
 
-![Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.](VCJR_sindel.jpg)
+```{figure} VCJR_sindel.jpg
+ Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.
+```
 
-![Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.](rtb.png)
+```{figure} rtb.png
+ Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.
+```
 
 </div>
 
@@ -379,7 +395,9 @@ $$\rho c\frac{\partial T}{\partial t}=k_x\frac{\partial^2 T}{\partial x^2}+k_y\f
 
 <div class='obtekat'>
 
-![Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.](drevo.jpg)
+```{figure} drevo.jpg
+ Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.
+```
 
 </div>
 
@@ -414,7 +432,9 @@ i na $x$.
 
 <div class='obtekat'>
 
-![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.](voda.jpg)
+```{figure} voda.jpg
+ Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.
+```
 
 </div>
 
@@ -472,7 +492,9 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 
 <div class='obtekat'>
 
-![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+```{figure} ../falcon.jpg
+ Ještě pohled s trochou nadhledu. Zdroj: pixabay.com
+```
 
 </div>
 

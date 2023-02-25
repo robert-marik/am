@@ -30,7 +30,9 @@ $F_1[y]=\frac{\mathrm dy}{\mathrm dx}$, $F_2[y]=\frac{d^2y}{dx^2}$, $F_3[y](x)=y
 
 <div class='obtekat'>
 
-![Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com](rails.jpg)
+```{figure} rails.jpg
+ Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -51,7 +53,9 @@ zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiá
 
 <div class='obtekat'>
 
-![Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.](snizeni_toku_se_studnou_03_001.png)
+```{figure} snizeni_toku_se_studnou_03_001.png
+ Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.
+```
 
 </div>
 
@@ -433,7 +437,9 @@ Následující příklad je mírně modifikovaný příklad z [kurzu MIT o difer
 
 <div class='obtekat'>
 
-![Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com](vajicko.jpg)
+```{figure} vajicko.jpg
+ Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com
+```
 
 </div>
 
@@ -497,7 +503,9 @@ Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté
 
 <div class='obtekat'>
 
-![Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156](krvinky.jpg)
+```{figure} krvinky.jpg
+ Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156
+```
 
 </div>
 
@@ -521,9 +529,13 @@ https://youtu.be/8KQ9qG1eQtU
 
 <div class='obtekat'>
 
-![Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur](houpacka.jpg)
+```{figure} houpacka.jpg
+ Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur
+```
 
-![Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE](kmity_stromu.png)
+```{figure} kmity_stromu.png
+ Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE
+```
 
 </div>
 

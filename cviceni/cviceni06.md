@@ -10,7 +10,9 @@
 
 https://youtu.be/oFbhyqFRjmQ
 
-![Nákres integrační množiny](fig0.png)
+```{figure} fig0.png
+ Nákres integrační množiny
+```
 
 Vypočtěte dvojný integrál $$\iint_\Omega xy^2\mathrm dx\mathrm dy$$
 přes obdélník $$
@@ -68,7 +70,9 @@ $$
 
 https://youtu.be/GhdGvrx_pks
 
-![Nákres integrační množiny](fig1.png)
+```{figure} fig1.png
+ Nákres integrační množiny
+```
 
 Vypočtěte dvojný integrál $$I_n=\iint_\Omega y^n\mathrm dx\mathrm dy$$
 přes jednotkový čtverec $$
@@ -101,7 +105,9 @@ tj. ve dvou třetinách hloubky.
 
 https://youtu.be/w0iqtpQvhAE
 
-![Nákres integrační množiny](fig2.png)
+```{figure} fig2.png
+ Nákres integrační množiny
+```
 
 Vypočtěte integrál
 $$  \iint_\Omega xy^2\,\mathrm dx \mathrm dy
@@ -141,7 +147,9 @@ $$
 
 https://youtu.be/Sur6lhdR3ts
 
-![Nákres integrační množiny](fig3.png)
+```{figure} fig3.png
+ Nákres integrační množiny
+```
 
 Vypočtěte integrály
 $$
@@ -203,7 +211,9 @@ Obsah je $\frac 23$ a souřadnice těžiště jsou $\left[\frac 38,\frac 4{10}\r
 
 https://youtu.be/_YT3FDpfZsQ
 
-![Nákres integrační množiny](fig4.png)
+```{figure} fig4.png
+ Nákres integrační množiny
+```
 
 Vypočtěte integrály
 $$

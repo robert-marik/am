@@ -1,6 +1,6 @@
 # Lineární diferenciální rovnice druhého řádu
 
-```{admonitions} Anotace.
+```{admonition} Anotace.
 
 * Lineární diferenciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
 * Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělesa a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 

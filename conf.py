@@ -18,14 +18,15 @@ bibtex_bibfiles = []
 comments_config = {'hypothesis': False, 'utterances': False}
 copyright = '2022, 2023'
 exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', 'Thumbs.db','_build', 'reseni*', 'cviceni/cviceni00.md','cviceni/cviceni12.md', 'cviceni/cviceni13.md', 'cviceni/cviceni14.md', 'cviceni/text.md', 'README.md']
-execution_allow_errors = False
-execution_excludepatterns = []
-execution_in_temp = False
-execution_timeout = 30
+#execution_allow_errors = False
+#execution_excludepatterns = []
+#execution_in_temp = False
+#execution_timeout = 30
 extensions = [
     'sphinx_togglebutton',
     #'sphinx_copybutton',
     'myst_nb',
+    'notfound.extension',    
     #'jupyter_book',
     #'sphinx_comments',
     'sphinx_external_toc',
@@ -47,7 +48,10 @@ html_show_copyright = False
 html_sourcelink_suffix = ''
 html_theme = 'sphinx_book_theme'
 #html_theme = 'sphinx_rtd_theme'
-html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/matematika_draft', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': 'Powered by <a href="https://jupyterbook.org">Jupyter Book</a>', 'home_page_in_toc': True, 'announcement': '', 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False}
+oznameni = """
+Toto jsou webové stránky předmětu Aplikovaná matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/am-old">https://robert-marik.github.io/am-old</a> a nebude již udržována.
+"""
+html_theme_options = {'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n','announcement':'Toto je rozpracovaná verze učebního textu.','search_bar_text': 'Hledat v textu...', 'path_to_docs': '', 'repository_url': 'https://github.com/robert-marik/am', 'repository_branch': 'main', 'google_analytics_id': '', 'extra_navbar': 'Powered by <a href="https://jupyterbook.org">Jupyter Book</a>', 'home_page_in_toc': True, 'announcement': oznameni, 'use_repository_button': False, 'use_edit_page_button': False, 'use_issues_button': False}
 html_title = 'Matematika'
 jupyter_cache = ''
 jupyter_execute_notebooks = 'auto'
@@ -108,3 +112,5 @@ mathjax3_config = {
 #     # If True, show hidden TOC entries
 #     "globaltoc_includehidden": True,
 #     }
+
+notfound_urls_prefix = '/am/'

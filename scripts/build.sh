@@ -42,7 +42,6 @@ sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/bod
 sed -i 's/<\/body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
 sed -i 's/<body>/<script>jQuery(".bd-toc").removeClass("show")<\/script><\/body>/' $directory/cviceni/cviceni*.html
 
-
 # Copy custom css file
 cp custom.css $directory/_static/styles/
 cp custom.css $directory/_static/

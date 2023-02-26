@@ -7,3 +7,6 @@ function otevrit(co)
 document.onload = function(){
 	document.querySelector(".bd-toc").classList.remove("show");
     };
+window.onload = function(){
+	document.querySelector(".bd-toc").classList.remove("show");
+    };

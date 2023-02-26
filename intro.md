@@ -1,7 +1,7 @@
 # Aplikovaná matematika
 
 
-Tato stránka obsahuje prezentace z předmětu [Aplikovaná matematika](https://robert-marik.github.io/pages/am). 
+Zde najdete učební texty k předmětu [Aplikovaná matematika](https://robert-marik.github.io/pages/am) vyučovaného na LDF MENDELU v Brně. 
 
 * Díky parciálním derivacím (přednáška 1) se naučíme se sledovat reakci sledované veličiny na změny ve vstupních datech. Například jak se mění teplota v daném místě stěny s časem, nebo jak se mění teplota ve stejném časovém okamžiku napříč stěnou.
 * Díky gradientu (přednáška 2) se naučíme sledovat změny ve vícerozměrných prostorech. To se například uplatní například pokud sledujeme chování teploty ve stěně, ale vlivem efektů u krajů stěn nestačí úlohu uvažovat jednorozměrně, skrz stěnu.

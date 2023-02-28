@@ -24,7 +24,7 @@ sed -z -i 's/\\sphinxAtStartPar\n\\textbackslash{}fi/\\fi/g' python.tex
 
 sed -z -i 's/\\sphinxAtStartPar\nhttps:\/\/youtu.be/%%% /g' python.tex
 
-sed -z -i s'/\\sphinxAtStartPar\n\\sphinxcode{\\sphinxupquote{ww2:/%/g' python.tex
+sed -z -i s'/\\sphinxAtStartPar\nww:/%/g' python.tex
 sed -z -i s'/\\sphinxAtStartPar\nmanim[^\n]*\n//g' python.tex
 sed -z -i s'/\\sphinxAtStartPar\n\\egroup/\\egroup/g' python.tex
 

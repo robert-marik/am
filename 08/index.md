@@ -520,7 +520,7 @@ Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky
 
 **Příklad.** Diferenciální rovnice tepelné výměny 
 
-$$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0$$ (08-*)
+$$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0$$ (08-I)
 
 obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
@@ -530,13 +530,13 @@ a přeškálovat pomocí konstanty $k$ čas
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm d(kt)}=-\frac{T-T_\infty}{T_0-T_\infty}.$$
 Po substituci $y=\frac{T-T_\infty}{T_0-T_\infty}$, $x=kt$ má úloha tvar
 
-$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (08-**)
+$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (08-II)
 
 Nová rovnice (**) *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
-rovnici {eq}`08-*`. Tuto informaci je však nutno interpretovat v kontextu
-definice nových proměnných. Například to, že všechna řešení rovnice {eq}`08-*` konvergují k nule
-znamená, že všechna řešení rovnice {eq}`08-*` konvergují k $T_0$. To, že řešení rovnice {eq}`08-**` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`08-*` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
+rovnici {eq}`08-I`. Tuto informaci je však nutno interpretovat v kontextu
+definice nových proměnných. Například to, že všechna řešení rovnice {eq}`08-I` konvergují k nule
+znamená, že všechna řešení rovnice {eq}`08-I` konvergují k $T_0$. To, že řešení rovnice {eq}`08-II` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`08-I` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
 ```{prf:remark} nondimenzinalizace, rozměrová analýza
 :nonumber:

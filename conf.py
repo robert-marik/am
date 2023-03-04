@@ -44,6 +44,7 @@ html_logo = ''
 html_show_copyright = False
 html_sourcelink_suffix = ''
 html_theme = 'sphinx_book_theme'
+#html_theme = 'insipid'
 oznameni = """
 Toto jsou učební materiály předmětu Aplikovaná matematika převedené do nové šablony. Stará verze je po nějaký čas k dispozici na  <a href="https://robert-marik.github.io/am-old">https://robert-marik.github.io/am-old</a> a nebude již udržována.
 """
@@ -54,8 +55,8 @@ html_theme_options = {
     'path_to_docs': '',
     'repository_url': 'https://github.com/robert-marik/am',
     'repository_branch': 'main',
-    'google_analytics_id': '',
-    'extra_navbar': extra_navbar,
+    #'google_analytics_id': '',
+    #'extra_navbar': extra_navbar,
     'home_page_in_toc': False,
     'announcement': oznameni,
     'use_repository_button': False,
@@ -63,7 +64,11 @@ html_theme_options = {
     'use_issues_button': False,
     'use_download_button': False,
     'use_fullscreen_button': False,
+    'body_max_width': None,
+    'navigation_with_keys':False,
+    #'breadcrumbs': True,
 }
+language = 'cs'
 html_title = 'Aplikovaná matematika'
 jupyter_cache = ''
 jupyter_execute_notebooks = 'auto'

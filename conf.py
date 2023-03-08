@@ -35,6 +35,7 @@ extensions = [
     'sphinx_book_theme',
     'sphinx_proof',
     #'sphinx_jupyterbook_latex'
+    'sphinx_last_updated_by_git',
 ]
 external_toc_exclude_missing = False
 external_toc_path = '_toc.yml'

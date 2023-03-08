@@ -166,23 +166,19 @@ https://youtu.be/HiOmERpTdV0
 * Přírůstek stavové veličiny za jednotku času v jednotkovém objemu
   (nebo ploše, nebo délce, podle dimenzionality úlohy) je derivace
   hustoty $u$ podle času.
-  $$\text{Přírůstek}=\frac{\partial u}{\partial t}$$
+  $$\frac{\partial u}{\partial t}$$
 *  Přírůstek veličiny v jednotkovém objemu (nebo ploše, nebo délce) za
   jednotku času způsobený tokem $\vec \jmath$ je záporně vzatá divergence
   vektorového pole $\vec \jmath$. Tento přírůstek je způsobený snížením
   toku, proto ho počítáme jako záporné navýšení, tj. záporně vzatou divergenci.
-$$    \text{
-        Přírůstek způsobený tokem
-}=-\nabla\cdot \vec \jmath$$
+  $$-\nabla\cdot \vec \jmath$$
 
-Matematickou formulací celkové bilance  je **rovnice kontinuity**.
-$$
-      {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
+Matematickou formulací celkové bilance  je **rovnice kontinuity**. $${\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
 
     
 
 ```{prf:remark} fyzikální interpretace členů rovnice kontinuity
-
+:nonumber:
 * Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se roste hustota stavové veličiny $u$ v daném místě a čase.
 * Člen $\sigma$ udává vydatnost zdrojů stavové veličiny, přičemž spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento člen tedy udává, kolik stavové veličiny v tomto místě vzniká v jednotkovém objemu za jednotku času. Zpravidla neobsahuje derivace podle času a polohy. Může se však měnit s časem, s polohou, nebo s množstvím stavové veličiny. Nemusí být nutně konstantní.
 * Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do tohoto místa vteče. Jinak řečeno, udává, o kolik zesílí v daném místě tok $\vec \jmath$. My potřebujeme mít zachyceno zeslabení (množství které chybí v toku se "použije" na akumulaci veličiny v daném místě) a proto uvažujeme záporně vzatou divergenci, tj. $-\nabla\cdot \vec j$.
@@ -254,7 +250,7 @@ $$
 který se nazývá *difuzní rovnice*.
 
 ```{prf:remark} fyzikální interpretace difuzní rovnice
-
+:nonumber:
 * Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění
    hustota stavové veličiny $u$. Je stejný jako v rovnici kontinuity.
 * Člen $\sigma$ udává vydatnost zdrojů stavové veličiny. Je stejný jako v rovnici kontinuity.

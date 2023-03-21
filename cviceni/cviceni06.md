@@ -3,7 +3,7 @@
 ```{admonition} Anotace.
 * V úvodu si osaháme integrační metody. Nejprve pro obdélník. Tam se dá často (ujistěte se, že perfektně poznáte kdy) úloha na výpočet dvojného integrálu redukovat na nezávislý výpočet dvou jednoduchých integrálů, které se mezi sebou vynásobí.
 * Další příklady jsou věnovány integraci na jiných než obdélníkových množinách. Zde je nutné dvojný integrál převést na dvojnásobný, tj. integrál z integrálu.
-* Poslední dva příklady jsou věnovány integraci v jiných než kartézských souřadnicích. Suveréně nejčastěji se vedle kartézských souřadnic používají souřadnice polární a proto se zaměříme právě na ně. 
+* Poslední dva příklady jsou věnovány integraci v jiných než kartézských souřadnicích. Suverénně nejčastěji se vedle kartézských souřadnic používají souřadnice polární, a proto se zaměříme právě na ně. 
 ```
 
 ## Integrál přes obdélník
@@ -298,7 +298,7 @@ kde při výpočtu integrálu přes proměnnou $\varphi$ využijeme nápovědu, 
 
 Že je výsledkem veličina úměrná čtvrté mocnině poloměru je zřejmé i z rozměrové analýzy (resp. z Buckinghamova $\Pi$ teorému), uvedeným výpočtem však vidíme i konstantu úměrnosti.
 
-To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Devadesát šest procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
+To, že kvadratický moment roste se čtvrtou mocninou poloměru, značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Devadesát šest procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
 
 ```
 

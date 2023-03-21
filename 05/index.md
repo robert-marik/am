@@ -332,6 +332,7 @@ i+Q(x,y)\vec\jmath$ křivkou $C$
 * Je-li množina $\Omega$ "dostatečně pěkná" (např. souvislá, bez děr, s  hladkou hranicí $\partial \Omega$, která se nikde neprotíná, detaily uvedeme později u Greenovy věty), potom každý z integrálů
   $$\oint_{\partial\Omega}x\mathrm{d}y\qquad\text{a}\qquad\oint_{\partial\Omega}y\mathrm{d}x$$
   udává (až na případné znaménko) obsah množiny $\Omega$. Na tomto principu fungují planimetry.
+* Figuruje v integrálním tvaru Maxwellových rovnic. Je možné jej využít například k [pohodlnému výpočtu magnetického pole v okolí přímého vodiče](https://user.mendelu.cz/marik/am/slovni_ulohy/#k%C5%99ivkov%C3%BD-integr%C3%A1l).
 
 ## Shrnutí: vlastnosti křivkových integrálů
 

@@ -71,7 +71,7 @@ Pro zadané pevné $x$ a kladné $C$ je funkce $$T=T_0+C e^{-\sqrt{\frac h\lambd
 
 ```
 
-## Separce proměnných ve vlnové rovnici, kmity struny
+## Separace proměnných ve vlnové rovnici, kmity struny
 
 Rovnice kmitů struny je (po eliminaci konstant)
 $$\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}$$

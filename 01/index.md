@@ -393,6 +393,8 @@ bilance toku tepla. Zeslabení toku
 udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
 se projeví zvýšením teploty v místě, kde k zeslabení došlo.
 
+begintable
+
 |Část rovnice vedení tepla|Slovní interpretace|
 |:---|:---|
 |$\color{red}\displaystyle\frac{\partial T}{\partial t}$|Rychlost s jakou roste v daném místě teplota jako funkce času.|
@@ -403,6 +405,10 @@ se projeví zvýšením teploty v místě, kde k zeslabení došlo.
 |$\displaystyle-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$|Rychlost s jakou klesá tok tepla podél tyče. Toto teplo zůstává v daném místě tyče a projeví se nárůstem teploty v tomto místě.|
 |$\color{red}\displaystyle\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$|Upravený výraz z předchozího řádku. Rychlost s jakou klesá tok tepla podél tyče.|
 |Rovnice vedení tepla|Červené výrazy jsou si úměrné.|
+
+caption:Slovní interpretace částí rovnice vedení tepla.
+
+endtable
 
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
 

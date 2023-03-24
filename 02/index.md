@@ -271,6 +271,7 @@ V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivn�
 
 Tvar {eq}`F.5` je nejobecnější. Pokud je materiál iztropní, redukuje se {eq}`F.5` na {eq}`F.4`. Pokud je úloha jednodimenzionální, redukují se {eq}`F.4` a {eq}`F.5` automaticky na {eq}`F.3`. Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na {eq}`F.2` nebo (pokud nás zajímá velikost a ne směr) na {eq}`F.1`.
 
+begintable
 
 |Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Zachytí i nelineární průběh teploty|Udává směr toku tepla|Odlišnost od předchozí formulace (o řádek výše)|
 |--|--|--|--|--|--|
@@ -279,6 +280,11 @@ Tvar {eq}`F.5` je nejobecnější. Pokud je materiál iztropní, redukuje se {eq
 |$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|Derivace podle $x$ (jednorozměrný gradient) místo podílu.|
 |$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ skalár|Libovolný|Ne|ANO|ANO|Jednorozměrný gradient je nahrazen obecným gradientem. Tok je vektor.|
 |$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ tenzor (matice)|Libovolný|ANO|ANO|ANO|Materiálová charakteristika $\lambda$ je matice.|
+
+caption:Různé tvary konstitutivního zákona.
+
+endtable
+
 
 \iffalse
 

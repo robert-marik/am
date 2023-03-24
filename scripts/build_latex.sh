@@ -39,6 +39,11 @@ sed -i 's/\\end{split}/\\relax /' python.tex
 sed -i 's/\\usepackage{geometry}/\\usepackage[margin=2cm, left=1.5cm, right=1.5cm]{geometry}/' python.tex
 sed -i 's/\\usepackage{unicode-math}//' python.tex
 
+sed -i 's/^begintable/\\begin{table*}/g' python.tex
+sed -i 's/^endtable/\\end{table*}/g' python.tex
+sed -i 's/^caption:\(.*\)$/\\caption{\1}/g' python.tex
+
+
 vlna python.tex
 
 sed -i "s/title{Python}/title{Aplikovaná matematika}/" python.tex

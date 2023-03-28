@@ -194,6 +194,7 @@ $$
 ### Výpočet (oblast mezi funkcemi proměnné $y$)
 
 <div class='obtekat'>
+
 ```{figure} fub_2.png
  Oblast mezi funkcemi proměnné $y$.
 ```

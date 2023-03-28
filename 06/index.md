@@ -252,6 +252,7 @@ Všimněte si, že nestačí prosté prohození integrálů. Je nutno přepočí
 https://youtu.be/o38mi3tTAvw
 
 <div class='obtekat'>
+
 ```{figure} fub_3.png
  Integrál přes obdélník.
 ```

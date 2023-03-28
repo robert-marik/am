@@ -17,18 +17,18 @@ https://youtu.be/PcNc0tfv7Q0
 :nonumber:
  Buďte $p$, $q$ a $f$
 funkce definované a spojité na intervalu $I$. Diferenciální rovnice
-$$
-y''+p(x)y'+q(x)y=f(x) \tag{LDE}\label{LDE}$$
+
+$$y''+p(x)y'+q(x)y=f(x) $$ (LDE)
+
 se nazývá *lineární diferenciální rovnice druhého řádu*. *Řešením
 rovnice* (nebo též *integrálem rovnice*) na intervalu $I$ rozumíme
 funkci, která má spojité derivace do řádu $2$ na
-intervalu $I$ a po dosazení identicky splňuje rovnost (LDE) na $I$.
+intervalu $I$ a po dosazení identicky splňuje rovnost {eq}`LDE` na $I$.
 Úloha nalézt řešení rovnice, které splňuje v bodě $x_0\in I$ *počáteční
 podmínky*
-$$\tag{IC}
-\begin{cases}
-y(x_0)=y_0,\\y'(x_0)=y'_0,
-\end{cases}$$
+
+$$\begin{aligned}y(x_0)&=y_0,\\ y'(x_0)&=y'_0,\end{aligned}$$ (IC)
+
 kde $y_0$ a $y'_0$ jsou reálná čísla, se nazývá *počáteční úloha*
 (*Cauchyova úloha*). Řešení počáteční úlohy se nazývá *partikulární
 řešení rovnice.*
@@ -78,7 +78,8 @@ Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciá
 
 https://youtu.be/sw5EvXHFtA0
 
-$$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
+Budeme se zabývat řešitelností diferenciální rovnice {eq}`LDE`, tj. rovnice
+$$y''+p(x)y'+q(x)y=f(x).$$
 
 ```{prf:theorem} o existenci a jednoznačnosti řešení LDE druhého řádu
 :nonumber:
@@ -90,12 +91,12 @@ jednoznačně a toto řešení je definované na celém intervalu $I$.
 
 ```{prf:definition} speciální typy LDE druhého řádu
 :nonumber:
- Platí-li v rovnici (LDE) $f(x)=0$
-pro všechna $x\in I$, nazývá se rovnice (LDE) *homogenní*, v opačném
+ Platí-li v rovnici {eq}`LDE` $f(x)=0$
+pro všechna $x\in I$, nazývá se rovnice {eq}`LDE` *homogenní*, v opačném
 případě *nehomogenní*. 
 
 Jsou-li koeficienty $p(x)$ a $q(x)$ na intervalu
-$I$ konstantní funkce, nazývá se (LDE) *rovnice s konstantními
+$I$ konstantní funkce, nazývá se {eq}`LDE` *rovnice s konstantními
 koeficienty*.
 ```
 
@@ -112,7 +113,7 @@ homogenní LDE druhého řádu $$y''+p(x)y'+q(x)y=0$$ vždy, bez ohledu na tvar 
  Nahradíme-li v nehomogenní LDE
 pravou stranu (tj. funkci $f$) nulovou funkcí obdržíme rovnici
 $$ y''+p(x)y'+q(x)y=0.$$
-Tato rovnice se nazývá *asociovaná homogenní rovnice k rovnici (LDE)*.
+Tato rovnice se nazývá *asociovaná homogenní rovnice k rovnici {eq}`LDE`*.
 ```
 
 
@@ -120,7 +121,7 @@ Tato rovnice se nazývá *asociovaná homogenní rovnice k rovnici (LDE)*.
 :nonumber:
  Všechna řešení LDE druhého řádu 
 lze vyjádřit ve tvaru obsahujícím dvě nezávislé konstanty $C_1$,
-$C_2\in\mathbb{R}$. Takovýto předpis se nazývá *obecné řešení rovnice (LDE)*.
+$C_2\in\mathbb{R}$. Takovýto předpis se nazývá *obecné řešení rovnice {eq}`LDE`*.
 ```
 
 
@@ -175,18 +176,26 @@ Vztah
 $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$
 poslouží (podobně jako u lineárních rovnic prvního řádu), abychom popsali strukturu množiny všech řešení rovnice a dokázali tuto množinu vytvořit jenom na základě znalosti několika prvků.
 
-Rovnice $$y''+y=x\tag{A}$$ má partikulární řešení $y=x$. 
+Rovnice 
 
-Asociovaná homogenní rovnice je $$y''+y=0.\tag{B}$$ Tato rovnice má řešení
+$$y''+y=x$$ (11A)
+
+má partikulární řešení $y=x$. 
+
+Asociovaná homogenní rovnice je 
+
+$$y''+y=0.$$ (11B)
+
+Tato rovnice má řešení
 například $y=\sin x$, $y=\cos x$. Z linearity plyne
 
-* Funkce $y=C_1 \sin x+C_2 \cos x$ je řešením rovnice (B) pro
+* Funkce $y=C_1 \sin x+C_2 \cos x$ je řešením rovnice {eq}`11B` pro
   libovolná reálná $C_1$, $C_2$. Protože platí $y(0)=C_2$ a
   $y'(0)=C_1$, je možné splnit libovolnou podmínku $y(0)=\alpha$,
   $y'(0)=\beta$ volbou $C_2=\alpha$ a $C_1=\beta$. Jedná se tedy o
   obecné řešení.
 
-* Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice (A). 
+* Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice {eq}`11B`. 
 
 <!--
 
@@ -268,15 +277,15 @@ tehdy když je jejich Wronskián různý od nuly na intervalu $I$.
 
 ## Homogenní LDE 2. řádu (obecné řešení)
 
-$$y''+p(x)y'+q(x)y=0 \tag{LDE0}$$
+$$y''+p(x)y'+q(x)y=0 $$ (LDE0)
 
 ```{prf:theorem} obecné řešení homogenní LDE
 :nonumber:
  Jsou-li $y_1$ a $y_2$ dvě
-netriviální lineárně nezávislá řešení rovnice (LDE0) na intervalu
+netriviální lineárně nezávislá řešení rovnice {eq}`LDE0` na intervalu
 $I$, pak funkce $y$ definovaná vztahem
 $$    y(x, C_1, C_2)=C_1y_1(x)+C_2y_2(x),$$
-kde $C_{1,2}\in\mathbb{R}$, je obecným řešením rovnice (LDE0) na intervalu
+kde $C_{1,2}\in\mathbb{R}$, je obecným řešením rovnice {eq}`LDE0` na intervalu
 $I$.
 ```
 
@@ -286,7 +295,7 @@ Dvojicí lineárně nezávislých řešení rozumíme dvě řešení taková, ž
 ```{prf:definition} fundamentální systém řešení
 :nonumber:
  Dvojici funkcí $y_1$ a $y_2$ z předchozí
-věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
+věty nazýváme *fundamentální systém řešení rovnice {eq}`LDE0`*.
 ```
 
 
@@ -331,7 +340,11 @@ pro rovnici $$y''+py'+qy=0.$$
 ```{prf:theorem} o obecném řešení LDE s konstantními koeficienty
 :nonumber:
 
-Uvažujme LDE $$y''+py'+qy=0,\tag{1}$$ a její charakteristickou rovnici
+Uvažujme LDE 
+
+$$y''+py'+qy=0,$$ (11-1)
+
+a její charakteristickou rovnici
 $$z^2+pz+q=0.$$
 
 -   Jsou-li $z_1,z_2\in\mathbb{R}$ dva různé reálné kořeny charakteristické
@@ -344,7 +357,7 @@ rovnice, definujme $${y_1=e^{z_1 x}}, \qquad{y_2=xe^{z_1 x}}.$$
 kořeny charakteristické rovnice, definujme $${y_1(x)=e^{\alpha x}\cos(\beta x)}, \qquad
 {y_2(x)=e^{\alpha x}\sin(\beta x)}.$$
 
-Potom obecné řešení rovnice (1) je
+Potom obecné řešení rovnice {eq}`11-1` je
 $$y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.$$
 ```
 
@@ -387,14 +400,17 @@ od počáteční úlohy. Následující úloha má velké uplatnění při studi
 kmitavých pohybů.
 
 Pro parametr $\lambda\in\mathbb{R}$ najděte řešení rovnice 
-$$y''+\lambda y=0 \tag{*}$$
+
+$$y''+\lambda y=0 $$ (11D)
+
 splňující podmínky
-$$y(0)=0=y(1). \tag{**}$$
+
+$$y(0)=0=y(1). $$ (11DIC)
 
 ```{prf:definition} okrajová úloha
 :nonumber:
  Úloha najít řešení diferenciální
-rovnice (\*), které splňuje podmínky (\*\*) se nazývá (Dirichletova)
+rovnice {eq}`11D`, které splňuje podmínky {eq}`11DIC` se nazývá (Dirichletova)
 *okrajová úloha*.
 ```
 
@@ -420,7 +436,10 @@ nazývá *vlastní funkce okrajové úlohy*.
 
 ### Případ $\lambda>0$
 
-Je-li $\lambda>0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
+Je-li $\lambda>0$, je řešením rovnice 
+
+$$y''+\lambda y=0 $$
+
 funkce
 $$y(x)=C_1\sin(\sqrt \lambda x)+C_2\cos(\sqrt \lambda x).$$
 Z podmínky $y(0)=0$ dostáváme $C_2=0$. Tedy
@@ -435,7 +454,7 @@ $\lambda=(k\pi)^2$, $k\in\mathbb{Z}$
 
 ### Případ $\lambda<0$
 
-Je-li $\lambda<0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
+Je-li $\lambda<0$, je řešením rovnice $$y''+\lambda y=0$$
 funkce
 $$y(x)=C_1e^{\sqrt {-\lambda} x}+C_2 e^{-\sqrt {-\lambda} x}.$$
 Z podmínky $y(0)=0$ dostáváme $$C_1+C_2=0.$$ 
@@ -472,10 +491,13 @@ y(0)=0=y(l),$$
 kde $y$ je amplituda kmitů v místě $x$ a $\lambda$ souvisí s frekvencí. Rovnice má obecné řešení $$y(x)=C_1\sin(
 \lambda x)+C_2\cos( \lambda x)$$ Z podmínky $y(0)=0$ dostáváme $C_2=0$ a z
 podmínky $y(l)=0$ dostáváme $$y(x)=C_1\sin(\lambda x)$$ pokud
-$$\lambda l=k\pi \tag{***}$$ a $y=0$ jinak. Při podrobnějším popisu
+
+$$\lambda l=k\pi $$ (11***)
+
+a $y=0$ jinak. Při podrobnějším popisu
 se ukazuje, že $\lambda$
 souvisí s hmotností struny, napětím ve struně a frekvencí, kterou
-slyšíme. Podmínka (\*\*\*) určuje spektrum slyšitelných frekvencí, na
+slyšíme. Podmínka {eq}`11***` určuje spektrum slyšitelných frekvencí, na
 kterých může struna kmitat, výsledný pohyb (a zvuk) je díky linearitě složením
 jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je možné [rozeznívat více způsoby](https://www.youtube.com/watch?v=kn92TLYA4rE) a dosahovat různý výsledný zvuk. 
 

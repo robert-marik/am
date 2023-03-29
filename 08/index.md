@@ -2,10 +2,10 @@
 
 ```{admonition} Anotace.
 
-* V přednášce se seznámíme s rovnicemi, obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
+* V přednášce se seznámíme s rovnicemi obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
 * Typickým příkladem je radioaktivita, protože množství rozpadlých atomů je dáno množstvím nestabilních atomů. Aplikace potom můžeme najít například při ochraně budov před radioaktivním radonem.
 * Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu. 
-* Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně se mění podle intenzity toku a ta se mění s teplotním rozdílem. 
+* Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně mění podle intenzity toku a ta se mění s teplotním rozdílem. 
 * Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.
 * Důležité dovednosti, které se naučíme v souvislosti s diferenciálními
    rovnicemi, jsou zejména 
@@ -19,7 +19,7 @@
 ```{admonition} Prerekvizity.
 
 * Diferenciální rovnice souvisí s derivacemi. Pro úspěšné rozhodnutí, zda se úloha dá modelovat pomocí diferenciální rovnice nutně potřebujeme spolehlivě znát využití derivace. V podstatě s jistotou všude tam, kde se mluví o rychlostech, ale aplikace jsou i jinde. 
-* Pro nalezení analytického řešení diferenciální je třeba ovládat integrál funkce jedné proměnné.
+* Pro nalezení analytického řešení diferenciální rovnice je třeba ovládat integrál funkce jedné proměnné.
 ```
 
 ## Modely založené na rychlostech (derivacích)
@@ -40,8 +40,8 @@ https://youtu.be/08uAuAgY-lw
 
 \fi
 
-* Z fyziky víme, že *rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich teplot* (Newtonův zákon tepelné výměny). Rychlostí tepelné výměny můžeme rozumět například rychlost s jakou roste teplota studeného tělesa v teplém prostředí nebo s jakou klesá teplota horkého tělesa umístěného v chladnějším prostředí.
-* Rychlost s jakou roste teplota $T$ tělesa tělesa v čase je derivace teploty podle času. Pokud potřebujeme pracovat s poklesem, uvažujeme záporně vzatou derivaci. Úměrnost matematicky vyjádříme násobením konstantou a teplotní rozdíl může být například při umístění horkého tělesa o teplotě $T$ v chladné místnosti o teplotě $T_0$ vyjádřen rozdílem $T-T_0$.
+* Z fyziky víme, že *rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich teplot* (Newtonův zákon tepelné výměny). Rychlostí tepelné výměny můžeme rozumět například rychlost růstu teploty studeného tělesa v teplém prostředí. (Nebo rychlost poklesu teploty horkého tělesa umístěného v chladnějším prostředí.)
+* Rychlost růstu teploty $T$ tělesa s časem je derivace teploty podle času. Pokud potřebujeme pracovat s poklesem, uvažujeme záporně vzatou derivaci. Úměrnost matematicky vyjádříme násobením konstantou a teplotní rozdíl může být například při umístění horkého tělesa o teplotě $T$ v chladné místnosti o teplotě $T_0$ vyjádřen rozdílem $T-T_0$.
 * Proces tepelné výměny probíhající podle Newtonova zákona
   je tedy možno modelovat vztahem $$ \frac{\mathrm
   dT}{\mathrm dt}=-k(T-T_0).  $$
@@ -71,7 +71,7 @@ https://youtu.be/08uAuAgY-lw
 
 * Radioaktivní prvky se rozpadají
   rychlostí, která je úměrná množství dosud nerozpadnutého materiálu. Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
-  vzorku) nerozpadnutého radioaktivního materiálu je tedy popsána matematickým modelem
+  vzorku) nerozpadnutého radioaktivního materiálu, je tedy popsána matematickým modelem
   $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
   kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
   důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
@@ -88,7 +88,7 @@ https://youtu.be/08uAuAgY-lw
 * Při pokusu o datování kostí dinosaurů klesne množství
   radioaktivního uhlíku pod měřitelnou úroveň. Proto se
   v tomto případě používají látky s delším poločasem rozpadu.
-* Optikou běžného života je nejzajímavější aplikací této rovnice model rozpadu v radioaktivní radě uranu, kdy vzniká plynný radon, který může působit problémy ve stavbách a v rizikových lokalitách je potřeba vhodnými konstrukčními přístupy nebo aktivními zařízeními na lapání a odvětrávání radonu.
+* Optikou běžného života je nejzajímavější aplikací této rovnice model rozpadu v radioaktivní řadě uranu. V tomto případě vzniká plynný radioaktivní radon, který se může hromadit ve stavbách a je po kouření druhou nejčastější příčinou vzniku rakoviny plic. Proto je v rizikových lokalitách nutné hromadění radonu eliminovat. Toho dosahujeme buď vhodnými konstrukčními přístupy nebo aktivními zařízeními na lapání a odvětrávání radonu.
 
 ### Samočištění jezer, kontaminace v jezeře
 
@@ -145,7 +145,7 @@ https://youtu.be/08uAuAgY-lw
 
 </div>
 
-* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
+* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev a s
   ní i krvinky. Při konstantní intenzitě krvácení to znamená, že
   pacient ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně na
   krvinky v krvi můžeme pohlížet stejně jako na znečištění
@@ -155,7 +155,7 @@ https://youtu.be/08uAuAgY-lw
   pořád množství krvinek nad minimální přípustnou hodnotou, je možné
   před operací toto množství snížit tím, že se část krve odebere a
   krev se poté doplní vhodnými roztoky.
-* Protože pacient bude po výše uvedeném zákroku už od začátku operace
+* Protože pacient bude mít po výše uvedeném zákroku už od začátku operace
   menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
   během operace je menší. Na konci operace se pacientovi vrátí dříve
   odebraná krev. Výsledkem je, že po operaci v jeho těle koluje více
@@ -198,15 +198,15 @@ https://youtu.be/08uAuAgY-lw
 
 \fi
 
-Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíjení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí vztahem
+Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud. Tím se mění i rychlost nabíjení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí vztahem
 $$R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.$$
 Napětí na kondenzátoru je možno odvodit buď z proudu, napětí na rezistoru a napětí zdroje, nebo z celkového proudu, který prošel kondenzátorem.
 
-Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočištění jezer. Vhodnou manipulací s parametry součástek je možno měnit koeficient u této rovnice a vhodným spojováním těchto obvodů dokážeme podobně simulovat i složitější rovnice. To je bylo základem analogových počítačů, které nepracovaly s čísly, ale s napětími. Tyto počítače sehrály svou roli v době, kdy číslicové počítače byly nedostupné, pomalé a nespolehlivé. Tím byla historická úloha analogových počítačů splněna a již se nepoužívají. 
+Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočištění jezer. Vhodnou manipulací s parametry součástek je možno měnit koeficient u této rovnice a vhodným spojováním těchto obvodů dokážeme podobně simulovat i složitější rovnice. To bylo základem analogových počítačů, které nepracovaly s čísly, ale s napětími. Tyto počítače sehrály svou roli v době, kdy číslicové počítače byly nedostupné, pomalé a nespolehlivé. Tím byla historická úloha analogových počítačů splněna a již se nepoužívají. 
 
 RC obvod jako takový má však důležité místo i dnes. Dokáže například filtrovat signály podle frekvence. Výpočet jeho charakteristiky (tj. vyřešení rovnice) a sledování napětí na kondenzátoru umožní měření elektrického odporu tam, kde není vhodné odpor určovat z proudu a napětí pomocí Ohmova zákona. Typickým příkladem je odpor dřeva a jeho vodivost, tj. převrácená hodnota odporu. Tato veličina se používá k rychlému stanovení vlhkosti dřeva, nebo je možno ji dlouhodobě sledovat pomocí senzorů zabudovaných do dřevostavby. 
 
-Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
+Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti, a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
 
 ### Vývoj populace a její ekologický lov
 
@@ -224,7 +224,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 * Zkoumejme velikost $y$ určité populace v prostředí s nosnou kapacitou $K$.
 * Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s omezenými úživnými
-  vlastnostmi specifická míru růstu populace (rychlost s jakou
+  vlastnostmi specifická míra růstu populace (rychlost, s jakou
   se velikost populace zvětšuje vztažená na jednotkové množství
   populace) klesá s tím, jak se velikost populace přibližuje k nosné
   kapacitě, a rychlost růstu populace je modelována funkcí $ry\left(1-\frac yK\right)$.  Podle
@@ -236,7 +236,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 * Pokud lovem snížíme přírůstky populace, můžeme tento proces popsat modelem 
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
   kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
-  tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
+  tohoto procesu umožní nalezení trvale
   udržitelné strategie lovu.
 
 \iffalse
@@ -271,10 +271,10 @@ https://youtu.be/3HTs6zJ0gMk
 Obyčejná diferenciální rovnice je rovnice, kde vystupuje neznámá
 funkce a její derivace. Setkáváme se s ní například všude tam, kde
 rychlost růstu nebo poklesu veličiny souvisí s její
-velikostí. Například rychlost s jakou se mění teplota horkého tělesa
+velikostí. Například rychlost změny teploty horkého tělesa
 je funkcí teploty samotné. Rychlost tepelné výměny mezi dvěma tělesy
 je totiž úměrná rozdílu jejich teplot (Newtonův zákon). Takto se
-přirozeně diferenciální rovnice objevují v modelech nejrůznějších dějů
+přirozeně diferenciální rovnice objevují v modelech nejrůznějších dějů a
 jevů. Podstatu děje, který modelujeme, musí dodat fyzika, biologie
 nebo jiná aplikovaná věda. To v matematice obsaženo není. Matematika
 poté poslouží k analýze, jaké jsou pozorovatelné důsledky a tím se
@@ -734,7 +734,7 @@ se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 
 Poslední krok (převod do explicitního tvaru) je volitelný, zpravidla
 záleží na tom, co dalšího hodláme s řešením dělat. Pro většinu výpočtů
-je však explicitní tvar vhodnější než tvar implicitní a proto se o něj
+je však explicitní tvar vhodnější než tvar implicitní, a proto se o něj
 vždy snažíme.
 
 ```{prf:remark} zápis partikulárního řešení pomocí určitého integrálu
@@ -758,7 +758,7 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 :nonumber:
  Je-li $g(y_0)=0$,
 potom má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad
-y(x_0)=y_0$$ konstantní řešení $y(t)=y_0,$ ale z předchozí věty neplyne nic o
+y(x_0)=y_0$$ konstantní řešení $y(x)=y_0,$ ale z předchozí věty neplyne nic o
 jednoznačnosti tohoto řešení. Je možné použít větu o jednoznačnosti platnou pro obecnější
 rovnici $$\frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y)$$ uvedenou výše a potom je řešení určeno jednoznačně, pokud má funkce
 $g$ v okolí počáteční podmínky ohraničenou derivaci.
@@ -769,13 +769,13 @@ $g$ v okolí počáteční podmínky ohraničenou derivaci.
 
 https://youtu.be/vDEQBp8y6Jk
 
-V předchozích týdnech jsme se seznámili s modely založenými na parciálních derivacích, zejména s difuzní rovnicí. V případě, kdy hledaná stavová veličina je funkcí jenom jedné proměnné se parciální derivace redukují na obyčejné derivace a můžeme takové modely řešit v rámci obyčejných diferenciálních rovnic.
+V předchozích týdnech jsme se seznámili s modely založenými na parciálních derivacích, zejména s difuzní rovnicí. V případě, kdy hledaná stavová veličina je funkcí jenom jedné proměnné, se parciální derivace redukují na obyčejné derivace a můžeme takové modely řešit v rámci obyčejných diferenciálních rovnic.
 
 ### Jednorozměrný případ
 
 Ukážeme si , že parciální diferenciální rovnice popisující tok tepla nebo tok podzemní vody se ve speciálních případech redukují na diferenciální rovnice, jaké jsme se právě naučili řešit.
 
-Uvažujme tok tepla stěnou o tloušťce $d$ která odděluje dvě prostředí o teplotách $T_1$ a $T_2$.
+Uvažujme tok tepla stěnou o tloušťce $d$, která odděluje dvě prostředí o teplotách $T_1$ a $T_2$.
 
 Stacionární tok tepla v jedné dimenzi je dán rovnicí
 $$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=0.$$
@@ -805,7 +805,7 @@ $$\frac 12 aT^2+bT=C_1x+C_2.$$ Teplotní profil není lineární, ale parabolick
 
 ### Dvourozměrný radiálně symetrický případ
 
-Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi je stacionární děj v rovině, kdy je situace radiálně symetrická. K tomu je nutno transformovat divergenci a gradient do polárních souřadnic. Příslušné vzorce nebudeme odvozovat, dodá je [Wikipedie](https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates#Del_formula).
+Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi, je stacionární děj v rovině, kdy je situace radiálně symetrická. K tomu je nutno transformovat divergenci a gradient do polárních souřadnic. Příslušné vzorce nebudeme odvozovat, dodá je [Wikipedie](https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates#Del_formula).
 
 <div class='obtekat'>
 

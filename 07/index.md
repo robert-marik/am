@@ -65,16 +65,12 @@ Uvažujme vektorovou funkci $\vec F$, křivku $C$ a oblast $\Omega$
 v $\mathbb{R}^3$. Následující výroky jsou ekvivalentní za předpokladu
 hladkosti funkcí, regulárnosti křivek a jednoduše souvislé oblasti
 $\Omega$.
->
-a. Integrál $\int_C \vec F\mathrm{d}\vec r$ nezávisí v $\Omega$ na
-integrační cestě.
-b. Křivkový integrál $\oint_C \vec F\mathrm{d}\vec r$ po libovolné
-uzavřené křivce $C$ v $\Omega$ je roven nule.
-c. Rotace $\nabla\times \vec F$ vektorového pole $\vec F$ je v $\Omega$
-rovna nulovému vektoru.
-d. Existuje funkce $\varphi$ s vlastností $\nabla\varphi=\vec F$
-na $\Omega$.
->
+
+1. Integrál $\int_C \vec F\mathrm{d}\vec r$ nezávisí v $\Omega$ na integrační cestě.
+1. Křivkový integrál $\oint_C \vec F\mathrm{d}\vec r$ po libovolné uzavřené křivce $C$ v $\Omega$ je roven nule.
+1. Rotace $\nabla\times \vec F$ vektorového pole $\vec F$ je v $\Omega$ rovna nulovému vektoru.
+1. Existuje funkce $\varphi$ s vlastností $\nabla\varphi=\vec F$ na $\Omega$.
+
 Pokud jsou předchozí podmínky splněny (platnost jedné z nich vynutí
 platnost i všech ostatních), je možno křivkový integrál vypočítat
 podle vzorce

@@ -335,19 +335,19 @@ $$
 $$
 kde $X$ pro jednoduchost znamená koncentraci látky $X$ a totéž platí i pro další veličiny vystupující v rovnici.
 
-Stacionárním bodem je bod $X=A$, $Y=\frac BA$. Pro $A=1$ a $B=4$ má systém tvar
+Stacionárním bodem je bod $X=A$, $Y=\frac BA$. Pro $A=1$ a $B=3$ má systém tvar
 $$
 \begin{aligned}
-\frac {\mathrm d X}{\mathrm dt}&=  1+  X ^2 Y  - 5 X,\\
-\frac {\mathrm d Y}{\mathrm dt}&= 4X-X^2Y.
+\frac {\mathrm d X}{\mathrm dt}&=  1+  X ^2 Y  - 4 X,\\
+\frac {\mathrm d Y}{\mathrm dt}&= 3X-X^2Y.
 \end{aligned}
 $$
 
-Jacobiho matice je $$J(X,Y)=\begin{pmatrix}2XY-5 & X^2 \\ 4-2XY & -X^2\end{pmatrix}$$
-a $$J(1,4)=\begin{pmatrix}3& 1\\-4 & -1\end{pmatrix}.$$
+Jacobiho matice je $$J(X,Y)=\begin{pmatrix}2XY-4 & X^2 \\ 3-2XY & -X^2\end{pmatrix}$$
+a $$J(1,3)=\begin{pmatrix}2& 1\\-3 & -1\end{pmatrix}.$$
 Vlastní čísla jsou řešením rovnice
-$$0=\begin{vmatrix}3-\lambda & 1\\-4 & -1-\lambda\end{vmatrix}=\lambda^2- 2\lambda+4=(\lambda-1)^2+3.$$
-Taková rovnice nemá řešení v množině reálných čísel a vlastní čísla jsou komplexně sdružená $$\lambda_{1,2}=1\pm \sqrt {3}i.$$ Protože reálná část $\Re(\lambda_i)=1>0$, řešení se v oscilacích vzdalují od rovnovážného bodu. Protože systém je druhého řádu a tímto postupem je možno získat dvě nezávislá řešení, lineárními kombinacemi vygenerujeme všechna řešení. Proto se v oscilacích budou od stacionárního bodu vzdalovat všechna řešení. Další stacionární bod neexistuje a koncentrace určitě zůstanou ohraničené z fyzikálních důvodů. Proto neexistuje stabilní stav, a systém je nestabilní. Je možné ukázat, že systém není chaotický, ale oscilacemi se přibližuje k periodickému řešení. Taková analýza je však již nad rámec základního seznámení se s aparátem autonomních systémů. 
+$$0=\begin{vmatrix}2-\lambda & 1\\-3 & -1-\lambda\end{vmatrix}=\lambda^2- \lambda+1=\left(\lambda-\frac 12\right)^2+\frac 34.$$
+Taková rovnice nemá řešení v množině reálných čísel a vlastní čísla jsou komplexně sdružená $$\lambda_{1,2}=\frac 12 \pm \frac{\sqrt {3}}{2}i.$$ Protože reálná část $\Re(\lambda_i)=\frac 12>0$, řešení se v oscilacích vzdalují od rovnovážného bodu. Protože systém je druhého řádu a tímto postupem je možno získat dvě nezávislá řešení, lineárními kombinacemi vygenerujeme všechna řešení. Proto se v oscilacích budou od stacionárního bodu vzdalovat všechna řešení. Další stacionární bod neexistuje a koncentrace určitě zůstanou ohraničené z fyzikálních důvodů. Proto neexistuje stabilní stav, a systém je nestabilní. Je možné ukázat, že systém není chaotický, ale oscilacemi se přibližuje k periodickému řešení. Taková analýza je však již nad rámec základního seznámení se s aparátem autonomních systémů. 
 
 ## Autonomní systém ve dvou dimenzích
 

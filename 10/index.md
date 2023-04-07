@@ -47,7 +47,7 @@ Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Naz�
 ```{prf:theorem} stabilita konstantních řešení
 :nonumber:
  Jestliže platí $f(y_0)=0$, je
-  konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
+  konstantní funkce $y(t)=y_0$ konstantním řešením rovnice
   $$\frac{\mathrm dy}{\mathrm dt}=f(y).$$ Toto řešení je stabilní
   pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
 ```
@@ -61,7 +61,7 @@ Pro grafickou interpretaci věty je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
 má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z monotonie pravé strany.
 
-Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt}$ a toto řešení se pro velká $t$ blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty $k$. Pravou stranu rovnice, funkci $f(y)$, je možné aproximovat vztahem $f(y)\approx f'(y_0)(y-y_0)$ a odsud a z poznatku, že malá změna rovnice vetšinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech) a proto rovnice $y'=f(y)$ kopíruje v okolí bodu $y_0$ chování rovnice $(y-y_0)'=f'(y_0)(y-y_0)$, pokud vynecháme patologické případy, což je zde $f'(y_0)=0$. Řešení je tedy $y\approx y_0+Ce^{f'(y_0)t}$ a tato funkce buď konverguje k $y_0$ nebo roste neohraničeně, v závislosti na znaménku derivace $f'(y_0)$.
+Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt}$ a toto řešení se pro velká $t$ blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty $k$. Pravou stranu rovnice, funkci $f(y)$, je možné aproximovat vztahem $f(y)\approx f'(y_0)(y-y_0)$ a odsud a z poznatku, že malá změna rovnice většinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech), a proto rovnice $y'=f(y)$ kopíruje v okolí bodu $y_0$ chování rovnice $(y-y_0)'=f'(y_0)(y-y_0)$, pokud vynecháme patologické případy, což je zde $f'(y_0)=0$. Řešení je tedy $y\approx y_0+Ce^{f'(y_0)t}$ a tato funkce buď konverguje k $y_0$, nebo roste neohraničeně, v závislosti na znaménku derivace $f'(y_0)$.
 
 ### Logistická diferenciální rovnice s konstantním lovem
 
@@ -90,7 +90,7 @@ a rovnováha je tedy poněkud křehká.
 
 [Numerický model](http://user.mendelu.cz/marik/aromamath/Lov_populace.html)
 
-Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
+Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu, i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
 
 ```{prf:remark} strukturální stabilita modelu, bifurkace
 :nonumber:
@@ -136,11 +136,11 @@ používající první z nich budeme nazývat *jestřábi* a druhý
 u téhož zdroje (potrava, hnízdiště, apod). 
 
 * Jestřáb o zdroj bojuje a ustoupí pouze po prohraném boji.
-* Holubice
-  o zdroje nebojuje a zkonzumuje zdroj pouze pokud protivník ustoupí
-  bez boje.
+* Holubice o zdroje nebojuje. Pokud protivník ustoupí bez boje,
+  holubice zdroj zkonzujmuje. V opačném případě zdroj zkonzumuje
+  protivník.
 * Předpokládejme, že každý jedinec v populaci si zkonzumováním
-  zdroje si může svou evoluční zdatnost posílit o hodnotu $V$, pokud
+  zdroje může svou evoluční zdatnost posílit o hodnotu $V$. Pokud
   je nucen a ochoten o zdroj bojovat, je jeho evoluční zdatnost naopak
   snížena o hodnotu $D$. 
 * Setkají-li se u zdroje dvě holubice, jedna z nich ustoupí bez boje
@@ -161,12 +161,12 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
 
 * V bodě $x=0$ je funkce $f$ nulová a rostoucí. Stacionární bod $x=0$ je vždy nestabilní. **Ať jsou tedy podmínky jakékoliv, vždy budou v populaci
     přítomni jestřábi.** Přitom právě jestřábi paradoxně plýtvají
-  zdroji energie na boj, namísto, aby celou energii zaměřili na
+  zdroji energie na boj, namísto toho, aby celou energii zaměřili na
   rozmnožování. Z hlediska efektivity při využívání zdrojů prostředí
   platí, že populace složená ze samých holubic využívá zdroje
   prostředí nejefektivnějším možným způsobem.  Přesto je taková
   populace evolučně nestabilní! Pronikne-li do populace samých holubic jeden jestřáb, má značnou evoluční výhodu, protože každý zdroj, u kterého se nachází,
-  zkonzumuje. Tím poroste jeho evoluční zdatnost a jeho geny nebo vzorce chování (u druhů které mohou přepínat strategie chování) se budou
+  zkonzumuje. Tím poroste jeho evoluční zdatnost a jeho geny nebo vzorce chování (u druhů, které mohou přepínat strategie chování) se budou
   v populaci rychle šířit.  
 * Pokud jsou náklady na boj větší než užitek ze zdrojů, platí $V<D$.
   V intervalu $[0,1]$ leží stacionární bod $x=\frac VD$ a tento bod je
@@ -243,10 +243,10 @@ stabilního stavu. Pokud se nějakým způsobem změní velikost populace o
 malé množství, systém se po čase díky stabilitě vrátí do původního
 stavu. Pokud však skok je velký a systém populace se dostane nad
 hodnotu nestabilního stavu, růst pokračuje a systém spěje ke
-stabilitě, ale s vyšším výskytem škůdce odpovídající stacionárnímu
+stabilitě, ale s vyšším výskytem škůdce, který odpovídá stacionárnímu
 bodu $7.3$.
 
-Poněkud jednodušší je kvalitativní analýza, pokud zvolíme jednotku veličiny $y$ tak, aby koeficient $A$ byl roven jedné, zvolíme jednotku času tak, aby koeficient $H$ byl roven jedné a vytkneme proměnnou $y$. Model má potom tvar
+Poněkud jednodušší je kvalitativní analýza, pokud vhodně zvolíme jednotku času a jednotku veličiny $y$. Jednotku veličiny $y$ zvolíme tak, aby koeficient $A$ byl roven jedné. Jednotku času zvoléme tak, aby koeficient $H$ byl roven jedné. Kromě toho vytkneme proměnnou $y$. Model má potom tvar
 $$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé straně v hranaté závorce zůstává rozdíl funkce $\frac{y}{y^2+1}$ neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat. 
 
 [Numerický model](http://user.mendelu.cz/marik/aromamath/Populace_pod_tlakem_predatoru.html)
@@ -288,7 +288,7 @@ Zejména tedy, pokud má Jacobiho matice všechny vlastní hodnoty
 záporné, tak všechna řešení z nějakého okolí stacionárního bodu
 konvergují do tohoto bodu. Pokud má všechny vlastní hodnoty kladné,
 všechna řešení z nějakého okolí se naopak od stacionárního bodu
-vzdalují. To platí i pro vlastní komplexní vlastní hodnoty, pouze se
+vzdalují. To platí i pro komplexní vlastní hodnoty, pouze se
 mezi konvergencí a vzdalování přepíná podle znaménka reálné části
 vlastních hodnot a řešení oscilují směrem ke stacionárnímu bodu nebo
 od něj.
@@ -299,7 +299,7 @@ od něj.
   stacionárního bodu budeme rozumět, stejně jako výše, že malá
   výchylka od stacionárního bodu vede na řešení, které konverguje zpět
   k tomuto stacionárnímu bodu. Stabilita vyjadřující, že při malé
-  změně koeficientů v systému se nezmění typ singulárních bodů se
+  změně koeficientů v systému se nezmění typ singulárních bodů, se
   nazývá *strukturální stabilita*.
 ```
 
@@ -370,7 +370,7 @@ $$ \begin{aligned}
  \end{aligned}$$
  Pro autonomní systémy v rovině používáme dva základní způsoby vizualizace. Oba si můžete prohlédnout výše v příkladu s bruselátorem.
  
- 1. Řešení zobrazíme jako *grafy funkcí $x(t)$ a $y(t)$*. Tímto přístupem dokážeme posoudit dynamiku v čase, odhadnout rychlost s jakou se mění obě komponenty řešení. Často kreslíme do jednoho obrázku a často máme v tomto obrázku dvojí souřadnicový systém: jeden pro hodnoty $x$ a jeden pro hodnoty $y$. 
+ 1. Řešení zobrazíme jako *grafy funkcí $x(t)$ a $y(t)$*. Tímto přístupem dokážeme posoudit dynamiku v čase, odhadnout rychlost, s jakou se mění obě komponenty řešení. Často kreslíme do jednoho obrázku a často máme v tomto obrázku dvojí souřadnicový systém: jeden pro hodnoty $x$ a jeden pro hodnoty $y$. 
  1. Řešení zobrazíme jako parametrickou křivku $\vec r(t)=[x(t), y(t)]$. Tato křivka se nazývá *trajektorie*. V tomto případě sice nemáme informaci o dynamice v čase, ale můžeme lehce posoudit, jak se chovají řešení vycházející z různých počátečních podmínek. Proto tento způsob zpravidla preferujeme. Tento způsob znázornění se nazývá *fázový portrét*.
  
 Křivky tvořené trajektoriemi mají speciální vlastnosti. Například se
@@ -381,7 +381,7 @@ protnout. Díky tomu existuje jenom několik málo druhů trajektorií.
 *  Uzavřené trajektorie, cykly.
     Tyto trajektorie odpovídají periodickým řešením. Uvnitř
     každého cyklu leží alespoň jeden stacionární bod. 
-* Trajektorie, které samy sebe nikde neprotínají a pro
+* Trajektorie, které samy sebe nikde neprotínají, a pro
     $t\to\pm\infty$ tyto trajektorie mají jednu z následujících
     vlastností.
     * Trajektorie mají alespoň jednu složku neohraničenou.
@@ -424,13 +424,13 @@ ww:problems/autonomni_systemy/14.pg
 
 ## Základní modely populační ekologie
 
-Populační ekologie je součást ekologie zabývající se modelováním vývoje populací. Základním vyjadřovacím jazykem jsou diferenciální rovnice nebo jejich diskrétní obdoba, kdy se čas mění po skocích, diferenční rovnice. Málokdy uvažujeme jedinou populaci, většinou studujeme bohatší ekosystémy, což vede na soustavy rovnic. Dva nejklasičtější si zde stručně uvedeme a prostudujeme ve cvičení.
+Populační ekologie je součást ekologie zabývající se modelováním vývoje populací. Základním vyjadřovacím jazykem jsou diferenciální rovnice nebo jejich diskrétní obdoba, kdy se čas mění po skocích, diferenční rovnice. Málokdy uvažujeme jedinou populaci, většinou studujeme bohatší ekosystémy, což vede na soustavy rovnic. Dva nejklasičtější příklady si zde stručně uvedeme a prostudujeme ve cvičení.
 
 ### Model konkurence dvou druhů
 
 manimp:Konkurence_druhu|Při konkurenci dvou druhů může dojít (podle nastavení parametrů) ke koexistenci nebo ke konkurenčnímu vyloučení. Model ukazuje, jak se konkurence projevuje v nejjednodušším případě, při sledování konkurence dvou populací.
 
-Situace kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu ovlivňuje druhý druh je modelována autonomním systémem
+Situace, kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu ovlivňuje druhý druh, je modelována autonomním systémem
 $$
 \begin{aligned}
 \frac{\mathrm dx}{\mathrm dt}&=x r_1 (1-a x-by),\\
@@ -443,14 +443,14 @@ Tento systém vychází z logistické rovnice pro každou z populací s doplněn
 
 manim:Predator_prey|zihShrEOJAU|Model dravce a kořisti vysvětluje kolísání populací okolo rovnovážné polohy. Jde o stabilitu, která však nespočívá s konstantních hodnotách stavů, ale v periodickém průběhu. 
 
-Skutečnost kdy žijí ve společné lokalitě a přítomnost jednoho druhu umožňuje přežití druhého je modelována autonomním systémem
+Situace, kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu umožňuje přežití druhého, je modelována autonomním systémem
 $$
 \begin{aligned}
 \frac{\mathrm dx}{\mathrm dt}&=x r (1-a x) -V(x)y,\\
 \frac{\mathrm dy}{\mathrm dt}&=y (-\alpha+kV(x)).
 \end{aligned}
 $$
-V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$, (tj. pro nenažrané dravce kteří nejsou nikdy saturováni a bez vnitrodruhové konkurence v populaci kořisti) dostáváme klasický Lotkův-Voterrův model, který v jistém smyslu odstartoval využití matematiky v modelování biologických systémů. Povedlo se mu vysvětlit oscilace mezi populacemi kořisti a dravce. Přes tento úspěch se však pro praktické modelování využívají dokonalejší modely. Zejména je nutno uvažovat ohraničenou trofickou funkci.
+V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$, (tj. bez vnitrodruhové konkurence v populaci kořisti a pro nenažrané dravce, kteří nejsou nikdy saturováni) dostáváme klasický Lotkův-Voterrův model, který v jistém smyslu odstartoval využití matematiky v modelování biologických systémů. Povedlo se mu vysvětlit oscilace mezi populacemi kořisti a dravce. Přes tento úspěch se však pro praktické modelování využívají dokonalejší modely. Zejména je nutno uvažovat ohraničenou trofickou funkci.
 
 ## Vícerozměrné autonomní systémy, kompartmentové modely
 

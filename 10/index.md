@@ -137,7 +137,7 @@ u téhož zdroje (potrava, hnízdiště, apod).
 
 * Jestřáb o zdroj bojuje a ustoupí pouze po prohraném boji.
 * Holubice o zdroje nebojuje. Pokud protivník ustoupí bez boje,
-  holubice zdroj zkonzujmuje. V opačném případě zdroj zkonzumuje
+  holubice zdroj zkonzumuje. V opačném případě zdroj zkonzumuje
   protivník.
 * Předpokládejme, že každý jedinec v populaci si zkonzumováním
   zdroje může svou evoluční zdatnost posílit o hodnotu $V$. Pokud
@@ -246,7 +246,7 @@ hodnotu nestabilního stavu, růst pokračuje a systém spěje ke
 stabilitě, ale s vyšším výskytem škůdce, který odpovídá stacionárnímu
 bodu $7.3$.
 
-Poněkud jednodušší je kvalitativní analýza, pokud vhodně zvolíme jednotku času a jednotku veličiny $y$. Jednotku veličiny $y$ zvolíme tak, aby koeficient $A$ byl roven jedné. Jednotku času zvoléme tak, aby koeficient $H$ byl roven jedné. Kromě toho vytkneme proměnnou $y$. Model má potom tvar
+Poněkud jednodušší je kvalitativní analýza, pokud vhodně zvolíme jednotku času a jednotku veličiny $y$. Jednotku veličiny $y$ zvolíme tak, aby koeficient $A$ byl roven jedné. Jednotku času zvolíme tak, aby koeficient $H$ byl roven jedné. Kromě toho vytkneme proměnnou $y$. Model má potom tvar
 $$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé straně v hranaté závorce zůstává rozdíl funkce $\frac{y}{y^2+1}$ neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat. 
 
 [Numerický model](http://user.mendelu.cz/marik/aromamath/Populace_pod_tlakem_predatoru.html)
@@ -289,7 +289,7 @@ záporné, tak všechna řešení z nějakého okolí stacionárního bodu
 konvergují do tohoto bodu. Pokud má všechny vlastní hodnoty kladné,
 všechna řešení z nějakého okolí se naopak od stacionárního bodu
 vzdalují. To platí i pro komplexní vlastní hodnoty, pouze se
-mezi konvergencí a vzdalování přepíná podle znaménka reálné části
+mezi konvergencí a vzdalováním přepíná podle znaménka reálné části
 vlastních hodnot a řešení oscilují směrem ke stacionárnímu bodu nebo
 od něj.
 

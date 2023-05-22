@@ -137,6 +137,9 @@ ww:problems/krivkovy_integral/40_06.pg
 \fi
 
 
+<div class='obtekat'>
+
+
 ```{figure} nezavislost_na_ceste_1.png
  Křivkový integrál v nekonzervativním poli (obsahy jsou různé)
 ```
@@ -145,8 +148,11 @@ ww:problems/krivkovy_integral/40_06.pg
  Křivkový integrál v konzervativním poli (obsahy jsou stejné)
 ```
 
+</div>
+
 
 \iffalse
+
 
 * [online výpočet integrálů z obrázků](https://sagecell.sagemath.org/?z=eJx1kcFOhDAQhu88xaSB2K7V3bI3s_VoTLjswRuypkLXJSBgW1Z4FB_I93KKmHVjbNK0k_-fma_TozJALwY-cnfBgq6ttQAJ9Gpc2jfj6LCLL8ddzPhwHn9b49l6ssFwCoAFQS4kFVeOOxbksaR5a2lXLtzSW23Z_ARozdffTnC7NSYWeg-VKY9VexyfysbpF6NqoN2KQyc4VHhWgt0EgMto15uGNv2rNmWu6jP_te2fLR2kzxgl5iyKcr-nGDp22Yn_ZIEyX3HB0lWGOPvWwBbKBiv6ESGEf_7c3x7ad3pwrzUlm4O59ZvghM4lg1p8u8W0GwgfjzqHO0kjyyPLws0SJRIBrZXTA936nvznLjLG_IB8Oaee-7pSMk1J8vmB01GEk_u2aFqnSJZNHo-aTKg5cuYx7vUM-qvEteo63RQ0NSQcZGRDDuE4n-6xbFJ8exaSaEZKfiElExL_8zsTNwdPzCGZ7pM1Y9j2NA0EqDWdMTgctCq0eTLtu3wwvWbsC89xv1o=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * [online výpočet rotace nekonzervativního pole z obrázku](https://sagecell.sagemath.org/?z=eJyNUsFywiAQvTvjP-w42sBI2pg71_5Eoxk0QZkhISVoQcd_L2Am6dgeygF22bc89u1a4siVXphGiQUH1wTPZ_MZRzbcY4pS99Z_aoPsLl-7XY6JffKzmGAb0RKwDbMEXLSdt4FCRmBD4h5glbhwiirBOeIf2ZZYvB6czZa40cm3nhu_9qLppOCu5Gcpkec5nLWcvgZoyr3idMp1v3PJCM4Dazp94Q-iCZyFx9KJxv4GQ6y_P6kvdDKNRHqxLPb1UbQ3JsWxras7FJf6AO8vFFY9FAUU8xkAFA0zJ9Xd4qmbm5fmfv8XUiszIoEGZN1WI9tysYpZSDJTW-Tlol4wGrrsSyXwuA6NeI4MoUHknzG_QpGdVKb0vEbpkotaVihKFBuSYRIUGuwgoSVxKMJMBNeROBfu4bK-8--UmhmhqB-Qg5JK02Qvz3WCvwFPt855&lang=sage&interacts=eJyLjgUAARUAuQ==)
@@ -161,6 +167,8 @@ ww:problems/krivkovy_integral/40_06.pg
 -->
 
 \fi
+
+<div style="clear:both;"></div>
 
 ## Greenova věta
 

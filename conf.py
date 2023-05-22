@@ -59,7 +59,7 @@ html_theme_options = {
     #'google_analytics_id': '',
     #'extra_navbar': extra_navbar,
     'home_page_in_toc': False,
-    'announcement': oznameni,
+    # 'announcement': oznameni,
     'use_repository_button': False,
     'use_edit_page_button': False,
     'use_issues_button': False,

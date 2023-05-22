@@ -186,7 +186,7 @@ $$
 
 \fi
 
-Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tyto koně loveni vlky. Napište matematický model založený na následujících předpokladech.
+Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tito koně loveni vlky. Napište matematický model založený na následujících předpokladech.
 
 1. Porodnost v populaci koní je  0.15 na jedince. 
 2. Úmrtnost v populaci koní je  0.01 na jedince.

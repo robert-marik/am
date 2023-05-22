@@ -4,7 +4,7 @@
 
 * Lineární diferenciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
 * Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělesa a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 
-* Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.
+* Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů, pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.
 * [Numerické experimenty](https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html) s rovnicí.
  Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neurčitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu případně až v poslední fázi. 
 ```
@@ -111,7 +111,7 @@ homogenní LDE druhého řádu $$y''+p(x)y'+q(x)y=0$$ vždy, bez ohledu na tvar 
 ```{prf:definition} asociovaná homogenní rovnice
 :nonumber:
  Nahradíme-li v nehomogenní LDE
-pravou stranu (tj. funkci $f$) nulovou funkcí obdržíme rovnici
+pravou stranu (tj. funkci $f$) nulovou funkcí, obdržíme rovnici
 $$ y''+p(x)y'+q(x)y=0.$$
 Tato rovnice se nazývá *asociovaná homogenní rovnice k rovnici {eq}`LDE`*.
 ```
@@ -290,7 +290,7 @@ $I$.
 ```
 
 
-Dvojicí lineárně nezávislých řešení rozumíme dvě řešení taková, že jedno není násobkem druhého.
+Dvojicí lineárně nezávislých řešení rozumíme taková dvě řešení, že jedno není násobkem druhého.
 
 ```{prf:definition} fundamentální systém řešení
 :nonumber:
@@ -387,7 +387,7 @@ partikulárním řešením této diferenciální rovnice.
 ```
 
 
-V praxi polynom který má být řešením napíšeme s neurčitými koeficienty a
+V praxi polynom, který má být řešením, napíšeme s neurčitými koeficienty a
 dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
 
 ## Dirichletova okrajová úloha, vlastní čísla
@@ -426,7 +426,7 @@ hodnoty parametru $\lambda$.
 ```{prf:definition} vlastní funkce, vlastní hodnota okrajové úlohy
 :nonumber:
  Hodnota $\lambda$,
-pro kterou existuje netriviální řešení Dirichletovy okrajové úlohy
+pro kterou existuje netriviální řešení Dirichletovy okrajové úlohy,
 se nazývá *vlastní hodnota okrajové úlohy* a příslušné řešení se
 nazývá *vlastní funkce okrajové úlohy*.
 ```
@@ -518,7 +518,7 @@ jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je mož
 Předpokládejme, že máme nosník namáhaný na vzpěr. Nosník je uchycen na
 dolním a horním konci tak, že se nemůže pohybovat do stran, ale může
 se otáčet. Osu $x$ zvolíme podélně v ose vzpěry, osu $y$ kolmo. Při
-namáhání takového nosníku, je výchylka dána okrajovou úlohou ([A. Požgaj a
+namáhání takového nosníku je výchylka dána okrajovou úlohou ([A. Požgaj a
 kol., Štruktúra a vlastnosti
 dreva](https://katalog.mendelu.cz/documents/21654), str. 359)
 $$\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,$$
@@ -553,7 +553,7 @@ V praxi je možné si představit i jiné podmínky. Například v
 termodynamice se používají podmínky na hodnotu derivací ve dvou
 různých bodech $$y'(a)=\alpha, \quad y'(b)=\beta.$$ Takové podmínky se
 nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto
-podmínky splňuje se nazývá **Neumannova okrajová úloha**, též
+podmínky splňuje, se nazývá **Neumannova okrajová úloha**, též
 **Neumannova úloha**.
 
 Existují i smíšené úlohy, například při kmitání tělesa s jedním
@@ -573,7 +573,7 @@ tepla převedeme do tohoto tvaru zavedením bezrozměrných veličin, což
 si ukážeme v následující přednášce. Teď si ukážeme, jak řešení rovnice
 vede na řešení LDR druhého řádu. Uvažujme pro jednoduchost okrajovou
 úlohu, kdy konce tyče jsou udržovány na nulové teplotě, tj. je-li tyč
-délky $l$ položena v ose $x$ tak že levý konec je v počátku, platí pro
+délky $l$ položena v ose $x$ tak, že levý konec je v počátku, platí pro
 teplotu $u(x,t)$ podmínky $u(0,t)=u(l,t)=0$ v libovolném čase $t$.
 
 Budeme řešení hledat ve tvaru $u(x,t)=\varphi(x)\psi(t)$, kde $\varphi$ a $\psi$ jsou funkcemi jedné proměnné.
@@ -583,11 +583,11 @@ a rovnice má tvar
 $$\varphi(x)\psi'(t)=\varphi''(x)\psi (t).$$
 Vydělením této rovnice součinem $\varphi(x)\psi(t)$ dostáváme
 $$\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.$$
-Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. 
+Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě.
+$$\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}=\omega.$$
 
-Okrajové podmínky si vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$
-a díky tomu máme pouze nulové řešení pokud je tato konstanta kladná (viz výše výpočet vlastních hodnot pro tuto úlohu). Společná konstanta tedy musí být záporná. 
-Označme ji $-\lambda^2$. Platí tedy
+Okrajové podmínky vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Jesliže je v takovém případě konstanta $\omega$ kladná, má úloha pouze nulové řešení (viz výše výpočet vlastních hodnot pro tuto úlohu). Konstanta $\omega$ tedy musí být záporná. 
+Přeznačme ji do tvaru $$\omega = -\lambda^2$$ Platí tedy
 $$\frac {\psi'(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.$$
 První rovnice představuje lineární diferenciální rovnici prvního řádu
 $$\psi'=-\lambda^2\psi$$
@@ -609,7 +609,7 @@ vzorec je tedy schopen popsat řešení úlohy pro libovolné fyzikálně
 relevantní situace. Vidíme i přímo strukturu řešení, které je jakousi
 lineární kombinací různých módů. Tato skutečnost lépe vynikne na
 analogické diferenciální rovnici kmitání struny, kdy jednotlivé módy
-přímo vnímáme sluchem: struna nemůže kmitat na libovolné frekvenci ale
+přímo vnímáme sluchem: struna nemůže kmitat na libovolné frekvenci, ale
 pouze a frekvenci dané okrajovou podmínkou a na frekvencích násobných.
 
 Poznámka: Podobná situace a možnost separace proměnných je u rovnice

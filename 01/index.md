@@ -5,7 +5,7 @@
  \iffalse
  
  ```{figure} chata.jpg
- Důležitou aplikací parciálních derivací je formulace rovnic matematické fyziky. Rovnice vedení tepla je mezi rovnicemi matematické fyziky jedou z nejdůležitějších.
+ Důležitou aplikací parciálních derivací je formulace rovnic matematické fyziky. Rovnice vedení tepla je mezi rovnicemi matematické fyziky jednou z nejdůležitějších.
 ```
 
 \fi
@@ -47,7 +47,7 @@ V kartézské soustavě souřadnic pracujeme často s grafem funkce, což je mno
 
 Jedním ze zásadních úkolů je schopnost měřit růst nebo pokles veličiny a jeho rychlost. Abychom nemuseli rozlišovat nárůst a pokles, pracujeme s jednotným přístupem, kdy pokles uvažujeme jako záporný nárůst a častěji obojí sjednocujeme pod pojem změna veličiny. 
 
-U veličiny závislé na čase změnu veličiny na časovém intervalu určujeme jako rozdíl hodnoty veličiny na konci a na začátku časového intervalu, tj. $$f(t+h)-f(t)$$ je změna veličiny mezi okamžiky $t$ a $t+h$. Pro porovnání rychlostí změny tuto změnu přepočítáváme na jednotku času a definujeme průměrnou rychlost změny vztahem $$\frac{f(t+h)-f(t)}{h}.$$ Kladná rychlost znamená nárůst v čase, záporná pokles. Pro nalezení okamžité rychlosti změny bychom potřebovali dosadit $h=0$, aby byla rychlost počítána na intervalu nulové délky. Toto udělat nemůžeme, protože bychom dostali nedefinovaný výraz, můžeme to však obejít pomocí limity a najít okamžitou rychlost jako limitu $$\lim_{h\to 0}\frac{f(t+h)-f(t)}{h}.$$ Tato limita se nazývá *derivace* a udává, jak rychle se mění funkce $f$ v čase v okamžiku $t$. Protože kladná změna odpovídá nárůstu, interpretujeme derivaci často i jako rychlost změny funkce i jako rychlost růstu funkce. Protože rychlost je změna za jenodtku času, můžeme derivaci ekvivalentně interpretovat jako nárůst za jednotku času nebo změnu za jednotku času. 
+U veličiny závislé na čase změnu veličiny na časovém intervalu určujeme jako rozdíl hodnoty veličiny na konci a na začátku časového intervalu, tj. $$f(t+h)-f(t)$$ je změna veličiny mezi okamžiky $t$ a $t+h$. Pro porovnání rychlostí změny tuto změnu přepočítáváme na jednotku času a definujeme průměrnou rychlost změny vztahem $$\frac{f(t+h)-f(t)}{h}.$$ Kladná rychlost znamená nárůst v čase, záporná pokles. Pro nalezení okamžité rychlosti změny bychom potřebovali dosadit $h=0$, aby byla rychlost počítána na intervalu nulové délky. Toto udělat nemůžeme, protože bychom dostali nedefinovaný výraz, můžeme to však obejít pomocí limity a najít okamžitou rychlost jako limitu $$\lim_{h\to 0}\frac{f(t+h)-f(t)}{h}.$$ Tato limita se nazývá *derivace* a udává, jak rychle se mění funkce $f$ v čase v okamžiku $t$. Protože kladná změna odpovídá nárůstu, interpretujeme derivaci často i jako rychlost změny funkce i jako rychlost růstu funkce. Protože rychlost je změna za jednotku času, můžeme derivaci ekvivalentně interpretovat jako nárůst za jednotku času nebo změnu za jednotku času. 
 
 V některých přírodních zákonech potřebujeme pracovat s rychlostí poklesu funkce nebo s poklesem za jednotku času. Tento pokles vyjařuje záporně vzatá derivace, tj. derivace vynásobená faktorem $(-1)$.
 
@@ -411,7 +411,7 @@ caption:Slovní interpretace částí rovnice vedení tepla.
 endtable
 
 **Transformace souřadnic**
-V praxi je vhodné umět popsat úlohu i v jiné soustavě souřadnic. Pokud nechceme měnit měřítko, je v jendodimenzionálním případě alternativou pouze změna orientace osy. Tím se mění paricální derivace podle prostorové proměnné. Pokud například funkce ve směru osy roste, po otočení osy bude ve směru osy klesat. V rovnici vedení tepla se tedy změní znaménko parciální derivace podle prostorové souřadnice a vlivem této změny se změní i znaménko toku tepla. Derivace toku tepla podle prostorové souřadnice se nezmění, protože v ní jsou obsaženy dvě derivace teploty podle polohy a dvojí změna znaménka se vyruší. Kromě derivace teploty podle polohy a kromě toku tepla tedy při změně směru osy všechny komponenty obsažené v rovnici vedení tepla zůstávají stejné.
+V praxi je vhodné umět popsat úlohu i v jiné soustavě souřadnic. Pokud nechceme měnit měřítko, je v jednodimenzionálním případě alternativou pouze změna orientace osy. Tím se mění paricální derivace podle prostorové proměnné. Pokud například funkce ve směru osy roste, po otočení osy bude ve směru osy klesat. V rovnici vedení tepla se tedy změní znaménko parciální derivace podle prostorové souřadnice a vlivem této změny se změní i znaménko toku tepla. Derivace toku tepla podle prostorové souřadnice se nezmění, protože v ní jsou obsaženy dvě derivace teploty podle polohy a dvojí změna znaménka se vyruší. Kromě derivace teploty podle polohy a kromě toku tepla tedy při změně směru osy všechny komponenty obsažené v rovnici vedení tepla zůstávají stejné.
 
 
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 

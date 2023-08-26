@@ -410,6 +410,10 @@ caption:Slovní interpretace částí rovnice vedení tepla.
 
 endtable
 
+**Transformace souřadnic**
+V praxi je vhodné umět popsat úlohu i v jiné soustavě souřadnic. Pokud nechceme měnit měřítko, je v jendodimenzionálním případě alternativou pouze změna orientace osy. Tím se mění paricální derivace podle prostorové proměnné. Pokud například funkce ve směru osy roste, po otočení osy bude ve směru osy klesat. V rovnici vedení tepla se tedy změní znaménko parciální derivace podle prostorové souřadnice a vlivem této změny se změní i znaménko toku tepla. Derivace toku tepla podle prostorové souřadnice se nezmění, protože v ní jsou obsaženy dvě derivace teploty podle polohy a dvojí změna znaménka se vyruší. Kromě derivace teploty podle polohy a kromě toku tepla tedy při změně směru osy všechny komponenty obsažené v rovnici vedení tepla zůstávají stejné.
+
+
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
 
 **Numerické modelování.**

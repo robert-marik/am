@@ -115,3 +115,12 @@ figcaption {font-size: 60%;}
 .secondary-toggle {display:none;}
 
 .extra_footer img {display: inline-block;}
+
+.Ylink{
+  text-align: right;
+}
+.Ylink a{border:solid 1px; padding:5px;}
+
+div.algorithm p.admonition-title {background-color: lightyellow;}
+
+.algorithm figure {width:100%; max-width:100%;}

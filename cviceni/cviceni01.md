@@ -97,15 +97,14 @@ pocitové teploty přibližně o $0.16$ stupně.
 
 ## Pocitová teplota numericky
 
+
+
 https://youtu.be/J0pTAxDwZj8
 
-\iffalse
 
 ```{figure} air-temperature.jpg
  
 ```
-
-\fi
 
 Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minulého příkladu pomocí výše uvedeného vzorce, ale má tabulku jako je na obrázku. Nám tato tabulka poslouží jako model funkce dvou proměnných zadané funkčními hodnotami v konečném počtu bodů. 
 
@@ -163,7 +162,7 @@ https://youtu.be/YvAFRS8zeos
 V případech, kdy je při tepelné výměně nutno uvažovat vedení tepla (vysoké Biotovo číslo), modelujeme změnu teploty podle rovnice vedení tepla, kterou jsme na přednášce odvodili pro jednorozměrný případ ve tvaru
 $$\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).$$  Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně. **Důležitou vlastností rovnice je, že je stále stejná, ať teplo teče doleva nebo doprava, ať způsobuje ohřev nebo ochlazování, ať tok tepla sílí nebo slábne. Tyto skutečnosti přirozeně rozlišujeme znaménkem. Abychom dokázali úlohu správně zadat nebo abychom dokázali správně interpretovat řešení, je nutné znaménka správně interpretovat a proto si vše ukážeme v následujícím příkladu.**
 
-Uvažujme jednorozměrnou úlohu s vedením tepla. Osa $x$ směřuje doprava, teplota v bodě $x$ a čase $t$ je $T(x,t)$ ve stupních Celsia. Tok tepla v čase $t$ a v bodě $x$ je $q(x,t)$ v joulech za sekundu. Kladný tok je ve směru osy $x$.
+Uvažujme jednorozměrnou úlohu s vedením tepla. Osa $x$ směřuje doprava, teplota v bodě $x$ a čase $t$ je $T(x,t)$ ve stupních Celsia. Tok tepla v čase $t$ a v bodě $x$ je $q(x,t)$ v joulech za sekundu (tj ve wattech). Kladný tok je ve směru osy $x$.
 Podle Fourierova zákona je $$q=-\lambda \frac{\partial T}{\partial x}.$$
 
 Tyč má teplotu $0\,^{\circ}\mathrm{C}$, pravý konec udržujeme na této teplotě, levý konec ohříváme na $20\,^{\circ}\mathrm{C}$ a udržujeme na této teplotě. Ve zbytku tyče (stěny) se postupně nastolí rovnováha vlivem vedení tepla.
@@ -189,11 +188,46 @@ _Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasn
 1. Rychlost, jak rychle se klesá teplota jako funkce polohy, tj. směrem doprava, je $-\frac {\partial T}{\partial x}$ a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních celsia na metr.
         $\left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
 1. Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy je $\frac {\partial q}{\partial x}$. Teplo teče doprava a přitom se spotřebovává, protože se ohřívá tyč. Proto tok klesá a parciální derivace je záporná.
-  Měříme v joulech za sekundu na metr.
+  Měříme v joulech za sekundu na metr (tj. ve wattech na metr).
           $\left[\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$
 1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je $-\frac {\partial q}{\partial x}$ a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko.
-  Měříme v joulech za sekundu na metr.
+  Měříme v joulech za sekundu na metr (tj. ve wattech na metr).
             $\left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$ Tato veličina udává, kolik tepla se za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže ``ztratit'', ale použije se na zvýšení teploty, což je vyjádřeno právě v rovnici vedení tepla.
+
+```
+
+## Změna směru osy v rovnici vedení tepla
+
+Při studiu praktických úloh je vhodné si uvědomit, které výrazy závisí na volbě souřadné soustavy a které jsou invariantní při změně soustavy, ve které úlohu popisujeme. 
+
+Teplota je dána vztahem $$T(x,t)=x^3-2x^2+3xt.$$ Zavedeme novou proměnnou $x'=-x$. V místě $x=1$ a v čase $t=1$ mějme bod $P$. Porovnejte parciální derivace podle $x$ a $x'$ a i všechny další komponenty z rovnice vedení tepla vyjádřené jednou v souřadnicích $(x,t)$ a jednou $(x',t)$. Volte $k=1$.
+
+```{prf:example} Řešení
+:class: dropdown
+:nonumber:
+
+(1) Souřadnice $x$ a $t$
+
+Platí $$\frac{\partial T}{\partial t}=3x$$ a $$\frac{\partial T}{\partial x}=3x^2-4x+3t.$$
+Odsud $$q=-k\frac{\partial T}{\partial x}=-3x^2+4x-3t$$
+a $$\frac{\partial q}{\partial x}=\frac{\partial }{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=-6x+4$$
+V bodě $P$ dosazujeme $x=1$ a $t=1$ a tedy $T=2$,
+$\frac{\partial T}{\partial t}(P)=3$, $\frac{\partial T}{\partial x}(P)=2$, $q(P)=-2$ a $\frac{\partial q}{\partial x}(P)=-2$
+
+(2) Souřadnice $x'$ a $t$
+
+V bodě $P$ platí $x'=-x=-1$. Teplota v čárkované soustavě je $T(x',t)=T(-x,t)=-x'^3-2x'^2-3x't$. Odsud
+$$\frac{\partial T}{\partial t}=-3x'$$
+a 
+$$\frac{\partial T}{\partial x'}=-3x'^2-4x'-3t.$$
+Odsud
+ $$q=-k\frac{\partial T}{\partial x'}=3x'^2+4x'+3t$$
+a $$\frac{\partial q}{\partial x'}=\frac{\partial }{\partial x'}\left(-k\frac{\partial T}{\partial x'}\right)=6x'+4$$
+V bodě $P$ dosazujeme $x'=-1$ a $t=1$ a tedy $T=2$,
+$\frac{\partial T}{\partial t}(P)=3$, $\frac{\partial T}{\partial x'}(P)=-2$, $q(P)=2$ a $\frac{\partial q}{\partial x'}(P)=-2$
+
+
+**Závěr:** Derivace teploty podle času a derivace toku podle prostorové souřadnice se nezměnila. Derivace teploty podle prostorové souřadnice a tok změnily znaménko.
 
 ```
 

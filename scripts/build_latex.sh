@@ -9,15 +9,16 @@ cp custom_preamble.tex $directory/
 
 cd $directory
 
-sed -i 's/sphinxShadowBox/comment/' python.tex
-sed -i 's/sphinxtheindex/comment/' python.tex
-sed -i 's/documentclass\[/documentclass[twocolumn,/' python.tex
+cp python.tex python_kopie.tex
 
 sed -i 's/\\chapter{Parciální derivace}/\\part{Cvičení}\\input cviceni_definice.tex\n\\chapter{Parciální derivace}/' python.tex
 sed -i 's/\\chapter{Derivace funkce více proměnných}/\\part{Přednášky}\\input prednasky_definice.tex\n\\chapter{Derivace funkce více proměnných}/' python.tex
 
 sed -i 's/\\def\\sphinxdocclass{report}/\\def\\sphinxdocclass{book}/' python.tex
 
+sed -i 's/sphinxShadowBox/comment/' python.tex
+sed -i 's/sphinxtheindex/comment/' python.tex
+sed -i 's/documentclass\[/documentclass[twocolumn,/' python.tex
 
 sed -z -i 's/\\sphinxAtStartPar\n\\textbackslash{}iffalse/\\iffalse/g' python.tex
 sed -z -i 's/\\sphinxAtStartPar\n\\textbackslash{}fi/\\fi/g' python.tex
@@ -53,6 +54,9 @@ sed -i 's/Remark/Poznámka/' python.tex
 sed -i 's/Definition/Definice/' python.tex
 sed -i 's/Example/Příklad/' python.tex
 sed -i 's/begin{sphinxadmonition}{note}{Příklad (Řešení)}/begin{sphinxadmonition}{note}{Řešení}/' python.tex
+sed -i 's/twocolumn,a4paper,10pt,czech/twocolumn,a4paper,10pt/' python.tex
+sed -i 's/Algorithm.*$/Volitelný obsah}\\footnotesize/' python.tex
+
 
 xelatex python
 xelatex python

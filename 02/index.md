@@ -278,8 +278,8 @@ begintable
 |$q=\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|Ne|-|
 |$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|Znaménko zohledňuje fakt, že teplo teče od horkého konce ke studenému|
 |$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|Derivace podle $x$ (jednorozměrný gradient) místo podílu.|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ skalár|Libovolný|Ne|ANO|ANO|Jednorozměrný gradient je nahrazen obecným gradientem. Tok je vektor.|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ tenzor (matice)|Libovolný|ANO|ANO|ANO|Materiálová charakteristika $\lambda$ je matice.|
+|$\begin{aligned}\vec q&=-\lambda \nabla{T},\cr \lambda&\in\mathbb{R}\text{ (skalár)}\end{aligned}$|Libovolný|Ne|ANO|ANO|Jednorozměrný gradient je nahrazen obecným gradientem. Tok je vektor.|
+|$\begin{aligned}\vec q&=-\lambda \nabla{T}\cr \lambda&\in\mathbb{R}^n\text{ (tenzor)}\end{aligned}$|Libovolný|ANO|ANO|ANO|Materiálová charakteristika $\lambda$ je matice.|
 
 caption:Různé tvary konstitutivního zákona.
 

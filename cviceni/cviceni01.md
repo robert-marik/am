@@ -216,12 +216,12 @@ $\frac{\partial T}{\partial t}(P)=3$, $\frac{\partial T}{\partial x}(P)=2$, $q(P
 
 (2) Souřadnice $x'$ a $t$
 
-V bodě $P$ platí $x'=-x=-1$. Teplota v čárkované soustavě je $T(x',t)=T(-x,t)=-x'^3-2x'^2-3x't$. Odsud
+V bodě $P$ platí $x'=-x=-1$. Teplota v čárkované soustavě je $T(x',t)=T(-x,t)=-x^{\prime 3}-2x^{\prime 2}-3x't$. Odsud
 $$\frac{\partial T}{\partial t}=-3x'$$
 a 
-$$\frac{\partial T}{\partial x'}=-3x'^2-4x'-3t.$$
+$$\frac{\partial T}{\partial x'}=-3x^{\prime 2}-4x'-3t.$$
 Odsud
- $$q=-k\frac{\partial T}{\partial x'}=3x'^2+4x'+3t$$
+ $$q=-k\frac{\partial T}{\partial x'}=3x^{\prime 2}+4x'+3t$$
 a $$\frac{\partial q}{\partial x'}=\frac{\partial }{\partial x'}\left(-k\frac{\partial T}{\partial x'}\right)=6x'+4$$
 V bodě $P$ dosazujeme $x'=-1$ a $t=1$ a tedy $T=2$,
 $\frac{\partial T}{\partial t}(P)=3$, $\frac{\partial T}{\partial x'}(P)=-2$, $q(P)=2$ a $\frac{\partial q}{\partial x'}(P)=-2$

@@ -296,6 +296,8 @@ a pro výše uvažované hodnoty dostáváme $$\frac{\partial E}{\partial m}(400
 
 ww:problems/parcialni_derivace/povrch_tela.pg
 
+\iffalse
+
 ## Využití parciálních derivací, ochrana želv
 
 \iffalse
@@ -320,6 +322,8 @@ V [publikaci](https://www.jstor.org/stable/1939225)  Deborah T. Crouse, Larry B.
   0   &   0   &   0   &   0   &   0   &   0.8091&   0.8089
 \end{pmatrix}$$ 
 V této matici jsou zohledněny počty potomků želv v plodné fázi, pravděpodobnost přechodu želv do následující vývojové fáze a pravděpodobnost setrvání ve stávající vývojové fázi. Tato čísla se mění v závislosti na tom, kolik má želva nepřátel, jak složité je pro ni přežít, jak obtížné je pro ni se rozmnožovat. Například vysoká čísla v prvním řádku značí, že želvy mají hodně potomků. Číslo v prvním řádku a předposledním sloupci je menší, protože v tomto předposledním stadiu je želva jenom jeden rok a má málo potomků. Dynamika růstu populace je dána dominantní vlastní hodnotu matice. Tuto vlastní hodnotu označíme $\lambda$. Velikost populace roste přibližně geometrickou řadou s kvocientem $\lambda$. Pokud je tato hodnota větší něž jedna, velikost populace roste, v opačném případě populace vymírá. Pro uvedenou matici je $\lambda=0.95$ a populace se tedy mezi jednotlivými obdobími snižuje o pět procent. Hodnota $\lambda$ závisí na třinácti nenulových komponentách matice $A$ a je tedy funkcí třinácti proměnných. Pokud označíme prvky matice $A$ jako $a_{ij}$, je pro biology nesmírně zajímavá veličina $\frac{\partial \lambda}{\partial a_{ij}}$, která udává citlivost koeficientu řídícího růst populace na velikosti komponent matice $A$. Ještě častěji se pracuje s relativní změnou a v tomto případě sledujeme veličinu $\frac{a_{ij}}{\lambda}\frac{\partial \lambda}{\partial a_{ij}},$ která se nazývá elasticita a je bez jednotky. Proto se udává v procentech. Jedná se tedy o třináct parciálních derivací a třináct elasticit (pracujeme jenom s nenulovými komponentami matice). Je pozoruhodné, že hodnoty elasticity spojené s rozmnožováním a přežíváním vajíček a mláďat jsou řádově jednotky procent, ale hodnoty spojené s dospíváním jsou přes deset procent. To znamená, že pro ochranu populace je důležité nepodcenit ochranu dospívajících větších želv. Ochrana vajíček a čerstvě narozených želv má na celkovou kondici malý vliv a posílení těchto parametrů sama o sobě k udržení populace želv nestačí. Proto bylo vyvinuto zařízení [Turtle excluder device](https://en.wikipedia.org/wiki/Turtle_excluder_device), které umožní větším želvám uniknout z rybářských sítí a zvýší tak jejich šanci na přežití.
+
+\fi
 
 ## Linearita parciální derivace
 

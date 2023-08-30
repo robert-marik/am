@@ -159,6 +159,7 @@ $$
 $$
 ```
 
+\iffalse
 
 ### Proč trubky praskají podélně?
 
@@ -202,6 +203,9 @@ Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pL\Delta s 
 To však je možné očekávat i ze symetrie.
 
 Pokud se chcete dozvědět o problematice více, nebo si prohlédnout obrázky válcových nádrží, které selhaly vlivem vysokého nebo nízkého tlaku, zkuste Google a heslo "hoop stress".
+
+
+\fi
 
 ## Křivkový integrál druhého druhu
 

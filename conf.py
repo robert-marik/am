@@ -51,7 +51,7 @@ Toto jsou učební materiály předmětu Aplikovaná matematika převedené do n
 """
 extra_navbar = '<a href="https://user.mendelu.cz/marik/Aplikovana_matematika.pdf">Offline verze v PDF</a>'
 html_theme_options = {
-    'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n',
+    'extra_footer': '<p>\n<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>\n  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>\n</p>\n<p><script src="https://utteranc.es/client.js"\n repo="robert-marik/am" \n issue-term="pathname" \n label="comment" \n theme="github-light" \n crossorigin="anonymous" \n  async> \n </script> \n </p>',
     'search_bar_text': 'Hledat v textu...',
     'path_to_docs': '',
     'repository_url': 'https://github.com/robert-marik/am',

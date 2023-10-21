@@ -1,10 +1,3 @@
-```{button-link} https://user.mendelu.cz/marik/Aplikovana_matematika.pdf
-:color: primary
-:shadow:
-:expand:
-PDF verze
-```
-
 
 # Aplikovaná matematika
 

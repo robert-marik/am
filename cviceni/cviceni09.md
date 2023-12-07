@@ -34,7 +34,7 @@ $$T=\frac 1k \ln 2.$$ Tato hodnota se nazývá poločas rozpadu a je $\ln2$ nás
 
 ## Radioaktivní rozpad a radon v budovách
 
-Radon je po kouření druhou nejčastější přinou rakoviny plic.
+Radon je po kouření druhou nejčastější příčinou rakoviny plic.
 
 https://youtu.be/26EwlUHLqUc
 
@@ -52,10 +52,10 @@ V zemích s přirozenou radioaktivitou je nebezpečím radon. Na rozdíl od osta
 * V budově se rozpadá v souladu s obecným zákonem radioaktivního rozpadu, tj. rychlostí úměrnou množství. 
 * Kromě toho může unikat z budovy difuzí do vnějšího prostředí. Je realistické předpokládat, že rychlost snižování množství radonu tímto efektem je úměrná množství radonu. 
 
-3. Napište matematický model pro množství radonu v budově.
-4. Najděte stacionární (konstantní) řešení modelu.
-5. Najděte obecné řešení modelu. Ukažte, že rozdíl aktuálního stavu od stacionárního řešení exponenciálně klesá.
-6. Obranou proti radonu je izolace. Obranou proti radonu v nezaizolovaných objektech je časté větrání. Které parametry modelu jsou těmito systémy obrany proti radonu ovlivněny a jak? Ukažte, že opravdu vedou ke snížení množství radonu ve stacionárním stavu.
+1. Napište matematický model pro množství radonu v budově.
+2. Najděte stacionární (konstantní) řešení modelu.
+3. Najděte obecné řešení modelu. Ukažte, že rozdíl aktuálního stavu od stacionárního řešení exponenciálně klesá.
+4. Obranou proti radonu je izolace. Obranou proti radonu v nezaizolovaných objektech je časté větrání. Které parametry modelu jsou těmito systémy obrany proti radonu ovlivněny a jak? Ukažte, že opravdu vedou ke snížení množství radonu ve stacionárním stavu.
 
 _Více viz [Radon in the environment](http://www.nat.vu.nl/environmentalphysics/REAL%20Experiments/Radon/Radon_Theory.html)._
 

@@ -262,7 +262,7 @@ dráha vychází v metrech.
  
 \iffalse
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPIVtfk5cpWsFUw1jMx1TI0iNPQNQOK-ABFsrVytcrijHi5cg2APENDAwNerjIwE8QqKMrMK1HQ8NHItc010CmzLTPQ1ESI6qVkpqVplGnik81FkQUABtslGg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Výpočet Python.](https://gist.github.com/robert-marik/4a971f40d03edbd4cfda678b14a7f02f)
 
 \fi
 
@@ -290,7 +290,7 @@ Přímým výpočtem je možné určit $$\frac{\partial E}{\partial v}=-\frac{3.
 \dm $$\frac{\partial E}{\partial m}={2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}= \frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v} $$
 a pro výše uvažované hodnoty dostáváme $$\frac{\partial E}{\partial m}(400,8)= 0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.$$ Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Online výpočet Sage.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 (Zpracováno podle Stewart: Biocalculus)
 

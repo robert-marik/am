@@ -112,7 +112,7 @@ Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minuléh
 $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost větru $40\,\mathrm{km}\,\mathrm{hod}^{-1}$ a interpretujte výsledek slovně.
 1. Pocitová teplota $W$ je lineární v proměnné $T$. Proto derivace $\frac{\partial W}{\partial T}$ nezávisí na $T$. Jak se tato skutečnost
   odrazí v tabulce?
-  1. Odhadněte z tabulky, zda vliv větru klesá nebo roste s rychlostí větru. Potvrďte svou hypotézu analytickým výpočtem parciální derivace $\frac{\partial W}{\partial v}$ a vysvětlete fyzikálně.
+1. Odhadněte z tabulky, zda vliv větru klesá nebo roste s rychlostí větru. Potvrďte svou hypotézu analytickým výpočtem parciální derivace $\frac{\partial W}{\partial v}$ a vysvětlete fyzikálně.
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -124,7 +124,10 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 
 ```
 
-## Parciální derivace, tepelná kapacita dřeva
+## Parciální derivace, tepelná kapacita dřeva (volitelně)
+
+_Tato úloha je velmi podobná úloze předchozí, jenom používá tabulku s kroky, které nejsou ekvidistantní a proto je nutné použít něco jiného, než centrální diferenci._
+
 
 https://youtu.be/PjPYisnQa0A
 

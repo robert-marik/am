@@ -493,7 +493,7 @@ Analogicky pro parciální derivaci podle $x$
 $$\frac{\partial f}{\partial x}\approx  \frac{f(x+h,y)-f(x-h,y)}{2h}  $$
 a
 $$\frac{\partial^2f}{\partial x^2}\approx  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}.$$
-Tato aproximace první derivace se nazývá *centrální diference* a je přesnější než dopředná diference, protože je založena na přesnější aproximaci funkce $f$. Používá totiž polynom druhého stupně. Dopředná diference je založena pouze na lineární aproximaci a proto dává méně přesné výsledky.
+Tato aproximace první derivace používá *centrální diferenci* a je přesnější než aproximace založená na dopředné diferenci, protože je založena na přesnější aproximaci funkce $f$. Používá totiž polynom druhého stupně. Dopředná diference je založena pouze na lineární aproximaci a proto dává horší výsledky.
 
 Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciální derivaci podle $x$ i $y$. Dva vzorce pro každou parciální derivaci prvního řádu a jeden vzorec pro parciální derivaci druhého řádu. Aproximace uvedeme ve tvaru, ze kterého je možno současně vidět i chybu při použití dané aproximace. (Pro určení chyby u druhé derivace aproximujeme polynomem o řád vyšším.)
 

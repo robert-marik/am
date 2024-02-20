@@ -120,7 +120,7 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 
 1.  $$\frac {\partial W}{\partial v}(T=-15,v=40)\approx\frac{-29-(-26)}{50-30}\frac{{}^\circ \mathrm C}{\mathrm{km}\,\mathrm{hod}^{-1}}=-0.15^\circ \mathrm C/(\mathrm{km}\,\mathrm{hod}^{-1})$$  Za podmínek, kde je $15$ stupňů pod nulou a vane vítr o rychlosti $40$ kilometrů za hodinu každé další zesílení větru o kilometr za hodinu sníží pocitovou teplotu přibližně o patnáct setin stupně.
 1. Neformálně: V rámci každého řádku jsou stejně velké   skoky. Přesněji: V každém řádku je přibližně aritmetická   posloupnost, data se mění odečtením pevné konstanty. Případné  fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.
-1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciální derivace podle větru s rostoucí  rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivování změní na  zápornou mocninu. Tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
+1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciální derivace podle rychlosti větru s rostoucí rychlostí větru v absolutní hodnotě klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivování změní na  zápornou mocninu. Tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
 
 ```
 
@@ -174,7 +174,7 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času.
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle  roste teplota směrem doprava.
-1. Rychlost, jak rychle klesá teplota jako funkce polohy, tj. směrem doprava.
+1. Rychlost, s jakou klesá teplota jako funkce polohy, tj. směrem doprava.
 1. Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy.
 1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy.
 
@@ -219,7 +219,7 @@ $\frac{\partial T}{\partial t}(P)=3$, $\frac{\partial T}{\partial x}(P)=2$, $q(P
 
 (2) Souřadnice $x'$ a $t$
 
-V bodě $P$ platí $x'=-x=-1$. Teplota v čárkované soustavě je $T(x',t)=T(-x,t)=-x^{\prime 3}-2x^{\prime 2}-3x't$. Odsud
+V bodě $P$ platí $x'=-x=-1$. Teplota v čárkované soustavě je $T(x,t)=T(-x',t)=-x^{\prime 3}-2x^{\prime 2}-3x't$. Odsud
 $$\frac{\partial T}{\partial t}=-3x'$$
 a 
 $$\frac{\partial T}{\partial x'}=-3x^{\prime 2}-4x'-3t.$$

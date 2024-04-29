@@ -37,6 +37,8 @@ sed -i 's/\\(/\\(\\displaystyle /g' $directory/*/cviceni*.html
 sed -i 's/<p>begintable<\/p>//g' $directory/*/index.html
 sed -i 's/<p>endtable<\/p>//g' $directory/*/index.html
 sed -i 's/<p>caption:.*<\/p>//g' $directory/*/index.html
+sed -i 's/\&amp;amp;/\&/g' $directory/*/cviceni*.html
+
 
 sed -i 's/<p>ww:\(.*\)<\/p>/<a onclick=otevrit("\1"); target="_blank" class="WWotazka">Testová otázka<\/a>/' $directory/*/*.html
 

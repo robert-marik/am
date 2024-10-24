@@ -76,7 +76,7 @@ Pro zadané pevné $x$ a kladné $C$ je funkce $$T=T_0+C e^{-\sqrt{\frac h\lambd
 Rovnice kmitů struny je (po eliminaci konstant)
 $$\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}$$
 s nulovými okrajovými podmínkami na koncích. Je-li délka struny $l$, platí  pro
-výchylku $u(x,t)$ podmínky $u(0,t)=u(l,t)$ v libovolném čase $t$.
+výchylku $u(x,t)$ podmínky $u(0,t)=u(l,t)=0$ v libovolném čase $t$.
 
 Budeme řešení hledat ve tvaru $u(x,t)=\varphi(x)\psi(t)$, kde $\varphi$ a $\psi$ jsou funkcemi jedné proměnné.
 Platí

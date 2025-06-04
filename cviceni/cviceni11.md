@@ -14,7 +14,7 @@ má pouze nulové řešení.
 :class: dropdown
 :nonumber:
 
-Charakteristcká rovnice je $$\lambda^2-m=0$$ s reálnými kořeny $\lambda_{1,2}=-\sqrt m$.
+Charakteristcká rovnice je $$\lambda^2-m=0$$ s reálnými kořeny $\lambda_{1,2}=\pm\sqrt m$.
 Obecným řešením je funkce 
 $$y(t)=C_1 e^{\sqrt m t} + C_2 e^{-\sqrt m t}$$
 a dosazením získáváme

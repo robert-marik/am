@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-06-04T09:56:01+02:00" />
+    <title>11. Diferenciální rovnice druhého řádu &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni11';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="prev" title="10. Autonomní rovnice a systémy" href="cviceni10.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="04.06.2025"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Diferenciální rovnice druhého řádu</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajova-uloha">11.1. Okrajová úloha</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajova-uloha-pro-rovnici-zebra-chladice">11.2. Okrajová úloha pro rovnici žebra chladiče</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separace-promennych-ve-vlnove-rovnici-kmity-struny">11.3. Separace proměnných ve vlnové rovnici, kmity struny</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="diferencialni-rovnice-druheho-radu">
+<h1><span class="section-number">11. </span>Diferenciální rovnice druhého řádu<a class="headerlink" href="#diferencialni-rovnice-druheho-radu" title="Link to this heading">#</a></h1>
+<!--
+https://youtu.be/a308Zs_6bq0
+-->
+<section id="okrajova-uloha">
+<h2><span class="section-number">11.1. </span>Okrajová úloha<a class="headerlink" href="#okrajova-uloha" title="Link to this heading">#</a></h2>
+<p>Ukažte, že úloha
+<div class="math notranslate nohighlight">
+\[y''-my=0, \quad y(0)=0=y(1), \ m&gt;0\]</div>
+
+má pouze nulové řešení.</p>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Charakteristcká rovnice je <div class="math notranslate nohighlight">
+\[\lambda^2-m=0\]</div>
+ s reálnými kořeny <span class="math notranslate nohighlight">\(\displaystyle \lambda_{1,2}=\pm\sqrt m\)</span>.
+Obecným řešením je funkce
+<div class="math notranslate nohighlight">
+\[y(t)=C_1 e^{\sqrt m t} + C_2 e^{-\sqrt m t}\]</div>
+
+a dosazením získáváme
+<div class="math notranslate nohighlight">
+\[y(0)=C_1  + C_2 =0\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[y(1)=C_1 e^{\sqrt m} + C_2 e^{-\sqrt m}=0.\]</div>
+
+Z první rovnice dostáváme <span class="math notranslate nohighlight">\(\displaystyle C_2=-C_1\)</span> a druhá rovnice má tvar
+<div class="math notranslate nohighlight">
+\[C_1 e^{\sqrt m} - C_1 e^{-\sqrt m}=0.\]</div>
+
+Odsud
+<div class="math notranslate nohighlight">
+\[C_1 (e^{\sqrt m} - e^{-\sqrt m})=0 \]</div>
+
+a
+<span class="math notranslate nohighlight">\(\displaystyle C_1=0\)</span>. Poto však <span class="math notranslate nohighlight">\(\displaystyle C_2=-C_1=0\)</span> a řešení se redukuje na
+<div class="math notranslate nohighlight">
+\[y(t)=0 e^{\sqrt m t} + 0 e^{-\sqrt m t}=0\]</div>
+
+tj. na konstantní nulovou funkci.</p>
+</section>
+</div></section>
+<section id="okrajova-uloha-pro-rovnici-zebra-chladice">
+<h2><span class="section-number">11.2. </span>Okrajová úloha pro rovnici žebra chladiče<a class="headerlink" href="#okrajova-uloha-pro-rovnici-zebra-chladice" title="Link to this heading">#</a></h2>
+<p><em>V určitých speciálních případech má smysl formulovat i jiné typy okrajových podmínek, než podmínky na funkční hodnotu (Dirichletova) nebo derivaci (Neumannova) případně na jejich kombinace. Například může být přirozené požadovat ohraničenost.</em></p>
+<p>Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra chladiče z materiálu s koeficientem tepelné vodivosti <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> v prostředí o teplotě <span class="math notranslate nohighlight">\(\displaystyle T_0\)</span>. Naformulovali jsme rovnici pro stacionární rozložení teploty ve tvaru <div class="math notranslate nohighlight">
+\[\lambda \frac{\mathrm d^2T}{\mathrm dx^2} -h (T-T_0) =0,  \]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je koeficient úměrnosti, popisující přestup tepla z chladiče do vnějšího prostředí.</p>
+<ul class="simple">
+<li><p>Uvažujte dlouhý chladič a ukažte, že teplota klesá exponenciálně s polohou k teplotě okolí.</p></li>
+<li><p>Ze zkušenosti očekáváme, že pro materiál, který lépe vede teplo, bude konec chladiče více horký. Teplota jako funkce polohy bude klesat pomaleji. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí.</p></li>
+<li><p>Ze zkušenosti očekáváme, že pokud bude teplo intenzivněji vyzařováno do okolí, bude teplota na konci nižší. Při pomalejším vyzařování (například světlá barva chladiče a izolující nános prachu) bude teplota na konci vyšší. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí.</p></li>
+</ul>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Jedná se o nehomogenní rovnici
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = -\frac {h}{\lambda} T_0.\]</div>
+
+Tato rovnice má evidentně konstantní řešení, protože pokud je teplota ochlazované součástky stejná jako teplota okolí, bude teplota žebra chladiče v každém bodě rovna hodnotě <span class="math notranslate nohighlight">\(\displaystyle T_0\)</span>. Tuto skutečnost můžeme ověřit i dosazením.</p>
+<p>Asociovaná homogenní rovnice má tvar
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = 0.\]</div>
+
+Charakteristický polynom (v proměnné <span class="math notranslate nohighlight">\(\displaystyle z\)</span>)
+<div class="math notranslate nohighlight">
+\[z^2 - \frac {h}{\lambda}  = 0\]</div>
+
+má kořeny <div class="math notranslate nohighlight">
+\[z_{1,2}=\pm\sqrt{\frac{h}\lambda}\]</div>
+ a obecné řešení rovnice je
+<div class="math notranslate nohighlight">
+\[ T (x) = T_0 + C_1 e^{\sqrt{\frac{h}\lambda} x} + C_2 e^{-\sqrt{\frac{h}\lambda} x}.\]</div>
+</p>
+<ul class="simple">
+<li><p>Pro dlouhý chladič musí být teplota ohraničená, proto platí <span class="math notranslate nohighlight">\(\displaystyle C_1=0.\)</span></p></li>
+<li><p>Teplota chladiče je větší než teplota okolí. Proto dále platí <span class="math notranslate nohighlight">\(\displaystyle C_2&gt;0\)</span>.</p></li>
+</ul>
+<p>Stacionární teplota jako funkce polohy je tedy dána vztahem <div class="math notranslate nohighlight">
+\[ T (x) = T_0 + C e^{-\sqrt{\frac{h}\lambda} x},\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle C\)</span> je kladná konstanta. Teplota podél žebra klesá exponenciálně s polohou k hodnotě <span class="math notranslate nohighlight">\(\displaystyle T_0\)</span>.</p>
+<p>Pokles je exponenciální funkce <span class="math notranslate nohighlight">\(\displaystyle e^{-z x}\)</span> je rychlejší, pokud je numericky větší hodnota <span class="math notranslate nohighlight">\(\displaystyle z\)</span>.</p>
+<p>Pokud materiál lépe vede teplo, je hodnota <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> větší. Protože je tato hodnota ve jmenovateli zlomku, je hodnota <div class="math notranslate nohighlight">
+\[ \sqrt{\frac h\lambda} \]</div>
+ menší. To znamená, že exponenciální faktor se mění pomaleji a funkce klesá pomaleji. Pro hodně dobrý vodič tepla je teplota podél žebra prakticky konstantní.</p>
+<p>Pokud je teplo intenzivněji vyzařováno do okolí, je vyšší hodnota <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Proto je i vyšší hodnota <div class="math notranslate nohighlight">
+\[ \sqrt{\frac h\lambda}.\]</div>
+ To znamená, že koeficient v exponentu je zápornější a exponenciální část klesá rychleji k nule.</p>
+<p>Pro zadané pevné <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a kladné <span class="math notranslate nohighlight">\(\displaystyle C\)</span> je funkce <div class="math notranslate nohighlight">
+\[T=T_0+C e^{-\sqrt{\frac h\lambda}x}\]</div>
+ rostoucí funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> a klesající funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Řešení úlohy se tedy chová v souladu s očekáváním.</p>
+</section>
+</div></section>
+<section id="separace-promennych-ve-vlnove-rovnici-kmity-struny">
+<h2><span class="section-number">11.3. </span>Separace proměnných ve vlnové rovnici, kmity struny<a class="headerlink" href="#separace-promennych-ve-vlnove-rovnici-kmity-struny" title="Link to this heading">#</a></h2>
+<p>Rovnice kmitů struny je (po eliminaci konstant)
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}\]</div>
+
+s nulovými okrajovými podmínkami na koncích. Je-li délka struny <span class="math notranslate nohighlight">\(\displaystyle l\)</span>, platí  pro
+výchylku <span class="math notranslate nohighlight">\(\displaystyle u(x,t)\)</span> podmínky <span class="math notranslate nohighlight">\(\displaystyle u(0,t)=u(l,t)=0\)</span> v libovolném čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span>.</p>
+<p>Budeme řešení hledat ve tvaru <span class="math notranslate nohighlight">\(\displaystyle u(x,t)=\varphi(x)\psi(t)\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle \varphi\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \psi\)</span> jsou funkcemi jedné proměnné.
+Platí
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 u}{\partial t^2}=\varphi(x)\psi''(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi''(x) \psi(t)\]</div>
+
+a rovnice má tvar
+<div class="math notranslate nohighlight">
+\[\varphi(x)\psi''(t)=\varphi''(x)\psi (t).\]</div>
+
+Vydělením této rovnice součinem <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)\psi(t)\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac {\psi''(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.\]</div>
+
+Toto je rovnice, kde levá strana je funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a pravá strana funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. Označme tuto konstantu <span class="math notranslate nohighlight">\(\displaystyle -\lambda^2\)</span>. Platí tedy
+<div class="math notranslate nohighlight">
+\[\frac {\psi''(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.\]</div>
+</p>
+<ul class="simple">
+<li><p>První rovnice představuje lineární diferenciální rovnici druhého řádu <div class="math notranslate nohighlight">
+\[\psi''+\lambda^2\psi=0.\]</div>
+ Její charakteristická rovnice  <div class="math notranslate nohighlight">
+\[z^2 +\lambda^2=0\]</div>
+ má řešení <div class="math notranslate nohighlight">
+\[z_{1,2}=\pm i\lambda\]</div>
+ a proto platí <div class="math notranslate nohighlight">
+\[\psi(t)=C_1\cos(\lambda t) + C_2\sin(\lambda t).\]</div>
+ Konstanta <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> souvisí s počáteční výchylkou, konstanta <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> s počáteční rychlostí  a konstanta <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> s frekvencí kmitů.</p></li>
+<li><p>Druhá rovnice představuje lineární diferenciální rovnici druhého řádu <div class="math notranslate nohighlight">
+\[\varphi''+\lambda^2\varphi=0\]</div>
+ a okrajové podmínky si  vynucují platnost vztahů <span class="math notranslate nohighlight">\(\displaystyle \varphi(0)=\varphi(l)=0\)</span>. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji použili <a class="reference external" href="http://user.mendelu.cz/marik/am/slidy/11/">v přednášce</a>. Řešením je funkce <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)=\sin\left (k\frac{\pi}l x\right)\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle k\in\mathbb N\)</span>.</p></li>
+<li><p>Spojením obdržených výsledků dostáváme rovnici popisující kmity na <span class="math notranslate nohighlight">\(\displaystyle k\)</span>-té vlastní frekvenci ve tvaru <div class="math notranslate nohighlight">
+\[u_k(x,t)=\psi(t)\varphi(x)=\left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).\]</div>
+</p></li>
+<li><p>Spojením kmitů na všech frekvencích dostaneme řešení rovnice ve tvaru <div class="math notranslate nohighlight">
+\[u(x,t) = \sum_{k=1}^\infty \left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).\]</div>
+ Tento vzorec je dostatečně flexibilní, abychom dokázali splnit libovolné počáteční podmínky a proto v sobě obsahuje všechna řešení. Praktická využitelnost vzorce v reálných případech je diskutabilní, proto často používáme numerické simulace využívající numerické řešení zadané rovnice za daných počátečních a okrajových podmínek.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni10.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Autonomní rovnice a systémy</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajova-uloha">11.1. Okrajová úloha</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajova-uloha-pro-rovnici-zebra-chladice">11.2. Okrajová úloha pro rovnici žebra chladiče</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separace-promennych-ve-vlnove-rovnici-kmity-struny">11.3. Separace proměnných ve vlnové rovnici, kmity struny</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 04.06.2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

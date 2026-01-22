@@ -518,7 +518,7 @@ Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým mod
 <div class='obtekat'>
 
 ```{figure} finite_differences_heat.png
- Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku.
+ Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku. U explicitní metody je tato hodnota jediná a je snadné ji vypočítat. U implicitní metody jsou neznámé hodnoty tři, každá z nich figuruje ve třech rovnicích a je nutné řešit soustavu rovnic s maticí, která má nenulová čísla tridiagonální matice.
 ```
 </div>
 
@@ -529,16 +529,38 @@ bychom dostali
 \dm $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$ 
 kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud 
 \dm $$T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]$$ 
-a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou _explicitní_ metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://gist.github.com/robert-marik/bbd7677bcf876403dcd454ab25cea681). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://gist.github.com/robert-marik/afa6114fe765b607ddd0c3733840e40a), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
->
->
+a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě
+$x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních
+bodech $x+\Delta x$ a $x-\Delta x$. Konkrétní tvar vzorce není v této chvíli až
+tak důležitý, podstatné je, že teplotu v dalším časovém okamžiku dokážeme vypočítat 
+z teplot v současném čase. Proto se tato metoda nazývá explicitní metoda.
+
+Explicitní  metodu je snadné implementovat [programovým kódem](https://gist.github.com/robert-marik/bbd7677bcf876403dcd454ab25cea681). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://gist.github.com/robert-marik/afa6114fe765b607ddd0c3733840e40a), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
+
+
 Ještě existuje metoda [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation) založená na zpětné diferenci v čase namísto dopředné, tj. 
 \dm $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$
 a odsud 
 \dm $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$
-Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Programová realizace je založena na řešení rovnice a může vypadat [následovně.](https://gist.github.com/robert-marik/8b898a66ee7018b4a72dc40dc20e1a94)
+Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$.
+Programová realizace je založena na řešení rovnice a může vypadat
+[následovně.](https://gist.github.com/robert-marik/8b898a66ee7018b4a72dc40dc20e1a94)
+Obsahuje pro každý časový krok řešení soustavy lineárních rovnic s tridiagonální maticí (nenulová
+čísla jsou na hlavní diagonále a vedle ní).
 
-Rozdíl mezi implicitní a explicitní metodou je v tom, že u explicitní metody máme v rovnici jednou neznámou a tuto neznámou je snadné určit. Formálně tedy metoda vede na soustavu rovnic, ale řešení této soustavy je triviální. U implicitní metody však máme v každém vztahu tři neznámé a řešení soustavy rovnic je již komplikovanější. Zdá se tedy, že explicitní metoda je výhodnější. Bohužel v praxi explicitní metoda vyžaduje dostatečně jemný časový krok, což může vést k nutnosti použít velmi jemnou časovou diskretizaci a tato skutečnost navyšuje výpočetní náročnost jak z hlediska času, tak i z hlediska paměťových nároků. Implicitní metoda je sice komplikovanější na výpočet, ale dovoluje použít větší časové kroky a v praxi se ukazuje jako výhodnější. Často se pro zvýšení přesnosti používá i kombinace obou metod, kdy je v diferenčním schematu použita dopředná i zpětná diference pro derivaci podle času.
+Rozdíl mezi implicitní a explicitní metodou je v tom, že u explicitní metody
+máme v každé rovnici jednu neznámou a tuto neznámou je snadné určit. Formálně
+tedy metoda sice vede na soustavu rovnic, ale řešení této soustavy je triviální. U
+implicitní metody však máme v každém vztahu tři neznámé a řešení soustavy rovnic
+je komplikovanější. Zdá se tedy, že explicitní metoda je výhodnější. Bohužel
+v praxi explicitní metoda vyžaduje dostatečně jemný časový krok, což může vést k
+nutnosti použít velmi jemnou časovou diskretizaci a tato skutečnost navyšuje
+výpočetní náročnost jak z hlediska času, tak i z hlediska paměťových nároků.
+Implicitní metoda je sice komplikovanější na výpočet, ale dovoluje použít větší
+časové kroky a v praxi se ukazuje jako výhodnější. Často se pro zvýšení
+přesnosti používá i kombinace obou metod, kdy je v diferenčním schematu použita
+dopředná i zpětná diference pro derivaci podle času a obě jsou vhodně
+zkombinovány ([Crank-Nicolosonova metoda](https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method)).
 
 </div>
 
@@ -660,17 +682,7 @@ V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovsk
 
 https://youtu.be/owfHzLBonRA
 
-\iffalse 
 
-<div class='obtekat'>
-
-```{figure} bored_cat.jpg
- Názvosloví a terminologie jsou nejnudnější pasáže. Prolétneme je pro rychlé seznámení a můžeme se se vrátit, kdykoliv bude potřeba. Zdroj: pixabay.com, chudamay
-```
-
-</div>
-
-\fi
 
 V dalším budeme pracovat s pojmy jako množina a její hranice, množina
 obsahující hranici, množina neobsahující hranici, spojitá funkce
@@ -729,18 +741,6 @@ V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq\mathbb{E}
 **Oblast, uzavřená oblast,  kompaktní množina**: Otevřená souvislá množina se nazývá *oblast*. Uzavřená souvislá množina se nazývá *uzavřená oblast*. Uzavřená    ohraničená  množina se nazývá *kompaktní*.
 
 ## Spojitost funkce
-
-\iffalse 
-
-<div class='obtekat'>
-
-```{figure} epmty.jpg
- Spojitost dokáže potrápit i u funkce jedné proměnné. Například Weistrassova funkce je spojitá, ale její graf není možné nakreslit ani jedním tahem, ani nijak jinak. To rozhodně jde proti intuitivnímu chápání spojitosti ze střední školy či běžného života. Zdroj: pixabay.com
-```
-
-</div>
-
-\fi
 
 **Spojitost skalární funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}$ je skalární funkce $n$ proměnných definovaná v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, pokud pro každé okolí $O(f(A))$ bodu $f(A)$ existuje okolí $\overline O(A)$ bodu $A$ takové, že obrazy všech bodů z tohoto okolí bodu $A$ leží v okolí bodu $O(f(A))$, tj.  pro všechna $X\in \overline O(A)$ platí $f(X)\in O(f(A))$.
 

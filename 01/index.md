@@ -511,13 +511,20 @@ ww:problems/parcialni_derivace/centralni_diference.pg
 
 <div class="shorten" data-text="Konečné diference je možné použít k převedení parciální diferenciální rovnice (úloha v počítači obtížně řešitelná) na soustavu lineárních rovnic (úloha snadno řešitelná na počítačích).">
 
-Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a ani v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximaci derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jaké jsou zhruba požadavky na výpočetní prostředky.
+Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a ani v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximaci derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme na příkladu rovnice vedení tepla. Tato ukázka je důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jaké jsou zhruba požadavky na výpočetní prostředky.
 
-```{prf:remark} explicitní metoda řešení rovnice vedení tepla
-:nonumber:
+#### Diskretizace rovnice vedení tepla pomocí konečných diferencí
+
+<div class='obtekat'>
+
+```{figure} finite_differences_heat.png
+ Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku.
+```
+</div>
 
 Po převedení derivací z rovnice vedení tepla 
 \dm $$\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}$$ 
+na konečné diference
 bychom dostali 
 \dm $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$ 
 kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud 
@@ -525,12 +532,13 @@ kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve který
 a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou _explicitní_ metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://gist.github.com/robert-marik/bbd7677bcf876403dcd454ab25cea681). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://gist.github.com/robert-marik/afa6114fe765b607ddd0c3733840e40a), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
 >
 >
-Ještě existuje metoda založená na zpětné diferenci v čase namísto dopředné, tj. 
+Ještě existuje metoda [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation) založená na zpětné diferenci v čase namísto dopředné, tj. 
 \dm $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$
 a odsud 
 \dm $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$
-Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči. Tedy v prakticky využitelných úlohách počty rovnic a proměnných začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích než při explicitní metodě. Programová realizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://gist.github.com/robert-marik/8b898a66ee7018b4a72dc40dc20e1a94) Tento přístup se nazývá [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
-```
+Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Programová realizace je založena na řešení rovnice a může vypadat [následovně.](https://gist.github.com/robert-marik/8b898a66ee7018b4a72dc40dc20e1a94)
+
+Rozdíl mezi implicitní a explicitní metodou je v tom, že u explicitní metody máme v rovnici jednou neznámou a tuto neznámou je snadné určit. Formálně tedy metoda vede na soustavu rovnic, ale řešení této soustavy je triviální. U implicitní metody však máme v každém vztahu tři neznámé a řešení soustavy rovnic je již komplikovanější. Zdá se tedy, že explicitní metoda je výhodnější. Bohužel v praxi explicitní metoda vyžaduje dostatečně jemný časový krok, což může vést k nutnosti použít velmi jemnou časovou diskretizaci a tato skutečnost navyšuje výpočetní náročnost jak z hlediska času, tak i z hlediska paměťových nároků. Implicitní metoda je sice komplikovanější na výpočet, ale dovoluje použít větší časové kroky a v praxi se ukazuje jako výhodnější. Často se pro zvýšení přesnosti používá i kombinace obou metod, kdy je v diferenčním schematu použita dopředná i zpětná diference pro derivaci podle času.
 
 </div>
 

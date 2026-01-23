@@ -125,53 +125,69 @@ funkcí a nekonečných řad, s nimiž se v praxi špatně pracuje.
 Nejprve převedeme rovnici na tzv. slabou formulaci. To je formulace, kde
 nevystupuje druhá derivace funkce $u$, ale jenom derivace první. To umožní
 pracovat například s úlohami vedení tepla, kde se materiálové vlastnosti mění
-skokem. Použijeme základní poznatky z integrálního počtu a derivaci součinu
+skokem. Kromě toho slabá formulace převádí úlohu na úlohu integrální, což je
+výhodné pro numerické metody. Na tuto výhodu se zaměříme a proto nebudeme
+rozebírat aspekty spojené s hladkostí funkcí. Budeme předpokládat, že funkce, se
+kterými pracujeme, jsou dostatečně hladké.
+
+Použijeme základní poznatky z integrálního počtu a derivaci součinu
 funkcí $u'$ a $v$
 $$(u'v)'=u''v+u'v',$$
 která má po integraci na intervalu $[a,b]$ podobu
 $$u'(b)v(b)-u'(a)v(a)=\int_a^b u''v\,\mathrm dx +\int_a^b u'v'\,\mathrm dx.$$
 
-Rovnici (E) napíšeme pro jednoduchost s derivacemi vyjádřenými čárkami
-$$-u''=f(x)$$
-a tuto rovnici vynásobíme nějakou hladkou funkcí $v(x)$, která splňuje okrajové podmínky
-$v(0)=v(1)=0$. Výslednou rovnici integrujeme přes interval $[0,1]$.
+Rovnici (E) napíšeme pro jednoduchost s derivacemi vyjádřenými čárkami a s
+vynechanou závislostí na $x$
+$$-u''=f$$
+a tuto rovnici vynásobíme funkcí $v$, která splňuje okrajové podmínky
+$v(0)=v(1)=0$. Výslednou rovnici 
+$$-u''v=fv$$
+integrujeme přes interval $[0,1]$.
 Tím dostaneme
 $$-\int_0^1 u''v\,\mathrm dx = \int_0^1
-f(x)v(x)\,\mathrm dx.$$
+fv\,\mathrm dx.$$
 Z derivace součinu (viz předchozí rovnost) a okrajových podmínek pro funkci $v$
 plyne
 $$\int_0^1 u'v'\,\mathrm dx = \int_0^1
-f(x)v(x)\,\mathrm dx.$$
-Pokud nějaká funkce $u(x)$ splňuje tuto rovnost pro každou hladkou funkci $v(x)$
-s okrajovými podmínkami $v(0)=v(1)=0$, říkáme, že $u(x)$ je _slabým řešením_
-rovnice (E) (s uvažovanými okrajovými podmínkami).
+fv\,\mathrm dx. \tag{W}$$
+Pokud nějaká funkce $u$ splňuje tuto rovnost pro každou hladkou funkci $v$
+s okrajovými podmínkami $v(0)=v(1)=0$, říkáme, že $u$ je _slabým řešením_
+rovnice (E) (s uvažovanými okrajovými podmínkami). Rovnice (W) se nazývá _slabá
+formulace_  (angl. _weak form_) rovnice (E).
 
 ### Galerkinova metoda
 
-Vyjdeme ze slabé formulace a budeme hledat přibližné řešení ve tvaru
+Vyjdeme ze slabé formulace (W) a budeme hledat přibližné řešení ve tvaru
 $$u(x)=\sum_{i=1}^n u_i \varphi_i(x),$$
 kde funkce $\varphi_i(x)$ jsou zvolené hladké funkce splňující okrajové podmínky
-$\varphi_i(0)=\varphi_i(1)=0$ a $u_i$ jsou neznámé koeficienty, které budeme určovat.
+$\varphi_i(0)=\varphi_i(1)=0$ a $u_i$ jsou neznámé koeficienty, které budeme
+určovat. (Pro snadné odlišení funkcí a koeficientů už nebudeme vynechávat závislost
+na $x$.)
 To vlastně znamená, že hledáme řešení v podprostoru generovaném funkcemi
 $\varphi_i(x)$. Funkce $\varphi_i(x)$ se proto nazývají _bázové funkce_.
 
-Dosadíme-li tento tvar řešení do slabé formulace, dostaneme
+Derivace funkce $u(x)$ je
+$$u'(x)=\sum_{j=1}^n u_j \varphi_j'(x).$$
+Dosadíme-li toto vyjádření do slabé formulace (W), dostaneme
 $$\int_0^1 \Bigl(\sum_{j=1}^n u_j \varphi_j'(x)\Bigr) v'(x)\,\mathrm dx = \int_0^1 
 f(x)v(x)\,\mathrm dx.$$
-Využijeme linearity integrálu a dostaneme
+Využitím linearity integrálu je možné rovnici přepsat do tvaru
 $$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) v'(x)\,\mathrm dx = \int_0^1
 f(x)v(x)\,\mathrm dx.$$
 
 Galerkinova metoda spočívá v tom, že za funkci $v(x)$ volíme postupně  
-jednotlivé bázové funkce, tedy $v(x)=\varphi_i(x)$ pro $i=1,2,\ldots,n$. Tím dostaneme soustavu
-$$\sum_{j=1}^n u_j \int_0^1 \varphi_i'(x) \varphi_j'(x)\,\mathrm dx = \int_0^1
+jednotlivé bázové funkce, tedy $v(x)=\varphi_i(x)$ pro $i=1,2,\ldots,n$. Tím
+dostaneme soustavu rovnic
+$$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) \varphi_i'(x)\,\mathrm dx = \int_0^1
 f(x)\varphi_i(x)\,\mathrm dx, \quad i=1,2,\ldots,n$$
-nebo v maticovém tvaru
-$$A\vec u=\vec b,$$
-kde prvky matice $A$ a vektor u $\vec b$ jsou 
+nebo po přeznačení 
 $$a_{ij}=\int_0^1 \varphi_i'(x) \varphi_j'(x)\,\mathrm dx$$
 a
-$$b_j=\int_0^1 f(x)\varphi_j(x)\,\mathrm dx.$$
+$$b_j=\int_0^1 f(x)\varphi_j(x)\,\mathrm dx$$
+ve tvaru $$\sum_{j=1}^n a_{ij} u_j = b_i, \quad i=1,2,\ldots,n.$$
+Nyní už je patrné, že se jedná o soustavu lineárních rovnic a po zavedení matice
+$A=(a_{ij})$ a vektoru $\vec b=(b_i)$ můžeme tuto soustavu psát v maticovém
+tvaru $$A\vec u=\vec b.$$
 Matice $A$ se nazývá (z historických důvodů) _matice tuhosti_ a vektor $\vec b$ se nazývá _vektor zatížení_.
 
 <div class='obtekat'>
@@ -183,14 +199,13 @@ Bázové funkce pro metodu konečných prvků na intervalu [0,1] s dělením na 
 </div>
 
 
-Zvolíme bázové funkce tak, aby byla matice $A$ vhodná pro numerické řešení
-(například aby byla řídká).
-Vhodnou volbou jsou trojúhelníkové funkce, které jsou na  dílčím intervalu 
-lineární a jinde nulové. Pomocí lineární kombinace těchto funkcí je možné
+Je účelné volit bázové funkce tak, aby byla matice $A$ vhodná pro numerické řešení
+(například, aby byla řídká).
+Vhodnou volbou jsou trojúhelníkové funkce, které jsou na připojeném obrázku. Pomocí lineární kombinace těchto funkcí je možné
 vyjádřit libovolnou po částech lomenou funkci splňující nulové okrajové
 podmínky. Při takto zvolených funkcích je $a_{ij}$ nulové, pokud $|i-j|>1$ a
 matice $A$ má nenulové prvky jenom na hlavní diagonále a na dvou přilehlých
-diagonálách (je tridiagonální). Výpočet integrálů $A$ vede k následující matici.
+diagonálách (je tridiagonální). Výpočet integrálů pro $a_{ij}$ vede k následující matici.
 
 $$
 A = \frac 1h\begin{pmatrix}
@@ -223,9 +238,12 @@ je získána soustava lineárních rovnic pro neznámé
 koeficienty v rozvoji řešení podle bázových funkcí. Tuto soustavu je
 poté možné vyřešit běžnými numerickými metodami pro řešení soustav lineárních
 rovnic.
-Tento postup je možné zobecnit na složitější rovnice a úlohy. Na rozdíl od
+
+Uvedený postup je možné zobecnit na složitější rovnice a úlohy. Na rozdíl od
 analytických metod si metoda konečných poradí i s komplikovanějšími geometrickými tvary a
-nespojitými materiálovými vlastnostmi, kdy na sebe navazují dva odlišné materiály. 
+nespojitými materiálovými vlastnostmi, kdy na sebe navazují dva odlišné
+materiály. Je možné jej dokonce modifikovat i pro nelineární rovnice, i když v
+tomto případě je výpočet numericky náročnější..
 
 
 ## Řešení pomocí principu superpozice

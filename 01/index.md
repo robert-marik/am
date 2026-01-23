@@ -518,7 +518,7 @@ Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým mod
 <div class='obtekat'>
 
 ```{figure} finite_differences_heat.png
- Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku. U explicitní metody je tato hodnota jediná a je snadné ji vypočítat. U implicitní metody jsou neznámé hodnoty tři, každá z nich figuruje ve třech rovnicích a je nutné řešit soustavu rovnic s maticí, která má nenulová čísla tridiagonální matice.
+ Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku. U explicitní metody je tato hodnota jediná a je snadné ji vypočítat. U implicitní metody jsou neznámé hodnoty tři, každá z nich figuruje ve třech rovnicích a je nutné řešit soustavu rovnic s tridiagonální maticí.
 ```
 </div>
 
@@ -550,8 +550,9 @@ Obsahuje pro každý časový krok řešení soustavy lineárních rovnic s trid
 
 Rozdíl mezi implicitní a explicitní metodou je v tom, že u explicitní metody
 máme v každé rovnici jednu neznámou a tuto neznámou je snadné určit. Formálně
-tedy metoda sice vede na soustavu rovnic, ale řešení této soustavy je triviální. U
-implicitní metody však máme v každém vztahu tři neznámé a řešení soustavy rovnic
+metoda vede na soustavu rovnic, ale řešení této soustavy je triviální. Oproti
+tomu u 
+implicitní metody máme v každém vztahu tři neznámé a řešení soustavy rovnic
 je komplikovanější. Zdá se tedy, že explicitní metoda je výhodnější. Bohužel
 v praxi explicitní metoda vyžaduje dostatečně jemný časový krok, což může vést k
 nutnosti použít velmi jemnou časovou diskretizaci a tato skutečnost navyšuje
@@ -560,7 +561,7 @@ Implicitní metoda je sice komplikovanější na výpočet, ale dovoluje použí
 časové kroky a v praxi se ukazuje jako výhodnější. Často se pro zvýšení
 přesnosti používá i kombinace obou metod, kdy je v diferenčním schematu použita
 dopředná i zpětná diference pro derivaci podle času a obě jsou vhodně
-zkombinovány ([Crank-Nicolosonova metoda](https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method)).
+zkombinovány ([Crank-Nicolsonova metoda](https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method)).
 
 </div>
 

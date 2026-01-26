@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-10-21T14:26:59+02:00" />
+    <title>5. Křivkový integrál &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '05/index';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="6. Dvojný integrál" href="../06/index.html" />
+    <link rel="prev" title="4. Rotace vektorového pole" href="../04/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="21.10.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Křivkový integrál</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.1. Křivkový integrál</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametricke-rovnice-krivky">5.2. Parametrické rovnice křivky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-prvniho-druhu">5.3. Křivkový integrál prvního druhu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prevod-na-riemannuv-integral-rovinna-krivka">5.3.1. Převod na Riemannův integrál (rovinná křivka)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prevod-na-riemannuv-integral-prostorova-krivka">5.3.2. Převod na Riemannův integrál (prostorová  křivka)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-krivkoveho-integralu-prvniho-druhu">5.3.3. Aplikace křivkového integrálu prvního druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vlastnosti-krivkoveho-integralu-prvniho-druhu">5.3.4. Vlastnosti křivkového integrálu prvního druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proc-trubky-praskaji-podelne">5.3.5. Proč trubky praskají podélně?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu">5.4. Křivkový integrál druhého druhu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prevod-na-riemannuv-integral">5.5. Převod na Riemannův integrál</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vlastnosti-krivkoveho-integralu-druheho-druhu">5.6. Vlastnosti křivkového integrálu druhého druhu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-krivkoveho-integralu-druheho-druhu">5.7. Aplikace křivkového integrálu druhého druhu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-vlastnosti-krivkovych-integralu">5.8. Shrnutí: vlastnosti křivkových integrálů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zaverecne-informace">5.9. Závěrečné informace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrizace-usecky">5.9.1. Parametrizace úsečky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-vypocet-krivkoveho-integralu">5.9.2. Online výpočet křivkového integrálu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#z-ptaci-perspektivy">5.10. Z ptačí perspektivy</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="krivkovy-integral">
+<h1><span class="section-number">5. </span>Křivkový integrál<a class="headerlink" href="#krivkovy-integral" title="Link to this heading">#</a></h1>
+<div class="admonition-anotace admonition">
+<p class="admonition-title">Anotace</p>
+<ul class="simple">
+<li><p>V přednášce se seznámíme s rozšířením Riemannova integrálu. Riemannův integrál umožňuje sečíst příspěvky na úsečce. Zobecníme si tento nástroj tak, že umožní sečíst příspěvky podél křivky. Seznámíme se s křivkovým integrálem.</p></li>
+<li><p>Zaměříme se na křivkový integrál druhého druhu. V cizojazyčné literatuře je tento integrál nazývaný též integrál vektorového pole. Umožňuje vypočítat práci nebo obecně potenciál a tím přejít (pokud to jde) ke skalárnímu popisu pole namísto vektorového. Tím se popis studovaných systémů zjednoduší.</p></li>
+<li><p>Další aplikací křivkového integrálu druhého druhu je tok vektorového pole křivkou. Ten využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.</p></li>
+<li><p>Motivací pro zavedení křivkového integrálu druhého druhu je i výpočet <a class="reference external" href="http://user.mendelu.cz/marik/aromamath/Krivkovy_integral.html">toku přes hranici množiny.</a></p></li>
+</ul>
+</div>
+<div class="admonition-prerekvizity admonition">
+<p class="admonition-title">Prerekvizity</p>
+<ul class="simple">
+<li><p>Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.</p></li>
+</ul>
+</div>
+<section id="id1">
+<h2><span class="section-number">5.1. </span>Křivkový integrál<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/n2roVUrXgcw">Video</a></p>
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/krivkovy_integral_prvniho_druhu_1.png" src="../_images/krivkovy_integral_prvniho_druhu_1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.1 </span><span class="caption-text">Křivkový integrál prvního druhu</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="../_images/krivkovy_integral_druheho_druhu_1.png" src="../_images/krivkovy_integral_druheho_druhu_1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.2 </span><span class="caption-text">Křivkový integrál druhého druhu</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Křivkový integrál je rozšíření Riemannova integrálu na případ, kdy množinou, přes kterou integrujeme, je místo úsečky obecnější  křivka. Pro jednoduchost budeme uvažovat dvourozměrnou křivku v rovině <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y\)</span>.</p>
+<p>Rozeznáváme dva druhy křivkových integrálů. První z nich používáme při práci se skalárními veličinami. Příkladem je kvadratický moment. (Objekty s velkým kvadratickým momentem jsou při rotačních pohybech obdobou objektů velké hmotnosti při posuvných pohybech.) Druhý z křivkových integrálů používáme při práci ve vektorovém poli. Příkladem je výpočet práce vykonané po křivce nebo tok křivkou.</p>
+</section>
+<section id="parametricke-rovnice-krivky">
+<h2><span class="section-number">5.2. </span>Parametrické rovnice křivky<a class="headerlink" href="#parametricke-rovnice-krivky" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/MRk4HRAWlA4">Video</a></p>
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/parametricke_krivky.png" src="../_images/parametricke_krivky.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.3 </span><span class="caption-text">Dvě různé parametrizace jednotkové kružnice</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Nejprve představíme matematický aparát pro popis křivek.  Rovinné křivky nejčastěji popisujeme vektorovou funkcí jedné proměnné <span class="math notranslate nohighlight">\(\displaystyle \vec r\colon \mathbb{R}\to \mathbb{R}^2\)</span>. Zpravidla s touto vektorovou funkcí pracujeme v komponentách, kdy každá její komponenta je dána skalární funkcí. Vektorově píšeme <div class="math notranslate nohighlight">
+\[\vec r(t)=[\varphi(t),\psi(t)]=\varphi(t) \vec\imath + \psi(t)\vec\jmath,\quad t\in [\alpha,\beta]\]</div>
+ a tato vektorová funkce se nazývá <em>parametrizace</em> křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span>. Často píšeme parametrické rovnice pro jednotlivé souřadnice ve tvaru <div class="math notranslate nohighlight">
+\[\begin{split}C=\begin{cases} x=\varphi(t)\\y=\psi(t), \quad t\in[\alpha,\beta].\end{cases}\end{split}\]</div>
+</p>
+<ul class="simple">
+<li><p>Graf křivky dostaneme tak, že pro každé <span class="math notranslate nohighlight">\(\displaystyle t\)</span> z intervalu <span class="math notranslate nohighlight">\(\displaystyle [\alpha, \beta]\)</span> kreslíme ve 2D bod <span class="math notranslate nohighlight">\(\displaystyle [\varphi(t), \psi(t)]\)</span>.</p></li>
+<li><p>Pro danou křivku <span class="math notranslate nohighlight">\(\displaystyle C\)</span> v rovině <span class="math notranslate nohighlight">\(\displaystyle xy\)</span>, nejsou její parametrické rovnice dány jednoznačně. <a class="reference external" href="https://sagecell.sagemath.org/?z=eJxtkUFvhCAQhe8m_geiB7AlaTFNb5x75ResmbLslohgcGJlf31Ftx42y23C-957k5khMrqQRJuyKIu6rkkMs7fakDEG0kc796ksvBRlsTBspA4Tw5Nf1SmPk_X3cYcHc9vJESIMBmNZ4GA9xwEW-c5Z-zLa5sTE245s0JOXf5SQowvIcixnyA-fhhNnrsafOwffxkmaFbn_SijxukHpCaSDC1HSaM700SHdHaaf8MuU4ORir5O9Gck--ceKokVnZPUV4ZJIjiNAMlNtW6hW_q9rdbfl762z5KHGEdJymEajsYuANkhxhKjDqof9AFA1fx4nfBQ=&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">Nakreslit online.</a></p></li>
+<li><p>Parametrizace kružnice, úsečky a grafu funkce jedné proměnné jsou v <a class="reference external" href="https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf">cheatsheetu.</a></p></li>
+</ul>
+</section>
+<section id="krivkovy-integral-prvniho-druhu">
+<h2><span class="section-number">5.3. </span>Křivkový integrál prvního druhu<a class="headerlink" href="#krivkovy-integral-prvniho-druhu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/ZRed88fgDkI">Video</a></p>
+<div class='obtekat'>
+
+<figure class="align-default" id="id5">
+<img alt="../_images/krivkovy_integral_prvniho_druhu_1.png" src="../_images/krivkovy_integral_prvniho_druhu_1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.4 </span><span class="caption-text">Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a></span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Pokud uvažujeme rovný drát o lineární hustotě <span class="math notranslate nohighlight">\(\displaystyle f\)</span> a délce <span class="math notranslate nohighlight">\(\displaystyle s\)</span>, je hmotnost
+drátu rovna součinu <div class="math notranslate nohighlight">
+\[m=fs.\]</div>
+ Pokud by drát nebyl homogenní, je nutné v tomto vzorci místo součinu použít Riemannův integrál <div class="math notranslate nohighlight">
+\[m=\int _a^b f\,\mathrm ds.\]</div>
+ Budeme ve zobecňování pokračovat. Uvažujme drát, který není ani homogenní, ani rovný. Nechť leží podél rovinné křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> a nechť je jeho lineární hustota (specifická hmotnost) v bodě <span class="math notranslate nohighlight">\(\displaystyle (x,y)\)</span> dána funkcí <span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span>. Zde již Riemannův integrál nepomůže. Celkovou hmotnost můžeme odhadnout následovně.</p>
+<ul class="simple">
+<li><p>Myšlenkově rozdělíme drát na malé kousíčky a v každém z nich odhadneme lineární hustotu konstantou. Můžeme například použít minimální hodnotu hustoty v tomto kousíčku pro dolní odhad hmotnosti.</p></li>
+<li><p>Vynásobením délky každého kousíčku a lineární hustotou obdržíme jeho hmotnost a sečtením přes všechny kousky dostaneme odhad pro hmotnost drátu. Tento odhad bude tím přesnější, čím jemnější dělení použijeme.</p></li>
+<li><p>Zjemňováním dělení se tyto odhady zpřesňují.</p></li>
+</ul>
+<p>V limitním procesu můžeme nechat délku  kousíčků konvergovat k nule. Poté dostáváme objekt, který se nazývá <em>křivkový integrál prvního druhu</em>, označuje <div class="math notranslate nohighlight">
+\[ \int_C f\;\mathrm{d} s \]</div>
+ a fyzikálně vyjadřuje hmotnost drátu z výše uvažované úlohy. Pokud počáteční a koncový bod křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> splývají, píšeme též <div class="math notranslate nohighlight">
+\[ \oint_C f\;\mathrm{d} s \]</div>
+ a integrál nazýváme <em>integrálem po uzavřené křivce</em>.</p>
+<section id="prevod-na-riemannuv-integral-rovinna-krivka">
+<h3><span class="section-number">5.3.1. </span>Převod na Riemannův integrál (rovinná křivka)<a class="headerlink" href="#prevod-na-riemannuv-integral-rovinna-krivka" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+
+<figure class="align-default" id="id6">
+<img alt="../_images/delkovy_element.png" src="../_images/delkovy_element.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.5 </span><span class="caption-text">Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Mějme parametrické rovnice křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> ve vektorovém tvaru
+<div class="math notranslate nohighlight">
+\[\vec r(t)=\varphi(t) \vec\imath + \psi(t)\vec\jmath,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle t\in[\alpha,\beta]\)</span>.
+Derivováním křivky dostaneme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d} \vec r(t)}{\mathrm{d}t}=\varphi'(t) \vec\imath + \psi'(t)\vec\jmath.\]</div>
+
+Výpočtem délky vektoru (a formálním vynásobením výrazem <span class="math notranslate nohighlight">\(\displaystyle \mathrm{d}t\)</span>) dále
+<div class="math notranslate nohighlight">
+\[\mathrm{d}s=|\mathrm{d}\vec r(t)|=\sqrt{(\varphi'(t))^2 + (\psi'(t))^2}\mathrm{d}t.\]</div>
+
+Tím se křivkový integrál prvního druhu funkce <span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span> po křivce <span class="math notranslate nohighlight">\(\displaystyle C\)</span>
+transformuje na Riemannův integrál
+<div class="math notranslate nohighlight">
+\[
+\int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t))\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)}\;\mathrm{d} t.
+\]</div>
+</p>
+</section>
+<section id="prevod-na-riemannuv-integral-prostorova-krivka">
+<h3><span class="section-number">5.3.2. </span>Převod na Riemannův integrál (prostorová  křivka)<a class="headerlink" href="#prevod-na-riemannuv-integral-prostorova-krivka" title="Link to this heading">#</a></h3>
+<p>S křivkovým integrálu po křivce<br />
+<div class="math notranslate nohighlight">
+\[
+  C:\quad \varphi(t)\vec\imath + \psi(t)\vec\jmath + \xi(t) \vec k, \quad t\in[\alpha,\beta]
+\]</div>
+
+ve trojrozměrném prostoru pracujeme podobně. Délkový element je
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}s=\sqrt{(\varphi^{\prime}(t))^2+(\psi^{\prime }(t))^2+(\xi^{\prime }(t))^2}\mathrm{dt}
+\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[ \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{(\varphi^{\prime}(t))^2+(\psi^{\prime }(t))^2+(\xi^{\prime }(t))^2}\;\mathrm{d} t. \]</div>
+</p>
+</section>
+<section id="aplikace-krivkoveho-integralu-prvniho-druhu">
+<h3><span class="section-number">5.3.3. </span>Aplikace křivkového integrálu prvního druhu<a class="headerlink" href="#aplikace-krivkoveho-integralu-prvniho-druhu" title="Link to this heading">#</a></h3>
+
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Funkce <span class="math notranslate nohighlight">\(\displaystyle f(x,y)\)</span></p></th>
+<th class="head"><p>Integrál <span class="math notranslate nohighlight">\(\displaystyle \int_C f\;\mathrm{d}s\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle 1\)</span></p></td>
+<td><p>délka křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>lineární hustota <span class="math notranslate nohighlight">\(\displaystyle \tau(x,y)\)</span></p></td>
+<td><p>hmotnost <span class="math notranslate nohighlight">\(\displaystyle m_C\)</span> křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle \frac {1}{m_C}[x\tau(x,y),y\tau(xy)]\)</span></p></td>
+<td><p>souřadnice těžiště křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle x^2\tau(x,y)\)</span></p></td>
+<td><p>moment setrvačnosti křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> vzhledem k  ose <span class="math notranslate nohighlight">\(\displaystyle y\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle y^2\tau(x,y)\)</span></p></td>
+<td><p>moment setrvačnosti křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> vzhledem k  ose <span class="math notranslate nohighlight">\(\displaystyle x\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\displaystyle \rho^2(x,y)\tau(x,y)\)</span></p></td>
+<td><p>moment setrvačnosti křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> vzhledem k obecné ose, kde <span class="math notranslate nohighlight">\(\displaystyle \rho(x,y)\)</span> je vzdálenost bodu <span class="math notranslate nohighlight">\(\displaystyle [x,y]\)</span> od osy otáčení.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</section>
+<section id="vlastnosti-krivkoveho-integralu-prvniho-druhu">
+<h3><span class="section-number">5.3.4. </span>Vlastnosti křivkového integrálu prvního druhu<a class="headerlink" href="#vlastnosti-krivkoveho-integralu-prvniho-druhu" title="Link to this heading">#</a></h3>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span>Věta </span> (nezávislost na zvolené parametrizaci)</p>
+<section class="theorem-content" id="proof-content">
+<p>Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span>. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span>Věta </span> (linearita)</p>
+<section class="theorem-content" id="proof-content">
+<p>Pro funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> a <span class="math notranslate nohighlight">\(\displaystyle g\)</span> a konstantu <span class="math notranslate nohighlight">\(\displaystyle k\)</span> platí následující.
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\int_C f+g\;\mathrm{d}s &amp; = \int_C f\;\mathrm{d}s + \int_C g\;\mathrm{d}s \\
+\int_C kf\;\mathrm{d}s &amp; = k\int_C f\;\mathrm{d}s\\
+\end{aligned}
+\end{split}\]</div>
+</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span>Věta </span> (aditivita vzhledem k integračnímu oboru)</p>
+<section class="theorem-content" id="proof-content">
+<p>Nechť je křivka <span class="math notranslate nohighlight">\(\displaystyle C\)</span> rozdělena na dvě křivky <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span>, které jsou disjunktní (až na koncové body). Potom platí
+<div class="math notranslate nohighlight">
+\[
+\int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
+\]</div>
+</p>
+</section>
+</div>
+</section>
+<section id="proc-trubky-praskaji-podelne">
+<h3><span class="section-number">5.3.5. </span>Proč trubky praskají podélně?<a class="headerlink" href="#proc-trubky-praskaji-podelne" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id7">
+<img alt="../_images/hoop_stress.png" src="../_images/hoop_stress.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.6 </span><span class="caption-text">Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<figure class="align-default" id="id8">
+<img alt="../_images/impregnacni_komora.jpg" src="../_images/impregnacni_komora.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.7 </span><span class="caption-text">Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id9">
+<img alt="../_images/popraskane_trubky.jpg" src="../_images/popraskane_trubky.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.8 </span><span class="caption-text">Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Ukážeme si aplikaci křivkového integrálu prvního druhu k tomu, abychom sečetli komponenty síly, snažící se roztrhnout natlakovanou válcovou nádobu. Tlaková síla je ve všech částech nádoby stejně velká. Protože je však kolmá ke stěně nádoby, mění se směr síly a tím i průměty síly do směru, ve kterém počítáme namáhání. Zjednodušíme si situaci tím, že budeme uvažovat průmět stěny do roviny podstavy, kdy se stěna redukuje na křivku.</p>
+<p>Vypočteme síly, které se snaží roztrhnout válec napříč (viz řez A v obrázku) a podélně (viz řez B v obrázku). Tato dvě namáhání porovnáme. Ještě existuje namáhání radiálně od osy. Ale v tomto případě se tlaková síla rozkládá na celou plochu pláště válce a v tomto směru je  namáhání minimální. Proto toto namáhání nemusíme uvažovat.</p>
+<p>Uvažujme natlakovanou válcovou nádobu s tlakem <span class="math notranslate nohighlight">\(\displaystyle p\)</span>, výškou <span class="math notranslate nohighlight">\(\displaystyle L\)</span>, poloměrem podstavy <span class="math notranslate nohighlight">\(\displaystyle r\)</span> a stěnou o tloušťce <span class="math notranslate nohighlight">\(\displaystyle t\)</span>.</p>
+<p>Výpočet namáhání v řezu A je snadný. Obsah řezu (vyšrafováno červeně) je <span class="math notranslate nohighlight">\(\displaystyle 2\pi r t\)</span>. Na dno a víko působí síla <span class="math notranslate nohighlight">\(\displaystyle F=p\pi r^2\)</span> a v řezu A je tahové napětí <div class="math notranslate nohighlight">
+\[\sigma_{p} = \frac FS=\frac {p\pi r^2}{2\pi rt}=\frac {pr}{2t}.\]</div>
+</p>
+<p>Nyní vypočteme namáhání, které se snaží roztrhnout válec podélně. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží válec roztrhnout v řezu B. Obsah řezu  (červeně vyznačeno) je <span class="math notranslate nohighlight">\(\displaystyle 2Lt\)</span>. Nejtěžší bude najít celkovou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál.</p>
+<p>Budeme se na úlohu dívat shora ze směru, kterým míří osa válce. Tím můžeme snížit dimenzionalitu úlohy. Plášť válce v tomto pohledu vidíme jako kružnici a polovinu pláště jako půlkružnici. Tato půlkružnice  má rovnici <span class="math notranslate nohighlight">\(\displaystyle \vec r(t)=r\cos(t)\vec\imath+r\sin (t)\vec\jmath\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle r\)</span> je poloměr válce a <span class="math notranslate nohighlight">\(\displaystyle t\in\left[-\frac \pi 2,\frac \pi 2\right]\)</span> je úhel mezi spojnicí elementu v bodě <span class="math notranslate nohighlight">\(\displaystyle (x,y)\)</span> a mezi kladnou částí osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Kousek pláště válce odpovídající v průmětu úseku křivky délky <span class="math notranslate nohighlight">\(\displaystyle \Delta s\)</span> má obsah <span class="math notranslate nohighlight">\(\displaystyle L\Delta s\)</span>. Tlaková síla na tento kousek je součin tlaku a obsahu, tj. <div class="math notranslate nohighlight">
+\[\Delta F=pS=p L\Delta s.\]</div>
+ Směr je kolmý k plášti válce a s vodorovnou osou proto síla svírá úhel <span class="math notranslate nohighlight">\(\displaystyle t\)</span>.  Průmět této síly do vodorovného směru je <div class="math notranslate nohighlight">
+\[\Delta F_x=pL\Delta s \cos t\]</div>
+ a tyto příspěvky musíme sečíst křivkovým integrálem přes celou křivku. Platí <span class="math notranslate nohighlight">\(\displaystyle \mathrm ds=r\mathrm dt\)</span>. Celková síla, která se snaží nádobu roztrhnout podélně je
+<div class="math notranslate nohighlight">
+\[F_x=\int_C pL \cos t \,\mathrm d s = \int_{-\frac \pi 2}^{\frac \pi 2} pLr \cos t \,\mathrm d t =prL [\sin t]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.\]</div>
+
+Povrch, na který tato síla působí, odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah <span class="math notranslate nohighlight">\(\displaystyle 2Lt\)</span> a napětí je tedy
+<div class="math notranslate nohighlight">
+\[\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.\]</div>
+ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose.</p>
+<p>Ještě je vhodné ověřit, že svislý průmět, tj . <div class="math notranslate nohighlight">
+\[\Delta F_y=pL\Delta s \sin t\]</div>
+ k namáhání nepřispívá, protože
+<div class="math notranslate nohighlight">
+\[F_y=\int_{C} pL \sin t \,\mathrm d s =0.\]</div>
+
+To však je možné očekávat i ze symetrie.</p>
+<p>Pokud se chcete dozvědět o problematice více, nebo si prohlédnout obrázky válcových nádrží, které selhaly vlivem vysokého nebo nízkého tlaku, zkuste Google a heslo „hoop stress“.</p>
+
+</section>
+</section>
+<section id="krivkovy-integral-druheho-druhu">
+<h2><span class="section-number">5.4. </span>Křivkový integrál druhého druhu<a class="headerlink" href="#krivkovy-integral-druheho-druhu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/GeJgtBHy_sM">Video</a></p>
+<div class='obtekat'>
+
+<figure class="align-default" id="id10">
+<img alt="../_images/krivkovy_integral_druheho_druhu_1.png" src="../_images/krivkovy_integral_druheho_druhu_1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.9 </span><span class="caption-text">Křivkový integrál druhého druhu. Výška plochy je v každém bodě  křivky určena skalárním součinem tečného vektoru jednotkové délky a  vektorem zadaného vektorového  pole.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Pokud působíme na těleso silou <span class="math notranslate nohighlight">\(\displaystyle F\)</span> a přemísťujeme toto těleso ve směru
+působící síly po dráze délky <span class="math notranslate nohighlight">\(\displaystyle s\)</span>,
+<a class="reference external" href="http://cs.wikipedia.org/wiki/Mechanick%C3%A1_pr%C3%A1ce">konáme práci</a>
+<span class="math notranslate nohighlight">\(\displaystyle W=Fs\)</span>. Pokud přemísťování neprobíhá ve směru působící síly a má-li
+síla směr <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> a posunutí <span class="math notranslate nohighlight">\(\displaystyle \vec s\)</span>, je práce rovna skalárnímu
+součinu <span class="math notranslate nohighlight">\(\displaystyle \vec F\cdot\vec s\)</span>.</p>
+<p>Předpokládejme, že na těleso působí (obecně nekonstantní) síla <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> a těleso se pohybuje podél křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> určené polohovým vektorem <span class="math notranslate nohighlight">\(\displaystyle \vec r(t)\)</span>. Pro výpočet práce můžeme použít trik obvyklý v integrálním počtu. Rozdělíme dráhu na malé kousíčky a v rámci těchto kousíčků považujeme <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> i <span class="math notranslate nohighlight">\(\displaystyle \Delta \vec r\)</span> za konstantu. Potom můžeme odhadnout příspěvek každého kousíčku k celkové práci klasickým způsobem pomocí skalárního součinu a nakonec všechny příspěvky sečíst. Tato aproximace bude tím přesnější, čím jemnější dělení použijeme.</p>
+<p>V limitě dostáváme veličinu, která se nazývá <em>křivkový integrál
+druhého druhu</em> funkce <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> po křivce <span class="math notranslate nohighlight">\(\displaystyle C\)</span>. Tento integrál zapisujeme <div class="math notranslate nohighlight">
+\[
+\int_C\vec F\;\mathrm{d}\vec r .\]</div>
+ Je-li <div class="math notranslate nohighlight">
+\[ \vec F(x,y)=P(x,y)\vec
+i+Q(x,y)\vec\jmath, \]</div>
+ zapisujeme někdy křivkový integrál
+ve složkách <div class="math notranslate nohighlight">
+\[ \int_C P(x,y)\mathrm{d}
+x+Q(x,y)\mathrm{d} y.  \]</div>
+</p>
+<p>Protože při pohybu tělesa po křivce jedním směrem se práce koná a při pohybu opačným směrem spotřebovává, je nutné, aby křivka figurující v křivkovém integrálu druhého druhu byla orientovaná. Musíme tedy prohlásit jeden koncový bod za <em>počáteční</em> a druhý za <em>koncový</em>. Vždy budeme předpokládat, že křivka je <em>orientovaná v souladu se svým parametrickým vyjádřením</em>, tj. že počáteční bod křivky odpovídá hodnotě parametru <span class="math notranslate nohighlight">\(\displaystyle t=\alpha\)</span> a koncový bod odpovídá hodnotě parametru <span class="math notranslate nohighlight">\(\displaystyle t=\beta\)</span>.</p>
+</section>
+<section id="prevod-na-riemannuv-integral">
+<h2><span class="section-number">5.5. </span>Převod na Riemannův integrál<a class="headerlink" href="#prevod-na-riemannuv-integral" title="Link to this heading">#</a></h2>
+<div class="obtekat">
+
+<figure class="align-default" id="id11">
+<img alt="../_images/element_posunuti.png" src="../_images/element_posunuti.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.10 </span><span class="caption-text">Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Známe-li parametrické rovnice
+<div class="math notranslate nohighlight">
+\[\vec r(t) = \varphi(t)\vec\imath + \psi(t) \vec\jmath,\quad t\in[\alpha,\beta],\]</div>
+
+křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span>, je možno křivkový integrál
+druhého druhu funkce
+<div class="math notranslate nohighlight">
+\[\vec F(x,y)=P(x,y)\vec\imath + Q(x,y)\vec\jmath\]</div>
+
+po křivce <span class="math notranslate nohighlight">\(\displaystyle C\)</span> zapsat
+následovně
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\int_C\vec F\;\mathrm{d}\vec r&amp;=\int_\alpha^\beta\Bigl[ P(\varphi(t),\psi(t))\varphi'(t)\\ &amp;\qquad +Q(\varphi(t),\psi(t))\psi'(t)\Bigr]\;\mathrm{d}t.
+\end{aligned}
+\end{split}\]</div>
+
+Vektorově
+<div class="math notranslate nohighlight">
+\[\int_C \vec F\;\mathrm d\vec r = 
+\int_\alpha^\beta \vec F(\vec r(t)) \cdot \frac{\mathrm d\vec r(t)}{\mathrm dt}\; \mathrm dt.
+\]</div>
+</p>
+</section>
+<section id="vlastnosti-krivkoveho-integralu-druheho-druhu">
+<h2><span class="section-number">5.6. </span>Vlastnosti křivkového integrálu druhého druhu<a class="headerlink" href="#vlastnosti-krivkoveho-integralu-druheho-druhu" title="Link to this heading">#</a></h2>
+<div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span>Věta </span> (souvislost křivkového integrálu a orientace křivky)</p>
+<section class="theorem-content" id="proof-content">
+<p>Změnou orientace křivky křivkový integrál druhého druhu mění znaménko.</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-4">
+<p class="admonition-title"><span>Věta </span> (nezávislost na zvolené parametrizaci)</p>
+<section class="theorem-content" id="proof-content">
+<p>Křivkový integrál druhého druhu nezávisí na konkrétní parametrizaci  křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span>. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.</p>
+</section>
+</div><p>Následující vlastnosti jsou stejné jako u křivkového integrálu prvního druhu.</p>
+<div class="proof theorem admonition" id="theorem-5">
+<p class="admonition-title"><span>Věta </span> (linearita a aditivita vzhledem k integračnímu oboru)</p>
+<section class="theorem-content" id="proof-content">
+<p>Křivkový integrál druhého druhu je lineární vzhledem k funkci a
+aditivní vzhledem k oboru integrace. Přesněji, pro funkce <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \vec G\)</span>
+a konstantu <span class="math notranslate nohighlight">\(\displaystyle k\)</span> platí následující.
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\int_C \vec F+\vec G\;\mathrm{d}\vec {r} &amp; = \int_C \vec F\;\mathrm{d}\vec {r} + \int_C \vec {G}\;\mathrm{d}\vec{r} \\
+\int_C k\vec {F}\;\mathrm{d}\vec{r} &amp; = k\int_C \vec{F}\;\mathrm{d}\vec{r}\\
+\end{aligned}
+\end{split}\]</div>
+
+Je-li křivka <span class="math notranslate nohighlight">\(\displaystyle C\)</span> rozdělena na dvě disjunktní (až na koncové body) křivky <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span>, platí
+<div class="math notranslate nohighlight">
+\[
+\int_{C} \vec F\;\mathrm{d}\vec{r} = \int_{C_1} \vec F\;\mathrm{d}\vec{r} + \int_{C_2} \vec F\;\mathrm{d}\vec{r} .
+\]</div>
+</p>
+</section>
+</div></section>
+<section id="aplikace-krivkoveho-integralu-druheho-druhu">
+<h2><span class="section-number">5.7. </span>Aplikace křivkového integrálu druhého druhu<a class="headerlink" href="#aplikace-krivkoveho-integralu-druheho-druhu" title="Link to this heading">#</a></h2>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/integracni_cesta" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/integracni_cesta.jpg"></a><figcaption>Křivkový integrál může a nemusí záviset na integrační cestě. Pokud na ní nezávisí, je možné v takovém poli nadefinovat potenciální energii. <a href="https://user.mendelu.cz/marik/manim/integracni_cesta" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
+<ul class="simple">
+<li><p>Integrál
+<div class="math notranslate nohighlight">
+\[
+\int_C\vec F\;\mathrm{d}\vec r
+\]</div>
+
+vyjadřuje <strong>práci</strong> kterou vykoná síla <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> při přemístění tělesa podél orientované křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span>.</p></li>
+<li><p>Je-li křivka <span class="math notranslate nohighlight">\(\displaystyle C\)</span> uzavřená, píšeme
+<div class="math notranslate nohighlight">
+\[
+\oint_C\vec F\;\mathrm{d}\vec r.
+\]</div>
+
+Fyzikálně se jedná o <strong>práci</strong> kterou vykoná síla <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> při přemístění
+tělesa po uzavřené orientované křivce. Tato práce se též nazývá <em>cirkulace
+vektorového pole po orientované křivce <span class="math notranslate nohighlight">\(\displaystyle C\)</span></em>. Pokud je možno v poli zavést
+potenciální energii a pokud tedy práce závisí jenom na počáteční a
+koncové poloze, musí tato práce být nulová. To je důsledkem věty
+kterou si uvedeme později.</p></li>
+<li><p>Při odvození křivkového integrálu druhého druhu jako vykonané práce hraje roli vlastně jenom ta
+složka silového pole, která při posunu ve směru křivky koná práci. Uvažujeme tedy jenom složku tečnou ke křivce. Pokud použijeme naopak pouze normálovou komponentu, dostaneme veličinu vyjadřující <strong>tok vektorového pole orientovanou křivkou <span class="math notranslate nohighlight">\(\displaystyle C\)</span></strong>. Výsledný vzorec pro tok vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec F(x,y)=P(x,y)\vec
+i+Q(x,y)\vec\jmath\)</span> křivkou <span class="math notranslate nohighlight">\(\displaystyle C\)</span>
+je
+<div class="math notranslate nohighlight">
+\[
+\int_{C}-Q(x,y)\mathrm{d}x+P(x,y)\mathrm{d}y.
+\]</div>
+</p></li>
+<li><p>Je-li množina <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span> „dostatečně pěkná“ (např. souvislá, bez děr, s  hladkou hranicí <span class="math notranslate nohighlight">\(\displaystyle \partial \Omega\)</span>, která se nikde neprotíná, detaily uvedeme později u Greenovy věty), potom každý z integrálů
+<div class="math notranslate nohighlight">
+\[\oint_{\partial\Omega}x\mathrm{d}y\qquad\text{a}\qquad\oint_{\partial\Omega}y\mathrm{d}x\]</div>
+
+udává (až na případné znaménko) obsah množiny <span class="math notranslate nohighlight">\(\displaystyle \Omega\)</span>. Na tomto principu fungují planimetry.</p></li>
+<li><p>Figuruje v integrálním tvaru Maxwellových rovnic. Je možné jej využít například k <a class="reference external" href="https://user.mendelu.cz/marik/am/slovni_ulohy/#k%C5%99ivkov%C3%BD-integr%C3%A1l">pohodlnému výpočtu magnetického pole v okolí přímého vodiče</a>.</p></li>
+</ul>
+</section>
+<section id="shrnuti-vlastnosti-krivkovych-integralu">
+<h2><span class="section-number">5.8. </span>Shrnutí: vlastnosti křivkových integrálů<a class="headerlink" href="#shrnuti-vlastnosti-krivkovych-integralu" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Oba křivkové integrály jsou <strong>aditivní vzhledem k oboru integrace</strong>. Je možno křivku rozdělit na konečný počet navzájem disjunktních částí, vypočítat integrál na každé části samostatně a výsledky sečíst.</p></li>
+<li><p>Křivkový integrál prvního ani druhého druhu <strong>nezávisí na konkrétní parametrizaci křivky</strong>.</p></li>
+<li><p>Křivkový integrál prvního druhu <strong>nezávisí na orientaci</strong> křivky.</p></li>
+<li><p>Křivkový integrál druhého druhu <strong>při změně orientace křivky mění znaménko</strong>.</p></li>
+</ul>
+<!--
+
+\iffalse
+
+## Steinerova věta
+
+<div class="sloupce">
+
+Nechť je dána křivka $C$ s lineární hustotou $\tau(x,y)$.
+Nechť křivka $C$ splňuje $\int_C x \tau(x,y)\;\mathrm{d}s=0$, tj. nechť
+osa $y$ prochází těžištěm křivky $C$. Určete moment setrvačnosti
+křivky vhledem k ose $o$ rovnoběžné s $y$ ve vzdálenosti $d$ od osy $y$.
+
+*Řešení*
+Podle toho zda osa $o$ je nalevo nebo napravo od osy $y$ dostáváme jednu z následujících variant.
+$$\begin{aligned}
+J_o&=\int_C(x\pm d)^2\tau \;\mathrm{d}s\\
+&=\int_C(x^2\pm 2xd+d^2)\tau \;\mathrm{d}s\\
+&=\int_C x^2\tau \;\mathrm{d}s \pm 2d\int_C x\tau \;\mathrm{d}s + d^2 \int_C \tau \;\mathrm{d}s.
+\end{aligned}
+$$
+Na pravé straně vidíme, že prvním členem je moment otáčení vzhledem k ose $y$
+$$J_{yT}=\int_C x^2\tau \;\mathrm{d}s$$ a ve třetím členu je obsažena hmotnost křivky
+$$m=\int_C \tau \;\mathrm{d}s.$$
+Dále ze zadání vidíme, že prostřední člen je roven nule.
+V označení výše náš vztah dostává tvar
+$$J_o=J_{yT}+m d^2.$$
+Tento vztah se nazývá Steinerova věta. Ukazuje, že moment setrvačnosti
+je nejmenší vzhledem k ose otáční procházející těžišťěm (člen $m
+d^2$ je vždy nezáporný) a umožňuje přepočet momentu setrvačnosti pro
+rovnoběžné osy.
+
+</div>
+
+\fi
+
+-->
+</section>
+<section id="zaverecne-informace">
+<h2><span class="section-number">5.9. </span>Závěrečné informace<a class="headerlink" href="#zaverecne-informace" title="Link to this heading">#</a></h2>
+<section id="parametrizace-usecky">
+<h3><span class="section-number">5.9.1. </span>Parametrizace úsečky<a class="headerlink" href="#parametrizace-usecky" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Hledejme parametrické rovnice orientované úsečky <span class="math notranslate nohighlight">\(\displaystyle AB\)</span>, kde je dán počáteční bod <span class="math notranslate nohighlight">\(\displaystyle A=[x_A,y_A]\)</span> a koncový bod <span class="math notranslate nohighlight">\(\displaystyle B=[x_B,y_B]\)</span>.</p></li>
+<li><p>Leží-li bod <span class="math notranslate nohighlight">\(\displaystyle X\)</span> na úsečce <span class="math notranslate nohighlight">\(\displaystyle AB\)</span>, potom vektor <span class="math notranslate nohighlight">\(\displaystyle \vec {AX}\)</span> má stejný směr (včetně orientace) jako vektor <span class="math notranslate nohighlight">\(\displaystyle \vec {AB}\)</span> a nejvýše stejnou délku.</p></li>
+<li><p>Platí tedy <span class="math notranslate nohighlight">\(\displaystyle \vec {AX}=t\vec {AB}\)</span> pro nějaké <span class="math notranslate nohighlight">\(\displaystyle t\in[0,1]\)</span>. Odsud potom dostáváme  <span class="math notranslate nohighlight">\(\displaystyle X-A=t(B-A)\)</span> a <span class="math notranslate nohighlight">\(\displaystyle X=A+t(B-A)\)</span>.</p></li>
+<li><p>V souřadnicích zapsáno, parametrické rovnice úsečky jsou <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}x&amp;=x_A+t(x_B-x_A)\\y&amp;=y_A+t(y_B-y_A), \quad t\in[0,1]\end{aligned}\end{split}\]</div>
+</p></li>
+<li><p>Pro úsečku v prostoru platí totéž, pouze přibývá třetí souřadnice.</p></li>
+</ul>
+
+</section>
+<section id="online-vypocet-krivkoveho-integralu">
+<h3><span class="section-number">5.9.2. </span>Online výpočet křivkového integrálu<a class="headerlink" href="#online-vypocet-krivkoveho-integralu" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Křivkový integrál druhého druhu, <a class="reference external" href="https://gist.github.com/robert-marik/6e203ee18958a4154ef0f2151d823bd1">numerický výpočet, Python.</a></p></li>
+<li><p>Křivkový integrál prvního druhu, <a class="reference external" href="https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&amp;amp;lang=sage">výpočet pomocí Sage (derivace symbolicky, integrace numericky).</a></p></li>
+<li><p>Křivkový integrál druhého druhu, <a class="reference external" href="https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&amp;amp;lang=sage">výpočet pomocí Sage (derivace symbolicky, integrace numericky).</a></p></li>
+</ul>
+
+<style>
+.sloupce4{-moz-column-count:4; /* Firefox */
+-webkit-column-count:4; /* Safari and Chrome */
+column-count:4;}
+.sloupce6{-moz-column-count:6; /* Firefox */
+-webkit-column-count:6; /* Safari and Chrome */
+column-count:6;}
+.sloupce5{-moz-column-count:5; /* Firefox */
+-webkit-column-count:5; /* Safari and Chrome */
+column-count:5;}
+.sloupce3{-moz-column-count:3; /* Firefox */
+-webkit-column-count:3; /* Safari and Chrome */
+column-count:3;}
+.sloupce4 ul li {display:inline-block; max-width:100%;}
+</style>
+</section>
+</section>
+<section id="z-ptaci-perspektivy">
+<h2><span class="section-number">5.10. </span>Z ptačí perspektivy<a class="headerlink" href="#z-ptaci-perspektivy" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id12">
+<img alt="../_images/falcon.jpg" src="../_images/falcon.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.11 </span><span class="caption-text">Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Křivkový integrál druhého druhu souvisí s prací silového pole. Vzhledem ke zkušenostem z mechaniky by toto měla být cesta ke skalárnímu popisu vektorového pole. Protože v minulém týdnu jsme jednu takovou cestu otevřeli (pojem rotace a její nulovost či nenulovost), dá se očekávat, že obě problematiky budou souviset. Tuto souvislost si ukážeme později, za dva týdny (Greenova věta).</p></li>
+<li><p>Křivkový integrál druhého druhu může souviset s i s tokem vektorového pole křivkou a to je zase doména difuzní rovnice a divergence vektorového pole. Oba pojmy, křivkový integrál a divergence spolu opravdu souvisí a přesvědčí nás o tom později opět Greenova věta.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../04/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Rotace vektorového pole</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../06/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Dvojný integrál</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.1. Křivkový integrál</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametricke-rovnice-krivky">5.2. Parametrické rovnice křivky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-prvniho-druhu">5.3. Křivkový integrál prvního druhu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prevod-na-riemannuv-integral-rovinna-krivka">5.3.1. Převod na Riemannův integrál (rovinná křivka)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prevod-na-riemannuv-integral-prostorova-krivka">5.3.2. Převod na Riemannův integrál (prostorová  křivka)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-krivkoveho-integralu-prvniho-druhu">5.3.3. Aplikace křivkového integrálu prvního druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vlastnosti-krivkoveho-integralu-prvniho-druhu">5.3.4. Vlastnosti křivkového integrálu prvního druhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proc-trubky-praskaji-podelne">5.3.5. Proč trubky praskají podélně?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu">5.4. Křivkový integrál druhého druhu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prevod-na-riemannuv-integral">5.5. Převod na Riemannův integrál</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vlastnosti-krivkoveho-integralu-druheho-druhu">5.6. Vlastnosti křivkového integrálu druhého druhu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikace-krivkoveho-integralu-druheho-druhu">5.7. Aplikace křivkového integrálu druhého druhu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shrnuti-vlastnosti-krivkovych-integralu">5.8. Shrnutí: vlastnosti křivkových integrálů</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zaverecne-informace">5.9. Závěrečné informace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrizace-usecky">5.9.1. Parametrizace úsečky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-vypocet-krivkoveho-integralu">5.9.2. Online výpočet křivkového integrálu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#z-ptaci-perspektivy">5.10. Z ptačí perspektivy</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 21.10.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

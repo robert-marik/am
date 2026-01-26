@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-05-22T16:13:41+02:00" />
+    <title>11. Lineární diferenciální rovnice druhého řádu &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11/index';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="1. Parciální derivace" href="../cviceni/cviceni01.html" />
+    <link rel="prev" title="10. Autonomní rovnice a systémy" href="../10/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="22.05.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lineární diferenciální rovnice druhého řádu</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.1. Lineární diferenciální rovnice druhého řádu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-teleso-na-pruzine">11.2. Příklad - těleso na pružině</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resitelnost-lde-druheho-radu">11.3. Řešitelnost LDE druhého řádu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusledky-linearity">11.4. Důsledky linearity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusledky-linearity-prakticky">11.5. Důsledky linearity prakticky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-lde-2-radu-obecne-reseni">11.6. Homogenní LDE 2. řádu (obecné řešení)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-lde-2-radu-s-konstantnimi-koeficienty">11.7. Homogenní LDE 2. řádu s konstantními koeficienty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nehomogenni-lde-2-radu">11.8. Nehomogenní LDE 2. řádu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichletova-okrajova-uloha-vlastni-cisla">11.9. Dirichletova okrajová úloha, vlastní čísla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-vlastnich-hodnot">11.10. Výpočet vlastních hodnot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pripad-lambda-0">11.10.1. Případ <span class="math notranslate nohighlight">\(\displaystyle \lambda&gt;0\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">11.10.2. Případ <span class="math notranslate nohighlight">\(\displaystyle \lambda&lt;0\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obvykla-formulace">11.10.3. Obvyklá formulace</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kmity-struny">11.11. Kmity struny</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vzpery">11.12. Vzpěry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neumannova-a-smisena-okrajova-uloha">11.13. Neumannova a smíšená okrajová úloha</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierova-metoda-separace-promennych">11.14. Fourierova metoda separace proměnných</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="linearni-diferencialni-rovnice-druheho-radu">
+<h1><span class="section-number">11. </span>Lineární diferenciální rovnice druhého řádu<a class="headerlink" href="#linearni-diferencialni-rovnice-druheho-radu" title="Link to this heading">#</a></h1>
+<div class="admonition-anotace admonition">
+<p class="admonition-title">Anotace.</p>
+<ul class="simple">
+<li><p>Lineární diferenciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice.</p></li>
+<li><p>Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělesa a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu.</p></li>
+<li><p>Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů, pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.</p></li>
+<li><p><a class="reference external" href="https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html">Numerické experimenty</a> s rovnicí.
+Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neurčitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu případně až v poslední fázi.</p></li>
+</ul>
+</div>
+<section id="id1">
+<h2><span class="section-number">11.1. </span>Lineární diferenciální rovnice druhého řádu<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/PcNc0tfv7Q0">Video</a></p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span>Definice </span> (Lineární diferenciální rovnice druhého řádu)</p>
+<section class="definition-content" id="proof-content">
+<p>Buďte <span class="math notranslate nohighlight">\(\displaystyle p\)</span>, <span class="math notranslate nohighlight">\(\displaystyle q\)</span> a <span class="math notranslate nohighlight">\(\displaystyle f\)</span>
+funkce definované a spojité na intervalu <span class="math notranslate nohighlight">\(\displaystyle I\)</span>. Diferenciální rovnice</p>
+<div class="math notranslate nohighlight" id="equation-lde">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-lde" title="Link to this equation">#</a></span>\[y''+p(x)y'+q(x)y=f(x) \]</div>
+<p>se nazývá <em>lineární diferenciální rovnice druhého řádu</em>. <em>Řešením
+rovnice</em> (nebo též <em>integrálem rovnice</em>) na intervalu <span class="math notranslate nohighlight">\(\displaystyle I\)</span> rozumíme
+funkci, která má spojité derivace do řádu <span class="math notranslate nohighlight">\(\displaystyle 2\)</span> na
+intervalu <span class="math notranslate nohighlight">\(\displaystyle I\)</span> a po dosazení identicky splňuje rovnost <a class="reference internal" href="#equation-lde">(11.1)</a> na <span class="math notranslate nohighlight">\(\displaystyle I\)</span>.
+Úloha nalézt řešení rovnice, které splňuje v bodě <span class="math notranslate nohighlight">\(\displaystyle x_0\in I\)</span> <em>počáteční
+podmínky</em></p>
+<div class="math notranslate nohighlight" id="equation-ic">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-ic" title="Link to this equation">#</a></span>\[\begin{split}\begin{aligned}y(x_0)&amp;=y_0,\\ y'(x_0)&amp;=y'_0,\end{aligned}\end{split}\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y'_0\)</span> jsou reálná čísla, se nazývá <em>počáteční úloha</em>
+(<em>Cauchyova úloha</em>). Řešení počáteční úlohy se nazývá <em>partikulární
+řešení rovnice.</em></p>
+</section>
+</div><p><strong>Zkratky:</strong> LDE - lineární diferenciální rovnice, IC - počáteční podmínka, IVP - počáteční úloha</p>
+</section>
+<section id="priklad-teleso-na-pruzine">
+<h2><span class="section-number">11.2. </span>Příklad - těleso na pružině<a class="headerlink" href="#priklad-teleso-na-pruzine" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id3">
+<img alt="../_images/pruzina.jpg" src="../_images/pruzina.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.1 </span><span class="caption-text">Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<img alt="../_images/kmity_stromu1.png" src="../_images/kmity_stromu1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.2 </span><span class="caption-text">Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Kmity tělesa o hmotnosti <span class="math notranslate nohighlight">\(\displaystyle m\)</span> pružně připevněného k nehybné podložce
+spojem tuhosti <span class="math notranslate nohighlight">\(\displaystyle k\)</span> jsou popsány diferenciální rovnicí <span class="math notranslate nohighlight">\(\displaystyle {\ddot x+\frac
+km x=0}.\)</span> Zde navíc používáme fyzikální úzus označovat derivace podle
+času pomocí tečky a ne čárky. Symbol <span class="math notranslate nohighlight">\(\displaystyle \ddot x\)</span> tedy značí druhou
+derivaci funkce <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle x\)</span> bereme jako funkci času.</p>
+<p>Jednoduchým mechanickým modelem je těleso na pružině. Zde je deformace
+úměrná působící síle. Analogické situace vedoucí na stejnou rovnici
+však dostáváme i obecněji. Pokud pro jednoduchost předpokládáme, že
+těleso s jedním stupněm volnosti se nachází ve stabilním stavu s
+minimem potenciální energie a energie závisí na poloze <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, můžeme v
+okolí minima <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> potenciální energii aproximovat Taylorovým rozvojem
+druhého řádu <div class="math notranslate nohighlight">
+\[E(x)\approx E(x_0)+E'(x_0)(x-x_0)+\frac 12E''(x_0)(x-x_0)^2.\]</div>
+
+Vzhledem k tomu, že v <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span> je minimum, platí <span class="math notranslate nohighlight">\(\displaystyle E'(x_0)=0\)</span>. Je výhodné volit počátek v rovnovážné poloze, protože poté platí <span class="math notranslate nohighlight">\(\displaystyle x_0=0\)</span>. Síla je
+poté dána vztahem <div class="math notranslate nohighlight">
+\[F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.\]</div>
+
+Síla <span class="math notranslate nohighlight">\(\displaystyle F\)</span> je tedy úměrná výchylce <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a vrací těleso do rovnovážné
+polohy.</p>
+<p>Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciální energie uvažovaná v tomto odstavci může být jiného charakteru. Něco podobného jsme viděli již u autonomních systémů, kdy systém modelující tlumený oscilátor z přednášky byl stejný jako systém modelující regulaci topení ze cvičení a tento systém byl jenom lépe představitelnou realizací systému regulace syntézy proteinů.</p>
+</section>
+<section id="resitelnost-lde-druheho-radu">
+<h2><span class="section-number">11.3. </span>Řešitelnost LDE druhého řádu<a class="headerlink" href="#resitelnost-lde-druheho-radu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/sw5EvXHFtA0">Video</a></p>
+<p>Budeme se zabývat řešitelností diferenciální rovnice <a class="reference internal" href="#equation-lde">(11.1)</a>, tj. rovnice
+<div class="math notranslate nohighlight">
+\[y''+p(x)y'+q(x)y=f(x).\]</div>
+</p>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span>Věta </span> (o existenci a jednoznačnosti řešení LDE druhého řádu)</p>
+<section class="theorem-content" id="proof-content">
+<p>Každá
+počáteční úloha pro LDE druhého řádu má řešení, které je určeno
+jednoznačně a toto řešení je definované na celém intervalu <span class="math notranslate nohighlight">\(\displaystyle I\)</span>.</p>
+</section>
+</div><div class="proof definition admonition" id="definition-2">
+<p class="admonition-title"><span>Definice </span> (speciální typy LDE druhého řádu)</p>
+<section class="definition-content" id="proof-content">
+<p>Platí-li v rovnici <a class="reference internal" href="#equation-lde">(11.1)</a> <span class="math notranslate nohighlight">\(\displaystyle f(x)=0\)</span>
+pro všechna <span class="math notranslate nohighlight">\(\displaystyle x\in I\)</span>, nazývá se rovnice <a class="reference internal" href="#equation-lde">(11.1)</a> <em>homogenní</em>, v opačném
+případě <em>nehomogenní</em>.</p>
+<p>Jsou-li koeficienty <span class="math notranslate nohighlight">\(\displaystyle p(x)\)</span> a <span class="math notranslate nohighlight">\(\displaystyle q(x)\)</span> na intervalu
+<span class="math notranslate nohighlight">\(\displaystyle I\)</span> konstantní funkce, nazývá se <a class="reference internal" href="#equation-lde">(11.1)</a> <em>rovnice s konstantními
+koeficienty</em>.</p>
+</section>
+</div><div class="proof definition admonition" id="definition-3">
+<p class="admonition-title"><span>Definice </span> (triviální řešení)</p>
+<section class="definition-content" id="proof-content">
+<p>Funkce <span class="math notranslate nohighlight">\(\displaystyle y(x)\equiv 0\)</span> je řešením
+homogenní LDE druhého řádu <div class="math notranslate nohighlight">
+\[y''+p(x)y'+q(x)y=0\]</div>
+ vždy, bez ohledu na tvar koeficientů <span class="math notranslate nohighlight">\(\displaystyle p\)</span>, <span class="math notranslate nohighlight">\(\displaystyle q\)</span>. Toto řešení nazýváme <em>triviální řešení</em>.</p>
+</section>
+</div><div class="proof definition admonition" id="definition-4">
+<p class="admonition-title"><span>Definice </span> (asociovaná homogenní rovnice)</p>
+<section class="definition-content" id="proof-content">
+<p>Nahradíme-li v nehomogenní LDE
+pravou stranu (tj. funkci <span class="math notranslate nohighlight">\(\displaystyle f\)</span>) nulovou funkcí, obdržíme rovnici
+<div class="math notranslate nohighlight">
+\[ y''+p(x)y'+q(x)y=0.\]</div>
+
+Tato rovnice se nazývá <em>asociovaná homogenní rovnice k rovnici <a class="reference internal" href="#equation-lde">(11.1)</a></em>.</p>
+</section>
+</div><div class="proof definition admonition" id="definition-5">
+<p class="admonition-title"><span>Definice </span> (obecné řešení)</p>
+<section class="definition-content" id="proof-content">
+<p>Všechna řešení LDE druhého řádu
+lze vyjádřit ve tvaru obsahujícím dvě nezávislé konstanty <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span>,
+<span class="math notranslate nohighlight">\(\displaystyle C_2\in\mathbb{R}\)</span>. Takovýto předpis se nazývá <em>obecné řešení rovnice <a class="reference internal" href="#equation-lde">(11.1)</a></em>.</p>
+</section>
+</div><!--
+## Operátorová symbolika
+
+$$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
+
+<div class="sloupce__">
+
+<div>
+
+Podobně jako lineární diferenciální rovnice
+prvního řádu, i u (LDE) často pravou stranu rovnice často zkracujeme do
+tvaru $L[y](x)$. Definujeme-li tedy
+$$  L[y](x)=y''(x)+p(x)y'(x)+q(x)y(x),$$
+je tímto předpisem definován operátor, který každé dvakrát
+diferencovatelné funkci přiřazuje levou stranu rovnice (LDE). Rovnici
+(LDE) je potom možno zapsat ve tvaru $$L[y]=f(x).$$
+
+</div>
+
+> **Věta o linearitě.** Operátor $L[y]$ zachovává lineární kombinaci funkcí,
+> tj. pro libovolné dvě funkce $y_1$ a $y_2$ a libovolné reálné
+> konstanty $C_1$ a $C_2$ platí
+> $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2].$$
+
+</div>
+
+-->
+</section>
+<section id="dusledky-linearity">
+<h2><span class="section-number">11.4. </span>Důsledky linearity<a class="headerlink" href="#dusledky-linearity" title="Link to this heading">#</a></h2>
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle L\)</span> je lineární diferenciální operátor druhého řádu.
+Jako speciální případ vztahu  <div class="math notranslate nohighlight">
+\[L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]\]</div>
+ dostáváme následující.</p>
+<ul class="simple">
+<li><p>Platí <div class="math notranslate nohighlight">
+\[L[y_1]=L[y_2]=0\ \implies \ L[C_1y_1+C_2y_2]=0,\]</div>
+ tj. každá
+lineární kombinace dvou řešení homogenní LDE je opět řešením této
+rovnice. Pokud se nám navíc podaří volbou konstant <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span>
+splnit libovolnou počáteční podmínku, je jistota, že máme obecné
+řešení.</p></li>
+<li><p>Platí <div class="math notranslate nohighlight">
+\[L[y_2]=0 \text{ a } L[y_1]=f(x)\ \implies\
+  L[y_1+y_2]=f(x),\]</div>
+ tj. součet řešení nehomogenní a asociované
+homogenní LDE je řešením původní nehomogenní rovnice. Pokud je
+navíc <span class="math notranslate nohighlight">\(\displaystyle y_2\)</span> obecným řešením homogenní rovnice, je <span class="math notranslate nohighlight">\(\displaystyle y_1+y_2\)</span>
+obecným řešením nehomogenní rovnice, protože se podaří splnit
+libovolnou počáteční podmínku.</p></li>
+</ul>
+</section>
+<section id="dusledky-linearity-prakticky">
+<h2><span class="section-number">11.5. </span>Důsledky linearity prakticky<a class="headerlink" href="#dusledky-linearity-prakticky" title="Link to this heading">#</a></h2>
+<p>Vztah
+<div class="math notranslate nohighlight">
+\[L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]\]</div>
+
+poslouží (podobně jako u lineárních rovnic prvního řádu), abychom popsali strukturu množiny všech řešení rovnice a dokázali tuto množinu vytvořit jenom na základě znalosti několika prvků.</p>
+<p>Rovnice</p>
+<div class="math notranslate nohighlight" id="equation-11a">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-11a" title="Link to this equation">#</a></span>\[y''+y=x\]</div>
+<p>má partikulární řešení <span class="math notranslate nohighlight">\(\displaystyle y=x\)</span>.</p>
+<p>Asociovaná homogenní rovnice je</p>
+<div class="math notranslate nohighlight" id="equation-11b">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-11b" title="Link to this equation">#</a></span>\[y''+y=0.\]</div>
+<p>Tato rovnice má řešení
+například <span class="math notranslate nohighlight">\(\displaystyle y=\sin x\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y=\cos x\)</span>. Z linearity plyne</p>
+<ul class="simple">
+<li><p>Funkce <span class="math notranslate nohighlight">\(\displaystyle y=C_1 \sin x+C_2 \cos x\)</span> je řešením rovnice <a class="reference internal" href="#equation-11b">(11.4)</a> pro
+libovolná reálná <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span>. Protože platí <span class="math notranslate nohighlight">\(\displaystyle y(0)=C_2\)</span> a
+<span class="math notranslate nohighlight">\(\displaystyle y'(0)=C_1\)</span>, je možné splnit libovolnou podmínku <span class="math notranslate nohighlight">\(\displaystyle y(0)=\alpha\)</span>,
+<span class="math notranslate nohighlight">\(\displaystyle y'(0)=\beta\)</span> volbou <span class="math notranslate nohighlight">\(\displaystyle C_2=\alpha\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_1=\beta\)</span>. Jedná se tedy o
+obecné řešení.</p></li>
+<li><p>Funkce <span class="math notranslate nohighlight">\(\displaystyle y=C_1 \sin x+C_2\cos x +x\)</span> je obecným řešením rovnice <a class="reference internal" href="#equation-11b">(11.4)</a>.</p></li>
+</ul>
+<!--
+
+## Kdy pomocí linearity získáme obecné řešení?
+
+Budeme studovat homogenní LDE druhého řádu, tj.
+rovnici 
+$$y''+p(x)y'+q(x)y=0,$$
+kterou můžeme zkráceně zapsat jako $L[y]=0$, kde operátor $L$ je
+lineární diferenciální operátor druhého řádu.
+
+**Motivace.** Budeme předpokládat že funkce $y_1(x)$ a $y_2(x)$ jsou obě
+řešeními a budeme hledat podmínky, za kterých je funkce
+
+$$y(x)=C_1y_1(x)+C_2y_2(x)$$
+
+obecným řešením. Derivováním tohoto vztahu získáváme
+
+$$y'(x)=C_1y'_1(x)+C_2y'_2(x)$$
+
+a dosazení počátečních podmínek $y(\alpha)=\beta$, $y'(\alpha)=\gamma$
+vede k následující soustavě lineárních rovnic s neznámými $C_1$, $C_2$
+
+$$
+\begin{aligned}
+  \beta&{}=C_1y_1(\alpha)+C_2y_2(\alpha),\\
+  \gamma&{}=C_1y'_1(\alpha)+C_2y'_2(\alpha).
+\end{aligned}$$
+
+Jak je známo z lineární algebry, tato soustava má právě jedno řešení pro
+libovolnou volbu čísel $\beta$, $\gamma$ právě tehdy, když matice
+soustavy, tj. matice $\begin{pmatrix}
+  y_1(\alpha)&y_2(\alpha)\\
+  y_1'(\alpha)&y_2'(\alpha)
+\end{pmatrix},$ je regulární. Tato matice je regulární právě tehdy, když její
+determinant je nenulový a to nastane právě tehdy když jeden sloupec není
+násobkem druhého. 
+
+## Homogenní LDE 2. řádu (wronskián, lineárně nezávislá řešení)
+
+$$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
+
+```{prf:definition} lineární (ne-)závislost funkcí
+:nonumber:
+ Buďte $y_1$ a $y_2$ funkce definované
+na intervalu $I$. Řekneme, že funkce $y_1$ a $y_2$ jsou na intervalu $I$
+*lineárně závislé*, jestliže jedna z nich je na intervalu $I$ násobkem
+druhé, tj. jestliže existuje reálné číslo $k\in\mathbb{R}$ s vlastností
+$$y_1(x)=ky_2(x) \qquad\text{pro všechna $x\in I$},$$
+nebo
+$$y_2(x)=ky_1(x) \qquad\text{pro všechna $x\in I$}.$$
+V opačném případě říkáme, že funkce $y_1$, $y_2$ jsou na intervalu $I$
+*lineárně nezávislé*.
+```
+
+
+```{prf:definition} Wronskián
+:nonumber:
+ Buďte $y_1(x)$ a $y_2(x)$ dvě libovolná
+řešení homogenní rovnice (LDE0). *Wronskiánem* funkcí $y_1(x)$,
+$y_2(x)$ rozumíme determinant
+$$
+W[y_1, y_2](x)=\begin{vmatrix}
+y_1(x)&y_2(x)\\y_1'(x)&y_2'(x)
+\end{vmatrix}.
+$$
+```
+
+
+```{prf:theorem} o lineární (ne)závislostí řešení
+:nonumber:
+ Buďte $y_1(x)$ a $y_2(x)$ dvě řešení rovnice
+(LDE0) na intervalu $I$. Tato řešení jsou lineárně nezávislá právě
+tehdy když je jejich Wronskián různý od nuly na intervalu $I$.
+```
+
+
+-->
+</section>
+<section id="homogenni-lde-2-radu-obecne-reseni">
+<h2><span class="section-number">11.6. </span>Homogenní LDE 2. řádu (obecné řešení)<a class="headerlink" href="#homogenni-lde-2-radu-obecne-reseni" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight" id="equation-lde0">
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-lde0" title="Link to this equation">#</a></span>\[y''+p(x)y'+q(x)y=0 \]</div>
+<div class="proof theorem admonition" id="theorem-6">
+<p class="admonition-title"><span>Věta </span> (obecné řešení homogenní LDE)</p>
+<section class="theorem-content" id="proof-content">
+<p>Jsou-li <span class="math notranslate nohighlight">\(\displaystyle y_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y_2\)</span> dvě
+netriviální lineárně nezávislá řešení rovnice <a class="reference internal" href="#equation-lde0">(11.5)</a> na intervalu
+<span class="math notranslate nohighlight">\(\displaystyle I\)</span>, pak funkce <span class="math notranslate nohighlight">\(\displaystyle y\)</span> definovaná vztahem
+<div class="math notranslate nohighlight">
+\[    y(x, C_1, C_2)=C_1y_1(x)+C_2y_2(x),\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle C_{1,2}\in\mathbb{R}\)</span>, je obecným řešením rovnice <a class="reference internal" href="#equation-lde0">(11.5)</a> na intervalu
+<span class="math notranslate nohighlight">\(\displaystyle I\)</span>.</p>
+</section>
+</div><p>Dvojicí lineárně nezávislých řešení rozumíme taková dvě řešení, že jedno není násobkem druhého.</p>
+<div class="proof definition admonition" id="definition-7">
+<p class="admonition-title"><span>Definice </span> (fundamentální systém řešení)</p>
+<section class="definition-content" id="proof-content">
+<p>Dvojici funkcí <span class="math notranslate nohighlight">\(\displaystyle y_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y_2\)</span> z předchozí
+věty nazýváme <em>fundamentální systém řešení rovnice <a class="reference internal" href="#equation-lde0">(11.5)</a></em>.</p>
+</section>
+</div></section>
+<section id="homogenni-lde-2-radu-s-konstantnimi-koeficienty">
+<h2><span class="section-number">11.7. </span>Homogenní LDE 2. řádu s konstantními koeficienty<a class="headerlink" href="#homogenni-lde-2-radu-s-konstantnimi-koeficienty" title="Link to this heading">#</a></h2>
+
+<!--
+
+Budeme studovat rovnici tvaru
+$$y''+py'+qy=0,$$
+kde $p,q\in \mathbb{R}$. Všimněme si nejprve následujícího faktu: Dosadíme-li do
+levé strany rovnice $y=e^{zx}$, kde $z$ je reálné číslo, po výpočtu
+derivací a po vytknutí faktoru $e^{zx}$ získáváme
+$$y''+py'+qy=e^{zx}(z^2+pz+q).$$
+Protože exponenciální faktor na pravé straně je vždy nenulový, bude
+výraz na pravé straně roven nule pokud bude splněna podmínka
+$$z^2+pz+q=0.$$
+Pouze v tomto případě bude uvažovaná funkce řešením rovnice (1).
+
+## Homogenní LDE 2. řádu s konstantními koeficienty
+
+-->
+
+<p>Rovnici <div class="math notranslate nohighlight">
+\[y''+py'+qy=0\]</div>
+ je možno přepsat na
+<div class="math notranslate nohighlight">
+\[(y')^\prime=-qy-py'\]</div>
+
+a tato rovnice je po substituci
+<span class="math notranslate nohighlight">\(\displaystyle x_1=y\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2=y'\)</span> ekvivalentní autonomnímu systému
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}x_1\\x_2\end{pmatrix}'=\begin{pmatrix}0 &amp;1\\ -q &amp;-p\end{pmatrix} \begin{pmatrix}x_1\\x_2\end{pmatrix} \end{split}\]</div>
+</p>
+<p>U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matice soustavy, která je obsažena v následující definici.</p>
+<div class="proof definition admonition" id="definition-8">
+<p class="admonition-title"><span>Definice </span> (charakteristická rovnice)</p>
+<section class="definition-content" id="proof-content">
+<p>Kvadratická rovnice
+<div class="math notranslate nohighlight">
+\[z^2+pz+q=0\]</div>
+ s neznámou <span class="math notranslate nohighlight">\(\displaystyle z\)</span> se nazývá <em>charakteristická rovnice</em>
+pro rovnici <div class="math notranslate nohighlight">
+\[y''+py'+qy=0.\]</div>
+</p>
+</section>
+</div><div class="proof theorem admonition" id="theorem-9">
+<p class="admonition-title"><span>Věta </span> (o obecném řešení LDE s konstantními koeficienty)</p>
+<section class="theorem-content" id="proof-content">
+<p>Uvažujme LDE</p>
+<div class="math notranslate nohighlight" id="equation-11-1">
+<span class="eqno">(11.6)<a class="headerlink" href="#equation-11-1" title="Link to this equation">#</a></span>\[y''+py'+qy=0,\]</div>
+<p>a její charakteristickou rovnici
+<div class="math notranslate nohighlight">
+\[z^2+pz+q=0.\]</div>
+</p>
+<ul class="simple">
+<li><p>Jsou-li <span class="math notranslate nohighlight">\(\displaystyle z_1,z_2\in\mathbb{R}\)</span> dva různé reálné kořeny charakteristické
+rovnice, definujme <div class="math notranslate nohighlight">
+\[{y_1=e^{z_1 x}}, \qquad{y_2=e^{z_2 x}}.\]</div>
+</p></li>
+<li><p>Je-li <span class="math notranslate nohighlight">\(\displaystyle z_1\in\mathbb{R}\)</span> dvojnásobným kořenem charakteristické
+rovnice, definujme <div class="math notranslate nohighlight">
+\[{y_1=e^{z_1 x}}, \qquad{y_2=xe^{z_1 x}}.\]</div>
+</p></li>
+<li><p>Jsou-li <span class="math notranslate nohighlight">\(\displaystyle z_{1,2}=\alpha\pm i\beta\not\in\mathbb{R}\)</span> dva komplexně sdružené
+kořeny charakteristické rovnice, definujme <div class="math notranslate nohighlight">
+\[{y_1(x)=e^{\alpha x}\cos(\beta x)}, \qquad
+{y_2(x)=e^{\alpha x}\sin(\beta x)}.\]</div>
+</p></li>
+</ul>
+<p>Potom obecné řešení rovnice <a class="reference internal" href="#equation-11-1">(11.6)</a> je
+<div class="math notranslate nohighlight">
+\[y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.\]</div>
+</p>
+</section>
+</div></section>
+<section id="nehomogenni-lde-2-radu">
+<h2><span class="section-number">11.8. </span>Nehomogenní LDE 2. řádu<a class="headerlink" href="#nehomogenni-lde-2-radu" title="Link to this heading">#</a></h2>
+<div class="proof theorem admonition" id="theorem-10">
+<p class="admonition-title"><span>Věta </span> (o obecném řešení nehomogenní LDE)</p>
+<section class="theorem-content" id="proof-content">
+<p>Součet libovolného partikulárního řešení
+nehomogenní lineární diferenciální rovnice a obecného řešení asociované
+homogenní rovnice je obecným řešením původní nehomogenní rovnice</p>
+</section>
+</div><p>Následující věta udává jednu z metod nalezení partikulárního řešení,
+pokud je diferenciální rovnice do jisté míry speciální: má konstantní
+koeficienty a polynomiální pravou stranu.</p>
+<div class="proof theorem admonition" id="theorem-11">
+<p class="admonition-title"><span>Věta </span> (metoda neurčitých koeficientů)</p>
+<section class="theorem-content" id="proof-content">
+<p>Uvažujme lineární diferenciální rovnici
+druhého řádu
+<div class="math notranslate nohighlight">
+\[y''+py'+qy=P_n(x),\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle p\in\mathbb{R}\)</span> je konstanta, <span class="math notranslate nohighlight">\(\displaystyle q\in\mathbb{R}\setminus\{0\}\)</span> je nenulová konstanta
+a <span class="math notranslate nohighlight">\(\displaystyle P_n(x)\)</span> je polynom stupně <span class="math notranslate nohighlight">\(\displaystyle n\)</span>. Existuje polynom stupně <span class="math notranslate nohighlight">\(\displaystyle n\)</span>, který je
+partikulárním řešením této diferenciální rovnice.</p>
+</section>
+</div><p>V praxi polynom, který má být řešením, napíšeme s neurčitými koeficienty a
+dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.</p>
+</section>
+<section id="dirichletova-okrajova-uloha-vlastni-cisla">
+<h2><span class="section-number">11.9. </span>Dirichletova okrajová úloha, vlastní čísla<a class="headerlink" href="#dirichletova-okrajova-uloha-vlastni-cisla" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/9rFZAfiOM5Y">Video</a></p>
+<p>Někdy je nutné řešit diferenciální rovnice druhého řádu s jinými než
+počátečními podmínkami. Ukážeme si na jednoduchém příkladě odlišnost
+od počáteční úlohy. Následující úloha má velké uplatnění při studiu
+kmitavých pohybů.</p>
+<p>Pro parametr <span class="math notranslate nohighlight">\(\displaystyle \lambda\in\mathbb{R}\)</span> najděte řešení rovnice</p>
+<div class="math notranslate nohighlight" id="equation-11d">
+<span class="eqno">(11.7)<a class="headerlink" href="#equation-11d" title="Link to this equation">#</a></span>\[y''+\lambda y=0 \]</div>
+<p>splňující podmínky</p>
+<div class="math notranslate nohighlight" id="equation-11dic">
+<span class="eqno">(11.8)<a class="headerlink" href="#equation-11dic" title="Link to this equation">#</a></span>\[y(0)=0=y(1). \]</div>
+<div class="proof definition admonition" id="definition-12">
+<p class="admonition-title"><span>Definice </span> (okrajová úloha)</p>
+<section class="definition-content" id="proof-content">
+<p>Úloha najít řešení diferenciální
+rovnice <a class="reference internal" href="#equation-11d">(11.7)</a>, které splňuje podmínky <a class="reference internal" href="#equation-11dic">(11.8)</a> se nazývá (Dirichletova)
+<em>okrajová úloha</em>.</p>
+</section>
+</div><p>Odlišnost Dirichletovy úlohy od (Cauchyovy) počáteční úlohy je v tom,
+že nezadáváme funkční hodnotu a derivaci v jednom bodě, ale funkční
+hodnotu ve dvou různých bodech.</p>
+<p>Jedno z řešení Dirichletovy úlohy je triviální řešení
+<span class="math notranslate nohighlight">\(\displaystyle y(x)=0\)</span>. Ukazuje se, že netriviální řešení existuje jen pro některé
+hodnoty parametru <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span>.</p>
+<div class="proof definition admonition" id="definition-13">
+<p class="admonition-title"><span>Definice </span> (vlastní funkce, vlastní hodnota okrajové úlohy)</p>
+<section class="definition-content" id="proof-content">
+<p>Hodnota <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span>,
+pro kterou existuje netriviální řešení Dirichletovy okrajové úlohy,
+se nazývá <em>vlastní hodnota okrajové úlohy</em> a příslušné řešení se
+nazývá <em>vlastní funkce okrajové úlohy</em>.</p>
+</section>
+</div></section>
+<section id="vypocet-vlastnich-hodnot">
+<h2><span class="section-number">11.10. </span>Výpočet vlastních hodnot<a class="headerlink" href="#vypocet-vlastnich-hodnot" title="Link to this heading">#</a></h2>
+<section id="pripad-lambda-0">
+<h3><span class="section-number">11.10.1. </span>Případ <span class="math notranslate nohighlight">\(\displaystyle \lambda&gt;0\)</span><a class="headerlink" href="#pripad-lambda-0" title="Link to this heading">#</a></h3>
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle \lambda&gt;0\)</span>, je řešením rovnice</p>
+<div class="math notranslate nohighlight">
+\[y''+\lambda y=0 \]</div>
+<p>funkce
+<div class="math notranslate nohighlight">
+\[y(x)=C_1\sin(\sqrt \lambda x)+C_2\cos(\sqrt \lambda x).\]</div>
+
+Z podmínky <span class="math notranslate nohighlight">\(\displaystyle y(0)=0\)</span> dostáváme <span class="math notranslate nohighlight">\(\displaystyle C_2=0\)</span>. Tedy
+<div class="math notranslate nohighlight">
+\[y(x)=C_1\sin(\sqrt\lambda x).\]</div>
+</p>
+<p>Z podmínky <span class="math notranslate nohighlight">\(\displaystyle y(1)=0\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[0=C_1\sin(\sqrt\lambda),\]</div>
+
+která je splněna pokud <span class="math notranslate nohighlight">\(\displaystyle C_1=0\)</span>, nebo <span class="math notranslate nohighlight">\(\displaystyle \sqrt\lambda=k\pi\)</span>, <span class="math notranslate nohighlight">\(\displaystyle k\in\mathbb{Z}\)</span></p>
+<p>Okrajová úloha <div class="math notranslate nohighlight">
+\[y''+\lambda y=0, \quad y(0)=0=y(1)\]</div>
+ má vlastní hodnoty
+<span class="math notranslate nohighlight">\(\displaystyle \lambda=(k\pi)^2\)</span>, <span class="math notranslate nohighlight">\(\displaystyle k\in\mathbb{Z}\)</span></p>
+</section>
+<section id="id2">
+<h3><span class="section-number">11.10.2. </span>Případ <span class="math notranslate nohighlight">\(\displaystyle \lambda&lt;0\)</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle \lambda&lt;0\)</span>, je řešením rovnice <div class="math notranslate nohighlight">
+\[y''+\lambda y=0\]</div>
+
+funkce
+<div class="math notranslate nohighlight">
+\[y(x)=C_1e^{\sqrt {-\lambda} x}+C_2 e^{-\sqrt {-\lambda} x}.\]</div>
+
+Z podmínky <span class="math notranslate nohighlight">\(\displaystyle y(0)=0\)</span> dostáváme <div class="math notranslate nohighlight">
+\[C_1+C_2=0.\]</div>
+</p>
+<p>Z podmínky <span class="math notranslate nohighlight">\(\displaystyle y(1)=0\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[C_1e^{\sqrt {-\lambda}}+C_2 e^{-\sqrt {-\lambda}}=0.\]</div>
+
+Protože jedna rovnice není násobkem druhé, má soustava jediné řešení <span class="math notranslate nohighlight">\(\displaystyle C_1=C_2=0\)</span> a okrajová úloha má v případě <span class="math notranslate nohighlight">\(\displaystyle \lambda&lt;0\)</span> pouze triviální nulové řešení. Nemá tedy žádné vlastní hodnoty.</p>
+</section>
+<section id="obvykla-formulace">
+<h3><span class="section-number">11.10.3. </span>Obvyklá formulace<a class="headerlink" href="#obvykla-formulace" title="Link to this heading">#</a></h3>
+<p>V praktických úlohách, kdy požadujeme existenci nenulového řešení, zpravidla pracujeme s rovnicí ve tvaru
+<div class="math notranslate nohighlight">
+\[y''+\lambda^2 y=0,\]</div>
+ abychom zdůraznili kladnou hodnotu parametru a abychom dostávali řešení formálně bez druhé odmocniny.
+Tedy okrajová úloha
+<div class="math notranslate nohighlight">
+\[y''+\lambda^2 y=0,\quad y(0)=0=y(1)\]</div>
+
+má vlastní čísla <span class="math notranslate nohighlight">\(\displaystyle \lambda=k\pi\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je kladné celé číslo.</p>
+</section>
+</section>
+<section id="kmity-struny">
+<h2><span class="section-number">11.11. </span>Kmity struny<a class="headerlink" href="#kmity-struny" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id5">
+<img alt="../_images/housle.jpg" src="../_images/housle.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.3 </span><span class="caption-text">Kmitání jednorozměrných objektů je popsáno lineární diferenciální rovnicí druhého řádu. Zdroj: pixabay.com</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Při kmitání struny délky <span class="math notranslate nohighlight">\(\displaystyle l\)</span> upevněné na koncích se ukazuje, že proces
+je možno modelovat okrajovou úlohou <div class="math notranslate nohighlight">
+\[y''+\lambda^2 y=0,\quad
+y(0)=0=y(l),\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle y\)</span> je amplituda kmitů v místě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> souvisí s frekvencí. Rovnice má obecné řešení <div class="math notranslate nohighlight">
+\[y(x)=C_1\sin(
+\lambda x)+C_2\cos( \lambda x)\]</div>
+ Z podmínky <span class="math notranslate nohighlight">\(\displaystyle y(0)=0\)</span> dostáváme <span class="math notranslate nohighlight">\(\displaystyle C_2=0\)</span> a z
+podmínky <span class="math notranslate nohighlight">\(\displaystyle y(l)=0\)</span> dostáváme <div class="math notranslate nohighlight">
+\[y(x)=C_1\sin(\lambda x)\]</div>
+ pokud</p>
+<div class="math notranslate nohighlight" id="equation-11">
+<span class="eqno">(11.9)<a class="headerlink" href="#equation-11" title="Link to this equation">#</a></span>\[\lambda l=k\pi \]</div>
+<p>a <span class="math notranslate nohighlight">\(\displaystyle y=0\)</span> jinak. Při podrobnějším popisu
+se ukazuje, že <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span>
+souvisí s hmotností struny, napětím ve struně a frekvencí, kterou
+slyšíme. Podmínka <a class="reference internal" href="#equation-11">(11.9)</a> určuje spektrum slyšitelných frekvencí, na
+kterých může struna kmitat, výsledný pohyb (a zvuk) je díky linearitě složením
+jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je možné <a class="reference external" href="https://www.youtube.com/watch?v=kn92TLYA4rE">rozeznívat více způsoby</a> a dosahovat různý výsledný zvuk.</p>
+</section>
+<section id="vzpery">
+<h2><span class="section-number">11.12. </span>Vzpěry<a class="headerlink" href="#vzpery" title="Link to this heading">#</a></h2>
+<div class='obtekat'>
+
+<figure class="align-default" id="id6">
+<img alt="../_images/vzpera.jpg" src="../_images/vzpera.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.4 </span><span class="caption-text">Nosníky, ať už samostatné vzpěry, nebo součásti příhradových konstrukcí, je nutné posuzovat i z hlediska axiálního namáhání. Ignorování tohoto způsobu namáhání vedlo v 19. století k pádu několika příhradových železničních mostů a následnému stržení řady <a class="reference external" href="https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures">chybně dimenzovaných mostů</a>. Zdroj: pixabay.com</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+</div>
+<p>Předpokládejme, že máme nosník namáhaný na vzpěr. Nosník je uchycen na
+dolním a horním konci tak, že se nemůže pohybovat do stran, ale může
+se otáčet. Osu <span class="math notranslate nohighlight">\(\displaystyle x\)</span> zvolíme podélně v ose vzpěry, osu <span class="math notranslate nohighlight">\(\displaystyle y\)</span> kolmo. Při
+namáhání takového nosníku je výchylka dána okrajovou úlohou (<a class="reference external" href="https://katalog.mendelu.cz/documents/21654">A. Požgaj a
+kol., Štruktúra a vlastnosti
+dreva</a>, str. 359)
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle \alpha^2=\frac{F}{EI}\)</span> je parametr závislý na působící síle,
+materiálu a kvadratickém momentu průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní a pro jiné druhy zatížení i vyššího řádu, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí <div class="math notranslate nohighlight">
+\[\alpha l=\pi,\]</div>
+ (odpovídá základní frekvenci struny) tj.
+<div class="math notranslate nohighlight">
+\[\sqrt{\frac {F}{EI}}l=\pi\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[F=\frac{\pi^2 EI}{l^2}.\]</div>
+
+Toto je pro daný nosník kritická síla a ta je pro daný materiál nepřímo úměrná druhé mocnině délky a přímo úměrná kvadratickému momentu <span class="math notranslate nohighlight">\(\displaystyle I\)</span>.</p>
+</section>
+<section id="neumannova-a-smisena-okrajova-uloha">
+<h2><span class="section-number">11.13. </span>Neumannova a smíšená okrajová úloha<a class="headerlink" href="#neumannova-a-smisena-okrajova-uloha" title="Link to this heading">#</a></h2>
+
+<div class='obtekat'>
+<figure class="align-default" id="id7">
+<img alt="../_images/array_mbira.jpg" src="../_images/array_mbira.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 11.5 </span><span class="caption-text">Array mbira - <a class="reference external" href="https://www.youtube.com/watch?v=5fAAGheYTFA">hudební nástroj</a> se smíšenou okrajovou úlohou</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Při řešení Dirichletovy úlohy hledáme řešení diferenciální rovnice
+druhého řádu s předepsanými hodnotami ve dvou různých bodech
+<div class="math notranslate nohighlight">
+\[y(a)=\alpha,\quad y(b)=\beta.\]</div>
+
+Tento požadavek se uplatní při studiu kmitů struny nebo tyče s pevnými
+konci.</p>
+<p>V praxi je možné si představit i jiné podmínky. Například v
+termodynamice se používají podmínky na hodnotu derivací ve dvou
+různých bodech <div class="math notranslate nohighlight">
+\[y'(a)=\alpha, \quad y'(b)=\beta.\]</div>
+ Takové podmínky se
+nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto
+podmínky splňuje, se nazývá <strong>Neumannova okrajová úloha</strong>, též
+<strong>Neumannova úloha</strong>.</p>
+<p>Existují i smíšené úlohy, například při kmitání tělesa s jedním
+upevněným a jedním volným koncem je přirozené formulovat <strong>smíšenou
+okrajovou podmínku</strong> <div class="math notranslate nohighlight">
+\[y(a)=0,\quad y'(b)=0,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle a\)</span> je upevněný konec a
+<span class="math notranslate nohighlight">\(\displaystyle b\)</span> volný konec.</p>
+</section>
+<section id="fourierova-metoda-separace-promennych">
+<h2><span class="section-number">11.14. </span>Fourierova metoda separace proměnných<a class="headerlink" href="#fourierova-metoda-separace-promennych" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/wfvY6bwlxaw">Video</a></p>
+<p>Budeme se zabývat jednorozměrnou rovnicí vedení tepla ve tvaru
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.\]</div>
+ V
+tomto tvaru rovnice neobsahuje žádné konstanty a je to tvar, se kterým
+se pracuje ve většině matematických publikací. Reálnou rovnici vedení
+tepla převedeme do tohoto tvaru zavedením bezrozměrných veličin, což
+si ukážeme v následující přednášce. Teď si ukážeme, jak řešení rovnice
+vede na řešení LDR druhého řádu. Uvažujme pro jednoduchost okrajovou
+úlohu, kdy konce tyče jsou udržovány na nulové teplotě, tj. je-li tyč
+délky <span class="math notranslate nohighlight">\(\displaystyle l\)</span> položena v ose <span class="math notranslate nohighlight">\(\displaystyle x\)</span> tak, že levý konec je v počátku, platí pro
+teplotu <span class="math notranslate nohighlight">\(\displaystyle u(x,t)\)</span> podmínky <span class="math notranslate nohighlight">\(\displaystyle u(0,t)=u(l,t)=0\)</span> v libovolném čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span>.</p>
+<p>Budeme řešení hledat ve tvaru <span class="math notranslate nohighlight">\(\displaystyle u(x,t)=\varphi(x)\psi(t)\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle \varphi\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \psi\)</span> jsou funkcemi jedné proměnné.
+Platí
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=\varphi(x)\psi'(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi''(x) \psi(t)\]</div>
+
+a rovnice má tvar
+<div class="math notranslate nohighlight">
+\[\varphi(x)\psi'(t)=\varphi''(x)\psi (t).\]</div>
+
+Vydělením této rovnice součinem <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)\psi(t)\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.\]</div>
+
+Toto je rovnice, kde levá strana je funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a pravá strana funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě.
+<div class="math notranslate nohighlight">
+\[\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}=\omega.\]</div>
+</p>
+<p>Okrajové podmínky vynucují platnost vztahů <span class="math notranslate nohighlight">\(\displaystyle \varphi(0)=\varphi(l)=0\)</span>. Jesliže je v takovém případě konstanta <span class="math notranslate nohighlight">\(\displaystyle \omega\)</span> kladná, má úloha pouze nulové řešení (viz výše výpočet vlastních hodnot pro tuto úlohu). Konstanta <span class="math notranslate nohighlight">\(\displaystyle \omega\)</span> tedy musí být záporná.
+Přeznačme ji do tvaru <div class="math notranslate nohighlight">
+\[\omega = -\lambda^2\]</div>
+ Platí tedy
+<div class="math notranslate nohighlight">
+\[\frac {\psi'(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.\]</div>
+
+První rovnice představuje lineární diferenciální rovnici prvního řádu
+<div class="math notranslate nohighlight">
+\[\psi'=-\lambda^2\psi\]</div>
+
+s partikulárním řešením <span class="math notranslate nohighlight">\(\displaystyle \psi(t)=e^{-\lambda^2 t}.\)</span>
+Druhá rovnice představuje společně s okrajovou podmínkou okrajovou úlohu pro lineární diferenciální rovnici druhého řádu
+<div class="math notranslate nohighlight">
+\[\varphi''+\lambda^2\varphi=0, \quad \varphi(0)=\varphi(l)=0.\]</div>
+ Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji viděli u kmitů struny nebo u namáhání na vzpěr. Řešením je funkce <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)=\sin(\lambda x)\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> je vlastní hodnota této úlohy.
+Funkce <div class="math notranslate nohighlight">
+\[u(x,t)=\sin(\lambda x)e^{-\lambda^2 t}\]</div>
+ je tedy řešením rovnice
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.\]</div>
+
+Rovnici je možno přepsat do tvaru
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0,\]</div>
+
+kdy na levé straně stojí lineární operátor a na pravé straně je nula. Proto je každá lineární kombinace řešení opět řešením a pro libovolnou volbu konstant je funkce
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum_{\lambda}C_\lambda\sin(\lambda x)e^{-\lambda^2 t}\]</div>
+
+také řešením. Součet na pravé straně je přes všechna vlastní čísla, kterých je nekonečně mnoho.</p>
+<p>Nyní začíná být rozbor úlohy nad rámec našeho kurzu, protože se
+objevil nekonečný součet. Ukazuje se, že tento zápis je dostatečně
+bohatý na to, aby obsáhl libovolnou rozumnou počáteční podmínku a
+vzorec je tedy schopen popsat řešení úlohy pro libovolné fyzikálně
+relevantní situace. Vidíme i přímo strukturu řešení, které je jakousi
+lineární kombinací různých módů. Tato skutečnost lépe vynikne na
+analogické diferenciální rovnici kmitání struny, kdy jednotlivé módy
+přímo vnímáme sluchem: struna nemůže kmitat na libovolné frekvenci, ale
+pouze a frekvenci dané okrajovou podmínkou a na frekvencích násobných.</p>
+<p>Poznámka: Podobná situace a možnost separace proměnných je u rovnice
+kmitů struny
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}\]</div>
+
+nebo jejího zobecnění na kmity desek a chvění těles. Opět separace vede k LDR druhého řádu pro složku závisející na <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. V tomto případě je druhého řádu i rovnice pro složku závislou na čase.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../10/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Autonomní rovnice a systémy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../cviceni/cviceni01.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Parciální derivace</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.1. Lineární diferenciální rovnice druhého řádu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#priklad-teleso-na-pruzine">11.2. Příklad - těleso na pružině</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resitelnost-lde-druheho-radu">11.3. Řešitelnost LDE druhého řádu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusledky-linearity">11.4. Důsledky linearity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dusledky-linearity-prakticky">11.5. Důsledky linearity prakticky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-lde-2-radu-obecne-reseni">11.6. Homogenní LDE 2. řádu (obecné řešení)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenni-lde-2-radu-s-konstantnimi-koeficienty">11.7. Homogenní LDE 2. řádu s konstantními koeficienty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nehomogenni-lde-2-radu">11.8. Nehomogenní LDE 2. řádu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichletova-okrajova-uloha-vlastni-cisla">11.9. Dirichletova okrajová úloha, vlastní čísla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-vlastnich-hodnot">11.10. Výpočet vlastních hodnot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pripad-lambda-0">11.10.1. Případ <span class="math notranslate nohighlight">\(\displaystyle \lambda&gt;0\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">11.10.2. Případ <span class="math notranslate nohighlight">\(\displaystyle \lambda&lt;0\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obvykla-formulace">11.10.3. Obvyklá formulace</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kmity-struny">11.11. Kmity struny</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vzpery">11.12. Vzpěry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neumannova-a-smisena-okrajova-uloha">11.13. Neumannova a smíšená okrajová úloha</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierova-metoda-separace-promennych">11.14. Fourierova metoda separace proměnných</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 22.05.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

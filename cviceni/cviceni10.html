@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-04-29T15:13:58+02:00" />
+    <title>10. Autonomní rovnice a systémy &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni10';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="11. Diferenciální rovnice druhého řádu" href="cviceni11.html" />
+    <link rel="prev" title="9. Lineární diferenciální rovnice" href="cviceni09.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="29.04.2024"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Autonomní rovnice a systémy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skladovani-stavebniho-recyklatu">10.1. Skladování stavebního recyklátu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propeptid-kolagenu">10.2. Propeptid kolagenu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modely-interagujicich-populaci">10.3. Modely interagujících populací</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jelen-a-los">10.3.1. Jelen a los</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pustik-obecny">10.3.2. Puštík obecný</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kun-prevalskeho">10.3.3. Kůň Převalského</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyza-2d-systemu-pomoci-vlastnich-cisel">10.4. Analýza 2D systému pomocí vlastních čísel</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="autonomni-rovnice-a-systemy">
+<h1><span class="section-number">10. </span>Autonomní rovnice a systémy<a class="headerlink" href="#autonomni-rovnice-a-systemy" title="Link to this heading">#</a></h1>
+<p>K cvičení je k dispozici <a class="reference external" href="http://user.mendelu.cz/marik/aromamath/Autonomni_rovnice_a_systemy.html">Jupyter zápisník s numerickými simulacemi</a> zde představených modelů. Tento zápisník je možné si naklonovat a samostatně modifikovat příkazy nebo texty a zkoušet vlastní numerické simulace.</p>
+<!--
+### Instrukce k online výuce prosinec 2021
+
+* V úlohách bude podstatná schopnost sestavení diferenciální rovnice a umění detekovat, zda kde je pravá strana rovnice nulová, kde kladná  a  kde záporná. To je dostatečná informace k tomu, abychom dokázali odhalit stacionární body (to jsou stavy kdy je systém v rovnováze a do jednoho s těchto stavů časem dospěje), nestabilní stacionární body (stavy, kdy je systém v křehké rovnováze, která je narušena i malým výkyvem) a stabilní stacionární body (systém je v robustní rovnováze, která se po malých výchylkách sama automaticky obnovuje). V první úloze je možné uvažovat pravou stranu jako celek a zakreslit si situaci graficky. Ve druhé úloze je členů více a je výhodnější pravou stranu uvažovat jako rozdíl dvou funkcí a hledat průsečíky a intervaly, kdy je jedna funkce nad druhou a naopak. 
+* Ve třetí úloze si ukážeme, jak se dají namodelovat soustavy rovnic diferenciálních rovnic. Použijeme k tomu lehce představitelný případ konkurence populací v ekosystému. Kromě sestavení rovnice si ukážeme nástroj umožňující pohodlné modelování, jak se budou chovat řešení. (Význam tohoto nástroje je čistě pedagogický. V praxi je nutné aby toto modelování bylo stavebním kamenem nějaké celkové analýzy, zahrnující jednotlivé scénáře, pravděpodobnostní rozložení hodnot parametrů a podobně. Zde jakýkoliv interaktivní nástroj nemá šanci na uplatnitelnost.)
+* Stacionární body jsou u systémů to, co nás zajímá v první řadě. Skutečně, všechna ohraničená řešení systému v rovině konvergují k některému stacionárnímu bodu nebo okolo něj obíhají v cyklu. Proto si v poslední úloze ukážeme, jak se dá odhalit chování trajektorií v okolí stacionárního bodu nelineárního systému. Ukážeme si, jak systém linearizovat pomocí Jacobiho matice ve stacionárním bodě. Najdeme vlastní čísla této matice a pomocí nich určíme typ stacionárního bodu. To nám dodá informaci, zda si bod "přitáhne" všechny trajektorie ze svého okolí, zda je naopak odpuzuje, nebo zda se chová ještě nějak jinak. 
+-->
+<section id="skladovani-stavebniho-recyklatu">
+<h2><span class="section-number">10.1. </span>Skladování stavebního recyklátu<a class="headerlink" href="#skladovani-stavebniho-recyklatu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/5gOGLPv8BeU">Video</a></p>
+
+<figure class="align-default" id="id1">
+<img alt="../_images/pokros.jpg" src="../_images/pokros.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.12 </span><span class="caption-text">Zdroj: vlastní</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Hromada sypkého
+materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný
+mechanickými vlastnostmi materiálu a je nezávislý na
+objemu. Předpokládejme, že personál stavebnin přisypává na hromadu
+materiál konstantní rychlostí (v jednotkách objemu za jednotku
+času). Tato hromada je však v poměrně otevřené krajině a vítr
+rozfoukává materiál po okolí. Je rozumné předpokládat, že rozfoukávání (opět v jednotkách objemu za jednotku
+času)
+se děje rychlostí úměrnou povrchu návětrné strany pláště.</p>
+<ol class="arabic simple">
+<li><p>Napište rovnici pro derivaci objemu hromady podle času.</p></li>
+<li><p>Existuje konstantní řešení? Pokud ano, je stabilní nebo nestabilní? Zdůvodněte.</p></li>
+<li><p>Může hromada skončit i při neustálém přisypávání celá rozfoukaná?</p></li>
+<li><p>Mohou pracovníci navršit hromadu do libovolné výšky anebo pro velkou hromadu je již rozfoukávání rychlejší než přisypávání?</p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Rychlost, s jakou se mění objem, je <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dV}{\mathrm dt}\)</span>. Rychlost přisypávání označme <span class="math notranslate nohighlight">\(\displaystyle R\)</span>, povrch návětrné strany <span class="math notranslate nohighlight">\(\displaystyle S\)</span>.
+Podle zadání platí <div class="math notranslate nohighlight">
+\[  \frac{\mathrm dV}{\mathrm dt} = R - k_0S\]</div>
+
+pro vhodnou kontantu úměrnosti <span class="math notranslate nohighlight">\(\displaystyle k_0\)</span>.
+Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z podobnosti víme, že plochy rostou s druhou mocninou a objemy se třetí mocninou délkových rozměrů. Proto je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky ``pasují‘‘, Existuje tedy konstanta taková, že <div class="math notranslate nohighlight">
+\[S=k_1V^{\frac 23}.\]</div>
+ Spojením těchto dvou vztahů dostáváme <div class="math notranslate nohighlight">
+\[  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle R\)</span> a <span class="math notranslate nohighlight">\(\displaystyle k=k_0k_1\)</span> jsou konstanty.</p>
+<p>Označme <span class="math notranslate nohighlight">\(\displaystyle f(V)=R-kV^{\frac 23}\)</span>.
+Konstantní řešení je řešením rovnice <span class="math notranslate nohighlight">\(\displaystyle f(V)=0\)</span>, tj. <div class="math notranslate nohighlight">
+\[R-kV^{\frac 23}=0.\]</div>
+ Odsud <div class="math notranslate nohighlight">
+\[V_0=\left(\frac{R}{k}\right)^{3/2}.\]</div>
+ Protože <span class="math notranslate nohighlight">\(\displaystyle f\)</span> klesá v bodě <span class="math notranslate nohighlight">\(\displaystyle V_0\)</span>, je toto řešení stabilní.</p>
+<p>Protože <span class="math notranslate nohighlight">\(\displaystyle f(0)&gt;0\)</span>, malá hromada vždy roste a proto nemůže skončit celá rozfoukaná. Pro malý objem je přisypávání intenzivnější než rozfoukávání.</p>
+<p>Protože <span class="math notranslate nohighlight">\(\displaystyle f\)</span> je pro velké <span class="math notranslate nohighlight">\(\displaystyle V\)</span> záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou.</p>
+</section>
+</div></section>
+<section id="propeptid-kolagenu">
+<h2><span class="section-number">10.2. </span>Propeptid kolagenu<a class="headerlink" href="#propeptid-kolagenu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/yAHdtic9b18">Video</a></p>
+
+<figure class="align-default" id="id2">
+<img alt="../_images/kost.jpg" src="../_images/kost.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.13 </span><span class="caption-text">pixabay.com</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Kolagen je klíčový protein pojivových tkání. Jeden z kroků při syntéze
+kolagenu spočívá v reakci tří molekul propeptidu kolagenu, zkráceně
+propeptidu. Tento propeptid se formuje konstantní rychlostí a kromě
+toho, že je surovinou pro produkci kolagenu, se ještě rozpadá
+rychlostí úměrnou koncentraci.</p>
+<ol class="arabic simple">
+<li><p>Napište matematický model pro množství (koncentraci) propeptidu kolagenu.</p></li>
+<li><p>Popište různá chování modelu z hlediska počtu stacionárnícho bodů a jejich stability.</p></li>
+</ol>
+<p><em>Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life</em></p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Rovnice má tvar
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle k_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle k_2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle k_3\)</span> jsou kladné konstanty úměrnosti. Rovnici je možno zapsat ve tvaru
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dP}{\mathrm dt}=\Bigl(k_2-k_3 P\Bigr)-\Bigl(k_1 P^3\Bigr) \]</div>
+
+s rozdílem klesající a rostoucí funkce na pravé straně. Tyto funkce mají jediný průsečík a proto má rovnice jediný stacionární bod. Tento bod je stabilní, protože pro vysoké hodnoty <span class="math notranslate nohighlight">\(\displaystyle P\)</span> je pravá strana rovnice záporná (dominantní člen je <span class="math notranslate nohighlight">\(\displaystyle -k_1 P^3\)</span>) a pro malé hodnoty <span class="math notranslate nohighlight">\(\displaystyle P\)</span> je pravá strana kladná (v nule je rovna konstantě <span class="math notranslate nohighlight">\(\displaystyle k_2\)</span>).</p>
+</section>
+</div></section>
+<section id="modely-interagujicich-populaci">
+<h2><span class="section-number">10.3. </span>Modely interagujících populací<a class="headerlink" href="#modely-interagujicich-populaci" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/Rd_5KC2iFtE">Video</a></p>
+<section id="jelen-a-los">
+<h3><span class="section-number">10.3.1. </span>Jelen a los<a class="headerlink" href="#jelen-a-los" title="Link to this heading">#</a></h3>
+
+<figure class="align-default" id="id3">
+<img alt="../_images/moose.jpg" src="../_images/moose.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.14 </span><span class="caption-text">Jelen a los</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu.</p>
+<ol class="arabic simple">
+<li><p>Bez konkurence by populace jelena rostla rychlostí <span class="math notranslate nohighlight">\(\displaystyle 3\)</span> a  populace losa rychlostí <span class="math notranslate nohighlight">\(\displaystyle 2\)</span> na jeden kus.</p></li>
+<li><p>Vnitrodruhová konkurence se projevuje v obou populacích stejně a je rovna druhé mocnině příslušné velikosti populace.</p></li>
+<li><p>Mezidruhová konkurence je vyjádřena členem rovným součinu velikosti populací a tato konkurence se projeví s koeficientem 0.5 v populaci losa a s koeficientem 1 v populaci jelena.</p></li>
+</ol>
+<p>Sestavte matematický model a otestujte jej numerickým experimentem na stabilitu stacionárních bodů. Poté zdvojnásobte parametry mezidruhové konkurence a sledujte změnu odezvy.</p>
+<p><em>Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life</em></p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}&amp;=3x-xy-x^2\\
+    \frac{\mathrm dy}{\mathrm dt}&amp;=2y-0.5xy-y^2
+\end{aligned}
+\end{split}\]</div>
+<p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=3*x%20-%20x%5E2%20-%20x*y&dydt=2*y%20-%20y%5E2%20-%200.5%20*%20x%20*%20y&x=0,4,20&y=0,3,15&method=rk4&h=0.1&pts1=%5B0.3,0.28328571428571436%5D,%5B0.20714285714285716,0.6434928229665071%5D,%5B2.664285714285714,2.158851674641148%5D,%5B3.1714285714285713,0.7533014354066987%5D,%5B1.7785714285714285,0.2115789473684213%5D">Online model.</a></p>
+</section>
+</div><!--
+
+% \obrazek{les.jpg}
+
+% ## Model konkurence
+
+% Konkurence je častý jev v přírodě. Například v lese si konkurují listnaté a jehličnaté stormy z hlediska prostoru, slunečního světla a vody. Stromy se liší rychlostí růstu, nosnou kapacitou prostředí a tím, jak ovlivňují své konkurenty. Předpokládejte logistický růst v obou konkurujících si populacích, předpokládejte člen vyjadřující zbrždění vlivem konkurenta přímo úměrný velikosti obou populací  a namodelujte čtyři možné východiska modelu ()
+
+% %https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x*(1-x/10000)-5*0.00001*x*y&dydt=0.25*y*(1-y/6000)-3*0.00001*x*y&x=0,10000,20&y=0,6000,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B4907.407407407408,5229.428571428572%5D,%5B7444.444444444444,3746.6985645933014%5D,%5B8407.407407407407,2633.9712918660284%5D,%5B9259.25925925926,1111.2918660287078%5D,%5B9648.148148148148,423.1578947368416%5D,%5B3240.740740740741,306.0287081339711%5D,%5B1407.4074074074074,935.5980861244016%5D,%5B4611.111111111111,203.5406698564584%5D,%5B5518.518518518518,57.129186602870504%5D
+-->
+</section>
+<section id="pustik-obecny">
+<h3><span class="section-number">10.3.2. </span>Puštík obecný<a class="headerlink" href="#pustik-obecny" title="Link to this heading">#</a></h3>
+
+<figure class="align-default" id="id4">
+<img alt="../_images/pustik.jpg" src="../_images/pustik.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.15 </span><span class="caption-text">wikimedia</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.</p>
+<ol class="arabic simple">
+<li><p>Populace hlodavců má porodnost 0.1 na jedince a úmrtnost 0.025 na jedince za jednotku času.</p></li>
+<li><p>Rychlost, s jakou jeden puštík konzumuje hlodavce, je úměrná počtu hlodavců s konstantou úměrnosti 0.01.</p></li>
+<li><p>Porodnost v populaci puštíka je úměrná množství zkonzumované potravy. Ta souvisí s dostupností hlodavců. Předpokládejme, že porodnost je úměrná populaci hlodavců s konstantou úměrnosti 0.05.</p></li>
+<li><p>Úmrtnost v populaci puštíka je 0.1 na jedince za jednotku času.</p></li>
+</ol>
+<p>Vyjádřete tyto vztahy matematickým modelem.</p>
+<p><em>Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snížené úmrtnosti v případě, že puštík má přístup k potravě.</em></p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}&amp;=0.1 x-0.025x-0.01xy\\
+  \frac{\mathrm dy}{\mathrm dt}&amp;=-0.1y+0.05xy  
+\end{aligned}
+\end{split}\]</div>
+<p><a class="reference external" href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x%20-%200.025*x-0.01*x*y&dydt=-0.1*y+0.05*x*y&x=0,10,20&y=0,40,15&method=rk4&h=0.1&pts1=%5B0.7894736842105263,10.577142857142857%5D,%5B1.795774647887324,12.09377990430622%5D,%5B0.7394366197183099,22.830622009569378%5D">Online model.</a></p>
+</section>
+</div></section>
+<section id="kun-prevalskeho">
+<h3><span class="section-number">10.3.3. </span>Kůň Převalského<a class="headerlink" href="#kun-prevalskeho" title="Link to this heading">#</a></h3>
+
+<figure class="align-default" id="id5">
+<img alt="../_images/prevalski.jpg" src="../_images/prevalski.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.16 </span><span class="caption-text">Kůň Převalského</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tito koně loveni vlky. Napište matematický model založený na následujících předpokladech.</p>
+<ol class="arabic simple">
+<li><p>Porodnost v populaci koní je  0.15 na jedince.</p></li>
+<li><p>Úmrtnost v populaci koní je  0.01 na jedince.</p></li>
+<li><p>Vlci se živí i jinou potravou, mají tedy kladnou porodnost. Ta je 0.1 na jedince.</p></li>
+<li><p>Vlci mají konstantní úmrtnost 0.05 na jedince.</p></li>
+<li><p>Pravděpodobnost, s jakou je kůň uloven vlkem, je úměrná počtu vlků s konstantou úměrnosti 0.02.</p></li>
+</ol>
+<p><em>Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life</em></p>
+<p><em>Podle Wikipedie kůň Převalského přežil jenom díky péči zoologických zahrad a z rodokmenu je zřejmé, že 70 procent jedinců tohoto druhu má původní předky ze zoologické zahrady v Praze.</em></p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}&amp;=0.15 x-0.01x-0.02xy\\
+  \frac{\mathrm dy}{\mathrm dt}&amp;=0.1y-0.05y  
+\end{aligned}
+\end{split}\]</div>
+</section>
+</div><!--
+% Holling
+% https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=x*(1-x/2)-y*%20x/(1+x)&dydt=-0.2*y%20+%200.7%20*%20y%20*%20x/(1+x)&x=0,1.5,15&y=0,2,15&method=rk4&h=0.05&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.19553571428571428,0.7085714285714286%5D,%5B0.23839285714285716,0.8731100478468901%5D,%5B0.38571428571428573,0.477799043062201%5D
+
+%
+% Jezera
+% https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?O&S,29,F,80,10;H,0,T,290,100;M,0,T,130,200;R,0,T,325,280;O,0,T,490,230&S,H,S*15/2900;M,H,M*38/1180;H,R,H*68/850;R,O,R*85/116;O,s,O*99/393&The%20compartments%20represent%20levels%20of%20some%20pollutant%20in%20the%20Great%20Lakes.%20%28R%20%3D%20Erie%2C%20because%20E%20is%20not%20an%20allowed%20variable%20name.%29%20The%20model%20assumes%20that%20the%20initial%20concentration%20of%20the%20pollutant%20is%20the%20same%20in%20all%20the%20lakes%2C%20so%20the%20initial%20value%20is%20proportional%20to%20the%20lake%27s%20volume.%20No%20more%20of%20that%20pollutant%20is%20being%20introduced%2C%20and%20pure%20%28rain%29%20water%20flows%20in%20to%20the%20lakes%2C%20with%20the%20resulting%20mixture%20flowing%20from%20each%20lake%20into%20the%20next%2C%20and%20eventually%20to%20the%20ocean.%20From%20Fundamentals%20of%20Differential%20Equations%20%28Nagle%20and%20Saff%2C%201996%29%2C%20page%20317.
+-->
+</section>
+</section>
+<section id="analyza-2d-systemu-pomoci-vlastnich-cisel">
+<h2><span class="section-number">10.4. </span>Analýza 2D systému pomocí vlastních čísel<a class="headerlink" href="#analyza-2d-systemu-pomoci-vlastnich-cisel" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/bEc6CTxRB3g">Video</a></p>
+<p>Autonomní systém
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}&amp;= 4x^2y+y^3-5\\
+  \frac{\mathrm dy}{\mathrm dt}&amp;= 3xy^2-3y
+\end{aligned}
+\end{split}\]</div>
+
+má stacionární bod <span class="math notranslate nohighlight">\(\displaystyle (1,1)\)</span>. Najděte Jacobiho matici v tomto bodě, vlastní čísla této matice a určete typ stacionárního bodu.</p>
+<div class="proof example dropdown admonition" id="example-5">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Platí
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  \frac{\partial }{\partial x}(4x^2y+y^3-5)&amp;=8xy\\
+  \frac{\partial }{\partial y}(4x^2y+y^3-5)&amp;=4x^2+3y^2\\
+  \frac{\partial }{\partial x}(3xy^2-3y)&amp;=3y^2\\
+  \frac{\partial }{\partial y}(3xy^2-3y)&amp;=6xy-3\\
+\end{aligned}
+\end{split}\]</div>
+
+a odsud
+<div class="math notranslate nohighlight">
+\[\begin{split}J(x,y)=\begin{pmatrix}
+  8xy&amp; 4x^2+3y^2 \\ 3y^2 &amp; 6xy-3
+\end{pmatrix}. 
+\end{split}\]</div>
+
+Ve stacionárním bodě dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}J(1,1)=\begin{pmatrix}
+  8 &amp; 7\\3&amp;3
+\end{pmatrix}.
+\end{split}\]</div>
+
+Výpočtem determinantu dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}|J-\lambda I|=\begin{vmatrix}
+  8-\lambda &amp; 7 \\ 3 &amp; 3-\lambda
+\end{vmatrix}=(8-\lambda)(3-\lambda)-21=\lambda^2-11\lambda +3.
+\end{split}\]</div>
+
+Kořeny jsou
+<div class="math notranslate nohighlight">
+\[\lambda_{1,2}=\frac{11\pm\sqrt{121-12}}{2}\]</div>
+
+a oba jsou kladné. Ve stacionárním bodě proto je nestabilní uzel.</p>
+</section>
+</div><a onclick=otevrit("problems/autonomni_systemy/14.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni09.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Lineární diferenciální rovnice</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni11.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Diferenciální rovnice druhého řádu</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skladovani-stavebniho-recyklatu">10.1. Skladování stavebního recyklátu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propeptid-kolagenu">10.2. Propeptid kolagenu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modely-interagujicich-populaci">10.3. Modely interagujících populací</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jelen-a-los">10.3.1. Jelen a los</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pustik-obecny">10.3.2. Puštík obecný</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kun-prevalskeho">10.3.3. Kůň Převalského</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyza-2d-systemu-pomoci-vlastnich-cisel">10.4. Analýza 2D systému pomocí vlastních čísel</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 29.04.2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

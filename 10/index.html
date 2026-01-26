@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-04-14T11:27:57+02:00" />
+    <title>10. Autonomní rovnice a systémy &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10/index';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="11. Lineární diferenciální rovnice druhého řádu" href="../11/index.html" />
+    <link rel="prev" title="9. Lineární operátory a lineární diferenciální rovnice" href="../09/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="14.04.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Autonomní rovnice a systémy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-diferencialni-rovnice">10.1. Autonomní diferenciální rovnice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logisticka-diferencialni-rovnice-s-konstantnim-lovem">10.1.1. Logistická diferenciální rovnice s konstantním lovem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-ostrovni-biogeografie">10.1.2. Model ostrovní biogeografie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-metapopulaci">10.1.3. Model metapopulací</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-soupereni-jestrabi-a-holubici-povahy">10.1.4. Model soupeření jestřábí a holubičí povahy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-rovnice-s-pravou-stranou-ve-tvaru-rozdilu">10.2. Autonomní rovnice s pravou stranou ve tvaru rozdílu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teplotni-bilance-zeme">10.2.1. Teplotní bilance Země</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logisticka-diferencialni-rovnice-s-predatory">10.2.2. Logistická diferenciální rovnice s predátory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-system-x-f-x">10.3. Autonomní systém <span class="math notranslate nohighlight">\(\displaystyle X'=f(X)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bruselator">10.3.1. Bruselátor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-system-ve-dvou-dimenzich">10.4. Autonomní systém ve dvou dimenzích</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zakladni-modely-populacni-ekologie">10.5. Základní modely populační ekologie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-konkurence-dvou-druhu">10.5.1. Model konkurence dvou druhů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-dravce-a-koristi">10.5.2. Model dravce a kořisti</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vicerozmerne-autonomni-systemy-kompartmentove-modely">10.6. Vícerozměrné autonomní systémy, kompartmentové modely</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="autonomni-rovnice-a-systemy">
+<h1><span class="section-number">10. </span>Autonomní rovnice a systémy<a class="headerlink" href="#autonomni-rovnice-a-systemy" title="Link to this heading">#</a></h1>
+<!--
+## Instrukce k online výuce prosinec 2021
+
+* Budeme se věnovat autonomním diferenciálním rovnicím. To jsou rovnice, kde pravá strana explicitně nezáleží na čase. Typické je využití například pro modelování populací, kdy závisí jenom na podmínkách ve kterých se populace nachází (například velikost populace, nosná kapacita prostředí a podobně) a nezáleží na tom, jaký je čas, je-li středa nebo pátek. 
+* V těchto případech je snadné u rovnic s jednou neznámou určit pomocí pravé strany rovnice znaménko derivace, odsud zda řešení roste nebo klesá a najít stabilní stacionární body (pod nimi řešení a nad nimi klesá, proto se přibližujeme ke stacionárnímu stavu) a nestabilní stacionární body (pod nimi řešení klesá, nad nimi roste, tedy se řešení vzdaluje od tohoto stavu). K provedení takové analýzy stačí vědět, kdy je pravá strana nulová, kdy kladná a kdy záporná. Na takovou informaci stačí obrázek. Můžeme mít například graf pravé strany. Někdy je pravá strana ve formě rozdílu a potom nás zajímá, která funkce je výš a která níž, protože potom poznáme, je-li rozdíl funkcí kladný nebo záporný. (Nula je pochopitelně tam, kde se funkce protnou.)
+* Poslední část přednášky se vztahuje k diferenciálním rovnicím více neznámými proměnnými. Například dvě populace (konkurence nebo potravní řetězec), enzymy řídící biochemickou reakci, ... . Opět si všímáme nulových bodů pravých stran, ale místo jedné rovnice máme soustavu. Také monotonie nemá smysl, ale ukazuje se, že se dá nahradit jinou relativně dobře zjistitelnou informací: vlastními čísly Jacobiho matice vypočtené ve stacionárním bodě.
+
+## Opakování
+
+* Maticový součin
+* Řešitelnost homogenní soustavy lineárních rovnic
+* Vlastní hodnoty a vlastní vektory
+* Řešitelnost kvadratických funkcí v komplexním oboru
+* Eulerova identita
+* Chování exponenciální funkce $e^{kt}$ v nekonečnu
+
+-->
+<div class="admonition-umluva admonition">
+<p class="admonition-title">Úmluva</p>
+<p>V celé přednášce budeme jako nezávislou proměnnou uvažovat čas
+<span class="math notranslate nohighlight">\(\displaystyle t\)</span>. Autonomní znamená v tomto kontextu nezávislý na čase. Budeme
+studovat rovnice mající tuto vlastnost. Budeme dále studovat systémy,
+které mají dostatečně pěkná data na to, aby byla zaručena
+jednoznačnost řešení. To je například, pokud funkce na pravé straně
+rovnice má ohraničené parciální derivace, což bude v níže uvedených
+příkladech vždy splněno.</p>
+</div>
+<section id="autonomni-diferencialni-rovnice">
+<h2><span class="section-number">10.1. </span>Autonomní diferenciální rovnice<a class="headerlink" href="#autonomni-diferencialni-rovnice" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/9PbghCvHQ5c">Video</a></p>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Stabilita" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Stabilita.jpg"></a><figcaption>Grafické znázornění stability stacionárních řešení. <a href="https://user.mendelu.cz/marik/manim/Stabilita" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/Siu5ZgEA59s" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+<p>Autonomní diferenciální rovnice je rovnice tvaru <div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=f(y).\tag{1}\]</div>
+ Je speciálním případem rovnice se separovanými
+proměnnými a umíme ji řešit
+analytickou cestou. Proto se nyní nebudeme zaměřovat na hledání
+obecného řešení, ale pokusíme se popsat chování řešení, aniž bychom
+tato řešení znali. Pokusíme se s co nejmenší námahou říct, jak se
+budou řešení chovat.</p>
+<p>Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Nazývají <em>se stacionární body</em>. Je užitečné umět posoudit chování řešení v okolí stacionárních bodů, což umožní následující věta.</p>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span>Věta </span> (stabilita konstantních řešení)</p>
+<section class="theorem-content" id="proof-content">
+<p>Jestliže platí <span class="math notranslate nohighlight">\(\displaystyle f(y_0)=0\)</span>, je
+konstantní funkce <span class="math notranslate nohighlight">\(\displaystyle y(t)=y_0\)</span> konstantním řešením rovnice
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=f(y).\]</div>
+ Toto řešení je stabilní
+pokud <span class="math notranslate nohighlight">\(\displaystyle f'(y_0)&lt;0\)</span> a nestabilní pokud <span class="math notranslate nohighlight">\(\displaystyle f'(y_0)&gt;0\)</span>.</p>
+</section>
+</div><div class="proof remark admonition" id="remark-1">
+<p class="admonition-title"><span>Poznámka </span> (stabilita řešení)</p>
+<section class="remark-content" id="proof-content">
+<p>Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu <em>stabilitou</em> stacionárního bodu budeme rozumět, že malá výchylka od stacionárního bodu vede na řešení, které konverguje zpět k tomuto stacionárnímu bodu. Přesněji se tento typ stability jmenuje <em>asymptotická stabilita</em>.</p>
+</section>
+</div><p>Pro grafickou interpretaci věty je vhodné připomenout, že funkce s kladnou
+derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
+má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z monotonie pravé strany.</p>
+<p>Věta je odvozena z pozorování, že rovnice <span class="math notranslate nohighlight">\(\displaystyle y'=ky\)</span> má řešení <span class="math notranslate nohighlight">\(\displaystyle y(t)=Ce^{kt}\)</span> a toto řešení se pro velká <span class="math notranslate nohighlight">\(\displaystyle t\)</span> blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty <span class="math notranslate nohighlight">\(\displaystyle k\)</span>. Pravou stranu rovnice, funkci <span class="math notranslate nohighlight">\(\displaystyle f(y)\)</span>, je možné aproximovat vztahem <span class="math notranslate nohighlight">\(\displaystyle f(y)\approx f'(y_0)(y-y_0)\)</span> a odsud a z poznatku, že malá změna rovnice většinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech), a proto rovnice <span class="math notranslate nohighlight">\(\displaystyle y'=f(y)\)</span> kopíruje v okolí bodu <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span> chování rovnice <span class="math notranslate nohighlight">\(\displaystyle (y-y_0)'=f'(y_0)(y-y_0)\)</span>, pokud vynecháme patologické případy, což je zde <span class="math notranslate nohighlight">\(\displaystyle f'(y_0)=0\)</span>. Řešení je tedy <span class="math notranslate nohighlight">\(\displaystyle y\approx y_0+Ce^{f'(y_0)t}\)</span> a tato funkce buď konverguje k <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span>, nebo roste neohraničeně, v závislosti na znaménku derivace <span class="math notranslate nohighlight">\(\displaystyle f'(y_0)\)</span>.</p>
+<section id="logisticka-diferencialni-rovnice-s-konstantnim-lovem">
+<h3><span class="section-number">10.1.1. </span>Logistická diferenciální rovnice s konstantním lovem<a class="headerlink" href="#logisticka-diferencialni-rovnice-s-konstantnim-lovem" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Logistic" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Logistic.jpg"></a><figcaption>Logistická rovnice s lovem. <a href="https://user.mendelu.cz/marik/manim/Logistic" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/NyLkjOTYzVQ" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/logisticka-lov.png" src="../_images/logisticka-lov.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.1 </span><span class="caption-text">Pravá strana k modelu lovu s konstantní intenzitou.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Logistická diferenciální rovnice s konstantním lovem <span class="math notranslate nohighlight">\(\displaystyle h\)</span>, tj. rovnice
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,\]</div>
+ má pro
+malé <span class="math notranslate nohighlight">\(\displaystyle h\)</span> dva stacionární body. Funkce <span class="math notranslate nohighlight">\(\displaystyle ry\left(1-\frac yK\right)\)</span> je
+parabola otočená vrcholem nahoru a s nulovými body <span class="math notranslate nohighlight">\(\displaystyle y=0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y=K\)</span>. V
+prvním stacionárním bodě je funkce rostoucí a tento stacionární bod je
+nestabilní. Ve druhém stacionárním bodě je funkce klesající a tento
+stacionární bod je stabilní. Jak se zvyšuje faktor <span class="math notranslate nohighlight">\(\displaystyle h\)</span>, graf paraboly
+se posouvá směrem dolů a oba stacionární body se posouvají směrem k
+sobě a k vrcholu. Jejich stabilita zůstává neporušena. To znamená, že
+sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
+se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
+a rovnováha je tedy poněkud křehká.</p>
+<p><a class="reference external" href="http://user.mendelu.cz/marik/aromamath/Lov_populace.html">Numerický model</a></p>
+<p>Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu, i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule.</p>
+<div class="proof remark admonition" id="remark-2">
+<p class="admonition-title"><span>Poznámka </span> (strukturální stabilita modelu, bifurkace)</p>
+<section class="remark-content" id="proof-content">
+<p>Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme <em>strukturální stabilitou</em> modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je přirozené chování, kdy malá změna parametrů modelu způsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá <em>bifurkace</em> a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.</p>
+</section>
+</div></section>
+<section id="model-ostrovni-biogeografie">
+<h3><span class="section-number">10.1.2. </span>Model ostrovní biogeografie<a class="headerlink" href="#model-ostrovni-biogeografie" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://robert-marik.github.io/dmp/prednaska/03.html#model-ostrovni-biogeografie">viz zde</a></p>
+</section>
+<section id="model-metapopulaci">
+<h3><span class="section-number">10.1.3. </span>Model metapopulací<a class="headerlink" href="#model-metapopulaci" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://robert-marik.github.io/dmp/cviceni/cviceni_08.html">viz zde</a></p>
+</section>
+<section id="model-soupereni-jestrabi-a-holubici-povahy">
+<h3><span class="section-number">10.1.4. </span>Model soupeření jestřábí a holubičí povahy<a class="headerlink" href="#model-soupereni-jestrabi-a-holubici-povahy" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Hawk_and_dove_game" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Hawk_and_dove_game.jpg"></a><figcaption>Model soupeření dvou povah. Ukazuje, že vždy bude v přírodě určité procento agrasivního vzorce chování. Někdy dokonce tento vzorech chování bude jediný. <a href="https://user.mendelu.cz/marik/manim/Hawk_and_dove_game" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/zAzZrIShj9U" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/harris-hawk.jpg" src="../_images/harris-hawk.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.2 </span><span class="caption-text">V modelu jestřáb-holubice (hawk-dove) nejde o skutečné živočišné druhy, ale o strategii chování. Předmětem modelu je jestřábí a holubičí povaha u jedinců téhož druhu. Zdroj: pixabay.com</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="../_images/chovani.png" src="../_images/chovani.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.3 </span><span class="caption-text">Pravá strana modelu v závislosti na hodnotě parametrů.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Cílem tohoto modelu je studovat typy chování živočichů a rostlin a
+zjistit, zda některý typ chování přináší jeho nositelům evoluční
+výhodu.</p>
+<p>Nechť se v populaci vyskytují dva vzorce chování – jedince
+používající první z nich budeme nazývat <em>jestřábi</em> a druhý
+<em>holubice</em>. Chování se projeví, pokud se dva jedinci setkají
+u téhož zdroje (potrava, hnízdiště, apod).</p>
+<ul class="simple">
+<li><p>Jestřáb o zdroj bojuje a ustoupí pouze po prohraném boji.</p></li>
+<li><p>Holubice o zdroje nebojuje. Pokud protivník ustoupí bez boje,
+holubice zdroj zkonzumuje. V opačném případě zdroj zkonzumuje
+protivník.</p></li>
+<li><p>Předpokládejme, že každý jedinec v populaci si zkonzumováním
+zdroje může svou evoluční zdatnost posílit o hodnotu <span class="math notranslate nohighlight">\(\displaystyle V\)</span>. Pokud
+je nucen a ochoten o zdroj bojovat, je jeho evoluční zdatnost naopak
+snížena o hodnotu <span class="math notranslate nohighlight">\(\displaystyle D\)</span>.</p></li>
+<li><p>Setkají-li se u zdroje dvě holubice, jedna z nich ustoupí bez boje
+a druhá zkonzumuje zdroj. Předpokládejme, že po častých setkáních
+tohoto typu každá holubice zkonzumuje průměrně polovinu zdrojů.</p></li>
+<li><p>Setká-li se u zdroje holubice s jestřábem, zkonzumuje celý zdroj
+jestřáb.</p></li>
+<li><p>Setkají-li se u zdroje dva jestřábi, ani jeden z nich neustoupí
+a bojují o zdroj. Předpokládejme, že všichni jestřábi jsou stejně
+silní a po boji je pravděpodobnost zkonzumování zdroje poloviční pro
+každého jestřába.</p></li>
+</ul>
+<p>Matematický rozbor (J. Kalas, Z. Pospíšil, Spojité modely v biologii) ukazuje, že četnost <span class="math notranslate nohighlight">\(\displaystyle x\)</span> výskytu jestřábů v populaci
+se řídí diferenciální rovnicí
+<div class="math notranslate nohighlight">
+\[x'=x(1-x)\left(\frac V2-\frac D2 x\right).\]</div>
+
+Jediné realistické hodnoty <span class="math notranslate nohighlight">\(\displaystyle x\)</span> jsou z intervalu <span class="math notranslate nohighlight">\(\displaystyle [0,1]\)</span>. Pro nalezení stacionárních bodů a posouzení jejich stability budeme studovat funkci
+<div class="math notranslate nohighlight">
+\[f=x(1-x)\left(\frac V2-\frac D2 x\right).\]</div>
+ Stacionární body rovnice jsou nulové body funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> a to jsou <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x=\frac VD\)</span>. Poslední stacionární bod v závislosti na hodnotě parametrů <a class="reference external" href="https://sagecell.sagemath.org/?z=eJxL06jQCdNx0bSt0NIw1K3Q1NII0zfSddE30qrQ5OUqyMkv0YhOA6ox1DHQM9LUATEN9Ex0DDVjdUBMIEMnJzU9NS8lPicxKTXHNrpIXSXMzkVFXQfEsAEyYjUBCOEZ8g==&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">může a nemusí</a> ležet v intervalu <span class="math notranslate nohighlight">\(\displaystyle [0,1]\)</span></p>
+<ul class="simple">
+<li><p>V bodě <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> je funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> nulová a rostoucí. Stacionární bod <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> je vždy nestabilní. <strong>Ať jsou tedy podmínky jakékoliv, vždy budou v populaci
+přítomni jestřábi.</strong> Přitom právě jestřábi paradoxně plýtvají
+zdroji energie na boj, namísto toho, aby celou energii zaměřili na
+rozmnožování. Z hlediska efektivity při využívání zdrojů prostředí
+platí, že populace složená ze samých holubic využívá zdroje
+prostředí nejefektivnějším možným způsobem.  Přesto je taková
+populace evolučně nestabilní! Pronikne-li do populace samých holubic jeden jestřáb, má značnou evoluční výhodu, protože každý zdroj, u kterého se nachází,
+zkonzumuje. Tím poroste jeho evoluční zdatnost a jeho geny nebo vzorce chování (u druhů, které mohou přepínat strategie chování) se budou
+v populaci rychle šířit.</p></li>
+<li><p>Pokud jsou náklady na boj větší než užitek ze zdrojů, platí <span class="math notranslate nohighlight">\(\displaystyle V&lt;D\)</span>.
+V intervalu <span class="math notranslate nohighlight">\(\displaystyle [0,1]\)</span> leží stacionární bod <span class="math notranslate nohighlight">\(\displaystyle x=\frac VD\)</span> a tento bod je
+stabilní. Poslední stacionární bod <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span> je nestabilní. V tomto
+případě všechna řešení konvergují ke stacionárnímu bodu <span class="math notranslate nohighlight">\(\displaystyle x=\frac
+VD\)</span>. V populaci tedy budou přítomni i jestřábi i holubice.</p></li>
+<li><p>Pokud platí <span class="math notranslate nohighlight">\(\displaystyle V&gt;D\)</span>, všechna řešení konvergují ke stacionárnímu
+bodu <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span>. Ať je počáteční rozložení vzorců chování v populaci
+jakékoliv, evolučně stabilní je pouze populace složená ze samých
+jestřábů.  Jsou-li náklady na boj o zdroje nižší než užitek ze
+zdrojů, nevyplatí se ustupovat při soupeření o zdroje. <em>Příkladem
+populace složené ze samých jestřábů je les. Náklady na boj spočívají
+ve vytvoření vyššího kmene, užitkem je světlo.</em></p></li>
+</ul>
+</section>
+</section>
+<section id="autonomni-rovnice-s-pravou-stranou-ve-tvaru-rozdilu">
+<h2><span class="section-number">10.2. </span>Autonomní rovnice s pravou stranou ve tvaru rozdílu<a class="headerlink" href="#autonomni-rovnice-s-pravou-stranou-ve-tvaru-rozdilu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/ccWuBp4kies">Video</a></p>
+<div class="proof remark admonition" id="remark-3">
+<p class="admonition-title"><span>Poznámka </span> (autonomní rovnice s rozdílem na pravé straně)</p>
+<section class="remark-content" id="proof-content">
+<p>Rovnice <div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)\]</div>
+ má stacionární bod <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span>, jestliže <div class="math notranslate nohighlight">
+\[g(y_0)=h(y_0).\]</div>
+ Často jsou funkce <span class="math notranslate nohighlight">\(\displaystyle g\)</span> a <span class="math notranslate nohighlight">\(\displaystyle h\)</span> zadány graficky a stacionární bod je v průsečíku grafů funkcí <span class="math notranslate nohighlight">\(\displaystyle g\)</span> a <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce <span class="math notranslate nohighlight">\(\displaystyle g\)</span> je napravo od bodu <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span> pod funkcí <span class="math notranslate nohighlight">\(\displaystyle h\)</span> a nalevo nad ní) nebo nestabilní (naopak).</p>
+</section>
+</div><section id="teplotni-bilance-zeme">
+<h3><span class="section-number">10.2.1. </span>Teplotní bilance Země<a class="headerlink" href="#teplotni-bilance-zeme" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/img_earth_balance_2.png" src="../_images/img_earth_balance_2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.4 </span><span class="caption-text">Funkce z pravé strany rovnice pro teplotní bilanci Země</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p><strong>Příklad.</strong> Teplotní bilanci Země je možno vyjádřit rovnicí
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle R_{\text{in}}\)</span> a <span class="math notranslate nohighlight">\(\displaystyle R_{\text{out}}\)</span> jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, <span class="math notranslate nohighlight">\(\displaystyle R_{\text{out}}\)</span> je vetší než <span class="math notranslate nohighlight">\(\displaystyle R_{\text{in}}\)</span>, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.</p>
+<p><a class="reference external" href="http://user.mendelu.cz/marik/aromamath/Teplotni_bilance_Zeme.html">Online model.</a></p>
+</section>
+<section id="logisticka-diferencialni-rovnice-s-predatory">
+<h3><span class="section-number">10.2.2. </span>Logistická diferenciální rovnice s predátory<a class="headerlink" href="#logisticka-diferencialni-rovnice-s-predatory" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Obalec" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Obalec.jpg"></a><figcaption>Model populace pro preddačním tlakem využijeme například při studiu škůdce. Model vykazuje bifurkaci (malá změna vstupních dat může zcela změnit chování modelu) a hysterezi (stav souvisí i s historií modelu). <a href="https://user.mendelu.cz/marik/manim/Obalec" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/iFmQWcR_JX4" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+<div class='obtekat'>
+
+<figure class="align-default" id="id5">
+<img alt="../_images/obalec.jpg" src="../_images/obalec.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.5 </span><span class="caption-text">Model obaleče byl publikován v D. Ludwig, D.D. Jones and C.S. Holling, Qualitative analysis of insect outbreak systems: the spruce budworm and forest, Journal of Animal Ecology 47(1): 315–332, February 1978 a v tomto odstavci je zpracován podle knihy <a class="reference external" href="https://katalog.mendelu.cz/documents/223086?back=https%3A%2F%2Fkatalog.mendelu.cz%2Fsearch%3Ftype%3Dglobal%26q%3DDYNAMICAL%2BSYSTEMS%2BFOR%2BBIOLOGICAL%2BMODELING&amp;amp;group=223086,175427,175821">Brauer, Kribs, Dynamical systems for biological modelling</a>, plný text je pro uživatele MENDELU zdarma. zdroj: Wikimedia.org</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<figure class="align-default" id="id6">
+<img alt="../_images/budworm.png" src="../_images/budworm.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.6 </span><span class="caption-text">Pravá strana diferenciální rovnice modelu obaleče jako funkce proměnné <span class="math notranslate nohighlight">\(\displaystyle y\)</span>.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="../_images/budworm2.png" src="../_images/budworm2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.7 </span><span class="caption-text">Křivky udávající znaménko pravé strany diferenciální rovnice z modelu obaleče.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Následující model je model obaleče <em>Choristoneura fumiferana</em>, který periodicky atakuje lesy severní Ameriky. Jeho populace je relativně malá, ale některé roky (historicky cca po
+40 letech) se velikost populace zvýší tisícinásobně a dokáže zahubit
+<span class="math notranslate nohighlight">\(\displaystyle 80\%\)</span> stromů v lese a prakticky zničit les. Populaci je možno modelovat logistickou rovnicí <div class="math notranslate nohighlight">
+\[y'=ry\left(1-\frac yK\right)-H\frac{y^2}{y^2+A^2},\]</div>
+
+kde druhý člen na pravé straně charakterizuje vliv predátorů. Jedná se o funkci, která zpomaluje růst, podobně jako lov. Protože však predátoři mají určitou hodnotu, nad kterou jsou saturovaní a nestačí brzdit růst populace, je tato funkce ohraničená. Platí <div class="math notranslate nohighlight">
+\[H\frac{y^2}{y^2+A^2}  \leq H.\]</div>
+ To má dalekosáhlé důsledky.
+Pro určité hodnoty parametrů může mít pravá strana rovnice dva nebo čtyři nulové body. Nakreslíme si <a class="reference external" href="https://sagecell.sagemath.org/?z=eJwrSyzSUK9U1-TlKrI10DPl5fK2NTTg5fKwNeTlcgQRaRqVmrZFWpVaGoa6lfremroeWpVxRvoaQELbMc4IqLEgJ79EA6RMR6NSx0DH0EBTR6EyNzPPVtdAz1ATAENFFxg=&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">druhou variantu</a>.</p>
+<p>Vidíme dva průsečíky, kde je funkce rostoucí, to odpovídá nestabilním
+stavům. Vidíme i dva stabilní stavy, přibližně pro hodnoty <span class="math notranslate nohighlight">\(\displaystyle 0.6\)</span> a
+<span class="math notranslate nohighlight">\(\displaystyle 7.3\)</span>. Malé populace, které se rozvíjejí od nuly, dospějí do nižšího
+stabilního stavu. Pokud se nějakým způsobem změní velikost populace o
+malé množství, systém se po čase díky stabilitě vrátí do původního
+stavu. Pokud však skok je velký a systém populace se dostane nad
+hodnotu nestabilního stavu, růst pokračuje a systém spěje ke
+stabilitě, ale s vyšším výskytem škůdce, který odpovídá stacionárnímu
+bodu <span class="math notranslate nohighlight">\(\displaystyle 7.3\)</span>.</p>
+<p>Poněkud jednodušší je kvalitativní analýza, pokud vhodně zvolíme jednotku času a jednotku veličiny <span class="math notranslate nohighlight">\(\displaystyle y\)</span>. Jednotku veličiny <span class="math notranslate nohighlight">\(\displaystyle y\)</span> zvolíme tak, aby koeficient <span class="math notranslate nohighlight">\(\displaystyle A\)</span> byl roven jedné. Jednotku času zvolíme tak, aby koeficient <span class="math notranslate nohighlight">\(\displaystyle H\)</span> byl roven jedné. Kromě toho vytkneme proměnnou <span class="math notranslate nohighlight">\(\displaystyle y\)</span>. Model má potom tvar
+<div class="math notranslate nohighlight">
+\[y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].\]</div>
+ Na pravé straně v hranaté závorce zůstává rozdíl funkce <span class="math notranslate nohighlight">\(\displaystyle \frac{y}{y^2+1}\)</span> neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat.</p>
+<p><a class="reference external" href="http://user.mendelu.cz/marik/aromamath/Populace_pod_tlakem_predatoru.html">Numerický model</a></p>
+<p>Brauer a Kirbs vysvětlují situaci tak, že s růstem lesa se mění
+parametry modelu, stacionární body se posunují a populace obaleče se
+tomu přizpůsobuje. Více stromů znamená vyšší nosnou kapacitu prostředí
+pro obaleče a predátoři svou činností populaci obaleče udržují na
+rozumné míře. Pokud však nosná kapacita prostředí dosáhne takové
+hodnoty, že predátoři jsou nasycení a nestačí populaci redukovat,
+odpovídá to posunu nestabilního stacionárního bodu pod hodnotu
+velikosti populace a dojde k přemnožení. Toto přemnožení má
+devastující účinky pro les.</p>
+</section>
+</section>
+<section id="autonomni-system-x-f-x">
+<h2><span class="section-number">10.3. </span>Autonomní systém <span class="math notranslate nohighlight">\(\displaystyle X'=f(X)\)</span><a class="headerlink" href="#autonomni-system-x-f-x" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/udATObf0s8I">Video</a></p>
+<p>Soustava diferenciálních rovnic, kde pravé strany nezávisí na čase, se nazývá autonomní systém. Seznámili jsme se již s lineárními autonomními systémy, obecný autonomní systém však lineární být nemusí. Například při modelování chemických reakcí je rychlost úměrná mocnině koncentrace reagujících látek odpovídající počtu molekul, které do reakce vstupují. Níže uvidíme příklad takového modelu.</p>
+<p>Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí vlastních čísel. Půjde o lineární aproximaci. V tomto případě o lineární aproximaci vektorové funkce definující pravé strany rovnic.</p>
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle f(X_0)=0\)</span>, je možno systém <div class="math notranslate nohighlight">
+\[X'=f(X)\]</div>
+ v okolí bodu <span class="math notranslate nohighlight">\(\displaystyle X_0\)</span> aproximovat lineárním systémem <div class="math notranslate nohighlight">
+\[X'=J(X_0)(X-X_0),\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle J(X_0)\)</span> je Jacobiho matice funkce <span class="math notranslate nohighlight">\(\displaystyle f(X)\)</span> v bodě <span class="math notranslate nohighlight">\(\displaystyle X_0\)</span>, tj. pro <span class="math notranslate nohighlight">\(\displaystyle f(X)=(f_1(X),\dots,f_n(X))^T\)</span> je
+<div class="math notranslate nohighlight">
+\[J(X_0)=\left(\frac{\partial f_i(X_0)}{\partial x_j}\right).\]</div>
+
+O chování trajektorií v okolí stacionárního bodu tedy rozhodnou
+vlastní čísla Jacobiho matice. Za předpokladu, že jsme relativně
+daleko od případů, kdy se mění typ stacionárního bodu, tj. vlastní
+čísla jsou navzájem různá, jsou nenulová a v případě komplexních
+vlastních čísel mají nenulové reálné části, má původní nelineární
+systém stejný typ stacionárního bodu jako lineární systém s Jacobiho
+maticí. Nelineární systém tedy v jistém smyslu „zdědí“ chování řešení
+od své lineární aproximace pomocí Jacobiho matice. Je však nutno
+připomenout, že aproximace pomocí Jacobiho matice je jenom lokální a
+můžeme takto posoudit jenom řešení z nějakého okolí stacionárního
+bodu.</p>
+<p>Zejména tedy, pokud má Jacobiho matice všechny vlastní hodnoty
+záporné, tak všechna řešení z nějakého okolí stacionárního bodu
+konvergují do tohoto bodu. Pokud má všechny vlastní hodnoty kladné,
+všechna řešení z nějakého okolí se naopak od stacionárního bodu
+vzdalují. To platí i pro komplexní vlastní hodnoty, pouze se
+mezi konvergencí a vzdalováním přepíná podle znaménka reálné části
+vlastních hodnot a řešení oscilují směrem ke stacionárnímu bodu nebo
+od něj.</p>
+<div class="proof remark admonition" id="remark-4">
+<p class="admonition-title"><span>Poznámka </span> (stabilita a strukturální stabilita řešení)</p>
+<section class="remark-content" id="proof-content">
+<p><em>Stabilitou</em>
+stacionárního bodu budeme rozumět, stejně jako výše, že malá
+výchylka od stacionárního bodu vede na řešení, které konverguje zpět
+k tomuto stacionárnímu bodu. Stabilita vyjadřující, že při malé
+změně koeficientů v systému se nezmění typ singulárních bodů, se
+nazývá <em>strukturální stabilita</em>.</p>
+</section>
+</div><section id="bruselator">
+<h3><span class="section-number">10.3.1. </span>Bruselátor<a class="headerlink" href="#bruselator" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id8">
+<img alt="../_images/bz-reakce.jpg" src="../_images/bz-reakce.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.8 </span><span class="caption-text">Bělousova-Žabotinského reakce vytváří periodicky se měnící obrazce. Autor: Stephen Morris, flickr.com</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id9">
+<img alt="../_images/Bruesselator.png" src="../_images/Bruesselator.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.9 </span><span class="caption-text">Fázový portrét brusselátoru. Zdroj: Wikipedia</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Systém chemických reakcí
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}A &amp;\rightarrow X\\2X + Y &amp;\rightarrow 3X\\B + X &amp;\rightarrow Y + D\\X &amp;\rightarrow E\end{aligned}\end{split}\]</div>
+
+má pozoruhodnou minulost. První chemickou reakci probíhající podle tohoto schematu objevil ruský chemik B. Bělousov, jeho výsledky přezkoumal a potvrdil A. Žabotinský. Oba zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně totiž panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetum mobile. Později vědci (I. Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště I. Prigogina) a oscilátor.</p>
+<p>Pokud je dostatek složek <span class="math notranslate nohighlight">\(\displaystyle A\)</span> a <span class="math notranslate nohighlight">\(\displaystyle B\)</span>, modeluje po zjednodušení (viz Wikipedie, konstanty úměrnosti klademe rovny jedné) chemické reakce soustava
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac {\mathrm d X}{\mathrm dt}&amp;= A  +  X ^2 Y  - B X - X,\\
+\frac {\mathrm d Y}{\mathrm dt}&amp;= BX-X^2Y,
+\end{aligned}
+\end{split}\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle X\)</span> pro jednoduchost znamená koncentraci látky <span class="math notranslate nohighlight">\(\displaystyle X\)</span> a totéž platí i pro další veličiny vystupující v rovnici.</p>
+<p>Stacionárním bodem je bod <span class="math notranslate nohighlight">\(\displaystyle X=A\)</span>, <span class="math notranslate nohighlight">\(\displaystyle Y=\frac BA\)</span>. Pro <span class="math notranslate nohighlight">\(\displaystyle A=1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle B=3\)</span> má systém tvar
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac {\mathrm d X}{\mathrm dt}&amp;=  1+  X ^2 Y  - 4 X,\\
+\frac {\mathrm d Y}{\mathrm dt}&amp;= 3X-X^2Y.
+\end{aligned}
+\end{split}\]</div>
+</p>
+<p>Jacobiho matice je <div class="math notranslate nohighlight">
+\[\begin{split}J(X,Y)=\begin{pmatrix}2XY-4 &amp; X^2 \\ 3-2XY &amp; -X^2\end{pmatrix}\end{split}\]</div>
+
+a <div class="math notranslate nohighlight">
+\[\begin{split}J(1,3)=\begin{pmatrix}2&amp; 1\\-3 &amp; -1\end{pmatrix}.\end{split}\]</div>
+
+Vlastní čísla jsou řešením rovnice
+<div class="math notranslate nohighlight">
+\[\begin{split}0=\begin{vmatrix}2-\lambda &amp; 1\\-3 &amp; -1-\lambda\end{vmatrix}=\lambda^2- \lambda+1=\left(\lambda-\frac 12\right)^2+\frac 34.\end{split}\]</div>
+
+Taková rovnice nemá řešení v množině reálných čísel a vlastní čísla jsou komplexně sdružená <div class="math notranslate nohighlight">
+\[\lambda_{1,2}=\frac 12 \pm \frac{\sqrt {3}}{2}i.\]</div>
+ Protože reálná část <span class="math notranslate nohighlight">\(\displaystyle \Re(\lambda_i)=\frac 12&gt;0\)</span>, řešení se v oscilacích vzdalují od rovnovážného bodu. Protože systém je druhého řádu a tímto postupem je možno získat dvě nezávislá řešení, lineárními kombinacemi vygenerujeme všechna řešení. Proto se v oscilacích budou od stacionárního bodu vzdalovat všechna řešení. Další stacionární bod neexistuje a koncentrace určitě zůstanou ohraničené z fyzikálních důvodů. Proto neexistuje stabilní stav, a systém je nestabilní. Je možné ukázat, že systém není chaotický, ale oscilacemi se přibližuje k periodickému řešení. Taková analýza je však již nad rámec základního seznámení se s aparátem autonomních systémů.</p>
+</section>
+</section>
+<section id="autonomni-system-ve-dvou-dimenzich">
+<h2><span class="section-number">10.4. </span>Autonomní systém ve dvou dimenzích<a class="headerlink" href="#autonomni-system-ve-dvou-dimenzich" title="Link to this heading">#</a></h2>
+<div class='obtekat'>
+<figure class="align-default" id="id10">
+<img alt="../_images/sp_real.png" src="../_images/sp_real.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.10 </span><span class="caption-text">Trajektorie pro stacionární body spojené s reálnými vlastními čísly.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id11">
+<img alt="../_images/sp_complex.png" src="../_images/sp_complex.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10.11 </span><span class="caption-text">Trajektorie pro stacionární body spojené s nereálnými vlastními čísly.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Ve dvou dimenzích je autonomní systém možno psát ve tvaru
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{aligned}
+   x'=f(x,y),\\
+   y'=g(x,y).
+ \end{aligned}\end{split}\]</div>
+
+Pro autonomní systémy v rovině používáme dva základní způsoby vizualizace. Oba si můžete prohlédnout výše v příkladu s bruselátorem.</p>
+<ol class="arabic simple">
+<li><p>Řešení zobrazíme jako <em>grafy funkcí <span class="math notranslate nohighlight">\(\displaystyle x(t)\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y(t)\)</span></em>. Tímto přístupem dokážeme posoudit dynamiku v čase, odhadnout rychlost, s jakou se mění obě komponenty řešení. Často kreslíme do jednoho obrázku a často máme v tomto obrázku dvojí souřadnicový systém: jeden pro hodnoty <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a jeden pro hodnoty <span class="math notranslate nohighlight">\(\displaystyle y\)</span>.</p></li>
+<li><p>Řešení zobrazíme jako parametrickou křivku <span class="math notranslate nohighlight">\(\displaystyle \vec r(t)=[x(t), y(t)]\)</span>. Tato křivka se nazývá <em>trajektorie</em>. V tomto případě sice nemáme informaci o dynamice v čase, ale můžeme lehce posoudit, jak se chovají řešení vycházející z různých počátečních podmínek. Proto tento způsob zpravidla preferujeme. Tento způsob znázornění se nazývá <em>fázový portrét</em>.</p></li>
+</ol>
+<p>Křivky tvořené trajektoriemi mají speciální vlastnosti. Například se
+díky jednoznačné řešitelnosti nemohou dvě různé trajektorie
+protnout. Díky tomu existuje jenom několik málo druhů trajektorií.</p>
+<ul class="simple">
+<li><p>Stacionární body. Tyto body odpovídají konstantním řešením.</p></li>
+<li><p>Uzavřené trajektorie, cykly.
+Tyto trajektorie odpovídají periodickým řešením. Uvnitř
+každého cyklu leží alespoň jeden stacionární bod.</p></li>
+<li><p>Trajektorie, které samy sebe nikde neprotínají, a pro
+<span class="math notranslate nohighlight">\(\displaystyle t\to\pm\infty\)</span> tyto trajektorie mají jednu z následujících
+vlastností.</p>
+<ul>
+<li><p>Trajektorie mají alespoň jednu složku neohraničenou.</p></li>
+<li><p>Trajektorie konvergují k některému ze stacionárních  bodů.</p></li>
+<li><p>Trajektorie konvergují k některému z cyklů.</p></li>
+<li><p>Trajektorie konvergují k množině tvořené konečným počtem
+singulárních bodů a jinými trajektoriemi, které vedou
+z jednoho stacionárního bodu do druhého. S tímto typem
+trajektorií se však v jednoduchých modelech nesetkáme.</p></li>
+</ul>
+</li>
+</ul>
+<p>Podle chování trajektorií v okolí stacionárních bodů rozdělujeme tyto
+stacionární body do několika navzájem disjunktních skupin. Dokážeme je
+identifikovat pomocí vlastních hodnot Jacobiho matice vypočtené v
+tomto stacionárním bodě.</p>
+<ul class="simple">
+<li><p>Stabilní uzel je stacionární bod takový, že pro <span class="math notranslate nohighlight">\(\displaystyle t\to\infty\)</span> všechny
+trajektorie z nějakého okolí konvergují do tohoto bodu bez oscilací.
+Nestabilní uzel má stejnou vlastnost, ale pro <span class="math notranslate nohighlight">\(\displaystyle t\to-\infty\)</span>, tedy trajektorie
+z tohoto bodu vycházejí. Stabilní uzel poznáme podle dvou záporných a
+nestabilní uzel podle dvou kladných reálných vlastních hodnot.</p></li>
+<li><p>Stabilní a nestabilní ohnisko je stacionární bod se stejnou vlastností jako
+uzel, ale konvergence je spojena s oscilacemi okolo stacionárního bodu.
+Stabilní ohnisko poznáme podle dvou komplexně sdružených vlastních hodnot se
+zápornou reálnou částí, nestabilní ohnisko s kladnou reálnou částí.</p></li>
+<li><p>Sedlo je stacionární bod, který má v každém  okolí pouze konečný počet
+trajektorií, které pro <span class="math notranslate nohighlight">\(\displaystyle t\to\pm\infty\)</span> konvergují k tomuto bodu. Poznáme jej
+podle jedné kladné a jedné záporné vlastní hodnoty.</p></li>
+<li><p>Bod rotace je takový bod, v jehož každém okolí jsou cykly. Pokud navíc v
+nějakém okolí existují pouze cykly, nazývá se tento bod navíc střed.  Bod
+rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí,
+ale v těchto případech může stacionární bod být i ohniskem.</p></li>
+</ul>
+<a onclick=otevrit("problems/autonomni_systemy/10.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/autonomni_systemy/11.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/autonomni_systemy/12.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/autonomni_systemy/14.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+</section>
+<section id="zakladni-modely-populacni-ekologie">
+<h2><span class="section-number">10.5. </span>Základní modely populační ekologie<a class="headerlink" href="#zakladni-modely-populacni-ekologie" title="Link to this heading">#</a></h2>
+<p>Populační ekologie je součást ekologie zabývající se modelováním vývoje populací. Základním vyjadřovacím jazykem jsou diferenciální rovnice nebo jejich diskrétní obdoba, kdy se čas mění po skocích, diferenční rovnice. Málokdy uvažujeme jedinou populaci, většinou studujeme bohatší ekosystémy, což vede na soustavy rovnic. Dva nejklasičtější příklady si zde stručně uvedeme a prostudujeme ve cvičení.</p>
+<section id="model-konkurence-dvou-druhu">
+<h3><span class="section-number">10.5.1. </span>Model konkurence dvou druhů<a class="headerlink" href="#model-konkurence-dvou-druhu" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Konkurence_druhu" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Konkurence_druhu.jpg"></a><figcaption>Při konkurenci dvou druhů může dojít (podle nastavení parametrů) ke koexistenci nebo ke konkurenčnímu vyloučení. Model ukazuje, jak se konkurence projevuje v nejjednodušším případě, při sledování konkurence dvou populací. <a href="https://user.mendelu.cz/marik/manim/Konkurence_druhu" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
+<p>Situace, kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu ovlivňuje druhý druh, je modelována autonomním systémem
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\mathrm dx}{\mathrm dt}&amp;=x r_1 (1-a x-by),\\
+\frac{\mathrm dy}{\mathrm dt}&amp;=y r_2 (1-c x-dy).
+\end{aligned}
+\end{split}\]</div>
+
+Tento systém vychází z logistické rovnice pro každou z populací s doplněním členů <span class="math notranslate nohighlight">\(\displaystyle r_1 bxy\)</span> a <span class="math notranslate nohighlight">\(\displaystyle r_2 cxy\)</span>, které charakterizují mezidruhovou konkurenci. Ukazuje se, že tento systém má kapacitu popsat všechny v přírodě pozorované druhy interakcí (slabá konkurence, silná konkurence, dominance jednoho z druhů) a je výchozím systémem pro veškeré modely používané v populační ekologii.</p>
+</section>
+<section id="model-dravce-a-koristi">
+<h3><span class="section-number">10.5.2. </span>Model dravce a kořisti<a class="headerlink" href="#model-dravce-a-koristi" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Predator_prey" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Predator_prey.jpg"></a><figcaption>Model dravce a kořisti vysvětluje kolísání populací okolo rovnovážné polohy. Jde o stabilitu, která však nespočívá s konstantních hodnotách stavů, ale v periodickém průběhu. <a href="https://user.mendelu.cz/marik/manim/Predator_prey" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/zihShrEOJAU" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+<p>Situace, kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu umožňuje přežití druhého, je modelována autonomním systémem
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{\mathrm dx}{\mathrm dt}&amp;=x r (1-a x) -V(x)y,\\
+\frac{\mathrm dy}{\mathrm dt}&amp;=y (-\alpha+kV(x)).
+\end{aligned}
+\end{split}\]</div>
+
+V tomto případě je <span class="math notranslate nohighlight">\(\displaystyle V(x)\)</span> trofická funkce. Pro <span class="math notranslate nohighlight">\(\displaystyle V(x)=k_0x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle a=0\)</span>, (tj. bez vnitrodruhové konkurence v populaci kořisti a pro nenažrané dravce, kteří nejsou nikdy saturováni) dostáváme klasický Lotkův-Voterrův model, který v jistém smyslu odstartoval využití matematiky v modelování biologických systémů. Povedlo se mu vysvětlit oscilace mezi populacemi kořisti a dravce. Přes tento úspěch se však pro praktické modelování využívají dokonalejší modely. Zejména je nutno uvažovat ohraničenou trofickou funkci.</p>
+</section>
+</section>
+<section id="vicerozmerne-autonomni-systemy-kompartmentove-modely">
+<h2><span class="section-number">10.6. </span>Vícerozměrné autonomní systémy, kompartmentové modely<a class="headerlink" href="#vicerozmerne-autonomni-systemy-kompartmentove-modely" title="Link to this heading">#</a></h2>
+<p>Kompartmentové modely jsou modely, kde se je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým případem v roce 2020 je model epidemie, například <a class="reference external" href="http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie">SIR model</a> nebo <a class="reference external" href="http://user.mendelu.cz/marik/wiki/doku.php?id=karantena">SEIR model</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../09/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Lineární operátory a lineární diferenciální rovnice</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../11/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Lineární diferenciální rovnice druhého řádu</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-diferencialni-rovnice">10.1. Autonomní diferenciální rovnice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logisticka-diferencialni-rovnice-s-konstantnim-lovem">10.1.1. Logistická diferenciální rovnice s konstantním lovem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-ostrovni-biogeografie">10.1.2. Model ostrovní biogeografie</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-metapopulaci">10.1.3. Model metapopulací</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-soupereni-jestrabi-a-holubici-povahy">10.1.4. Model soupeření jestřábí a holubičí povahy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-rovnice-s-pravou-stranou-ve-tvaru-rozdilu">10.2. Autonomní rovnice s pravou stranou ve tvaru rozdílu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teplotni-bilance-zeme">10.2.1. Teplotní bilance Země</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logisticka-diferencialni-rovnice-s-predatory">10.2.2. Logistická diferenciální rovnice s predátory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-system-x-f-x">10.3. Autonomní systém <span class="math notranslate nohighlight">\(\displaystyle X'=f(X)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bruselator">10.3.1. Bruselátor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autonomni-system-ve-dvou-dimenzich">10.4. Autonomní systém ve dvou dimenzích</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zakladni-modely-populacni-ekologie">10.5. Základní modely populační ekologie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-konkurence-dvou-druhu">10.5.1. Model konkurence dvou druhů</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-dravce-a-koristi">10.5.2. Model dravce a kořisti</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vicerozmerne-autonomni-systemy-kompartmentove-modely">10.6. Vícerozměrné autonomní systémy, kompartmentové modely</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 14.04.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

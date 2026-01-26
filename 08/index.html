@@ -1,0 +1,1448 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-03-29T11:11:42+02:00" />
+    <title>8. Diferenciální rovnice &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '08/index';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="9. Lineární operátory a lineární diferenciální rovnice" href="../09/index.html" />
+    <link rel="prev" title="7. Základní integrální věty z vektorové analýzy" href="../07/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="29.03.2023"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Diferenciální rovnice</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modely-zalozene-na-rychlostech-derivacich">8.1. Modely založené na rychlostech (derivacích)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tepelna-vymena-kava-v-hrnku">8.1.1. Tepelná výměna, káva v hrnku</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radioaktivni-rozpad-radon-ve-sklepe">8.1.2. Radioaktivní rozpad, radon ve sklepě</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#samocisteni-jezer-kontaminace-v-jezere">8.1.3. Samočištění jezer, kontaminace v jezeře</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#akutni-normovolemicka-hemodiluce-aneb-o-krvinky-neradi-prichazime">8.1.4. Akutní normovolemická hemodiluce aneb o krvinky neradi přicházíme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rc-obvod-a-chytre-steny-ve-drevostavbach">8.1.5. RC obvod a chytré stěny ve dřevostavbách.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyvoj-populace-a-jeji-ekologicky-lov">8.1.6. Vývoj populace a její ekologický lov</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lovci-meteoritu-z-cssr-a-cr">8.1.7. Lovci meteoritů z ČSSR a ČR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obycejna-diferencialni-rovnice-prvniho-radu">8.2. Obyčejná diferenciální rovnice prvního řádu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obecne-a-partikularni-reseni">8.2.1. Obecné a partikulární řešení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uvod-do-problematiky-numerickeho-reseni-diferencialnich-rovnic">8.3. Úvod do problematiky numerického řešení diferenciálních rovnic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometricka-interpretace-ode">8.3.1. Geometrická interpretace ODE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-ivp">8.3.2. Numerické řešení IVP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformace-diferencialni-rovnice">8.3.3. Transformace diferenciální rovnice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ode-tvaru-frac-mathrm-dy-mathrm-dx-f-x-g-y-rovnice-se-separovanymi-promennymi">8.4. ODE tvaru <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=f(x)g(y)\)</span> (rovnice se separovanými proměnnými)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-ode-se-separovanymi-promennymi">8.5. Řešení ODE se separovanými proměnnými</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redukce-parcialni-diferencialni-rovnice-na-obycejnou">8.6. Redukce parciální diferenciální rovnice na obyčejnou</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jednorozmerny-pripad">8.6.1. Jednorozměrný případ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-materialove-vztahy-tj-konstantni-materialova-charakteristika">8.6.1.1. Lineární materiálové vztahy, tj. konstantní materiálová charakteristika</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nelinearni-materialove-vztahy-tj-nekonstantni-materialova-charakteristika">8.6.1.2. Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dvourozmerny-radialne-symetricky-pripad">8.6.2. Dvourozměrný radiálně symetrický případ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diferencialni-rovnice-rustu-vodni-kapky">8.7. Diferenciální rovnice růstu vodní kapky</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="diferencialni-rovnice">
+<h1><span class="section-number">8. </span>Diferenciální rovnice<a class="headerlink" href="#diferencialni-rovnice" title="Link to this heading">#</a></h1>
+<div class="admonition-anotace admonition">
+<p class="admonition-title">Anotace.</p>
+<ul class="simple">
+<li><p>V přednášce se seznámíme s rovnicemi obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin.</p></li>
+<li><p>Typickým příkladem je radioaktivita, protože množství rozpadlých atomů je dáno množstvím nestabilních atomů. Aplikace potom můžeme najít například při ochraně budov před radioaktivním radonem.</p></li>
+<li><p>Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu.</p></li>
+<li><p>Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně mění podle intenzity toku a ta se mění s teplotním rozdílem.</p></li>
+<li><p>Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.</p></li>
+<li><p>Důležité dovednosti, které se naučíme v souvislosti s diferenciálními
+rovnicemi, jsou zejména
+* schopnost naformulovat diferenciální rovnici podle slovního popisu
+mechanismu modelovaného děje,
+* dovednost posoudit existenci a jednoznačnost řešení,
+* dovednost snížit transformací počet parametrů rovnice
+* a až v poslední řadě najít řešení numericky nebo analytickou cestou.</p></li>
+</ul>
+</div>
+<div class="admonition-prerekvizity admonition">
+<p class="admonition-title">Prerekvizity.</p>
+<ul class="simple">
+<li><p>Diferenciální rovnice souvisí s derivacemi. Pro úspěšné rozhodnutí, zda se úloha dá modelovat pomocí diferenciální rovnice nutně potřebujeme spolehlivě znát využití derivace. V podstatě s jistotou všude tam, kde se mluví o rychlostech, ale aplikace jsou i jinde.</p></li>
+<li><p>Pro nalezení analytického řešení diferenciální rovnice je třeba ovládat integrál funkce jedné proměnné.</p></li>
+</ul>
+</div>
+<section id="modely-zalozene-na-rychlostech-derivacich">
+<h2><span class="section-number">8.1. </span>Modely založené na rychlostech (derivacích)<a class="headerlink" href="#modely-zalozene-na-rychlostech-derivacich" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/08uAuAgY-lw">Video</a></p>
+<section id="tepelna-vymena-kava-v-hrnku">
+<h3><span class="section-number">8.1.1. </span>Tepelná výměna, káva v hrnku<a class="headerlink" href="#tepelna-vymena-kava-v-hrnku" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/hot.jpg" src="../_images/hot.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.1 </span><span class="caption-text">Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,  https://pixabay.com</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Z fyziky víme, že <em>rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich teplot</em> (Newtonův zákon tepelné výměny). Rychlostí tepelné výměny můžeme rozumět například rychlost růstu teploty studeného tělesa v teplém prostředí. (Nebo rychlost poklesu teploty horkého tělesa umístěného v chladnějším prostředí.)</p></li>
+<li><p>Rychlost růstu teploty <span class="math notranslate nohighlight">\(\displaystyle T\)</span> tělesa s časem je derivace teploty podle času. Pokud potřebujeme pracovat s poklesem, uvažujeme záporně vzatou derivaci. Úměrnost matematicky vyjádříme násobením konstantou a teplotní rozdíl může být například při umístění horkého tělesa o teplotě <span class="math notranslate nohighlight">\(\displaystyle T\)</span> v chladné místnosti o teplotě <span class="math notranslate nohighlight">\(\displaystyle T_0\)</span> vyjádřen rozdílem <span class="math notranslate nohighlight">\(\displaystyle T-T_0\)</span>.</p></li>
+<li><p>Proces tepelné výměny probíhající podle Newtonova zákona
+je tedy možno modelovat vztahem <div class="math notranslate nohighlight">
+\[ \frac{\mathrm
+dT}{\mathrm dt}=-k(T-T_0).  \]</div>
+</p></li>
+<li><p>K rovnici v ideálním případě dodáváme materiálovou charakteristiku
+(konstantu úměrnosti <span class="math notranslate nohighlight">\(\displaystyle k\)</span>) a počáteční teplotu. Řešením je
+funkce udávající závislost teploty na čase. Chceme-li znát teplotu
+za určitý čas, není nutné provádět pokus a čekat na uplynutí
+požadované doby. Můžeme teplotu přímo vypočítat.</p></li>
+<li><p>Někdy může být vhodné nesledovat teplotu <span class="math notranslate nohighlight">\(\displaystyle T\)</span>, ale rozdíl oproti
+okolní teplotě, <span class="math notranslate nohighlight">\(\displaystyle \tau=T-T_0\)</span>. Model se potom zjednoduší na <div class="math notranslate nohighlight">
+\[
+\frac{\mathrm d\tau}{\mathrm dt}=-k\tau,\]</div>
+
+tedy na model, kdy rychlost změny je úměrná funkční hodnotě.</p></li>
+</ul>
+</section>
+<section id="radioaktivni-rozpad-radon-ve-sklepe">
+<h3><span class="section-number">8.1.2. </span>Radioaktivní rozpad, radon ve sklepě<a class="headerlink" href="#radioaktivni-rozpad-radon-ve-sklepe" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id2">
+<img alt="../_images/nuclear-waste.jpg" src="../_images/nuclear-waste.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.2 </span><span class="caption-text">Model úbytku rychlostí úměrnou množství modeluje radioaktivní rozpad. V České republice nás zajímá radioaktivní rozpad například z hlediska nežádoucího hromadění radonu v obytných budovách. Zdroj: pixabay.com, rabedirkwennigsen</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Radioaktivní prvky se rozpadají
+rychlostí, která je úměrná množství dosud nerozpadnutého materiálu. Rychlost, s jakou se mění množství (a tedy i koncentrace <span class="math notranslate nohighlight">\(\displaystyle y\)</span> v daném
+vzorku) nerozpadnutého radioaktivního materiálu, je tedy popsána matematickým modelem
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=-\lambda y,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> je konstanta úměrnosti. Tato rovnice je přirozeným
+důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
+stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
+pravděpodobnost se s časem nemění.</p></li>
+<li><p>Nejznámější aplikací této rovnice je datování archeologických vzorků pomocí radioaktivního uhlíku <span class="math notranslate nohighlight">\(\displaystyle ^{14}C\)</span>. V tomto případě se sleduje vzájemná relace mezi množstvím tohoto nestabilního uhlíku a množstvím stabilního <span class="math notranslate nohighlight">\(\displaystyle ^{12}C\)</span>. Počáteční podmínka je známa (předpokládáme stejný poměr zastoupení jako relativně
+nedávno, před průmyslovou revolucí) a díky tomu můžeme najít funkci
+udávající, jak s časem klesá zastoupení radioaktivního uhlíku. Obsah
+radioaktivního i stabilního uhlíku je možné změřit a tím získáme
+odhad, kolik procent radioaktivního
+uhlíku se rozpadlo. Řešení počáteční úlohy poté použijeme pro odhad
+doby, kdy organismus přestal spotřebovávat uhlík z atmosféry,
+tj. odhad stáří vzorku.</p></li>
+<li><p>Při pokusu o datování kostí dinosaurů klesne množství
+radioaktivního uhlíku pod měřitelnou úroveň. Proto se
+v tomto případě používají látky s delším poločasem rozpadu.</p></li>
+<li><p>Optikou běžného života je nejzajímavější aplikací této rovnice model rozpadu v radioaktivní řadě uranu. V tomto případě vzniká plynný radioaktivní radon, který se může hromadit ve stavbách a je po kouření druhou nejčastější příčinou vzniku rakoviny plic. Proto je v rizikových lokalitách nutné hromadění radonu eliminovat. Toho dosahujeme buď vhodnými konstrukčními přístupy nebo aktivními zařízeními na lapání a odvětrávání radonu.</p></li>
+</ul>
+</section>
+<section id="samocisteni-jezer-kontaminace-v-jezere">
+<h3><span class="section-number">8.1.3. </span>Samočištění jezer, kontaminace v jezeře<a class="headerlink" href="#samocisteni-jezer-kontaminace-v-jezere" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id3">
+<img alt="../_images/voda1.jpg" src="../_images/voda1.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.3 </span><span class="caption-text">Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,  se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot  je úměrná míře znečištění.  https://pixabay.com</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Nechť veličina <span class="math notranslate nohighlight">\(\displaystyle y\)</span> udává množství látky, která znečišťuje vodu v jezeře o objemu <span class="math notranslate nohighlight">\(\displaystyle V\)</span>.</p></li>
+<li><p>Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
+odtéká voda s nečistotami (hladina se nemění, je v ustáleném
+stavu). Nechť veličina <span class="math notranslate nohighlight">\(\displaystyle r\)</span> udává, jaký objem vody se v jezeře takto
+vymění za jeden den.  Předpokládejme dále (poněkud nerealisticky),
+že rozdělení znečišťujících částic v jezeře je rovnoměrné.</p></li>
+<li><p>Úbytek hmotnosti nečistot za časovou jednotku je dán derivací
+<span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dt}\)</span>.</p></li>
+<li><p>Protože koncentrace nečistot v jezeře a v odtékající vodě je <span class="math notranslate nohighlight">\(\displaystyle \frac
+yV\)</span>, je úbytek znečištění možno vyjádřit též ve tvaru <span class="math notranslate nohighlight">\(\displaystyle \frac
+rVy\)</span>. Podíl <span class="math notranslate nohighlight">\(\displaystyle \frac rV\)</span> je pro dané jezero kladná konstanta
+udávající, jak velká část z celkového množství vody se v jezeře
+vymění za časovou jednotku.  Označíme-li tuto konstantu symbolem
+<span class="math notranslate nohighlight">\(\displaystyle k\)</span>, je proces úbytku nečistot v jezeře popsán vztahem
+<div class="math notranslate nohighlight">
+\[
+\frac{\mathrm dy}{\mathrm dt}  =-ky.
+\]</div>
+</p></li>
+<li><p>Výše uvedený model se nazývá <em>rovnice samočištění jezer</em>, ale tento
+název je čistě formální. Jedná se vlastně o stejnou rovnici, která
+popisuje radioaktivní rozpad nebo změnu rozdílu mezi teplotou
+horkého nápoje a místnosti při chladnutí nápoje.</p></li>
+<li><p>Stejnou rovnicí je možné popsat nejenom odbourávání nečistot z
+životního prostředí, ale i odbourávání léků nebo drog z
+těla. Považujme krevní oběh za jezero a lék nebo drogu za
+znečišťující látku. V případě, že rychlost odbourávání je úměrná
+koncentraci (platí pro farmakokinetiku prvního řádu, toto splňuje
+většina léčiv za běžných koncentrací), řídí se proces odbourávání
+stejnou diferenciální rovnicí.</p></li>
+</ul>
+
+</section>
+<section id="akutni-normovolemicka-hemodiluce-aneb-o-krvinky-neradi-prichazime">
+<h3><span class="section-number">8.1.4. </span>Akutní normovolemická hemodiluce aneb o krvinky neradi přicházíme<a class="headerlink" href="#akutni-normovolemicka-hemodiluce-aneb-o-krvinky-neradi-prichazime" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/chirurg.jpg" src="../_images/chirurg.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.4 </span><span class="caption-text">Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: https://pixabay.com</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<ul class="simple">
+<li><p>Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev a s
+ní i krvinky. Při konstantní intenzitě krvácení to znamená, že
+pacient ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně na
+krvinky v krvi můžeme pohlížet stejně jako na znečištění
+jezera. Jedná se o stejný proces vyplavování látek obsažených v
+tekutině, jenom měníme interpretaci veličin.</p></li>
+<li><p>Pokud očekáváme takový průběh operace, že i po uvedeném poklesu bude
+pořád množství krvinek nad minimální přípustnou hodnotou, je možné
+před operací toto množství snížit tím, že se část krve odebere a
+krev se poté doplní vhodnými roztoky.</p></li>
+<li><p>Protože pacient bude mít po výše uvedeném zákroku už od začátku operace
+menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
+během operace je menší. Na konci operace se pacientovi vrátí dříve
+odebraná krev. Výsledkem je, že po operaci v jeho těle koluje více
+krvinek, než pokud by byl operován s „původní krví“.</p></li>
+<li><p>Aby metoda fungovala, je nutné odhadnout ztrátu krve během
+operace. Modelování pomocí matematických metod dokáže
+předpovědět, kolik krve odebrat na začátku tak, aby i po plánované
+době operace zůstaly krevní hodnoty pacienta v bezpečných
+mezích. Pokud na začátku operace část krve dáme bokem a poté tekutiny
+doplňujeme fyziologickým roztokem (s tím, že vlastní krev vrátíme po
+skončení operace), jedná se o stejný proces a stejnou rovnici jako
+samočištění jezer. Pokud krev doplňujeme během operace z krve
+dopředu odebrané,
+dokážeme model samočištění jezer modifikovat pro daný proces.</p></li>
+<li><p>Metoda <em>akutní normovolemické hemodiluce</em> nachází v současné praxi
+široké využití v řadě operačních oborů. Poskytuje totiž možnost
+vyhnout se podání alogenní krevní transfuze a tím eliminovat rizika
+z ní vyplývající. Současně je tato metoda výrazně finančně levnější
+a její přínos je tak i ekonomický. (Podle https://zdravi.euro.cz/)</p></li>
+</ul>
+
+</section>
+<section id="rc-obvod-a-chytre-steny-ve-drevostavbach">
+<h3><span class="section-number">8.1.5. </span>RC obvod a chytré stěny ve dřevostavbách.<a class="headerlink" href="#rc-obvod-a-chytre-steny-ve-drevostavbach" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<!--
+```{figure} RC_circuit.png
+ RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$  Zdroj: Wikipedia
+```
+ -->
+<figure class="align-default" id="id5">
+<img alt="../_images/RC_circuit_drevostavba.jpg" src="../_images/RC_circuit_drevostavba.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.5 </span><span class="caption-text">Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby.   Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term Wood Moisture Monitoring Based on Electrical Methods (2019)</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Při nabíjení kondenzátoru o kapacitě <span class="math notranslate nohighlight">\(\displaystyle C\)</span> přes odpor o velikosti <span class="math notranslate nohighlight">\(\displaystyle R\)</span> roste napětí na kondenzátoru, tím se mění nabíjecí proud. Tím se mění i rychlost nabíjení. Pomocí zákonů elektrotechniky je <a class="reference external" href="http://fyzikalniolympiada.cz/texty/matematika/difro.pdf">možno ukázat</a>, že nabíjecí proud <span class="math notranslate nohighlight">\(\displaystyle i\)</span> kondenzátoru se řídí vztahem
+<div class="math notranslate nohighlight">
+\[R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.\]</div>
+
+Napětí na kondenzátoru je možno odvodit buď z proudu, napětí na rezistoru a napětí zdroje, nebo z celkového proudu, který prošel kondenzátorem.</p>
+<p>Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočištění jezer. Vhodnou manipulací s parametry součástek je možno měnit koeficient u této rovnice a vhodným spojováním těchto obvodů dokážeme podobně simulovat i složitější rovnice. To bylo základem analogových počítačů, které nepracovaly s čísly, ale s napětími. Tyto počítače sehrály svou roli v době, kdy číslicové počítače byly nedostupné, pomalé a nespolehlivé. Tím byla historická úloha analogových počítačů splněna a již se nepoužívají.</p>
+<p>RC obvod jako takový má však důležité místo i dnes. Dokáže například filtrovat signály podle frekvence. Výpočet jeho charakteristiky (tj. vyřešení rovnice) a sledování napětí na kondenzátoru umožní měření elektrického odporu tam, kde není vhodné odpor určovat z proudu a napětí pomocí Ohmova zákona. Typickým příkladem je odpor dřeva a jeho vodivost, tj. převrácená hodnota odporu. Tato veličina se používá k rychlému stanovení vlhkosti dřeva, nebo je možno ji dlouhodobě sledovat pomocí senzorů zabudovaných do dřevostavby.</p>
+<p>Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti, a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s <a class="reference external" href="https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D">operačním zesilovačem</a> (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).</p>
+</section>
+<section id="vyvoj-populace-a-jeji-ekologicky-lov">
+<h3><span class="section-number">8.1.6. </span>Vývoj populace a její ekologický lov<a class="headerlink" href="#vyvoj-populace-a-jeji-ekologicky-lov" title="Link to this heading">#</a></h3>
+
+<div class='obtekat'>
+<figure class="align-default" id="id6">
+<img alt="../_images/kralik.jpg" src="../_images/kralik.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.6 </span><span class="caption-text">Při intenzivním lovu může dojít ke zničení populace  https://pixabay.com</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<ul class="simple">
+<li><p>Zkoumejme velikost <span class="math notranslate nohighlight">\(\displaystyle y\)</span> určité populace v prostředí s nosnou kapacitou <span class="math notranslate nohighlight">\(\displaystyle K\)</span>.</p></li>
+<li><p>Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s omezenými úživnými
+vlastnostmi specifická míra růstu populace (rychlost, s jakou
+se velikost populace zvětšuje vztažená na jednotkové množství
+populace) klesá s tím, jak se velikost populace přibližuje k nosné
+kapacitě, a rychlost růstu populace je modelována funkcí <span class="math notranslate nohighlight">\(\displaystyle ry\left(1-\frac yK\right)\)</span>.  Podle
+velkosti koeficientů v této funkci dělíme živočichy na <a class="reference external" href="http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie">r-stratégy
+a K-stratégy</a> a
+toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.</p></li>
+<li><p>Za uvedených předpokladů je možno vývoj populace popsat modelem
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right),\]</div>
+ který se nazývá <em>logistická rovnice.</em></p></li>
+<li><p>Pokud lovem snížíme přírůstky populace, můžeme tento proces popsat modelem
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle h(y)\)</span> je intenzita lovu populace o velikosti <span class="math notranslate nohighlight">\(\displaystyle y\)</span>. Modelování
+tohoto procesu umožní nalezení trvale
+udržitelné strategie lovu.</p></li>
+</ul>
+
+</section>
+<section id="lovci-meteoritu-z-cssr-a-cr">
+<h3><span class="section-number">8.1.7. </span>Lovci meteoritů z ČSSR a ČR<a class="headerlink" href="#lovci-meteoritu-z-cssr-a-cr" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id7">
+<img alt="../_images/benesov.jpeg" src="../_images/benesov.jpeg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.7 </span><span class="caption-text">Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Česká republika je na světové špičce ve oblasti propočítávání dráhy meteoritů ze světelné stopy zachycené sítí bolidových kamer. Vědcům z Astronomického ústavu se podařilo</p>
+<ul class="simple">
+<li><p>jako prvním na světě najít pozůstatky meteoritu propočítáním jeho dráhy ze snímků zachycených speciálními kamerami a zpětně propočítat, odkud meteorit přiletěl (meteorit Příbram, 1959, první „meteorit s rodokmenem“, tj. s doloženým původem),</p></li>
+<li><p>jako prvním na světě najít pozůstatky meteoritu 20 let po dopadu použitím analýz, které v době dopadu meteoritu nebyly k dispozici (meteorit Benešov, dopad 1991, nalezen 2011),</p></li>
+<li><p>propočítat a najít (mimo jiné i na dně jezera!) zbytky meteoritu Čeljabinsk z roku 2013.</p></li>
+</ul>
+<p>Meteority s vystopovaným původem jsou extrémně vzácné (do roku 2000 jenom 5 meteoritů, do roku 2016 pouze 31 meteoritů) a tým založený Zdeňkem Ceplechou a nyní vedený Pavlem Spurným se podílel na výpočtu drah většiny z nich.
+Použité metody jsou popsány například v článku <em>Ceplecha, Revelle: Fragmentation model of meteoroid motion, mass loss, and radiation in the atmosphere, Meteoritics &amp; Planetary Science 40, Nr 1, 35–54 (2005).</em> Například ztráta rychlosti třením v atmosféře je modelována rovnicí <div class="math notranslate nohighlight">
+\[\frac{\mathrm dv}{\mathrm dt}=-K\rho m^{-1/3}v^{2}\]</div>
+ a ztráta hmotnosti vypařováním
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dm}{\mathrm dt}=-K\sigma \rho m^{2/3}v^3.\]</div>
+
+Jedná se o rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotnosti (derivace hmotnosti podle času, rychlost, s jakou ubývá hmotnost)  jsou úměrné vhodným mocninám těchto veličin.</p>
+
+</section>
+</section>
+<section id="obycejna-diferencialni-rovnice-prvniho-radu">
+<h2><span class="section-number">8.2. </span>Obyčejná diferenciální rovnice prvního řádu<a class="headerlink" href="#obycejna-diferencialni-rovnice-prvniho-radu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/3HTs6zJ0gMk">Video</a></p>
+<p>Obyčejná diferenciální rovnice je rovnice, kde vystupuje neznámá
+funkce a její derivace. Setkáváme se s ní například všude tam, kde
+rychlost růstu nebo poklesu veličiny souvisí s její
+velikostí. Například rychlost změny teploty horkého tělesa
+je funkcí teploty samotné. Rychlost tepelné výměny mezi dvěma tělesy
+je totiž úměrná rozdílu jejich teplot (Newtonův zákon). Takto se
+přirozeně diferenciální rovnice objevují v modelech nejrůznějších dějů a
+jevů. Podstatu děje, který modelujeme, musí dodat fyzika, biologie
+nebo jiná aplikovaná věda. To v matematice obsaženo není. Matematika
+poté poslouží k analýze, jaké jsou pozorovatelné důsledky a tím se
+ověří, jestli příslušná aplikovaná věda správně vystihuje podstatu
+modelovaného děje.</p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span>Definice </span> (diferenciální rovnice)</p>
+<section class="definition-content" id="proof-content">
+<p><em>Obyčejnou diferenciální rovnicí prvního řádu rozřešenou vzhledem
+k derivaci</em> (stručněji též diferenciální rovnicí, DR) s neznámou <span class="math notranslate nohighlight">\(\displaystyle y\)</span>
+rozumíme rovnici tvaru</p>
+<div class="math notranslate nohighlight" id="equation-08-1">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-08-1" title="Link to this equation">#</a></span>\[ \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y) \]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle \varphi\)</span> je funkce
+dvou proměnných.</p>
+</section>
+</div><p>(anglicky ordinary differential equation, ODE)</p>
+<p><strong>Další formy zápisu</strong> rovnice <a class="reference internal" href="#equation-08-1">(8.1)</a> jsou
+<div class="math notranslate nohighlight">
+\[y'=\varphi(x,y),\]</div>
+
+<div class="math notranslate nohighlight">
+\[{\mathrm{d}y}=\varphi(x,y)\mathrm{d}x,\]</div>
+
+<div class="math notranslate nohighlight">
+\[{\mathrm{d}y}-\varphi(x,y)\mathrm{d}x=0.\]</div>
+</p>
+<p><strong>Příklad.</strong>  Najděte všechny funkce splňující <span class="math notranslate nohighlight">\(\displaystyle y'=2xy\)</span>. (Naučíme se řešit později.)</p>
+<p>Diferenciální rovnice udává scénář vývoje systému. K jednoznačnému
+předpovězení budoucího stavu je ovšem nutno znát nejenom, jaký
+mechanismus ovlivňuje vývoj systému, ale také stav současný.</p>
+<div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span>Definice </span> (počáteční podmínka, Cauchyova úloha)</p>
+<section class="definition-content" id="proof-content">
+<p>Nechť <span class="math notranslate nohighlight">\(\displaystyle x_0\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span> jsou reálná čísla. Úloha najít
+řešení rovnice<br />
+<div class="math notranslate nohighlight">
+\[  \frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y),\]</div>
+
+které splňuje zadanou <em>počáteční podmínku</em></p>
+<div class="math notranslate nohighlight" id="equation-08-2">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-08-2" title="Link to this equation">#</a></span>\[  y(x_0)=y_0 \]</div>
+<p>se nazývá <em>počáteční</em> (též <em>Cauchyova</em>) <em>úloha</em>.</p>
+<p>Řešení Cauchyovy úlohy nazýváme též <em>partikulárním řešením
+rovnice</em>. Graf libovolného partikulárního řešení se nazývá <em>integrální
+křivka</em>.</p>
+</section>
+</div><p>(anglicky initial condition, IC, initial value problem, IVP)</p>
+<p><strong>Příklad.</strong> Najděte všechny funkce splňující <span class="math notranslate nohighlight">\(\displaystyle y'=2xy\)</span> a <span class="math notranslate nohighlight">\(\displaystyle y(0)=3\)</span>. (Naučíme se řešit později.)</p>
+<div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span>Věta </span> (existence a jednoznačnost řešení Cauchyovy úlohy)</p>
+<section class="theorem-content" id="proof-content">
+<p>Má-li funkce <span class="math notranslate nohighlight">\(\displaystyle \varphi (x,y)\)</span> ohraničenou parciální derivaci <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial \varphi}{\partial y}\)</span> v okolí počáteční podmínky, potom má počáteční úloha <a class="reference internal" href="#equation-08-1">(8.1)</a>-<a class="reference internal" href="#equation-08-2">(8.2)</a> právě jedno řešení definované v nějakém okolí počáteční podmínky.</p>
+</section>
+</div><p><strong>Příklad.</strong> Rovnice</p>
+<div class="math notranslate nohighlight" id="equation-08-3">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-08-3" title="Link to this equation">#</a></span>\[y'=y\]</div>
+<p>má řešení <span class="math notranslate nohighlight">\(\displaystyle y=e^x\)</span>, což nahlédneme
+snadno, protože exponenciální funkce se nemění
+derivováním. Dosazením je možné ukázat, že má dokonce řešení</p>
+<div class="math notranslate nohighlight" id="equation-08-4">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-08-4" title="Link to this equation">#</a></span>\[y=Ce^x,\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle C\)</span> je libovolné číslo.</p>
+<p><strong>Příklad.</strong> Řešení počáteční úlohy <div class="math notranslate nohighlight">
+\[y'=y, \quad y(x_0)=y_0\]</div>
+ najdeme tak, že využijeme řešení <a class="reference internal" href="#equation-08-4">(8.4)</a> a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je
+<div class="math notranslate nohighlight">
+\[y=  (y_0 e^{-x_0}) e^x.\]</div>
+ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec <a class="reference internal" href="#equation-08-4">(8.4)</a> popisuje dokonce <strong>všechna</strong> řešení rovnice <a class="reference internal" href="#equation-08-3">(8.3)</a>.</p>
+<section id="obecne-a-partikularni-reseni">
+<h3><span class="section-number">8.2.1. </span>Obecné a partikulární řešení<a class="headerlink" href="#obecne-a-partikularni-reseni" title="Link to this heading">#</a></h3>
+<p>Řešení diferenciální rovnice je nekonečně mnoho. Zpravidla je dokážeme
+zapsat pomocí jediného vzorce, který obsahuje nějakou (alespoň do
+jisté míry libovolnou) konstantu <span class="math notranslate nohighlight">\(\displaystyle C\)</span>. Takový vzorec se nazývá <strong>obecné
+řešení rovnice</strong>. Pokud není zadána počáteční podmínka a mluvíme o
+<strong>partikulárním řešení</strong>, máme tím na mysli jednu libovolnou funkci
+splňující diferenciální rovnici.</p>
+<p><strong>Příklad:</strong> Obecným řešením diferenciální rovnice <div class="math notranslate nohighlight">
+\[y'=2xy\]</div>
+ je
+<div class="math notranslate nohighlight">
+\[y=Ce^{x^2}, \quad C\in\mathbb{R}.\]</div>
+ Žádná jiná řešení neexistují,
+všechna řešení se dají zapsat v tomto tvaru pro nějakou vhodnou
+konstantu <span class="math notranslate nohighlight">\(\displaystyle C\)</span>.  Partikulárním řešením je například
+<span class="math notranslate nohighlight">\(\displaystyle y=5e^{x^2}\)</span>. Řešením počáteční úlohy <div class="math notranslate nohighlight">
+\[y'=2xy, \quad y(0)=3\]</div>
+ je
+<div class="math notranslate nohighlight">
+\[y=3e^{x^2}.\]</div>
+</p>
+
+<p><strong>Online řešiče ODE (symbolicky):</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.wolframalpha.com/input/?i=solve+y%27%2Bx*y%3Dx%2Fy">Wolfram Alpha</a></p></li>
+<li><p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJyrtE0rzUsuyczP01CvVNfUqNDk5eLlUlYoyi_Ly0xOVahUt63Ur9A25OWCidgqpGSmpWlU6lRoKtjaKgBlFbQVDCG6js5IPbowNe_wWl6ulNTi_JyyVA2oNh2FSk294oz8cg1NFIUKZUCrqvIOLyzOTwLyV-YqlJQlFpVi159aUZCYl6IBMwgAhplAVA==&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">Sage</a></p></li>
+</ul>
+
+</section>
+</section>
+<section id="uvod-do-problematiky-numerickeho-reseni-diferencialnich-rovnic">
+<h2><span class="section-number">8.3. </span>Úvod do problematiky numerického řešení diferenciálních rovnic<a class="headerlink" href="#uvod-do-problematiky-numerickeho-reseni-diferencialnich-rovnic" title="Link to this heading">#</a></h2>
+<p>Nejprve si naznačíme možnosti numerického řešení. To vychází z grafické interpretace diferenciální rovnice a odpovídá v podstatě modelování, kdy postupně prodlužujeme řešení od zadané počáteční podmínky dopředu či dozadu v čase. Přitom musíme řešit situaci vždy pro konkrétní numerické hodnoty počáteční podmínky a všech parametrů. Naštěstí se dá vhodnou transformací (resp. vhodnou volbou jednotek) počet parametrů zredukovat a tím se zvýší obecná použitelnost numerického výpočtu.</p>
+<p><a href="https://youtu.be/7tm1QbNDiz8">Video</a></p>
+<section id="geometricka-interpretace-ode">
+<h3><span class="section-number">8.3.1. </span>Geometrická interpretace ODE<a class="headerlink" href="#geometricka-interpretace-ode" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id8">
+<img alt="../_images/smerove_pole_2.png" src="../_images/smerove_pole_2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.8 </span><span class="caption-text">Směrové pole diferenciální rovnice, integrální křivky, isokliny</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Protože derivace funkce v bodě udává směrnici tečny ke grafu funkce
+v tomto bodě, lze rovnici <div class="math notranslate nohighlight">
+\[y'=\varphi(x,y)\]</div>
+ chápat jako předpis, který
+každému bodu v rovině přiřadí směrnici tečny k integrální křivce,
+která tímto bodem prochází.  Sestrojíme-li v dostatečném počtu
+(například i náhodně zvolených) bodů <span class="math notranslate nohighlight">\(\displaystyle [x,y]\)</span> v rovině vektory
+<span class="math notranslate nohighlight">\(\displaystyle (1,\varphi(x,y))\)</span>, obdržíme <strong>směrové pole diferenciální rovnice</strong> —
+systém lineárních elementů, které jsou tečné k integrálním křivkám.</p>
+<p>Počáteční podmínka <span class="math notranslate nohighlight">\(\displaystyle y(x_0)=y_0\)</span> geometricky vyjadřuje skutečnost, že graf
+příslušného řešení prochází v rovině bodem <span class="math notranslate nohighlight">\(\displaystyle [x_0,y_0]\)</span>. Má-li tato
+počáteční úloha jediné řešení, neprochází bodem <span class="math notranslate nohighlight">\(\displaystyle [x_0,y_0]\)</span> žádná další
+křivka. Má-li každá počáteční úloha jediné řešení (což bude pro nás
+velice častý případ), znamená to, že integrální křivky se <em>nikde
+neprotínají</em>.</p>
+<p>Křivky s konstantní hodnotou <span class="math notranslate nohighlight">\(\displaystyle \varphi(x,y)\)</span> mají tu vlastnost, že je
+všechna řešení protínají pod stejným úhlem, měřeným od kladné části
+osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Například v bodech kde platí <span class="math notranslate nohighlight">\(\displaystyle \varphi(x,y)=0\)</span> míří všechny
+integrální křivky vodorovně. Proto se křivky, kde je <span class="math notranslate nohighlight">\(\displaystyle \varphi(x,y)\)</span>
+konstantní, nazývají <strong>izokliny</strong>.</p>
+
+</section>
+<section id="numericke-reseni-ivp">
+<h3><span class="section-number">8.3.2. </span>Numerické řešení IVP<a class="headerlink" href="#numericke-reseni-ivp" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/Diference" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/Diference.jpg"></a><figcaption>Numerické řešení diferenciální ronvice je zpravidla založeno na aproximaci derivace konečnou diferencí a postupným prodlužováním řešení od počáteční podmínky směrem dopředu nebo dozadu v čase. <a href="https://user.mendelu.cz/marik/manim/Diference" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/r_Ae2mGnfFs" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+<div class='obtekat'>
+<figure class="align-default" id="id9">
+<img alt="../_images/euler.png" src="../_images/euler.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.9 </span><span class="caption-text">Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id10">
+<img alt="../_images/rk.png" src="../_images/rk.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.10 </span><span class="caption-text">Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Numerické řešení diferenciálních rovnic je základním nástrojem pro ukázku průběhu simulací pro dané hodnoty parametrů a počátečních podmínek. Jedná se o velice užitečnou a široce používanou činnost při inženýrských simulacích. Neprofesionálům často musí stačit použít hotové postupy, procedury a nástroje. Například <a class="reference external" href="https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c">Python</a> je jednou z nejvhodnějších voleb.</p>
+<div class="volitelne">
+Řešení počáteční úlohy lze numericky aproximovat poměrně snadno:
+začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
+nahradíme integrální křivku její tečnou. Tím se dostaneme do dalšího
+bodu, odkud opět integrální křivku aproximujeme tečnou.  Směrnici
+tečny zjistíme z diferenciální rovnice, buď přímo z derivace (Eulerova
+metoda).
+<p>Vyjdeme-li z počáteční úlohy <div class="math notranslate nohighlight">
+\[y'=\varphi(x,y), \quad y(x_0)=y_0,\]</div>
+
+má lineární aproximace řešení v bodě <span class="math notranslate nohighlight">\(\displaystyle [x_0,y_0]\)</span> tvar <div class="math notranslate nohighlight">
+\[y=y_0+\varphi(x_0,y_0)(x-x_0).\]</div>
+
+Funkční hodnotu v bodě <span class="math notranslate nohighlight">\(\displaystyle x=x_1\)</span> označíme <span class="math notranslate nohighlight">\(\displaystyle y_1\)</span> a tento bod bude dalším  body lomené čáry, tj. <div class="math notranslate nohighlight">
+\[y_1=y_0+\varphi(x_0,y_0)(x_1-x_0).\]</div>
+
+Hodnota <span class="math notranslate nohighlight">\(\displaystyle x_1-x_0\)</span> je krok Eulerovy metody označovaný <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Tento postup opakujeme s počáteční podmínkou <span class="math notranslate nohighlight">\(\displaystyle y(x_1)=y_1\)</span>.
+Iterační formule Eulerovy metody má potom následující tvar. <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}x_{n+1}&amp;=x_n+h, \\ y_{n+1}&amp;=y_n+\varphi(x_n,y_n)h.\end{aligned}\end{split}\]</div>
+</p>
+<p>Stačí tedy mít zvolen <em>krok</em> numerické
+metody (délku intervalu, na kterém aproximaci tečnou použijeme) a
+výstupem metody bude aproximace integrální křivky pomocí lomené čáry.</p>
+<p><strong>Vylepšení</strong></p>
+<ul class="simple">
+<li><p>Pro přesnější aproximaci je možné zjemnit krok <span class="math notranslate nohighlight">\(\displaystyle h\)</span> (buď všude, nebo
+jenom tam, kde „je to potřeba“).</p></li>
+<li><p>Pro přesnější aproximaci je možné použít místo <span class="math notranslate nohighlight">\(\displaystyle \varphi(x_n,y_n)\)</span>
+lepší směrnici, která dokáže zohlednit, jestli se růst zrychluje
+nebo zpomaluje (metoda Runge Kutta druhého nebo čtvrtého řádu, …).</p></li>
+<li><p>Modely obsahující diferenciální rovnice obsahují zpravidla sadu
+parametrů charakterizujících fyzikální vlastnosti studovaných
+objektů. Pro numerické řešení musíme těmto parametrům dát konkrétní
+hodnoty a přicházíme tak o cennou informaci, jak řešení závisí na
+těchto parametrech. Vhodnou úpravou rovnice dokážeme počet parametrů
+eliminovat. Jednoduchým a často dostatečným způsobem je volba
+jednotek, obecnější metodou je transformace diferenciální rovnice
+uvedená v následujícím textu.</p></li>
+</ul>
+</div>
+<p><strong>Online řešiče ODE (numericky):</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJyFj0EKgzAQRfdC7pCdSTsVTbudO2RfREQjDY1GErXm9nU8QLv5zB_mP-YPYockMV3EfkuSZSxLo52Ap7HdOfISuKKl7WKFzxLKoqpPp8jRzDKtsDfRu8004f0Qw0mEBMcVUg7s1gbcwUx9M3s7LZGy9xr8uszrgnl0fjbNYI3r8-MFXf3kqb-82fklB9555wPmwZxUlgldXbWSRXz5j6B-SALUF0nkF_PaU9U=&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">Sage</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c">Python</a></p></li>
+</ul>
+
+</section>
+<section id="transformace-diferencialni-rovnice">
+<h3><span class="section-number">8.3.3. </span>Transformace diferenciální rovnice<a class="headerlink" href="#transformace-diferencialni-rovnice" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://user.mendelu.cz/marik/manim/ODE_transformace" target=_blank><img src="https://user.mendelu.cz/marik/manim/thumbs/ODE_transformace.jpg"></a><figcaption>Vhodnou transformací je možno zredukovat počet parametrů v rovnici a tím usnadnit numerické simulace. Nematematická cesta k transformaci je vhodná volba jednotek pro sledované veličiny. <a href="https://user.mendelu.cz/marik/manim/ODE_transformace" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
+
+<div class='obtekat'>
+<figure class="align-default" id="id11">
+<img alt="../_images/Vajont.jpg" src="../_images/Vajont.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.11 </span><span class="caption-text">Letecký snímek údolí Vajont krátce po katastrofě. <a class="reference external" href="https://youtu.be/BK5uwnVCeCw?t=2156">Video</a> ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 3706 dokumentu jsou „tým techniků odhaduje nejvyšší možnou reálnou rychlost sesuvu půdy na jednu minutu, kterou pro simulaci přepočítají na čtyři sekundy“. Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Naučíme se vyjadřovat diferenciální rovnici v jiných proměnných tak,
+aby bylo možné snížit počet parametrů v této rovnici. Pro jednoduchost
+budeme uvažovat jenom případ, kdy nová proměnná je lineární funkcí
+původní proměnné.</p>
+<p>Uvažujme funkci <span class="math notranslate nohighlight">\(\displaystyle y\)</span> proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Připomeneme si vzorce pro derivaci
+součtu, derivaci konstantního násobku a derivaci složené funkce, ale
+uvedeme si je v kontextu vhodném pro studium diferenciálních rovnic.</p>
+<ul class="simple">
+<li><p>Z derivace součtu a z derivace konstanty plyne pro funkci <span class="math notranslate nohighlight">\(\displaystyle y\)</span> a konstantu <span class="math notranslate nohighlight">\(\displaystyle y_0\)</span> vztah
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm d (y\pm y_0)}{\mathrm dx} = \frac{\mathrm d y}{\mathrm dx} \pm \frac{\mathrm d y_0}{\mathrm dx} = \frac{\mathrm d y}{\mathrm dx} \pm 0= \frac{\mathrm d y}{\mathrm dx}.\]</div>
+</p></li>
+<li><p>Z derivace konstantního násobku funkce plyne pro funkci <span class="math notranslate nohighlight">\(\displaystyle y\)</span> a konstantu <span class="math notranslate nohighlight">\(\displaystyle k\)</span> vztah
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm d (ky)}{\mathrm dx} = k\frac{\mathrm d y}{\mathrm dx}.\]</div>
+</p></li>
+<li><p>Z derivace složené funkce plyne pro konstantu <span class="math notranslate nohighlight">\(\displaystyle k\)</span> a veličinu <span class="math notranslate nohighlight">\(\displaystyle X = kx\)</span> vztah
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm d y}{\mathrm d x} =    \frac{\mathrm d y}{\mathrm dX}   \frac{\mathrm d X}{\mathrm dx} =   \frac{\mathrm d y}{\mathrm d X} k   \]</div>
+
+tj.
+<div class="math notranslate nohighlight">
+\[ \frac{\mathrm d y}{\mathrm d (kx)} = \frac{\mathrm d y}{\mathrm d X} =      \frac 1k \frac{\mathrm d y}{\mathrm d x}.\]</div>
+</p></li>
+</ul>
+<p>Výše uvedené výpočty je možno shrnout do pravidla v následující poznámce.</p>
+<div class="proof remark admonition" id="remark-3">
+<p class="admonition-title"><span>Poznámka </span> (transformace diferenciální rovnice do jiných jednotek)</p>
+<section class="remark-content" id="proof-content">
+<p>Pro <span class="math notranslate nohighlight">\(\displaystyle Y=k_1(y-y_0)\)</span> a <span class="math notranslate nohighlight">\(\displaystyle X=k_2 x\)</span> platí   <div class="math notranslate nohighlight">
+\[  \frac{\mathrm d Y}{\mathrm d X} =   \frac{\mathrm d \Bigl(k_1(y-y_0)\Bigr)}{\mathrm d (k_2 x)} = \frac{k_1}{k_2} \frac{\mathrm dy}{\mathrm dx}\]</div>
+ a podobně (všimněte si druhé mocniny u <span class="math notranslate nohighlight">\(\displaystyle k_2\)</span> díky druhé derivaci) <div class="math notranslate nohighlight">
+\[  \frac{\mathrm d^2 Y}{\mathrm d X^2} = \frac{k_1}{k_2^2} \frac{\mathrm d^2y}{\mathrm dx^2}.\]</div>
+   Výraz nalevo neobsahuje konstanty, které jsou ve výrazu   napravo. Tyto konstanty jsou v definici nových veličin <span class="math notranslate nohighlight">\(\displaystyle X\)</span> a <span class="math notranslate nohighlight">\(\displaystyle Y\)</span>.</p>
+</section>
+</div><p>Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm   dy}{\mathrm dx}\)</span> při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, <span class="math notranslate nohighlight">\(\displaystyle y'\)</span>.</p>
+<p><strong>Příklad.</strong> Diferenciální rovnice tepelné výměny</p>
+<div class="math notranslate nohighlight" id="equation-08-i">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-08-i" title="Link to this equation">#</a></span>\[\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\]</div>
+<p>obsahuje tři parametry: teplotu okolního prostředí <span class="math notranslate nohighlight">\(\displaystyle T_\infty\)</span>, počáteční teplotu <span class="math notranslate nohighlight">\(\displaystyle T_0\)</span> a konstantu <span class="math notranslate nohighlight">\(\displaystyle k\)</span> související s fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu <span class="math notranslate nohighlight">\(\displaystyle T\)</span> snížíme o <span class="math notranslate nohighlight">\(\displaystyle T_\infty\)</span> a upravíme dílek stupnice <span class="math notranslate nohighlight">\(\displaystyle (T_0-T_\infty)\)</span>-krát
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}\]</div>
+
+vydělit konstantou <span class="math notranslate nohighlight">\(\displaystyle k\)</span>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{k\mathrm dt}=-\frac{T-T_\infty}{T_0-T_\infty}\]</div>
+
+a přeškálovat pomocí konstanty <span class="math notranslate nohighlight">\(\displaystyle k\)</span> čas
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm d(kt)}=-\frac{T-T_\infty}{T_0-T_\infty}.\]</div>
+
+Po substituci <span class="math notranslate nohighlight">\(\displaystyle y=\frac{T-T_\infty}{T_0-T_\infty}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x=kt\)</span> má úloha tvar</p>
+<div class="math notranslate nohighlight" id="equation-08-ii">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-08-ii" title="Link to this equation">#</a></span>\[\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.\]</div>
+<p>Nová rovnice (**) <em>neobsahuje žádné parametry</em> a proto je pro studium
+jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
+rovnici <a class="reference internal" href="#equation-08-i">(8.5)</a>. Tuto informaci je však nutno interpretovat v kontextu
+definice nových proměnných. Například to, že všechna řešení rovnice <a class="reference internal" href="#equation-08-i">(8.5)</a> konvergují k nule
+znamená, že všechna řešení rovnice <a class="reference internal" href="#equation-08-i">(8.5)</a> konvergují k <span class="math notranslate nohighlight">\(\displaystyle T_0\)</span>. To, že řešení rovnice <a class="reference internal" href="#equation-08-ii">(8.6)</a> klesne na poloviční hodnotu za čas <span class="math notranslate nohighlight">\(\displaystyle \ln 2\)</span> znamená, že vzdálenost řešení rovnice <a class="reference internal" href="#equation-08-i">(8.5)</a> od rovnovážného stavu se na polovinu zmenší za čas <span class="math notranslate nohighlight">\(\displaystyle \frac 1k \ln 2\)</span>.</p>
+<div class="proof remark admonition" id="remark-4">
+<p class="admonition-title"><span>Poznámka </span> (nondimenzinalizace, rozměrová analýza)</p>
+<section class="remark-content" id="proof-content">
+<p>Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina <span class="math notranslate nohighlight">\(\displaystyle x\)</span> nemá fyzikální jednotku, protože je součinem konstanty <span class="math notranslate nohighlight">\(\displaystyle k\)</span> (s jednotkou <span class="math notranslate nohighlight">\(\displaystyle \mathrm s^{-1}\)</span>) a času <span class="math notranslate nohighlight">\(\displaystyle t\)</span> (s jednotkou <span class="math notranslate nohighlight">\(\displaystyle \mathrm s\)</span>). Je možné ji považovat za <em>bezrozměrný čas</em>. Veličina <span class="math notranslate nohighlight">\(\displaystyle y\)</span> také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za <em>bezrozměrnou teplotu</em>.</p>
+<p>V této úloze bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v <em>Horáček, Fyzikální a mechanické vlastnosti dřeva I</em> je zavedena <a class="reference external" href="https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz">bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost</a> na straně 61 pro rovnici popisující difuzi a <a class="reference external" href="https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz">charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost</a> pro rovnici popisující vedení tepla na stranách 88 a 89.</p>
+</section>
+</div><!--
+
+## Malá odbočka - zaokrouhlovací chyby v numerických výpočtech
+
+<div class='obtekat'>
+
+```{figure} patriot.jpg
+ Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.
+```
+
+</div>
+
+Uvedli jsme, že počáteční úlohu umíme vyřešit numericky. Ukázali jsme
+si základní algoritmus (Eulerův) a řekli, že existují algoritmy
+pokročilejší. Na tomto místě upozorníme na záludnosti skryté v
+numerických výpočtech. Je iluzorní se domnívat, že zjemněním kroku při
+numerickém řešení diferenciální rovnice vždy dostaneme přesnější
+řešení. Toto platí jenom dokud se nedostaneme ke kritické hodnotě
+kroku, kdy další snižování vede k tomu, že zpřesnění díky kratšímu
+kroku se přebije akumulovanou chybou z velkého množství výpočtů nutně
+zatížených zaokrouhlováním a dalším zjemňováním přesnost ztrácíme.
+
+Zajímavá léčka je v samé podstatě výpočtů na počítači a to v
+reprezentaci desetinných čísel ve dvojkové soustavě. Například číslo
+0.1 je ve dvojkové soustavě periodické! Proto desetinásobným sečtením
+tohoto čísla ve dvojkové soustavě nedostaneme (překvapivě) jedničku! Je to podobné, jako
+bychom v námi běžně používané dvojkové soustavě třikrát sečetli jednu třetinu v desetinném tvaru
+reprezentovaném konečným počtem desetinných míst, tj. například
+třikrát sečetli číslo $0.33333333$. Nedostaneme přesně jedničku. 
+
+Tento efekt měl i tragický důsledek. Software protiraketového
+systému Patriot počítal čas postupným přičítáním desetiny
+sekundy. Protože systém byl vytvořen a testován na mobilním zařízení,
+které se často restartovalo a běželo krátkou dobu, ničemu to
+nevadilo. Nasazení v systému Patriot však byla chyba. Při ostrém
+nasazení systém běžel dlouho, zaokrouhlovací chyba se kumulovala
+například 100 hodin. I když za tu dobu chyba dosáhla pouze zlomku
+sekundy, raketa letící vysokou rychlostí již byla jinde, než systém
+Patriot propočítal.  Dne 25.2.1991 systém Patriot během operace
+Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
+útočící raketu Scud a ta zabila 28 vojáků osvobozující armády a okolo
+100 osob zranila.
+
+S chybami plynoucími ze zaokrouhlování se setkáme i při výpočtech mimo modelování diferenciálních rovnic. Viz například [Floating-point arithmetic may give
+inaccurate results in
+Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel).
+
+-->
+<!-- 
+
+## ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$
+
+Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
+autonomní, nebo též nezávislá na čase. Je speciálním případem rovnice
+se separovanými proměnnými, která je uvedena na dalším slidu a naučíme
+se ji řešit analytickou cestou. Proto se nyní nebudeme zaměřovat na
+hledání obecného řešení, ale pokusíme se popsat chování řešení, aniž
+bychom tato řešení znali. Pokusíme se s co nejmenší námahou říct, jak
+se budou řešení chovat.
+
+* Je-li $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ řešením rovnice
+  (♣). Protože derivace konstantní funkce je nula, vidíme, že řešením
+  rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice (♣).
+* Konstantní řešení představují rovnovážný stav. Často nás zajímá,
+  jestli při vychýlení z tohoto rovnovážného stavu má systém tendenci
+  se vrátit do původního stavu, nebo se od původního stavu dále
+  odchylovat. Na tuto otázku dává odpověď následující věta.
+
+```{prf:theorem} stabilita konstantních řešení
+:nonumber:
+ Jestliže platí $f(y_0)=0$, je
+  konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
+  $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je stabilní
+  pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
+```
+
+
+Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
+derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
+má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z monotonie pravé strany.
+
+**Příklad.** Logistická diferenciální rovnice s konstantním lovem
+  $h$, tj. rovnice
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,$$
+  má pro malé $h$ dva stacionární body. Funkce $ry\left(1-\frac
+  yK\right)$ je parabola otočená vrcholem
+  nahoru a s nulovými body $y=0$ a $y=K$. V prvním stacionárním bodě
+  je funkce rostoucí a tento stacionární bod je nestabilní. Ve druhém
+  stacionárním bodě je funkce klesající a tento stacionární bod je
+  stabilní. Jak se zvyšuje faktor $h$, graf paraboly se posouvá směrem
+  dolů a oba stacionární body se posouvají směrem k sobě a k  vrcholu. Jejich stabilita zůstává neporušena. To znamená, že sice
+  pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu se
+  tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
+  rovnováha je tedy poněkud křehká. 
+
+##  Příklad - časový rozestup mezi trolejbusy
+
+\iffalse
+
+<div class='obtekat'>
+
+```{figure} trolejbus.jpg
+ Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.
+```
+
+</div>
+
+\fi
+
+Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
+$x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
+zastávce v čase $t$, druhý trolejbus na tuto zastávku dorazí v čase
+$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s rostoucím $t$.
+
+Předpokládejme, že
+
+* první vůz jede konstantní rychlostí (není dopravní špička)
+* pokud žádní pasažéři nečekají na druhý vůz, druhý vůz se
+  pohybuje rychleji než první vůz a oba vozy se "sjedou", tj. $x(t)$
+  klesá, pokud na druhý vůz nečekají žádní pasažéři
+* rychlost druhého vozu klesá s rostoucím počtem pasažérů, kteří
+  čekají na zastávce 
+* počet pasažérů kteří čekají na zastávce roste s rostoucím
+  intervalem mezi oběma vozy.
+
+Uvažujme, že všechny závislosti popsané výše jsou lineární (přímá
+úměrnost).
+
+Situaci je možno modelovat diferenciální rovnicí
+$$ 
+  \frac{\mathrm dx}{\mathrm  dt}=\beta x-\alpha,
+$$
+kde $\alpha$ a $\beta$ jsou kladné reálné konstanty. Tato rovnice má konstantní řešení $x=\frac \alpha\beta$. Toto řešení je nestabilní, protože 
+$$\frac{\mathrm d}{\mathrm dx}(\beta x-\alpha)=\beta>0.$$ Žádné jiné
+konstantní řešení neexistuje a proto všechna řešení klesají na nulu
+nebo neohraničeně rostou.
+
+Vzhledem k nestabilitě stacionárního řešení nemůžeme nechat řidiče
+veřejné dopravy jezdit "jak jim to vyjde". Situace by směřovala k
+tomu, že cestující budou nejprve dlouho čekat na trolejbus a nakonec
+přijede několik trolejbusů těsně za sebou. (Podle knihy P.  Blanchard,
+R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
+(2006), 828 pp.)
+
+--> 
+</section>
+</section>
+<section id="ode-tvaru-frac-mathrm-dy-mathrm-dx-f-x-g-y-rovnice-se-separovanymi-promennymi">
+<h2><span class="section-number">8.4. </span>ODE tvaru <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=f(x)g(y)\)</span> (rovnice se separovanými proměnnými)<a class="headerlink" href="#ode-tvaru-frac-mathrm-dy-mathrm-dx-f-x-g-y-rovnice-se-separovanymi-promennymi" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/yH6jzK_999E">Video</a></p>
+<p>Najít řešení obecné diferenciální rovnice je nemožné, ani však takové ambice mít nemusíme. V praxi se setkáváme s poměrně speciálními druhy diferenciálních rovnic a pro ně jsou metody řešení k dispozici. Jeden takový jednoduše řešitelný druh diferenciální rovnice je představen v následujícím textu.</p>
+<div class="proof definition admonition" id="definition-5">
+<p class="admonition-title"><span>Definice </span> (ODE se separovanými proměnnými)</p>
+<section class="definition-content" id="proof-content">
+<p>Diferenciální rovnice tvaru
+<div class="math notranslate nohighlight">
+\[    \frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y)\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle f\)</span> a <span class="math notranslate nohighlight">\(\displaystyle g\)</span> jsou funkce spojité na (nějakých) otevřených intervalech
+se nazývá <em>obyčejná diferenciální rovnice se separovanými proměnnými.</em></p>
+</section>
+</div><p><strong>Příklad:</strong> Rovnice <div class="math notranslate nohighlight">
+\[y'+xy +xy^2=0\]</div>
+ je rovnicí se separovanými
+proměnnými, protože je možno ji zapsat ve tvaru <div class="math notranslate nohighlight">
+\[y'=-xy(y+1).\]</div>
+
+Rovnice <div class="math notranslate nohighlight">
+\[y'=x^2-y^2\]</div>
+ není rovnice se separovatelnými proměnnými.</p>
+</section>
+<section id="reseni-ode-se-separovanymi-promennymi">
+<h2><span class="section-number">8.5. </span>Řešení ODE se separovanými proměnnými<a class="headerlink" href="#reseni-ode-se-separovanymi-promennymi" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Má-li algebraická rovnice <span class="math notranslate nohighlight">\(\displaystyle g(y)=0\)</span> řešení <span class="math notranslate nohighlight">\(\displaystyle k_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle k_2\)</span>, …, <span class="math notranslate nohighlight">\(\displaystyle k_n\)</span>,
+jsou konstantní funkce <span class="math notranslate nohighlight">\(\displaystyle y\equiv k_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y\equiv k_2\)</span>, …,
+<span class="math notranslate nohighlight">\(\displaystyle y\equiv k_n\)</span> řešeními rovnice.</p></li>
+<li><p>Pracujme na intervalech, kde <span class="math notranslate nohighlight">\(\displaystyle g(y)\neq 0\)</span> a odseparujeme proměnné.
+<div class="math notranslate nohighlight">
+\[          \frac{\mathrm{d}y}{g(y)}=f(x)\mathrm{d}x\]</div>
+</p></li>
+<li><p>Získanou rovnost integrujeme. Tím získáme obecné řešení v implicitním tvaru.
+<div class="math notranslate nohighlight">
+\[           \int \frac{\mathrm{d}y}{g(y)}=\int f(x)\mathrm{d}x+C\]</div>
+</p></li>
+<li><p>Pokud je zadána počáteční podmínka, je možné ji na tomto místě
+dosadit do obecného řešení a určit hodnotu konstanty <span class="math notranslate nohighlight">\(\displaystyle C\)</span>. Tuto
+hodnotu poté dosadíme zpět do obecného řešení a obdržíme řešení
+<em>partikulární</em>.</p></li>
+<li><p>Pokud je to možné, převedeme řešení (obecné nebo partikulární) do
+explicitního tvaru (vyjádříme odsud <span class="math notranslate nohighlight">\(\displaystyle y\)</span>).</p></li>
+</ol>
+<p>Poslední krok (převod do explicitního tvaru) je volitelný, zpravidla
+záleží na tom, co dalšího hodláme s řešením dělat. Pro většinu výpočtů
+je však explicitní tvar vhodnější než tvar implicitní, a proto se o něj
+vždy snažíme.</p>
+<div class="proof remark admonition" id="remark-6">
+<p class="admonition-title"><span>Poznámka </span> (zápis partikulárního řešení pomocí určitého integrálu)</p>
+<section class="remark-content" id="proof-content">
+<p>V případě počáteční podmínky <span class="math notranslate nohighlight">\(\displaystyle y(x_0) = y_0\)</span> je možné spojit třetí a čtvrtý krok a použít určitý integrál
+<div class="math notranslate nohighlight">
+\[
+\int_{y_0}^y \frac{\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t.
+\]</div>
+</p>
+</section>
+</div><p>Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle <span class="math notranslate nohighlight">\(\displaystyle y\)</span>, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.</p>
+<div class="proof theorem admonition" id="theorem-7">
+<p class="admonition-title"><span>Věta </span> (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými)</p>
+<section class="theorem-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle g(y_0)\neq 0\)</span>, má počáteční úloha <div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad y(x_0)=y_0\]</div>
+ právě jedno řešení definované v nějakém okolí počáteční podmínky.</p>
+</section>
+</div><div class="proof remark admonition" id="remark-8">
+<p class="admonition-title"><span>Poznámka </span> (existence a jednoznačnost konstantního řešení)</p>
+<section class="remark-content" id="proof-content">
+<p>Je-li <span class="math notranslate nohighlight">\(\displaystyle g(y_0)=0\)</span>,
+potom má počáteční úloha <div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad
+y(x_0)=y_0\]</div>
+ konstantní řešení <span class="math notranslate nohighlight">\(\displaystyle y(x)=y_0,\)</span> ale z předchozí věty neplyne nic o
+jednoznačnosti tohoto řešení. Je možné použít větu o jednoznačnosti platnou pro obecnější
+rovnici <div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y)\]</div>
+ uvedenou výše a potom je řešení určeno jednoznačně, pokud má funkce
+<span class="math notranslate nohighlight">\(\displaystyle g\)</span> v okolí počáteční podmínky ohraničenou derivaci.</p>
+</section>
+</div></section>
+<section id="redukce-parcialni-diferencialni-rovnice-na-obycejnou">
+<h2><span class="section-number">8.6. </span>Redukce parciální diferenciální rovnice na obyčejnou<a class="headerlink" href="#redukce-parcialni-diferencialni-rovnice-na-obycejnou" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/vDEQBp8y6Jk">Video</a></p>
+<p>V předchozích týdnech jsme se seznámili s modely založenými na parciálních derivacích, zejména s difuzní rovnicí. V případě, kdy hledaná stavová veličina je funkcí jenom jedné proměnné, se parciální derivace redukují na obyčejné derivace a můžeme takové modely řešit v rámci obyčejných diferenciálních rovnic.</p>
+<section id="jednorozmerny-pripad">
+<h3><span class="section-number">8.6.1. </span>Jednorozměrný případ<a class="headerlink" href="#jednorozmerny-pripad" title="Link to this heading">#</a></h3>
+<p>Ukážeme si , že parciální diferenciální rovnice popisující tok tepla nebo tok podzemní vody se ve speciálních případech redukují na diferenciální rovnice, jaké jsme se právě naučili řešit.</p>
+<p>Uvažujme tok tepla stěnou o tloušťce <span class="math notranslate nohighlight">\(\displaystyle d\)</span>, která odděluje dvě prostředí o teplotách <span class="math notranslate nohighlight">\(\displaystyle T_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle T_2\)</span>.</p>
+<p>Stacionární tok tepla v jedné dimenzi je dán rovnicí
+<div class="math notranslate nohighlight">
+\[\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=0.\]</div>
+
+V ustáleném stavu je <span class="math notranslate nohighlight">\(\displaystyle T\)</span> funkcí jedné proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a parciální derivace se redukují na obyčejné derivace. Rovnice má tvar
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d}{\mathrm d x}\left(k\frac{\mathrm d T}{\mathrm d x}\right)=0.\]</div>
+
+Po integraci dostáváme <div class="math notranslate nohighlight">
+\[k\frac{\mathrm d T}{\mathrm d x}=C_1.\]</div>
+ Tuto rovnici budeme řešit ve dvou různých situacích, a to pro lineární a nelineární materiálové vztahy.</p>
+<section id="linearni-materialove-vztahy-tj-konstantni-materialova-charakteristika">
+<h4><span class="section-number">8.6.1.1. </span>Lineární materiálové vztahy, tj. konstantní materiálová charakteristika<a class="headerlink" href="#linearni-materialove-vztahy-tj-konstantni-materialova-charakteristika" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Je-li <span class="math notranslate nohighlight">\(\displaystyle k\)</span> konstantní, dostáváme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dT}{\mathrm dx}=\frac {C_1}k\]</div>
+
+a integrací  dostáváme
+<div class="math notranslate nohighlight">
+\[T=\frac {C_1}k x + C_2.\]</div>
+
+Konstanty <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> určíme z podmínek na teplotu na jednotlivých stranách stěny. Vidíme, že teplota ve stěně klesá lineárně.</p></li>
+<li><p>Stejná rovnice a stejné řešení vychází i pro piezometrickou hladinu při rovinném ustáleném proudění podzemní vody v případě, že materiálová charakteristika je konstantní, tj. při proudění s napjatou hladinou (podzemní kolektor s nepropustným stropem a pod tlakem).</p></li>
+</ul>
+</section>
+<section id="nelinearni-materialove-vztahy-tj-nekonstantni-materialova-charakteristika">
+<h4><span class="section-number">8.6.1.2. </span>Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika<a class="headerlink" href="#nelinearni-materialove-vztahy-tj-nekonstantni-materialova-charakteristika" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Zopakujme předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův (Darcyho v případě podzemní vody) zákon není lineární, tj. <span class="math notranslate nohighlight">\(\displaystyle k\)</span> závisí na teplotě. Nejjednodušší zobecnění je případ, kdy <span class="math notranslate nohighlight">\(\displaystyle k(T)\)</span> je lineární, tj. platí <div class="math notranslate nohighlight">
+\[k(T)=aT+b.\]</div>
+
+Poté má rovnice tvar
+<div class="math notranslate nohighlight">
+\[({aT+b})\frac{\mathrm dT}{\mathrm dx}={C_1}\]</div>
+
+a po separaci proměnných dostáváme
+<div class="math notranslate nohighlight">
+\[({aT+b}){\mathrm dT}={C_1}{\mathrm dx}\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[\frac 12 aT^2+bT=C_1x+C_2.\]</div>
+ Teplotní profil není lineární, ale parabolický s parabolou otočenou naležato. Kterou polovinu paraboly vybrat poznáme z toho, že teplota uvnitř stěny je mezi teplotami na okrajích.</p></li>
+<li><p>Stejný výpočet pro <span class="math notranslate nohighlight">\(\displaystyle b=0\)</span> odpovídá proudění podzemní vody s volnou hladinou. Toto je jiným způsobem (přímé odvození rovnice z Darcyho zákona) odvozeno v textu Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Hladina podzemní vody tedy klesá jako ležatá parabola.</p></li>
+</ul>
+</section>
+</section>
+<section id="dvourozmerny-radialne-symetricky-pripad">
+<h3><span class="section-number">8.6.2. </span>Dvourozměrný radiálně symetrický případ<a class="headerlink" href="#dvourozmerny-radialne-symetricky-pripad" title="Link to this heading">#</a></h3>
+<p>Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi, je stacionární děj v rovině, kdy je situace radiálně symetrická. K tomu je nutno transformovat divergenci a gradient do polárních souřadnic. Příslušné vzorce nebudeme odvozovat, dodá je <a class="reference external" href="https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates#Del_formula">Wikipedie</a>.</p>
+<div class='obtekat'>
+<figure class="align-default" id="id12">
+<img alt="../_images/well.png" src="../_images/well.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.12 </span><span class="caption-text">Radiální proudění směrem k čerpanému vrtu. Zdroj: http://ecoursesonline.iasri.res.in.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<ul class="simple">
+<li><p>Uvažujme například horkou trubku ochlazovanou zvenčí a proudění tepla radiálně směrem od středu. Teplota <span class="math notranslate nohighlight">\(\displaystyle T\)</span> je funkcí vzdálenosti <span class="math notranslate nohighlight">\(\displaystyle r\)</span> od středu a po transformaci gradientu a divergence do polárních souřadnic se stacionární bezzdrojová rovnice vedení tepla <div class="math notranslate nohighlight">
+\[0=\nabla\cdot(k\nabla T)\]</div>
+ redukuje na
+<div class="math notranslate nohighlight">
+\[\frac 1r \frac{\partial}{\partial r}\left(kr\frac{\partial T}{\partial r}\right)=0.\]</div>
+
+Parciální derivace se opět redukují pro funkci jedné proměnné na obyčejné derivace a stejně jako v předchozím případě můžeme integrovat na
+<div class="math notranslate nohighlight">
+\[kr\frac{\mathrm d T}{\mathrm d r}=C_1.\]</div>
+
+Odsud
+<div class="math notranslate nohighlight">
+\[k\mathrm d T=\frac{C_1}r {\mathrm d r}\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[kT={C_1}\ln(r)+C_2.\]</div>
+
+Konstanty <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> se určí z teplot na vnitřním a vnějším povrchu trubky.</p></li>
+<li><p>Stejný vzorec platí pro analogické radiální proudění podzemní vody při proudění s napjatou hladinou. Toho se využívá při čerpacích zkouškách nebo při umělém snižování hladiny spodní vody. Po dosazení relevantních veličin a výpočtu konstant se odvozený vzorec uvádí ve tvaru <div class="math notranslate nohighlight">
+\[h-h_0=\frac{Q}{2\pi T}\ln \frac r{r_0}\]</div>
+ a nazývá <a class="reference external" href="https://en.wikipedia.org/wiki/Aquifer_test#Steady-state_Thiem_solution">Thiemova rovnice.</a></p></li>
+<li><p>Předchozí postup můžeme modifikovat i pro radiální proudění s volnou hladinou, tj. proudění modelované rovnicí <div class="math notranslate nohighlight">
+\[\nabla \cdot(K\nabla h)=0,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle K=kh\)</span> je materiálová konstanta pro proudění s volnou hladinou. Jako v předchozím případě přejdeme do proměnné <span class="math notranslate nohighlight">\(\displaystyle r\)</span> a dostáváme
+<div class="math notranslate nohighlight">
+\[khr\frac{\mathrm d h}{\mathrm d r}=C_1.\]</div>
+
+Odsud
+<div class="math notranslate nohighlight">
+\[h{\mathrm d h}=\frac{C_1}{kr}\mathrm dr\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[\frac 12 h^2=\frac{C_1}{k}\ln(r)+C_2.\]</div>
+
+Zpravidla se tato rovnice používá pro stanovení vydatnosti čerpané studny a konstanty <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> určíme z výšky hladiny ve studni a z výšky hladiny v kontrolním vrtu nedaleko studny.
+Tento vztah umožňuje například navrhnout průměr studny, odhadnout
+vydatnost studny, nebo pomocí odčerpávaného vrtu a menších pomocných
+vrtů sledujících pokles hladiny v okolí odčerpávaného vrtu stanovit
+filtrační součinitel <span class="math notranslate nohighlight">\(\displaystyle k\)</span>. Využití vzorce je však mnohem rozmanitější,
+umožňuje vypočítat poměry ve stavebních jámách a v jejich okolí. To je
+užitečné například při odhadu, kolik vody se hromadí ve výkopu. Další
+využití je, že dokážeme odhadnout vliv stavební jámy na hydrologické
+poměry v okolí a tyto poměry dokážeme měnit a přizpůsobovat našim
+potřebám. Častou aplikací je také hydraulická clona (soustava prvků
+rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace
+z chemické výroby do vodárensky využívaných vod). V tomto případě je však situace komplikovanější, protože je nutné zkombinovat dostředivé proudění k čerpanému vrtu s rovinným prouděním podzemní vody. Toto se naučíme v příští přednášce a využijeme linearitu.</p></li>
+</ul>
+</section>
+</section>
+<section id="diferencialni-rovnice-rustu-vodni-kapky">
+<h2><span class="section-number">8.7. </span>Diferenciální rovnice růstu vodní kapky<a class="headerlink" href="#diferencialni-rovnice-rustu-vodni-kapky" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/gJoOmF39rbw">Video</a></p>
+
+<div class='obtekat'>
+<figure class="align-default" id="id13">
+<img alt="../_images/london.jpg" src="../_images/london.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 8.13 </span><span class="caption-text">Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+
+<p>Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
+vodní páry. Kapka proto roste tak, že její objem se zvětšuje rychlostí
+úměrnou povrchu. Povrch je zase úměrný druhé mocnině poloměru a
+poloměr je úměrný třetí odmocnině objemu. Platí tedy (po sloučení všech konstant úměrnosti do jedné)
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.\]</div>
+<br />
+Tato rovnice má konstantní řešení <span class="math notranslate nohighlight">\(\displaystyle V=0\)</span>. Nekonstantní řešení dostaneme
+po úpravě
+<div class="math notranslate nohighlight">
+\[V^{-2/3}\mathrm dV=k\mathrm dt\]</div>
+
+a po integraci
+<div class="math notranslate nohighlight">
+\[\int V^{-2/3}\mathrm dV=k\int \mathrm dt,\]</div>
+
+což dává
+<div class="math notranslate nohighlight">
+\[3V^{1/3}=kt+C\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[V=\left(\frac 13 kt+ \frac 13 C\right)^3,\]</div>
+
+tj.
+<div class="math notranslate nohighlight">
+\[V=\left(k_0t+ c\right)^3,\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle k_0=\frac 13 k\)</span> a <span class="math notranslate nohighlight">\(\displaystyle c=\frac 13 C\)</span> jsou konstanta spojená rychlostí
+kondenzace a integrační konstanta.</p>
+<p>Všimněte si, že počáteční úloha s počáteční podmínkou <span class="math notranslate nohighlight">\(\displaystyle V(0)=0\)</span> má
+konstantní nulové řešení <div class="math notranslate nohighlight">
+\[V(t)=0\]</div>
+ a nenulové řešení
+<div class="math notranslate nohighlight">
+\[V(t)=(k_0t)^3.\]</div>
+ Máme zde tedy nejednoznačnost v řešení počáteční
+úlohy. Tato nejednoznačnost není v rozporu s větou o existenci a
+jednoznačnosti řešení, protože pravá strana je nulová (podmínka pro
+separovatelnou rovnici není splněna) a nemá ohraničenou derivaci podle
+<span class="math notranslate nohighlight">\(\displaystyle V\)</span> (podmínka pro obecnou rovnici také není splněna). A nejednoznačnost má v tomto případě dokonce fyzikální význam. Plynné
+skupenství může existovat i pod bodem kondenzace. Takovému jevu se
+říká přechlazená pára. Aby došlo ke kondenzaci, musí být k dispozici
+kondenzační jádra, například nečistoty ve vzduchu. Proto ve
+znečištěném ovzduší dochází častěji ke kondenzaci a tvorbě mlhy. Své
+by o tom mohli vyprávět obyvatelé Londýna, kteří se proslulých mlh
+zbavili poté, co se omezilo topení uhlím. My dnes spíše známe
+přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
+plíškem spustí přeměna skupenství na pevné spojená s intenzivním
+uvolněním tepla.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../07/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Základní integrální věty z vektorové analýzy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../09/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Lineární operátory a lineární diferenciální rovnice</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modely-zalozene-na-rychlostech-derivacich">8.1. Modely založené na rychlostech (derivacích)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tepelna-vymena-kava-v-hrnku">8.1.1. Tepelná výměna, káva v hrnku</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radioaktivni-rozpad-radon-ve-sklepe">8.1.2. Radioaktivní rozpad, radon ve sklepě</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#samocisteni-jezer-kontaminace-v-jezere">8.1.3. Samočištění jezer, kontaminace v jezeře</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#akutni-normovolemicka-hemodiluce-aneb-o-krvinky-neradi-prichazime">8.1.4. Akutní normovolemická hemodiluce aneb o krvinky neradi přicházíme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rc-obvod-a-chytre-steny-ve-drevostavbach">8.1.5. RC obvod a chytré stěny ve dřevostavbách.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vyvoj-populace-a-jeji-ekologicky-lov">8.1.6. Vývoj populace a její ekologický lov</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lovci-meteoritu-z-cssr-a-cr">8.1.7. Lovci meteoritů z ČSSR a ČR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#obycejna-diferencialni-rovnice-prvniho-radu">8.2. Obyčejná diferenciální rovnice prvního řádu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obecne-a-partikularni-reseni">8.2.1. Obecné a partikulární řešení</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uvod-do-problematiky-numerickeho-reseni-diferencialnich-rovnic">8.3. Úvod do problematiky numerického řešení diferenciálních rovnic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometricka-interpretace-ode">8.3.1. Geometrická interpretace ODE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-ivp">8.3.2. Numerické řešení IVP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformace-diferencialni-rovnice">8.3.3. Transformace diferenciální rovnice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ode-tvaru-frac-mathrm-dy-mathrm-dx-f-x-g-y-rovnice-se-separovanymi-promennymi">8.4. ODE tvaru <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=f(x)g(y)\)</span> (rovnice se separovanými proměnnými)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reseni-ode-se-separovanymi-promennymi">8.5. Řešení ODE se separovanými proměnnými</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redukce-parcialni-diferencialni-rovnice-na-obycejnou">8.6. Redukce parciální diferenciální rovnice na obyčejnou</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jednorozmerny-pripad">8.6.1. Jednorozměrný případ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linearni-materialove-vztahy-tj-konstantni-materialova-charakteristika">8.6.1.1. Lineární materiálové vztahy, tj. konstantní materiálová charakteristika</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nelinearni-materialove-vztahy-tj-nekonstantni-materialova-charakteristika">8.6.1.2. Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dvourozmerny-radialne-symetricky-pripad">8.6.2. Dvourozměrný radiálně symetrický případ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diferencialni-rovnice-rustu-vodni-kapky">8.7. Diferenciální rovnice růstu vodní kapky</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 29.03.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

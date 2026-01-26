@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-02-20T11:05:43+01:00" />
+    <title>1. Parciální derivace &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni01';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="2. Gradient" href="cviceni02.html" />
+    <link rel="prev" title="11. Lineární diferenciální rovnice druhého řádu" href="../11/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="20.02.2024"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Parciální derivace</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pomoci-vzorcu">1.1. Výpočet pomocí vzorců</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parcialni-derivace-pocitova-teplota-analyticky">1.2. Parciální derivace, pocitová teplota analyticky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pocitova-teplota-numericky">1.3. Pocitová teplota numericky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parcialni-derivace-tepelna-kapacita-dreva-volitelne">1.4. Parciální derivace, tepelná kapacita dřeva (volitelně)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veliciny-z-rovnice-vedeni-tepla">1.5. Veličiny z rovnice vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zmena-smeru-osy-v-rovnici-vedeni-tepla">1.6. Změna směru osy v rovnici vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajove-podminky-pro-rovnici-vedeni-tepla">1.7. Okrajové podmínky pro rovnici vedení tepla</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="parcialni-derivace">
+<h1><span class="section-number">1. </span>Parciální derivace<a class="headerlink" href="#parcialni-derivace" title="Link to this heading">#</a></h1>
+<div class="admonition-anotace admonition">
+<p class="admonition-title">Anotace.</p>
+<ul class="simple">
+<li><p>V úvodu si osaháme vzorce pro derivování.</p></li>
+<li><p>Poté si na poměrně jednoduše představitelném příkladě reálně používaného vzorce pro pocitovou teplotu naformulujeme slovní interpretaci derivace.</p></li>
+<li><p>V dalších dvou příkladech si vyzkoušíme numerické derivování. Pokud Vám to však bude připadat jako naivní počítání pomocí trojčlenky a selské logiky, gratuluji. Nic jiného to totiž vlastně není, jenom je to teď pevněji uchopeno pro případné použití v matematických modelech.</p></li>
+<li><p>Základním modelem postaveným na parciálních derivacích je rovnice vedení tepla v jedné dimenzi. V tomto případě spád teploty podél jednorozměrné tyče vyvolá tok tepla. Změny v toku tepla v různých místech tyče zase určují, jestli se mezi těmito průřezy teplo kumuluje, ubývá, či zachovává. Tento fakt ovlivní teplotu v daném místě a ta zase má vliv na spád teploty podél tyče. Tím se uzavře jakási zpětná vazba řídící celý proces. Situace je dostatečně jednoduchá na představu, ideální pro popis pomocí parciálních derivací a současně dostatečně obecná, aby se později dala zobecnit je libovolný transportní děj přenášející energii nebo hmotu. Abychom formulaci co nejlépe porozuměli a za možná děsivě vyhlížejícími symboly viděli opravdu vyjádření používaná v tomto odstavci, ještě jednou si rovnici tepla rozebereme. Ať již z hlediska slovní interpretace jednotlivých členů, či z hlediska formulace okrajových podmínek pro zachycení vlivu okolního prostředí.</p></li>
+</ul>
+</div>
+<section id="vypocet-pomoci-vzorcu">
+<h2><span class="section-number">1.1. </span>Výpočet pomocí vzorců<a class="headerlink" href="#vypocet-pomoci-vzorcu" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/KykczBw2Kcg">Video</a></p>
+<p>Vypočtěte následující parciální derivace.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial x}(x^2y+2xy^3+x+1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial y}(x^2y+2xy^3+x+1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial x}(3x(3-x-2y))\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial y}(3x(3-x-2y))\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial x}\sqrt{1-x^2-y^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial y}\sqrt{1-x^2-y^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial x}\frac x{x^2+y^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial y}\frac x{x^2+y^2}\)</span></p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial x}(x^2y+2xy^3+x+1)=2x\cdot y+2y^3+1+0=2xy+2y^3+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial y}(x^2y+2xy^3+x+1)=x^2+2x\cdot 3y^2+0+0=x^2+6xy\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial x}(3x(3-x-2y))=\pdv x (9x-3x^2-6xy)=9-3\cdot 2x-6\cdot 1\cdot y=9-6x-6y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial }{\partial y}(3x(3-x-2y))=3x\frac{\partial }{\partial y}(3-x-2y)=3x(-2)=-6x\)</span> (pozor, ve videu je u tohoto příkladu překlep a zapomněl jsem derivovat člen <span class="math notranslate nohighlight">\(\displaystyle 2y\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \pdv {x} \sqrt{1-x^2-y^2}=\pdv {x} (1-x^2-y^2)^{\frac 12}=\frac 12 (1-x^2-y^2)^{-\frac 12} (0-2x-0)=  -\frac {x}{\sqrt{1-x^2-y^2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \pdv {y} \sqrt{1-x^2-y^2}= -\frac {y} {\sqrt{1-x^2-y^2}}\)</span> (z předchozího výpočtu a symetrie)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \pdv {x} \frac x{x^2+y^2}=\frac{1(x^2+y^2)-x(2x+0)}{(x^2+y^2)^2}=\frac{y^2-x^2}{(x^2+y^2)^2}\)</span> (derivace podílu)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \pdv{y} \frac x{x^2+y^2}=\pdv {y} x(x^2+y^2)^{-1}=x(-1)(x^2+y^2)^{-2}(0+2y)=-\frac{2xy}{(x^2+y^2)^2}\)</span> (derivace konstantního násobku mocninné funkce s vnitřní složkou)</p></li>
+</ol>
+</section>
+</div><a onclick=otevrit("problems/parcialni_derivace/parcialni_derivace.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/parcialni_derivace/parcialni_derivace_s_parametrem.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/parcialni_derivace/parcialni_derivace_druheho_radu.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+</section>
+<section id="parcialni-derivace-pocitova-teplota-analyticky">
+<h2><span class="section-number">1.2. </span>Parciální derivace, pocitová teplota analyticky<a class="headerlink" href="#parcialni-derivace-pocitova-teplota-analyticky" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/VdtIj5TGBZE">Video</a></p>
+
+<figure class="align-default" id="id1">
+<img alt="../_images/blizzard.jpg" src="../_images/blizzard.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 1.16 </span><span class="caption-text">Zdroj: pixabay.com</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+
+<p>Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento odjakživa známý efekt byl v roce 2001 proměřen a původní vzorec z roku 1961 byl nahrazen vzorcem
+<div class="math notranslate nohighlight">
+\[
+W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
+\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle W\)</span> a <span class="math notranslate nohighlight">\(\displaystyle T\)</span> jsou pocitová teplota a naměřená teplota
+(obě ve stupních Celsia) a <span class="math notranslate nohighlight">\(\displaystyle v\)</span> je rychlost větru (v km/hod).</p>
+<p>Uvažujte situaci, kdy teplota je <span class="math notranslate nohighlight">\(\displaystyle -11.0\,{}^\circ\!\text{C}\)</span>  a rychlost větru <span class="math notranslate nohighlight">\(\displaystyle 26
+\,\text{km/hod}\)</span>.</p>
+<p>Určete parciální derivace pocitové teploty podle skutečné teploty a podle rychlosti větru (včetně jednotky) a výsledky interpretujte slovně.</p>
+<p><em>Další informace: Wikipedia a Wind chill.</em></p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Dosazením do vzorce dostáváme <span class="math notranslate nohighlight">\(\displaystyle W(-11,26)=-20.212\,{}^\circ\!\text{C}\)</span>. Derivováním dostáváme
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}\frac{\partial W}{\partial T}(T,v)&amp;=0.6215+0.3965 v^{0.16},\\
+\frac{\partial W}{\partial v}(T,v)&amp;=-11.37\times 0.16 v^{-0.84}+0.3965 \times 0.16 Tv^{-0.84}
+\end{aligned}
+\end{split}\]</div>
+
+a po dosazení
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}\frac{\partial W}{\partial T}(-11,26)&amp;=1.289,\\
+\frac{\partial W}{\partial v}(-11,26)&amp;=-0.163 \,{}^\circ\!\text{C}\, /(\mathrm{km}\, \text{hod}^{-1})=-0.163 \,{}^\circ\!\text{C}\, \text{hod} \,\mathrm{km}^{-1}.
+\end{aligned}
+\end{split}\]</div>
+
+Za dané teploty a rychlosti větru je pocitová teplota <span class="math notranslate nohighlight">\(\displaystyle -20.2\)</span> stupňů
+Celsia. Nárůst teploty o jeden stupeň způsobí nárůst pocitové teploty
+přibližně o <span class="math notranslate nohighlight">\(\displaystyle 1.3\)</span> stupně. Tedy změna teploty se projeví na pocitové
+teplotě <span class="math notranslate nohighlight">\(\displaystyle 1.3\)</span>-násobkem. K každou změnu teploty vnímáme o třicet procent
+intenzivněji.</p>
+<p>Hodnota derivace podle rychlosti větru říká, že zesílení větru o jeden kilometr za hodinu způsobí snížení
+pocitové teploty přibližně o <span class="math notranslate nohighlight">\(\displaystyle 0.16\)</span> stupně.</p>
+</section>
+</div></section>
+<section id="pocitova-teplota-numericky">
+<h2><span class="section-number">1.3. </span>Pocitová teplota numericky<a class="headerlink" href="#pocitova-teplota-numericky" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/J0pTAxDwZj8">Video</a></p>
+<figure class="align-default">
+<img alt="../_images/air-temperature.jpg" src="../_images/air-temperature.jpg" />
+</figure>
+<p>Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minulého příkladu pomocí výše uvedeného vzorce, ale má tabulku jako je na obrázku. Nám tato tabulka poslouží jako model funkce dvou proměnných zadané funkčními hodnotami v konečném počtu bodů.</p>
+<ol class="arabic simple">
+<li><p>Vypočtěte pomocí centrální diference parciální derivaci
+<span class="math notranslate nohighlight">\(\displaystyle \frac {\partial W}{\partial v}\)</span> pro teplotu <span class="math notranslate nohighlight">\(\displaystyle -15^\circ\mathrm C\)</span> a rychlost větru <span class="math notranslate nohighlight">\(\displaystyle 40\,\mathrm{km}\,\mathrm{hod}^{-1}\)</span> a interpretujte výsledek slovně.</p></li>
+<li><p>Pocitová teplota <span class="math notranslate nohighlight">\(\displaystyle W\)</span> je lineární v proměnné <span class="math notranslate nohighlight">\(\displaystyle T\)</span>. Proto derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial W}{\partial T}\)</span> nezávisí na <span class="math notranslate nohighlight">\(\displaystyle T\)</span>. Jak se tato skutečnost
+odrazí v tabulce?</p></li>
+<li><p>Odhadněte z tabulky, zda vliv větru klesá nebo roste s rychlostí větru. Potvrďte svou hypotézu analytickým výpočtem parciální derivace <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial W}{\partial v}\)</span> a vysvětlete fyzikálně.</p></li>
+</ol>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<ol class="arabic simple">
+<li><p><div class="math notranslate nohighlight">
+\[\frac {\partial W}{\partial v}(T=-15,v=40)\approx\frac{-29-(-26)}{50-30}\frac{{}^\circ \mathrm C}{\mathrm{km}\,\mathrm{hod}^{-1}}=-0.15^\circ \mathrm C/(\mathrm{km}\,\mathrm{hod}^{-1})\]</div>
+  Za podmínek, kde je <span class="math notranslate nohighlight">\(\displaystyle 15\)</span> stupňů pod nulou a vane vítr o rychlosti <span class="math notranslate nohighlight">\(\displaystyle 40\)</span> kilometrů za hodinu každé další zesílení větru o kilometr za hodinu sníží pocitovou teplotu přibližně o patnáct setin stupně.</p></li>
+<li><p>Neformálně: V rámci každého řádku jsou stejně velké   skoky. Přesněji: V každém řádku je přibližně aritmetická   posloupnost, data se mění odečtením pevné konstanty. Případné  fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.</p></li>
+<li><p>Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciální derivace podle rychlosti větru s rostoucí rychlostí větru v absolutní hodnotě klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivování změní na  zápornou mocninu. Tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.</p></li>
+</ol>
+</section>
+</div></section>
+<section id="parcialni-derivace-tepelna-kapacita-dreva-volitelne">
+<h2><span class="section-number">1.4. </span>Parciální derivace, tepelná kapacita dřeva (volitelně)<a class="headerlink" href="#parcialni-derivace-tepelna-kapacita-dreva-volitelne" title="Link to this heading">#</a></h2>
+<p><em>Tato úloha je velmi podobná úloze předchozí, jenom používá tabulku s kroky, které nejsou ekvidistantní a proto je nutné použít něco jiného, než centrální diferenci.</em></p>
+<p><a href="https://youtu.be/PjPYisnQa0A">Video</a></p>
+<figure class="align-default" id="id2">
+<img alt="../_images/wood_heat_capacity.png" src="../_images/wood_heat_capacity.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 1.17 </span><span class="caption-text">Zdroj: Wood handbook</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Vypočtěte a slovně interpretujte parciální derivaci měrné tepelné kapacity dřeva <span class="math notranslate nohighlight">\(\displaystyle c\)</span> podle teploty <span class="math notranslate nohighlight">\(\displaystyle T\)</span> a podle obsahu vody MC <span class="math notranslate nohighlight">\(\displaystyle w\)</span> v bodě o hodnotě MC 12% a teplotě <span class="math notranslate nohighlight">\(\displaystyle 27^\circ\mathrm C\)</span>.</p>
+<p>Pro obě derivace použijte dopřednou diferenci (v tabulce nejsou ekvidistantní kroky MC).</p>
+<p><em>Poznámka:</em> Kromě dopředné diference je možné uvažovat ještě zpětnou diferenci definovanou vztahem <div class="math notranslate nohighlight">
+\[\frac{f(x)-f(x-h)}{h},\]</div>
+ což je vlastně dopředná diference na předchozím intervalu. Ukažte, že centrální diference je průměrem dopředné a zpětné diference.</p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\pdv{c}{T}=\frac{1.8-1.7}{47-27}=0.005 \,\mathrm{kJ}\,\mathrm{kg}^{-1}\mathrm{K}^{-2}=5 \,\mathrm{J}\,\mathrm{kg}^{-1}\mathrm{K}^{-2}\]</div>
+<p>Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané teploty a vlhkosti při zvýšení teploty o jeden stupeň Celsia (o jeden Kelvin).</p>
+<div class="math notranslate nohighlight">
+\[\pdv{c}{w}=\frac{1.9-1.7}{20-12}=0.025 \,\mathrm{kJ}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}=25 \,\mathrm{J}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}\]</div>
+<p>Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané teploty a vlhkosti při zvýšení obsahu vody o jedno procento.</p>
+<p>Průměr dopředné a zpětné diference:
+<div class="math notranslate nohighlight">
+\[
+  \frac{\frac{f(x)-f(x-h)}{h} + \frac{f(x+h)-f(x)}{h}}{2}=  \frac{\frac{f(x)-f(x-h)+f(x+h)-f(x)}{h}}{2}=\frac{f(x+h)-f(x-h)}{2h}
+\]</div>
+</p>
+</section>
+</div></section>
+<section id="veliciny-z-rovnice-vedeni-tepla">
+<h2><span class="section-number">1.5. </span>Veličiny z rovnice vedení tepla<a class="headerlink" href="#veliciny-z-rovnice-vedeni-tepla" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/YvAFRS8zeos">Video</a></p>
+<p>V případech, kdy je při tepelné výměně nutno uvažovat vedení tepla (vysoké Biotovo číslo), modelujeme změnu teploty podle rovnice vedení tepla, kterou jsme na přednášce odvodili pro jednorozměrný případ ve tvaru
+<div class="math notranslate nohighlight">
+\[\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).\]</div>
+  Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně. <strong>Důležitou vlastností rovnice je, že je stále stejná, ať teplo teče doleva nebo doprava, ať způsobuje ohřev nebo ochlazování, ať tok tepla sílí nebo slábne. Tyto skutečnosti přirozeně rozlišujeme znaménkem. Abychom dokázali úlohu správně zadat nebo abychom dokázali správně interpretovat řešení, je nutné znaménka správně interpretovat a proto si vše ukážeme v následujícím příkladu.</strong></p>
+<p>Uvažujme jednorozměrnou úlohu s vedením tepla. Osa <span class="math notranslate nohighlight">\(\displaystyle x\)</span> směřuje doprava, teplota v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span> je <span class="math notranslate nohighlight">\(\displaystyle T(x,t)\)</span> ve stupních Celsia. Tok tepla v čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> je <span class="math notranslate nohighlight">\(\displaystyle q(x,t)\)</span> v joulech za sekundu (tj ve wattech). Kladný tok je ve směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>.
+Podle Fourierova zákona je <div class="math notranslate nohighlight">
+\[q=-\lambda \frac{\partial T}{\partial x}.\]</div>
+</p>
+<p>Tyč má teplotu <span class="math notranslate nohighlight">\(\displaystyle 0\,^{\circ}\mathrm{C}\)</span>, pravý konec udržujeme na této teplotě, levý konec ohříváme na <span class="math notranslate nohighlight">\(\displaystyle 20\,^{\circ}\mathrm{C}\)</span> a udržujeme na této teplotě. Ve zbytku tyče (stěny) se postupně nastolí rovnováha vlivem vedení tepla.</p>
+<p>Vyjádřete následující veličiny a určete jejich znaménko.</p>
+<ol class="arabic simple">
+<li><p>Rychlost, s jakou v daném místě a čase roste teplota jako funkce času.</p></li>
+<li><p>Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle  roste teplota směrem doprava.</p></li>
+<li><p>Rychlost, s jakou klesá teplota jako funkce polohy, tj. směrem doprava.</p></li>
+<li><p>Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy.</p></li>
+<li><p>Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy.</p></li>
+</ol>
+<p><em>Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá.</em></p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<ol class="arabic simple">
+<li><p>Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je <span class="math notranslate nohighlight">\(\displaystyle \frac {\partial T}{\partial t}\)</span> a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních celsia za sekundu.
+<span class="math notranslate nohighlight">\(\displaystyle \left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}\)</span></p></li>
+<li><p>Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je <span class="math notranslate nohighlight">\(\displaystyle \frac {\partial T}{\partial x}\)</span> a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních celsia na metr.
+<span class="math notranslate nohighlight">\(\displaystyle \left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}\)</span></p></li>
+<li><p>Rychlost, jak rychle se klesá teplota jako funkce polohy, tj. směrem doprava, je <span class="math notranslate nohighlight">\(\displaystyle -\frac {\partial T}{\partial x}\)</span> a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních celsia na metr.
+<span class="math notranslate nohighlight">\(\displaystyle \left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}\)</span></p></li>
+<li><p>Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy je <span class="math notranslate nohighlight">\(\displaystyle \frac {\partial q}{\partial x}\)</span>. Teplo teče doprava a přitom se spotřebovává, protože se ohřívá tyč. Proto tok klesá a parciální derivace je záporná.
+Měříme v joulech za sekundu na metr (tj. ve wattech na metr).
+<span class="math notranslate nohighlight">\(\displaystyle \left[\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}\)</span></p></li>
+<li><p>Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je <span class="math notranslate nohighlight">\(\displaystyle -\frac {\partial q}{\partial x}\)</span> a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko.
+Měříme v joulech za sekundu na metr (tj. ve wattech na metr).
+<span class="math notranslate nohighlight">\(\displaystyle \left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}\)</span> Tato veličina udává, kolik tepla se za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže ``ztratit‘‘, ale použije se na zvýšení teploty, což je vyjádřeno právě v rovnici vedení tepla.</p></li>
+</ol>
+</section>
+</div></section>
+<section id="zmena-smeru-osy-v-rovnici-vedeni-tepla">
+<h2><span class="section-number">1.6. </span>Změna směru osy v rovnici vedení tepla<a class="headerlink" href="#zmena-smeru-osy-v-rovnici-vedeni-tepla" title="Link to this heading">#</a></h2>
+<p>Při studiu praktických úloh je vhodné si uvědomit, které výrazy závisí na volbě souřadné soustavy a které jsou invariantní při změně soustavy, ve které úlohu popisujeme.</p>
+<p>Teplota je dána vztahem <div class="math notranslate nohighlight">
+\[T(x,t)=x^3-2x^2+3xt.\]</div>
+ Zavedeme novou proměnnou <span class="math notranslate nohighlight">\(\displaystyle x'=-x\)</span>. V místě <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span> a v čase <span class="math notranslate nohighlight">\(\displaystyle t=1\)</span> mějme bod <span class="math notranslate nohighlight">\(\displaystyle P\)</span>. Porovnejte parciální derivace podle <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x'\)</span> a i všechny další komponenty z rovnice vedení tepla vyjádřené jednou v souřadnicích <span class="math notranslate nohighlight">\(\displaystyle (x,t)\)</span> a jednou <span class="math notranslate nohighlight">\(\displaystyle (x',t)\)</span>. Volte <span class="math notranslate nohighlight">\(\displaystyle k=1\)</span>.</p>
+<div class="proof example dropdown admonition" id="example-5">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>(1) Souřadnice <span class="math notranslate nohighlight">\(\displaystyle x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle t\)</span></p>
+<p>Platí <div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial t}=3x\]</div>
+ a <div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial x}=3x^2-4x+3t.\]</div>
+
+Odsud <div class="math notranslate nohighlight">
+\[q=-k\frac{\partial T}{\partial x}=-3x^2+4x-3t\]</div>
+
+a <div class="math notranslate nohighlight">
+\[\frac{\partial q}{\partial x}=\frac{\partial }{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=-6x+4\]</div>
+
+V bodě <span class="math notranslate nohighlight">\(\displaystyle P\)</span> dosazujeme <span class="math notranslate nohighlight">\(\displaystyle x=1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle t=1\)</span> a tedy <span class="math notranslate nohighlight">\(\displaystyle T=2\)</span>,
+<span class="math notranslate nohighlight">\(\displaystyle \frac{\partial T}{\partial t}(P)=3\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial T}{\partial x}(P)=2\)</span>, <span class="math notranslate nohighlight">\(\displaystyle q(P)=-2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial q}{\partial x}(P)=-2\)</span></p>
+<p>(2) Souřadnice <span class="math notranslate nohighlight">\(\displaystyle x'\)</span> a <span class="math notranslate nohighlight">\(\displaystyle t\)</span></p>
+<p>V bodě <span class="math notranslate nohighlight">\(\displaystyle P\)</span> platí <span class="math notranslate nohighlight">\(\displaystyle x'=-x=-1\)</span>. Teplota v čárkované soustavě je <span class="math notranslate nohighlight">\(\displaystyle T(x,t)=T(-x',t)=-x^{\prime 3}-2x^{\prime 2}-3x't\)</span>. Odsud
+<div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial t}=-3x'\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial x'}=-3x^{\prime 2}-4x'-3t.\]</div>
+
+Odsud
+<div class="math notranslate nohighlight">
+\[q=-k\frac{\partial T}{\partial x'}=3x^{\prime 2}+4x'+3t\]</div>
+
+a <div class="math notranslate nohighlight">
+\[\frac{\partial q}{\partial x'}=\frac{\partial }{\partial x'}\left(-k\frac{\partial T}{\partial x'}\right)=6x'+4\]</div>
+
+V bodě <span class="math notranslate nohighlight">\(\displaystyle P\)</span> dosazujeme <span class="math notranslate nohighlight">\(\displaystyle x'=-1\)</span> a <span class="math notranslate nohighlight">\(\displaystyle t=1\)</span> a tedy <span class="math notranslate nohighlight">\(\displaystyle T=2\)</span>,
+<span class="math notranslate nohighlight">\(\displaystyle \frac{\partial T}{\partial t}(P)=3\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial T}{\partial x'}(P)=-2\)</span>, <span class="math notranslate nohighlight">\(\displaystyle q(P)=2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial q}{\partial x'}(P)=-2\)</span></p>
+<p><strong>Závěr:</strong> Derivace teploty podle času a derivace toku podle prostorové souřadnice se nezměnila. Derivace teploty podle prostorové souřadnice a tok změnily znaménko.</p>
+</section>
+</div></section>
+<section id="okrajove-podminky-pro-rovnici-vedeni-tepla">
+<h2><span class="section-number">1.7. </span>Okrajové podmínky pro rovnici vedení tepla<a class="headerlink" href="#okrajove-podminky-pro-rovnici-vedeni-tepla" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/8OMwzxEZSvU">Video</a></p>
+<p>K modelu stěny pomocí rovnice vedení tepla je ještě nutné přidat podmínky související s počátečním stavem (počáteční podmínky) a s chováním na okrajích (okrajové podmínky).</p>
+<p>Nechť stěna je na intervalu <span class="math notranslate nohighlight">\(\displaystyle x\in[0,L]\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> je vnitřní okraj a <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> je vnější okraj. Výraz <span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}\)</span> udává tok tepla ve směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Tok ve směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span> má kladné znaménko. Naformulujte okrajové podmínky v následujících scénářích.</p>
+<ol class="arabic simple">
+<li><p>Z venku dokonale izolovaná stěna. Na hranici <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> nedochází k toku tepla.</p></li>
+<li><p>Vnitřní část stěny je udržovaná na konstantní teplotě <span class="math notranslate nohighlight">\(\displaystyle T=23^\circ \mathrm C\)</span>.</p></li>
+<li><p>Stěna je zvenku osvětlená a zahřívaná Sluncem. Na vnější hranici je konstantní tok tepla směrem do stěny.</p></li>
+<li><p>Stěna je zvenku ochlazována prouděním vzduchu. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.</p></li>
+<li><p>Stěna je zevnitř ohřívána prouděním vzduchu od radiátorů. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.</p></li>
+</ol>
+<p><em>Zpracováno podle Cengel: Mass and heat transfer.</em></p>
+<p><em>Opět úloha jednoduchá co není na počítání, ale jenom na ujasnění si toho, jak dodáme do modelu informaci o tom, jakým podmínkám je náš studovaný systém vystaven. I toto je nutné znát při zadávání modelů do numerických simulací. I zde platí, že výpočet za člověka udělají počítače, ale kontrolu, že je model relevantní a modeluje opravdu to co chceme, za člověka nikdo neudělá.</em></p>
+<div class="proof example dropdown admonition" id="example-6">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Je-li podmínka na teplotu, figuruje v matematické formulaci <span class="math notranslate nohighlight">\(\displaystyle T\)</span> vypočtená v bodě <span class="math notranslate nohighlight">\(\displaystyle x=0\)</span> nebo <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> podle toho, jedná-li se o vnitřní nebo vnější část stěny.
+<span class="math notranslate nohighlight">\(\displaystyle T\)</span> je funkce polohy, tj. <span class="math notranslate nohighlight">\(\displaystyle T=T(x).\)</span> Je-li podmínka na tok, figuruje v matematické formulaci tok ve tvaru <span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}\)</span>, opět vypočtená v jednom z krajních bodů.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle T(0)=23\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=-Q\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle Q\)</span> je teplo za jednotku času dodané ze Slunce. Jedná se výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=h(T(L)-T_{\text{okolí}})\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je koeficient přestupu tepla.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle -k\frac{\partial T}{\partial x}(0)=h(T_{\text{místnost}}-T(0))\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle h\)</span> je koeficient přestupu tepla.</p></li>
+</ol>
+<p>Všimněte si, že poslední dvě podmínky se liší znaménkem u veličiny <span class="math notranslate nohighlight">\(\displaystyle T\)</span>. To proto, že v jednom případě je kladný směr toku tepla do materiálu a jednou z materiálu. Pokud chceme mít popis jednotný, nebo nezávislý na zvolené souřadné soustavě, formulujeme podmínky pro tok tepla ven z materiálu. Tento tok získáme tak, že tok tepla vynásobíme skalárně s jednotkovým vektorem směřujícím ven z materiálu kolmo na jeho povrch. V tomto případě by pro tok ze stěny do místnosti bylo <span class="math notranslate nohighlight">\(\displaystyle k\frac{\partial T}{\partial x}(0)=h(T-T_{\text{místnost}})\)</span>. Tento tok by byl záporný, protože ve skutečnosti teplo uniká z místnosti stěnou ven.</p>
+</section>
+</div></section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../11/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Lineární diferenciální rovnice druhého řádu</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni02.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Gradient</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vypocet-pomoci-vzorcu">1.1. Výpočet pomocí vzorců</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parcialni-derivace-pocitova-teplota-analyticky">1.2. Parciální derivace, pocitová teplota analyticky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pocitova-teplota-numericky">1.3. Pocitová teplota numericky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parcialni-derivace-tepelna-kapacita-dreva-volitelne">1.4. Parciální derivace, tepelná kapacita dřeva (volitelně)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veliciny-z-rovnice-vedeni-tepla">1.5. Veličiny z rovnice vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zmena-smeru-osy-v-rovnici-vedeni-tepla">1.6. Změna směru osy v rovnici vedení tepla</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#okrajove-podminky-pro-rovnici-vedeni-tepla">1.7. Okrajové podmínky pro rovnici vedení tepla</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 20.02.2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

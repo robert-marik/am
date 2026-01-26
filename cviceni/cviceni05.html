@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2023-02-25T13:09:06+01:00" />
+    <title>5. Křivkové integrály &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=22e1c300"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cviceni/cviceni05';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="6. Dvojné integrály" href="cviceni06.html" />
+    <link rel="prev" title="4. Rotace, kmenová funkce gradientu" href="cviceni04.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="25.02.2023"/>
+  </head>
+  
+  
+  <body class="cviceni" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Křivkové integrály</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu-po-trech-ruznych-krivkach">5.1. Křivkový integrál druhého druhu po třech různých křivkách</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu-po-parabole">5.2. Křivkový integrál druhého druhu po parabole</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu-po-kubicke-parabole">5.3. Křivkový integrál druhého druhu po kubické parabole</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tok-vektoroveho-pole-uzavrenou-krivkou">5.4. Tok vektorového pole uzavřenou křivkou</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tok-vektoroveho-pole-uzavrenou-krivkou-ii">5.5. Tok vektorového pole uzavřenou křivkou II</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-a-tok-graficky">5.6. Křivkový integrál a tok graficky</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral">5.6.1. Křivkový integrál</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tok">5.6.2. Tok</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="krivkove-integraly">
+<h1><span class="section-number">5. </span>Křivkové integrály<a class="headerlink" href="#krivkove-integraly" title="Link to this heading">#</a></h1>
+<div class="admonition-anotace admonition">
+<p class="admonition-title">Anotace.</p>
+<ul class="simple">
+<li><p>V úvodu si ukážeme vektorové pole, kde výpočet po třech různých křivkách mezi stejnými body, vede ke třem různým výsledkům.</p></li>
+<li><p>Poté zkusíme vypočítat bez bližšího kontextu několik křivkových integrálů pro pro získání určité míry jistoty při práci s tímto integrálem.</p></li>
+<li><p>Poté se zaměříme tok vektorového pole křivkou a ukážeme si souvislost výsledného toku s grafickým znázorněním situace.</p></li>
+<li><p>Odhadu křivkového integrálu a toku křivkou se budeme věnovat v posledním příkladě. Naučíme se, čeho si všímat, když chceme zjistit, zda je výsledný integrál nebo tok kladný nebo záporný.</p></li>
+</ul>
+</div>
+<section id="krivkovy-integral-druheho-druhu-po-trech-ruznych-krivkach">
+<h2><span class="section-number">5.1. </span>Křivkový integrál druhého druhu po třech různých křivkách<a class="headerlink" href="#krivkovy-integral-druheho-druhu-po-trech-ruznych-krivkach" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/i-y8bRLmopE">Video</a></p>
+<p>Vypočtěte <div class="math notranslate nohighlight">
+\[\int_{C_i} \vec F \mathrm d\vec r\]</div>
+ pro vektorové pole <div class="math notranslate nohighlight">
+\[\vec F=-y\vec \imath + x\vec\jmath\]</div>
+ po třech různých křivkách <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_3\)</span>.
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  C_1&amp;\colon \vec r=\cos(t)\vec \imath + \sin (t)\vec\jmath, \quad t\in\qty[0,\frac\pi 2]\\
+  C_2&amp;\colon \vec r=(1-t)\vec \imath + t\vec\jmath, \quad t\in\qty[0,1]\\
+  C_3&amp;\colon \vec r=(1-t^2)\vec \imath + t\vec\jmath, \quad t\in\qty[0,1]
+\end{aligned}\end{split}\]</div>
+
+Tj. počítáme
+<div class="math notranslate nohighlight">
+\[\int_{C_i} -y\,\mathrm dx + x\,\mathrm dy\]</div>
+
+po třech zadaných křivkách <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle C_3\)</span>.</p>
+<div class="proof example dropdown admonition" id="example-0">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.</p>
+<p><strong>Křivka <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span>.</strong>
+Derivací křivky <span class="math notranslate nohighlight">\(\displaystyle \vec r=(\cos(t),\sin(t))\)</span> podle <span class="math notranslate nohighlight">\(\displaystyle t\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).\]</div>
+
+Rovnice vektorového pole podél křivky má tvar
+<div class="math notranslate nohighlight">
+\[\vec F(\vec r(t))=(-\sin t,\cos t).\]</div>
+
+Skalárním součinem dostáváme
+<div class="math notranslate nohighlight">
+\[\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-\sin t,\cos t)\cdot (-\sin (t),\cos (t)) = \sin^2 t+\cos^2 t =1.
+\]</div>
+
+Odsud formálně <div class="math notranslate nohighlight">
+\[\vec F\mathrm d\vec r=1\mathrm dt\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[\int_C\vec F\mathrm d\vec r=\int_0^{\frac \pi 2}1\,\mathrm dt=\frac \pi 2,\]</div>
+
+kde poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.</p>
+<p><strong>Křivka <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span>.</strong>
+Derivací křivky <span class="math notranslate nohighlight">\(\displaystyle \vec r=(1-t,t)\)</span> podle <span class="math notranslate nohighlight">\(\displaystyle t\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\vec r}{\mathrm dt}=(-1,1).\]</div>
+
+Rovnice vektorového pole podél křivky má tvar
+<div class="math notranslate nohighlight">
+\[\vec F(\vec r(t))=(-t,1-t).\]</div>
+
+Skalárním součinem dostáváme
+<div class="math notranslate nohighlight">
+\[\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-t,1- t)\cdot (-1,1) = (-t)(-1)+(1-t)\cdot 1 =1.
+\]</div>
+
+Odsud formálně <div class="math notranslate nohighlight">
+\[\vec F\mathrm d\vec r=1\mathrm dt\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[\int_C\vec F\mathrm d\vec r=\int_0^{1}1\,\mathrm dt=1,\]</div>
+
+kde ani v tomto případě poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.</p>
+<p><strong>Křivka <span class="math notranslate nohighlight">\(\displaystyle C_3\)</span>.</strong>
+Derivací křivky <span class="math notranslate nohighlight">\(\displaystyle \vec r=(1-t^2,t)\)</span> podle <span class="math notranslate nohighlight">\(\displaystyle t\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\vec r}{\mathrm dt}=(-2t,1).\]</div>
+
+Rovnice vektorového pole podél křivky má tvar
+<div class="math notranslate nohighlight">
+\[\vec F(\vec r(t))=(-t,1-t^2).\]</div>
+
+Skalárním součinem dostáváme
+<div class="math notranslate nohighlight">
+\[\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-t,1- t^2)\cdot (-2t,1) = (-t)(-2t)+(1-t^2)\cdot 1 =t^2+1.
+\]</div>
+
+Odsud formálně <div class="math notranslate nohighlight">
+\[\vec F\mathrm d\vec r=(t^2+1)\mathrm dt\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=\qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
+\]</div>
+</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/priklad_5_1_prace.png" src="../_images/priklad_5_1_prace.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.12 </span><span class="caption-text">Zdroj: vlastní</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Interpretace jako práce, srovnání.</strong></p>
+<p>Všechny křivky jsou z bodu <span class="math notranslate nohighlight">\(\displaystyle [1,0]\)</span> do bodu <span class="math notranslate nohighlight">\(\displaystyle [0,1]\)</span>. Nejblíže k počátku je úsečka <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span>, nejdále je čvrtkružnice <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span>, křivka <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> je mezi nimi.</p>
+<p>Integrál fyzikálně znamená práci vektorového pole <span class="math notranslate nohighlight">\(\displaystyle (-y,x)\)</span> po zadané křivce. Toto vektorové pole míří po kružnicích okolo počátku proti směru hodinových ručiček. Délka vektoru je rovna vzdálenosti od počátku.</p>
+<p>Křivka <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> je nejdále od počátku a vektorové pole je na ní nejsilnější. Navíc v každém bodě je síla ve směru křivky a proto se projeví ve výsledném příspěvku bez redukování. Díky tomu můžeme integrál po kružnici počítat stejně jako práci na přímce, tj. součinem délky  křivky <span class="math notranslate nohighlight">\(\displaystyle \frac \pi 2\)</span> a velikosti síly <span class="math notranslate nohighlight">\(\displaystyle |\vec F|=1\)</span>. Po dalších křivkách je síla menší (křivky jdou blíže ke středu) a navíc se neuplatní celá velikost síly, protože síla svírá s křivkou nenulový úhel a při práci se projeví pouze tečná komponenta.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/priklad_5_1.png" src="../_images/priklad_5_1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.13 </span><span class="caption-text">Zdroj: vlastní</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<!--
+%https://sagecell.sagemath.org/?z=eJx1kMFuwjAQRO-R8g8rgRRHMW3snH3iB3LgRmgUEkMNxo5sQ5u_r01SlbbhtCPN7hvN3hqDkiFJ40hcem0cqOulH-LIEXZXL1Io2zctRzkGhXrxSlNM8twfODqzQiZzTdh222qLRIqtUH7s4KANCBAKHNn5Deo3yEpg8ejQ4BSj80b_eyVhUlhX91I7tCYYgjhpoXjHNubKMUh-5KqrZbPnkplkua5J1WqpFSA_LThc2UBLl0laxVH2gKMzuHBqWGJ4l8yx6chGZOXwHLJ4jjwaztUstPiB-h_csXHku1MWWPWNt06b-iC47BD6xEOKwY8ckyCGSUwpe9m053Bv3_UHKklW-paN7T2jNo0TmpE7PI4WZTHHHzKK8zFhRb4jJvWriccsxpCsLP5mYHDCSe77bfQZei05LCsfBCc2JfiSX8c_x8Q=&lang=sage&interacts=eJyLjgUAARUAuQ==
+-->
+<p><strong>Interpretace jako tok, srovnání.</strong></p>
+<p>Všechny křivky jsou z bodu <span class="math notranslate nohighlight">\(\displaystyle [1,0]\)</span> do bodu <span class="math notranslate nohighlight">\(\displaystyle [0,1]\)</span>. Nejblíže k počátku je úsečka <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span>, nejdále je čvrtkružnice <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span>, část paraboly <span class="math notranslate nohighlight">\(\displaystyle C_2\)</span> je mezi nimi.</p>
+<p>Integrál fyzikálně znamená tok vektorového pole <span class="math notranslate nohighlight">\(\displaystyle (x,y)\)</span> křivkou. Toto vektorové pole míří směrem z počátku a zesiluje směrem od počátku, protože délka vektoru je rovna vzdálenosti od počátku.</p>
+<p>Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce <span class="math notranslate nohighlight">\(\displaystyle C_1\)</span> (kružnice) je tok v každém bodě kolmý ke křivce a stejně velký a proto je celkový tok snadné určit jako součin velikosti vektorového pole na křivce (<span class="math notranslate nohighlight">\(\displaystyle |\vec F|=1\)</span>) a délky křivky <span class="math notranslate nohighlight">\(\displaystyle \frac \pi 2\)</span>.</p>
+</section>
+</div></section>
+<section id="krivkovy-integral-druheho-druhu-po-parabole">
+<h2><span class="section-number">5.2. </span>Křivkový integrál druhého druhu po parabole<a class="headerlink" href="#krivkovy-integral-druheho-druhu-po-parabole" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/udS4xy2WIws">Video</a></p>
+<p>Vypočtěte <div class="math notranslate nohighlight">
+\[\int_{C} \vec F \mathrm d\vec r\]</div>
+ pro vektorové pole <div class="math notranslate nohighlight">
+\[\vec F=x^2\vec \imath + (x+y)\vec\jmath\]</div>
+ po části paraboly
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  C&amp;\colon \vec r=t\vec \imath + t^2\vec\jmath, \quad t\in\qty[0,1]
+\end{aligned}\]</div>
+
+tj. počítáme
+<div class="math notranslate nohighlight">
+\[\int_C x^2\,\mathrm dx + (x+y)\,\mathrm dy\]</div>
+
+po zadané křivce <span class="math notranslate nohighlight">\(\displaystyle C\)</span>.</p>
+<div class="proof example dropdown admonition" id="example-1">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.</p>
+<p>Derivací křivky <span class="math notranslate nohighlight">\(\displaystyle \vec r=(t,t^2)\)</span> podle <span class="math notranslate nohighlight">\(\displaystyle t\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\vec r}{\mathrm dt}=(1,2t).\]</div>
+
+Rovnice vektorového pole podél křivky má tvar
+<div class="math notranslate nohighlight">
+\[\vec F(\vec r(t))=(t^2,t+t^2).\]</div>
+
+Skalárním součinem dostáváme
+<div class="math notranslate nohighlight">
+\[\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(1,2t)\cdot (t^2,t+t^2) = 1\cdot t^2+2t\cdot(t+t^2)=3t^2+2t^3.
+\]</div>
+
+Odsud formálně <div class="math notranslate nohighlight">
+\[\vec F\mathrm d\vec r=(3t^2+2t^3)\mathrm dt\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt=\qty[t^3+\frac 12 t^4]_0^1=1+\frac 12 - 0 = \frac 32.\]</div>
+</p>
+</section>
+</div></section>
+<section id="krivkovy-integral-druheho-druhu-po-kubicke-parabole">
+<h2><span class="section-number">5.3. </span>Křivkový integrál druhého druhu po kubické parabole<a class="headerlink" href="#krivkovy-integral-druheho-druhu-po-kubicke-parabole" title="Link to this heading">#</a></h2>
+<p>Vypočtěte <div class="math notranslate nohighlight">
+\[\int_{C} \vec F \mathrm d\vec r\]</div>
+ pro vektorové pole <div class="math notranslate nohighlight">
+\[\vec F=2y\vec \imath + x^2y\vec\jmath\]</div>
+ po části kubické paraboly
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  C&amp;\colon \vec r=t\vec \imath + t^3\vec\jmath, \quad t\in\qty[0,1],
+\end{aligned}\]</div>
+
+tj. počítáme
+<div class="math notranslate nohighlight">
+\[\int_C 2y\,\mathrm dx + x^2y\,\mathrm dy\]</div>
+
+po zadané křivce <span class="math notranslate nohighlight">\(\displaystyle C\)</span>.</p>
+<div class="proof example dropdown admonition" id="example-2">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.</p>
+<p>Derivací křivky <span class="math notranslate nohighlight">\(\displaystyle \vec r=(t,t^3)\)</span> podle <span class="math notranslate nohighlight">\(\displaystyle t\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\vec r}{\mathrm dt}=(1,3t^2).\]</div>
+
+Rovnice vektorového pole podél křivky má tvar
+<div class="math notranslate nohighlight">
+\[\vec F(\vec r(t))=(2t^3,t^2t^3)=(2t^3,t^5).\]</div>
+
+Skalárním součinem dostáváme
+<div class="math notranslate nohighlight">
+\[\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(1,3t^2)\cdot (2t^3,t^5) = 1\cdot 2t^3+3t^2\cdot t^5=2t^3+3t^7.
+\]</div>
+
+Odsud formálně <div class="math notranslate nohighlight">
+\[\vec F\mathrm d\vec r=(2t^3+3t^7)\mathrm dt\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt=\qty[\frac 12 t^4 + \frac 38 t^8]_0^1=\frac 12 +\frac 38 - 0 = \frac 78.\]</div>
+</p>
+</section>
+</div><a onclick=otevrit("problems/krivkovy_integral/09.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/krivkovy_integral/10.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+</section>
+<section id="tok-vektoroveho-pole-uzavrenou-krivkou">
+<h2><span class="section-number">5.4. </span>Tok vektorového pole uzavřenou křivkou<a class="headerlink" href="#tok-vektoroveho-pole-uzavrenou-krivkou" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/nqbi-7hwcD4">Video</a></p>
+<figure class="align-default" id="id3">
+<img alt="../_images/priklad_5_4.png" src="../_images/priklad_5_4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.14 </span><span class="caption-text">Zdroj: vlastní</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Vypočtěte tok vektorového pole <div class="math notranslate nohighlight">
+\[\vec \Phi_1=(x+2)\vec\imath\]</div>
+ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. <div class="math notranslate nohighlight">
+\[C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].\]</div>
+</p>
+<p><strong>Návod:</strong> Platí <div class="math notranslate nohighlight">
+\[\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi\]</div>
+
+a tento integrál je možno najít například grafickou cestou.</p>
+<div class="proof example dropdown admonition" id="example-3">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Vektorové pole teče směrem doprava a směrem doprava i zesiluje. Dá se čekat, že tok ven pravou polovinou kružnice bude větší než tok dovnitř levou polovinou kružnice a celkový tok bude nenulový.</p>
+<p>Vektorové pole je <div class="math notranslate nohighlight">
+\[\vec \Phi_1=(x+2,0)\]</div>
+ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole <div class="math notranslate nohighlight">
+\[\vec F=(0,x+2).\]</div>
+
+Vskutku, tok vektorového pole zadaného v komponentách <span class="math notranslate nohighlight">\(\displaystyle \Phi_1=(P,Q)\)</span> je vyjádřen integrálem druhého druhu vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec F=(-Q,P)\)</span> a v našem případě je <span class="math notranslate nohighlight">\(\displaystyle P=x+2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle Q=0\)</span>. Derivací rovnice křivky obdržíme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).\]</div>
+
+Rovnice vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> podél křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> má tvar
+<div class="math notranslate nohighlight">
+\[\vec F(\vec r(t))=(0,2+\cos t).\]</div>
+
+Skalárním součinem dostáváme
+<div class="math notranslate nohighlight">
+\[\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-\sin t,\cos t)\cdot (0,2+\cos (t)) = 2\cos t+\cos^2 t .
+\]</div>
+
+Odsud formálně <div class="math notranslate nohighlight">
+\[\vec F\mathrm d\vec r=(2\cos t+\cos^2 t)\mathrm dt\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos^2 t)\,\mathrm dt= \pi ,\]</div>
+
+kde poslední Riemannův integrál není nutné počítat, protože integrál z první části je nulový díky geometrické interpretaci integrálu a periodicitě funkce <span class="math notranslate nohighlight">\(\displaystyle \cos t\)</span> a integrál z druhého sčítance byl součástí zadání.</p>
+</section>
+</div></section>
+<section id="tok-vektoroveho-pole-uzavrenou-krivkou-ii">
+<h2><span class="section-number">5.5. </span>Tok vektorového pole uzavřenou křivkou II<a class="headerlink" href="#tok-vektoroveho-pole-uzavrenou-krivkou-ii" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id4">
+<img alt="../_images/priklad_5_5.png" src="../_images/priklad_5_5.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5.15 </span><span class="caption-text">Zdroj: vlastní</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Vypočtěte tok vektorového pole <div class="math notranslate nohighlight">
+\[\vec \Phi_2=(y+2)\vec\imath\]</div>
+ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. <div class="math notranslate nohighlight">
+\[C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].\]</div>
+</p>
+<p><strong>Návod:</strong> Platí <div class="math notranslate nohighlight">
+\[\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0.\]</div>
+</p>
+<div class="proof example dropdown admonition" id="example-4">
+<p class="admonition-title">Řešení</p>
+<section class="example-content" id="proof-content">
+<p>Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každé výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.</p>
+<p>Vektorové pole je <div class="math notranslate nohighlight">
+\[\vec \Phi_2=(y+2,0)\]</div>
+ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole <div class="math notranslate nohighlight">
+\[\vec F=(0,y+2).\]</div>
+
+Vskutku, tok vektorového pole zadaného v komponentách <span class="math notranslate nohighlight">\(\displaystyle \Phi_2=(P,Q)\)</span> je vyjádřen integrálem druhého druhu vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec F=(-Q,P)\)</span> a v našem případě je <span class="math notranslate nohighlight">\(\displaystyle P=y+2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle Q=0\)</span>. Derivací rovnice křivky obdržíme
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).\]</div>
+
+Rovnice vektorového pole <span class="math notranslate nohighlight">\(\displaystyle \vec F\)</span> podél křivky <span class="math notranslate nohighlight">\(\displaystyle C\)</span> má tvar
+<div class="math notranslate nohighlight">
+\[\vec F(\vec r(t))=(0,2+\sin t).\]</div>
+
+Skalárním součinem dostáváme
+<div class="math notranslate nohighlight">
+\[\vec F \frac{\mathrm d\vec r}{\mathrm dt}=(-\sin t,\cos t)\cdot (0,2+\sin (t)) = 2\cos t+\cos t \sin t.
+\]</div>
+
+Odsud formálně <div class="math notranslate nohighlight">
+\[\vec F\mathrm d\vec r=(2\cos t+\cos t\sin t)\mathrm dt\]</div>
+
+a integrál má tvar
+<div class="math notranslate nohighlight">
+\[\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos t\sin t)\,\mathrm dt.\]</div>
+</p>
+<p>Integrál z prvního sčítance můžeme vypočítat pomocí primitivní funkce
+<div class="math notranslate nohighlight">
+\[\int_0^{2\pi} 2\cos x\,\mathrm dx=\qty[2\sin x]_0^{2\pi}=2\sin(2\pi)-2\sin 0 =0\]</div>
+ a integrál z druhého sčítance je nulový, proto je nulový i celý integrál.
+<div class="math notranslate nohighlight">
+\[\int_C\vec F\mathrm d\vec r=0\]</div>
+</p>
+</section>
+</div></section>
+<section id="krivkovy-integral-a-tok-graficky">
+<h2><span class="section-number">5.6. </span>Křivkový integrál a tok graficky<a class="headerlink" href="#krivkovy-integral-a-tok-graficky" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/h_LWsGTTUl4">Video</a></p>
+<p>Vyřešte příklady na následujících odkazech. Řiďte se popsaným pravidlem, nebo pravidlem uvedeným ve videokomentáři.</p>
+<section id="krivkovy-integral">
+<h3><span class="section-number">5.6.1. </span>Křivkový integrál<a class="headerlink" href="#krivkovy-integral" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pokud křivka a vektorové pole svírají ostrý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně stejným směrem (nulový úhel) je příspěvek roven součinu.</p></li>
+<li><p>Pokud křivka a vektorové pole svírají tupý úhel, je příspěvek k celkové hodnotě integrálu záporný. Pokud jsou přesně opačným směrem (úhel <span class="math notranslate nohighlight">\(\displaystyle 180^\circ\)</span>) je příspěvek roven záporně vzatém součinu.</p></li>
+<li><p>Intenzivnější vektorové pole nebo delší křivka produkují větší numerickou hodnotu integrálu (více kladnou nebo více zápornou, podle znaménka). Pole více kolmo na křivku produkuje menší numerickou hodnotu integrálu (blíže k nule).</p></li>
+</ul>
+<a onclick=otevrit("problems/krivkovy_integral/30_01.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/krivkovy_integral/30_02.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/krivkovy_integral/30_03.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+<a onclick=otevrit("problems/krivkovy_integral/30_04.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+</section>
+<section id="tok">
+<h3><span class="section-number">5.6.2. </span>Tok<a class="headerlink" href="#tok" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pravidla pro souvislost toku s intenzitou pole a délkou křivky jsou analogická jako u křivkového integrálu (delší křivka a intenzivnější vektorové pole způsobují větší tok).</p></li>
+<li><p>Pokud se díváme ve směru křivky a pole přestupuje přes křivku zleva doprava, je tok kladný, v opačném případě záporný.</p></li>
+</ul>
+<a onclick=otevrit("problems/krivkovy_integral/30_08.pg"); target="_blank" class="WWotazka">Testová otázka</a>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cviceni04.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Rotace, kmenová funkce gradientu</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cviceni06.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Dvojné integrály</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu-po-trech-ruznych-krivkach">5.1. Křivkový integrál druhého druhu po třech různých křivkách</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu-po-parabole">5.2. Křivkový integrál druhého druhu po parabole</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-druheho-druhu-po-kubicke-parabole">5.3. Křivkový integrál druhého druhu po kubické parabole</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tok-vektoroveho-pole-uzavrenou-krivkou">5.4. Tok vektorového pole uzavřenou křivkou</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tok-vektoroveho-pole-uzavrenou-krivkou-ii">5.5. Tok vektorového pole uzavřenou křivkou II</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral-a-tok-graficky">5.6. Křivkový integrál a tok graficky</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#krivkovy-integral">5.6.1. Křivkový integrál</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tok">5.6.2. Tok</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 25.02.2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

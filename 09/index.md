@@ -135,8 +135,10 @@ funkcí $u'$ a $v$
 $$(u'v)'=u''v+u'v',$$
 která má po integraci na intervalu $[a,b]$ podobu
 $$u'(b)v(b)-u'(a)v(a)=\int_a^b u''v\,\mathrm dx +\int_a^b u'v'\,\mathrm dx.$$
+Pokud funkce $v$ splňuje okrajové podmínky $v(a)=v(b)=0$, dostaneme
+$$-\int_a^b u''v\,\mathrm dx = \int_a^b u'v'\,\mathrm dx.\tag{*}$$
 
-Rovnici (E) napíšeme pro jednoduchost s derivacemi vyjádřenými čárkami a s
+Nyní přistoupíme k převodu rovnice (E) na obecnější formulaci. Rovnici napíšeme pro jednoduchost s derivacemi vyjádřenými čárkami a s
 vynechanou závislostí na $x$
 $$-u''=f$$
 a tuto rovnici vynásobíme funkcí $v$, která splňuje okrajové podmínky
@@ -146,25 +148,28 @@ integrujeme přes interval $[0,1]$.
 Tím dostaneme
 $$-\int_0^1 u''v\,\mathrm dx = \int_0^1
 fv\,\mathrm dx.$$
-Z derivace součinu (viz předchozí rovnost) a okrajových podmínek pro funkci $v$
-plyne
+Ze vztahu (*) poté plyne, že získanou rovnost můžeme přeformulovat na tvar
 $$\int_0^1 u'v'\,\mathrm dx = \int_0^1
 fv\,\mathrm dx. \tag{W}$$
 Pokud nějaká funkce $u$ splňuje tuto rovnost pro každou hladkou funkci $v$
 s okrajovými podmínkami $v(0)=v(1)=0$, říkáme, že $u$ je _slabým řešením_
 rovnice (E) (s uvažovanými okrajovými podmínkami). Rovnice (W) se nazývá _slabá
-formulace_  (angl. _weak form_) rovnice (E).
+formulace_  (angl. _weak form_) rovnice (E). Slabá formulace rovnice úzce
+souvisí s hledáním minima energie nebo obecněji nějaké vhodné veličiny
+související s úlohou a proto ji řadíme mezi _variační metody_. Proto se slabá
+formulace někdy nazývá _variační formulace_.
 
 ### Galerkinova metoda
 
-Vyjdeme ze slabé formulace (W) a budeme hledat přibližné řešení ve tvaru
+Vyjdeme ze slabé variační formulace (W) a budeme hledat přibližné řešení ve tvaru
 $$u(x)=\sum_{i=1}^n u_i \varphi_i(x),$$
 kde funkce $\varphi_i(x)$ jsou zvolené hladké funkce splňující okrajové podmínky
 $\varphi_i(0)=\varphi_i(1)=0$ a $u_i$ jsou neznámé koeficienty, které budeme
-určovat. (Pro snadné odlišení funkcí a koeficientů už nebudeme vynechávat závislost
-na $x$.)
+určovat. 
 To vlastně znamená, že hledáme řešení v podprostoru generovaném funkcemi
 $\varphi_i(x)$. Funkce $\varphi_i(x)$ se proto nazývají _bázové funkce_.
+Pro snadné odlišení funkcí a koeficientů už nebudeme vynechávat závislost
+na $x$.
 
 Derivace funkce $u(x)$ je
 $$u'(x)=\sum_{j=1}^n u_j \varphi_j'(x).$$
@@ -188,7 +193,9 @@ ve tvaru $$\sum_{j=1}^n a_{ij} u_j = b_i, \quad i=1,2,\ldots,n.$$
 Nyní už je patrné, že se jedná o soustavu lineárních rovnic a po zavedení matice
 $A=(a_{ij})$ a vektoru $\vec b=(b_i)$ můžeme tuto soustavu psát v maticovém
 tvaru $$A\vec u=\vec b.$$
-Matice $A$ se nazývá (z historických důvodů) _matice tuhosti_ a vektor $\vec b$ se nazývá _vektor zatížení_.
+Matice $A$ se nazývá (z historických důvodů) _matice tuhosti_ a vektor $\vec b$
+se nazývá _vektor zatížení_.
+
 
 <div class='obtekat'>
 
@@ -199,11 +206,12 @@ Bázové funkce pro metodu konečných prvků na intervalu [0,1] s dělením na 
 </div>
 
 
-Je účelné volit bázové funkce tak, aby byla matice $A$ vhodná pro numerické řešení
-(například, aby byla řídká).
-Vhodnou volbou jsou trojúhelníkové funkce, které jsou na připojeném obrázku. Pomocí lineární kombinace těchto funkcí je možné
+Je účelné volit bázové funkce tak, aby na jednu stranu generovaly dostatečně
+širokou škálu funkcí, ale také aby byla matice $A$ vhodná pro numerické řešení &mdash; například, aby byla řídká.
+Vhodnou volbou jsou trojúhelníkové funkce dle připojeného obrázku. Pomocí lineární kombinace těchto funkcí je možné
 vyjádřit libovolnou po částech lomenou funkci splňující nulové okrajové
-podmínky. Při takto zvolených funkcích je $a_{ij}$ nulové, pokud $|i-j|>1$ a
+podmínky. Při takto zvolených funkcích je $a_{ij}$ nulové, pokud se $i$ a $j$
+liší více než o jedničku a
 matice $A$ má nenulové prvky jenom na hlavní diagonále a na dvou přilehlých
 diagonálách (je tridiagonální). Výpočet integrálů pro $a_{ij}$ vede k následující matici.
 
@@ -230,7 +238,7 @@ $$
 
 Výše uvedený postup tvoří jádro metody konečných prvků (angl. _finite element
 method_, FEM). Problém je nejprve
-naformulován obecněji než v původní diferenciální rovnici (slabá formulace) a
+naformulován obecněji než v původní diferenciální rovnici (*slabá variační formulace*) a
 poté je hledáno přibližné řešení v podprostoru generovaném zvolenými bázovými
 funkcemi. Dosazením tohoto tvaru řešení do slabé formulace a volbou testovacích
 funkcí
@@ -242,8 +250,16 @@ rovnic.
 Uvedený postup je možné zobecnit na složitější rovnice a úlohy. Na rozdíl od
 analytických metod si metoda konečných poradí i s komplikovanějšími geometrickými tvary a
 nespojitými materiálovými vlastnostmi, kdy na sebe navazují dva odlišné
-materiály. Je možné jej dokonce modifikovat i pro nelineární rovnice, i když v
-tomto případě je výpočet numericky náročnější..
+materiály. Je možné metodu použít i pro nelineární rovnice, i když v
+tomto případě je výpočet numericky náročnější.
+
+Výhodou metody konečných prvků oproti metodě konečných diferencí je větší
+volnost diskretizaci. Metoda konečných diferencí vyžaduje pravidelnou síť bodů,
+kdežto metoda konečných prvků umožňuje využít nepravidelnou síť a přizpůsobit
+hustotu bodů místním potřebám. To je výhodné například při zjemnění
+diskretizace v místech, kde se očekávají velké změny řešení.
+
+
 
 
 ## Řešení pomocí principu superpozice

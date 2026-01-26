@@ -180,9 +180,7 @@ Využitím linearity integrálu je možné rovnici přepsat do tvaru
 $$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) v'(x)\,\mathrm dx = \int_0^1
 f(x)v(x)\,\mathrm dx.$$
 
-Galerkinova metoda spočívá v tom, že za funkci $v(x)$ volíme postupně  
-jednotlivé bázové funkce, tedy $v(x)=\varphi_i(x)$ pro $i=1,2,\ldots,n$. Tím
-dostaneme soustavu rovnic
+Galerkinova metoda spočívá v tom, že za funkci $v(x)$ volíme postupně jednotlivé bázové funkce, tedy $v(x)=\varphi_i(x)$ pro $i=1,2,\ldots,n$. Tím dostaneme soustavu rovnic
 $$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) \varphi_i'(x)\,\mathrm dx = \int_0^1
 f(x)\varphi_i(x)\,\mathrm dx, \quad i=1,2,\ldots,n$$
 nebo po přeznačení 
@@ -259,7 +257,10 @@ kdežto metoda konečných prvků umožňuje využít nepravidelnou síť a při
 hustotu bodů místním potřebám. To je výhodné například při zjemnění
 diskretizace v místech, kde se očekávají velké změny řešení.
 
-
+````{admonition} Poznámka.
+:nonumber:
+Metodu podrobněji rozebereme a zařadíme do širšího kontextu numerických metod při studiu numerických metod pro parciální diferenciální rovnice v poslední přednášce semestru.
+````
 
 
 ## Řešení pomocí principu superpozice

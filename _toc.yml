@@ -18,6 +18,7 @@ parts:
     - file: 09/index.md
     - file: 10/index.md
     - file: 11/index.md
+    - file: 12/index.md
   - caption: Cvičení
     numbered: true
     chapters:
@@ -32,4 +33,5 @@ parts:
     - file: cviceni/cviceni09.md
     - file: cviceni/cviceni10.md
     - file: cviceni/cviceni11.md
+    - file: cviceni/cviceni12.md
  

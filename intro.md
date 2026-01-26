@@ -1,6 +1,4 @@
-
 # Aplikovaná matematika
-
 
 Zde najdete učební texty k předmětu [Aplikovaná matematika](https://robert-marik.github.io/pages/am) vyučovaného na LDF MENDELU v Brně. 
 

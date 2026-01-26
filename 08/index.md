@@ -7,13 +7,11 @@
 * Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu. 
 * Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně mění podle intenzity toku a ta se mění s teplotním rozdílem. 
 * Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.
-* Důležité dovednosti, které se naučíme v souvislosti s diferenciálními
-   rovnicemi, jsou zejména 
-      * schopnost naformulovat diferenciální rovnici podle slovního popisu
-        mechanismu modelovaného děje, 
-      * dovednost posoudit existenci a jednoznačnost řešení, 
-      * dovednost snížit transformací počet parametrů rovnice 
-      * a až v poslední řadě najít řešení numericky nebo analytickou cestou.
+* Důležité dovednosti, které se naučíme v souvislosti s diferenciálními rovnicemi, jsou zejména 
+  * schopnost naformulovat diferenciální rovnici podle slovního popisu mechanismu modelovaného děje, 
+  * dovednost posoudit existenci a jednoznačnost řešení, 
+  * dovednost snížit transformací počet parametrů rovnice 
+  * a až v poslední řadě najít řešení numericky nebo analytickou cestou.
 ```
 
 ```{admonition} Prerekvizity.
@@ -411,72 +409,15 @@ osy $x$. Například v bodech kde platí $\varphi(x,y)=0$ míří všechny
 integrální křivky vodorovně. Proto se křivky, kde je $\varphi(x,y)$
 konstantní, nazývají **izokliny**.
 
-\iffalse
-
-### Numerické řešení IVP
-
-manim:Diference|r_Ae2mGnfFs|Numerické řešení diferenciální ronvice je zpravidla založeno na aproximaci derivace konečnou diferencí a postupným prodlužováním řešení od počáteční podmínky směrem dopředu nebo dozadu v čase.
-
-<div class='obtekat'>
-
-```{figure} euler.png
- Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.
-```
-
-```{figure} rk.png
- Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.
-```
-
-</div>
-
-Numerické řešení diferenciálních rovnic je základním nástrojem pro ukázku průběhu simulací pro dané hodnoty parametrů a počátečních podmínek. Jedná se o velice užitečnou a široce používanou činnost při inženýrských simulacích. Neprofesionálům často musí stačit použít hotové postupy, procedury a nástroje. Například [Python](https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c) je jednou z nejvhodnějších voleb.
-
-<div class="volitelne">
-Řešení počáteční úlohy lze numericky aproximovat poměrně snadno:
-začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
-nahradíme integrální křivku její tečnou. Tím se dostaneme do dalšího
-bodu, odkud opět integrální křivku aproximujeme tečnou.  Směrnici
-tečny zjistíme z diferenciální rovnice, buď přímo z derivace (Eulerova
-metoda).
-
-Vyjdeme-li z počáteční úlohy $$y'=\varphi(x,y), \quad y(x_0)=y_0,$$
-má lineární aproximace řešení v bodě $[x_0,y_0]$ tvar $$y=y_0+\varphi(x_0,y_0)(x-x_0).$$
-Funkční hodnotu v bodě $x=x_1$ označíme $y_1$ a tento bod bude dalším  body lomené čáry, tj. $$y_1=y_0+\varphi(x_0,y_0)(x_1-x_0).$$
-Hodnota $x_1-x_0$ je krok Eulerovy metody označovaný $h$. Tento postup opakujeme s počáteční podmínkou $y(x_1)=y_1$.
-Iterační formule Eulerovy metody má potom následující tvar. $$\begin{aligned}x_{n+1}&=x_n+h, \\ y_{n+1}&=y_n+\varphi(x_n,y_n)h.\end{aligned}$$
-
-Stačí tedy mít zvolen *krok* numerické
-metody (délku intervalu, na kterém aproximaci tečnou použijeme) a
-výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
-
-**Vylepšení**
-
-* Pro přesnější aproximaci je možné zjemnit krok $h$ (buď všude, nebo
-  jenom tam, kde "je to potřeba").
-* Pro přesnější aproximaci je možné použít místo $\varphi(x_n,y_n)$
-  lepší směrnici, která dokáže zohlednit, jestli se růst zrychluje
-  nebo zpomaluje (metoda Runge Kutta druhého nebo čtvrtého řádu, ...).
-* Modely obsahující diferenciální rovnice obsahují zpravidla sadu
-  parametrů charakterizujících fyzikální vlastnosti studovaných
-  objektů. Pro numerické řešení musíme těmto parametrům dát konkrétní
-  hodnoty a přicházíme tak o cennou informaci, jak řešení závisí na
-  těchto parametrech. Vhodnou úpravou rovnice dokážeme počet parametrů
-  eliminovat. Jednoduchým a často dostatečným způsobem je volba
-  jednotek, obecnější metodou je transformace diferenciální rovnice
-  uvedená v následujícím textu.
-
-</div>
-
-**Online řešiče ODE (numericky):**
-
-* [Sage](https://sagecell.sagemath.org/?z=eJyFj0EKgzAQRfdC7pCdSTsVTbudO2RfREQjDY1GErXm9nU8QLv5zB_mP-YPYockMV3EfkuSZSxLo52Ap7HdOfISuKKl7WKFzxLKoqpPp8jRzDKtsDfRu8004f0Qw0mEBMcVUg7s1gbcwUx9M3s7LZGy9xr8uszrgnl0fjbNYI3r8-MFXf3kqb-82fklB9555wPmwZxUlgldXbWSRXz5j6B-SALUF0nkF_PaU9U=&lang=sage&interacts=eJyLjgUAARUAuQ==)
-* [Python](https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c)
-
-\fi
+```{prf:remark} numerické řešení
+:nonumber:
+Na základě směrového pole je možné numericky konstruovat přibližné řešení počáteční úlohy. Vyjdeme ze zadané počáteční podmínky a řešení prodlužujeme v malých krocích podle směru určeného směrovým polem. Tento postup je základem řady numerických metod pro řešení diferenciálních rovnic, například metody Eulera nebo Runge-Kutty. Budeme se mu věnovat podobněji na konci semestru v přednášce věnované numerickým metodám.
+````
 
 ### Transformace diferenciální rovnice
 
 manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parametrů v rovnici a tím usnadnit numerické simulace. Nematematická cesta k transformaci je vhodná volba jednotek pro sledované veličiny.
+
 
 \iffalse
 
@@ -545,55 +486,6 @@ znamená, že všechna řešení rovnice {eq}`08-I` konvergují k $T_0$. To, že
 V této úloze bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v *Horáček, Fyzikální a mechanické vlastnosti dřeva I* je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
 ```
 
-
-<!--
-
-## Malá odbočka - zaokrouhlovací chyby v numerických výpočtech
-
-<div class='obtekat'>
-
-```{figure} patriot.jpg
- Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.
-```
-
-</div>
-
-Uvedli jsme, že počáteční úlohu umíme vyřešit numericky. Ukázali jsme
-si základní algoritmus (Eulerův) a řekli, že existují algoritmy
-pokročilejší. Na tomto místě upozorníme na záludnosti skryté v
-numerických výpočtech. Je iluzorní se domnívat, že zjemněním kroku při
-numerickém řešení diferenciální rovnice vždy dostaneme přesnější
-řešení. Toto platí jenom dokud se nedostaneme ke kritické hodnotě
-kroku, kdy další snižování vede k tomu, že zpřesnění díky kratšímu
-kroku se přebije akumulovanou chybou z velkého množství výpočtů nutně
-zatížených zaokrouhlováním a dalším zjemňováním přesnost ztrácíme.
-
-Zajímavá léčka je v samé podstatě výpočtů na počítači a to v
-reprezentaci desetinných čísel ve dvojkové soustavě. Například číslo
-0.1 je ve dvojkové soustavě periodické! Proto desetinásobným sečtením
-tohoto čísla ve dvojkové soustavě nedostaneme (překvapivě) jedničku! Je to podobné, jako
-bychom v námi běžně používané dvojkové soustavě třikrát sečetli jednu třetinu v desetinném tvaru
-reprezentovaném konečným počtem desetinných míst, tj. například
-třikrát sečetli číslo $0.33333333$. Nedostaneme přesně jedničku. 
-
-Tento efekt měl i tragický důsledek. Software protiraketového
-systému Patriot počítal čas postupným přičítáním desetiny
-sekundy. Protože systém byl vytvořen a testován na mobilním zařízení,
-které se často restartovalo a běželo krátkou dobu, ničemu to
-nevadilo. Nasazení v systému Patriot však byla chyba. Při ostrém
-nasazení systém běžel dlouho, zaokrouhlovací chyba se kumulovala
-například 100 hodin. I když za tu dobu chyba dosáhla pouze zlomku
-sekundy, raketa letící vysokou rychlostí již byla jinde, než systém
-Patriot propočítal.  Dne 25.2.1991 systém Patriot během operace
-Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
-útočící raketu Scud a ta zabila 28 vojáků osvobozující armády a okolo
-100 osob zranila.
-
-S chybami plynoucími ze zaokrouhlování se setkáme i při výpočtech mimo modelování diferenciálních rovnic. Viz například [Floating-point arithmetic may give
-inaccurate results in
-Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel).
-
--->
 
 <!-- 
 

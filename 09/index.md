@@ -2,11 +2,10 @@
 
 ```{admonition} Anotace.
 
-* Pasáže o lineární diferenciální rovnici prvního řádu jsou omezeny na rovnici s konstantními koeficienty. Rovnicím s nekonstantními koeficienty se nevěnujte. V tomto textu nejsou pokryty, nebudou ve cvičeních, nebudou v domácích úlohách ani písemkách. Pokud na ně narazíte při počítání starších písemek, nevěnujte se jim. Tato úprava souvisí s tím, že se více věnujeme aplikačnímu potenciálu než se tak činilo v letech minulých.
-* Řešením lineární rovnice $y=ax+b$ je přímka a k jejímu zadání stačí jediný bod a jediný směr. Ukážeme si, že podobná tvrzení platí i pro celou řadu dalších rovnic, včetně diferenciálních rovnic a soustav diferenciálních rovnic.
-* Výstupem bude dovednost popsat u některých speciálních rovnic množinu řešení tak, že nalezneme dva nebo více relativně jednoduše nalezitelné objekty a pomocí nich sestavíme všechna řešení. Podobně jako dokážeme z jednoho bodu a směru zrekonstruovat všechny body přímky.
-* Naučíme se posoudit, jak se chovají řešení diferenciálních rovnic, kde pravá strana je lineární. Toto se později využije tak, že pomocí těchto rovnic budeme aproximovat obecnější nelineární modely.
-* Pokud vám jde o to, pochopit proč výpočty fungují tak jak fungují, projděte si všechny materiály. Pokud máte ambice nižší, můžete se věnovat jenom pasáži "Lineární diferenciální rovnice prvního řádu s konstantními koeficienty" a k ostatním pasážím se vrátit, jakmile je budete potřebovat (pokud vůbec). Důležité pasáže jsou poptávány ve WeBWorKových úlohách a problematika toho, jak se chovají řešení nelineárních systémů, je lineárním systémům nadřazena a bude součástí příští přednášky. Pokud budete ovládat nelineární systémy, lineární systémy se dají chápat jako jejich podmnožina.
+* Ukážeme si, jak se dají řešit rovnice obsahující lineární operátory, operátory, které zachovávají lineární kombinace funkcí.
+* Ukážeme si, že pro lineární operátory vystupující v diferenciálních rovnicích je možné najít přibližné řešení redukcí na soustavu lineárních rovnic. Toto je nejběžnější inženýrská metoda používaná při navrhování budov a staveb, při modelování proudění kapalin a plynů, při modelování přenosu tepla a dalších fyzikálních procesů.
+* Ukážeme si, že množina všech řešení lineární rovnice má pevnou strukturu, kterou můžeme využít k nalezení všech řešení. Pro nalezení všech řešení stačí najít jedno řešení rovnice a několik vhodných řešení rovnice jistým způsobem zjednodušení. Z těchto dílčích řešení je poté možné sestavit řešení všechna. Tím se úloha velmi zjednodušuje.
+
 ```
 
 ```{admonition} Prerekvizity.
@@ -105,12 +104,170 @@ $$
 \end{aligned}
 $$
 
-## Operátorové rovnice s lineárním operátorem
+## Metoda konečných prvků
+
+Metoda konečných prvků je jedna z nejběžnějších numerických metod pro řešení
+diferenciálních rovnic v inženýrských aplikacích. Ukážeme si základní myšlenky
+této metody na jednoduchém příkladu
+rovnice 
+$$-\frac{\mathrm d^2 u}{\mathrm dx^2}=f(x)\tag{E}$$
+s okrajovými podmínkami $u(0)=u(1)=0.$
+Tato rovnice může vystupovat například při modelování teplotního pole v tyči, ve
+které jsou zdroje tepla popsané funkcí $f(x)$. Z praktického hlediska je snadné
+rovnici vyřešit přímo integrací, ale pro ilustraci metody konečných prvků je
+tento příklad vhodný. Metoda je obecná a použitelná i pro složitější rovnice ve
+vícedimenzionálním prostoru, kde analytické metody selhávají: buď jsou
+nepoužitelné, nebo vedou na řešení zapsané pomocí komplikovaných speciálních
+funkcí a nekonečných řad, s nimiž se v praxi špatně pracuje.
+
+### Slabá formulace
+
+Nejprve převedeme rovnici na tzv. slabou formulaci. To je formulace, kde
+nevystupuje druhá derivace funkce $u$, ale jenom derivace první. To umožní
+pracovat například s úlohami vedení tepla, kde se materiálové vlastnosti mění
+skokem. Kromě toho slabá formulace převádí úlohu na úlohu integrální, což je
+výhodné pro numerické metody. Na tuto výhodu se zaměříme a proto nebudeme
+rozebírat aspekty spojené s hladkostí funkcí. Budeme předpokládat, že funkce, se
+kterými pracujeme, jsou dostatečně hladké.
+
+Použijeme základní poznatky z integrálního počtu a derivaci součinu
+funkcí $u'$ a $v$
+$$(u'v)'=u''v+u'v',$$
+která má po integraci na intervalu $[a,b]$ podobu
+$$u'(b)v(b)-u'(a)v(a)=\int_a^b u''v\,\mathrm dx +\int_a^b u'v'\,\mathrm dx.$$
+Pokud funkce $v$ splňuje okrajové podmínky $v(a)=v(b)=0$, dostaneme
+$$-\int_a^b u''v\,\mathrm dx = \int_a^b u'v'\,\mathrm dx.\tag{*}$$
+
+Nyní přistoupíme k převodu rovnice (E) na obecnější formulaci. Rovnici napíšeme pro jednoduchost s derivacemi vyjádřenými čárkami a s
+vynechanou závislostí na $x$
+$$-u''=f$$
+a tuto rovnici vynásobíme funkcí $v$, která splňuje okrajové podmínky
+$v(0)=v(1)=0$. Výslednou rovnici 
+$$-u''v=fv$$
+integrujeme přes interval $[0,1]$.
+Tím dostaneme
+$$-\int_0^1 u''v\,\mathrm dx = \int_0^1
+fv\,\mathrm dx.$$
+Ze vztahu (*) poté plyne, že získanou rovnost můžeme přeformulovat na tvar
+$$\int_0^1 u'v'\,\mathrm dx = \int_0^1
+fv\,\mathrm dx. \tag{W}$$
+Pokud nějaká funkce $u$ splňuje tuto rovnost pro každou hladkou funkci $v$
+s okrajovými podmínkami $v(0)=v(1)=0$, říkáme, že $u$ je _slabým řešením_
+rovnice (E) (s uvažovanými okrajovými podmínkami). Rovnice (W) se nazývá _slabá
+formulace_  (angl. _weak form_) rovnice (E). Slabá formulace rovnice úzce
+souvisí s hledáním minima energie nebo obecněji nějaké vhodné veličiny
+související s úlohou a proto ji řadíme mezi _variační metody_. Proto se slabá
+formulace někdy nazývá _variační formulace_.
+
+### Galerkinova metoda
+
+Vyjdeme ze slabé variační formulace (W) a budeme hledat přibližné řešení ve tvaru
+$$u(x)=\sum_{i=1}^n u_i \varphi_i(x),$$
+kde funkce $\varphi_i(x)$ jsou zvolené hladké funkce splňující okrajové podmínky
+$\varphi_i(0)=\varphi_i(1)=0$ a $u_i$ jsou neznámé koeficienty, které budeme
+určovat. 
+To vlastně znamená, že hledáme řešení v podprostoru generovaném funkcemi
+$\varphi_i(x)$. Funkce $\varphi_i(x)$ se proto nazývají _bázové funkce_.
+Pro snadné odlišení funkcí a koeficientů už nebudeme vynechávat závislost
+na $x$.
+
+Derivace funkce $u(x)$ je
+$$u'(x)=\sum_{j=1}^n u_j \varphi_j'(x).$$
+Dosadíme-li toto vyjádření do slabé formulace (W), dostaneme
+$$\int_0^1 \Bigl(\sum_{j=1}^n u_j \varphi_j'(x)\Bigr) v'(x)\,\mathrm dx = \int_0^1 
+f(x)v(x)\,\mathrm dx.$$
+Využitím linearity integrálu je možné rovnici přepsat do tvaru
+$$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) v'(x)\,\mathrm dx = \int_0^1
+f(x)v(x)\,\mathrm dx.$$
+
+Galerkinova metoda spočívá v tom, že za funkci $v(x)$ volíme postupně  
+jednotlivé bázové funkce, tedy $v(x)=\varphi_i(x)$ pro $i=1,2,\ldots,n$. Tím
+dostaneme soustavu rovnic
+$$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) \varphi_i'(x)\,\mathrm dx = \int_0^1
+f(x)\varphi_i(x)\,\mathrm dx, \quad i=1,2,\ldots,n$$
+nebo po přeznačení 
+$$a_{ij}=\int_0^1 \varphi_i'(x) \varphi_j'(x)\,\mathrm dx$$
+a
+$$b_j=\int_0^1 f(x)\varphi_j(x)\,\mathrm dx$$
+ve tvaru $$\sum_{j=1}^n a_{ij} u_j = b_i, \quad i=1,2,\ldots,n.$$
+Nyní už je patrné, že se jedná o soustavu lineárních rovnic a po zavedení matice
+$A=(a_{ij})$ a vektoru $\vec b=(b_i)$ můžeme tuto soustavu psát v maticovém
+tvaru $$A\vec u=\vec b.$$
+Matice $A$ se nazývá (z historických důvodů) _matice tuhosti_ a vektor $\vec b$
+se nazývá _vektor zatížení_.
+
+
+<div class='obtekat'>
+
+```{figure} konecne_prvky.png
+Bázové funkce pro metodu konečných prvků na intervalu [0,1] s dělením na deset dílčích intervalů.  V obrázku jsou vybrány tři bázové funkce a lineární kombinace bázových funkcí aproximující parabolu $y=2x(1-x)$.
+```
+
+</div>
+
+
+Je účelné volit bázové funkce tak, aby na jednu stranu generovaly dostatečně
+širokou škálu funkcí, ale také aby byla matice $A$ vhodná pro numerické řešení &mdash; například, aby byla řídká.
+Vhodnou volbou jsou trojúhelníkové funkce dle připojeného obrázku. Pomocí lineární kombinace těchto funkcí je možné
+vyjádřit libovolnou po částech lomenou funkci splňující nulové okrajové
+podmínky. Při takto zvolených funkcích je $a_{ij}$ nulové, pokud se $i$ a $j$
+liší více než o jedničku a
+matice $A$ má nenulové prvky jenom na hlavní diagonále a na dvou přilehlých
+diagonálách (je tridiagonální). Výpočet integrálů pro $a_{ij}$ vede k následující matici.
+
+$$
+A = \frac 1h\begin{pmatrix}
+2 & -1 & 0 & 0 & \cdots & 0 \\
+-1 & 2 & -1 & 0 & \cdots & 0 \\
+0 & -1 & 2 & -1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & -1 & 2 & -1 \\
+0 & 0 & 0 & 0 & -1 & 2
+\end{pmatrix}
+$$
+
+### Metoda konečných prvků (FEM)
+
+<div class='obtekat'>
+
+```{figure} nosnik_3bodovy.png
+ Ukázka programu pro modelování pomocí metody konečných prvků (FEM). V tomto případě je modelován tříbodově podepřený nosník zatížený silou uprostřed. Program umožňuje měnit parametry nosníku a zatížení a okamžitě vidět výsledky a identifikovat kritická místa konstrukce.
+```
+
+</div>
+
+Výše uvedený postup tvoří jádro metody konečných prvků (angl. _finite element
+method_, FEM). Problém je nejprve
+naformulován obecněji než v původní diferenciální rovnici (*slabá variační formulace*) a
+poté je hledáno přibližné řešení v podprostoru generovaném zvolenými bázovými
+funkcemi. Dosazením tohoto tvaru řešení do slabé formulace a volbou testovacích
+funkcí
+je získána soustava lineárních rovnic pro neznámé 
+koeficienty v rozvoji řešení podle bázových funkcí. Tuto soustavu je
+poté možné vyřešit běžnými numerickými metodami pro řešení soustav lineárních
+rovnic.
+
+Uvedený postup je možné zobecnit na složitější rovnice a úlohy. Na rozdíl od
+analytických metod si metoda konečných poradí i s komplikovanějšími geometrickými tvary a
+nespojitými materiálovými vlastnostmi, kdy na sebe navazují dva odlišné
+materiály. Je možné metodu použít i pro nelineární rovnice, i když v
+tomto případě je výpočet numericky náročnější.
+
+Výhodou metody konečných prvků oproti metodě konečných diferencí je větší
+volnost diskretizaci. Metoda konečných diferencí vyžaduje pravidelnou síť bodů,
+kdežto metoda konečných prvků umožňuje využít nepravidelnou síť a přizpůsobit
+hustotu bodů místním potřebám. To je výhodné například při zjemnění
+diskretizace v místech, kde se očekávají velké změny řešení.
+
+
+
+
+## Řešení pomocí principu superpozice
 
 https://youtu.be/i3By7KBu6ec
 
-Operátorovou rovnicí budeme rozumět rovnici $$L[x]=b(t),$$ kde $b(t)$
-je funkce a $L$ operátor. 
+Mějme rovnici $$L[x]=b(t),$$ kde $b(t)$
+je funkce a $L$ je lineární operátor. 
 
 * Například pro $b(t)=0$ a $L[x]=\frac{\mathrm dx}{\mathrm dt}-x$ má
 rovnice tvar
@@ -145,7 +302,8 @@ Pro jednu funkci lineární kombinace degenerují na násobky. Proto je
 obecné řešení rovnice součtem jednoho řešení rovnice a obecného řešení
 asociované homogenní rovnice. Toto jedno řešení vlastně udává pozici v prostoru funkcí a řešení asociované homogenní rovnice udává směr. Například funkce $x=e^t$
 splňuje rovnici $$x'-x=0$$ a funkce $x=-\pi$ splňuje rovnici
-$$x'-x=\pi.$$ Všechna řešení rovnice $$x'-x=\pi$$ jsou tvaru $x=Ce^t-\pi$
+$$x'-x=\pi.$$ 
+Všechna řešení rovnice $$x'-x=\pi$$ jsou tvaru $x=Ce^t-\pi$
   
 ## Lineární diferenciální rovnice prvního řádu s konstantními koeficienty  
   

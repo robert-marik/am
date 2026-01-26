@@ -516,7 +516,7 @@ rovnici na rekuretní schema, které umožňuje najít přibližné řešení ro
 <div class='obtekat'>
 
 ```{figure} finite_differences_heat.png
- Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku.
+ Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku. U explicitní metody je tato hodnota jediná a je snadné ji vypočítat. U implicitní metody jsou neznámé hodnoty tři, každá z nich figuruje ve třech rovnicích a je nutné řešit soustavu rovnic s tridiagonální maticí.
 ```
 </div>
 
@@ -527,7 +527,124 @@ bychom dostali
 \dm $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$ 
 kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud 
 \dm $$T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]$$ 
-a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou _explicitní_ metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://gist.github.com/robert-marik/bbd7677bcf876403dcd454ab25cea681). 
+==== BASE ====
+a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou _explicitní_ metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://gist.github.com/robert-marik/bbd7677bcf876403dcd454ab25cea681). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://gist.github.com/robert-marik/afa6114fe765b607ddd0c3733840e40a), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
+>
+>
+Ještě existuje metoda [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation) založená na zpětné diferenci v čase namísto dopředné, tj. 
+\dm $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$
+a odsud 
+\dm $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$
+Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Programová realizace je založena na řešení rovnice a může vypadat [následovně.](https://gist.github.com/robert-marik/8b898a66ee7018b4a72dc40dc20e1a94)
+
+Rozdíl mezi implicitní a explicitní metodou je v tom, že u explicitní metody máme v rovnici jednou neznámou a tuto neznámou je snadné určit. Formálně tedy metoda vede na soustavu rovnic, ale řešení této soustavy je triviální. U implicitní metody však máme v každém vztahu tři neznámé a řešení soustavy rovnic je již komplikovanější. Zdá se tedy, že explicitní metoda je výhodnější. Bohužel v praxi explicitní metoda vyžaduje dostatečně jemný časový krok, což může vést k nutnosti použít velmi jemnou časovou diskretizaci a tato skutečnost navyšuje výpočetní náročnost jak z hlediska času, tak i z hlediska paměťových nároků. Implicitní metoda je sice komplikovanější na výpočet, ale dovoluje použít větší časové kroky a v praxi se ukazuje jako výhodnější. Často se pro zvýšení přesnosti používá i kombinace obou metod, kdy je v diferenčním schematu použita dopředná i zpětná diference pro derivaci podle času.
+
+</div>
+
+<!--
+
+% Rovnice vedeni tepla pro jednorozmernou tyc s fixovanymi teplotami na koncich a konstantni pocatecni teplotou.
+% Teplota se v tyci rozlozi rovnomerne (linearni profil).
+% Teplotni profil pred dosazenim rovnovazenho stavu pro ruzne casy ziskame z rovnice vedeni tepla.
+% Nize je aproximace reseni pomoci konecnych diferenci explicitni metodou - jednoducha na implementaci, ale nestabilni, pokud neni casovy krok dostatecne maly
+
+% 
+%  Nastaveni
+%
+
+L = 1;       % delka tyce
+
+nx = 50;     % pocet bodu v tyci, ve kterych budeme pocitat teplotu
+nt = 500;    % pocet kroku v case
+dx = L/nx;   % prostorovy krok (vzdalenost dvou sousednbich bodu)
+dt = .0001;  % casovy krok, interval s jakzm budeme v danem bode sledovat zmeny teplo
+             % casovy krok musi byt dostatecne maly, jinak model neni stabilni
+
+u = zeros(nt+1,nx+1);      % inicializace promenne, do ktere budeme ukladat teploty
+
+T = 0*ones(1,nx+1);  % nastaveni pocatecnich hodnot, nulove teploty vsude krome na nakonci
+T(end) = 100;      % nastaveni pocatecnich hodnot, teplota 100 na konci
+
+u(1,1:nx+1) = T;    % vychozi stav
+
+A = toeplitz([-2,1,zeros(1,nx-1)]);  % vytvoreni matice pro iterace
+A(1,:) = zeros(1,nx+1);              % vynulovani prvniho radku matice A
+A(end,:) = zeros(1,nx+1);            % vynulovani posledniho radku matice A
+
+%
+%  Vlastní výpočet a uložení do paměti
+%
+
+for j = 2:nt        % jednotlive kroky v case
+   T = T + dt/(dx^2) * (A * T')';  % iteracni vzorec pouziva dvakrat transpozice, protoze pracujeme s radkovym vektorem, ale maticove nasobeni funguje pro sloupcove vektory
+   u(j+1,1:nx+1) = T;    % ulozeni pro pozdejsi vykresleni
+end
+ 
+
+%
+% Vykreslení řešení
+%
+
+[X1,T1] = meshgrid(0:dx:nx*dx,0:dt:nt*dt);
+colormap hot
+pcolor(X1,T1,u)
+
+shading interp
+colorbar
+title('Vyvoj prubehu teploty v tyci')
+xlabel('x')
+ylabel('t')
+
+-->
+
+<!--
+
+% Rovnice vedeni tepla pro jednorozmernou tyc s fixovanymi teplotami na koncich a konstantni pocatecni teplotou.
+% Teplota se v tyci rozlozi rovnomerne (linearni profil).
+% Teplotni profil pred dosazenim rovnovazenho stavu pro ruzne casy ziskame z rovnice vedeni tepla.
+% Nize je aproximace reseni pomoci konecnych diferenci explicitni metodou - jednoducha na implementaci, ale nestabilni, pokud neni casovy krok dostatecne maly
+
+% 
+%  Nastaveni
+%
+
+L = 1;       % delka tyce
+
+nx = 50;     % pocet bodu v tyci, ve kterych budeme pocitat teplotu
+nt = 500;    % pocet kroku v case
+dx = L/nx;   % prostorovy krok (vzdalenost dvou sousednbich bodu)
+dt = .0001;  % casovy krok, interval s jakzm budeme v danem bode sledovat zmeny teplo
+             % casovy krok musi byt dostatecne maly, jinak model neni stabilni
+
+u = zeros(nt+1,nx+1);      % inicializace promenne, do ktere budeme ukladat teploty
+
+T = 0*ones(1,nx+1);  % nastaveni pocatecnich hodnot, nulove teploty vsude krome na nakonci
+T(end) = 100;      % nastaveni pocatecnich hodnot, teplota 100 na konci
+
+u(1,1:nx+1) = T;    % vychozi stav
+
+A = toeplitz([-2,1,zeros(1,nx-1)]);  % vytvoreni matice pro iterace
+A(1,:) = zeros(1,nx+1);              % vynulovani prvniho radku matice A
+A(end,:) = zeros(1,nx+1);            % vynulovani posledniho radku matice A
+
+%
+%  Vlastní výpočet a uložení do paměti
+%
+
+for j = 2:nt        % jednotlive kroky v case
+   T = T + dt/(dx^2) * (A * T')';  % iteracni vzorec pouziva dvakrat transpozice, protoze pracujeme s radkovym vektorem, ale maticove nasobeni funguje pro sloupcove vektory
+   u(j+1,1:nx+1) = T;    % ulozeni pro pozdejsi vykresleni
+end
+ 
+
+%
+% Vykreslení řešení
+%
+
+[X1,T1] = meshgrid(0:dx:nx*dx,0:dt:nt*dt);
+colormap hot
+pcolor(X1,T1,u)
+==== BASE ====
 
 Více se metodě konečných diferencí budeme věnovat v samostatné přednášce věnované numerickým metodám na konci semestru.
 
@@ -538,17 +655,7 @@ V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovsk
 
 https://youtu.be/owfHzLBonRA
 
-\iffalse 
 
-<div class='obtekat'>
-
-```{figure} bored_cat.jpg
- Názvosloví a terminologie jsou nejnudnější pasáže. Prolétneme je pro rychlé seznámení a můžeme se se vrátit, kdykoliv bude potřeba. Zdroj: pixabay.com, chudamay
-```
-
-</div>
-
-\fi
 
 V dalším budeme pracovat s pojmy jako množina a její hranice, množina
 obsahující hranici, množina neobsahující hranici, spojitá funkce

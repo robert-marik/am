@@ -531,18 +531,6 @@ Toto je pro daný nosník kritická síla a ta je pro daný materiál nepřímo 
 
 ## Neumannova a smíšená okrajová úloha
 
-\iffalse
-
-<div class='obtekat'>
-
-```{figure} array_mbira.jpg
- Array mbira - [hudební nástroj](https://www.youtube.com/watch?v=5fAAGheYTFA) se smíšenou okrajovou úlohou
-``` 
-
-</div>
-
-\fi
-
 Při řešení Dirichletovy úlohy hledáme řešení diferenciální rovnice
 druhého řádu s předepsanými hodnotami ve dvou různých bodech
 $$y(a)=\alpha,\quad y(b)=\beta.$$
@@ -556,7 +544,7 @@ nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto
 podmínky splňuje, se nazývá **Neumannova okrajová úloha**, též
 **Neumannova úloha**.
 
-Existují i smíšené úlohy, například při kmitání tělesa s jedním
-upevněným a jedním volným koncem je přirozené formulovat **smíšenou
-okrajovou podmínku** $$y(a)=0,\quad y'(b)=0,$$ kde $a$ je upevněný konec a
-$b$ volný konec.
+Existují i smíšené úlohy, kdy na jednom konci je podmínka na funkční hodnotu a
+na druhém konci na hodnotu derivace. S takovou úlohou se setkáváme například při
+modelování teplotního pole, kdy na jednom konci je  pevně 
+daná teplota a na druhém konci je pevně daný tepelný tok.

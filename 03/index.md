@@ -159,7 +159,7 @@ https://youtu.be/HiOmERpTdV0
  V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově.
 ```
 
-```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/rovnice_kontinuity.png
+```{figure} https://github.com/robert-marik/am-images/blob/05e850b94c2a3f8a2cd07c72d160abf8b949c8c1/rovnice_kontinuity.png
 Stavební kameny rovnice kontinuity
 ```
 </div>

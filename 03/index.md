@@ -159,6 +159,9 @@ https://youtu.be/HiOmERpTdV0
  V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově.
 ```
 
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/rovnice_kontinuity.png
+Stavební kameny rovnice kontinuity
+```
 </div>
 
 \fi 
@@ -173,7 +176,7 @@ https://youtu.be/HiOmERpTdV0
   toku, proto ho počítáme jako záporné navýšení, tj. záporně vzatou divergenci.
   $$-\nabla\cdot \vec \jmath$$
 
-Matematickou formulací celkové bilance  je **rovnice kontinuity**. $${\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
+Matematickou formulací celkové bilance  je **rovnice kontinuity**. $$\boxed{\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}  $$
 
     
 

@@ -84,6 +84,15 @@ kmenová funkce vektorového pole $\vec F$.
 
 manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na intergrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné= zavést potenciální energii.
 
+
+<div class='obtekat'>
+
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/nezavislost_krivkoveho_integralu.png
+
+Nezávislost integrálu na integrační cestě je klíčem k zavedení potenciální energie. Pokud křivkový integrál nezávisí na integrační cestě, je možné zavést potenciální energii a tím výrazně zjednodušit řešení mnoha úloh.
+```
+</div>
+
 Tato věta je použitelná na mnoho způsobů.
 
 * Věta přímo udává efektivní kritérium, kdy křivkový integrál nezávisí na integrační cestě. Rotace vektorového pole musí být nulová. Pokud máme vektorové pole zadané analytickým předpisem jednotlivých komponent, je toto nejsnazší kriterium na ověření.
@@ -211,6 +220,8 @@ divergence vektorového pole přes oblast $\Omega$ a křivkovým
 integrálem vyjadřujícím tok vektorového pole $P\vec i+Q\vec j$
 protékající přes hranici $\partial \Omega$.
 \dm $$  \underbrace{\oint_{\partial \Omega}-Q(x,y)\mathrm{d}x +P(x,y)\mathrm{d}y }_{\text{Tok přes hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)}_{\mathop{\mathrm{div}} (P\vec i +Q\vec j)}\mathrm{d}x \mathrm{d}y $$
+
+
 Výše popsaně dvě varianty Greenovy věty nám dávají možnost najít
 fyzikální interpretaci operátorů divergence a rotace. Podíl dvojného
 integrálu funkce $f$ přes oblast $\Omega$ a obsahu této oblasti je
@@ -238,6 +249,16 @@ ww:problems/dvojny_integral/13.pg
 ww:problems/dvojny_integral/14.pg
 
 ww:problems/dvojny_integral/14a.pg
+
+
+<div class='obtekat'>
+
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/diferencialni_versus_integralni.png
+
+Greenova věta ve formulaci pro tok křivkou je nástrojem pro přechod mezi lokálním a globálním pohledem na fyzikální zákony. Lokální pohled nám říká, co se děje v daném bodě prostoru, zatímco globální pohled nám říká, co se děje v konečném objemu. Greenova věta nám umožňuje přechod mezi těmito dvěma pohledy a je nezastupitelným nástrojem pro pochopení a aplikaci fyzikálních zákonů.
+```
+</div>
+
 
 Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přístupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
 

@@ -219,7 +219,12 @@ https://youtu.be/GeJgtBHy_sM
  Křivkový integrál druhého druhu. Výška plochy je v každém bodě  křivky určena skalárním součinem tečného vektoru jednotkové délky a  vektorem zadaného vektorového  pole.
 ```
 
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/line_integral_work.png
+ Křivkový integrál druhého druhu
+```
+
 \fi
+
 
 </div>
 
@@ -310,6 +315,15 @@ $$
 ## Aplikace křivkového integrálu druhého druhu
 
 manimp:integracni_cesta|Křivkový integrál může a nemusí záviset na integrační cestě. Pokud na ní nezávisí, je možné v takovém poli nadefinovat potenciální energii.
+
+<div class='obtekat'>
+
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/line_integral_flow.png
+ Křivkový integrál druhého druhu pro tok vektorového pole
+```
+
+</div>
+
 
 * Integrál
   $$

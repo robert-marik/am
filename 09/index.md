@@ -105,10 +105,6 @@ $$
 $$
 
 
-```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/Linearita_DR.png
-Princip superpozice umožňuje sestavit libovolné řešení z několika dílčích řešení téže nebo příbuzné rovnice. Definuje způsob, jak seskládat řešení z jakýchsi dílčích stavebních bloků. 
-```
-
 ## Řešení pomocí principu superpozice
 
 https://youtu.be/i3By7KBu6ec
@@ -139,6 +135,12 @@ Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
 * Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením. 
 * Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice. 
 * U nehomogenní rovnice se úloha najít všechna řešení dá rozdělit na dvě dílčí úlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho řešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
+
+
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/Linearita_DR.png
+Princip superpozice umožňuje sestavit libovolné řešení z několika dílčích řešení téže nebo příbuzné rovnice. Definuje způsob, jak seskládat řešení z jakýchsi dílčích stavebních bloků. 
+```
+
 
 ### Příklad využití linearity v jedné dimenzi
 

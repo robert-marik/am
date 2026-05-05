@@ -104,164 +104,6 @@ $$
 \end{aligned}
 $$
 
-## Metoda konečných prvků
-
-Metoda konečných prvků je jedna z nejběžnějších numerických metod pro řešení
-diferenciálních rovnic v inženýrských aplikacích. Ukážeme si základní myšlenky
-této metody na jednoduchém příkladu
-rovnice 
-$$-\frac{\mathrm d^2 u}{\mathrm dx^2}=f(x)\tag{E}$$
-s okrajovými podmínkami $u(0)=u(1)=0.$
-Tato rovnice může vystupovat například při modelování teplotního pole v tyči, ve
-které jsou zdroje tepla popsané funkcí $f(x)$. Z praktického hlediska je snadné
-rovnici vyřešit přímo integrací, ale pro ilustraci metody konečných prvků je
-tento příklad vhodný. Metoda je obecná a použitelná i pro složitější rovnice ve
-vícedimenzionálním prostoru, kde analytické metody selhávají: buď jsou
-nepoužitelné, nebo vedou na řešení zapsané pomocí komplikovaných speciálních
-funkcí a nekonečných řad, s nimiž se v praxi špatně pracuje.
-
-### Slabá formulace
-
-Nejprve převedeme rovnici na tzv. slabou formulaci. To je formulace, kde
-nevystupuje druhá derivace funkce $u$, ale jenom derivace první. To umožní
-pracovat například s úlohami vedení tepla, kde se materiálové vlastnosti mění
-skokem. Kromě toho slabá formulace převádí úlohu na úlohu integrální, což je
-výhodné pro numerické metody. Na tuto výhodu se zaměříme a proto nebudeme
-rozebírat aspekty spojené s hladkostí funkcí. Budeme předpokládat, že funkce, se
-kterými pracujeme, jsou dostatečně hladké.
-
-Použijeme základní poznatky z integrálního počtu a derivaci součinu
-funkcí $u'$ a $v$
-$$(u'v)'=u''v+u'v',$$
-která má po integraci na intervalu $[a,b]$ podobu
-$$u'(b)v(b)-u'(a)v(a)=\int_a^b u''v\,\mathrm dx +\int_a^b u'v'\,\mathrm dx.$$
-Pokud funkce $v$ splňuje okrajové podmínky $v(a)=v(b)=0$, dostaneme
-$$-\int_a^b u''v\,\mathrm dx = \int_a^b u'v'\,\mathrm dx.\tag{*}$$
-
-Nyní přistoupíme k převodu rovnice (E) na obecnější formulaci. Rovnici napíšeme pro jednoduchost s derivacemi vyjádřenými čárkami a s
-vynechanou závislostí na $x$
-$$-u''=f$$
-a tuto rovnici vynásobíme funkcí $v$, která splňuje okrajové podmínky
-$v(0)=v(1)=0$. Výslednou rovnici 
-$$-u''v=fv$$
-integrujeme přes interval $[0,1]$.
-Tím dostaneme
-$$-\int_0^1 u''v\,\mathrm dx = \int_0^1
-fv\,\mathrm dx.$$
-Ze vztahu (*) poté plyne, že získanou rovnost můžeme přeformulovat na tvar
-$$\int_0^1 u'v'\,\mathrm dx = \int_0^1
-fv\,\mathrm dx. \tag{W}$$
-Pokud nějaká funkce $u$ splňuje tuto rovnost pro každou hladkou funkci $v$
-s okrajovými podmínkami $v(0)=v(1)=0$, říkáme, že $u$ je _slabým řešením_
-rovnice (E) (s uvažovanými okrajovými podmínkami). Rovnice (W) se nazývá _slabá
-formulace_  (angl. _weak form_) rovnice (E). Slabá formulace rovnice úzce
-souvisí s hledáním minima energie nebo obecněji nějaké vhodné veličiny
-související s úlohou a proto ji řadíme mezi _variační metody_. Proto se slabá
-formulace někdy nazývá _variační formulace_.
-
-### Galerkinova metoda
-
-Vyjdeme ze slabé variační formulace (W) a budeme hledat přibližné řešení ve tvaru
-$$u(x)=\sum_{i=1}^n u_i \varphi_i(x),$$
-kde funkce $\varphi_i(x)$ jsou zvolené hladké funkce splňující okrajové podmínky
-$\varphi_i(0)=\varphi_i(1)=0$ a $u_i$ jsou neznámé koeficienty, které budeme
-určovat. 
-To vlastně znamená, že hledáme řešení v podprostoru generovaném funkcemi
-$\varphi_i(x)$. Funkce $\varphi_i(x)$ se proto nazývají _bázové funkce_.
-Pro snadné odlišení funkcí a koeficientů už nebudeme vynechávat závislost
-na $x$.
-
-Derivace funkce $u(x)$ je
-$$u'(x)=\sum_{j=1}^n u_j \varphi_j'(x).$$
-Dosadíme-li toto vyjádření do slabé formulace (W), dostaneme
-$$\int_0^1 \Bigl(\sum_{j=1}^n u_j \varphi_j'(x)\Bigr) v'(x)\,\mathrm dx = \int_0^1 
-f(x)v(x)\,\mathrm dx.$$
-Využitím linearity integrálu je možné rovnici přepsat do tvaru
-$$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) v'(x)\,\mathrm dx = \int_0^1
-f(x)v(x)\,\mathrm dx.$$
-
-Galerkinova metoda spočívá v tom, že za funkci $v(x)$ volíme postupně jednotlivé bázové funkce, tedy $v(x)=\varphi_i(x)$ pro $i=1,2,\ldots,n$. Tím dostaneme soustavu rovnic
-$$\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) \varphi_i'(x)\,\mathrm dx = \int_0^1
-f(x)\varphi_i(x)\,\mathrm dx, \quad i=1,2,\ldots,n$$
-nebo po přeznačení 
-$$a_{ij}=\int_0^1 \varphi_i'(x) \varphi_j'(x)\,\mathrm dx$$
-a
-$$b_j=\int_0^1 f(x)\varphi_j(x)\,\mathrm dx$$
-ve tvaru $$\sum_{j=1}^n a_{ij} u_j = b_i, \quad i=1,2,\ldots,n.$$
-Nyní už je patrné, že se jedná o soustavu lineárních rovnic a po zavedení matice
-$A=(a_{ij})$ a vektoru $\vec b=(b_i)$ můžeme tuto soustavu psát v maticovém
-tvaru $$A\vec u=\vec b.$$
-Matice $A$ se nazývá (z historických důvodů) _matice tuhosti_ a vektor $\vec b$
-se nazývá _vektor zatížení_.
-
-
-<div class='obtekat'>
-
-```{figure} konecne_prvky.png
-Bázové funkce pro metodu konečných prvků na intervalu [0,1] s dělením na deset dílčích intervalů.  V obrázku jsou vybrány tři bázové funkce a lineární kombinace bázových funkcí aproximující parabolu $y=2x(1-x)$.
-```
-
-</div>
-
-
-Je účelné volit bázové funkce tak, aby na jednu stranu generovaly dostatečně
-širokou škálu funkcí, ale také aby byla matice $A$ vhodná pro numerické řešení &mdash; například, aby byla řídká.
-Vhodnou volbou jsou trojúhelníkové funkce dle připojeného obrázku. Pomocí lineární kombinace těchto funkcí je možné
-vyjádřit libovolnou po částech lomenou funkci splňující nulové okrajové
-podmínky. Při takto zvolených funkcích je $a_{ij}$ nulové, pokud se $i$ a $j$
-liší více než o jedničku a
-matice $A$ má nenulové prvky jenom na hlavní diagonále a na dvou přilehlých
-diagonálách (je tridiagonální). Výpočet integrálů pro $a_{ij}$ vede k následující matici.
-
-$$
-A = \frac 1h\begin{pmatrix}
-2 & -1 & 0 & 0 & \cdots & 0 \\
--1 & 2 & -1 & 0 & \cdots & 0 \\
-0 & -1 & 2 & -1 & \cdots & 0 \\
-\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
-0 & 0 & 0 & -1 & 2 & -1 \\
-0 & 0 & 0 & 0 & -1 & 2
-\end{pmatrix}
-$$
-
-### Metoda konečných prvků (FEM)
-
-<div class='obtekat'>
-
-```{figure} nosnik_3bodovy.png
- Ukázka programu pro modelování pomocí metody konečných prvků (FEM). V tomto případě je modelován tříbodově podepřený nosník zatížený silou uprostřed. Program umožňuje měnit parametry nosníku a zatížení a okamžitě vidět výsledky a identifikovat kritická místa konstrukce.
-```
-
-</div>
-
-Výše uvedený postup tvoří jádro metody konečných prvků (angl. _finite element
-method_, FEM). Problém je nejprve
-naformulován obecněji než v původní diferenciální rovnici (*slabá variační formulace*) a
-poté je hledáno přibližné řešení v podprostoru generovaném zvolenými bázovými
-funkcemi. Dosazením tohoto tvaru řešení do slabé formulace a volbou testovacích
-funkcí
-je získána soustava lineárních rovnic pro neznámé 
-koeficienty v rozvoji řešení podle bázových funkcí. Tuto soustavu je
-poté možné vyřešit běžnými numerickými metodami pro řešení soustav lineárních
-rovnic.
-
-Uvedený postup je možné zobecnit na složitější rovnice a úlohy. Na rozdíl od
-analytických metod si metoda konečných poradí i s komplikovanějšími geometrickými tvary a
-nespojitými materiálovými vlastnostmi, kdy na sebe navazují dva odlišné
-materiály. Je možné metodu použít i pro nelineární rovnice, i když v
-tomto případě je výpočet numericky náročnější.
-
-Výhodou metody konečných prvků oproti metodě konečných diferencí je větší
-volnost diskretizaci. Metoda konečných diferencí vyžaduje pravidelnou síť bodů,
-kdežto metoda konečných prvků umožňuje využít nepravidelnou síť a přizpůsobit
-hustotu bodů místním potřebám. To je výhodné například při zjemnění
-diskretizace v místech, kde se očekávají velké změny řešení.
-
-````{admonition} Poznámka.
-:nonumber:
-Metodu podrobněji rozebereme a zařadíme do širšího kontextu numerických metod při studiu numerických metod pro parciální diferenciální rovnice v poslední přednášce semestru.
-````
-
 
 ## Řešení pomocí principu superpozice
 
@@ -284,7 +126,6 @@ Následující věta vlastně vyjadřuje totéž co princip superpozice z předc
 Je funkce $$x(t)=C_1 x_1(t)+C_2 x_2(t)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
 ```
 
-
 Pro $b_1(t)=b_2(t)=0$ všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí. 
 
 Pro $b_1(t)=0$ a $C_2=1$ jsou obě nehomogenní rovnice stejné a pokud k řešení rovnice přičteme řešení asociované homogenní rovnice (se stejným operátorem na levé straně, ale nulou na pravé straně), dostaneme řešení stejné rovnice.
@@ -294,6 +135,12 @@ Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
 * Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením. 
 * Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice. 
 * U nehomogenní rovnice se úloha najít všechna řešení dá rozdělit na dvě dílčí úlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho řešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
+
+
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/Linearita_DR.png
+Princip superpozice umožňuje sestavit libovolné řešení z několika dílčích řešení téže nebo příbuzné rovnice. Definuje způsob, jak seskládat řešení z jakýchsi dílčích stavebních bloků. 
+```
+
 
 ### Příklad využití linearity v jedné dimenzi
 

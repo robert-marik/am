@@ -47,15 +47,19 @@ $$\begin{equation*}
 \end{equation*}$$
 
 Pokud pravou stranu přepíšeme do tvaru 
+
 $$\begin{equation*}
   % \frac{\sin(\phi+\Delta\phi)-\sin\phi}{\Delta x}=
   \frac{\sin(\phi+\Delta\phi)-\sin\phi}{\Delta \phi}\frac{\Delta \phi}{\Delta x}
 \end{equation*}$$ 
+
 a v limitě stáhneme velikost uvažovaného elementu
 k nule, dostáváme napravo výraz známý z definice derivace
-$$\begin{equation*}
-  \frac{\partial \sin(\phi)}{\partial \phi}\frac{\partial \phi}{\partial x}\text{\quad tj.\quad }\cos(\phi)\frac{\partial \phi}{\partial x}.
-\end{equation*}$$ 
+
+$$
+  \frac{\partial \sin(\phi)}{\partial \phi}\frac{\partial \phi}{\partial x}\quad\text{ tj.}\quad \cos(\phi)\frac{\partial \phi}{\partial x}.
+$$
+
 Potřebujeme nyní vyjádřit výraz
 $\frac{\partial \phi}{\partial x}$. Ze vztahu
 $\tan \phi=\frac {\partial u}{\partial x}$ derivováním podle $x$
@@ -69,7 +73,7 @@ $$\begin{equation*}
 \cos(\phi)\approx \cos(0)+(\cos(\phi))'{\Bigl.\Bigr|}_{\phi=0}(\phi -0)= 1+\sin(\phi){\Bigl.\Bigr|}_{\phi=0}\phi=1.
 \end{equation*}$$ 
 $$
-\cos(\phi)\approx \cos(0)+(\cos(\phi))'\Bigr|_{\phi=0}(\phi -0)\\= 1+\sin(\phi)\Bigr|_{\phi=0}\phi=1.
+\cos(\phi)\approx \cos(0)+(\cos(\phi))'\Bigr|_{\phi=0}(\phi -0)= 1+\sin(\phi)\Bigr|_{\phi=0}\phi=1.
 $$ 
 Tím se pravá strana rovnice zjednoduší na
 $\frac {\partial^2

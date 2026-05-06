@@ -19,20 +19,23 @@ v bodě $x$ element o délce $\Delta
 x$. Výchylku z rovnovážného stavu označme $u$. Dále označme
 $\vec {\mathcal T}$ sílu, která v tomto bodě napíná strunu, vnitřní
 napětí ve struně. Tento vektor má podél struny konstantní velikost a
-směr se mění podle zakřivení struny. Označíme-li $\phi$ úhel mezi
+směr se mění podle zakřivení struny. Označíme-li $\varphi$ úhel mezi
 vektorem $\vec {\mathcal T}$ a vodorovným směrem, je
-$\tan \phi=\frac {\partial
-  u}{\partial x}$ (derivace je směrnice tečny). Na levý konec působí
+$$
+\tan \varphi=\frac {\partial
+  u}{\partial x}
+$$
+(derivace je směrnice tečny). Na levý konec působí
 síla $\vec {\mathcal T}_1$, kterou pro další počítání rozložíme do
 vodorovného a svislého směru. Doleva působí síla o velikosti
-$\mathcal T\cos\phi$ a dolů síla $\mathcal T\sin\phi$. Podobně, na pravý
-konec, kde je směrnice tečny $\phi+\Delta\phi$ působí doprava síla
-$\mathcal{T}\cos(\phi+\Delta\phi)$ a nahoru síla
-$\mathcal T\sin(\phi+\Delta\phi)$. Protože se element pohybuje ve
+$\mathcal T\cos\varphi$ a dolů síla $\mathcal T\sin\varphi$. Podobně, na pravý
+konec, kde je směrnice tečny $\varphi+\Delta\varphi$ působí doprava síla
+$\mathcal{T}\cos(\varphi+\Delta\varphi)$ a nahoru síla
+$\mathcal T\sin(\varphi+\Delta\varphi)$. Protože se element pohybuje ve
 svislém směru, podle Newtonova pohybového zákona platí
 
 $$
- m\frac{\partial ^2u}{\partial t^2}=\mathcal T\sin(\phi+\Delta\phi)-\mathcal T\sin\phi,
+ m\frac{\partial ^2u}{\partial t^2}=\mathcal T\sin(\varphi+\Delta\varphi)-\mathcal T\sin\varphi,
 $$ 
 
 kde $m$ je hmotnost uvažovaného elementu. 
@@ -43,37 +46,34 @@ poloze (bez deformace) je přibližně $\Delta x$, je možno vyjádřit
 hmotnost jako $m=\rho\Delta x$ a dostáváme po úpravě vztah
 
 $$\begin{equation*}
-  \frac {\rho}{\mathcal T}\frac{\partial ^2u}{\partial t^2}=\frac{\sin(\phi+\Delta\phi)-\sin\phi}{\Delta x}
+  \frac {\rho}{\mathcal T}\frac{\partial ^2u}{\partial t^2}=\frac{\sin(\varphi+\Delta\varphi)-\sin\varphi}{\Delta x}.
 \end{equation*}$$
 
 Pokud pravou stranu přepíšeme do tvaru 
 
 $$\begin{equation*}
-  % \frac{\sin(\phi+\Delta\phi)-\sin\phi}{\Delta x}=
-  \frac{\sin(\phi+\Delta\phi)-\sin\phi}{\Delta \phi}\frac{\Delta \phi}{\Delta x}
+  % \frac{\sin(\varphi+\Delta\varphi)-\sin\varphi}{\Delta x}=
+  \frac{\sin(\varphi+\Delta\varphi)-\sin\varphi}{\Delta \varphi}\frac{\Delta \varphi}{\Delta x}
 \end{equation*}$$ 
 
 a v limitě stáhneme velikost uvažovaného elementu
 k nule, dostáváme napravo výraz známý z definice derivace
 
 $$
-  \frac{\partial \sin(\phi)}{\partial \phi}\frac{\partial \phi}{\partial x}\quad\text{ tj.}\quad \cos(\phi)\frac{\partial \phi}{\partial x}.
+  \frac{\partial \sin(\varphi)}{\partial \varphi}\frac{\partial \varphi}{\partial x}\quad\text{ tj.}\quad \cos(\varphi)\frac{\partial \varphi}{\partial x}.
 $$
 
 Potřebujeme nyní vyjádřit výraz
-$\frac{\partial \phi}{\partial x}$. Ze vztahu
-$\tan \phi=\frac {\partial u}{\partial x}$ derivováním podle $x$
+$\frac{\partial \varphi}{\partial x}$. Ze vztahu
+$\tan \varphi=\frac {\partial u}{\partial x}$ derivováním podle $x$
 dostáváme $$\begin{equation*}
-  \frac{1}{\cos^2 \phi}\frac{\partial \phi}{\partial x}=\frac {\partial^2 u}{\partial x^2}
+  \frac{1}{\cos^2 \varphi}\frac{\partial \varphi}{\partial x}=\frac {\partial^2 u}{\partial x^2}
 \end{equation*}$$
 a za předpokladu malých výchylek nahradíme
 v předchozích dvou vzorcích funkci kosinus její lineární aproximací
-v okolí nuly: 
-$$\begin{equation*}
-\cos(\phi)\approx \cos(0)+(\cos(\phi))'{\Bigl.\Bigr|}_{\phi=0}(\phi -0)= 1+\sin(\phi){\Bigl.\Bigr|}_{\phi=0}\phi=1.
-\end{equation*}$$ 
+v okolí nuly vztahem
 $$
-\cos(\phi)\approx \cos(0)+(\cos(\phi))'\Bigr|_{\phi=0}(\phi -0)= 1+\sin(\phi)\Bigr|_{\phi=0}\phi=1.
+\cos(\varphi)\approx \cos(0)+(\cos(\varphi))'\Bigr|_{\varphi=0}(\varphi -0)= 1+\sin(\varphi)\Bigr|_{\varphi=0}\varphi=1.
 $$ 
 Tím se pravá strana rovnice zjednoduší na
 $\frac {\partial^2
@@ -82,16 +82,19 @@ $\frac {\partial^2
 \end{equation*}$$ 
 Toto je rovnice popisující kmitavý pohyb struny. Ve
 vícerozměrném případě je situace obdobná, pouze na pravé straně
-dostaneme Laplaceův operátor a výsledná rovnice $$\begin{equation}
-   \frac{\partial ^2u}{\partial t^2}=\frac {\cal T}{\rho}\nabla^2 u.
-\end{equation}$$ 
+dostaneme Laplaceův operátor a výsledná rovnice 
+$$
+   \frac{\partial ^2u}{\partial t^2}=\frac {\cal T}{\rho}\nabla^2 u
+$$ 
 se nazývá *vlnová rovnice*.
 
 Po přeznačení je možno vlnovou rovnici zapsat ve tvaru
-$$\begin{equation}
+$$
    \frac{\partial ^2u}{\partial t^2}=c^2\nabla^2 u,
-\end{equation}$$ 
+$$ 
 kde $c$ je kladná konstanta. 
+
+
 
 <!--
 Nechť $f$ je libovolná
@@ -126,50 +129,63 @@ hustotě $\rho$ má stejný tvar, přičemž $c=\sqrt{E}\rho$ je rychlost šíř
 Trojrozměrná analogie této rovnice je vhodná pro popis elastických kmitů
 (chvění) v tělese.
 
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/rovnice_mat_fyziky.png
+```
 
 ## Fourierova metoda (separace proměnných)
 
 Jedna z nejjednodušších metod řešení parciálních diferenciálních
 rovnic spočívá v tom, že se řešení rovnic snažíme najít v nějakém
 konkrétním tvaru, který nám umožní rovnici redukovat na několik rovnic
-jednodušších. Je možné ji použít i pro rovnici vedení tepla, i pro vlnovou rovnici. 
+jednodušších. Je možné ji použít i pro rovnici vedení tepla, i pro vlnovou rovnici. Ukážeme ji na rovnici vedení tepla, protože obsahuje jednodušší závislost na čase - je zde derivace pouze prvního řádu.
+
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/PDE_separace.png
+```
 
 Uvažujme šíření tepla v tyči jednotkové délky bez vnitřních zdrojů
-tepelné energie, popsané diferenciální rovnicí $$\begin{equation}
+tepelné energie, popsané po případné transformaci jednotek diferenciální rovnicí 
+$$
   \frac {\partial u}{\partial t}=  \frac {\partial^2 u}{\partial x^2}.
-\end{equation}$$ Pro jednoznačný popis děje je nutno zadat počáteční
-teplotu $\phi(x)$ ve všech bodech tyče a podmínky, které udávají,
+$$ 
+Pro jednoznačný popis děje je nutno zadat počáteční
+teplotu $\varphi(x)$ ve všech bodech tyče a podmínky, které udávají,
 v jakém prostředí se tyč nachází -- například teplotu konců tyče. Máme
 tedy podmínky 
-$$\begin{equation}
-  u(x,0)=\phi(x),\quad u(0,t)=u_0(t),\quad u(1,t)=u_1(t).
-\end{equation}$$ 
+$$
+  u(x,0)=\varphi(x),\quad u(0,t)=u_0(t),\quad u(1,t)=u_1(t).
+$$ 
 Pro jednoduchost uvažujme homogenní okrajové podmínky
 $u(0,t)=0=u(1,t)$. Řešení $u$ budeme hledat ve tvaru funkce
-$$\begin{equation*}
+$$
   u(x,t)=X(x)T(t),
-\end{equation*}$$ 
+$$ 
 kde $X$ a $T$ jsou funkce jedné proměnné. V tomto
-označení platí $\frac{\partial u}{\partial t}=X(x)T'(t)$ a
-$\frac{\partial^2
-  u}{\partial x^2}=X''(x)T(t)$ a po dosazení do
+označení platí 
+$$\frac{\partial u}{\partial t}=X(x)T'(t)
+\quad\text{a}\quad
+\frac{\partial^2
+  u}{\partial x^2}=X''(x)T(t)
+$$ 
+a po dosazení do
 rovnice a po vydělení faktorem $X(x)T(t)$ dostaneme
-$$\begin{equation*}
+$$
   \frac {T'(t)}{T(t)}=\frac {X''(x)}{X(x)}.
-\end{equation*}$$ 
+$$ 
 Protože levá strana závisí pouze na $t$ a pravá strana
 pouze na $x$, musí být obě strany rovny stejné konstantě. Tuto konstantu
 zapíšeme z důvodů které budou patrné později jako $-\lambda^2$.
 Z počátečních a okrajových podmínek naložených na funkce $u$ plyne, že
-funkce $X$ musí splňovat $$\begin{equation}
+funkce $X$ musí splňovat 
+$$
   X(0)=0=X(1).
-\end{equation}$$ Funkce $X$ a $T$ tedy musí splňovat rovnice
+$$ 
+Funkce $X$ a $T$ tedy musí splňovat vztahy
 $$\begin{equation*}
-  T'=-\lambda^2 T, \quad X''+\lambda^2 X=0
+  T'=-\lambda^2 T, \quad X''+\lambda^2 X=0, 
+  \quad X(0)=0=X(1).
 \end{equation*}
 $$ 
-a podmínku na okrajích.
-. Rovnice $$\begin{equation*}
+Rovnice $$\begin{equation*}
   T'=-\lambda^2 T
 \end{equation*}$$ je lineární a její obecné řešení je libovolný násobek
 funkce $T(t)=e^{-\lambda^2 t}$. Úloha najít funkci vyhovující rovnici
@@ -212,9 +228,9 @@ dostáváme řešení $$\begin{equation*}
 \end{equation*}$$
 
 Protože máme zadánu počáteční podmínku
-ve tvaru $u(x,0)=\phi(x)$, potřebujeme najít
+ve tvaru $u(x,0)=\varphi(x)$, potřebujeme najít
 konstanty $C_k$ takové, že platí $$\begin{equation*}
-  \sum_{k=1}^\infty C_k\sin(k~\pi x)=\phi(x).
+  \sum_{k=1}^\infty C_k\sin(k\pi x)=\varphi(x).
 \end{equation*}$$ Tuto úlohu budeme řešit v následující podkapitole.
 
 ## Fourierův rozvoj periodické funkce
@@ -228,9 +244,11 @@ apod.
 
 Při řešení rovnic matematické fyziky řešíme opačný problém: pro zadanou
 funkci $f(x)$ na intervalu $[-\pi,\pi]$ chceme nalézt koeficienty $a_i$,
-$b_i$ tak, aby na tomto intervalu platilo $$\begin{equation*}
+$b_i$ tak, aby na tomto intervalu platilo 
+$$
   f(x)=\frac{a_0}2+\sum_{k=1}^\infty\left(a_k\cos(kx)+b_k\sin(kx)\right).
-\end{equation*}$$ Ukazuje se, že tento zápis funkce $f$ pomocí
+$$ 
+Ukazuje se, že tento zápis funkce $f$ pomocí
 goniometrických funkcí je možný, pokud použijeme následující volbu
 koeficientů $$\begin{align*}
   a_0&=\frac 1\pi\int_{-\pi}^\pi f(x)\,\mathrm dx\\
@@ -239,52 +257,58 @@ koeficientů $$\begin{align*}
 \end{align*}$$ Tyto vztahy je možno zobecnit i na jiné intervaly než
 $[-\pi,\pi]$ a také pro jiné funkce než goniometrické -- je možné použít
 například systém všech vlastních funkcí okrajové úlohy. V našem případě
-je možné ukázat, že pokud platí $$\begin{equation*}
-  C_k=2\int_{0}^1\phi(x)\sin(k\pi x)\,\mathrm dx,
-\end{equation*}$$ potom na intervalu $[0,1]$ platí $$\begin{equation*}
-  \sum_{k=1}^\infty C_k\sin(k\pi x)=\phi(x).
-\end{equation*}$$ 
+je možné ukázat, že pokud platí 
+$$
+  C_k=2\int_{0}^1\varphi(x)\sin(k\pi x)\,\mathrm dx,
+$$ 
+potom na intervalu $[0,1]$ platí 
+$$
+  \sum_{k=1}^\infty C_k\sin(k\pi x)=\varphi(x).
+$$ 
 Máme tedy koeficienty $C_k$, které je možno použít pro
 konečný zápis řešení naší úlohy.
 
 
 ### Fourierova metoda (pokračování)
 
-Řešení rovnice, které splňuje podmínky
-je $$\begin{equation*}
+Řešení rovnice vedení tepla, které splňuje zadané počáteční a okrajové podmínky
+je 
+$$
   u(x,t)=\sum_{k=1}^\infty C_k\sin(k\pi x)e^{-\lambda^2 t},
-\end{equation*}$$ kde $$\begin{equation*}
-  C_k=2\int_{0}^1\phi(x)\sin(k\pi x)\,\mathrm dx.
-\end{equation*}$$
+$$ 
+kde 
+$$
+  C_k=2\int_{0}^1\varphi(x)\sin(k\pi x)\,\mathrm dx.
+$$
 
 Podobně, kmity struny jednotkové délky, popsané vlnovou rovnicí
-$$\begin{equation*}
+$$
   \frac{\partial ^2u}{\partial t^2}=c^2\frac{\partial ^2u}{\partial x^2},
-\end{equation*}$$ 
+$$ 
 s okrajovými podmínkami 
-$$\begin{equation*}
+$$
   u(0,t)=0=u(1,t)
-\end{equation*}$$ 
+$$ 
 (struna upevněná na koncích) a počátečními podmínkami
-$$\begin{equation*}
-  u(x,0)=\phi(x),\quad \frac{\partial u}{\partial t}(x,0)=\psi(x).
-\end{equation*}$$ 
+$$
+  u(x,0)=\varphi(x),\quad \frac{\partial u}{\partial t}(x,0)=\psi(x).
+$$ 
 (počáteční poloha a rychlost všech bodů struny) jsou
-dány vztahem $$\begin{equation*}
+dány vztahem 
+$$
   u(x,t)=\sum_{k=1}^\infty\left(a_n\cos(k\pi t)+b_n\sin(k\pi t)\right)\sin(k\pi x),
-\end{equation*}$$
+$$
 kde 
-$$\begin{equation*}
-  a_k=2\int_0^1\phi(x)\sin(k\pi x)\,\mathrm dx
-\end{equation*}
+$$
+  a_k=2\int_0^1\varphi(x)\sin(k\pi x)\,\mathrm dx
 $$ 
 a 
-$$\begin{equation*}
-  b_k=2\int_0^1\psi(x)\cos(k\pi x)\,\mathrm dx\end{equation*}
+$$
+  b_k=2\int_0^1\psi(x)\cos(k\pi x)\,\mathrm dx.
 $$
 
 
-## Separace proměnných u parciálních diferenciálních rovnic
+## Separace proměnných u parciálních diferenciálních rovnic (původní zkrácená verze)
 
 https://youtu.be/wfvY6bwlxaw
 

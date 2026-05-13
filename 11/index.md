@@ -361,6 +361,10 @@ Potom obecné řešení rovnice {eq}`11-1` je
 $$y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.$$
 ```
 
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/LDE_second_order.png
+
+```
+
 
 ## Nehomogenní LDE 2. řádu
 
@@ -414,6 +418,10 @@ rovnice {eq}`11D`, které splňuje podmínky {eq}`11DIC` se nazývá (Dirichleto
 *okrajová úloha*.
 ```
 
+```{figure} https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/Dirichletova_uloha.png
+
+U Dirichletovy úlohy je důležité rozlišit, zda existuje pouze triviální řešení, nebo zda jsou k dispozici i netriviální řešení.
+```
 
 Odlišnost Dirichletovy úlohy od (Cauchyovy) počáteční úlohy je v tom,
 že nezadáváme funkční hodnotu a derivaci v jednom bodě, ale funkční

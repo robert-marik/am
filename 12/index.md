@@ -298,6 +298,10 @@ $$
  Ukázka programu pro modelování pomocí metody konečných prvků (FEM). V tomto případě je modelován tříbodově podepřený nosník zatížený silou uprostřed. Program umožňuje měnit parametry nosníku a zatížení a okamžitě vidět výsledky a identifikovat kritická místa konstrukce.
 ```
 
+```{figure} beam_smyk.png
+  Smykové namáhání není symetrické, ale antisymetrické.
+```
+
 </div>
 
 Výše uvedený postup tvoří jádro metody konečných prvků (angl. _finite element
@@ -322,6 +326,133 @@ volnost diskretizaci. Metoda konečných diferencí vyžaduje pravidelnou síť 
 kdežto metoda konečných prvků umožňuje využít nepravidelnou síť a přizpůsobit
 hustotu bodů místním potřebám. To je výhodné například při zjemnění
 diskretizace v místech, kde se očekávají velké změny řešení.
+
+Matematicky se například při řešení úlohy statické rovnováhy používá popis stavu
+napjatosti a deformace pomocí tenzorů napětí ($\sigma$) a deformace ($\varepsilon$). 
+
+<div class='obtekat'>
+
+```{figure} stress.svg
+  Tenzor napětí $\sigma$ popisuje vnitřní síly v tělese. Komponenty jsou síly působící na jednotku plochy a rozlišujeme normálové a smykové síly.
+```
+
+</div>
+
+Tenzor napětí udává normálovou nebo tečnou sílu působící v tělese na jednotku
+plochy. Zpravidla tyto síly modelujeme na reprezentativním elementu tělesa ve
+tvaru krychle.
+
+$$
+\sigma = \begin{pmatrix}
+\sigma_x & \sigma_{xy} & \sigma_{xz}\cr
+\sigma_{xy} & \sigma_y & \sigma_{yz}\cr
+\sigma_{xz} & \sigma_{xy} & \sigma_{z}
+\end{pmatrix}
+$$
+
+Tenzor deformace popisuje, jak těleso mění tvar. I zde sledujeme normálové a
+smykové komponenty. Ty jsou definovány pomocí vektoru posunutí $\vec u(x,y,z)$
+vztahem 
+
+$$\varepsilon_{ij} = \frac{1}{2}\left(\frac{\partial u_i}{\partial x_j} +
+\frac{\partial u_j}{\partial x_i}\right)$$
+
+$$
+\varepsilon = \begin{pmatrix}
+\varepsilon_x & \varepsilon_{xy} & \varepsilon_{xz}\cr
+\varepsilon_{xy} & \varepsilon_y & \varepsilon_{yz}\cr
+\varepsilon_{xz} & \varepsilon_{xy} & \varepsilon_{z}
+\end{pmatrix}
+$$
+
+Vztah mezi napětím a deformací (Hookův zákon) je pro lineární materiály dán vztahem
+$$\sigma_{ij} = \sum_{k,l}C_{ijkl} \varepsilon_{kl},$$
+kde $C_{ijkl}$ jsou materiálové konstanty, které charakterizují materiálové
+vlastnosti tělesa. Pro praktické účely je vhodnější tenzory přepsat použitím
+Voigtovy notace na vektory 
+
+$$\varepsilon = \left(
+    \begin{matrix}
+    \varepsilon_x \\
+    \varepsilon_y \\
+    \varepsilon_z \\
+    \varepsilon_{yz} \\
+    \varepsilon_{xz} \\
+    \varepsilon_{xy}
+     \end{matrix} 
+\right)
+\quad \text{a} \quad
+\sigma = \left(
+     \begin{matrix}
+    \sigma_x \\
+    \sigma_y \\
+    \sigma_z \\
+    \sigma_{yz} \\
+    \sigma_{xz} \\
+    \sigma_{xy} 
+     \end{matrix}
+\right).
+$$
+
+Hookův zákon potom zpravidla píšeme ve tvaru obsahujícím dobře měřitelné
+materiálové parametry, jako jsou Youngův modul pružnosti $E$, smykový modul $G$ a Poissonův poměr
+$\nu$.
+
+$$
+\left(
+    \begin{matrix}
+    \varepsilon_x \\
+    \varepsilon_y \\
+    \varepsilon_z \\
+    \varepsilon_{yz} \\
+    \varepsilon_{xz} \\
+    \varepsilon_{xy}
+     \end{matrix} 
+\right)
+=
+\left(
+    \begin{matrix}
+    \frac 1{E_x} & -\frac{\nu_{yx}}{E_y} & -\frac{\nu_{zx}}{E_z} & 0 & 0 & 0 \\
+     & \frac 1{E_y} & -\frac{\nu_{zy}}{E_z} & 0 & 0  & 0 \\
+     &  & \frac 1{E_z} & 0 & 0 & 0 \\
+     &  & & \frac 1{G_{yz}} & 0 & 0 \\
+     \rlap{\text{symmetric}} & & &  & \frac 1{G_{xz}} & 0 \\
+     &  &  &  &  & \frac 1{G_{xy}} \\
+     \end{matrix} 
+\right)
+\left(
+     \begin{matrix}
+    \sigma_x \\
+    \sigma_y \\
+    \sigma_z \\
+    \sigma_{yz} \\
+    \sigma_{xz} \\
+    \sigma_{xy} 
+     \end{matrix}
+\right)
+$$
+
+Poznamenejme, diagonálnost pravého dolního rohu plyne z poznatku, že pro většinu
+materiálů se smykové namáhání projevuje pouze smykovou deformací v rovině, ve
+které působí.
+
+Při vhodné volbě souřadné soustavy se smykové namáhání neprojevuje normálovou
+deformací a normálové namáhání se neprojevuje smykovou deformací. Proto
+zpravidla předpokládáme, že pravý horní a levý dolní blok matice v Hookově
+zákonu je nulový. 
+
+Pro statickou rovnováhu platí, že vnitřní síly musí být v rovnováze s vnějšími
+silami, což se matematicky vyjadřuje pomocí rovnic kontinuity. Tyto rovnice mají
+tvar $$\sum_{j}\frac{\partial \sigma_{ij}}{\partial x_j} + f_i = 0,$$ kde $f_i$ jsou
+$i$-té komponenty objemové síly působící na těleso. Pro řešení této rovnice
+pomocí metody konečných prvků je nutné převést ji na slabou formulaci, což
+zahrnuje integraci a použití vhodných testovacích funkcí. Po diskretizaci pomocí
+bázových funkcí a volbě testovacích funkcí se získá soustava lineárních rovnic
+pro neznámé koeficienty v rozvoji řešení podle bázových funkcí, kterou je možné
+numericky vyřešit.
+
+
+
 
 ````{admonition} Poznámka.
 :nonumber:

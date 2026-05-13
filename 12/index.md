@@ -348,7 +348,14 @@ $$
 \sigma_{xy} & \sigma_y & \sigma_{yz}\cr
 \sigma_{xz} & \sigma_{xy} & \sigma_{z}
 \end{pmatrix}
+=\begin{pmatrix}
+\sigma_{11} & \sigma_{12} & \sigma_{13}\cr
+\sigma_{12} & \sigma_{22} & \sigma_{23}\cr
+\sigma_{13} & \sigma_{23} & \sigma_{33}
+\end{pmatrix}
 $$
+
+První uvedená notace se používá pro souřadné osy $x$, $y$ a $z$, zatímco druhá notace používá obecnější označení souřadných os $x_1$, $x_2$ a $x_3$ a je vhodná pro elegantní zápis některých identit. (Viz například definice tenzoru deformace níže.) 
 
 Tenzor deformace popisuje, jak těleso mění tvar. I zde sledujeme normálové a
 smykové komponenty. Ty jsou definovány pomocí vektoru posunutí $\vec u(x,y,z)$
@@ -363,12 +370,17 @@ $$
 \varepsilon_{xy} & \varepsilon_y & \varepsilon_{yz}\cr
 \varepsilon_{xz} & \varepsilon_{xy} & \varepsilon_{z}
 \end{pmatrix}
+=\begin{pmatrix}
+\varepsilon_{11} & \varepsilon_{12} & \varepsilon_{13}\cr
+\varepsilon_{12} & \varepsilon_{22} & \varepsilon_{23}\cr
+\varepsilon_{13} & \varepsilon_{23} & \varepsilon_{33}
+\end{pmatrix}
 $$
 
 Vztah mezi napětím a deformací (Hookův zákon) je pro lineární materiály dán vztahem
 $$\sigma_{ij} = \sum_{k,l}C_{ijkl} \varepsilon_{kl},$$
 kde $C_{ijkl}$ jsou materiálové konstanty, které charakterizují materiálové
-vlastnosti tělesa. Pro praktické účely je vhodnější tenzory přepsat použitím
+vlastnosti tělesa. Pro praktické účely je vhodnější tenzory napětí a deformace přepsat použitím
 Voigtovy notace na vektory 
 
 $$\varepsilon = \left(
@@ -395,7 +407,7 @@ $$\varepsilon = \left(
 $$
 
 Hookův zákon potom zpravidla píšeme ve tvaru obsahujícím dobře měřitelné
-materiálové parametry, jako jsou Youngův modul pružnosti $E$, smykový modul $G$ a Poissonův poměr
+materiálové parametry, jako jsou Youngův modul pružnosti $E$, smykový modul $G$ a Poissonův podíl
 $\nu$.
 
 $$
@@ -441,8 +453,21 @@ deformací a normálové namáhání se neprojevuje smykovou deformací. Proto
 zpravidla předpokládáme, že pravý horní a levý dolní blok matice v Hookově
 zákonu je nulový. 
 
+V komponentách má Hookův zákon tvar
+$$\varepsilon_x = \frac 1{E_x}\sigma_x - \frac{\nu_{yx}}{E_y}\sigma_y - \frac{\nu_{zx}}{E_z}\sigma_z,$$
+$$\varepsilon_y = -\frac{\nu_{xy}}{E_x}\sigma_x + \frac 1{E_y}\sigma_y - \frac{\nu_{zy}}{E_z}\sigma_z,$$
+$$\varepsilon_z = -\frac{\nu_{xz}}{E_x}\sigma_x - \frac{\nu_{ yz}}{E_y}\sigma_y + \frac 1{E_z}\sigma_z,$$
+$$\varepsilon_{yz} = \frac 1{G_{yz}}\sigma_{yz},$$
+$$\varepsilon_{xz} = \frac 1{G_{xz}}\sigma_{xz},$$
+$$\varepsilon_{xy} = \frac 1{G_{xy}}\sigma_{xy}.$$  
+
+Protože je matice z Hookova zákona symetrická, musí být splněny podmínky $$ \frac{\nu_{xy}}{E_x} = \frac{\nu_{yx}}{E_y}, \quad \frac{\nu_{xz}}{E_x} = \frac{\nu_{zx}}{E_z}, \quad \frac{\nu_{yz}}{E_y} = \frac{\nu_{zy}}{E_z}.$$ Odsud plynou vztahy $$
+\frac{\nu_{xy}}{\nu_{yx}} = \frac{E_x}{E_y}, \quad \frac{\nu_{xz}}{\nu_{zx}} = \frac{E_x}{E_z}, \quad \frac{\nu_{yz}}{\nu_{zy}} = \frac{E_y}{E_z}.$$
+Pro anizotropní materiály zpravidla volíme souřadné osy tak, že $$E_x > E_y > E_z$$ a z toho plyne, že $$\nu_{xy} > \nu_{yx}, \quad \nu_{xz} > \nu_{zx}, \quad \nu_{yz} > \nu_{zy}.$$ V tomto smyslu se Poissonova čísla nazývají velké a malé Poissonovo číslo. Například $\nu_{xy}$ je velké Poissonovo číslo, zatímco $\nu_{yx}$ je malé Poissonovo číslo. Pro dřevo je $x=L$ směr vláken, $y=R$ směr radiální a $z=T$ směr tangenciální. Pro dřevo jsou tedy $\nu_{LR}$ , $\nu_{LT}$ a $\nu_{RT}$ velká Poissonova čísla, zatímco $\nu_{RL}$, $\nu_{TL}$ a $\nu_{TR}$ jsou malá Poissonova čísla.
+
+
 Pro statickou rovnováhu platí, že vnitřní síly musí být v rovnováze s vnějšími
-silami, což se matematicky vyjadřuje pomocí rovnic kontinuity. Tyto rovnice mají
+silami, což se matematicky vyjadřuje pomocí rovnic kontinuity pro jednotlivé komponenty. Tyto rovnice mají
 tvar $$\sum_{j}\frac{\partial \sigma_{ij}}{\partial x_j} + f_i = 0,$$ kde $f_i$ jsou
 $i$-té komponenty objemové síly působící na těleso. Pro řešení této rovnice
 pomocí metody konečných prvků je nutné převést ji na slabou formulaci, což
@@ -450,12 +475,4 @@ zahrnuje integraci a použití vhodných testovacích funkcí. Po diskretizaci p
 bázových funkcí a volbě testovacích funkcí se získá soustava lineárních rovnic
 pro neznámé koeficienty v rozvoji řešení podle bázových funkcí, kterou je možné
 numericky vyřešit.
-
-
-
-
-````{admonition} Poznámka.
-:nonumber:
-Metodu podrobněji rozebereme a zařadíme do širšího kontextu numerických metod při studiu numerických metod pro parciální diferenciální rovnice v poslední přednášce semestru.
-````
 

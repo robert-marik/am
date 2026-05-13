@@ -1,0 +1,860 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-05-06T09:56:17+02:00" />
+    <title>13. Metody řešení diferenciálních rovnic 2 &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=0f3dec7d"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '13/index';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="1. Parciální derivace" href="../cviceni/cviceni01.html" />
+    <link rel="prev" title="12. Metody řešení diferenciálních rovnic 1" href="../12/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="06.05.2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/index.html">12. Metody řešení diferenciálních rovnic 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Metody řešení diferenciálních rovnic 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Rezerva 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Rezerva 2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Metody řešení diferenciálních rovnic 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vlnova-rovnice">13.1. Vlnová rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierova-metoda-separace-promennych">13.2. Fourierova metoda (separace proměnných)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourieruv-rozvoj-periodicke-funkce">13.3. Fourierův rozvoj periodické funkce</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierova-metoda-pokracovani">13.3.1. Fourierova metoda (pokračování)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separace-promennych-u-parcialnich-diferencialnich-rovnic-puvodni-zkracena-verze">13.4. Separace proměnných u parciálních diferenciálních rovnic (původní zkrácená verze)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="metody-reseni-diferencialnich-rovnic-2">
+<h1><span class="section-number">13. </span>Metody řešení diferenciálních rovnic 2<a class="headerlink" href="#metody-reseni-diferencialnich-rovnic-2" title="Link to this heading">#</a></h1>
+<section id="vlnova-rovnice">
+<h2><span class="section-number">13.1. </span>Vlnová rovnice<a class="headerlink" href="#vlnova-rovnice" title="Link to this heading">#</a></h2>
+<p>Vlnová rovnice je rovnice popisující kmity strun (v jednorozměrném
+případě), membrán (ve dvourozměrném případě) nebo těles (v trojrozměrném
+případě). Odvodíme rovnici kmitání strun.</p>
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/struna.png" src="../_images/struna.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 13.1 </span><span class="caption-text">K odvození pohybové rovnice struny.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Na kmitající struně uvažujme
+v bodě <span class="math notranslate nohighlight">\(\displaystyle x\)</span> element o délce <span class="math notranslate nohighlight">\(\displaystyle \Delta
+x\)</span>. Výchylku z rovnovážného stavu označme <span class="math notranslate nohighlight">\(\displaystyle u\)</span>. Dále označme
+<span class="math notranslate nohighlight">\(\displaystyle \vec {\mathcal T}\)</span> sílu, která v tomto bodě napíná strunu, vnitřní
+napětí ve struně. Tento vektor má podél struny konstantní velikost a
+směr se mění podle zakřivení struny. Označíme-li <span class="math notranslate nohighlight">\(\displaystyle \varphi\)</span> úhel mezi
+vektorem <span class="math notranslate nohighlight">\(\displaystyle \vec {\mathcal T}\)</span> a vodorovným směrem, je
+<div class="math notranslate nohighlight">
+\[
+\tan \varphi=\frac {\partial
+  u}{\partial x}
+\]</div>
+
+(derivace je směrnice tečny). Na levý konec působí
+síla <span class="math notranslate nohighlight">\(\displaystyle \vec {\mathcal T}_1\)</span>, kterou pro další počítání rozložíme do
+vodorovného a svislého směru. Doleva působí síla o velikosti
+<span class="math notranslate nohighlight">\(\displaystyle \mathcal T\cos\varphi\)</span> a dolů síla <span class="math notranslate nohighlight">\(\displaystyle \mathcal T\sin\varphi\)</span>. Podobně, na pravý
+konec, kde je směrnice tečny <span class="math notranslate nohighlight">\(\displaystyle \varphi+\Delta\varphi\)</span> působí doprava síla
+<span class="math notranslate nohighlight">\(\displaystyle \mathcal{T}\cos(\varphi+\Delta\varphi)\)</span> a nahoru síla
+<span class="math notranslate nohighlight">\(\displaystyle \mathcal T\sin(\varphi+\Delta\varphi)\)</span>. Protože se element pohybuje ve
+svislém směru, podle Newtonova pohybového zákona platí</p>
+<div class="math notranslate nohighlight">
+\[
+ m\frac{\partial ^2u}{\partial t^2}=\mathcal T\sin(\varphi+\Delta\varphi)-\mathcal T\sin\varphi,
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\displaystyle m\)</span> je hmotnost uvažovaného elementu.</p>
+<p>Je-li
+lineární specifická hmotnost struny <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span> a délka elementu v rovnovážné
+poloze (bez deformace) je přibližně <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span>, je možno vyjádřit
+hmotnost jako <span class="math notranslate nohighlight">\(\displaystyle m=\rho\Delta x\)</span> a dostáváme po úpravě vztah</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation*}
+  \frac {\rho}{\mathcal T}\frac{\partial ^2u}{\partial t^2}=\frac{\sin(\varphi+\Delta\varphi)-\sin\varphi}{\Delta x}.
+\end{equation*}\]</div>
+<p>Pokud pravou stranu přepíšeme do tvaru</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation*}
+  % \frac{\sin(\varphi+\Delta\varphi)-\sin\varphi}{\Delta x}=
+  \frac{\sin(\varphi+\Delta\varphi)-\sin\varphi}{\Delta \varphi}\frac{\Delta \varphi}{\Delta x}
+\end{equation*}\]</div>
+<p>a v limitě stáhneme velikost uvažovaného elementu
+k nule, dostáváme napravo výraz známý z definice derivace</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{\partial \sin(\varphi)}{\partial \varphi}\frac{\partial \varphi}{\partial x}\quad\text{ tj.}\quad \cos(\varphi)\frac{\partial \varphi}{\partial x}.
+\]</div>
+<p>Potřebujeme nyní vyjádřit výraz
+<span class="math notranslate nohighlight">\(\displaystyle \frac{\partial \varphi}{\partial x}\)</span>. Ze vztahu
+<span class="math notranslate nohighlight">\(\displaystyle \tan \varphi=\frac {\partial u}{\partial x}\)</span> derivováním podle <span class="math notranslate nohighlight">\(\displaystyle x\)</span>
+dostáváme <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  \frac{1}{\cos^2 \varphi}\frac{\partial \varphi}{\partial x}=\frac {\partial^2 u}{\partial x^2}
+\end{equation*}\]</div>
+
+a za předpokladu malých výchylek nahradíme
+v předchozích dvou vzorcích funkci kosinus její lineární aproximací
+v okolí nuly vztahem
+<div class="math notranslate nohighlight">
+\[
+\cos(\varphi)\approx \cos(0)+(\cos(\varphi))'\Bigr|_{\varphi=0}(\varphi -0)= 1+\sin(\varphi)\Bigr|_{\varphi=0}\varphi=1.
+\]</div>
+
+Tím se pravá strana rovnice zjednoduší na
+<span class="math notranslate nohighlight">\(\displaystyle \frac {\partial^2
+  u}{\partial x^2}\)</span> a získáváme rovnici <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  \frac{\partial ^2u}{\partial t^2}=\frac {\cal T}{\rho} \frac {\partial^2 u}{\partial x^2}.
+\end{equation*}\]</div>
+
+Toto je rovnice popisující kmitavý pohyb struny. Ve
+vícerozměrném případě je situace obdobná, pouze na pravé straně
+dostaneme Laplaceův operátor a výsledná rovnice
+<div class="math notranslate nohighlight">
+\[
+   \frac{\partial ^2u}{\partial t^2}=\frac {\cal T}{\rho}\nabla^2 u
+\]</div>
+
+se nazývá <em>vlnová rovnice</em>.</p>
+<p>Po přeznačení je možno vlnovou rovnici zapsat ve tvaru
+<div class="math notranslate nohighlight">
+\[
+   \frac{\partial ^2u}{\partial t^2}=c^2\nabla^2 u,
+\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle c\)</span> je kladná konstanta.</p>
+<!--
+Nechť $f$ je libovolná
+dvakrát diferencovatelná funkce jedné proměnné a uvažujme jednorozměrnou
+vlnovou rovnici 
+$$\begin{equation}
+  \frac{\partial ^2u}{\partial t^2}=c^2\frac{\partial ^2u}{\partial x^2}
+\end{equation}$$ 
+a funkci dvou proměnných $u(x,t)=f(x-ct)$. Potom platí
+$$\begin{equation*}
+  \begin{aligned}
+    \frac {\partial u}{\partial x}&=f'(x-ct) ,
+    &\qquad&\frac {\partial^2
+      u}{\partial x^2}=f''(x-ct) \\
+    \frac {\partial u}{\partial
+      t}&=-cf'(x-ct),
+    &&\frac {\partial^2 u}{\partial t^2}=c^2f''(x-ct),
+  \end{aligned}
+\end{equation*}
+$$ 
+odkud snadno vidíme, že funkce $u$ je řešením rovnice ...
+Vrstevnice funkce $u(x,t)$ jsou dány rovnicí $x-ct=\text{konst}$, což
+odpovídá tomu, že bod o dané výchylce se za čas $\Delta t$ posune o
+$\Delta x=c\Delta t$. Jedná se tedy o postupnou vlnu, která se šíří
+rychlostí $c$ doprava. Podobně, funkce $v(x,c)=f(x+ct)$ je řešením
+rovnice ..., které odpovídá postupné vlně, která postupuje
+rychlostí $c$ doleva.
+-->
+<p>Rovnice popisující podélné kmity kmity tyče modulu pružnosti <span class="math notranslate nohighlight">\(\displaystyle E\)</span> a
+hustotě <span class="math notranslate nohighlight">\(\displaystyle \rho\)</span> má stejný tvar, přičemž <span class="math notranslate nohighlight">\(\displaystyle c=\sqrt{E}\rho\)</span> je rychlost šíření kmitů.
+Trojrozměrná analogie této rovnice je vhodná pro popis elastických kmitů
+(chvění) v tělese.</p>
+<figure class="align-default">
+<img alt="https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/rovnice_mat_fyziky.png" src="https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/rovnice_mat_fyziky.png" />
+</figure>
+</section>
+<section id="fourierova-metoda-separace-promennych">
+<h2><span class="section-number">13.2. </span>Fourierova metoda (separace proměnných)<a class="headerlink" href="#fourierova-metoda-separace-promennych" title="Link to this heading">#</a></h2>
+<p>Jedna z nejjednodušších metod řešení parciálních diferenciálních
+rovnic spočívá v tom, že se řešení rovnic snažíme najít v nějakém
+konkrétním tvaru, který nám umožní rovnici redukovat na několik rovnic
+jednodušších. Je možné ji použít i pro rovnici vedení tepla, i pro vlnovou rovnici. Ukážeme ji na rovnici vedení tepla, protože obsahuje jednodušší závislost na čase - je zde derivace pouze prvního řádu.</p>
+<figure class="align-default">
+<img alt="https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/PDE_separace.png" src="https://raw.githubusercontent.com/robert-marik/am-images/refs/heads/main/PDE_separace.png" />
+</figure>
+<p>Uvažujme šíření tepla v tyči jednotkové délky bez vnitřních zdrojů
+tepelné energie, popsané po případné transformaci jednotek diferenciální rovnicí
+<div class="math notranslate nohighlight">
+\[
+  \frac {\partial u}{\partial t}=  \frac {\partial^2 u}{\partial x^2}.
+\]</div>
+
+Pro jednoznačný popis děje je nutno zadat počáteční
+teplotu <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)\)</span> ve všech bodech tyče a podmínky, které udávají,
+v jakém prostředí se tyč nachází – například teplotu konců tyče. Máme
+tedy podmínky
+<div class="math notranslate nohighlight">
+\[
+  u(x,0)=\varphi(x),\quad u(0,t)=u_0(t),\quad u(1,t)=u_1(t).
+\]</div>
+
+Pro jednoduchost uvažujme homogenní okrajové podmínky
+<span class="math notranslate nohighlight">\(\displaystyle u(0,t)=0=u(1,t)\)</span>. Řešení <span class="math notranslate nohighlight">\(\displaystyle u\)</span> budeme hledat ve tvaru funkce
+<div class="math notranslate nohighlight">
+\[
+  u(x,t)=X(x)T(t),
+\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle X\)</span> a <span class="math notranslate nohighlight">\(\displaystyle T\)</span> jsou funkce jedné proměnné. V tomto
+označení platí
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=X(x)T'(t)
+\quad\text{a}\quad
+\frac{\partial^2
+  u}{\partial x^2}=X''(x)T(t)
+\]</div>
+
+a po dosazení do
+rovnice a po vydělení faktorem <span class="math notranslate nohighlight">\(\displaystyle X(x)T(t)\)</span> dostaneme
+<div class="math notranslate nohighlight">
+\[
+  \frac {T'(t)}{T(t)}=\frac {X''(x)}{X(x)}.
+\]</div>
+
+Protože levá strana závisí pouze na <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a pravá strana
+pouze na <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, musí být obě strany rovny stejné konstantě. Tuto konstantu
+zapíšeme z důvodů které budou patrné později jako <span class="math notranslate nohighlight">\(\displaystyle -\lambda^2\)</span>.
+Z počátečních a okrajových podmínek naložených na funkce <span class="math notranslate nohighlight">\(\displaystyle u\)</span> plyne, že
+funkce <span class="math notranslate nohighlight">\(\displaystyle X\)</span> musí splňovat
+<div class="math notranslate nohighlight">
+\[
+  X(0)=0=X(1).
+\]</div>
+
+Funkce <span class="math notranslate nohighlight">\(\displaystyle X\)</span> a <span class="math notranslate nohighlight">\(\displaystyle T\)</span> tedy musí splňovat vztahy
+<div class="math notranslate nohighlight">
+\[\begin{equation*}
+  T'=-\lambda^2 T, \quad X''+\lambda^2 X=0, 
+  \quad X(0)=0=X(1).
+\end{equation*}
+\]</div>
+
+Rovnice <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  T'=-\lambda^2 T
+\end{equation*}\]</div>
+ je lineární a její obecné řešení je libovolný násobek
+funkce <span class="math notranslate nohighlight">\(\displaystyle T(t)=e^{-\lambda^2 t}\)</span>. Úloha najít funkci vyhovující rovnici</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation*}
+X''+\lambda^2 X=0
+\end{equation*}\]</div>
+<p>a podmínce
+<div class="math notranslate nohighlight">
+\[\begin{equation*}
+  X(0)=0=X(1)
+\end{equation*}\]</div>
+
+se nazývá okrajová úloha a věnovali jsme se jí v kapitole o diferenciálních rovnicích druhého řádu.</p>
+<p>Netriviální řešení této úlohy existuje jen pro některé hodnoty parametru <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span>. Hodnota <span class="math notranslate nohighlight">\(\displaystyle \lambda^2\)</span>, pro kterou existuje netriviální řešení okrajové úlohy, se nazývá vlastní číslo a příslušné řešení se nazývá vlastní funkcí.</p>
+<p>Z rozboru v kapitole věnované diferenciálním rovnicím druhého řádu víme, že obecné řešení rovnice <span class="math notranslate nohighlight">\(\displaystyle X''+\lambda^2 X=0\)</span> je tvaru <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  X(x)=A\cos(\lambda x)+B\sin(\lambda x)
+\end{equation*}\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle A\)</span> a <span class="math notranslate nohighlight">\(\displaystyle B\)</span> jsou reálné konstanty. Z podmínky <span class="math notranslate nohighlight">\(\displaystyle X(0)=0\)</span> plyne, že <span class="math notranslate nohighlight">\(\displaystyle A=0\)</span>. Z podmínky <span class="math notranslate nohighlight">\(\displaystyle X(1)=0\)</span> pak plyne, že <span class="math notranslate nohighlight">\(\displaystyle B\sin(\lambda)=0\)</span>. Nechť <span class="math notranslate nohighlight">\(\displaystyle B\neq 0\)</span> (jinak by řešení bylo triviální).
+Platí tedy <span class="math notranslate nohighlight">\(\displaystyle \sin(\lambda)=0\)</span>, neboli <span class="math notranslate nohighlight">\(\displaystyle \lambda=k\pi\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je
+přirozené číslo. Vlastní hodnoty jsou tedy tvaru <div class="math notranslate nohighlight">
+\[\begin{equation*}
+\lambda^2=k^2\pi^2
+\end{equation*}\]</div>
+ a uvažovaná okrajová úloha pro libovolné přirozené
+číslo <span class="math notranslate nohighlight">\(\displaystyle k\)</span> má řešení <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  X(x)=C\sin(k\pi x),
+\end{equation*}\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle C\)</span> je reálná konstanta.</p>
+<p>Protože řešení rovnice
+hledáme ve tvaru <span class="math notranslate nohighlight">\(\displaystyle u(x,t)=X(x)T(t)\)</span>, můžeme
+výsledky předchozích odstavců shrnout do poznatku, že pro libovolnou
+konstantu <span class="math notranslate nohighlight">\(\displaystyle C_k\)</span> a libovolné přirozené číslo <span class="math notranslate nohighlight">\(\displaystyle k\)</span> je funkce
+<div class="math notranslate nohighlight">
+\[\begin{equation*}
+  C_k\sin(k\pi x)e^{-\lambda^2 t}.
+\end{equation*}\]</div>
+
+Protože rovnice
+je lineární, je řešením i libovolná lineární
+kombinace těchto funkcí. Použijeme-li všechny funkce tohoto tvaru,
+dostáváme řešení <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  u(x,t)=\sum_{k=1}^\infty C_k\sin(k\pi x)e^{-\lambda^2 t}.
+\end{equation*}\]</div>
+</p>
+<p>Protože máme zadánu počáteční podmínku
+ve tvaru <span class="math notranslate nohighlight">\(\displaystyle u(x,0)=\varphi(x)\)</span>, potřebujeme najít
+konstanty <span class="math notranslate nohighlight">\(\displaystyle C_k\)</span> takové, že platí <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  \sum_{k=1}^\infty C_k\sin(k\pi x)=\varphi(x).
+\end{equation*}\]</div>
+ Tuto úlohu budeme řešit v následující podkapitole.</p>
+</section>
+<section id="fourieruv-rozvoj-periodicke-funkce">
+<h2><span class="section-number">13.3. </span>Fourierův rozvoj periodické funkce<a class="headerlink" href="#fourieruv-rozvoj-periodicke-funkce" title="Link to this heading">#</a></h2>
+<p>Nekonečná řada goniometrických funkcí tvaru <div class="math notranslate nohighlight">
+\[\begin{equation*}
+  \frac{a_0}2+\sum_{k=1}^\infty\left(a_k\cos(k~x)+b_k\sin(k~x)\right)
+\end{equation*}\]</div>
+ může pro konkrétní hodnoty koeficientů <span class="math notranslate nohighlight">\(\displaystyle a_i\)</span>, <span class="math notranslate nohighlight">\(\displaystyle b_i\)</span>
+konvergovat k nějaké funkci <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> a za jistých podmínek je tato
+funkce dostatečně pěkná: je spojitá, je možno ji derivovat člen po členu
+apod.</p>
+<p>Při řešení rovnic matematické fyziky řešíme opačný problém: pro zadanou
+funkci <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span> na intervalu <span class="math notranslate nohighlight">\(\displaystyle [-\pi,\pi]\)</span> chceme nalézt koeficienty <span class="math notranslate nohighlight">\(\displaystyle a_i\)</span>,
+<span class="math notranslate nohighlight">\(\displaystyle b_i\)</span> tak, aby na tomto intervalu platilo
+<div class="math notranslate nohighlight">
+\[
+  f(x)=\frac{a_0}2+\sum_{k=1}^\infty\left(a_k\cos(kx)+b_k\sin(kx)\right).
+\]</div>
+
+Ukazuje se, že tento zápis funkce <span class="math notranslate nohighlight">\(\displaystyle f\)</span> pomocí
+goniometrických funkcí je možný, pokud použijeme následující volbu
+koeficientů <div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  a_0&amp;=\frac 1\pi\int_{-\pi}^\pi f(x)\,\mathrm dx\\
+  a_k&amp;=\frac 1\pi\int_{-\pi}^\pi f(x)\cos(kx)\,\mathrm dx\\
+  b_k&amp;=\frac 1\pi\int_{-\pi}^\pi f(x)\sin(kx)\,\mathrm dx.
+\end{align*}\end{split}\]</div>
+ Tyto vztahy je možno zobecnit i na jiné intervaly než
+<span class="math notranslate nohighlight">\(\displaystyle [-\pi,\pi]\)</span> a také pro jiné funkce než goniometrické – je možné použít
+například systém všech vlastních funkcí okrajové úlohy. V našem případě
+je možné ukázat, že pokud platí
+<div class="math notranslate nohighlight">
+\[
+  C_k=2\int_{0}^1\varphi(x)\sin(k\pi x)\,\mathrm dx,
+\]</div>
+
+potom na intervalu <span class="math notranslate nohighlight">\(\displaystyle [0,1]\)</span> platí
+<div class="math notranslate nohighlight">
+\[
+  \sum_{k=1}^\infty C_k\sin(k\pi x)=\varphi(x).
+\]</div>
+
+Máme tedy koeficienty <span class="math notranslate nohighlight">\(\displaystyle C_k\)</span>, které je možno použít pro
+konečný zápis řešení naší úlohy.</p>
+<section id="fourierova-metoda-pokracovani">
+<h3><span class="section-number">13.3.1. </span>Fourierova metoda (pokračování)<a class="headerlink" href="#fourierova-metoda-pokracovani" title="Link to this heading">#</a></h3>
+<p>Řešení rovnice vedení tepla, které splňuje zadané počáteční a okrajové podmínky
+je
+<div class="math notranslate nohighlight">
+\[
+  u(x,t)=\sum_{k=1}^\infty C_k\sin(k\pi x)e^{-\lambda^2 t},
+\]</div>
+
+kde
+<div class="math notranslate nohighlight">
+\[
+  C_k=2\int_{0}^1\varphi(x)\sin(k\pi x)\,\mathrm dx.
+\]</div>
+</p>
+<p>Podobně, kmity struny jednotkové délky, popsané vlnovou rovnicí
+<div class="math notranslate nohighlight">
+\[
+  \frac{\partial ^2u}{\partial t^2}=c^2\frac{\partial ^2u}{\partial x^2},
+\]</div>
+
+s okrajovými podmínkami
+<div class="math notranslate nohighlight">
+\[
+  u(0,t)=0=u(1,t)
+\]</div>
+
+(struna upevněná na koncích) a počátečními podmínkami
+<div class="math notranslate nohighlight">
+\[
+  u(x,0)=\varphi(x),\quad \frac{\partial u}{\partial t}(x,0)=\psi(x).
+\]</div>
+
+(počáteční poloha a rychlost všech bodů struny) jsou
+dány vztahem
+<div class="math notranslate nohighlight">
+\[
+  u(x,t)=\sum_{k=1}^\infty\left(a_n\cos(k\pi t)+b_n\sin(k\pi t)\right)\sin(k\pi x),
+\]</div>
+
+kde
+<div class="math notranslate nohighlight">
+\[
+  a_k=2\int_0^1\varphi(x)\sin(k\pi x)\,\mathrm dx
+\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[
+  b_k=2\int_0^1\psi(x)\cos(k\pi x)\,\mathrm dx.
+\]</div>
+</p>
+</section>
+</section>
+<section id="separace-promennych-u-parcialnich-diferencialnich-rovnic-puvodni-zkracena-verze">
+<h2><span class="section-number">13.4. </span>Separace proměnných u parciálních diferenciálních rovnic (původní zkrácená verze)<a class="headerlink" href="#separace-promennych-u-parcialnich-diferencialnich-rovnic-puvodni-zkracena-verze" title="Link to this heading">#</a></h2>
+<p><a href="https://youtu.be/wfvY6bwlxaw">Video</a></p>
+<p>Budeme se zabývat jednorozměrnou rovnicí vedení tepla ve tvaru</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.\]</div>
+<p>V
+tomto tvaru rovnice neobsahuje žádné konstanty a je to tvar, se kterým
+se pracuje ve většině matematických publikací. Reálnou rovnici vedení
+tepla převedeme do tohoto tvaru zavedením bezrozměrných veličin, což
+si ukážeme v následující přednášce. Teď si ukážeme, jak řešení rovnice
+vede na řešení LDR druhého řádu. Uvažujme pro jednoduchost okrajovou
+úlohu, kdy konce tyče jsou udržovány na nulové teplotě, tj. je-li tyč
+délky <span class="math notranslate nohighlight">\(\displaystyle l\)</span> položena v ose <span class="math notranslate nohighlight">\(\displaystyle x\)</span> tak, že levý konec je v počátku, platí pro
+teplotu <span class="math notranslate nohighlight">\(\displaystyle u(x,t)\)</span> podmínky <span class="math notranslate nohighlight">\(\displaystyle u(0,t)=u(l,t)=0\)</span> v libovolném čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span>.</p>
+<p>Budeme řešení hledat ve tvaru <span class="math notranslate nohighlight">\(\displaystyle u(x,t)=\varphi(x)\psi(t)\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle \varphi\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \psi\)</span> jsou funkcemi jedné proměnné.
+Platí
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=\varphi(x)\psi'(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi''(x) \psi(t)\]</div>
+
+a rovnice má tvar
+<div class="math notranslate nohighlight">
+\[\varphi(x)\psi'(t)=\varphi''(x)\psi (t).\]</div>
+
+Vydělením této rovnice součinem <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)\psi(t)\)</span> dostáváme
+<div class="math notranslate nohighlight">
+\[\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.\]</div>
+
+Toto je rovnice, kde levá strana je funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle t\)</span> a pravá strana funkcí proměnné <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě.
+<div class="math notranslate nohighlight">
+\[\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}=\omega.\]</div>
+</p>
+<p>Okrajové podmínky vynucují platnost vztahů <span class="math notranslate nohighlight">\(\displaystyle \varphi(0)=\varphi(l)=0\)</span>. Jesliže je v takovém případě konstanta <span class="math notranslate nohighlight">\(\displaystyle \omega\)</span> kladná, má úloha pouze nulové řešení (viz výše výpočet vlastních hodnot pro tuto úlohu). Konstanta <span class="math notranslate nohighlight">\(\displaystyle \omega\)</span> tedy musí být záporná.
+Přeznačme ji do tvaru <div class="math notranslate nohighlight">
+\[\omega = -\lambda^2\]</div>
+ Platí tedy
+<div class="math notranslate nohighlight">
+\[\frac {\psi'(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.\]</div>
+
+První rovnice představuje lineární diferenciální rovnici prvního řádu
+<div class="math notranslate nohighlight">
+\[\psi'=-\lambda^2\psi\]</div>
+
+s partikulárním řešením <span class="math notranslate nohighlight">\(\displaystyle \psi(t)=e^{-\lambda^2 t}.\)</span>
+Druhá rovnice představuje společně s okrajovou podmínkou okrajovou úlohu pro lineární diferenciální rovnici druhého řádu
+<div class="math notranslate nohighlight">
+\[\varphi''+\lambda^2\varphi=0, \quad \varphi(0)=\varphi(l)=0.\]</div>
+ Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji viděli u kmitů struny nebo u namáhání na vzpěr. Řešením je funkce <span class="math notranslate nohighlight">\(\displaystyle \varphi(x)=\sin(\lambda x)\)</span>, kde <span class="math notranslate nohighlight">\(\displaystyle \lambda\)</span> je vlastní hodnota této úlohy.
+Funkce <div class="math notranslate nohighlight">
+\[u(x,t)=\sin(\lambda x)e^{-\lambda^2 t}\]</div>
+ je tedy řešením rovnice
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.\]</div>
+
+Rovnici je možno přepsat do tvaru
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0,\]</div>
+
+kdy na levé straně stojí lineární operátor a na pravé straně je nula. Proto je každá lineární kombinace řešení opět řešením a pro libovolnou volbu konstant je funkce
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum_{\lambda}C_\lambda\sin(\lambda x)e^{-\lambda^2 t}\]</div>
+
+také řešením. Součet na pravé straně je přes všechna vlastní čísla, kterých je nekonečně mnoho.</p>
+<p>Nyní začíná být rozbor úlohy nad rámec našeho kurzu, protože se
+objevil nekonečný součet. Ukazuje se, že tento zápis je dostatečně
+bohatý na to, aby obsáhl libovolnou rozumnou počáteční podmínku a
+vzorec je tedy schopen popsat řešení úlohy pro libovolné fyzikálně
+relevantní situace. Vidíme i přímo strukturu řešení, které je jakousi
+lineární kombinací různých módů. Tato skutečnost lépe vynikne na
+analogické diferenciální rovnici kmitání struny, kdy jednotlivé módy
+přímo vnímáme sluchem: struna nemůže kmitat na libovolné frekvenci, ale
+pouze a frekvenci dané okrajovou podmínkou a na frekvencích násobných.</p>
+<p>Poznámka: Podobná situace a možnost separace proměnných je u rovnice
+kmitů struny
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}\]</div>
+
+nebo jejího zobecnění na kmity desek a chvění těles. Opět separace vede k LDR druhého řádu pro složku závisející na <span class="math notranslate nohighlight">\(\displaystyle x\)</span>. V tomto případě je druhého řádu i rovnice pro složku závislou na čase.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../12/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Metody řešení diferenciálních rovnic 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../cviceni/cviceni01.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Parciální derivace</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vlnova-rovnice">13.1. Vlnová rovnice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierova-metoda-separace-promennych">13.2. Fourierova metoda (separace proměnných)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourieruv-rozvoj-periodicke-funkce">13.3. Fourierův rozvoj periodické funkce</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fourierova-metoda-pokracovani">13.3.1. Fourierova metoda (pokračování)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separace-promennych-u-parcialnich-diferencialnich-rovnic-puvodni-zkracena-verze">13.4. Separace proměnných u parciálních diferenciálních rovnic (původní zkrácená verze)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 06.05.2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

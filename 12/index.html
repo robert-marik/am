@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+
+
+<html lang="cs" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2026-05-13T21:58:29+02:00" />
+    <title>12. Metody řešení diferenciálních rovnic 1 &#8212; Aplikovaná matematika</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=930dad14" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=4cdba38b"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/translations.js?v=0f3dec7d"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '12/index';</script>
+    <script src="../_static/custom.js?v=95412b82"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="13. Metody řešení diferenciálních rovnic 2" href="../13/index.html" />
+    <link rel="prev" title="11. Lineární diferenciální rovnice druhého řádu" href="../11/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="cs"/>
+    <meta name="docbuild:last-update" content="13.05.2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Přejít k hlavnímu obsahu</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Zpět na začátek</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Hledat v textu..."
+         aria-label="Hledat v textu..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aplikovaná matematika</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Vyhledávání</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Přednášky</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01/index.html">1. Derivace funkce více proměnných</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/index.html">2. Gradient, lineární aproximace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/index.html">3. Divergence vektorového pole, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04/index.html">4. Rotace vektorového pole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/index.html">5. Křivkový integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/index.html">6. Dvojný integrál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/index.html">7. Základní integrální věty z vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/index.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/index.html">9. Lineární operátory a lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/index.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11/index.html">11. Lineární diferenciální rovnice druhého řádu</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. Metody řešení diferenciálních rovnic 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13/index.html">13. Metody řešení diferenciálních rovnic 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cvičení</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni01.html">1. Parciální derivace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni02.html">2. Gradient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni03.html">3. Divergence, rovnice vedení tepla</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni04.html">4. Rotace, kmenová funkce gradientu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni05.html">5. Křivkové integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni06.html">6. Dvojné integrály</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni07.html">7. Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni08.html">8. Diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni09.html">9. Lineární diferenciální rovnice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni10.html">10. Autonomní rovnice a systémy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni11.html">11. Diferenciální rovnice druhého řádu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni12.html">12. Rezerva 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cviceni/cviceni13.html">13. Rezerva 2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="světlý/tmavý" aria-label="světlý/tmavý" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Vyhledávání" aria-label="Vyhledávání" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Metody řešení diferenciálních rovnic 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Obsah </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metody-pro-obycejne-diferencialni-rovnice">12.1. Metody pro obyčejné diferenciální rovnice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-ivp">12.1.1. Numerické řešení IVP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mala-odbocka-zaokrouhlovaci-chyby-v-numerickych-vypoctech">12.1.2. Malá odbočka - zaokrouhlovací chyby v numerických výpočtech</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-diferenci">12.2. Metoda konečných diferencí</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diskretizace-rovnice-vedeni-tepla-pomoci-konecnych-diferenci">12.2.1. Diskretizace rovnice vedení tepla pomocí konečných diferencí</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-prvku">12.3. Metoda konečných prvků</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slaba-formulace-rovnice">12.3.1. Slabá formulace rovnice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galerkinova-metoda">12.3.2. Galerkinova metoda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-prvku-fem">12.3.3. Metoda konečných prvků (FEM)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="metody-reseni-diferencialnich-rovnic-1">
+<h1><span class="section-number">12. </span>Metody řešení diferenciálních rovnic 1<a class="headerlink" href="#metody-reseni-diferencialnich-rovnic-1" title="Link to this heading">#</a></h1>
+<div class="admonition-anotace admonition">
+<p class="admonition-title">Anotace</p>
+<p>Ukážeme si některé metody pro numerické řešení obyčejných i parciálních
+diferenciálních rovnic. Probereme metody jako Eulerova metoda, Runge-Kuttovy metody, metody konečných diferencí, metodu konečných prvků a další. Jako doplněk si ukážeme řešení parciálních diferenciálních rovnic Fourierovou metodou separace proměnných, která umožňuje odseparovat časovou a prostorovou složku řešení a tím lépe pochopit některé vlastnosti řešení, zejména u rovnic popisujících vlnění.</p>
+</div>
+<section id="metody-pro-obycejne-diferencialni-rovnice">
+<h2><span class="section-number">12.1. </span>Metody pro obyčejné diferenciální rovnice<a class="headerlink" href="#metody-pro-obycejne-diferencialni-rovnice" title="Link to this heading">#</a></h2>
+<section id="numericke-reseni-ivp">
+<h3><span class="section-number">12.1.1. </span>Numerické řešení IVP<a class="headerlink" href="#numericke-reseni-ivp" title="Link to this heading">#</a></h3>
+<div class="obtekat"><figure><a href="https://um.mendelu.cz/manim/Diference" target=_blank><img src="https://um.mendelu.cz/manim/thumbs/Diference.jpg"></a><figcaption>Numerické řešení diferenciální rovnice je zpravidla založeno na aproximaci derivace konečnou diferencí a postupným prodlužováním řešení od počáteční podmínky směrem dopředu nebo dozadu v čase. <a href="https://user.mendelu.cz/marik/manim/Diference" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/r_Ae2mGnfFs" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
+<div class='obtekat'>
+<figure class="align-default" id="id1">
+<img alt="../_images/euler.png" src="../_images/euler.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.1 </span><span class="caption-text">Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="../_images/rk.png" src="../_images/rk.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.2 </span><span class="caption-text">Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou  barvou.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Numerické řešení diferenciálních rovnic je základním nástrojem pro ukázku průběhu simulací pro dané hodnoty parametrů a počátečních podmínek. Jedná se o velice užitečnou a široce používanou činnost při inženýrských simulacích. Neprofesionálům často musí stačit použít hotové postupy, procedury a nástroje. Například <a class="reference external" href="https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c">Python</a> je jednou z nejvhodnějších voleb.</p>
+<div class="volitelne">
+Řešení počáteční úlohy lze numericky aproximovat poměrně snadno:
+začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
+nahradíme integrální křivku její tečnou. Tím se dostaneme do dalšího
+bodu, odkud opět integrální křivku aproximujeme tečnou.  Směrnici
+tečny zjistíme z diferenciální rovnice, buď přímo z derivace (Eulerova
+metoda).
+<p>Vyjdeme-li z počáteční úlohy <div class="math notranslate nohighlight">
+\[y'=\varphi(x,y), \quad y(x_0)=y_0,\]</div>
+
+má lineární aproximace řešení v bodě <span class="math notranslate nohighlight">\(\displaystyle [x_0,y_0]\)</span> tvar <div class="math notranslate nohighlight">
+\[y=y_0+\varphi(x_0,y_0)(x-x_0).\]</div>
+
+Funkční hodnotu v bodě <span class="math notranslate nohighlight">\(\displaystyle x=x_1\)</span> označíme <span class="math notranslate nohighlight">\(\displaystyle y_1\)</span> a tento bod bude dalším  body lomené čáry, tj. <div class="math notranslate nohighlight">
+\[y_1=y_0+\varphi(x_0,y_0)(x_1-x_0).\]</div>
+
+Hodnota <span class="math notranslate nohighlight">\(\displaystyle x_1-x_0\)</span> je krok Eulerovy metody označovaný <span class="math notranslate nohighlight">\(\displaystyle h\)</span>. Tento postup opakujeme s počáteční podmínkou <span class="math notranslate nohighlight">\(\displaystyle y(x_1)=y_1\)</span>.
+Iterační formule Eulerovy metody má potom následující tvar. <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}x_{n+1}&amp;=x_n+h, \\ y_{n+1}&amp;=y_n+\varphi(x_n,y_n)h.\end{aligned}\end{split}\]</div>
+</p>
+<p>Stačí tedy mít zvolen <em>krok</em> numerické
+metody (délku intervalu, na kterém aproximaci tečnou použijeme) a
+výstupem metody bude aproximace integrální křivky pomocí lomené čáry.</p>
+<p><strong>Vylepšení</strong></p>
+<ul class="simple">
+<li><p>Pro přesnější aproximaci je možné zjemnit krok <span class="math notranslate nohighlight">\(\displaystyle h\)</span> (buď všude, nebo
+jenom tam, kde „je to potřeba“).</p></li>
+<li><p>Pro přesnější aproximaci je možné použít místo <span class="math notranslate nohighlight">\(\displaystyle \varphi(x_n,y_n)\)</span>
+lepší směrnici, která dokáže zohlednit, jestli se růst zrychluje
+nebo zpomaluje (metoda Runge Kutta druhého nebo čtvrtého řádu, …).</p></li>
+<li><p>Modely obsahující diferenciální rovnice obsahují zpravidla sadu
+parametrů charakterizujících fyzikální vlastnosti studovaných
+objektů. Pro numerické řešení musíme těmto parametrům dát konkrétní
+hodnoty a přicházíme tak o cennou informaci, jak řešení závisí na
+těchto parametrech. Vhodnou úpravou rovnice dokážeme počet parametrů
+eliminovat. Jednoduchým a často dostatečným způsobem je volba
+jednotek, obecnější metodou je transformace diferenciální rovnice
+uvedená v úvodní kapitole věnované diferenciálním rovnicím.</p></li>
+</ul>
+</div>
+<p><strong>Online řešiče ODE (numericky):</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sagecell.sagemath.org/?z=eJyFj0EKgzAQRfdC7pCdSTsVTbudO2RfREQjDY1GErXm9nU8QLv5zB_mP-YPYockMV3EfkuSZSxLo52Ap7HdOfISuKKl7WKFzxLKoqpPp8jRzDKtsDfRu8004f0Qw0mEBMcVUg7s1gbcwUx9M3s7LZGy9xr8uszrgnl0fjbNYI3r8-MFXf3kqb-82fklB9555wPmwZxUlgldXbWSRXz5j6B-SALUF0nkF_PaU9U=&amp;amp;lang=sage&amp;amp;interacts=eJyLjgUAARUAuQ==">Sage</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c">Python</a></p></li>
+</ul>
+</section>
+<section id="mala-odbocka-zaokrouhlovaci-chyby-v-numerickych-vypoctech">
+<h3><span class="section-number">12.1.2. </span>Malá odbočka - zaokrouhlovací chyby v numerických výpočtech<a class="headerlink" href="#mala-odbocka-zaokrouhlovaci-chyby-v-numerickych-vypoctech" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id3">
+<img alt="../_images/patriot.jpg" src="../_images/patriot.jpg" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.3 </span><span class="caption-text">Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Uvedli jsme, že počáteční úlohu umíme vyřešit numericky. Ukázali jsme
+si základní algoritmus (Eulerův) a řekli, že existují algoritmy
+pokročilejší. Na tomto místě upozorníme na záludnosti skryté v
+numerických výpočtech. Je iluzorní se domnívat, že zjemněním kroku při
+numerickém řešení diferenciální rovnice vždy dostaneme přesnější
+řešení. Toto platí jenom dokud se nedostaneme ke kritické hodnotě
+kroku, kdy další snižování vede k tomu, že zpřesnění díky kratšímu
+kroku se přebije akumulovanou chybou z velkého množství výpočtů nutně
+zatížených zaokrouhlováním a dalším zjemňováním přesnost ztrácíme.</p>
+<p>Zajímavá léčka je v samé podstatě výpočtů na počítači a to v
+reprezentaci desetinných čísel ve dvojkové soustavě. Například číslo
+0.1 je ve dvojkové soustavě periodické! Proto desetinásobným sečtením
+tohoto čísla ve dvojkové soustavě nedostaneme (překvapivě) jedničku! Je to podobné, jako
+bychom v námi běžně používané desítkové soustavě třikrát sečetli jednu třetinu v desetinném tvaru
+reprezentovaném konečným počtem desetinných míst, tj. například
+třikrát sečetli číslo <span class="math notranslate nohighlight">\(\displaystyle 0.33333333\)</span>. Nedostaneme přesně jedničku.</p>
+<p>Tento efekt měl i tragický důsledek. Software protiraketového
+systému Patriot počítal čas postupným přičítáním desetiny
+sekundy. Protože systém byl vytvořen a testován na mobilním zařízení,
+které se často restartovalo a běželo krátkou dobu, ničemu to
+nevadilo. Dlouhodobé nasazení systému Patriot
+ve válečné operaci na osvobození Kuvajtu   však odhalilo závažný nedostatek. Při ostrém
+nasazení systém běžel dlouho a  zaokrouhlovací chyba se kumulovala
+například 100 hodin. I když za tu dobu chyba dosáhla pouze zlomku
+sekundy, raketa letící vysokou rychlostí již byla jinde, než systém
+Patriot propočítal.  Dne 25.2.1991 systém Patriot během operace
+Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
+útočící raketu Scud a ta zabila 28 vojáků osvobozující armády a okolo
+100 osob zranila.</p>
+<p>S chybami plynoucími ze zaokrouhlování se setkáme i při výpočtech mimo modelování diferenciálních rovnic. Viz například <a class="reference external" href="https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel">Floating-point arithmetic may give
+inaccurate results in
+Excel</a>.</p>
+</section>
+</section>
+<section id="metoda-konecnych-diferenci">
+<h2><span class="section-number">12.2. </span>Metoda konečných diferencí<a class="headerlink" href="#metoda-konecnych-diferenci" title="Link to this heading">#</a></h2>
+<section id="diskretizace-rovnice-vedeni-tepla-pomoci-konecnych-diferenci">
+<h3><span class="section-number">12.2.1. </span>Diskretizace rovnice vedení tepla pomocí konečných diferencí<a class="headerlink" href="#diskretizace-rovnice-vedeni-tepla-pomoci-konecnych-diferenci" title="Link to this heading">#</a></h3>
+<p>Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a ani v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximaci derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme na příkladu rovnice vedení tepla. Tato ukázka je důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jaké jsou zhruba požadavky na výpočetní prostředky.</p>
+<div class='obtekat'>
+<figure class="align-default" id="id4">
+<img alt="../_images/finite_differences_heat1.png" src="../_images/finite_differences_heat1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.4 </span><span class="caption-text">Konečné diference umožňují převést parciální diferenciální rovnici na soustavu lineárních rovnic. Červený rámeček označuje neznámé hodnoty v dalším časovém kroku. U explicitní metody je tato hodnota jediná a je snadné ji vypočítat. U implicitní metody jsou neznámé hodnoty tři, každá z nich figuruje ve třech rovnicích a je nutné řešit soustavu rovnic s tridiagonální maticí.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Po převedení derivací z rovnice vedení tepla
+ <div class="math notranslate nohighlight">
+\[\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}\]</div>
+
+na konečné diference
+bychom dostali
+ <div class="math notranslate nohighlight">
+\[\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle \Delta x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \Delta t\)</span> jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud
+ <div class="math notranslate nohighlight">
+\[T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]\]</div>
+
+a teplotu <span class="math notranslate nohighlight">\(\displaystyle T(x,t+\Delta t)\)</span> v následujícím časovém okamžiku v libovolném bodě
+<span class="math notranslate nohighlight">\(\displaystyle x\)</span> dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních
+bodech <span class="math notranslate nohighlight">\(\displaystyle x+\Delta x\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x-\Delta x\)</span>. Konkrétní tvar vzorce není v této chvíli až
+tak důležitý, podstatné je, že teplotu v dalším časovém okamžiku dokážeme vypočítat
+z teplot v současném čase. Proto se tato metoda nazývá explicitní metoda.</p>
+<p>Explicitní  metodu je snadné implementovat <a class="reference external" href="https://gist.github.com/robert-marik/bbd7677bcf876403dcd454ab25cea681">programovým kódem</a>. Pokud teploty v čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span> uspořádáme do sloupcového vektoru <span class="math notranslate nohighlight">\(\displaystyle \vec T(t)\)</span>, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí <div class="math notranslate nohighlight">
+\[\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle A\)</span> je matice, která má v hlavní diagonále čísla <span class="math notranslate nohighlight">\(\displaystyle -2\)</span>, podél diagonály má čísla <span class="math notranslate nohighlight">\(\displaystyle 1\)</span> a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz <a class="reference external" href="https://gist.github.com/robert-marik/afa6114fe765b607ddd0c3733840e40a">výsledný kód</a>, kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení.</p>
+<p>Ještě existuje metoda <a class="reference external" href="https://en.wikipedia.org/wiki/Finite_difference_method#Příklad:_The_heat_equation"><em>implicitní</em> metoda řešení</a> založená na zpětné diferenci v čase namísto dopředné, tj.
+ <div class="math notranslate nohighlight">
+\[\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}\]</div>
+
+a odsud
+ <div class="math notranslate nohighlight">
+\[T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].\]</div>
+
+Toto vztah umožňující výpočet teplot v čase <span class="math notranslate nohighlight">\(\displaystyle t\)</span> z teplot v čase <span class="math notranslate nohighlight">\(\displaystyle t-\Delta t\)</span>.
+Programová realizace je založena na řešení rovnice a může vypadat
+<a class="reference external" href="https://gist.github.com/robert-marik/8b898a66ee7018b4a72dc40dc20e1a94">následovně.</a>
+Obsahuje pro každý časový krok řešení soustavy lineárních rovnic s tridiagonální maticí (nenulová
+čísla jsou na hlavní diagonále a vedle ní).</p>
+<p>Rozdíl mezi implicitní a explicitní metodou je v tom, že u explicitní metody
+máme v každé rovnici jednu neznámou a tuto neznámou je snadné určit. Formálně
+metoda vede na soustavu rovnic, ale řešení této soustavy je triviální. Oproti
+tomu u
+implicitní metody máme v každém vztahu tři neznámé a řešení soustavy rovnic
+je komplikovanější. Zdá se tedy, že explicitní metoda je výhodnější. Bohužel
+v praxi explicitní metoda vyžaduje dostatečně jemný časový krok, což může vést k
+nutnosti použít velmi jemnou časovou diskretizaci a tato skutečnost navyšuje
+výpočetní náročnost jak z hlediska času, tak i z hlediska paměťových nároků.
+Implicitní metoda je sice komplikovanější na výpočet, ale dovoluje použít větší
+časové kroky a v praxi se ukazuje jako výhodnější. Často se pro zvýšení
+přesnosti používá i kombinace obou metod, kdy je v diferenčním schematu použita
+dopředná i zpětná diference pro derivaci podle času a obě jsou vhodně
+zkombinovány (<a class="reference external" href="https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method">Crank-Nicolsonova metoda</a>).</p>
+</section>
+</section>
+<section id="metoda-konecnych-prvku">
+<h2><span class="section-number">12.3. </span>Metoda konečných prvků<a class="headerlink" href="#metoda-konecnych-prvku" title="Link to this heading">#</a></h2>
+<p>Metoda konečných prvků je jedna z nejběžnějších numerických metod pro řešení
+diferenciálních rovnic v inženýrských aplikacích. Ukážeme si základní myšlenky
+této metody na jednoduchém příkladu
+rovnice
+<div class="math notranslate nohighlight">
+\[-\frac{\mathrm d^2 u}{\mathrm dx^2}=f(x)\tag{E}\]</div>
+
+s okrajovými podmínkami <span class="math notranslate nohighlight">\(\displaystyle u(0)=u(1)=0.\)</span>
+Tato rovnice může vystupovat například při modelování teplotního pole v tyči, ve
+které jsou zdroje tepla popsané funkcí <span class="math notranslate nohighlight">\(\displaystyle f(x)\)</span>. Z praktického hlediska je snadné
+rovnici vyřešit přímo integrací, ale pro ilustraci metody konečných prvků je
+tento příklad vhodný. Metoda je obecná a použitelná i pro složitější rovnice ve
+vícedimenzionálním prostoru, kde analytické metody selhávají: buď jsou
+nepoužitelné, nebo vedou na řešení zapsané pomocí komplikovaných speciálních
+funkcí a nekonečných řad, s nimiž se v praxi špatně pracuje.</p>
+<section id="slaba-formulace-rovnice">
+<h3><span class="section-number">12.3.1. </span>Slabá formulace rovnice<a class="headerlink" href="#slaba-formulace-rovnice" title="Link to this heading">#</a></h3>
+<p>Nejprve převedeme rovnici na tzv. slabou formulaci. To je formulace, kde
+nevystupuje druhá derivace funkce <span class="math notranslate nohighlight">\(\displaystyle u\)</span>, ale jenom derivace první. To umožní
+pracovat například s úlohami vedení tepla, kde se materiálové vlastnosti mění
+skokem. Kromě toho slabá formulace převádí úlohu na úlohu integrální, což je
+výhodné pro numerické metody. Na tuto výhodu se zaměříme a proto nebudeme
+rozebírat aspekty spojené s hladkostí funkcí. Budeme předpokládat, že funkce, se
+kterými pracujeme, jsou dostatečně hladké.</p>
+<p>Použijeme základní poznatky z integrálního počtu a derivaci součinu
+funkcí <span class="math notranslate nohighlight">\(\displaystyle u'\)</span> a <span class="math notranslate nohighlight">\(\displaystyle v\)</span>
+<div class="math notranslate nohighlight">
+\[(u'v)'=u''v+u'v',\]</div>
+
+která má po integraci na intervalu <span class="math notranslate nohighlight">\(\displaystyle [a,b]\)</span> podobu
+<div class="math notranslate nohighlight">
+\[u'(b)v(b)-u'(a)v(a)=\int_a^b u''v\,\mathrm dx +\int_a^b u'v'\,\mathrm dx.\]</div>
+
+Pokud funkce <span class="math notranslate nohighlight">\(\displaystyle v\)</span> splňuje okrajové podmínky <span class="math notranslate nohighlight">\(\displaystyle v(a)=v(b)=0\)</span>, dostaneme
+<div class="math notranslate nohighlight">
+\[-\int_a^b u''v\,\mathrm dx = \int_a^b u'v'\,\mathrm dx.\tag{*}\]</div>
+</p>
+<p>Nyní přistoupíme k převodu rovnice (E) na obecnější formulaci. Rovnici napíšeme pro jednoduchost s derivacemi vyjádřenými čárkami a s
+vynechanou závislostí na <span class="math notranslate nohighlight">\(\displaystyle x\)</span>
+<div class="math notranslate nohighlight">
+\[-u''=f\]</div>
+
+a tuto rovnici vynásobíme funkcí <span class="math notranslate nohighlight">\(\displaystyle v\)</span>, která splňuje okrajové podmínky
+<span class="math notranslate nohighlight">\(\displaystyle v(0)=v(1)=0\)</span>. Výslednou rovnici
+<div class="math notranslate nohighlight">
+\[-u''v=fv\]</div>
+
+integrujeme přes interval <span class="math notranslate nohighlight">\(\displaystyle [0,1]\)</span>.
+Tím dostaneme
+<div class="math notranslate nohighlight">
+\[-\int_0^1 u''v\,\mathrm dx = \int_0^1
+fv\,\mathrm dx.\]</div>
+
+Ze vztahu (*) poté plyne, že získanou rovnost můžeme přeformulovat na tvar
+<div class="math notranslate nohighlight">
+\[\int_0^1 u'v'\,\mathrm dx = \int_0^1
+fv\,\mathrm dx. \tag{W}\]</div>
+
+Pokud nějaká funkce <span class="math notranslate nohighlight">\(\displaystyle u\)</span> splňuje tuto rovnost pro každou hladkou funkci <span class="math notranslate nohighlight">\(\displaystyle v\)</span>
+s okrajovými podmínkami <span class="math notranslate nohighlight">\(\displaystyle v(0)=v(1)=0\)</span>, říkáme, že <span class="math notranslate nohighlight">\(\displaystyle u\)</span> je <em>slabým řešením</em>
+rovnice (E) (s uvažovanými okrajovými podmínkami). Rovnice (W) se nazývá <em>slabá
+formulace</em>  (angl. <em>weak form</em>) rovnice (E). Slabá formulace rovnice úzce
+souvisí s hledáním minima energie nebo obecněji nějaké vhodné veličiny
+související s úlohou a proto ji řadíme mezi <em>variační metody</em>. Proto se slabá
+formulace někdy nazývá <em>variační formulace</em>.</p>
+</section>
+<section id="galerkinova-metoda">
+<h3><span class="section-number">12.3.2. </span>Galerkinova metoda<a class="headerlink" href="#galerkinova-metoda" title="Link to this heading">#</a></h3>
+<p>Vyjdeme ze slabé variační formulace (W) a budeme hledat přibližné řešení ve tvaru
+<div class="math notranslate nohighlight">
+\[u(x)=\sum_{i=1}^n u_i \varphi_i(x),\]</div>
+
+kde funkce <span class="math notranslate nohighlight">\(\displaystyle \varphi_i(x)\)</span> jsou zvolené hladké funkce splňující okrajové podmínky
+<span class="math notranslate nohighlight">\(\displaystyle \varphi_i(0)=\varphi_i(1)=0\)</span> a <span class="math notranslate nohighlight">\(\displaystyle u_i\)</span> jsou neznámé koeficienty, které budeme
+určovat.
+To vlastně znamená, že hledáme řešení v podprostoru generovaném funkcemi
+<span class="math notranslate nohighlight">\(\displaystyle \varphi_i(x)\)</span>. Funkce <span class="math notranslate nohighlight">\(\displaystyle \varphi_i(x)\)</span> se proto nazývají <em>bázové funkce</em>.
+Pro snadné odlišení funkcí a koeficientů už nebudeme vynechávat závislost
+na <span class="math notranslate nohighlight">\(\displaystyle x\)</span>.</p>
+<p>Derivace funkce <span class="math notranslate nohighlight">\(\displaystyle u(x)\)</span> je
+<div class="math notranslate nohighlight">
+\[u'(x)=\sum_{j=1}^n u_j \varphi_j'(x).\]</div>
+
+Dosadíme-li toto vyjádření do slabé formulace (W), dostaneme
+<div class="math notranslate nohighlight">
+\[\int_0^1 \Bigl(\sum_{j=1}^n u_j \varphi_j'(x)\Bigr) v'(x)\,\mathrm dx = \int_0^1 
+f(x)v(x)\,\mathrm dx.\]</div>
+
+Využitím linearity integrálu je možné rovnici přepsat do tvaru
+<div class="math notranslate nohighlight">
+\[\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) v'(x)\,\mathrm dx = \int_0^1
+f(x)v(x)\,\mathrm dx.\]</div>
+</p>
+<p>Galerkinova metoda spočívá v tom, že za funkci <span class="math notranslate nohighlight">\(\displaystyle v(x)\)</span> volíme postupně jednotlivé bázové funkce, tedy <span class="math notranslate nohighlight">\(\displaystyle v(x)=\varphi_i(x)\)</span> pro <span class="math notranslate nohighlight">\(\displaystyle i=1,2,\ldots,n\)</span>. Tím dostaneme soustavu rovnic
+<div class="math notranslate nohighlight">
+\[\sum_{j=1}^n u_j \int_0^1 \varphi_j'(x) \varphi_i'(x)\,\mathrm dx = \int_0^1
+f(x)\varphi_i(x)\,\mathrm dx, \quad i=1,2,\ldots,n\]</div>
+
+nebo po přeznačení
+<div class="math notranslate nohighlight">
+\[a_{ij}=\int_0^1 \varphi_i'(x) \varphi_j'(x)\,\mathrm dx\]</div>
+
+a
+<div class="math notranslate nohighlight">
+\[b_j=\int_0^1 f(x)\varphi_j(x)\,\mathrm dx\]</div>
+
+ve tvaru <div class="math notranslate nohighlight">
+\[\sum_{j=1}^n a_{ij} u_j = b_i, \quad i=1,2,\ldots,n.\]</div>
+
+Nyní už je patrné, že se jedná o soustavu lineárních rovnic a po zavedení matice
+<span class="math notranslate nohighlight">\(\displaystyle A=(a_{ij})\)</span> a vektoru <span class="math notranslate nohighlight">\(\displaystyle \vec b=(b_i)\)</span> můžeme tuto soustavu psát v maticovém
+tvaru <div class="math notranslate nohighlight">
+\[A\vec u=\vec b.\]</div>
+
+Matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> se nazývá (z historických důvodů) <em>matice tuhosti</em> a vektor <span class="math notranslate nohighlight">\(\displaystyle \vec b\)</span>
+se nazývá <em>vektor zatížení</em>.</p>
+<div class='obtekat'>
+<figure class="align-default" id="id5">
+<img alt="../_images/konecne_prvky.png" src="../_images/konecne_prvky.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.5 </span><span class="caption-text">Bázové funkce pro metodu konečných prvků na intervalu [0,1] s dělením na deset dílčích intervalů.  V obrázku jsou vybrány tři bázové funkce a lineární kombinace bázových funkcí aproximující parabolu <span class="math notranslate nohighlight">\(\displaystyle y=2x(1-x)\)</span>.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Je účelné volit bázové funkce tak, aby na jednu stranu generovaly dostatečně
+širokou škálu funkcí, ale také aby byla matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> vhodná pro numerické řešení — například, aby byla řídká.
+Vhodnou volbou jsou trojúhelníkové funkce dle připojeného obrázku. Pomocí lineární kombinace těchto funkcí je možné
+vyjádřit libovolnou po částech lomenou funkci splňující nulové okrajové
+podmínky. Při takto zvolených funkcích je <span class="math notranslate nohighlight">\(\displaystyle a_{ij}\)</span> nulové, pokud se <span class="math notranslate nohighlight">\(\displaystyle i\)</span> a <span class="math notranslate nohighlight">\(\displaystyle j\)</span>
+liší více než o jedničku a
+matice <span class="math notranslate nohighlight">\(\displaystyle A\)</span> má nenulové prvky jenom na hlavní diagonále a na dvou přilehlých
+diagonálách (je tridiagonální). Výpočet integrálů pro <span class="math notranslate nohighlight">\(\displaystyle a_{ij}\)</span> vede k následující matici.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \frac 1h\begin{pmatrix}
+2 &amp; -1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+-1 &amp; 2 &amp; -1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; -1 &amp; 2 &amp; -1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; -1 &amp; 2 &amp; -1 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -1 &amp; 2
+\end{pmatrix}
+\end{split}\]</div>
+</section>
+<section id="metoda-konecnych-prvku-fem">
+<h3><span class="section-number">12.3.3. </span>Metoda konečných prvků (FEM)<a class="headerlink" href="#metoda-konecnych-prvku-fem" title="Link to this heading">#</a></h3>
+<div class='obtekat'>
+<figure class="align-default" id="id6">
+<img alt="../_images/nosnik_3bodovy.png" src="../_images/nosnik_3bodovy.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.6 </span><span class="caption-text">Ukázka programu pro modelování pomocí metody konečných prvků (FEM). V tomto případě je modelován tříbodově podepřený nosník zatížený silou uprostřed. Program umožňuje měnit parametry nosníku a zatížení a okamžitě vidět výsledky a identifikovat kritická místa konstrukce.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="../_images/beam_smyk.png" src="../_images/beam_smyk.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.7 </span><span class="caption-text">Smykové namáhání není symetrické, ale antisymetrické.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Výše uvedený postup tvoří jádro metody konečných prvků (angl. <em>finite element
+method</em>, FEM). Problém je nejprve
+naformulován obecněji než v původní diferenciální rovnici (<em>slabá variační formulace</em>) a
+poté je hledáno přibližné řešení v podprostoru generovaném zvolenými bázovými
+funkcemi. Dosazením tohoto tvaru řešení do slabé formulace a volbou testovacích
+funkcí
+je získána soustava lineárních rovnic pro neznámé
+koeficienty v rozvoji řešení podle bázových funkcí. Tuto soustavu je
+poté možné vyřešit běžnými numerickými metodami pro řešení soustav lineárních
+rovnic.</p>
+<p>Uvedený postup je možné zobecnit na složitější rovnice a úlohy. Na rozdíl od
+analytických metod si metoda konečných poradí i s komplikovanějšími geometrickými tvary a
+nespojitými materiálovými vlastnostmi, kdy na sebe navazují dva odlišné
+materiály. Je možné metodu použít i pro nelineární rovnice, i když v
+tomto případě je výpočet numericky náročnější.</p>
+<p>Výhodou metody konečných prvků oproti metodě konečných diferencí je větší
+volnost diskretizaci. Metoda konečných diferencí vyžaduje pravidelnou síť bodů,
+kdežto metoda konečných prvků umožňuje využít nepravidelnou síť a přizpůsobit
+hustotu bodů místním potřebám. To je výhodné například při zjemnění
+diskretizace v místech, kde se očekávají velké změny řešení.</p>
+<p>Matematicky se například při řešení úlohy statické rovnováhy používá popis stavu
+napjatosti a deformace pomocí tenzorů napětí (<span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span>) a deformace (<span class="math notranslate nohighlight">\(\displaystyle \varepsilon\)</span>).</p>
+<div class='obtekat'>
+<figure class="align-default" id="id8">
+<img alt="../_images/stress.svg" src="../_images/stress.svg" />
+<figcaption>
+<p><span class="caption-number">Obr. 12.8 </span><span class="caption-text">Tenzor napětí <span class="math notranslate nohighlight">\(\displaystyle \sigma\)</span> popisuje vnitřní síly v tělese. Komponenty jsou síly působící na jednotku plochy a rozlišujeme normálové a smykové síly.</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Tenzor napětí udává normálovou nebo tečnou sílu působící v tělese na jednotku
+plochy. Zpravidla tyto síly modelujeme na reprezentativním elementu tělesa ve
+tvaru krychle.</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = \begin{pmatrix}
+\sigma_x &amp; \sigma_{xy} &amp; \sigma_{xz}\cr
+\sigma_{xy} &amp; \sigma_y &amp; \sigma_{yz}\cr
+\sigma_{xz} &amp; \sigma_{xy} &amp; \sigma_{z}
+\end{pmatrix}
+=\begin{pmatrix}
+\sigma_{11} &amp; \sigma_{12} &amp; \sigma_{13}\cr
+\sigma_{12} &amp; \sigma_{22} &amp; \sigma_{23}\cr
+\sigma_{13} &amp; \sigma_{23} &amp; \sigma_{33}
+\end{pmatrix}
+\]</div>
+<p>První uvedená notace se používá pro souřadné osy <span class="math notranslate nohighlight">\(\displaystyle x\)</span>, <span class="math notranslate nohighlight">\(\displaystyle y\)</span> a <span class="math notranslate nohighlight">\(\displaystyle z\)</span>, zatímco druhá notace používá obecnější označení souřadných os <span class="math notranslate nohighlight">\(\displaystyle x_1\)</span>, <span class="math notranslate nohighlight">\(\displaystyle x_2\)</span> a <span class="math notranslate nohighlight">\(\displaystyle x_3\)</span> a je vhodná pro elegantní zápis některých identit. (Viz například definice tenzoru deformace níže.)</p>
+<p>Tenzor deformace popisuje, jak těleso mění tvar. I zde sledujeme normálové a
+smykové komponenty. Ty jsou definovány pomocí vektoru posunutí <span class="math notranslate nohighlight">\(\displaystyle \vec u(x,y,z)\)</span>
+vztahem</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{ij} = \frac{1}{2}\left(\frac{\partial u_i}{\partial x_j} +
+\frac{\partial u_j}{\partial x_i}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[
+\varepsilon = \begin{pmatrix}
+\varepsilon_x &amp; \varepsilon_{xy} &amp; \varepsilon_{xz}\cr
+\varepsilon_{xy} &amp; \varepsilon_y &amp; \varepsilon_{yz}\cr
+\varepsilon_{xz} &amp; \varepsilon_{xy} &amp; \varepsilon_{z}
+\end{pmatrix}
+=\begin{pmatrix}
+\varepsilon_{11} &amp; \varepsilon_{12} &amp; \varepsilon_{13}\cr
+\varepsilon_{12} &amp; \varepsilon_{22} &amp; \varepsilon_{23}\cr
+\varepsilon_{13} &amp; \varepsilon_{23} &amp; \varepsilon_{33}
+\end{pmatrix}
+\]</div>
+<p>Vztah mezi napětím a deformací (Hookův zákon) je pro lineární materiály dán vztahem
+<div class="math notranslate nohighlight">
+\[\sigma_{ij} = \sum_{k,l}C_{ijkl} \varepsilon_{kl},\]</div>
+
+kde <span class="math notranslate nohighlight">\(\displaystyle C_{ijkl}\)</span> jsou materiálové konstanty, které charakterizují materiálové
+vlastnosti tělesa. Pro praktické účely je vhodnější tenzory napětí a deformace přepsat použitím
+Voigtovy notace na vektory</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\varepsilon = \left(
+    \begin{matrix}
+    \varepsilon_x \\
+    \varepsilon_y \\
+    \varepsilon_z \\
+    \varepsilon_{yz} \\
+    \varepsilon_{xz} \\
+    \varepsilon_{xy}
+     \end{matrix} 
+\right)
+\quad \text{a} \quad
+\sigma = \left(
+     \begin{matrix}
+    \sigma_x \\
+    \sigma_y \\
+    \sigma_z \\
+    \sigma_{yz} \\
+    \sigma_{xz} \\
+    \sigma_{xy} 
+     \end{matrix}
+\right).
+\end{split}\]</div>
+<p>Hookův zákon potom zpravidla píšeme ve tvaru obsahujícím dobře měřitelné
+materiálové parametry, jako jsou Youngův modul pružnosti <span class="math notranslate nohighlight">\(\displaystyle E\)</span>, smykový modul <span class="math notranslate nohighlight">\(\displaystyle G\)</span> a Poissonův podíl
+<span class="math notranslate nohighlight">\(\displaystyle \nu\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(
+    \begin{matrix}
+    \varepsilon_x \\
+    \varepsilon_y \\
+    \varepsilon_z \\
+    \varepsilon_{yz} \\
+    \varepsilon_{xz} \\
+    \varepsilon_{xy}
+     \end{matrix} 
+\right)
+=
+\left(
+    \begin{matrix}
+    \frac 1{E_x} &amp; -\frac{\nu_{yx}}{E_y} &amp; -\frac{\nu_{zx}}{E_z} &amp; 0 &amp; 0 &amp; 0 \\
+     &amp; \frac 1{E_y} &amp; -\frac{\nu_{zy}}{E_z} &amp; 0 &amp; 0  &amp; 0 \\
+     &amp;  &amp; \frac 1{E_z} &amp; 0 &amp; 0 &amp; 0 \\
+     &amp;  &amp; &amp; \frac 1{G_{yz}} &amp; 0 &amp; 0 \\
+     \rlap{\text{symmetric}} &amp; &amp; &amp;  &amp; \frac 1{G_{xz}} &amp; 0 \\
+     &amp;  &amp;  &amp;  &amp;  &amp; \frac 1{G_{xy}} \\
+     \end{matrix} 
+\right)
+\left(
+     \begin{matrix}
+    \sigma_x \\
+    \sigma_y \\
+    \sigma_z \\
+    \sigma_{yz} \\
+    \sigma_{xz} \\
+    \sigma_{xy} 
+     \end{matrix}
+\right)
+\end{split}\]</div>
+<p>Poznamenejme, diagonálnost pravého dolního rohu plyne z poznatku, že pro většinu
+materiálů se smykové namáhání projevuje pouze smykovou deformací v rovině, ve
+které působí.</p>
+<p>Při vhodné volbě souřadné soustavy se smykové namáhání neprojevuje normálovou
+deformací a normálové namáhání se neprojevuje smykovou deformací. Proto
+zpravidla předpokládáme, že pravý horní a levý dolní blok matice v Hookově
+zákonu je nulový.</p>
+<p>V komponentách má Hookův zákon tvar
+<div class="math notranslate nohighlight">
+\[\varepsilon_x = \frac 1{E_x}\sigma_x - \frac{\nu_{yx}}{E_y}\sigma_y - \frac{\nu_{zx}}{E_z}\sigma_z,\]</div>
+
+<div class="math notranslate nohighlight">
+\[\varepsilon_y = -\frac{\nu_{xy}}{E_x}\sigma_x + \frac 1{E_y}\sigma_y - \frac{\nu_{zy}}{E_z}\sigma_z,\]</div>
+
+<div class="math notranslate nohighlight">
+\[\varepsilon_z = -\frac{\nu_{xz}}{E_x}\sigma_x - \frac{\nu_{ yz}}{E_y}\sigma_y + \frac 1{E_z}\sigma_z,\]</div>
+
+<div class="math notranslate nohighlight">
+\[\varepsilon_{yz} = \frac 1{G_{yz}}\sigma_{yz},\]</div>
+
+<div class="math notranslate nohighlight">
+\[\varepsilon_{xz} = \frac 1{G_{xz}}\sigma_{xz},\]</div>
+
+<div class="math notranslate nohighlight">
+\[\varepsilon_{xy} = \frac 1{G_{xy}}\sigma_{xy}.\]</div>
+</p>
+<p>Protože je matice z Hookova zákona symetrická, musí být splněny podmínky <div class="math notranslate nohighlight">
+\[ \frac{\nu_{xy}}{E_x} = \frac{\nu_{yx}}{E_y}, \quad \frac{\nu_{xz}}{E_x} = \frac{\nu_{zx}}{E_z}, \quad \frac{\nu_{yz}}{E_y} = \frac{\nu_{zy}}{E_z}.\]</div>
+ Odsud plynou vztahy <div class="math notranslate nohighlight">
+\[
+\frac{\nu_{xy}}{\nu_{yx}} = \frac{E_x}{E_y}, \quad \frac{\nu_{xz}}{\nu_{zx}} = \frac{E_x}{E_z}, \quad \frac{\nu_{yz}}{\nu_{zy}} = \frac{E_y}{E_z}.\]</div>
+
+Pro anizotropní materiály zpravidla volíme souřadné osy tak, že <div class="math notranslate nohighlight">
+\[E_x &gt; E_y &gt; E_z\]</div>
+ a z toho plyne, že <div class="math notranslate nohighlight">
+\[\nu_{xy} &gt; \nu_{yx}, \quad \nu_{xz} &gt; \nu_{zx}, \quad \nu_{yz} &gt; \nu_{zy}.\]</div>
+ V tomto smyslu se Poissonova čísla nazývají velké a malé Poissonovo číslo. Například <span class="math notranslate nohighlight">\(\displaystyle \nu_{xy}\)</span> je velké Poissonovo číslo, zatímco <span class="math notranslate nohighlight">\(\displaystyle \nu_{yx}\)</span> je malé Poissonovo číslo. Pro dřevo je <span class="math notranslate nohighlight">\(\displaystyle x=L\)</span> směr vláken, <span class="math notranslate nohighlight">\(\displaystyle y=R\)</span> směr radiální a <span class="math notranslate nohighlight">\(\displaystyle z=T\)</span> směr tangenciální. Pro dřevo jsou tedy <span class="math notranslate nohighlight">\(\displaystyle \nu_{LR}\)</span> , <span class="math notranslate nohighlight">\(\displaystyle \nu_{LT}\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \nu_{RT}\)</span> velká Poissonova čísla, zatímco <span class="math notranslate nohighlight">\(\displaystyle \nu_{RL}\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \nu_{TL}\)</span> a <span class="math notranslate nohighlight">\(\displaystyle \nu_{TR}\)</span> jsou malá Poissonova čísla.</p>
+<p>Pro statickou rovnováhu platí, že vnitřní síly musí být v rovnováze s vnějšími
+silami, což se matematicky vyjadřuje pomocí rovnic kontinuity pro jednotlivé komponenty. Tyto rovnice mají
+tvar <div class="math notranslate nohighlight">
+\[\sum_{j}\frac{\partial \sigma_{ij}}{\partial x_j} + f_i = 0,\]</div>
+ kde <span class="math notranslate nohighlight">\(\displaystyle f_i\)</span> jsou
+<span class="math notranslate nohighlight">\(\displaystyle i\)</span>-té komponenty objemové síly působící na těleso. Pro řešení této rovnice
+pomocí metody konečných prvků je nutné převést ji na slabou formulaci, což
+zahrnuje integraci a použití vhodných testovacích funkcí. Po diskretizaci pomocí
+bázových funkcí a volbě testovacích funkcí se získá soustava lineárních rovnic
+pro neznámé koeficienty v rozvoji řešení podle bázových funkcí, kterou je možné
+numericky vyřešit.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../11/index.html"
+       title="předchozí stránka">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">předchozí</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Lineární diferenciální rovnice druhého řádu</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../13/index.html"
+       title="další stránka">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">další</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>Metody řešení diferenciálních rovnic 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Obsah
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metody-pro-obycejne-diferencialni-rovnice">12.1. Metody pro obyčejné diferenciální rovnice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numericke-reseni-ivp">12.1.1. Numerické řešení IVP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mala-odbocka-zaokrouhlovaci-chyby-v-numerickych-vypoctech">12.1.2. Malá odbočka - zaokrouhlovací chyby v numerických výpočtech</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-diferenci">12.2. Metoda konečných diferencí</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diskretizace-rovnice-vedeni-tepla-pomoci-konecnych-diferenci">12.2.1. Diskretizace rovnice vedení tepla pomocí konečných diferencí</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-prvku">12.3. Metoda konečných prvků</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slaba-formulace-rovnice">12.3.1. Slabá formulace rovnice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#galerkinova-metoda">12.3.2. Galerkinova metoda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metoda-konecnych-prvku-fem">12.3.3. Metoda konečných prvků (FEM)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Autor Robert Mařík
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Aktualizováno dne 13.05.2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+  All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</p>
+<p><script src="https://utteranc.es/client.js"
+ repo="robert-marik/am" 
+ issue-term="pathname" 
+ label="comment" 
+ theme="github-light" 
+ crossorigin="anonymous" 
+  async> 
+ </script> 
+ </p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

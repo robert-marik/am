@@ -2,7 +2,7 @@
 
 ```{admonition} Anotace.
 
-* V přednášce se seznámíme s nástrojem, který umožňuje předvádět mezi sebou křivkové a dvojné integrály. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+* V přednášce se seznámíme s nástrojem, který umožňuje převádět mezi sebou křivkové a dvojné integrály. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
 * Dále se seznámíme s vektorovou obdobou Newtonovy-Leibnizovy věty. Naučíme se počítat křivkový integrál druhého druhu pomocí rozdílu potenciálu v koncových bodech. Tato možnost není k dispozici automaticky (pouze pro vektorová pole s nulovou rotací, pro která existuje kmenová funkce), ale pokud je možné touto cestou jít, bývá to velké ulehčení.
 ```
 
@@ -37,7 +37,7 @@ možno nalézt v literatuře.
 * Křivka se nazývá **regulární**, pokud funkce z jejího parametrického
   vyjádření jsou hladké (mají spojité derivace) a v každém bodě je
   aspoň jedna z těchto derivací nenulová.
-* Pokud platí pro libovolné dvě regulární křivky $C$ a $C_1$, které leží v
+* Pokud pro libovolné dvě regulární křivky $C$ a $C_1$, které leží v
   $\Omega$ a mají stejné počáteční body a stejné koncové body, platí
   $$
   \int_C \vec F\mathrm{d}\vec r=\int_{C_1} \vec F\mathrm{d}\vec r,
@@ -82,7 +82,7 @@ kmenová funkce vektorového pole $\vec F$.
 ```
 
 
-manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na intergrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné= zavést potenciální energii.
+manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na integrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné zavést potenciální energii.
 
 
 <div class='obtekat'>
@@ -104,7 +104,7 @@ Tato věta je použitelná na mnoho způsobů.
 Větu je možno formálně vyslovit i pro jiný než trojrozměrný
 prostor. Pokud je pole v předchozí větě pouze v rovině, tj. $\vec
 F=(F_x, F_y)$, doplníme třetí komponentu pro výpočet rotace
-nulou. Protože $\nabla \times\vec F=\left(\frac {\partial F_x}{\partial y}-\frac {\partial F_y}{\partial x}\right)\vec k$, přechází podmínka na nulovost rotace v nám již známou nutnou a postačující podmínku 
+nulou. Protože $\nabla \times\vec F=\left(\frac {\partial F_y}{\partial x}-\frac {\partial F_x}{\partial y}\right)\vec k$, přechází podmínka na nulovost rotace v nám již známou nutnou a postačující podmínku 
 $$
 \frac {\partial F_x}{\partial y}=\frac {\partial F_y}{\partial x}
 $$
@@ -222,7 +222,7 @@ protékající přes hranici $\partial \Omega$.
 \dm $$  \underbrace{\oint_{\partial \Omega}-Q(x,y)\mathrm{d}x +P(x,y)\mathrm{d}y }_{\text{Tok přes hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)}_{\mathop{\mathrm{div}} (P\vec i +Q\vec j)}\mathrm{d}x \mathrm{d}y $$
 
 
-Výše popsaně dvě varianty Greenovy věty nám dávají možnost najít
+Výše popsané dvě varianty Greenovy věty nám dávají možnost najít
 fyzikální interpretaci operátorů divergence a rotace. Podíl dvojného
 integrálu funkce $f$ přes oblast $\Omega$ a obsahu této oblasti je
 roven střední hodnotě funkce $f$ na množině $\Omega$.  Při limitním
@@ -264,12 +264,12 @@ Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákon�
 
 Navážeme na koncept představený v přednášce o divergenci vektorového pole a podobnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice použijeme pro konečně velký objem.
 
-Je-li $u(x,y)$ hustota stavové veličiny v množině $M$, $\sigma(x,y)$ vydatnost zdrojů a $\vec J=(P,Q)$ pole popisující tok stavové veličiny, je rychlost s jakou roste množství stavové veličiny v množině $M$ (tj. derivace množství podle času) dána vydatností zdrojů stavové veličiny snížené o odtok stavové veličiny přes hranici množiny $M$. Matematicky vyjádřeno platí
+Je-li $u(x,y)$ hustota stavové veličiny v množině $M$, $\sigma(x,y)$ vydatnost zdrojů a $\vec J=(P,Q)$ pole popisující tok stavové veličiny, je rychlost s jakou roste množství stavové veličiny v množině $M$ (tj. derivace množství podle času) dána vydatností zdrojů stavové veličiny sníženou o odtok stavové veličiny přes hranici množiny $M$. Matematicky vyjádřeno platí
 \dm$$\frac{\mathrm d}{\mathrm dt}\left(\iint_M u\,\mathrm dx\mathrm dy\right)=\iint_M \sigma\,\mathrm dx\mathrm dy-\oint_{\partial M}-Q\,\mathrm dx+P\,\mathrm dy.$$
 Díky nezávislosti $x$ a $y$ na čase $t$ můžeme zaměnit pořadí derivace podle času a dvojného integrálu vlevo. Křivkový integrál vpravo můžeme přepsat pomocí Greenovy věty na dvojný integrál. Tím dostáváme
 \dm$$\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma\,\mathrm dx\mathrm dy-\iint_{M}\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)\,\mathrm dx\mathrm dy$$
 a po zkrácení označení v posledním dvojném integrálu a využití linearity integrálu vztah přejde do tvaru
-\dm$$\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma-\nabla\cdot \vec J\,\mathrm dx\mathrm dy.$$
+\dm$$\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \left(\sigma-\nabla\cdot \vec J\right)\,\mathrm dx\mathrm dy.$$
 Protože tato rovnost má platit pro libovolnou množinu $M$, musí se rovnat nejenom integrály, ale i integrované funkce, tj. musí platit
 \dm$$\frac{\partial u}{\partial t}= \sigma-\nabla\cdot \vec J.$$
 Toto je stejná rovnice jako rovnice odvozená lokálními úvahami v přednášce o divergenci. Stejně jako v této přednášce poté můžeme pomocí konstitutivního vztahu

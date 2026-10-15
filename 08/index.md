@@ -5,7 +5,7 @@
 * V přednášce se seznámíme s rovnicemi obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
 * Typickým příkladem je radioaktivita, protože množství rozpadlých atomů je dáno množstvím nestabilních atomů. Aplikace potom můžeme najít například při ochraně budov před radioaktivním radonem.
 * Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu. 
-* Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně mění podle intenzity toku a ta se mění s teplotním rozdílem. 
+* Technicky významným příkladem je i model tepelné výměny, kdy se rychlost změny teploty při tepelné výměně mění podle intenzity toku a ta se mění s teplotním rozdílem. 
 * Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.
 * Důležité dovednosti, které se naučíme v souvislosti s diferenciálními rovnicemi, jsou zejména 
   * schopnost naformulovat diferenciální rovnici podle slovního popisu mechanismu modelovaného děje, 
@@ -226,7 +226,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti, a
   se velikost populace zvětšuje vztažená na jednotkové množství
   populace) klesá s tím, jak se velikost populace přibližuje k nosné
   kapacitě, a rychlost růstu populace je modelována funkcí $ry\left(1-\frac yK\right)$.  Podle
-  velkosti koeficientů v této funkci dělíme živočichy na [r-stratégy
+  velikosti koeficientů v této funkci dělíme živočichy na [r-stratégy
   a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
   toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
 * Za uvedených předpokladů je možno vývoj populace popsat modelem
@@ -383,7 +383,7 @@ https://youtu.be/7tm1QbNDiz8
 <div class='obtekat'>
 
 ```{figure} smerove_pole_2.png
- Směrové pole diferenciální rovnice, integrální křivky, isokliny
+ Směrové pole diferenciální rovnice, integrální křivky, izokliny
 ```
 
 </div>
@@ -411,7 +411,7 @@ konstantní, nazývají **izokliny**.
 
 ```{prf:remark} numerické řešení
 :nonumber:
-Na základě směrového pole je možné numericky konstruovat přibližné řešení počáteční úlohy. Vyjdeme ze zadané počáteční podmínky a řešení prodlužujeme v malých krocích podle směru určeného směrovým polem. Tento postup je základem řady numerických metod pro řešení diferenciálních rovnic, například metody Eulera nebo Runge-Kutty. Budeme se mu věnovat podobněji na konci semestru v přednášce věnované numerickým metodám.
+Na základě směrového pole je možné numericky konstruovat přibližné řešení počáteční úlohy. Vyjdeme ze zadané počáteční podmínky a řešení prodlužujeme v malých krocích podle směru určeného směrovým polem. Tento postup je základem řady numerických metod pro řešení diferenciálních rovnic, například metody Eulera nebo Runge-Kutty. Budeme se mu věnovat podrobněji na konci semestru v přednášce věnované numerickým metodám.
 ````
 
 ### Transformace diferenciální rovnice
@@ -473,13 +473,13 @@ Po substituci $y=\frac{T-T_\infty}{T_0-T_\infty}$, $x=kt$ má úloha tvar
 
 $$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1.$$ (08-II)
 
-Nová rovnice (**) *neobsahuje žádné parametry* a proto je pro studium
+Nová rovnice {eq}`08-II` *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
 rovnici {eq}`08-I`. Tuto informaci je však nutno interpretovat v kontextu
-definice nových proměnných. Například to, že všechna řešení rovnice {eq}`08-I` konvergují k nule
-znamená, že všechna řešení rovnice {eq}`08-I` konvergují k $T_0$. To, že řešení rovnice {eq}`08-II` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`08-I` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
+definice nových proměnných. Například to, že všechna řešení rovnice {eq}`08-II` konvergují k nule
+znamená, že všechna řešení rovnice {eq}`08-I` konvergují k $T_\infty$. To, že řešení rovnice {eq}`08-II` klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice {eq}`08-I` od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
-```{prf:remark} nondimenzinalizace, rozměrová analýza
+```{prf:remark} nondimenzionalizace, rozměrová analýza
 :nonumber:
   Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
 
@@ -613,15 +613,15 @@ se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 2.  Pracujme na intervalech, kde $g(y)\neq 0$ a odseparujeme proměnné.
     $$          \frac{\mathrm{d}y}{g(y)}=f(x)\mathrm{d}x$$
 
-4.  Získanou rovnost integrujeme. Tím získáme obecné řešení v implicitním tvaru.
+3.  Získanou rovnost integrujeme. Tím získáme obecné řešení v implicitním tvaru.
     $$           \int \frac{\mathrm{d}y}{g(y)}=\int f(x)\mathrm{d}x+C$$
 
-5.  Pokud je zadána počáteční podmínka, je možné ji na tomto místě
+4.  Pokud je zadána počáteční podmínka, je možné ji na tomto místě
     dosadit do obecného řešení a určit hodnotu konstanty $C$. Tuto
     hodnotu poté dosadíme zpět do obecného řešení a obdržíme řešení
     *partikulární*.
 
-6.  Pokud je to možné, převedeme řešení (obecné nebo partikulární) do
+5.  Pokud je to možné, převedeme řešení (obecné nebo partikulární) do
     explicitního tvaru (vyjádříme odsud $y$).
 
 Poslední krok (převod do explicitního tvaru) je volitelný, zpravidla
@@ -638,7 +638,7 @@ $$
 ```
 
 
-Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
+Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivaci podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
 
 ```{prf:theorem} existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými
 :nonumber:
@@ -665,7 +665,7 @@ V předchozích týdnech jsme se seznámili s modely založenými na parciální
 
 ### Jednorozměrný případ
 
-Ukážeme si , že parciální diferenciální rovnice popisující tok tepla nebo tok podzemní vody se ve speciálních případech redukují na diferenciální rovnice, jaké jsme se právě naučili řešit.
+Ukážeme si, že parciální diferenciální rovnice popisující tok tepla nebo tok podzemní vody se ve speciálních případech redukují na diferenciální rovnice, jaké jsme se právě naučili řešit.
 
 Uvažujme tok tepla stěnou o tloušťce $d$, která odděluje dvě prostředí o teplotách $T_1$ a $T_2$.
 
@@ -768,7 +768,7 @@ a
 $$V=\left(\frac 13 kt+ \frac 13 C\right)^3,$$
 tj.
 $$V=\left(k_0t+ c\right)^3,$$
-kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená rychlostí
+kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená s rychlostí
 kondenzace a integrační konstanta.
 
 Všimněte si, že počáteční úloha s počáteční podmínkou $V(0)=0$ má

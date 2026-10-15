@@ -1,7 +1,7 @@
 # Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity
 
 ```{admonition} Anotace.
-* V úvodních příkladech ilustrujeme výpočet křivkového integrálu pomocí kmenové funkce. Příkladů je několik, aby se zapsalo do paměti to nejdůležitější: že se křivkový integrál dá v některých případech vypočítat snadno pomocí kmenové funkce. Jak konkrétně postupovat je již dovednost navazující.
+* V úvodních příkladech ilustrujeme výpočet křivkového integrálu pomocí kmenové funkce. Příkladů je několik, aby se zapsalo do paměti to nejdůležitější: že se křivkový integrál dá v některých případech vypočítat snadno pomocí kmenové funkce. Jak konkrétně postupovat, je již dovednost navazující.
 * Greenova věta pro nás bude mít spíše teoretický význam. Umožňuje přepis křivkového integrálu na dvojný. Vlastní použití není těžké a osaháme si jej i v domácích úlohách. I zde je důležité v první řadě vědět, že to jde a teprve potom přemýšlet nad tím, jak konkrétně se to dělá.
 * V příkladě se vrátíme i k difuzní rovnici.
 ```
@@ -24,10 +24,10 @@ Podmínka pro nezávislost na integrační cestě je $$
   ax^2y &  x^3+1 &  0
 \end{vmatrix}
 \\&=\vec k \left(  \frac{\partial}{\partial x} (x^3+1) - \frac{\partial }{\partial y} (ax^2y)\right)
-  =\vec k(3x^2-ax^2y)=\vec k x^2(3-a)
+  =\vec k(3x^2-ax^2)=\vec k x^2(3-a)
 \end{aligned}
   $$
-  a odsud $a=3$. Totéž dokážeme určit pomocí věty, kterou jsme se ukázali již v souvislosti s pojmem gradient, ze které vyplývá podmínka na existenci kmenové funkce ve tvaru $$
+  a odsud $a=3$. Totéž dokážeme určit pomocí věty, kterou jsme si ukázali již v souvislosti s pojmem gradient, ze které vyplývá podmínka na existenci kmenové funkce ve tvaru $$
 \begin{aligned}
   \pdv{y}(ax^2y)&=\pdv{x}(x^3+1)\\
   ax^2&=3x^2\\
@@ -148,7 +148,7 @@ https://youtu.be/CKZNkuyDd5Y
 
 Rovnice vedení tepla v ortotropním materiálu umístěném do souřadné soustavy tak,
 aby vlastní směry tenzoru tepelné vodivosti (jako např. anatomické směry dřeva)
-byly ve směru souřadnicových os má nejobecnější možné vyjádření
+byly ve směru souřadnicových os, má nejobecnější možné vyjádření
 $$c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}{y}) . $$
 Za jakých okolností je možno veličiny $\lambda_x$ a $\lambda_y$ napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace? 
 
@@ -173,12 +173,12 @@ https://youtu.be/zvs3TsvBrho
 \fi
 
 Někdy jsme nuceni do rovnice vedení tepla zahrnout i zdroje.
-Modelujte vedení tepla jednom v žebru chladiče.
+Modelujte vedení tepla v jednom žebru chladiče.
 
 Úlohu uvažujte jako jednorozměrnou, materiál homogenní izotropní s
 konstantní tepelnou vodivostí. Kolem chladiče proudí vzduch o teplotě
 $T_0$ a tím se chladič ochlazuje. V místě, kde je teplota chladiče
-vysoká je proces odevzdávání tepla do okolí intenzivnější. Obvykle se
+vysoká, je proces odevzdávání tepla do okolí intenzivnější. Obvykle se
 předpokládá, že v každém místě chladič ztrácí teplo rychlostí úměrnou
 rozdílu teploty v daném místě a teploty okolního vzduchu. (Koeficient
 úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte

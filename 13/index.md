@@ -29,7 +29,7 @@ $$
 síla $\vec {\mathcal T}_1$, kterou pro další počítání rozložíme do
 vodorovného a svislého směru. Doleva působí síla o velikosti
 $\mathcal T\cos\varphi$ a dolů síla $\mathcal T\sin\varphi$. Podobně, na pravý
-konec, kde je směrnice tečny $\varphi+\Delta\varphi$ působí doprava síla
+konec, kde je úhel tečny $\varphi+\Delta\varphi$ působí doprava síla
 $\mathcal{T}\cos(\varphi+\Delta\varphi)$ a nahoru síla
 $\mathcal T\sin(\varphi+\Delta\varphi)$. Protože se element pohybuje ve
 svislém směru, podle Newtonova pohybového zákona platí
@@ -73,7 +73,7 @@ a za předpokladu malých výchylek nahradíme
 v předchozích dvou vzorcích funkci kosinus její lineární aproximací
 v okolí nuly vztahem
 $$
-\cos(\varphi)\approx \cos(0)+(\cos(\varphi))'\Bigr|_{\varphi=0}(\varphi -0)= 1+\sin(\varphi)\Bigr|_{\varphi=0}\varphi=1.
+\cos(\varphi)\approx \cos(0)+(\cos(\varphi))'\Bigr|_{\varphi=0}(\varphi -0)= 1-\sin(\varphi)\Bigr|_{\varphi=0}\varphi=1.
 $$ 
 Tím se pravá strana rovnice zjednoduší na
 $\frac {\partial^2
@@ -124,8 +124,8 @@ rovnice ..., které odpovídá postupné vlně, která postupuje
 rychlostí $c$ doleva.
 -->
 
-Rovnice popisující podélné kmity kmity tyče modulu pružnosti $E$ a
-hustotě $\rho$ má stejný tvar, přičemž $c=\sqrt{E}\rho$ je rychlost šíření kmitů.
+Rovnice popisující podélné kmity tyče s modulem pružnosti $E$ a
+hustotou $\rho$ má stejný tvar, přičemž $c=\sqrt{E/\rho}$ je rychlost šíření kmitů.
 Trojrozměrná analogie této rovnice je vhodná pro popis elastických kmitů
 (chvění) v tělese.
 
@@ -174,7 +174,7 @@ $$
 Protože levá strana závisí pouze na $t$ a pravá strana
 pouze na $x$, musí být obě strany rovny stejné konstantě. Tuto konstantu
 zapíšeme z důvodů které budou patrné později jako $-\lambda^2$.
-Z počátečních a okrajových podmínek naložených na funkce $u$ plyne, že
+Z počátečních a okrajových podmínek kladených na funkci $u$ plyne, že
 funkce $X$ musí splňovat 
 $$
   X(0)=0=X(1).
@@ -216,15 +216,15 @@ přirozené číslo. Vlastní hodnoty jsou tedy tvaru $$\begin{equation*}
 Protože řešení rovnice
 hledáme ve tvaru $u(x,t)=X(x)T(t)$, můžeme
 výsledky předchozích odstavců shrnout do poznatku, že pro libovolnou
-konstantu $C_k$ a libovolné přirozené číslo $k$ je funkce
+konstantu $C_k$ a libovolné přirozené číslo $k$ je řešením rovnice funkce
 $$\begin{equation*}
-  C_k\sin(k\pi x)e^{-\lambda^2 t}.
+  C_k\sin(k\pi x)e^{-k^2\pi^2 t}.
 \end{equation*}$$ 
 Protože rovnice
  je lineární, je řešením i libovolná lineární
 kombinace těchto funkcí. Použijeme-li všechny funkce tohoto tvaru,
 dostáváme řešení $$\begin{equation*}
-  u(x,t)=\sum_{k=1}^\infty C_k\sin(k\pi x)e^{-\lambda^2 t}.
+  u(x,t)=\sum_{k=1}^\infty C_k\sin(k\pi x)e^{-k^2\pi^2 t}.
 \end{equation*}$$
 
 Protože máme zadánu počáteční podmínku
@@ -274,7 +274,7 @@ konečný zápis řešení naší úlohy.
 Řešení rovnice vedení tepla, které splňuje zadané počáteční a okrajové podmínky
 je 
 $$
-  u(x,t)=\sum_{k=1}^\infty C_k\sin(k\pi x)e^{-\lambda^2 t},
+  u(x,t)=\sum_{k=1}^\infty C_k\sin(k\pi x)e^{-k^2\pi^2 t},
 $$ 
 kde 
 $$
@@ -296,7 +296,7 @@ $$
 (počáteční poloha a rychlost všech bodů struny) jsou
 dány vztahem 
 $$
-  u(x,t)=\sum_{k=1}^\infty\left(a_n\cos(k\pi t)+b_n\sin(k\pi t)\right)\sin(k\pi x),
+  u(x,t)=\sum_{k=1}^\infty\left(a_k\cos(k\pi c t)+b_k\sin(k\pi c t)\right)\sin(k\pi x),
 $$
 kde 
 $$
@@ -304,7 +304,7 @@ $$
 $$ 
 a 
 $$
-  b_k=2\int_0^1\psi(x)\cos(k\pi x)\,\mathrm dx.
+  b_k=\frac{2}{k\pi c}\int_0^1\psi(x)\sin(k\pi x)\,\mathrm dx.
 $$
 
 
@@ -336,7 +336,7 @@ $$\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.$$
 Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě.
 $$\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}=\omega.$$
 
-Okrajové podmínky vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Jesliže je v takovém případě konstanta $\omega$ kladná, má úloha pouze nulové řešení (viz výše výpočet vlastních hodnot pro tuto úlohu). Konstanta $\omega$ tedy musí být záporná. 
+Okrajové podmínky vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Jestliže je v takovém případě konstanta $\omega$ kladná, má úloha pouze nulové řešení (viz výše výpočet vlastních hodnot pro tuto úlohu). Konstanta $\omega$ tedy musí být záporná. 
 Přeznačme ji do tvaru $$\omega = -\lambda^2$$ Platí tedy
 $$\frac {\psi'(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.$$
 První rovnice představuje lineární diferenciální rovnici prvního řádu
@@ -360,7 +360,7 @@ relevantní situace. Vidíme i přímo strukturu řešení, které je jakousi
 lineární kombinací různých módů. Tato skutečnost lépe vynikne na
 analogické diferenciální rovnici kmitání struny, kdy jednotlivé módy
 přímo vnímáme sluchem: struna nemůže kmitat na libovolné frekvenci, ale
-pouze a frekvenci dané okrajovou podmínkou a na frekvencích násobných.
+pouze na frekvenci dané okrajovou podmínkou a na frekvencích násobných.
 
 Poznámka: Podobná situace a možnost separace proměnných je u rovnice
 kmitů struny

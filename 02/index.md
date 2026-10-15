@@ -4,8 +4,8 @@
 
 * Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. V této přednášce se zaměříme na prakticky nejlépe využitelný případ, kdy budeme sledovat závislost na prostorových proměnných.
 * Aparát představený v této přednášce má smysl zejména ve dvourozměrném a trojrozměrném světě. Budeme schopni sledovat, v jakém směru veličina roste a klesá maximální rychlostí. Tato veličina v mnoha případech determinuje rychlost s jakou probíhají fyzikální procesy typu difuze nebo vedení tepla.
-* Obecněji tento aparát slouží k lineární aproximaci funkce. Naučíme se lineární aproximaci použít i pro vektorové funkce. To nám umožní formulovat fyzikální zákony dávajících do souvislosti tok a gradient veličiny (spád veličiny) i v případě, kdy tyto vektory nemají stejný směr. Bez této dovednosti se neobjedeme, chceme-li realisticky popsat vlastnosti anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají při vyjádření v souřadnicích podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
-* Jako vedlejší produkt slouží gradient k nalezení lokální extrémů funkce.
+* Obecněji tento aparát slouží k lineární aproximaci funkce. Naučíme se lineární aproximaci použít i pro vektorové funkce. To nám umožní formulovat fyzikální zákony dávající do souvislosti tok a gradient veličiny (spád veličiny) i v případě, kdy tyto vektory nemají stejný směr. Bez této dovednosti se neobjedeme, chceme-li realisticky popsat vlastnosti anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají při vyjádření v souřadnicích podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
+* Jako vedlejší produkt slouží gradient k nalezení lokálních extrémů funkce.
 ```
 
 ```{admonition}  Prerekvizity.
@@ -35,17 +35,17 @@
 
 ###  Geometrie
 
-* Skalární součin dvou vektorů je definován vztahem $$(u_1,u_2)\cdot (v_1,v_2)=u_1v_1+u_2v_2.$$ Pro kolmé vektory je skalární součin nulový. Má-li jeden z vektor jednotkovou délku, je skalární součin průmětem druhého vektoru do směru daného uvažovaným jednotkovým vektorem.
+* Skalární součin dvou vektorů je definován vztahem $$(u_1,u_2)\cdot (v_1,v_2)=u_1v_1+u_2v_2.$$ Pro kolmé vektory je skalární součin nulový. Má-li jeden z vektorů jednotkovou délku, je skalární součin průmětem druhého vektoru do směru daného uvažovaným jednotkovým vektorem.
 
 ### Lineární algebra
 
 manimp:MatrixMultiplication|Maticové násobení.
 
 * Součin matice a vektoru je lineární kombinace sloupců matice, přičemž koeficienty této kombinace jsou složky vektoru. Viz následující příklad. $$\begin{pmatrix}2 & 1\\-1 &3 \end{pmatrix} \begin{pmatrix}2\\3\end{pmatrix} = 2\begin{pmatrix}2\\-1\end{pmatrix} + 3\begin{pmatrix}1\\3\end{pmatrix} = \begin{pmatrix}7\\7\end{pmatrix}$$
-* Matice je možno chápat jako zobrazení mezi vektorovými prostory. Vektor můžeme pomocí matice zobrazit na jiný vektor. Zachovávají se přitom důležité vlastnosti, jako se přitom rovnoběžnost a poloha středu úsečky.
+* Matice je možno chápat jako zobrazení mezi vektorovými prostory. Vektor můžeme pomocí matice zobrazit na jiný vektor. Zachovávají se přitom důležité vlastnosti, jako rovnoběžnost a poloha středu úsečky.
 * Matice je možno použít pro přepočet vektorů a tenzorů do jiné soustavy souřadnic.
 * Pokud se vektor zobrazí na svůj násobek, nazývá se vlastní vektor a tento násobek je vlastní číslo. $$A\vec v=\lambda \vec v$$
-* Matice s vlastními vektory se směru souřadných os je diagonální. Skutečně, například použitím definice maticového součinu a použitím definice vlastního vektoru a čísla dostáváme $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}.$$ To si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
+* Matice s vlastními vektory ve směru souřadných os je diagonální. Skutečně, například použitím definice maticového součinu a použitím definice vlastního vektoru a čísla dostáváme $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}.$$ To si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
 
 ## Diferenciální operátory
 
@@ -69,7 +69,7 @@ Podobně je definován gradient skalární funkce tří proměnných $f(x,y,z)$.
 ```
 
 
-Význam a postavení gardientu ilustruje následující příklad, který je poté zobecněn do poznámky shrnující fyzikální význam gradientu.
+Význam a postavení gradientu ilustruje následující příklad, který je poté zobecněn do poznámky shrnující fyzikální význam gradientu.
 
 **Příklad.** Pokud je teplota v rovině v bodě $(x,y)$ dána předpisem $$T=(x^2-xy^2)^\circ\mathrm C,$$ je gradientem vektor $$\nabla T=\begin{pmatrix}2x-y^2, -2xy\end{pmatrix} {}^\circ\mathrm C \mathrm m^{-1}.$$ V bodě $(1,1)$ je gradient $$\nabla T(1,1)=\begin{pmatrix}1,-2\end{pmatrix}{}^{\circ}\mathrm C \mathrm m^{-1}.$$ To znamená, že v tomto bodě roste teplota ve směru osy $x$ rychlostí jeden stupeň Celsia na každý metr délky a ve směru osy $y$ klesá rychlostí dva stupně Celsia na každý metr délky. Vektor definovaný tímto gradientem má směr doprava dolů (pod úhlem splňujícím podmínku $\tan \varphi = -2$) a délku $\sqrt{(1)^2+(-2)^2}=\sqrt 5\approx 2.2$. To znamená, že maximální nárůst teploty je směrem doprava dolů a tento nárůst je $2.2$ stupně Celsia na každý metr délky.
 
@@ -95,7 +95,7 @@ Symbol $\nabla$ je operátor nabla definovaný formálně vztahem $$\nabla=\left
 
 Někdy je vhodné formulovat fyzikální zákony pomocí prostředků lineární algebry, zejména pomocí maticového součinu. V takovém případě gradient zapisujeme jako sloupcový vektor.
 
-Gradient úzce souvisí s vrstevnicemi, s křivkami, které spojují místa se stejnou funkční hodnotou funkce dvou proměnných. Někdy místo pojmu vrstevnice používáme výraz, který obsahuje i povahu sledované veličiny, například se používají názvy jako izotermy, izobary, hydroizopsy, hydroizopiezy atd. Pro funkce tří proměnných máme plochy spojující místa se stejnou funkční hodnotou ekvipotenciální plochy.
+Gradient úzce souvisí s vrstevnicemi, s křivkami, které spojují místa se stejnou funkční hodnotou funkce dvou proměnných. Někdy místo pojmu vrstevnice používáme výraz, který obsahuje i povahu sledované veličiny, například se používají názvy jako izotermy, izobary, hydroizohypsy, hydroizopiezy atd. Pro funkce tří proměnných máme plochy spojující místa se stejnou funkční hodnotou ekvipotenciální plochy.
 Gradient je v každém bodě kolmý k vrstevnici (ve 2D) resp. k ekvipotenciální ploše (ve 3D). [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
 
 ```{prf:remark} linearita gradientu
@@ -195,9 +195,9 @@ V roce 1855 německý lékař A. Fick objevil, že difuzní tok $\vec J$
 jednotku času) je úměrný gradientu koncentrace $c$ této
 látky. Vyjádřeno moderní terminologií to znamená, že platí
 $$\vec J=-D\nabla c. $$
-Veličina $D$ se nazývá difuzní koeficient. Pokud má $\vec J$ stejný
-směr jako $\nabla c$, je $D$ skalární veličina. Pokud směry nejsou
-stejné, je $D$ tenzor. Z fyzikálních důvodů je tenzor $D$ symetrický.
+Veličina $D$ se nazývá difuzní koeficient. Pokud má $\vec J$ opačný
+směr než $\nabla c$, je $D$ skalární veličina. Pokud směry nejsou
+opačné, je $D$ tenzor. Z fyzikálních důvodů je tenzor $D$ symetrický.
 
 Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 
@@ -269,7 +269,7 @@ V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivn�
 
   ale veličina $\lambda$ už není skalární veličina, je to matice. V souřadnicích potom $$ q_i=-\sum_{j}\lambda_{ij} \frac{\partial T}{\partial x_j}.$$ Tento vztah se zpravidla zapisuje pomocí zkrácené Einsteinovy notace (přes opakovaný index se sčítá a vynechává se znaménko pro sumu) ve tvaru $$ q_i=-\lambda_{ij} \frac{\partial T}{\partial x_j}.$$
 
-Tvar {eq}`F.5` je nejobecnější. Pokud je materiál iztropní, redukuje se {eq}`F.5` na {eq}`F.4`. Pokud je úloha jednodimenzionální, redukují se {eq}`F.4` a {eq}`F.5` automaticky na {eq}`F.3`. Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na {eq}`F.2` nebo (pokud nás zajímá velikost a ne směr) na {eq}`F.1`.
+Tvar {eq}`F.5` je nejobecnější. Pokud je materiál izotropní, redukuje se {eq}`F.5` na {eq}`F.4`. Pokud je úloha jednodimenzionální, redukují se {eq}`F.4` a {eq}`F.5` automaticky na {eq}`F.3`. Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na {eq}`F.2` nebo (pokud nás zajímá velikost a ne směr) na {eq}`F.1`.
 
 begintable
 
@@ -279,7 +279,7 @@ begintable
 |$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|Znaménko zohledňuje fakt, že teplo teče od horkého konce ke studenému|
 |$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|Derivace podle $x$ (jednorozměrný gradient) místo podílu.|
 |$\begin{aligned}\vec q&=-\lambda \nabla{T},\cr \lambda&\in\mathbb{R}\text{ (skalár)}\end{aligned}$|Libovolný|Ne|ANO|ANO|Jednorozměrný gradient je nahrazen obecným gradientem. Tok je vektor.|
-|$\begin{aligned}\vec q&=-\lambda \nabla{T}\cr \lambda&\in\mathbb{R}^n\text{ (tenzor)}\end{aligned}$|Libovolný|ANO|ANO|ANO|Materiálová charakteristika $\lambda$ je matice.|
+|$\begin{aligned}\vec q&=-\lambda \nabla{T}\cr \lambda&\in\mathbb{R}^{n\times n}\text{ (tenzor)}\end{aligned}$|Libovolný|ANO|ANO|ANO|Materiálová charakteristika $\lambda$ je matice.|
 
 caption:Různé tvary konstitutivního zákona.
 
@@ -503,14 +503,14 @@ je nulová.
 
 Na závěr jedna aplikace z oblasti parciálních derivací a lineárních aproximací vektorových funkcí více proměnných. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
-Vektorovou funkci je možné chápat jako zobrazení roviny do sebe. Toto zobrazení může odpovídat transformaci tělesa,  působením síly. Popišme tuto deformaci vektorem  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$. Tneto vektor udává posunutí bodu o souřadnicích $(x_1,x_2)$ vlivem působící síly. Pokud je tato vektorová funkce nulová, s tělesem se nic neděje, každý jeho bod zůstává na místě. Pokud je konstantní, každý bod se posune stejně a jedná se o posun, bez změny tvaru. V obecném případě však tato funkce konstantní není. Lineární aproximací v bodě $(x_1,x_2)$ dostáváme
+Vektorovou funkci je možné chápat jako zobrazení roviny do sebe. Toto zobrazení může odpovídat transformaci tělesa působením síly. Popišme tuto deformaci vektorem  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$. Tento vektor udává posunutí bodu o souřadnicích $(x_1,x_2)$ vlivem působící síly. Pokud je tato vektorová funkce nulová, s tělesem se nic neděje, každý jeho bod zůstává na místě. Pokud je konstantní, každý bod se posune stejně a jedná se o posun, bez změny tvaru. V obecném případě však tato funkce konstantní není. Lineární aproximací v bodě $(x_1,x_2)$ dostáváme
 $$\vec U(x_1+\Delta x_1,x_2+\Delta x_2)\approx \vec U(x_1,x_2) + J(x_1,x_2) \begin{pmatrix}\Delta x_1 \\ \Delta x_2 \end{pmatrix}.$$
-Člen $\vec U(x_1,x_2)$ je posunutí. Tento člen nás při studiu deformace nezajímá, nesouvisí se změnou tvaru. Zajímá nás až druhý člen, obsahující zkombinované deformaci a pootočení. Toto pootočení musíme z druhého člene eliminovat. Uděláme to tak, že člen rozdělíme na část obsahující pootočení a zbytek, související se změnou tvaru. Nás bude zajímat až tento zbytek.
+Člen $\vec U(x_1,x_2)$ je posunutí. Tento člen nás při studiu deformace nezajímá, nesouvisí se změnou tvaru. Zajímá nás až druhý člen, obsahující zkombinovanou deformaci a pootočení. Toto pootočení musíme z druhého členu eliminovat. Uděláme to tak, že člen rozdělíme na část obsahující pootočení a zbytek, související se změnou tvaru. Nás bude zajímat až tento zbytek.
 
 Pokud matici $J(x_1,x_2)$ rozdělíme na součet symetrické a antisymetrické matice, dostaneme matici, odpovídající změně tvaru a matici, odpovídající pootočení. Pootočení (antisymetrická část) nás nezajímá, zajímá nás jenom změna tvaru. Obecný postup, jak rozdělit matici na součet symetrické a antisymetrické matice je $$A=\frac{A+A^T}2+\frac{A-A^T}2.$$ První matice v tomto součtu je symetrická a druhá antisymetrická.
 Pro Jacobiho matici dostáváme
 \dm$$\frac{J+J^T}2= \begin{pmatrix}         \frac{\partial u_{1}}{\partial x_{1}} &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}    .$$
-Tato matice popisuje změnu tvaru a nazývá se [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se změnou tvaru bez započtení zvětšení či zmenšení).
+Tato matice popisuje změnu tvaru a nazývá se [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátoru (souvisí se změnou tvaru bez započtení zvětšení či zmenšení).
 
 Pro využití v dřevařských úlohách viz též A. Požgaj, Štruktúra a
 vlastnosti dreva str 318 nebo P. Horáček, Fyzikální a mechanické

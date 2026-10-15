@@ -1,10 +1,10 @@
 # Lineární diferenciální rovnice
 
 ```{admonition} Anotace.
-* Ve všech úvodních příkladech se budeme věnovat asi nejjednodušší diferenciální rovnici: lineární s konstantními koeficienty. Tato tovnice má jediné konstantní řešení, kdy se nic neděje. Nekonstantná řešení jsou popsány exponenciálními funkcemi.
+* Ve všech úvodních příkladech se budeme věnovat asi nejjednodušší diferenciální rovnici: lineární s konstantními koeficienty. Tato rovnice má jediné konstantní řešení, kdy se nic neděje. Nekonstantní řešení jsou popsána exponenciálními funkcemi.
 * Ve dvou úvodních příkladech se podíváme na řešení rovnice popisující radioaktivní rozpad a exponenciální pokles aktivity. V jednom případě je pokles k nule (radioaktivní prvek se časem rozpadne) a ve druhém případě k nenulové hodnotě (množství radioaktivního prvku je doplňováno difuzí a nastolí se rovnováha).
 * V dalších dvou příkladech si ukážeme modely vedoucí k rovnici popisující exponenciální růst, resp. exponenciální vzdalování se od konstantního řešení. Ve druhém příkladě si zkusíme numericky demonstrovat intenzitu exponenciálního růstu.
-* V posledním příkladě se zaměříme na vektorový případ a ukážeme, že zpětná vazba reagující na hodnoty sledované veličiny je vhodnou taktikou pro udržení konstantního stavu této veličina a podle povahy může a nemusí vést k oscilacím. Ukážeme si toto na příkladě regulace teploty ale v podstatě stejně je udržována rovnováha enzymů a proteinů v tělech rostlin a živočichů.
+* V posledním příkladě se zaměříme na vektorový případ a ukážeme, že zpětná vazba reagující na hodnoty sledované veličiny je vhodnou taktikou pro udržení konstantního stavu této veličiny a podle povahy může a nemusí vést k oscilacím. Ukážeme si toto na příkladě regulace teploty, ale v podstatě stejně je udržována rovnováha enzymů a proteinů v tělech rostlin a živočichů.
 ```
 
 ## Radioaktivní rozpad 
@@ -23,7 +23,7 @@ Množství radioaktivního materiálu se snižuje rychlostí úměrnou tomuto mn
 1. Modelem je rovnice $$\frac{\mathrm dy}{\mathrm dt}=-ky$$ s jedním řešením 
 $$y=e^{-kt}$$ a obecným řešením
 $$y=Ce^{-kt}.$$
-2. Doba $T$ za kterou klesne hodnota na polovinu se určí ze vztahu
+2. Doba $T$, za kterou klesne hodnota na polovinu, se určí ze vztahu
 $$\frac 12=e^{-kT},$$
 tj. 
 $$kT=\ln 2$$
@@ -63,7 +63,7 @@ _Více viz [Radon in the environment](http://www.nat.vu.nl/environmentalphysics/
 :class: dropdown
 :nonumber:
 
-1. Je-li $q$ rychlost s jakou radon proniká do budovy, $k$ rozpadová konstanta a $d$ konstanta úměrnosti charakterizující intenzitu s jakou plyn uniká difuzí z budovy, je modelem rovnice $$\frac{\mathrm dy}{\mathrm dt}=q-ky-dy,$$ nebo po úpravě
+1. Je-li $q$ rychlost, s jakou radon proniká do budovy, $k$ rozpadová konstanta a $d$ konstanta úměrnosti charakterizující intenzitu, s jakou plyn uniká difuzí z budovy, je modelem rovnice $$\frac{\mathrm dy}{\mathrm dt}=q-ky-dy,$$ nebo po úpravě
 $$\frac{\mathrm dy}{\mathrm dt}=q-(k+d)y.$$
 2. Stacionární řešení je $$y=\frac{q}{k+d},$$ což zjistíme, pokud do modelu za derivaci dosadíme nulu a vyřešíme vzhledem k $y$.
 3. Rovnice je lineární, což vidíme z tvaru 
@@ -80,7 +80,7 @@ a exponenciálně klesá. V prakticky smysluplných aplikacích je koncentrace p
 $$ \frac {q}{k+d} - y = Ke^{-(k+d)t}$$ 
 a
 $$y=\frac {q}{k+d} - Ke^{-(k+d)t}.$$ 
-4. Izolace sníží rychlost s jakou radon prostupuje do budovy a sníží tedy konstantu $q$. Větrání zvýší rychlost difuze ven a zvýší koeficient $d$. Každý z těchto efektů nezávisle sníží čitatel resp. zvýší jmenovatel podílu $$\frac {q}{k+d},$$ což vede k menší hodnotě. Hodnota ve stacionárním stavu klesne.
+4. Izolace sníží rychlost, s jakou radon prostupuje do budovy, a sníží tedy konstantu $q$. Větrání zvýší rychlost difuze ven a zvýší koeficient $d$. Každý z těchto efektů nezávisle sníží čitatel resp. zvýší jmenovatel podílu $$\frac {q}{k+d},$$ což vede k menší hodnotě. Hodnota ve stacionárním stavu klesne.
 ```
 
 ## Časový rozestup mezi trolejbusy
@@ -107,7 +107,7 @@ Předpokládejme, že
   klesá konstantní rychlostí, pokud na druhý vůz nečekají žádní pasažéři
 * rychlost druhého vozu klesá (a rozestup roste) s rostoucím počtem pasažérů
   čekajících na zastávce 
-* a počet pasažérů kteří čekají na zastávce roste s rostoucím
+* a počet pasažérů, kteří čekají na zastávce roste s rostoucím
   intervalem mezi oběma vozy.
 
 Navrhněte model pro rozestup trolejbusů, najděte stacionární řešení a posuďte kvalitativní chování nekonstantních řešení.
@@ -155,7 +155,7 @@ Protože výraz $e^{\beta t}$ je rostoucí funkcí $t$, znamená to, že
 vzdálenost řešení od stacionárního řešení s časem roste. V našem modelu
 to znamená, že trolejbus, který nabral zpoždění, bude nabírat zpoždění
 stále větší. Naopak trolejbus, který nedodržel odstup a zkrátil
-interval od předchozího bude tento předchozí stále více dohánět. To
+interval od předchozího, bude tento předchozí stále více dohánět. To
 souvisí s tím, že se změnou intervalu se změní počet pasažérů
 čekajících na zastávce a toto má vliv na rychlost trolejbusu.
 
@@ -202,7 +202,7 @@ Poznámky.
 :class: dropdown
 :nonumber:
 
-1. Jedná se o klasickou homogenní lineární diferenciální rovnici s konstantním koeficientem. Jedno řešení je $$T=e^{\mu\theta}$$ a obecné řešení $$T=Ce^{\mu\theta}.$$ Pro $\theta = 0$ dostáváme $T=C$ a je-li $T_0$ tah na jenom konci (méně namáhaném), je tah na druhém konci $$T=T_0 e^{\mu\theta}.$$ Tah se tedy zvýší multiplikativním faktorem $e^{\mu\theta}.$ Pokud brzdné účinky definujeme jako podíl tahů na obou koncích, dostáváme 
+1. Jedná se o klasickou homogenní lineární diferenciální rovnici s konstantním koeficientem. Jedno řešení je $$T=e^{\mu\theta}$$ a obecné řešení $$T=Ce^{\mu\theta}.$$ Pro $\theta = 0$ dostáváme $T=C$ a je-li $T_0$ tah na jednom konci (méně namáhaném), je tah na druhém konci $$T=T_0 e^{\mu\theta}.$$ Tah se tedy zvýší multiplikativním faktorem $e^{\mu\theta}.$ Pokud brzdné účinky definujeme jako podíl tahů na obou koncích, dostáváme 
 $$\frac{T(\theta)}{T_0}=e^{\mu\theta}$$ a tento podíl roste exponenciálně s úhlem $\theta$.
 2. Podle zadání platí $$\frac {1}{0.75}=e^{\mu \frac \pi 2}$$ a chceme najít $e^{\mu \pi }$, $e^{\mu 2\pi }$ a $e^{\mu 4\pi }.$ 
 Umocněním získáme
@@ -212,7 +212,7 @@ $$ e^{\mu 2\pi } =\left(e^{\mu \frac \pi 2}\right)^4=\frac {1}{0.75^4}=\frac{1}{
 a
 $$ e^{\mu 4\pi } =\left(e^{\mu \frac \pi 2}\right)^8=\frac {1}{0.75^8}=\frac{1}{0.1001}.$$
 Postupně tedy poklesne tahová síla o 44 procent (půlotáčka), o 70 procent (celá otáčka) a o 90 procent tj. na desetinu (dvě otáčky).
-1. Pokud se první brzdy se tah mění násobkem 
+1. Pokud se u první brzdy tah mění násobkem 
 $e^{\mu\theta_1}$ a u druhé násobkem $e^{\mu\theta_2}$, vynásobením těchto faktorů s pomocí vzorce pro součin exponenciálních výrazů se stejným základem (mocniny o stejném základu se násobí tak, že se sčítají exponenty) dostáváme
 $$e^{\mu\theta_1}e^{\mu\theta_2}=e^{\mu(\theta_1+\theta_2)}.$$ Tah se tedy mění s faktorem odpovídajícím součtu úhlů, což bylo dokazováno.
 
@@ -244,7 +244,7 @@ Uvažujme místnost, ve které je umístěno topné zařízení, další zdroje 
 
 1. Napište model pro teplotu v místnosti a za předpokladu konstantního $P$ najděte stacionární stav. Všimněte si, že tento stacionární stav závisí na parametrech systému.
 2. Chceme udržovat systém na teplotě $T_0$. Přidejte k modelu předpoklad, že výkon $P$ je regulován. Tato regulace je realizována vztahem
-$$\frac{\mathrm dP}{\mathrm dt}=-k(T-T_0).$$ Okomentujte slovně, v čem regulace spočívá. Poté přidejte tento vztah v rovnici pro teplotu, čímž vznikne lineární autonomní systém. Ukažte, že stacionární teplotou je teplota $T_0$. Všimněte si, že tato hodnota je robustní: nezávisí na konstantách $a$, $b$, $k$ nebo $S$.
+$$\frac{\mathrm dP}{\mathrm dt}=-k(T-T_0).$$ Okomentujte slovně, v čem regulace spočívá. Poté přidejte tento vztah k rovnici pro teplotu, čímž vznikne lineární autonomní systém. Ukažte, že stacionární teplotou je teplota $T_0$. Všimněte si, že tato hodnota je robustní: nezávisí na konstantách $a$, $b$, $k$ nebo $S$.
 3. Předpokládejme nejobecnější lineární systém regulace výkonu
 $$\frac{\mathrm dP}{\mathrm dt}=\alpha P-k T + \gamma.$$ 
 Ukažte, že stacionární stav je robustní (roven $T_0=\frac\gamma k$ a nezávislý na ostatních parametrech) tehdy a jen tehdy, když platí $\alpha =0$.
@@ -302,9 +302,9 @@ $$\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}T\\P\end{pmatrix}=\begin{pmatrix}-b
 Charakteristický polynom v proměnné $\lambda$ je 
 $$0=\begin{vmatrix}-b-\lambda&a\\-k&-\lambda\end{vmatrix}=\lambda^2+b\lambda+ak.$$
 a kořeny jsou $$\lambda_{1,2}=\frac{-b\pm\sqrt{b^2-4ak}}{2}.$$
-Pokud je $b^2-4ak>0$, jsou oba kořeny reálné záporné a ve stacionárním bodě je stabilní uzel. Systém přejde do stacionárního bodu bez oscilací. Pokud je $b^2-4ak<0$, jsou oba kořeny komplexně sdružené se zápornou reálnou částí a systém přejde do stabilního stavu oscilacemi se snižující se amplitudou. Z podmínek vidíme, že o chování rozhoduje to, zda je výraz $\frac{b^2}{ak}$ větší či menší v porovnání s hodnotou $4$. Pokud větší, oscilace se nevyskytnou. Pokud menší, systém osciluje k rovnováze. Tyto oscilace se tedy objeví, pokud je $a$ nebo $k$ velké. Pro systém to znamená, že oscilace se objeví, pokud příkon $P$ výrazně reaguje na odchylku od rovnovážné teploty (velké $k$), nebo teplota výrazně reaguje na změny v příkonu (velké $a$). Že se v takových situacích může rovnovážná teplota "přestřelit" a budeme se ní blížit zase z opačného směru není proto nijak překvapující. Přirozenou analýzou vyplynulo, že kvalitativní chování systému (oscilace versus neoscilace) nezávisí na jednotlivých parametrech samostatně, ale na čísle $\frac{b^2}{ak}$. Pokud prohodíme pořadí proměnných, má soustava tvar 
+Pokud je $b^2-4ak>0$, jsou oba kořeny reálné záporné a ve stacionárním bodě je stabilní uzel. Systém přejde do stacionárního bodu bez oscilací. Pokud je $b^2-4ak<0$, jsou oba kořeny komplexně sdružené se zápornou reálnou částí a systém přejde do stabilního stavu oscilacemi se snižující se amplitudou. Z podmínek vidíme, že o chování rozhoduje to, zda je výraz $\frac{b^2}{ak}$ větší či menší v porovnání s hodnotou $4$. Pokud větší, oscilace se nevyskytnou. Pokud menší, systém osciluje k rovnováze. Tyto oscilace se tedy objeví, pokud je $a$ nebo $k$ velké. Pro systém to znamená, že oscilace se objeví, pokud příkon $P$ výrazně reaguje na odchylku od rovnovážné teploty (velké $k$), nebo teplota výrazně reaguje na změny v příkonu (velké $a$). Že se v takových situacích může rovnovážná teplota "přestřelit" a budeme se k ní blížit zase z opačného směru, není proto nijak překvapující. Přirozenou analýzou vyplynulo, že kvalitativní chování systému (oscilace versus neoscilace) nezávisí na jednotlivých parametrech samostatně, ale na čísle $\frac{b^2}{ak}$. Pokud prohodíme pořadí proměnných, má soustava tvar 
 $$\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}P\\T\end{pmatrix}=\begin{pmatrix}0&-k\\a&-b\end{pmatrix}\begin{pmatrix}P\\T\end{pmatrix}+\begin{pmatrix}kT_0\\S\end{pmatrix}.$$
-Až na konstantní člen na pravé straně je systém stejný jako systém pro mechanický oscilátor. Přítomnost konstantního člene způsobí, že stacionární bod není v počátku, ale je posunutý.
+Až na konstantní člen na pravé straně je systém stejný jako systém pro mechanický oscilátor. Přítomnost konstantního členu způsobí, že stacionární bod není v počátku, ale je posunutý.
 
 ```
 

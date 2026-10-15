@@ -10,7 +10,7 @@
 
 ```{admonition} Prerekvizity
 
-* Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+* Křivkový integrál počítáme převodem na Riemannův integrál. Je proto dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
 ```
 
 ## Křivkový integrál
@@ -48,7 +48,7 @@ https://youtu.be/MRk4HRAWlA4
 Nejprve představíme matematický aparát pro popis křivek.  Rovinné křivky nejčastěji popisujeme vektorovou funkcí jedné proměnné $\vec r\colon \mathbb{R}\to \mathbb{R}^2$. Zpravidla s touto vektorovou funkcí pracujeme v komponentách, kdy každá její komponenta je dána skalární funkcí. Vektorově píšeme $$\vec r(t)=[\varphi(t),\psi(t)]=\varphi(t) \vec\imath + \psi(t)\vec\jmath,\quad t\in [\alpha,\beta]$$ a tato vektorová funkce se nazývá *parametrizace* křivky $C$. Často píšeme parametrické rovnice pro jednotlivé souřadnice ve tvaru $$C=\begin{cases} x=\varphi(t)\\y=\psi(t), \quad t\in[\alpha,\beta].\end{cases}$$
 
 * Graf křivky dostaneme tak, že pro každé $t$ z intervalu $[\alpha, \beta]$ kreslíme ve 2D bod $[\varphi(t), \psi(t)]$.
-* Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkUFvhCAQhe8m_geiB7AlaTFNb5x75ResmbLslohgcGJlf31Ftx42y23C-957k5khMrqQRJuyKIu6rkkMs7fakDEG0kc796ksvBRlsTBspA4Tw5Nf1SmPk_X3cYcHc9vJESIMBmNZ4GA9xwEW-c5Z-zLa5sTE245s0JOXf5SQowvIcixnyA-fhhNnrsafOwffxkmaFbn_SijxukHpCaSDC1HSaM700SHdHaaf8MuU4ORir5O9Gck--ceKokVnZPUV4ZJIjiNAMlNtW6hW_q9rdbfl762z5KHGEdJymEajsYuANkhxhKjDqof9AFA1fx4nfBQ=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* Pro danou křivku $C$ v rovině $xy$ nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkUFvhCAQhe8m_geiB7AlaTFNb5x75ResmbLslohgcGJlf31Ftx42y23C-957k5khMrqQRJuyKIu6rkkMs7fakDEG0kc796ksvBRlsTBspA4Tw5Nf1SmPk_X3cYcHc9vJESIMBmNZ4GA9xwEW-c5Z-zLa5sTE245s0JOXf5SQowvIcixnyA-fhhNnrsafOwffxkmaFbn_SijxukHpCaSDC1HSaM700SHdHaaf8MuU4ORir5O9Gck--ceKokVnZPUV4ZJIjiNAMlNtW6hW_q9rdbfl762z5KHGEdJymEajsYuANkhxhKjDqof9AFA1fx4nfBQ=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * Parametrizace kružnice, úsečky a grafu funkce jedné proměnné jsou v [cheatsheetu.](https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf)
 
 ## Křivkový integrál prvního druhu
@@ -71,7 +71,7 @@ Pokud uvažujeme rovný drát o lineární hustotě $f$ a délce $s$, je hmotnos
 drátu rovna součinu $$m=fs.$$ Pokud by drát nebyl homogenní, je nutné v tomto vzorci místo součinu použít Riemannův integrál $$m=\int _a^b f\,\mathrm ds.$$ Budeme ve zobecňování pokračovat. Uvažujme drát, který není ani homogenní, ani rovný. Nechť leží podél rovinné křivky $C$ a nechť je jeho lineární hustota (specifická hmotnost) v bodě $(x,y)$ dána funkcí $f(x,y)$. Zde již Riemannův integrál nepomůže. Celkovou hmotnost můžeme odhadnout následovně.
 
 * Myšlenkově rozdělíme drát na malé kousíčky a v každém z nich odhadneme lineární hustotu konstantou. Můžeme například použít minimální hodnotu hustoty v tomto kousíčku pro dolní odhad hmotnosti. 
-* Vynásobením délky každého kousíčku a lineární hustotou obdržíme jeho hmotnost a sečtením přes všechny kousky dostaneme odhad pro hmotnost drátu. Tento odhad bude tím přesnější, čím jemnější dělení použijeme. 
+* Vynásobením délky každého kousíčku lineární hustotou obdržíme jeho hmotnost a sečtením přes všechny kousky dostaneme odhad pro hmotnost drátu. Tento odhad bude tím přesnější, čím jemnější dělení použijeme. 
 * Zjemňováním dělení se tyto odhady zpřesňují. 
 
 V limitním procesu můžeme nechat délku  kousíčků konvergovat k nule. Poté dostáváme objekt, který se nazývá *křivkový integrál prvního druhu*, označuje $$ \int_C f\;\mathrm{d} s $$ a fyzikálně vyjadřuje hmotnost drátu z výše uvažované úlohy. Pokud počáteční a koncový bod křivky $C$ splývají, píšeme též $$ \oint_C f\;\mathrm{d} s $$ a integrál nazýváme *integrálem po uzavřené křivce*.
@@ -105,13 +105,13 @@ $$
 
 ### Převod na Riemannův integrál (prostorová  křivka)
 
-S křivkovým integrálu po křivce  
+S křivkovým integrálem po křivce  
 $$
   C:\quad \varphi(t)\vec\imath + \psi(t)\vec\jmath + \xi(t) \vec k, \quad t\in[\alpha,\beta]
 $$
 ve trojrozměrném prostoru pracujeme podobně. Délkový element je
 $$
-\mathrm{d}s=\sqrt{(\varphi^{\prime}(t))^2+(\psi^{\prime }(t))^2+(\xi^{\prime }(t))^2}\mathrm{dt}
+\mathrm{d}s=\sqrt{(\varphi^{\prime}(t))^2+(\psi^{\prime }(t))^2+(\xi^{\prime }(t))^2}\mathrm{d}t
 $$
 a integrál má tvar
 \dm$$ \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{(\varphi^{\prime}(t))^2+(\psi^{\prime }(t))^2+(\xi^{\prime }(t))^2}\;\mathrm{d} t. $$
@@ -240,7 +240,7 @@ Předpokládejme, že na těleso působí (obecně nekonstantní) síla $\vec F$
 V limitě dostáváme veličinu, která se nazývá *křivkový integrál
 druhého druhu* funkce $\vec F$ po křivce $C$. Tento integrál zapisujeme $$
 \int_C\vec F\;\mathrm{d}\vec r .$$ Je-li $$ \vec F(x,y)=P(x,y)\vec
-i+Q(x,y)\vec\jmath, $$ zapisujeme někdy křivkový integrál
+\imath+Q(x,y)\vec\jmath, $$ zapisujeme někdy křivkový integrál
  ve složkách $$ \int_C P(x,y)\mathrm{d}
 x+Q(x,y)\mathrm{d} y.  $$
 
@@ -329,20 +329,20 @@ manimp:integracni_cesta|Křivkový integrál může a nemusí záviset na integr
   $$
   \int_C\vec F\;\mathrm{d}\vec r
   $$
-  vyjadřuje **práci** kterou vykoná síla $\vec F$ při přemístění tělesa podél orientované křivky $C$.
+  vyjadřuje **práci**, kterou vykoná síla $\vec F$ při přemístění tělesa podél orientované křivky $C$.
 * Je-li křivka $C$ uzavřená, píšeme
   $$
   \oint_C\vec F\;\mathrm{d}\vec r.
   $$
-  Fyzikálně se jedná o **práci** kterou vykoná síla $\vec F$ při přemístění
+  Fyzikálně se jedná o **práci**, kterou vykoná síla $\vec F$ při přemístění
   tělesa po uzavřené orientované křivce. Tato práce se též nazývá *cirkulace
   vektorového pole po orientované křivce $C$*. Pokud je možno v poli zavést
   potenciální energii a pokud tedy práce závisí jenom na počáteční a
-  koncové poloze, musí tato práce být nulová. To je důsledkem věty
+  koncové poloze, musí tato práce být nulová. To je důsledkem věty,
   kterou si uvedeme později.
 * Při odvození křivkového integrálu druhého druhu jako vykonané práce hraje roli vlastně jenom ta
   složka silového pole, která při posunu ve směru křivky koná práci. Uvažujeme tedy jenom složku tečnou ke křivce. Pokud použijeme naopak pouze normálovou komponentu, dostaneme veličinu vyjadřující **tok vektorového pole orientovanou křivkou $C$**. Výsledný vzorec pro tok vektorového pole $\vec F(x,y)=P(x,y)\vec
-i+Q(x,y)\vec\jmath$ křivkou $C$
+\imath+Q(x,y)\vec\jmath$ křivkou $C$
   je
   $$
   \int_{C}-Q(x,y)\mathrm{d}x+P(x,y)\mathrm{d}y.
@@ -448,5 +448,5 @@ column-count:3;}
 \fi
 
 * Křivkový integrál druhého druhu souvisí s prací silového pole. Vzhledem ke zkušenostem z mechaniky by toto měla být cesta ke skalárnímu popisu vektorového pole. Protože v minulém týdnu jsme jednu takovou cestu otevřeli (pojem rotace a její nulovost či nenulovost), dá se očekávat, že obě problematiky budou souviset. Tuto souvislost si ukážeme později, za dva týdny (Greenova věta).
-* Křivkový integrál druhého druhu může souviset s i s tokem vektorového pole křivkou a to je zase doména difuzní rovnice a divergence vektorového pole. Oba pojmy, křivkový integrál a divergence spolu opravdu souvisí a přesvědčí nás o tom později opět Greenova věta.
+* Křivkový integrál druhého druhu může souviset i s tokem vektorového pole křivkou a to je zase doména difuzní rovnice a divergence vektorového pole. Oba pojmy, křivkový integrál a divergence, spolu opravdu souvisí a přesvědčí nás o tom později opět Greenova věta.
 

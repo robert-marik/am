@@ -42,7 +42,7 @@ obecného řešení, ale pokusíme se popsat chování řešení, aniž bychom
 tato řešení znali. Pokusíme se s co nejmenší námahou říct, jak se
 budou řešení chovat.
 
-Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Nazývají *se stacionární body*. Je užitečné umět posoudit chování řešení v okolí stacionárních bodů, což umožní následující věta.
+Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Nazývají se *stacionární body*. Je užitečné umět posoudit chování řešení v okolí stacionárních bodů, což umožní následující věta.
 
 ```{prf:theorem} stabilita konstantních řešení
 :nonumber:
@@ -85,7 +85,7 @@ stacionární bod je stabilní. Jak se zvyšuje faktor $h$, graf paraboly
 se posouvá směrem dolů a oba stacionární body se posouvají směrem k
 sobě a k vrcholu. Jejich stabilita zůstává neporušena. To znamená, že
 sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
-se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
+se tento stacionární stav dostává stále blíže ke stavu nestabilnímu
 a rovnováha je tedy poněkud křehká.
 
 [Numerický model](http://user.mendelu.cz/marik/aromamath/Lov_populace.html)
@@ -108,7 +108,7 @@ Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodo
 
 ### Model soupeření jestřábí a holubičí povahy
 
-manim:Hawk_and_dove_game|zAzZrIShj9U|Model soupeření dvou povah. Ukazuje, že vždy bude v přírodě určité procento agrasivního vzorce chování. Někdy dokonce tento vzorech chování bude jediný. 
+manim:Hawk_and_dove_game|zAzZrIShj9U|Model soupeření dvou povah. Ukazuje, že vždy bude v přírodě určité procento agresivního vzorce chování. Někdy dokonce tento vzorec chování bude jediný. 
 
 \iffalse 
 
@@ -202,13 +202,13 @@ https://youtu.be/ccWuBp4kies
 </div>
 
 **Příklad.** Teplotní bilanci Země je možno vyjádřit rovnicí
-$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů. 
+$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je větší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů. 
 
 [Online model.](http://user.mendelu.cz/marik/aromamath/Teplotni_bilance_Zeme.html)
 
 ### Logistická diferenciální rovnice s predátory
 
-manim:Obalec|iFmQWcR_JX4|Model populace pro preddačním tlakem využijeme například při studiu škůdce. Model vykazuje bifurkaci (malá změna vstupních dat může zcela změnit chování modelu) a hysterezi (stav souvisí i s historií modelu).
+manim:Obalec|iFmQWcR_JX4|Model populace pod predačním tlakem využijeme například při studiu škůdce. Model vykazuje bifurkaci (malá změna vstupních dat může zcela změnit chování modelu) a hysterezi (stav souvisí i s historií modelu).
 
 <div class='obtekat'>
 
@@ -251,7 +251,7 @@ $$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé stran
 
 [Numerický model](http://user.mendelu.cz/marik/aromamath/Populace_pod_tlakem_predatoru.html)
 
-Brauer a Kirbs vysvětlují situaci tak, že s růstem lesa se mění
+Brauer a Kribs vysvětlují situaci tak, že s růstem lesa se mění
 parametry modelu, stacionární body se posunují a populace obaleče se
 tomu přizpůsobuje. Více stromů znamená vyšší nosnou kapacitu prostředí
 pro obaleče a predátoři svou činností populaci obaleče udržují na
@@ -324,7 +324,7 @@ od něj.
 
 Systém chemických reakcí
 $$\begin{aligned}A &\rightarrow X\\2X + Y &\rightarrow 3X\\B + X &\rightarrow Y + D\\X &\rightarrow E\end{aligned}$$
-má pozoruhodnou minulost. První chemickou reakci probíhající podle tohoto schematu objevil ruský chemik B. Bělousov, jeho výsledky přezkoumal a potvrdil A. Žabotinský. Oba zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně totiž panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetum mobile. Později vědci (I. Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště I. Prigogina) a oscilátor.
+má pozoruhodnou minulost. První chemickou reakci probíhající podle tohoto schematu objevil ruský chemik B. Bělousov, jeho výsledky přezkoumal a potvrdil A. Žabotinský. Oba zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně totiž panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetuum mobile. Později vědci (I. Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště I. Prigogina) a oscilátor.
 
 Pokud je dostatek složek $A$ a $B$, modeluje po zjednodušení (viz Wikipedie, konstanty úměrnosti klademe rovny jedné) chemické reakce soustava
 $$
@@ -410,7 +410,7 @@ tomto stacionárním bodě.
   trajektorií, které pro $t\to\pm\infty$ konvergují k tomuto bodu. Poznáme jej
   podle jedné kladné a jedné záporné vlastní hodnoty.
 * Bod rotace je takový bod, v jehož každém okolí jsou cykly. Pokud navíc v
-  nějakém okolí existují pouze cykly, nazývá se tento bod navíc střed.  Bod
+  nějakém okolí existují pouze cykly, nazývá se tento bod střed.  Bod
   rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí,
   ale v těchto případech může stacionární bod být i ohniskem.
 
@@ -441,7 +441,7 @@ Tento systém vychází z logistické rovnice pro každou z populací s doplněn
 
 ### Model dravce a kořisti
 
-manim:Predator_prey|zihShrEOJAU|Model dravce a kořisti vysvětluje kolísání populací okolo rovnovážné polohy. Jde o stabilitu, která však nespočívá s konstantních hodnotách stavů, ale v periodickém průběhu. 
+manim:Predator_prey|zihShrEOJAU|Model dravce a kořisti vysvětluje kolísání populací okolo rovnovážné polohy. Jde o stabilitu, která však nespočívá v konstantních hodnotách stavů, ale v periodickém průběhu. 
 
 Situace, kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu umožňuje přežití druhého, je modelována autonomním systémem
 $$
@@ -450,10 +450,10 @@ $$
 \frac{\mathrm dy}{\mathrm dt}&=y (-\alpha+kV(x)).
 \end{aligned}
 $$
-V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$, (tj. bez vnitrodruhové konkurence v populaci kořisti a pro nenažrané dravce, kteří nejsou nikdy saturováni) dostáváme klasický Lotkův-Voterrův model, který v jistém smyslu odstartoval využití matematiky v modelování biologických systémů. Povedlo se mu vysvětlit oscilace mezi populacemi kořisti a dravce. Přes tento úspěch se však pro praktické modelování využívají dokonalejší modely. Zejména je nutno uvažovat ohraničenou trofickou funkci.
+V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$ (tj. bez vnitrodruhové konkurence v populaci kořisti a pro nenažrané dravce, kteří nejsou nikdy saturováni) dostáváme klasický Lotkův-Volterrův model, který v jistém smyslu odstartoval využití matematiky v modelování biologických systémů. Povedlo se mu vysvětlit oscilace mezi populacemi kořisti a dravce. Přes tento úspěch se však pro praktické modelování využívají dokonalejší modely. Zejména je nutno uvažovat ohraničenou trofickou funkci.
 
 ## Vícerozměrné autonomní systémy, kompartmentové modely
 
-Kompartmentové modely jsou modely, kde se je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým případem v roce 2020 je model epidemie, například [SIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie) nebo [SEIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=karantena).
+Kompartmentové modely jsou modely, kde je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým případem v roce 2020 je model epidemie, například [SIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie) nebo [SEIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=karantena).
 
 

@@ -195,7 +195,7 @@ například $y=\sin x$, $y=\cos x$. Z linearity plyne
   $y'(0)=\beta$ volbou $C_2=\alpha$ a $C_1=\beta$. Jedná se tedy o
   obecné řešení.
 
-* Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice {eq}`11B`. 
+* Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice {eq}`11A`. 
 
 <!--
 
@@ -455,10 +455,10 @@ $$y(x)=C_1\sin(\sqrt\lambda x).$$
 
 Z podmínky $y(1)=0$ dostáváme 
 $$0=C_1\sin(\sqrt\lambda),$$
-která je splněna pokud $C_1=0$, nebo $\sqrt\lambda=k\pi$, $k\in\mathbb{Z}$
+která je splněna pokud $C_1=0$, nebo $\sqrt\lambda=k\pi$, $k\in\mathbb{N}$
 
 Okrajová úloha $$y''+\lambda y=0, \quad y(0)=0=y(1)$$ má vlastní hodnoty 
-$\lambda=(k\pi)^2$, $k\in\mathbb{Z}$
+$\lambda=(k\pi)^2$, $k\in\mathbb{N}$
 
 ### Případ $\lambda<0$
 
@@ -507,7 +507,7 @@ se ukazuje, že $\lambda$
 souvisí s hmotností struny, napětím ve struně a frekvencí, kterou
 slyšíme. Podmínka {eq}`11***` určuje spektrum slyšitelných frekvencí, na
 kterých může struna kmitat, výsledný pohyb (a zvuk) je díky linearitě složením
-jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je možné [rozeznívat více způsoby](https://www.youtube.com/watch?v=kn92TLYA4rE) a dosahovat různý výsledný zvuk. 
+jednotlivých variant. Toho se dá s výhodou využívat a stejnou strunu je možné [rozeznívat více způsoby](https://www.youtube.com/watch?v=kn92TLYA4rE) a dosahovat různého výsledného zvuku. 
 
 ## Vzpěry
 

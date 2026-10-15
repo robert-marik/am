@@ -1,9 +1,9 @@
 # Křivkové integrály
 
 ```{admonition} Anotace.
-* V úvodu si ukážeme vektorové pole, kde výpočet po třech různých křivkách mezi stejnými body, vede ke třem různým výsledkům.
-* Poté zkusíme vypočítat bez bližšího kontextu několik křivkových integrálů pro pro získání určité míry jistoty při práci s tímto integrálem. 
-* Poté se zaměříme tok vektorového pole křivkou a ukážeme si souvislost výsledného toku s grafickým znázorněním situace.
+* V úvodu si ukážeme vektorové pole, kde výpočet po třech různých křivkách mezi stejnými body vede ke třem různým výsledkům.
+* Poté zkusíme vypočítat bez bližšího kontextu několik křivkových integrálů pro získání určité míry jistoty při práci s tímto integrálem. 
+* Poté se zaměříme na tok vektorového pole křivkou a ukážeme si souvislost výsledného toku s grafickým znázorněním situace.
 * Odhadu křivkového integrálu a toku křivkou se budeme věnovat v posledním příkladě. Naučíme se, čeho si všímat, když chceme zjistit, zda je výsledný integrál nebo tok kladný nebo záporný.
 ```
 
@@ -73,7 +73,7 @@ Zdroj: vlastní
 
 **Interpretace jako práce, srovnání.**
 
-Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čvrtkružnice $C_1$, křivka $C_2$ je mezi nimi.
+Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čtvrtkružnice $C_1$, křivka $C_3$ je mezi nimi.
 
 Integrál fyzikálně znamená práci vektorového pole $(-y,x)$ po zadané křivce. Toto vektorové pole míří po kružnicích okolo počátku proti směru hodinových ručiček. Délka vektoru je rovna vzdálenosti od počátku.
 
@@ -89,7 +89,7 @@ Zdroj: vlastní
 
 **Interpretace jako tok, srovnání.**
 
-Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čvrtkružnice $C_1$, část paraboly $C_2$ je mezi nimi.
+Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čtvrtkružnice $C_1$, část paraboly $C_3$ je mezi nimi.
 
 Integrál fyzikálně znamená tok vektorového pole $(x,y)$ křivkou. Toto vektorové pole míří směrem z počátku a zesiluje směrem od počátku, protože délka vektoru je rovna vzdálenosti od počátku.
 
@@ -224,7 +224,7 @@ a integrál má tvar
 $$\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos t\sin t)\,\mathrm dt.$$
 
 Integrál z prvního sčítance můžeme vypočítat pomocí primitivní funkce
-$$\int_0^{2\pi} 2\cos x\,\mathrm dx=\qty[2\sin x]_0^{2\pi}=2\sin(2\pi)-2\sin 0 =0$$ a integrál z druhého sčítance je nulový, proto je nulový i celý integrál.
+$$\int_0^{2\pi} 2\cos t\,\mathrm dt=\qty[2\sin t]_0^{2\pi}=2\sin(2\pi)-2\sin 0 =0$$ a integrál z druhého sčítance je nulový, proto je nulový i celý integrál.
 $$\int_C\vec F\mathrm d\vec r=0$$
 
 ```
@@ -237,8 +237,8 @@ Vyřešte příklady na následujících odkazech. Řiďte se popsaným pravidle
 
 ### Křivkový integrál
 
-* Pokud křivka a vektorové pole svírají ostrý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně stejným směrem (nulový úhel) je příspěvek roven součinu.
-* Pokud křivka a vektorové pole svírají tupý úhel, je příspěvek k celkové hodnotě integrálu záporný. Pokud jsou přesně opačným směrem (úhel $180^\circ$) je příspěvek roven záporně vzatém součinu.
+* Pokud křivka a vektorové pole svírají ostrý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně stejným směrem (nulový úhel), je příspěvek roven součinu.
+* Pokud křivka a vektorové pole svírají tupý úhel, je příspěvek k celkové hodnotě integrálu záporný. Pokud jsou přesně opačným směrem (úhel $180^\circ$), je příspěvek roven záporně vzatému součinu.
 * Intenzivnější vektorové pole nebo delší křivka produkují větší numerickou hodnotu integrálu (více kladnou nebo více zápornou, podle znaménka). Pole více kolmo na křivku produkuje menší numerickou hodnotu integrálu (blíže k nule). 
 
 ww:problems/krivkovy_integral/30_01.pg

@@ -19,7 +19,7 @@ https://youtu.be/NFymct4-4jQ
 
 \fi
 
-Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
+Pocitová teplota $W$ z minulého cvičení v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rychlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
 $$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
 
 ```{prf:example} Řešení
@@ -30,7 +30,7 @@ Přímým použitím vzorce pro lineární aproximaci dostáváme
 $$
 W=-20.2+1.289(T-(-11))-0.163(v-26)=-20.2+1.289(T+11)-0.163(v-26),
 $$
-přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kilometry za hodinu).
+přičemž všechny veličiny dosazujeme v jednotkách ze zadání (stupně Celsia a kilometry za hodinu).
 
 ```
 
@@ -68,7 +68,7 @@ Určete gradient funkce $z=x^2+y^2$ a zkontrolujte, že je v každém bodě kolm
 :nonumber:
 
 $$\begin{aligned} \pdv{z}{x} &= 2x\\ \pdv{z}{y} &= 2y\\ \nabla z &= (2x, 2y) = 2x\vec \imath + 2y\vec \jmath \end{aligned}$$
-Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spojnice se středem a tedy je kolmý k vrstevnici.
+Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj. ve směru spojnice se středem a tedy je kolmý k vrstevnici.
 ```
 
 ## Gradient funkce s paprskovitými vrstevnicemi
@@ -130,7 +130,7 @@ $$
 1. Z rovnice tečny k vrstevnici $$5(x-2)-4(y-1)=0$$
   dostáváme $$y=1+\frac 54 (x-2)$$
   a proto
-  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$. Všimněte si, že jsme **nepotřebovali aproximovanou funkci $\sqrt{\frac{x}{6-x^2}}$ vůbec derivovat**. To je výhoda, protože derivace odmocniny z podílu se nepočítá zcela příjemně. Namísto toho jsme využili výsledek z teorie funkce více proměnných. Přitom se musela využít nadřazená teorie, ale k výpočtu nebylo třeba derivovat nic horšího, než mocninnou funkci.
+  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$. Všimněte si, že jsme **nepotřebovali aproximovanou funkci $\sqrt{\frac{x}{6-x^2}}$ vůbec derivovat**. To je výhoda, protože derivace odmocniny z podílu se nepočítá zcela příjemně. Namísto toho jsme využili výsledek z teorie funkcí více proměnných. Přitom se musela využít nadřazená teorie, ale k výpočtu nebylo třeba derivovat nic horšího než mocninnou funkci.
 
 ```
 
@@ -249,7 +249,7 @@ Tabulka $T(x,y)$, vodorovně $x$, svisle $y$
 
 Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku dáno tabulkou. Situace může vypadat například jako v tomto zadání. Určete gradient teploty v bodě o souřadnicích $x=20$ a $y=5$. Pro výpočet parciálních derivací použijte centrální diferenci.
 
-**Poznámka:** Ve skutečnosti se nejedná a termosnímek, ale o graf funkce dané tabulkou. Barvy jsou interpolovány pro hladší přechody. Příkazy generující tabulku a obrázek jsou [zde](https://sagecell.sagemath.org/?z=eJyVU81um0AQvlvyO4ySi3FsB5xaqhL5lkfwLUqlNYzNGtily4JY3qEPUPWUYw9R7706ea98i-OkShOpBYFm4Ztvvvlrl9OL8HJxeRFeEdEpKVFZ0bCSVHAnqTTaPwUrxcOBewUPBzdtOyHnbmkJaJVujUxo5D8FV56oMLLLRE-QGa5yUA4Hw8EK8Cj8PJ-GszAat-3sy5zOKJx9ihZj52gKcx4t5viD4xV4GhenGkoSYQUOW1Zs6h0XTIp3ItM1bWqVxQA0sJ-1wmc4qOpi2Wf1b9cplcKIgq2pqU5EI3YSrAhBhY6pUyLViZKI65UgkeXqDBHGRqhkVMmOR6sg-Dja6SGBk07ASbESJ3RghOiGc4SC5Vmj8ygMaUxG1yBezcY4fsj7zNoJnQGfosgCtCgFVHLFViqcCll5wcNBGetcmxH65txkFcB7a8SGLJe5ts4jekAhSkq1pTfz4LH1hNbCNGCrUpFItSWpLJvyXWTj0lx06Be6wmhi4p4DgOI1gb_cDG_YsIrx5QWNLNY6Q33KtahKju3oJiLct8F7DJXlndr_pOLhx-P3_b3NtCfQa5RaV_u7OO2nsspqyw_fPLDTa-OV7u_7XmS6spL2v9P88Rc1cDT7u85Hx9An7SRxt0tESiQriwadL4LD6jSu1DFbOv7rHa6XNwvCFIYQe4AlclN3fr-ElTF7jNVZu5yO6HoUTaJgnLTYCG_PYTs6rBMwPdAdgPM_gPMXoCdLdZ6QVsPB11o2fOx2Lzt4KXrjjjuJhDOrjW44xabrHIOjqS9HVmMbj7m8ofOK_aun_A86uDwB2ZdivQ==&lang=octave&interacts=eJyLjgUAARUAuQ==).
+**Poznámka:** Ve skutečnosti se nejedná o termosnímek, ale o graf funkce dané tabulkou. Barvy jsou interpolovány pro hladší přechody. Příkazy generující tabulku a obrázek jsou [zde](https://sagecell.sagemath.org/?z=eJyVU81um0AQvlvyO4ySi3FsB5xaqhL5lkfwLUqlNYzNGtily4JY3qEPUPWUYw9R7706ea98i-OkShOpBYFm4Ztvvvlrl9OL8HJxeRFeEdEpKVFZ0bCSVHAnqTTaPwUrxcOBewUPBzdtOyHnbmkJaJVujUxo5D8FV56oMLLLRE-QGa5yUA4Hw8EK8Cj8PJ-GszAat-3sy5zOKJx9ihZj52gKcx4t5viD4xV4GhenGkoSYQUOW1Zs6h0XTIp3ItM1bWqVxQA0sJ-1wmc4qOpi2Wf1b9cplcKIgq2pqU5EI3YSrAhBhY6pUyLViZKI65UgkeXqDBHGRqhkVMmOR6sg-Dja6SGBk07ASbESJ3RghOiGc4SC5Vmj8ygMaUxG1yBezcY4fsj7zNoJnQGfosgCtCgFVHLFViqcCll5wcNBGetcmxH65txkFcB7a8SGLJe5ts4jekAhSkq1pTfz4LH1hNbCNGCrUpFItSWpLJvyXWTj0lx06Be6wmhi4p4DgOI1gb_cDG_YsIrx5QWNLNY6Q33KtahKju3oJiLct8F7DJXlndr_pOLhx-P3_b3NtCfQa5RaV_u7OO2nsspqyw_fPLDTa-OV7u_7XmS6spL2v9P88Rc1cDT7u85Hx9An7SRxt0tESiQriwadL4LD6jSu1DFbOv7rHa6XNwvCFIYQe4AlclN3fr-ElTF7jNVZu5yO6HoUTaJgnLTYCG_PYTs6rBMwPdAdgPM_gPMXoCdLdZ6QVsPB11o2fOx2Lzt4KXrjjjuJhDOrjW44xabrHIOjqS9HVmMbj7m8ofOK_aun_A86uDwB2ZdivQ==&lang=octave&interacts=eJyLjgUAARUAuQ==).
 
 <!-- https://sagecell.sagemath.org/?z=eJyVU9uOmzAQfUfiH0abl5BNssA2UrURb_sJeYtSyQuT4AA2NQZhvr7HySatdlu1RQLNmDNnzlw8Zqvn-GXz8hwT0YyU6KwYWElqeJLUGu3fhpXiMHB3bBjsx3FJzh0oA7IrT0YWNPdH0dbzNEZOlbjEV4a7GoxhEAY7wJP4a7qK13GyGMf1t5QeKV5_STYL52gFM002Kf7A3YJncHmpIaQQVsA5sWLTn7lhUnwWle7p2KsqB2CA_S4VMWHQ9U0WQ8s_PjNqhRENW9NTX4hBnCVYkYIandOkRKkLJZHXK0Eh2e4RGRZGqGLeyYnnuyj6c7bZtYCHSSBIsRIPdGWE6IFrpILlWZOnJI5pQUb3IN6tF3Cjv7BOQlfAl2iyAC1aAZXcsZUKXiM7LzgM2lzX2swxN-eWuwjRJyOOZLmttXUecQE0oqVSW_qwDh7bL-lNmAFsXSkKqU4klWXT_hY5uLIWE-aFqTCGWLj3BKD4WcCnMMNHNqxynNzRqOJNV72XuC_GZeEOGdCFZGXRoqdNdKEaXKtztnT7dcG_ZvskJuxBTMlhe-2ZPPaTX3BhZc4eZHU1Zqs5vc6TZRItihE76e0UtqPrQgNzAborMP0FmN6BnqzUdUFahcH3Xg586_dFdnQve3C3W4HxV1YbPXCJq6ZrjE6TfjNiqnrch1sxH-i8Yv9x0f_RIeQHCMIuJQ==&lang=octave&interacts=eJyLjgUAARUAuQ== -->
 

@@ -4,14 +4,14 @@
 
 * Ukážeme si, jak se dají řešit rovnice obsahující lineární operátory, operátory, které zachovávají lineární kombinace funkcí.
 * Ukážeme si, že pro lineární operátory vystupující v diferenciálních rovnicích je možné najít přibližné řešení redukcí na soustavu lineárních rovnic. Toto je nejběžnější inženýrská metoda používaná při navrhování budov a staveb, při modelování proudění kapalin a plynů, při modelování přenosu tepla a dalších fyzikálních procesů.
-* Ukážeme si, že množina všech řešení lineární rovnice má pevnou strukturu, kterou můžeme využít k nalezení všech řešení. Pro nalezení všech řešení stačí najít jedno řešení rovnice a několik vhodných řešení rovnice jistým způsobem zjednodušení. Z těchto dílčích řešení je poté možné sestavit řešení všechna. Tím se úloha velmi zjednodušuje.
+* Ukážeme si, že množina všech řešení lineární rovnice má pevnou strukturu, kterou můžeme využít k nalezení všech řešení. Pro nalezení všech řešení stačí najít jedno řešení rovnice a několik vhodných řešení rovnice jistým způsobem zjednodušené. Z těchto dílčích řešení je poté možné sestavit řešení všechna. Tím se úloha velmi zjednodušuje.
 
 ```
 
 ```{admonition} Prerekvizity.
 
 * Co se týká využitých metod studia lineárních operátorů, je přednáška relativně nezávislá. Nemá v tomto ohledu žádné prerekvizity. 
-* Užitečnost linearity si ukážeme na příkladech diferenciálních rovnic několika typů. Proto je vhodné si zopakovat význam derivace, využití derivace v modelech založených a na diferenciálních rovnicích a interpretaci členů difuzní rovnice. 
+* Užitečnost linearity si ukážeme na příkladech diferenciálních rovnic několika typů. Proto je vhodné si zopakovat význam derivace, využití derivace v modelech založených na diferenciálních rovnicích a interpretaci členů difuzní rovnice. 
 * Lineární systémy je vhodné zapisovat a studovat maticově. Budeme proto potřebovat maticový součin, maticovou formulaci soustavy lineárních rovnic, nutnou a postačující podmínku jednoznačné řešitelnosti této soustavy pomocí determinantu. 
 * Studentům obeznámeným s komplexními čísly se bude hodit Eulerova identita. Ostatní studenti budou muset příslušné pasáže akceptovat jako fakt.
 ```
@@ -23,7 +23,7 @@ https://youtu.be/_PcHv1GeEq4
 **Operátorem** rozumíme zobrazení, které má na vstupu i na výstupu
 funkci. Například pro funkce jedné proměnné mohou být operátory
 derivace, druhá derivace, vynásobení funkce funkcí $\ln x$ anebo vnoření zadané funkce do funkce $\ln x$. Tj. pro $y=y(x)$ můžeme uvažovat operátory
-$F_1[y]=\frac{\mathrm dy}{\mathrm dx}$, $F_2[y]=\frac{d^2y}{dx^2}$, $F_3[y](x)=y(x)\ln(x)$, $F_4[y](x)=\ln(y(x)).$
+$F_1[y]=\frac{\mathrm dy}{\mathrm dx}$, $F_2[y]=\frac{\mathrm d^2y}{\mathrm dx^2}$, $F_3[y](x)=y(x)\ln(x)$, $F_4[y](x)=\ln(y(x)).$
 
 \iffalse 
 
@@ -123,7 +123,7 @@ Následující věta vlastně vyjadřuje totéž co princip superpozice z předc
 ```{prf:theorem} princip superpozice při řešení rovnic
 :nonumber:
  Jsou-li funkce $x_1(t)$ a $x_2(t)$ po řadě řešeními rovnic $$L[x]=b_1(t),\quad L[x]=b_2(t),$$
-Je funkce $$x(t)=C_1 x_1(t)+C_2 x_2(t)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
+je funkce $$x(t)=C_1 x_1(t)+C_2 x_2(t)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
 ```
 
 Pro $b_1(t)=b_2(t)=0$ všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí. 
@@ -177,7 +177,7 @@ Obecným řešením rovnice $$\frac{\mathrm dx}{\mathrm dt}+ax=b$$ je $$x(t)=x_{
 ```
 
 
-Obrat, že stacionární řešení je globálně atraktivní znamená, že všechna řešení k tomuto stacionárním stavu konvergují nezávisle na počáteční podmínce.
+Obrat, že stacionární řešení je globálně atraktivní znamená, že všechna řešení k tomuto stacionárnímu stavu konvergují nezávisle na počáteční podmínce.
 
 ### Další lineární rovnice
 
@@ -463,7 +463,7 @@ Je-li determinant matice nenulový, má soustava $AX=0$ pouze nulové řešení 
 
 $$X'=AX$$ (9-1)
 
-má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.
+má jediné konstantní řešení, kterým je počátek. Konstantní řešení budeme nazývat stacionární bod.
 
 Tento  systém můžeme přepsat na $$X'-AX=0$$ a tento systém je lineární, protože díky distributivnímu zákonu pro matice pro operátor $L[X]=X'-AX$ platí
 \dm$$\begin{aligned}L[X_1+X_2]&=(X_1+X_2)'-A(X_1+X_2)\\&=X_1^\prime+X_2^\prime-AX_1 -AX_2\\&=(X_1^\prime -AX_1)+(X_2^\prime-AX_2)\\&=L[X_1]+L[X_2]\end{aligned}$$
@@ -490,8 +490,8 @@ je možno na tvar {eq}`9-1` převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)
 
 * Jakmile má matice $A$ reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.
 * Jakmile má matice $A$ reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.
-* Jakmile má matice $A$ komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
-* Jakmile má matice $A$ komplexní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.
+* Jakmile má matice $A$ komplexní vlastní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
+* Jakmile má matice $A$ komplexní vlastní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.
 ```
 
 

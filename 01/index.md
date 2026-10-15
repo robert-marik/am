@@ -16,7 +16,7 @@
 ````
 
 ```{admonition} Prerekvizity
-* Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména je nutné si připomenout definici, využití a výpočet derivace.
+* Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnné. Zejména je nutné si připomenout definici, využití a výpočet derivace.
 * Zopakujte si fyzikální (praktický) význam derivace a pro osahání si konkrétních příkladů také základní metody výpočtu.
 ```
 
@@ -49,7 +49,7 @@ Jedním ze zásadních úkolů je schopnost měřit růst nebo pokles veličiny 
 
 U veličiny závislé na čase změnu veličiny na časovém intervalu určujeme jako rozdíl hodnoty veličiny na konci a na začátku časového intervalu, tj. $$f(t+h)-f(t)$$ je změna veličiny mezi okamžiky $t$ a $t+h$. Pro porovnání rychlostí změny tuto změnu přepočítáváme na jednotku času a definujeme průměrnou rychlost změny vztahem $$\frac{f(t+h)-f(t)}{h}.$$ Kladná rychlost znamená nárůst v čase, záporná pokles. Pro nalezení okamžité rychlosti změny bychom potřebovali dosadit $h=0$, aby byla rychlost počítána na intervalu nulové délky. Toto udělat nemůžeme, protože bychom dostali nedefinovaný výraz, můžeme to však obejít pomocí limity a najít okamžitou rychlost jako limitu $$\lim_{h\to 0}\frac{f(t+h)-f(t)}{h}.$$ Tato limita se nazývá *derivace* a udává, jak rychle se mění funkce $f$ v čase v okamžiku $t$. Protože kladná změna odpovídá nárůstu, interpretujeme derivaci často i jako rychlost změny funkce i jako rychlost růstu funkce. Protože rychlost je změna za jednotku času, můžeme derivaci ekvivalentně interpretovat jako nárůst za jednotku času nebo změnu za jednotku času. 
 
-V některých přírodních zákonech potřebujeme pracovat s rychlostí poklesu funkce nebo s poklesem za jednotku času. Tento pokles vyjařuje záporně vzatá derivace, tj. derivace vynásobená faktorem $(-1)$.
+V některých přírodních zákonech potřebujeme pracovat s rychlostí poklesu funkce nebo s poklesem za jednotku času. Tento pokles vyjadřuje záporně vzatá derivace, tj. derivace vynásobená faktorem $(-1)$.
 
 U veličiny závislé na poloze postupujeme analogicky, ale rychlostí změny rozumíme změnu na jednotce délky, tj. pro interval délky $h$ a polohu vyjádřenou souřadnicí $x$ je okamžitá rychlost růstu dána vztahem $$\lim_{h\to 0}\frac{f(x+h)-f(x)}h.$$
 
@@ -81,11 +81,11 @@ tento růst vydrží celou minutu, bude v čase $7$ minut teplota o dva stupně
 Celsia vyšší. Pokud tato rychlost růstu vydrží deset minut, jsme schopni
 podobně určit změnu teploty i za delší časový úsek.
 
-V reálných dějích však konstantní rychlosti vídáme zřídka. Například u tepelné výměny se dynamika procesu zastavuje tím, jak se teploty postupně vyrovnávají. Rychlost, s jakou roste teplota chladného tělesa při tepelné výměně s teplejším tělesem není konstantní, ale mění se. Nejčastějším modelem reálné situace je, že tato rychlost je úměrná rozdílu teplot těles zapojených do tepelné výměny. Roli teplejšího tělesa hraje většinou okolí. Pokud je tedy teplota okolí konstantní a rovna $T_0$, je kvantitativním modelem procesu tepelné výměny rovnice $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T).$$ To platí pro ohřev (teplota okolí je vyšší a teplota tělesa roste). Analogicky můžeme naformulovat model $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).
+V reálných dějích však konstantní rychlosti vídáme zřídka. Například u tepelné výměny se dynamika procesu zastavuje tím, jak se teploty postupně vyrovnávají. Rychlost, s jakou roste teplota chladného tělesa při tepelné výměně s teplejším tělesem, není konstantní, ale mění se. Nejčastějším modelem reálné situace je, že tato rychlost je úměrná rozdílu teplot těles zapojených do tepelné výměny. Roli teplejšího tělesa hraje většinou okolí. Pokud je tedy teplota okolí konstantní a rovna $T_0$, je kvantitativním modelem procesu tepelné výměny rovnice $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T).$$ To platí pro ohřev (teplota okolí je vyšší a teplota tělesa roste). Analogicky můžeme naformulovat model $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).
 
-Tento model se naučíme časem vyřešit, to však není to nejdůlěžitější. Obrovským úspěchem je již to, že *s derivacemi dostala věda nástroj umožňující kvantitativně pracovat s okamžitou rychlostí změny libovolné veličiny*. Derivace umožňují vymanit se z omezení používaných ve středoškolské fyzice, která se týká zpravidla velmi specifických podmínek, a věnovat se popisu reálného světa. 
+Tento model se naučíme časem vyřešit, to však není to nejdůležitější. Obrovským úspěchem je již to, že *s derivacemi dostala věda nástroj umožňující kvantitativně pracovat s okamžitou rychlostí změny libovolné veličiny*. Derivace umožňují vymanit se z omezení používaných ve středoškolské fyzice, která se týká zpravidla velmi specifických podmínek, a věnovat se popisu reálného světa. 
 
-Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů a pomocí rovnic s derivacemi je modelována naprostá většina fyzikálních procesů, existují propracované nástroje pro řešení těchto rovnic na počítači. Z pedagogických důvodů si však může kdokoliv daný matematický model naskriptovat tak, že předpokládá časové skoky, v jejichž rámci je rychlost neměnná a změny veličin jsou počítat běžnými operacemi násobení a sčítání. Například [Sage](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==) je založen na široce rozšířeném jazyce Python, případně [Octave](https://sagecell.sagemath.org/?z=eJwtj81qwzAQhO8CvcNeAlKTFLtQCDY59g18Kz2o1oYK_ayR1wbn6SvZEQjEzsy3I8twh-a97aGeE1gM3oDP5Bcpdq2z3H00fRVX9EwZZhjNTOsWHTyTGb2J7gLeIvwuFiPCRKNjw8A4BSqYoWCemGlWs3uiYq0P2sYrZUzuxV1gynSEeCsp1eoSvB2rZzaZaTWjgz-yidgUR1P0vVp1HEED5Ck4Kfz-r8-XOJlsInKuLgwJy_KIaQMppDjB1xJKvdVAsZA1Zfoo33T3tktLxKAGfW2lqKRBufNeqzw0nMEyvIEvVw3Ntc50LwUmW7m1juLLoKXYgovquwGXHj_6H6tibEk=&lang=octave&interacts=eJyLjgUAARUAuQ==) jako opensource alternativa programu Matlab.
+Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů a pomocí rovnic s derivacemi je modelována naprostá většina fyzikálních procesů, existují propracované nástroje pro řešení těchto rovnic na počítači. Z pedagogických důvodů si však může kdokoliv daný matematický model naskriptovat tak, že předpokládá časové skoky, v jejichž rámci je rychlost neměnná a změny veličin jsou počítány běžnými operacemi násobení a sčítání. Například [Sage](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==) je založen na široce rozšířeném jazyce Python, případně [Octave](https://sagecell.sagemath.org/?z=eJwtj81qwzAQhO8CvcNeAlKTFLtQCDY59g18Kz2o1oYK_ayR1wbn6SvZEQjEzsy3I8twh-a97aGeE1gM3oDP5Bcpdq2z3H00fRVX9EwZZhjNTOsWHTyTGb2J7gLeIvwuFiPCRKNjw8A4BSqYoWCemGlWs3uiYq0P2sYrZUzuxV1gynSEeCsp1eoSvB2rZzaZaTWjgz-yidgUR1P0vVp1HEED5Ck4Kfz-r8-XOJlsInKuLgwJy_KIaQMppDjB1xJKvdVAsZA1Zfoo33T3tktLxKAGfW2lqKRBufNeqzw0nMEyvIEvVw3Ntc50LwUmW7m1juLLoKXYgovquwGXHj_6H6tibEk=&lang=octave&interacts=eJyLjgUAARUAuQ==) jako opensource alternativa programu Matlab.
 ````
 
 
@@ -97,7 +97,7 @@ Protože tvar rovnic s derivacemi má naprostá většina fyzikálních zákonů
 
 ```{prf:remark} logistický růst populace
 :nonumber:
- Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right).$$ V této rovnice vystupuje celková nosná kapacita prostředí $K$ a rovnice vyjadřuje, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Volnou kapacitu prostředí počítáme jako doplněk obsazené části prostředí do sta procent. Obsazenou část prostředí počítáme jako podíl velikosti populace a nosné kapacity prostředí.
+ Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right).$$ V této rovnici vystupuje celková nosná kapacita prostředí $K$ a rovnice vyjadřuje, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Volnou kapacitu prostředí počítáme jako doplněk obsazené části prostředí do sta procent. Obsazenou část prostředí počítáme jako podíl velikosti populace a nosné kapacity prostředí.
 ```
 
 
@@ -199,13 +199,13 @@ proměnné. Ostatní proměnné, podle kterých se nederivuje, mají  vlastně r
 
 ```{prf:remark} derivace teploty podle času a polohy
 :nonumber:
- Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
+ Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává, jak rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
 ```
 
 
 ## Interpretace parciální derivace, vedení tepla  v 1D
 
-Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou proměnných: polohy $x$ a času $t$. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává, jak rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase. Například v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce roste teplota ve směru osy $x$. Tato derivace může být vyjádřena například ve stupních Celsia na centimetr.
+Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou proměnných: polohy $x$ a času $t$. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává, jak rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech tyče může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase. Například v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce roste teplota ve směru osy $x$. Tato derivace může být vyjádřena například ve stupních Celsia na centimetr.
 
   * Je-li parciální derivace $\frac{\partial T}{\partial t}$
     rovna $2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že v daném
@@ -346,7 +346,7 @@ $T$ je funkcí dvou proměnných: polohy $x$ a času $t$. Tedy $T=T(t,x).$
 Pokusíme se odvodit matematický model vedení tepla. Řešením takového
 modelu bude funkce $T$. Po vyřešení modelu bychom tedy měli vzorec
 udávající teplotu v libovolném bodě tyče a v libovolném čase. Nejprve
-ovšem musíme požadovnou rovnici sestavit.
+ovšem musíme požadovanou rovnici sestavit.
 
 ```{prf:remark}
 Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
@@ -379,7 +379,7 @@ mechanický model si můžeme představit proudění tekutiny (pro
 jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice
 difuze namísto rovnice vedení tepla). Budeme uvažovat libovolné místo materiálu a budeme matematicky vyjadřovat děje, které přispívají ke změně teploty.
 
-* Rychlost růstu teploty (s časem) je $$\frac{\partial T}{\partial t}.$$ Měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla a daného místa. Poté se vrátíme do tohoto místa a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
+* Rychlost růstu teploty (s časem) je $$\frac{\partial T}{\partial t}.$$ Měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla do daného místa. Poté se vrátíme do tohoto místa a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
 * Rychlost růstu teploty jako funkce polohy je $$\frac{\partial T}{\partial x}.$$ Měříme ji například ve stupních Celsia na centimetr. 
 * Pro přepočet nerovnoměrného rozložení teploty na tok tepla nás zajímá nikoliv jak teplota v prostoru roste, ale jak klesá. Proto musíme vzít derivaci podle prostorové proměnné záporně, abychom dostali pokles teploty. Tento pokles vynásobíme konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel tepelné vodivosti a dodá nám ji fyzika a v ní takzvaný Fourierův zákon). Tok tepla $q$ ve směru osy $x$ je tedy $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času. 
   * Je-li $q$ rovno $7\,\mathrm{J}/\mathrm{min}$ znamená to, že průřezem proteče ve směru osy $x$ sedm joulů za minutu. 
@@ -415,7 +415,7 @@ caption:Slovní interpretace částí rovnice vedení tepla.
 endtable
 
 **Transformace souřadnic.**
-V praxi je vhodné umět popsat úlohu i v jiné soustavě souřadnic. Pokud nechceme měnit měřítko, je v jednodimenzionálním případě alternativou pouze změna orientace osy. Tím se mění paricální derivace podle prostorové proměnné. Pokud například funkce ve směru osy roste, po otočení osy bude ve směru osy klesat (pokud teplota směrem zleva doprava roste, potom směrem zprava doleva klesá). V rovnici vedení tepla se tedy změní znaménko parciální derivace podle prostorové souřadnice a vlivem této změny se změní i znaménko toku tepla. Derivace toku tepla podle prostorové souřadnice se nezmění, protože v ní jsou obsaženy dvě derivace teploty podle polohy a dvojí změna znaménka se vyruší. Kromě derivace teploty podle polohy a kromě toku tepla tedy při změně směru osy všechny komponenty obsažené v rovnici vedení tepla zůstávají stejné.
+V praxi je vhodné umět popsat úlohu i v jiné soustavě souřadnic. Pokud nechceme měnit měřítko, je v jednodimenzionálním případě alternativou pouze změna orientace osy. Tím se mění parciální derivace podle prostorové proměnné. Pokud například funkce ve směru osy roste, po otočení osy bude ve směru osy klesat (pokud teplota směrem zleva doprava roste, potom směrem zprava doleva klesá). V rovnici vedení tepla se tedy změní znaménko parciální derivace podle prostorové souřadnice a vlivem této změny se změní i znaménko toku tepla. Derivace toku tepla podle prostorové souřadnice se nezmění, protože v ní jsou obsaženy dvě derivace teploty podle polohy a dvojí změna znaménka se vyruší. Kromě derivace teploty podle polohy a kromě toku tepla tedy při změně směru osy všechny komponenty obsažené v rovnici vedení tepla zůstávají stejné.
 
 
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
@@ -430,7 +430,7 @@ https://youtu.be/vJVRrik3EAw
 Druhá derivace je derivace první derivace. U funkce dvou proměnných každá ze dvou po sobě jdoucích derivací může být podle některé ze dvou proměnných a v úvahu připadají čtyři kombinace. Pokud derivujeme dvakrát podle stejné proměnné, dostaneme   $$\frac{\partial^2 f}{\partial x^2}:=\frac{\partial}{\partial x}\frac{\partial f}{\partial x}\quad\text{a}\quad \frac{\partial^2 f}{\partial y^2}:=\frac{\partial}{\partial y}\frac{\partial f}{\partial y}.$$
 Pokud derivujeme pokaždé podle jiné proměnné, dostaneme v závislosti na pořadí
 $$\frac{\partial }{\partial x}\frac{\partial f}{\partial y}\quad\text{a}\quad \frac{\partial}{\partial y}\frac{\partial f}{\partial x}.$$
-Poději si ukážeme, že tyto dvě možnosti jsou v praxi zpravidla vždy totožné.
+Později si ukážeme, že tyto dvě možnosti jsou v praxi zpravidla vždy totožné.
 
 Je-li tepelná vodivost $k$ v rovnici vedení tepla 
 $$\rho c\frac{\partial T}{\partial t} = \frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$
@@ -456,7 +456,7 @@ Analogický postup jako u vedení tepla funguje pro libovolný transportní děj
 
 Tento model se nazývá Fisherova–KPP rovnice a jedná se vlastně o rovnici vedení tepla, do které jsou doplněny zdroje. 
 
-Poněkud kryptický název Fisherovy–KPP rovnice je podle jmen významných vědců spojených s touto rovnicích. Jsou to významný americký statistik a biolog Ronald Fisher a trojice ruských matematiků Andrey Kolmogorov, Ivan Petrovsky a Nikolai Piskunov.
+Poněkud kryptický název Fisherovy–KPP rovnice je podle jmen významných vědců spojených s touto rovnicí. Jsou to významný americký statistik a biolog Ronald Fisher a trojice ruských matematiků Andrey Kolmogorov, Ivan Petrovsky a Nikolai Piskunov.
 
 Fisherova–KPP rovnice popisuje populaci, která se může šířit v prostoru. Kromě časové závislosti tedy musíme uvažovat i závislost na poloze. Tato rovnice je vyjádřena pro funkci vyjadřující hustotu populace. Hustotou populace může být například množství jedinců na jednotku délky, v případě zobecnění na více dimenzí množství jedinců na jednotku plochy. Procesy vedoucí k migraci a tedy i změně hustoty populace jsou stejné jako u vedení tepla. Populace má tendenci migrovat z míst, kde je vysoká hustota do míst, kde je hustota menší a v místě, kde převažuje imigrace nad emigrací velikost populace roste. Protože se populace může rozmnožovat, je do rovnice navíc započítán člen modelující vlastní reprodukci. Zpravidla je uvažován logistický růst a rovnice má poté tvar
 $$\frac{\partial u}{\partial t}=D\frac{\partial^2 u}{\partial x^2}+ru\left(1-\frac uK\right).$$
@@ -537,7 +537,7 @@ Aspektům souvisejícím s numerickým řešením rovnic s parciálními derivac
 
 ## Vzdálenost a pojmy s ní související
 
-V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovském prostoru se ujistíme, že dokážeme dát přesný obsah tak běžným pojmům, jako vzdálenost nebo hranice množiny. Protože matematické pojetí těchto pojmů plně vystihuje a zobecňuje základní představu z běžného života, není v tuto chvíli nutné se učit jednotlivé definice. Jenom si rámcově odneste přehled, jak jsou tyto pojmy definovány a jaké pojmy vlastně používáme. V případě nutnosti se k těmto definicím můýžete kdykoliv vrátit. 
+V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovském prostoru se ujistíme, že dokážeme dát přesný obsah tak běžným pojmům, jako vzdálenost nebo hranice množiny. Protože matematické pojetí těchto pojmů plně vystihuje a zobecňuje základní představu z běžného života, není v tuto chvíli nutné se učit jednotlivé definice. Jenom si rámcově odneste přehled, jak jsou tyto pojmy definovány a jaké pojmy vlastně používáme. V případě nutnosti se k těmto definicím můžete kdykoliv vrátit. 
 
 https://youtu.be/owfHzLBonRA
 
@@ -573,7 +573,7 @@ Analogicky je možno definovat metriku v prostoru libovolné konečné dimenze.
 :nonumber:
 
   Buď $A\in \mathbb{E}^n$ bod z $\mathbb{E}^n$ a $\varepsilon>0$ kladné reálné
-  číslo. *Epsilonovým okolím bodu $X$* rozumíme množinu
+  číslo. *Epsilonovým okolím bodu $A$* rozumíme množinu
   označenou $O_\varepsilon(A)$ skládající se z bodů, jejichž vzdálenost od
   bodu $A$ je menší než $\varepsilon$, tj. $$O_\varepsilon(A)=\{X\in\mathbb{E}^n:\rho(A,X)<\varepsilon\}.$$
   *Ryzím epsilonovým okolím bodu $A$* rozumíme množinu
@@ -601,11 +601,11 @@ V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq\mathbb{E}
 
 ## Spojitost funkce
 
-**Spojitost skalární funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}$ je skalární funkce $n$ proměnných definovaná v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, pokud pro každé okolí $O(f(A))$ bodu $f(A)$ existuje okolí $\overline O(A)$ bodu $A$ takové, že obrazy všech bodů z tohoto okolí bodu $A$ leží v okolí bodu $O(f(A))$, tj.  pro všechna $X\in \overline O(A)$ platí $f(X)\in O(f(A))$.
+**Spojitost skalární funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}$ je skalární funkce $n$ proměnných definovaná v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, pokud pro každé okolí $O(f(A))$ bodu $f(A)$ existuje okolí $\overline O(A)$ bodu $A$ takové, že obrazy všech bodů z tohoto okolí bodu $A$ leží v okolí $O(f(A))$, tj.  pro všechna $X\in \overline O(A)$ platí $f(X)\in O(f(A))$.
 
 **Spojitost vektorové funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}^m$ je vektorová funkce $n$ proměnných definovaná  v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, jestliže je v tomto bodě spojitá každá její komponenta.
 
-**Elementární funkce**: Všechny mnohočleny, goniometrické, cyklometrické, exponenciální a  logaritmické funkce a obecná mocnina se nazývají *základní elementární funkce*   Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání, odečítání, násobení, dělení a skládání těchto funkcí navzájem se nazývají *elementární funkce*.
+**Elementární funkce**: Všechny mnohočleny, goniometrické, cyklometrické, exponenciální a  logaritmické funkce a obecná mocnina se nazývají *základní elementární funkce*.   Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání, odečítání, násobení, dělení a skládání těchto funkcí navzájem se nazývají *elementární funkce*.
 
 \iffalse
 
@@ -619,7 +619,7 @@ Následující věta ukazuje, že u elementárních funkcí je spojitost v libov
 
 ```{prf:theorem} spojitost elementárních funkcí
 :nonumber:
- Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
+ Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce) jsou spojité v každém vnitřním bodě svého definičního oboru.
 ```
 
 
@@ -650,7 +650,7 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 * U měnících se veličin běžně udáváme, jak se změní za jednotku času nebo jak se změní na jednotce délky. Například o kolik vzroste teplota za hodinu. Pomocí parciálních derivací můžeme tyto změny sledovat a popsat jejich okamžité rychlosti. Tato dovednost je nutná pro matematické vyjádření představ, jak fungují vztahy mezi veličinami závislými na více proměnných.
 * Parciální derivace udává okamžitou rychlost, s jakou se mění funkce více proměnných při změně vybrané nezávislé proměnné. Tedy je to změna funkčních hodnot při změně jedné nezávislé proměnné o jednotku a zafixování ostatních proměnných. Tato změna se počítá na nekonečně malém intervalu a jedná se tedy o okamžitou rychlost.
 * Příroda funguje tak, že děj v daném okamžiku probíhá rychlostí související s aktuálními hodnotami veličin, které mají na děj vliv. Potřebujeme tedy nástroj pro měření rychlosti. Tím je derivace. V případě, kdy výsledek je ovlivněn více vstupními daty, máme funkci více proměnných a parciální derivace, kdy sledujeme vliv každé vstupní veličiny samostatně.
-* Přírodní zákony jsou formulovány buď přibližně, pomocí součinů, podílů a průměrných rychlostí, nebo přesně pomocí derivací a okamžitých rychlostí. Nám jde o detailní popis, tj. o přesnou fomrulaci.
+* Přírodní zákony jsou formulovány buď přibližně, pomocí součinů, podílů a průměrných rychlostí, nebo přesně pomocí derivací a okamžitých rychlostí. Nám jde o detailní popis, tj. o přesnou formulaci.
 * Kvalitativní představa může být, že teplo teče do studenějšího místa a v místě, kam se dodává teplo, roste teplota. Toto je pouze hrubý model. Pomocí parciálních derivací tento děj umíme namodelovat kvantitativně. Můžeme si tak sestrojit model, porovnat s experimentem a přesvědčit se, že naše metody kvantitativního vyjádření fyzikálních zákonů jsou správné. Tím si potvrzujeme, že jsou správné naše představy o fungování materiálů.
 * V praxi často derivace počítáme pro funkce dané tabulkou. V tomto případě používáme numerickou aproximaci derivace. Nejčastěji pomocí centrální diference.
 

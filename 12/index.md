@@ -2,7 +2,7 @@
 
 ````{admonition} Anotace
 Ukážeme si některé metody pro numerické řešení obyčejných i parciálních 
-diferenciálních rovnic. Probereme metody jako Eulerova metoda, Runge-Kuttovy metody, metody konečných diferencí, metodu konečných prvků a další. Jako doplněk si ukážeme řešení parciálních diferenciálních rovnic Fourierovou metodou separace proměnných, která umožňuje odseparovat časovou a prostorovou složku řešení a tím lépe pochopit některé vlastnosti řešení, zejména u rovnic popisujících vlnění.
+diferenciálních rovnic. Probereme metody jako Eulerovu metodu, Runge-Kuttovy metody, metodu konečných diferencí, metodu konečných prvků a další. Jako doplněk si ukážeme řešení parciálních diferenciálních rovnic Fourierovou metodou separace proměnných, která umožňuje odseparovat časovou a prostorovou složku řešení a tím lépe pochopit některé vlastnosti řešení, zejména u rovnic popisujících vlnění.
 ````
 
 ## Metody pro obyčejné diferenciální rovnice
@@ -31,12 +31,12 @@ Numerické řešení diferenciálních rovnic je základním nástrojem pro uká
 začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
 nahradíme integrální křivku její tečnou. Tím se dostaneme do dalšího
 bodu, odkud opět integrální křivku aproximujeme tečnou.  Směrnici
-tečny zjistíme z diferenciální rovnice, buď přímo z derivace (Eulerova
+tečny zjistíme z diferenciální rovnice, přímo z derivace (Eulerova
 metoda).
 
 Vyjdeme-li z počáteční úlohy $$y'=\varphi(x,y), \quad y(x_0)=y_0,$$
 má lineární aproximace řešení v bodě $[x_0,y_0]$ tvar $$y=y_0+\varphi(x_0,y_0)(x-x_0).$$
-Funkční hodnotu v bodě $x=x_1$ označíme $y_1$ a tento bod bude dalším  body lomené čáry, tj. $$y_1=y_0+\varphi(x_0,y_0)(x_1-x_0).$$
+Funkční hodnotu v bodě $x=x_1$ označíme $y_1$ a tento bod bude dalším  bodem lomené čáry, tj. $$y_1=y_0+\varphi(x_0,y_0)(x_1-x_0).$$
 Hodnota $x_1-x_0$ je krok Eulerovy metody označovaný $h$. Tento postup opakujeme s počáteční podmínkou $y(x_1)=y_1$.
 Iterační formule Eulerovy metody má potom následující tvar. $$\begin{aligned}x_{n+1}&=x_n+h, \\ y_{n+1}&=y_n+\varphi(x_n,y_n)h.\end{aligned}$$
 
@@ -145,11 +145,11 @@ z teplot v současném čase. Proto se tato metoda nazývá explicitní metoda.
 Explicitní  metodu je snadné implementovat [programovým kódem](https://gist.github.com/robert-marik/bbd7677bcf876403dcd454ab25cea681). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://gist.github.com/robert-marik/afa6114fe765b607ddd0c3733840e40a), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
 
 
-Ještě existuje metoda [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation) založená na zpětné diferenci v čase namísto dopředné, tj. 
+Ještě existuje [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation) založená na zpětné diferenci v čase namísto dopředné, tj. 
 \dm $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$
 a odsud 
 \dm $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$
-Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$.
+Toto je vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$.
 Programová realizace je založena na řešení rovnice a může vypadat
 [následovně.](https://gist.github.com/robert-marik/8b898a66ee7018b4a72dc40dc20e1a94)
 Obsahuje pro každý časový krok řešení soustavy lineárních rovnic s tridiagonální maticí (nenulová
@@ -252,7 +252,7 @@ f(x)\varphi_i(x)\,\mathrm dx, \quad i=1,2,\ldots,n$$
 nebo po přeznačení 
 $$a_{ij}=\int_0^1 \varphi_i'(x) \varphi_j'(x)\,\mathrm dx$$
 a
-$$b_j=\int_0^1 f(x)\varphi_j(x)\,\mathrm dx$$
+$$b_i=\int_0^1 f(x)\varphi_i(x)\,\mathrm dx$$
 ve tvaru $$\sum_{j=1}^n a_{ij} u_j = b_i, \quad i=1,2,\ldots,n.$$
 Nyní už je patrné, že se jedná o soustavu lineárních rovnic a po zavedení matice
 $A=(a_{ij})$ a vektoru $\vec b=(b_i)$ můžeme tuto soustavu psát v maticovém
@@ -316,13 +316,13 @@ poté možné vyřešit běžnými numerickými metodami pro řešení soustav l
 rovnic.
 
 Uvedený postup je možné zobecnit na složitější rovnice a úlohy. Na rozdíl od
-analytických metod si metoda konečných poradí i s komplikovanějšími geometrickými tvary a
+analytických metod si metoda konečných prvků poradí i s komplikovanějšími geometrickými tvary a
 nespojitými materiálovými vlastnostmi, kdy na sebe navazují dva odlišné
 materiály. Je možné metodu použít i pro nelineární rovnice, i když v
 tomto případě je výpočet numericky náročnější.
 
 Výhodou metody konečných prvků oproti metodě konečných diferencí je větší
-volnost diskretizaci. Metoda konečných diferencí vyžaduje pravidelnou síť bodů,
+volnost při diskretizaci. Metoda konečných diferencí vyžaduje pravidelnou síť bodů,
 kdežto metoda konečných prvků umožňuje využít nepravidelnou síť a přizpůsobit
 hustotu bodů místním potřebám. To je výhodné například při zjemnění
 diskretizace v místech, kde se očekávají velké změny řešení.
@@ -346,7 +346,7 @@ $$
 \sigma = \begin{pmatrix}
 \sigma_x & \sigma_{xy} & \sigma_{xz}\cr
 \sigma_{xy} & \sigma_y & \sigma_{yz}\cr
-\sigma_{xz} & \sigma_{xy} & \sigma_{z}
+\sigma_{xz} & \sigma_{yz} & \sigma_{z}
 \end{pmatrix}
 $$
 
@@ -361,7 +361,7 @@ $$
 \varepsilon = \begin{pmatrix}
 \varepsilon_x & \varepsilon_{xy} & \varepsilon_{xz}\cr
 \varepsilon_{xy} & \varepsilon_y & \varepsilon_{yz}\cr
-\varepsilon_{xz} & \varepsilon_{xy} & \varepsilon_{z}
+\varepsilon_{xz} & \varepsilon_{yz} & \varepsilon_{z}
 \end{pmatrix}
 $$
 
@@ -432,17 +432,17 @@ $$
 \right)
 $$
 
-Poznamenejme, diagonálnost pravého dolního rohu plyne z poznatku, že pro většinu
+Poznamenejme, že diagonalita pravého dolního rohu plyne z poznatku, že pro většinu
 materiálů se smykové namáhání projevuje pouze smykovou deformací v rovině, ve
 které působí.
 
 Při vhodné volbě souřadné soustavy se smykové namáhání neprojevuje normálovou
 deformací a normálové namáhání se neprojevuje smykovou deformací. Proto
 zpravidla předpokládáme, že pravý horní a levý dolní blok matice v Hookově
-zákonu je nulový. 
+zákoně je nulový. 
 
 Pro statickou rovnováhu platí, že vnitřní síly musí být v rovnováze s vnějšími
-silami, což se matematicky vyjadřuje pomocí rovnic kontinuity. Tyto rovnice mají
+silami, což se matematicky vyjadřuje pomocí rovnic rovnováhy. Tyto rovnice mají
 tvar $$\sum_{j}\frac{\partial \sigma_{ij}}{\partial x_j} + f_i = 0,$$ kde $f_i$ jsou
 $i$-té komponenty objemové síly působící na těleso. Pro řešení této rovnice
 pomocí metody konečných prvků je nutné převést ji na slabou formulaci, což

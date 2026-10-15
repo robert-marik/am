@@ -13,7 +13,7 @@ https://youtu.be/bdnxbITOIrM
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.$$
 1. Zakreslete do obrázku směr toku vektorového pole v bodě $(2,1)$. 
-1. Vypočtěte divergenci vektorového pole v bodě $(2,1)$ a podle toho, zda je kladná nebo záporná rozhodněte, zda tok v daném bodě sílí nebo slábne.
+1. Vypočtěte divergenci vektorového pole v bodě $(2,1)$ a podle toho, zda je kladná nebo záporná, rozhodněte, zda tok v daném bodě sílí nebo slábne.
 1. Předpokládejme, že dané vektorové pole reprezentuje stacionární tok. Je v bodě $(2,1)$ zdroj nebo spotřebič?
 
 ```{prf:example} Řešení
@@ -27,7 +27,7 @@ https://youtu.be/bdnxbITOIrM
 
 ```
 
-## Divegrence vektorového pole s parametrem
+## Divergence vektorového pole s parametrem
 
 https://youtu.be/zwYPRlEIrHI
 
@@ -45,7 +45,7 @@ https://youtu.be/zwYPRlEIrHI
 
 ```
 
-## Rovnice vedení tepla v dvourozměrném materiálu
+## Rovnice vedení tepla ve dvourozměrném materiálu
 
 https://youtu.be/U9_0wbKT_2I
 
@@ -84,7 +84,7 @@ Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $
 \nabla \cdot (-k\cdot \nabla T )&=\pdv{x}(-14(2x- y)-16x^3)+\pdv{y}(8(2x- y)-4x^3)\\&=-48x^2-28-8\\&=-48x^2-36
 \end{aligned}
 $$
-1. Do vztahu pro diveregenci dosadíme bod, který nás zajímá. $$\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-1236$$ Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje. Z rovnice vedení tepla
+1. Do vztahu pro divergenci dosadíme bod, který nás zajímá. $$\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-1236$$ Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje. Z rovnice vedení tepla
   $$\rho c\pdv{T}{t}=\nabla\cdot(k \cdot \nabla T)$$
   plyne v daném bodě
   $$\rho c\pdv{T}{t}=1236$$

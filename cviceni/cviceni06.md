@@ -94,7 +94,7 @@ $$
   =\frac 1{n+1}
 \end{aligned}$$
 
-Správnost můžeme ověřit pomocí vzorců pro obsah  $$I_0=1$$ a polohu težiště $$\frac{I_1}{I_0}=\frac 12,$$
+Správnost můžeme ověřit pomocí vzorců pro obsah  $$I_0=1$$ a polohu těžiště $$\frac{I_1}{I_0}=\frac 12,$$
 což porovnáme s očekávanými výsledky. Dalším využitím je působiště tlakové síly na přehradu (viz přednáška), které je při orientaci osy $y$ od hladiny směrem dolů v místě
 $$\frac{I_2}{I_1}=\frac {\frac 13}{\frac 12}=\frac 23,$$
 tj. ve dvou třetinách hloubky.
@@ -261,9 +261,9 @@ $$
 \end{aligned}
 $$
 
-Obsah je $\frac \pi 4$, což odpovídá čtvtině vzorce pro obsah jednotkového kruhu. Souřadnice težište jsou obě stejné, což odpovídá symetrii množiny.  Tyto souřadnice leží v bodě
+Obsah je $\frac \pi 4$, což odpovídá čtvrtině vzorce pro obsah jednotkového kruhu. Souřadnice těžiště jsou obě stejné, což odpovídá symetrii množiny.  Tyto souřadnice leží v bodě
 $$\frac {4}{3\pi}\approx 0.42,$$
-což odpovídá tomu, že těžište je posunuto doprava nahoru ve srovnání těžištěm trojúhelníka, který by vznikl nahrazením oblouku úsečkou.
+což odpovídá tomu, že těžiště je posunuto doprava nahoru ve srovnání s těžištěm trojúhelníka, který by vznikl nahrazením oblouku úsečkou.
 
 ```
 
@@ -296,9 +296,9 @@ $$
 $$
 kde při výpočtu integrálu přes proměnnou $\varphi$ využijeme nápovědu, kterou jsme měli již v sadě úloh s křivkovým integrálem.
 
-Že je výsledkem veličina úměrná čtvrté mocnině poloměru je zřejmé i z rozměrové analýzy (resp. z Buckinghamova $\Pi$ teorému), uvedeným výpočtem však vidíme i konstantu úměrnosti.
+Že je výsledkem veličina úměrná čtvrté mocnině poloměru, je zřejmé i z rozměrové analýzy (resp. z Buckinghamova $\Pi$ teorému), uvedeným výpočtem však vidíme i konstantu úměrnosti.
 
-To, že kvadratický moment roste se čtvrtou mocninou poloměru, značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Devadesát šest procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
+To, že kvadratický moment roste se čtvrtou mocninou poloměru, značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Přibližně devadesát čtyři procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
 
 ```
 

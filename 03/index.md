@@ -27,7 +27,7 @@ Příklady transportních dějů:
 * vedení tepla,
 * transport vody ve dřevě.
 
-Obecná bilance veličiny, která má zdroje a spotřebiče a je přenášena tokem vypadá následovně.
+Obecná bilance veličiny, která má zdroje a spotřebiče a je přenášena tokem, vypadá následovně.
 
 * Existuje veličina, spojitě rozložená v prostoru, charakterizující stav systému. Tuto veličinu budeme nazývat *stavovou veličinou*. Její hustotu označíme $u$.
 * Stavová veličina se může v prostoru přemisťovat *tokem* $\vec \jmath$.
@@ -73,7 +73,7 @@ Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v d
   * Pokud je součet kladný, znamená to, že tok zesiluje. V takovém případě je převaha toku ven. Z daného místa více veličiny vytéká, než kolik teče dovnitř. 
   * Pokud je součet záporný, je tomu naopak. 
   * Nesoulad mezi přítokem a odtokem je možné přičíst na vrub zdrojům a akumulaci stavové veličiny. Záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
-* Při preciznějším formulaci výše uvedených myšlenek je nutné pracovat s konečně velkým objemem (viz obrázek), vztáhnout výsledek na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
+* Při preciznější formulaci výše uvedených myšlenek je nutné pracovat s konečně velkým objemem (viz obrázek), vztáhnout výsledek na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
 
 <!--
 Budeme sledovat tok vektorového pole ze zvoleného 
@@ -106,7 +106,7 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 
 ```{prf:theorem} výpočet divergence
 :nonumber:
- Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\mathop{\mathrm {div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
+ Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$, vypočteme divergenci vztahem 	  $$\mathop{\mathrm {div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
 Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
 ```
 
@@ -119,11 +119,11 @@ Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze 
 
 ```{prf:remark} fyzikální interpretace divergence
 :nonumber:
- Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+ Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 ```
 
 
-Divergence je lokální veličina. Udává informaci o proudění v daném bodě. Pro měření však je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. Vzájemný vztah mezi lokální veličinou a konečným objemem je založený na předpokladu, že podmínky se nemění skokem a okolí každého bodu jsou nepříliš odlišné od podmínek v okolních bodech.
+Divergence je lokální veličina. Udává informaci o proudění v daném bodě. Pro měření však je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. Vzájemný vztah mezi lokální veličinou a konečným objemem je založený na předpokladu, že podmínky se nemění skokem a podmínky v okolí každého bodu jsou nepříliš odlišné od podmínek v okolních bodech.
 
 ```{prf:remark} fyzikální interpretace divergence v měřitelných pojmech
 :nonumber:
@@ -145,7 +145,7 @@ Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar.
 
 ## Výpočet divergence
 
-Viz cvičení. Jedná se o prosté derivování se následným sečtením derivací.
+Viz cvičení. Jedná se o prosté derivování s následným sečtením derivací.
 
 ## Rovnice kontinuity
 
@@ -182,12 +182,12 @@ Matematickou formulací celkové bilance  je **rovnice kontinuity**. $$\boxed{\f
 
 ```{prf:remark} fyzikální interpretace členů rovnice kontinuity
 :nonumber:
-* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se roste hustota stavové veličiny $u$ v daném místě a čase.
+* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle roste hustota stavové veličiny $u$ v daném místě a čase.
 * Člen $\sigma$ udává vydatnost zdrojů stavové veličiny, přičemž spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento člen tedy udává, kolik stavové veličiny v tomto místě vzniká v jednotkovém objemu za jednotku času. Zpravidla neobsahuje derivace podle času a polohy. Může se však měnit s časem, s polohou, nebo s množstvím stavové veličiny. Nemusí být nutně konstantní.
-* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do tohoto místa vteče. Jinak řečeno, udává, o kolik zesílí v daném místě tok $\vec \jmath$. My potřebujeme mít zachyceno zeslabení (množství které chybí v toku se "použije" na akumulaci veličiny v daném místě) a proto uvažujeme záporně vzatou divergenci, tj. $-\nabla\cdot \vec j$.
+* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti proudění přenášejícího stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do tohoto místa vteče. Jinak řečeno, udává, o kolik zesílí v daném místě tok $\vec \jmath$. My potřebujeme mít zachyceno zeslabení (množství které chybí v toku se "použije" na akumulaci veličiny v daném místě) a proto uvažujeme záporně vzatou divergenci, tj. $-\nabla\cdot \vec j$.
 * Pokud zdroje stavové veličiny neexistují, jedná se o *bezzdrojovou rovnici*. V takovém případě klademe $\sigma=0$. Poznáme to tak, že v rovnici chybí člen bez derivací.
 * Pokud studujeme systém v ustáleném stavu, kdy se stavová veličina nemění v čase, je člen $\frac{\partial u}{\partial t}$ na levé straně nulový. V tomto případě mluvíme o *stacionárním stavu* a *stacionární rovnici kontinuity*. Stacionární rovnice kontinuity typicky popisuje systémy, které byly dostatečně dlouhou dobu ve stabilních podmínkách a dosáhly rovnovážného stavu. Stacionární rovnici poznáme tak, že v ní nefiguruje člen s derivací podle času.
-* Viděli jsme, že za určitých podmínek mohou některé členy v rovnici kontinuty chybět. Naopak člen $\nabla\cdot \vec j$ charakterizující změny v toku je v rovnici kontinuity přítomen vždy. Bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+* Viděli jsme, že za určitých podmínek mohou některé členy v rovnici kontinuity chybět. Naopak člen $\nabla\cdot \vec j$ charakterizující změny v toku je v rovnici kontinuity přítomen vždy. Bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
 ```
 
 V matematice často rovnici kontinuity uvažujeme ve výše uvedeném tvaru.  Při
@@ -236,7 +236,7 @@ https://youtu.be/p2FTgyAWzA4
 
 Difuzní rovnice je rovnice kontinuity s dosazeným konstitučním vztahem pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu lineární aproximaci, je možné psát
 $$      \vec \jmath=-D\nabla u,$$
-kde $D$ konstanta úměrnosti. Pokud tok $\vec \jmath$ a gradient $\nabla u$ leží v jedné přímce,
+kde $D$ je konstanta úměrnosti. Pokud tok $\vec \jmath$ a gradient $\nabla u$ leží v jedné přímce,
 je $D$ reálné číslo, jinak je $D$ matice. Například při
 studiu pohybu vody ve dřevě se voda řídí nejen směrem maximálního
 poklesu vlhkosti, ale stáčí se současně do podélného směru, ve kterém dřevo
@@ -298,7 +298,7 @@ a nazývá se _rovnice vedení tepla_.
 :nonumber:
 
 
-* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste v daném bodě hustota vnitřní energie tělesa.
+* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\varrho c$ tuto hodnotu přepočítává na údaj, jak rychle roste v daném bodě hustota vnitřní energie tělesa.
 * Výraz $k\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-k\nabla T$.
 * Člen $\nabla\cdot(k\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
 * Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divergence toku $\nabla\cdot (-k\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (k\nabla T)$ je proto záporný.
@@ -443,7 +443,7 @@ Proudění podzemní vody je vlastně úloha s řekou se zasypaným
 korytem. Taková voda teče ve srovnání s povrchovou vodou velmi pomalu,
 protože prosakuje půdou. Prostor, ve kterém se podzemní voda nachází, se
 nazývá *zvodeň*. Voda
-v podzemní zvodni teče v jistém smyslu "z kopce". Narozdíl od vody povrchové 
+v podzemní zvodni teče v jistém smyslu "z kopce". Na rozdíl od vody povrchové 
 však kromě nadmořské výšky může hrát roli i rozdíl tlaků nebo další
 efekty. Vliv všech těchto efektů shrnujeme do jediného pojmu
 *piezometrická výška*. Směr "z kopce" pro podzemní vodu je
@@ -470,7 +470,7 @@ k ochraně lomů, dolů a stavebních jam před *zaplavením*, k hospodaření 
 provozů*. Aplikace jsou dále v detekci zdroje kontaminace pitné vody a odhadu rychlosti  šíření kontaminace, včetně 
 *kontaminace slanou mořskou vodou* v přímořských oblastech.
 
-U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. *confined aquifer*) transmisitiva závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. *unconfined aquifer*) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí $T=kh$, kde $k$ závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru
+U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. *confined aquifer*) transmisivita závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. *unconfined aquifer*) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí $T=kh$, kde $k$ závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru
 $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\bigr).}$$
 
 ## Laplaceův operátor

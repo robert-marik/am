@@ -3,7 +3,7 @@
 ```{admonition} Anotace.
 
 * Již nějakou dobu studujeme vektorová pole. V této přednášce si několik typických zkusíme vizualizovat. 
-* Seznámíme se s pojmy kmenová funkce, skalární potenciál, kmenová funkce. Tyto pojmy udávají, zda vektorové pole je či není možné obdržet jako výsledek výpočtu gradientu nějaké skalární funkce. Není to akademická otázka, ale odpověď má dalekosáhlé důsledky. Zjednodušeně řečeno, pokud je odpověď kladná, dají se některé úlohy místo ve vektorovém poli řešit v poli skalárním, což nese výrazné usnadnění.
+* Seznámíme se s pojmy potenciální pole, kmenová funkce a skalární potenciál. Tyto pojmy udávají, zda vektorové pole je či není možné obdržet jako výsledek výpočtu gradientu nějaké skalární funkce. Není to akademická otázka, ale odpověď má dalekosáhlé důsledky. Zjednodušeně řečeno, pokud je odpověď kladná, dají se některé úlohy místo ve vektorovém poli řešit v poli skalárním, což nese výrazné usnadnění.
 * S výše uvedenou problematikou souvisí pojem rotace vektorového pole, který si uvedeme jako další z diferenciálních operátorů vektorové analýzy.
 * Ukážeme si, že parciální derivace jsou vhodným nástrojem pro jakousi citlivostní analýzu. Seznámíme se v této souvislosti se zákonem šíření chyb.
 ```
@@ -57,7 +57,7 @@ V souvislosti s totálním diferenciálem často vyvstává otázka, zda pro
 zadané vektorové pole $$\vec F(x,y)=(P(x,y),Q(x,y))$$ existuje
 skalární funkce $f$, jejímž gradientem je zadané vektorové pole $\vec
 F$. Toto je důležitá otázka ve fyzice. Umožňuje rozhodnout, ke
-kterému silovém poli je možno zavést potenciální energii.  Funkce $f$
+kterému silovému poli je možno zavést potenciální energii.  Funkce $f$
 se v tomto kontextu nazývá **skalární potenciál** vektorového pole $\vec F$
 nebo také **kmenová funkce**.  Následující věta platí za
 předpokladu dostatečně hladkých funkcí na otevřené množině.
@@ -103,16 +103,16 @@ https://youtu.be/ev3eFilaGpw
 <div class="obtekat">
 
 ```{figure} tok.png
- Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka, která odrazí od břehu kolmo, stáčí po proudu.
+ Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka, která se odrazí od břehu kolmo, stáčí po proudu.
 ```
 
 </div>
 
-manimp:Curl|Rotace vektorového pole pomocí Sarussova pravidla.
+manimp:Curl|Rotace vektorového pole pomocí Sarrusova pravidla.
 
 * Ve dvourozměrném vektorovém poli doplníme třetí komponentu nulovou. Rotace má potom první dvě komponenty nulové ($R=\frac{\partial Q}{\partial z}=\frac{\partial P}{\partial z}=0$). Třetí komponenta rotace dvourozměrného vektorového pole je nulová právě tehdy, když k tomuto vektorovému poli existuje skalární potenciál.
 * Ve fyzice má důležité postavení vektorové pole s nulovou rotací. Je v něm totiž možno zavést potenciál a potenciální energii. Takové pole se nazývá **nevírové pole**.
-* Představme si vektorové pole charakterizující rychlost proudící       tekutiny. Rotace udává, zda má pole tendenci uvést do rotace objekt unášený tímto prouděním. Jedná se o lokální charakteristiku a nesouvisí se směrem proudění. Rotace může být nulová i pro tok cirkulující okolo jednoho bodu (uvidíme níže). Naopak, pro to v přímce může být rotace nenulová. Příkladem je přímý tok v řece, kdy rychlost u břehu klesá. V důsledku toho se loďka, která odrazí od břehu kolmo stočí po proudu. Mimo středovou osu má pole nenulovou rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUUFuwyAQvEfKH1ZRUkNLWlz1yrWfqCOLxJAgYWNhkkKi_L1ALLvqqRzMDjO76531JJAru3CLCg8BrgVeLpYLiXx6xwxR4p9RufX4pXz7IDSzvlUdAd9yTyDkOMQYGFACJcnfJGvURTLUKCmR_KI7EmuMoNyRMIH3XWyEXwfV9lrJUMuz1ij2OZytnv8D5tQr3s6pAROYkZ8omnQTRZNwO5fwGPIkw8l8o5NrNbKrdbUXR9XduFbHTjR3qC7iAJ9PDDYDVBVUywUAVC13J9Pf8m3bWxzyfv-X0ho3KYElpeiaqdt6tclZSHMnPIqDszg6S8uJ7hB4PCdL_zIjNdr1m4snDdlr4-rY1xlbSyV0g7Ij2VqKSTJkjGO1GOX1pu0mGEjecHhAPvSxTm25U4bFVR-MNpYVe30WBf4BTyS0Gg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* Představme si vektorové pole charakterizující rychlost proudící       tekutiny. Rotace udává, zda má pole tendenci uvést do rotace objekt unášený tímto prouděním. Jedná se o lokální charakteristiku a nesouvisí se směrem proudění. Rotace může být nulová i pro tok cirkulující okolo jednoho bodu (uvidíme níže). Naopak, pro tok v přímce může být rotace nenulová. Příkladem je přímý tok v řece, kdy rychlost u břehu klesá. V důsledku toho se loďka, která se odrazí od břehu kolmo, stočí po proudu. Mimo středovou osu má pole nenulovou rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUUFuwyAQvEfKH1ZRUkNLWlz1yrWfqCOLxJAgYWNhkkKi_L1ALLvqqRzMDjO76531JJAru3CLCg8BrgVeLpYLiXx6xwxR4p9RufX4pXz7IDSzvlUdAd9yTyDkOMQYGFACJcnfJGvURTLUKCmR_KI7EmuMoNyRMIH3XWyEXwfV9lrJUMuz1ij2OZytnv8D5tQr3s6pAROYkZ8omnQTRZNwO5fwGPIkw8l8o5NrNbKrdbUXR9XduFbHTjR3qC7iAJ9PDDYDVBVUywUAVC13J9Pf8m3bWxzyfv-X0ho3KYElpeiaqdt6tclZSHMnPIqDszg6S8uJ7hB4PCdL_zIjNdr1m4snDdlr4-rY1xlbSyV0g7Ij2VqKSTJkjGO1GOX1pu0mGEjecHhAPvSxTm25U4bFVR-MNpYVe30WBf4BTyS0Gg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * Pozor: anglický výraz pro rotaci je "curl".
 
 ```{prf:remark} linearita rotace

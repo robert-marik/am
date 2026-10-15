@@ -14,7 +14,7 @@ má pouze nulové řešení.
 :class: dropdown
 :nonumber:
 
-Charakteristcká rovnice je $$\lambda^2-m=0$$ s reálnými kořeny $\lambda_{1,2}=\pm\sqrt m$.
+Charakteristická rovnice je $$\lambda^2-m=0$$ s reálnými kořeny $\lambda_{1,2}=\pm\sqrt m$.
 Obecným řešením je funkce 
 $$y(t)=C_1 e^{\sqrt m t} + C_2 e^{-\sqrt m t}$$
 a dosazením získáváme
@@ -26,7 +26,7 @@ $$C_1 e^{\sqrt m} - C_1 e^{-\sqrt m}=0.$$
 Odsud
 $$C_1 (e^{\sqrt m} - e^{-\sqrt m})=0 $$
 a
-$C_1=0$. Poto však $C_2=-C_1=0$ a řešení se redukuje na 
+$C_1=0$. Potom však $C_2=-C_1=0$ a řešení se redukuje na 
 $$y(t)=0 e^{\sqrt m t} + 0 e^{-\sqrt m t}=0$$
 tj. na konstantní nulovou funkci.
 ```
@@ -61,7 +61,7 @@ $$ T (x) = T_0 + C_1 e^{\sqrt{\frac{h}\lambda} x} + C_2 e^{-\sqrt{\frac{h}\lambd
 
 Stacionární teplota jako funkce polohy je tedy dána vztahem $$ T (x) = T_0 + C e^{-\sqrt{\frac{h}\lambda} x},$$ kde $C$ je kladná konstanta. Teplota podél žebra klesá exponenciálně s polohou k hodnotě $T_0$.
 
-Pokles je exponenciální funkce $e^{-z x}$ je rychlejší, pokud je numericky větší hodnota $z$. 
+Pokles exponenciální funkce $e^{-z x}$ je rychlejší, pokud je numericky větší hodnota $z$. 
 
 Pokud materiál lépe vede teplo, je hodnota $\lambda$ větší. Protože je tato hodnota ve jmenovateli zlomku, je hodnota $$ \sqrt{\frac h\lambda} $$ menší. To znamená, že exponenciální faktor se mění pomaleji a funkce klesá pomaleji. Pro hodně dobrý vodič tepla je teplota podél žebra prakticky konstantní. 
 
@@ -90,7 +90,7 @@ $$\frac {\psi''(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=
 
 * První rovnice představuje lineární diferenciální rovnici druhého řádu $$\psi''+\lambda^2\psi=0.$$ Její charakteristická rovnice  $$z^2 +\lambda^2=0$$ má řešení $$z_{1,2}=\pm i\lambda$$ a proto platí $$\psi(t)=C_1\cos(\lambda t) + C_2\sin(\lambda t).$$ Konstanta $C_1$ souvisí s počáteční výchylkou, konstanta $C_2$ s počáteční rychlostí  a konstanta $\lambda$ s frekvencí kmitů.
 * Druhá rovnice představuje lineární diferenciální rovnici druhého řádu $$\varphi''+\lambda^2\varphi=0$$ a okrajové podmínky si  vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji použili [v přednášce](http://user.mendelu.cz/marik/am/slidy/11/). Řešením je funkce $\varphi(x)=\sin\left (k\frac{\pi}l x\right)$, kde $k\in\mathbb N$.
-* Spojením obdržených výsledků dostáváme rovnici popisující kmity na $k$-té vlastní frekvenci ve tvaru $$u_k(x,t)=\psi(t)\varphi(x)=\left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ 
-* Spojením kmitů na všech frekvencích dostaneme řešení rovnice ve tvaru $$u(x,t) = \sum_{k=1}^\infty \left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ Tento vzorec je dostatečně flexibilní, abychom dokázali splnit libovolné počáteční podmínky a proto v sobě obsahuje všechna řešení. Praktická využitelnost vzorce v reálných případech je diskutabilní, proto často používáme numerické simulace využívající numerické řešení zadané rovnice za daných počátečních a okrajových podmínek. 
+* Spojením obdržených výsledků dostáváme rovnici popisující kmity na $k$-té vlastní frekvenci ve tvaru $$u_k(x,t)=\psi(t)\varphi(x)=\left[C_{1,k}\cos\left(k\frac{\pi}l t\right) + C_{2,k}\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ 
+* Spojením kmitů na všech frekvencích dostaneme řešení rovnice ve tvaru $$u(x,t) = \sum_{k=1}^\infty \left[C_{1,k}\cos\left(k\frac{\pi}l t\right) + C_{2,k}\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ Tento vzorec je dostatečně flexibilní, abychom dokázali splnit libovolné počáteční podmínky a proto v sobě obsahuje všechna řešení. Praktická využitelnost vzorce v reálných případech je diskutabilní, proto často používáme numerické simulace využívající numerické řešení zadané rovnice za daných počátečních a okrajových podmínek. 
 
 

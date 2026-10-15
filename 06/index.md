@@ -140,7 +140,7 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
-funkcí, nebo integračních oborů) a s násobení integrované funkce
+funkcí, nebo integračních oborů) a s násobením integrované funkce
 konstantou. Přesněji, platí následující věty.
 
 ```{prf:theorem} linearita dvojného integrálu
@@ -159,7 +159,7 @@ konstantou. Přesněji, platí následující věty.
 
 https://youtu.be/ItTWxJGD3sY
 
-Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jedné proměnné.
+Výpočet dvojného integrálu se provádí převodem na integrály funkcí jedné proměnné.
 
 ### Výpočet (oblast mezi funkcemi proměnné $x$)
 
@@ -327,7 +327,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x
   \mathrm{d}y,$$ kde $\sigma(x,y)$ je **plošná hustota** (hmotnost
   vztažená na jednotku povrchu).
-* Je-li plošná $u$ hustota kinetické energie molekul (což je veličina úměrná
+* Je-li $u$ plošná hustota kinetické energie molekul (což je veličina úměrná
   termodynamické teplotě), je $\iint_M u\,\mathrm dx\mathrm dy$ celková kinetická
   energie částic. Tato energie se může měnit tepelnou
   výměnou. Rychlost, s jakou se mění část vnitřní energie související
@@ -369,7 +369,7 @@ manimp:beam|Odvození ohybové rovnice nosníku.
   $\sigma(x,y)=1$, anglicky *second moment of area*) je veličina,
   která hraje podstatnou roli v mechanice (nábytek, stavby) při
   dimenzování (polic, nosných tyčí, nosníků).
-* V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné je bez újmy na obecnosti nahradit jedničkou. Vzorce pro obsah, $x$-ovou souřadnici těžiště ($x_0$), $y$-ovou
+* V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné ji bez újmy na obecnosti nahradit jedničkou. Vzorce pro obsah, $x$-ovou souřadnici těžiště ($x_0$), $y$-ovou
   souřadnici těžiště ($y_0$), kvadratický moment vzhledem k ose $x$
   ($I_x$) a kvadratický moment vzhledem k ose $y$ ($I_y$) (pro množinu $M$ s plošnou hustotou $1$) jsou
   $$
@@ -415,7 +415,7 @@ Odsud máme okamžitě několik pozorování
   poměrem stran 1:2 je poměr tuhostí při poloze naplacato a nastojato roven 1:4.
 * Pro nosník čtvercového průřezu ($a=b$) roste tuhost se čtvrtou
   mocninou rozměrů. Obsah (a tedy i hmotnost) roste s druhou
-  mocninou. Uvažujme tři nosníky. První má čtvercový průřez. Druhý také, ale průřez má dvojnásobný obsah. (Strana je tedy $\sqrt 2$-krát delší.) Třetí nosník bude krabicový nosník. Bude mít vnější rozměry stejné jako větší nosník, ale uvnitř bude čtvercová dutina o rozměrech prvního nosníku. Tuhost prvního nosníku bude referenční, označme ji $I$. Tuhost druhého nosníku bude čtyřnásobná, tj. $4I$ a za toto navýšení tuhosti "platíme" použitím dvojnásobného množství materiálu. Tuhost třetího nosníku najdeme jako rozdíl prvních dvou, tj. $3I$, protože i geometricky největší nosník vznikne zasunutím prvního nosníku do dutiny ve třetím krabicovém nosníku. Nyní porovnjeme původní nosník a krabicový nosník. Oba používají stejné množství materiálu, ale tuhost krabicového nosníku je trojnásobná. To proto, že část materiálu je dál od osy symetrie průřezu. Podobně se dá zdůvodnit a výpočtem ukázat, že profil ve tvaru písmene I, známé íčko, je tužší než tyč vykovaná ze stejného množství materiálu.
+  mocninou. Uvažujme tři nosníky. První má čtvercový průřez. Druhý také, ale průřez má dvojnásobný obsah. (Strana je tedy $\sqrt 2$-krát delší.) Třetí nosník bude krabicový nosník. Bude mít vnější rozměry stejné jako větší nosník, ale uvnitř bude čtvercová dutina o rozměrech prvního nosníku. Tuhost prvního nosníku bude referenční, označme ji $I$. Tuhost druhého nosníku bude čtyřnásobná, tj. $4I$ a za toto navýšení tuhosti "platíme" použitím dvojnásobného množství materiálu. Tuhost třetího nosníku najdeme jako rozdíl prvních dvou, tj. $3I$, protože i geometricky největší nosník vznikne zasunutím prvního nosníku do dutiny ve třetím krabicovém nosníku. Nyní porovnáme původní nosník a krabicový nosník. Oba používají stejné množství materiálu, ale tuhost krabicového nosníku je trojnásobná. To proto, že část materiálu je dál od osy symetrie průřezu. Podobně se dá zdůvodnit a výpočtem ukázat, že profil ve tvaru písmene I, známé íčko, je tužší než tyč vykovaná ze stejného množství materiálu.
 * Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky
   strany. Podobná závislost musí být u každého průřezu
   jednoparametrického tvaru, například pro kruh. Jako na nosník s kruhovým průřezem můžeme pohlížet i na stromy. Například strom, ve
@@ -689,7 +689,7 @@ $r\mathrm{d}\varphi$ a její obsah je $r\mathrm{d}\varphi\mathrm{d}r$
 (viz obrázek). Platí tedy, že obsah elementární oblasti $\mathrm{d}
 A=\mathrm{d} x\mathrm{d}y$ se transformuje na $\mathrm{d}
 A=r\mathrm{d}\varphi\mathrm{d}r$. Podíl
-$\frac{\mathrm{d}\varphi\mathrm{d}r }{\mathrm{d}x \mathrm{d}y }$
+$\frac{\mathrm{d}x\mathrm{d}y}{\mathrm{d}r\mathrm{d}\varphi}$
 udává, kolikrát se změní obsah elementární oblasti při změně souřadnic
 a nazývá se **jakobián**. V případě polárních souřadnic je jakobián
 jak vidíme roven $r$ a platí tedy
@@ -702,7 +702,7 @@ V diferenciálním počtu polární souřadnice používáme především tam, k
 má problém radiální symetrii. Například při studiu ochlazování nebo
 kmitů kruhových desek či válcovitých součástek. V integrálním počtu
 tyto souřadnice použijeme zejména v případě, kdy integrujeme přes
-kružnici nebo její část (např. mezikruží či kruhová výseč). V takovém
+kruh nebo jeho část (např. mezikruží či kruhová výseč). V takovém
 případě mají totiž integrály které vzniknou po transformaci dvojného
 integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je
 zpravidla jednodušší. 

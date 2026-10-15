@@ -37,7 +37,7 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
 
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar
 $$\dv {L}{t}=k (L_{\max}-L).$$
-Konstanta $k$ vyjadřuje rychlost s jakou roste délka při jednotkovém rozdílu mezi aktuální délkou a délkou maximální.
+Konstanta $k$ vyjadřuje rychlost, s jakou roste délka při jednotkovém rozdílu mezi aktuální délkou a délkou maximální.
 
 ```
 
@@ -117,7 +117,7 @@ $$ \dv {x}{t}=0.10 x-50, $$ kde $t$ je čas v letech.
 
 ### Hrubý model chřipkové epidemie
 
-Rychlost s jakou roste počet nemocných chřipkou je úměrný současně
+Rychlost, s jakou roste počet nemocných chřipkou, je úměrná současně
 počtu nemocných a počtu zdravých jedinců. Sestavte model takového
 šíření chřipky.
 
@@ -150,7 +150,7 @@ poloměru. Vyjádřete proces kvantitativně pomocí derivací.
 :nonumber:
 
 Je-li $r$ poloměr, je $r^2$ druhá mocnina a protože se jedná o nepřímou úměrnost, platí
-$$\dv {r}{t}=\frac{k}{r^2}.$$ Konstanta $k$ vyjadřuje rychlost s jakou roste ropná skvrna ve fázi, kdy má jednotkový poloměr $r$.
+$$\dv {r}{t}=\frac{k}{r^2}.$$ Konstanta $k$ vyjadřuje rychlost, s jakou roste ropná skvrna ve fázi, kdy má jednotkový poloměr $r$.
 ```
 
 ### Model učení
@@ -163,7 +163,7 @@ látky. Vyjádřete proces kvantitativně pomocí derivací.
 :class: dropdown
 :nonumber:
 
-Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
+Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky, kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
 $$\dv {L}{t}=k (L_{\max}-L).$$
 ```
 
@@ -177,7 +177,7 @@ $$\dv {L}{t}=k (L_{\max}-L).$$
 
 \fi
 
-Takzvaný Stefanův zákon (J. Stefan, Uber die Theorie der Eisbildung, insbesondere uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
+Takzvaný Stefanův zákon (J. Stefan, Über die Theorie der Eisbildung, insbesondere über die Eisbildung im Polarmeere, 1891) vyjadřuje, že tloušťka ledu na hladině moře roste ve
 stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
 tento fakt pomocí vhodného matematického modelu a najděte řešení
 vzniklé diferenciální rovnice.
@@ -211,11 +211,11 @@ https://youtu.be/K08zq2cC0DM
 
 \fi
 
-Z fyziky je známo, že rychlost s jakou
-vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
+Z fyziky je známo, že rychlost, s jakou
+vytéká tekutina otvorem u dna nádoby, je úměrná odmocnině výšky hladiny
 (protože se mění potenciální energie úměrná výšce na kinetickou
-energii úměrnou druhé mocnině rychlosti). Proto je i rychlost s jakou
-se zmenšuje objem vody v nádrži úměrná odmocnině výšky
+energii úměrnou druhé mocnině rychlosti). Proto je i rychlost, s jakou
+se zmenšuje objem vody v nádrži, úměrná odmocnině výšky
 hladiny.
 
 Ukažte, že matematickým popisem procesu je diferenciální rovnice.
@@ -226,7 +226,7 @@ nádrž ve tvaru
 _kvádru_
 a nádrž ve tvaru _kužele_ otočeného vrcholem dolů (trychtýř). 
 
-_V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
+_V tomto příkladě vystupuje derivace jako rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
 
 ```{prf:example} Řešení
 :class: dropdown
@@ -285,8 +285,8 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
 
 1. Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
     * _Podle obecné věty o jednoznačnosti:_ Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle $h$. Protože platí
-    $$\frac{\partial }{\partial h}(k\sqrt h)=k\frac 12
-    h^{-1/2}=\frac{k}{2\sqrt h}$$ a tato derivace je definovaná a
+    $$\frac{\partial }{\partial h}(-k\sqrt h)=-k\frac 12
+    h^{-1/2}=-\frac{k}{2\sqrt h}$$ a tato derivace je definovaná a
     ohraničená v nějakém okolí libovolného bodu splňujícího $h>0$.
     Podle věty o existenci a jednoznačnosti řešení obecné
     diferenciální rovnice má počáteční úloha právě jedno řešení.
@@ -341,7 +341,7 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
     * Pro nekonstantní řešení dostaneme po separaci  $$ r^{-3}\mathrm dr=k\mathrm dt $$ a integrováním $$ -\frac 12 r^{-2}=kt+C.$$ Dosazením počáteční podmínky $t=0$, $r=r_0$ dostáváme $$ -\frac 12 r_0^{-2}=C.$$ Tím je dána konstanta $C$ a po použití této konstanty v obecném řešení dostáváme řešení počáteční úlohy ve tvaru $$ -\frac 12 r^{-2}=kt-\frac 12 r_0^{-2}.$$
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2$, $m(0)=0$
     * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2$$ a toto řešení nesplňuje počáteční podmínku.
-    * Pro nekonstantní řešení dostaneme po separaci  $$ \frac1{m+2}\mathrm dm=dt $$ a integrováním $$ \ln|m+2|=t+C.$$ Po dosazení počáteční podmínky $t=m=0$ dostáváme $$C=\ln 2$$ a počáteční úloha má řešení $$\ln(m+2)=t+\ln (2).$$ (Vzhledem k počáteční podmínce je $m$ kladné a nemusíme psát absolutní hodnotu.)
+    * Pro nekonstantní řešení dostaneme po separaci  $$ \frac1{m+2}\mathrm dm=\mathrm dt $$ a integrováním $$ \ln|m+2|=t+C.$$ Po dosazení počáteční podmínky $t=m=0$ dostáváme $$C=\ln 2$$ a počáteční úloha má řešení $$\ln(m+2)=t+\ln (2).$$ (Vzhledem k počáteční podmínce je $m$ kladné a nemusíme psát absolutní hodnotu.)
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2$, $m(0)=-2$
     * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2.$$ Toto řešení splňuje počáteční podmínku.
     * Pravá strana má ohraničenou (dokonce konstantní) derivaci podle $m$. Proto je řešení každé počáteční úlohy určeno jednoznačně. Řešení z předchozího bodu je jediné a další nemusíme hledat.

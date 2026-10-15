@@ -43,8 +43,8 @@ se děje rychlostí úměrnou povrchu návětrné strany pláště.
 
 Rychlost, s jakou se mění objem, je $\frac{\mathrm dV}{\mathrm dt}$. Rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 Podle zadání platí $$  \frac{\mathrm dV}{\mathrm dt} = R - k_0S$$
-pro vhodnou kontantu úměrnosti $k_0$.
-Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z podobnosti víme, že plochy rostou s druhou mocninou a objemy se třetí mocninou délkových rozměrů. Proto je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky ``pasují'', Existuje tedy konstanta taková, že $$S=k_1V^{\frac 23}.$$ Spojením těchto dvou vztahů dostáváme $$  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},$$ kde $R$ a $k=k_0k_1$ jsou konstanty.
+pro vhodnou konstantu úměrnosti $k_0$.
+Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z podobnosti víme, že plochy rostou s druhou mocninou a objemy se třetí mocninou délkových rozměrů. Proto je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky „pasují“. Existuje tedy konstanta taková, že $$S=k_1V^{\frac 23}.$$ Spojením těchto dvou vztahů dostáváme $$  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},$$ kde $R$ a $k=k_0k_1$ jsou konstanty.
 
 Označme $f(V)=R-kV^{\frac 23}$.
 Konstantní řešení je řešením rovnice $f(V)=0$, tj. $$R-kV^{\frac 23}=0.$$ Odsud $$V_0=\left(\frac{R}{k}\right)^{3/2}.$$ Protože $f$ klesá v bodě $V_0$, je toto řešení stabilní.
@@ -74,7 +74,7 @@ toho, že je surovinou pro produkci kolagenu, se ještě rozpadá
 rychlostí úměrnou koncentraci.
 
 1. Napište matematický model pro množství (koncentraci) propeptidu kolagenu.
-2. Popište různá chování modelu z hlediska počtu stacionárnícho bodů a jejich stability.
+2. Popište různá chování modelu z hlediska počtu stacionárních bodů a jejich stability.
 
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
@@ -108,7 +108,7 @@ Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu.
 
 1. Bez konkurence by populace jelena rostla rychlostí $3$ a  populace losa rychlostí $2$ na jeden kus. 
 2. Vnitrodruhová konkurence se projevuje v obou populacích stejně a je rovna druhé mocnině příslušné velikosti populace. 
-3. Mezidruhová konkurence je vyjádřena členem rovným součinu velikosti populací a tato konkurence se projeví s koeficientem 0.5 v populaci losa a s koeficientem 1 v populaci jelena.
+3. Mezidruhová konkurence je vyjádřena členem rovným součinu velikostí populací a tato konkurence se projeví s koeficientem 0.5 v populaci losa a s koeficientem 1 v populaci jelena.
 
 Sestavte matematický model a otestujte jej numerickým experimentem na stabilitu stacionárních bodů. Poté zdvojnásobte parametry mezidruhové konkurence a sledujte změnu odezvy. 
 

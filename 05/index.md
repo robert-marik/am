@@ -125,7 +125,7 @@ a integrál má tvar
 |----------------|-----------------------------------------|
 |$1$ | délka křivky $C$|
 |lineární hustota $\tau(x,y)$ | hmotnost $m_C$ křivky $C$|
-|$\frac {1}{m_C}[x\tau(x,y),y\tau(xy)]$| souřadnice těžiště křivky $C$ |
+|$\frac {1}{m_C}[x\tau(x,y),y\tau(x,y)]$| souřadnice těžiště křivky $C$ |
 |$x^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $y$|
 |$y^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $x$|
 |$\rho^2(x,y)\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k obecné ose, kde $\rho(x,y)$ je vzdálenost bodu $[x,y]$ od osy otáčení.|
@@ -198,7 +198,7 @@ Budeme se na úlohu dívat shora ze směru, kterým míří osa válce. Tím mů
 Povrch, na který tato síla působí, odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
 $$\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.$$ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose. 
 
-Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pL\Delta s \sin t$$ k namáhání nepřispívá, protože 
+Ještě je vhodné ověřit, že svislý průmět, tj. $$\Delta F_y=pL\Delta s \sin t$$ k namáhání nepřispívá, protože 
 \dm$$F_y=\int_{C} pL \sin t \,\mathrm d s =0.$$ 
 To však je možné očekávat i ze symetrie.
 
@@ -387,7 +387,7 @@ Dále ze zadání vidíme, že prostřední člen je roven nule.
 V označení výše náš vztah dostává tvar
 $$J_o=J_{yT}+m d^2.$$
 Tento vztah se nazývá Steinerova věta. Ukazuje, že moment setrvačnosti
-je nejmenší vzhledem k ose otáční procházející těžišťěm (člen $m
+je nejmenší vzhledem k ose otáčení procházející těžištěm (člen $m
 d^2$ je vždy nezáporný) a umožňuje přepočet momentu setrvačnosti pro
 rovnoběžné osy.
 

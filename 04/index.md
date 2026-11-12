@@ -137,7 +137,7 @@ https://youtu.be/JChhJ4nDAtw
 <!--
 ## Rotace gradientu je nulový vektor
 
-Buď $\varphi(x,y,z):\mathbb{R}^3\to\mathbb{R}^3$ skalární funkce a buď $\vec F(x,y,z)=\nabla \varphi(x,y,z)$. Vypočtěte $\nabla\times\vec F$.
+Buď $\varphi(x,y,z):\mathbb{R}^3\to\mathbb{R}$ skalární funkce a buď $\vec F(x,y,z)=\nabla \varphi(x,y,z)$. Vypočtěte $\nabla\times\vec F$.
 
 *Řešení.* 
 $$\begin{aligned}
@@ -155,7 +155,7 @@ $$\begin{aligned}
 $$
 Podle Schwarzovy věty (nezáleží na pořadí derivování) je každá závorka rovna nule. Proto platí $\nabla\times\vec F=0$.
 
-```{prf:theorem} rotace gradietu
+```{prf:theorem} rotace gradientu
 :nonumber:
  Rotace gradientu je nulový vektor.
 ```
@@ -463,7 +463,7 @@ $$
 
 Rovnice difuze se může týkat i popisu jiné veličiny, než veličiny
 bezprostředně spojené s pohybem látkového prostředí. Například takto
-můžeme sledovat vedení tepla, nebo při zpracování fotografí změny v
+můžeme sledovat vedení tepla, nebo při zpracování fotografií změny v
 jasu sousedních bodů.
 
 Všimli jste si, že sice existují zvířata, jejichž srst má skvrny na
@@ -514,7 +514,7 @@ Základní rovnice kvantové mechaniky, popisuje chování částice v
 potenciálovém poli $V$, řešením je vlnová funkce částice $\psi$.
 
 $$
-  i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar}{2m}\nabla^2 \psi +V\psi 
+  i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2 \psi +V\psi 
 $$
 
 \fi
@@ -547,8 +547,8 @@ th {text-align: center;}
 |Najdi tečnu k funkci dané implicitně rovnicí $f(x,y)=0$ v bodě $(x_0,y_0)$.| Totéž co předchozí případ. Musí navíc platit $f(x_0,y_0)=0$.|
 |Najdi tečnou rovinu ke grafu funkce $f(x,y)$ v bodě $(x_0,y_0)$.| $z=f(x_0,y_0)+\nabla f(x_0,y_0)\cdot(x-x_0,y-y_0)$ |
 |Najdi lineární aproximaci funkce $f(x,y)$ v okolí bodu $(x_0,y_0)$.| $f(x,y)\approx f(x_0,y_0)+\nabla f(x_0,y_0)\cdot(x-x_0,y-y_0)$ |
-|Je $M\mathrm{d}x+N\mathrm{d}y$ totální diferenciál?| Platí následujíci vztah? $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$|
-|Je možno psát funkci $\varphi(x,y)$ ve tvaru $f(x)g(y)$ pro vhodné funkce $f$ a $g$?|Platí následujíci vztah? $\varphi \frac{\partial^2 \varphi}{\partial x \partial y}-\frac{\partial \varphi}{\partial x}\frac{\partial \varphi}{\partial y}=0$|
+|Je $M\mathrm{d}x+N\mathrm{d}y$ totální diferenciál?| Platí následující vztah? $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$|
+|Je možno psát funkci $\varphi(x,y)$ ve tvaru $f(x)g(y)$ pro vhodné funkce $f$ a $g$?|Platí následující vztah? $\varphi \frac{\partial^2 \varphi}{\partial x \partial y}-\frac{\partial \varphi}{\partial x}\frac{\partial \varphi}{\partial y}=0$|
 
 Použité označení:
 
@@ -576,9 +576,9 @@ gradient. Odvodíme vztah mezi vrstevnicemi a gradientem.
 * Platí 
   $$\begin{aligned}0=\frac{\mathrm{d}F}{\mathrm{d}t}&=  \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial
   y}\right)\cdot\left(\frac{\mathrm{d} x}{\mathrm{d} t},
-  \frac{\mathrm{d} x}{\mathrm{d} t}\right) \\&= \nabla
+  \frac{\mathrm{d} y}{\mathrm{d} t}\right) \\&= \nabla
   f(x,y)\cdot(x'(t),y'(t))\end{aligned}$$ (derivace konstanty z
-   předešlého bodu, definice sklárního součinu, definice gradientu,
+   předešlého bodu, definice skalárního součinu, definice gradientu,
    zkrácené označení pro derivace funkce
   jedné proměnné)
 * Vektory $\nabla f(x,y)$ a $(x'(t),y'(t))$ jsou kolmé (jejich
@@ -610,7 +610,7 @@ bodem.
 
 <div class='sloupce'>
 
-Mějme funkci $f(x,y)$ dvou proměnných a její vstevnici na úrovni $C$
+Mějme funkci $f(x,y)$ dvou proměnných a její vrstevnici na úrovni $C$
 $$f(x,y)=C. \tag{1}$$ Tato rovnice za jistých okolností může definovat $y$
 jako funkci proměnné $x$. Pokusíme se najít derivaci této funkce. K
 tomu uvažujme bod $(x_0,y_0)$ ležící na této vrstevnici,
@@ -639,7 +639,7 @@ tj. $f(x_0,y_0)=C$.
   $$ \nabla f(x_0,y_0)=\left(\frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0)\right),$$
   k němu kolmý je vektor
   $$ \left(-\frac{\partial f}{\partial y}(x_0,y_0), \frac{\partial f}{\partial x}(x_0,y_0)\right)$$
-  a po znormování první kompenty dostáváme směrový vektor tečny ve tvaru 
+  a po znormování první komponenty dostáváme směrový vektor tečny ve tvaru 
   $$ \left(1, -\frac{\frac{\partial f}{\partial x}(x_0,y_0)}{\frac{\partial f}{\partial y}(x_0,y_0)}\right).$$
   Druhá komponenta tohoto vektoru je derivací funkce, která je dána implicitně rovnicí (1).
   To vše za podmínky, že první komponenta normálového vektoru je nenulová.

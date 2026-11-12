@@ -136,7 +136,7 @@ používající první z nich budeme nazývat *jestřábi* a druhý
 u téhož zdroje (potrava, hnízdiště, apod). 
 
 * Jestřáb o zdroj bojuje a ustoupí pouze po prohraném boji.
-* Holubice o zdroje nebojuje. Pokud protivník ustoupí bez boje,
+* Holubice o zdroj nebojuje. Pokud protivník ustoupí bez boje,
   holubice zdroj zkonzumuje. V opačném případě zdroj zkonzumuje
   protivník.
 * Předpokládejme, že každý jedinec v populaci si zkonzumováním
@@ -324,7 +324,7 @@ od něj.
 
 Systém chemických reakcí
 $$\begin{aligned}A &\rightarrow X\\2X + Y &\rightarrow 3X\\B + X &\rightarrow Y + D\\X &\rightarrow E\end{aligned}$$
-má pozoruhodnou minulost. První chemickou reakci probíhající podle tohoto schematu objevil ruský chemik B. Bělousov, jeho výsledky přezkoumal a potvrdil A. Žabotinský. Oba zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně totiž panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetuum mobile. Později vědci (I. Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště I. Prigogina) a oscilátor.
+má pozoruhodnou minulost. První chemickou reakci probíhající podle tohoto schématu objevil ruský chemik B. Bělousov, jeho výsledky přezkoumal a potvrdil A. Žabotinský. Oba zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně totiž panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetuum mobile. Později vědci (I. Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště I. Prigogina) a oscilátor.
 
 Pokud je dostatek složek $A$ a $B$, modeluje po zjednodušení (viz Wikipedie, konstanty úměrnosti klademe rovny jedné) chemické reakce soustava
 $$

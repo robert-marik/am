@@ -53,7 +53,7 @@ zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiá
 <div class='obtekat'>
 
 ```{figure} snizeni_toku_se_studnou_03_001.png
- Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.
+ Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytávání. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.
 ```
 
 </div>

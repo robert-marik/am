@@ -3,7 +3,7 @@
 ```{admonition} Anotace.
 * V úvodu si osaháme gradient a jeho využití k lineární aproximaci a jeho vztah k vrstevnicím.
 * Komplexnější je pátý příklad. Ukazuje mimo jiné, že někdy je výhodnější řešit úlohu v rámci obecnější teorie. 
-* V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku. Tato linearizace je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
+* V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku. Tato linearizace je v podstatě cesta k jednotné formulaci konstitutivních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
 * Poslední příklad nás zavede do světa zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
 ```
 
@@ -104,7 +104,7 @@ Pro funkci $f(x,y)=x^2+\frac x{y^2}-6$ najděte
 1. tečnou rovinu v bodě $(2,1)$,
 1. rovnici vrstevnice bodem $(2,1)$ a rovnici tečny k vrstevnici tímto bodem,
 1. explicitní vyjádření funkce dané v okolí bodu $(2,1)$ implicitně rovnicí $f(x,y)=0$,
-1. lineární aproximace v okolí bodu $x=2$ pro funkci získanou v předchozím bodu.
+1. lineární aproximaci v okolí bodu $x=2$ pro funkci získanou v předchozím bodě.
 
 _V tomto příkladě ukazujeme, že někdy je vhodné úlohu řešit v rámci obecnější teorie. Zde v podúkolu číslo 7 vlastně najdeme lineární aproximaci relativně komplikované funkce jedné proměnné (nalezené v podúkolu 6). To se dá udělat prostředky diferenciálního počtu funkcí jedné proměnné, ale výpočet by byl poměrně nepříjemný, protože by bylo nutno derivovat funkci s nepříjemnou odmocninou. Alternativa je najít tečnou rovinu k funkci více proměnných z našeho zadání a příslušný řez této tečné roviny bude tečnou k vrstevnici. Použitý aparát je sice pokročilejší (používáme funkce více proměnných tam, kde by stačily funkce jedné proměnné), ale početní náročnost je nižší. Technicky je derivování nepříjemné odmocniny ze zlomku nahrazeno derivováním polynomu._
 
@@ -194,7 +194,7 @@ https://youtu.be/mNKV8TUgY8Q
 Vypočtěte gradient funkce $$T=10-\sqrt{x^2+y^2}$$ definující teplotu ve dvourozměrném materiálu. Ukažte, že vrstevnice
 této funkce jsou kružnice se středem v počátku, nakreslete obrázek s
 těmito vrstevnicemi a vyznačte do tohoto obrázku gradienty v bodech
-$A=(0,1)$, $B=(1,0)$ a $C=(1,1)$
+$A=(0,1)$, $B=(1,0)$ a $C=(1,1)$.
 
 Uvažujte součinitel tepelné vodivosti $$\lambda =\begin{pmatrix}
   2&0\\0&3

@@ -128,8 +128,8 @@ plošnou hustotou.
   hmotnosti sečíst.
 * Získaná veličina je aproximací celkové hmotnosti.
 
-V limitním přechodu kdy rozměry všech kousků na něž je deska dělena
-jdou k nule dostáváme **dvojný integrál** 
+V limitním přechodu, kdy rozměry všech kousků, na něž je deska dělena,
+jdou k nule, dostáváme **dvojný integrál** 
 $$ \iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y , $$ 
 kde $\Omega$ je oblast v rovině $(x,y)$ definovaná uvažovanou deskou. V aplikacích je častý též zápis
 $$ \iint_\Omega f(x,y)\mathrm{d}A$$ 
@@ -315,7 +315,7 @@ vrstevnicemi.
 * Pokud sečteme obsahy všech vrstevnic a vynásobíme rozestupem mezi
 těmito vrstevnicemi, dostaneme odhad pro objem kopce. Vlastně je to
 jako bychom kopec rozřezali na stejně tlusté plátky, naskládali je
-vedle sebe, sečetli obsahy postav takto vzniklých těles a vynásobili
+vedle sebe, sečetli obsahy podstav takto vzniklých těles a vynásobili
 výškou.
 * Podobně je možné odhadnout objem jezera.
 * V tomto případě je dvojný integrál pouze koncept. Samozřejmě nemáme
@@ -471,7 +471,7 @@ setrvačnosti.* Nechť $m=\iint \sigma(x,y)\,\mathrm dx\mathrm dy$, $y_0=\frac
 1{m}\iint_M y\sigma(x,y)\,\mathrm dx\mathrm dy$ a $I_{xT}=\iint_M
 (y-y_0)^2\sigma(x,y)\,\mathrm dx\mathrm dy$ jsou hmotnost, $y$-ová poloha těžiště
 a moment setrvačnosti vzhledem k ose jdoucí těžištěm rovnoběžně s osou
-$x$. Moment setrvačnosti vhledem k ose  $x$ je
+$x$. Moment setrvačnosti vzhledem k ose  $x$ je
 $$I_{x0}=\iint y^2\sigma(x,y)\,\mathrm dx\mathrm dy.$$
 Platí
 $$\begin{aligned}
@@ -495,7 +495,7 @@ y\sigma(x,y)\,\mathrm dx\mathrm dy+y_0^2
 $$
 Odsud dostáváme
 $$I_{x0}=I_{xT}+my_0^2,$$
-což lze interpretovat tak, že *moment setrvačnosti vhledem k ose $o$
+což lze interpretovat tak, že *moment setrvačnosti vzhledem k ose $o$
 je součtem momentu setrvačnosti vzhledem k ose procházející těžištěm rovnoběžně s $o$
 a momentu setrvačnosti hmotného bodu ležícího
 v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k ose $o$.*
@@ -584,7 +584,7 @@ tlakové síly.
 Tlaková síla působící na svislou hráz má celkový nulový moment
 vzhledem k ose procházející působištěm. Je-li hráz definována množinou
 $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
-tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
+tlaková síla na plošku o velikosti $\Delta S$ rovna $y\rho g \Delta S$ a
 součin $(y_c-y)y\rho g\Delta S$ je příspěvek k otáčivému momentu
 vzhledem k ose, procházející vodorovně působištěm tlakové
 síly. Součet všech těchto příspěvků se nuluje, tedy musí platit
@@ -703,8 +703,8 @@ má problém radiální symetrii. Například při studiu ochlazování nebo
 kmitů kruhových desek či válcovitých součástek. V integrálním počtu
 tyto souřadnice použijeme zejména v případě, kdy integrujeme přes
 kruh nebo jeho část (např. mezikruží či kruhová výseč). V takovém
-případě mají totiž integrály které vzniknou po transformaci dvojného
-integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je
+případě mají totiž integrály, které vzniknou po transformaci dvojného
+integrálu na dvojnásobný, pevné meze a výpočet druhého integrálu je
 zpravidla jednodušší. 
 
 ## Z ptačí perspektivy
@@ -722,5 +722,5 @@ zpravidla jednodušší.
 \fi
 
 * Dvojný integrál využijeme tam, kde nás zajímá celková hodnota aditivní veličiny, jejíž příspěvky jsou rozloženy ve dvourozměrné ploše. Například celková tlaková síla na stěnu akvária. 
-* Dvojný integrál počítáme jako integrál z integrálu aparátem integrálního počtu funkcí jedné proměnné. V řadě případů se však problém dá zjednodušit. Například při integrování funkcí se separovanými proměnnými přes obdélníkové množiny se integrál dá zapsat jako součin integrálů. Podobně, při integrování přes množiny které jsou částmi kruhu se dá v mnoha případech integrál přepsat pomocí polárních souřadnic na integrál přes obdélník (v polárních souřadnicích). 
+* Dvojný integrál počítáme jako integrál z integrálu aparátem integrálního počtu funkcí jedné proměnné. V řadě případů se však problém dá zjednodušit. Například při integrování funkcí se separovanými proměnnými přes obdélníkové množiny se integrál dá zapsat jako součin integrálů. Podobně, při integrování přes množiny, které jsou částmi kruhu se dá v mnoha případech integrál přepsat pomocí polárních souřadnic na integrál přes obdélník (v polárních souřadnicích). 
 

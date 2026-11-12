@@ -166,7 +166,7 @@ nutnosti použít velmi jemnou časovou diskretizaci a tato skutečnost navyšuj
 výpočetní náročnost jak z hlediska času, tak i z hlediska paměťových nároků.
 Implicitní metoda je sice komplikovanější na výpočet, ale dovoluje použít větší
 časové kroky a v praxi se ukazuje jako výhodnější. Často se pro zvýšení
-přesnosti používá i kombinace obou metod, kdy je v diferenčním schematu použita
+přesnosti používá i kombinace obou metod, kdy je v diferenčním schématu použita
 dopředná i zpětná diference pro derivaci podle času a obě jsou vhodně
 zkombinovány ([Crank-Nicolsonova metoda](https://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method)).
 

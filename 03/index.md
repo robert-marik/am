@@ -48,7 +48,7 @@ https://youtu.be/cXT6ULeZFJs
 
 \iffalse 
 
-manim:Divergence|Vk8OAq3_40g|Divergence umožňuje identifikovat, zda tok sílí či slábne. Tato znalost je důležitým stavebním kamenem do matematického modelu liboovolného transportního děje probíhajícího v přírodě (rovnice kontinuity a difuzní rovnice).
+manim:Divergence|Vk8OAq3_40g|Divergence umožňuje identifikovat, zda tok sílí či slábne. Tato znalost je důležitým stavebním kamenem do matematického modelu libovolného transportního děje probíhajícího v přírodě (rovnice kontinuity a difuzní rovnice).
 
 <div class='obtekat'>
 
@@ -66,7 +66,7 @@ Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v d
   * Je-li tato hustota toku popsána vektorovým polem  $\vec q=(P,Q,R)$ například v jednotkách kilogram na metr čtvereční za sekundu, znamená to, že kolmým průřezem jednotkového obsahu projde za jednotku času $P$ kilogramů sledované látky, jejíž tok popisujeme.
   * Často se pracuje i s objemovým tokem, kdy množství neměříme v kilogramech ale v metrech krychlových a například při ustáleném proudění v trubici (hydrodynamika) je tok roven vektoru rychlosti a při proudění porézním materiálem (proudění podzemní vody) je roven filtrační rychlosti.
 * Uvažování toku v souřadnicích nám umožní tok rozdělit na tři nezávislé toky ve směru jednotlivých os (případně na dva toky ve dvoudimenzionálních úlohách). Můžeme si pro jednoduchost představit tři trubky. Každá trubka míří ve směru jedné z os. 
-  * Funkce $P$ udává tok v trubce mířící směrem v ose $x$ (v kladném směru kladný tok a naopak) a potřebujeme zjistit, jestli tento tok narůstá nebo slábne. To jsme již řešili v případě toku tepla u rovnice vedení tepla v úvodní přednášce. Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaná komponenta toku v daném místě vzroste a tento nárůst je vztažený na jednotku délky.
+  * Funkce $P$ udává tok v trubce mířící ve směru osy $x$ (v kladném směru kladný tok a naopak) a potřebujeme zjistit, jestli tento tok narůstá nebo slábne. To jsme již řešili v případě toku tepla u rovnice vedení tepla v úvodní přednášce. Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaná komponenta toku v daném místě vzroste a tento nárůst je vztažený na jednotku délky.
   * Ve směru osy $y$ máme tok vyjádřený veličinou $Q$ a proto nás pro popis zesilování či zeslabování zajímá $\frac{\partial Q}{\partial y}$.
   * Analogicky $\frac{\partial R}{\partial z}$ ve směru osy $z$.
 * Celková změna toku bude součtem všech tří příspěvků. 
@@ -217,7 +217,7 @@ V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i�
 \iffalse 
 
 ```{figure} ricka.jpg
- Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.
+ Rovnici kontinuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.
 ```
 
 \fi
@@ -234,7 +234,7 @@ a nazývá se Saint-Venantova rovnice nebo též *rovnice mělké vody*. Tato ro
 
 https://youtu.be/p2FTgyAWzA4
 
-Difuzní rovnice je rovnice kontinuity s dosazeným konstitučním vztahem pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu lineární aproximaci, je možné psát
+Difuzní rovnice je rovnice kontinuity s dosazeným konstitutivním vztahem pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu lineární aproximaci, je možné psát
 $$      \vec \jmath=-D\nabla u,$$
 kde $D$ je konstanta úměrnosti. Pokud tok $\vec \jmath$ a gradient $\nabla u$ leží v jedné přímce,
 je $D$ reálné číslo, jinak je $D$ matice. Například při
@@ -325,7 +325,7 @@ Rovnice vedení tepla se používá například při *tepelné ochraně budov*, 
 
 V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fourierův zákon (P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 88).
 
-V některých případech člen charakterizující zdroje nemusí být nulový. Teplo může vznikat například při tření nebo při průchodu elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
+V některých případech člen charakterizující zdroje nemusí být nulový. Teplo může vznikat například při tření nebo při průchodu elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém, jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
 
 ## Rovnice vedení tepla ve 2D v různých podmínkách
 
@@ -483,7 +483,7 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 
 * V kartézských souřadnicích a trojrozměrném prostoru je Laplaceův operátor $\nabla^2$ dán vztahem $$\nabla^2 f=\frac{\partial^2 }{\partial x^2}f+\frac{\partial^2 }{\partial y^2}f+\frac{\partial^2 }{\partial z^2}f.$$ V prostorech jiné dimenze postupujeme analogicky, jenom vynecháme nebo přidáme derivace podle dalších proměnných.
 * Jiné běžné označení Laplaceova operátoru je $\Delta f$. Toto je bohužel stejné označení jako změna funkce $f$ a je nutné tyto dva významy symbolu $\Delta$ nezaměňovat. 
-* Laplaceův operátor vystupuje například v problémech popsaných difuzní rovnicí a lineárním konstitučním vztahem s konstantním skalárním difuzním koeficientem (homogenní izotropní prostředí s lineární materiálovou odezvou).
+* Laplaceův operátor vystupuje například v problémech popsaných difuzní rovnicí a lineárním konstitutivním vztahem s konstantním skalárním difuzním koeficientem (homogenní izotropní prostředí s lineární materiálovou odezvou).
 
 ## Z ptačí perspektivy
 

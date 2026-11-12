@@ -29,7 +29,7 @@ $$
 síla $\vec {\mathcal T}_1$, kterou pro další počítání rozložíme do
 vodorovného a svislého směru. Doleva působí síla o velikosti
 $\mathcal T\cos\varphi$ a dolů síla $\mathcal T\sin\varphi$. Podobně, na pravý
-konec, kde je úhel tečny $\varphi+\Delta\varphi$ působí doprava síla
+konec, kde je úhel tečny $\varphi+\Delta\varphi$, působí doprava síla
 $\mathcal{T}\cos(\varphi+\Delta\varphi)$ a nahoru síla
 $\mathcal T\sin(\varphi+\Delta\varphi)$. Protože se element pohybuje ve
 svislém směru, podle Newtonova pohybového zákona platí
@@ -173,7 +173,7 @@ $$
 $$ 
 Protože levá strana závisí pouze na $t$ a pravá strana
 pouze na $x$, musí být obě strany rovny stejné konstantě. Tuto konstantu
-zapíšeme z důvodů které budou patrné později jako $-\lambda^2$.
+zapíšeme z důvodů, které budou patrné později jako $-\lambda^2$.
 Z počátečních a okrajových podmínek kladených na funkci $u$ plyne, že
 funkce $X$ musí splňovat 
 $$

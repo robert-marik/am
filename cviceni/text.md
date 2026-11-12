@@ -16,7 +16,7 @@ Vypočtěte následující parciální derivace
 <div class=reseni>
 
 1. $\frac{\partial }{\partial x}(x^2y+2xy^3+x+1)=2x\cdot y+2y^3+1+0=2xy+2y^3+1$
-1. $\frac{\partial }{\partial y}(x^2y+2xy^3+x+1)=x^2+2x\cdot 3y^2+0+0=x^2+6xy$
+1. $\frac{\partial }{\partial y}(x^2y+2xy^3+x+1)=x^2+2x\cdot 3y^2+0+0=x^2+6xy^2$
 1. $\frac{\partial }{\partial x}(3x(3-x-2y))=\pdv x (9x-3x^2-6xy)=9-3\cdot 2x-6\cdot 1\cdot y=9-6x-6y$
 1. $\frac{\partial }{\partial y}(3x(3-x-2y))=\frac{\partial }{\partial y}(9x-3x^2-6xy)=0-0-6x=-6x$
 1. $\pdv {x} \sqrt{1-x^2-y^2}=\pdv {x} (1-x^2-y^2)^{\frac 12}=\frac 12 (1-x^2-y^2)^{-\frac 12} (0-2x-0)=
@@ -56,7 +56,7 @@ $$
 Za dané teploty a rychlosti větru je pocitová teplota $-20.2$ stupňů
 Celsia. Nárůst teploty o jeden stupeň způsobí nárůst pocitové teploty
 přibližně o $1.3$ stupně. Tedy změna teploty se projeví na pocitové
-teplotě $1.3$-násobkem, tj. každkouzměnu vnímáme o třicet procent
+teplotě $1.3$-násobkem, tj. každou změnu vnímáme o třicet procent
 intenzivněji.
 
 Podobně, zesílení větru o jeden kilometr za hodinu způsobí snížení
@@ -71,7 +71,7 @@ pocitové teploty přibližně o $0.16$ stupně.
 ```
 
 1. Vypočtěte pomocí centrální diference parciální derivaci
-$\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost větru $40\,\mathrm{km}\,\mathrm{hod}^{-1}$ a intepretujte výsledek slovně.
+$\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost větru $40\,\mathrm{km}\,\mathrm{hod}^{-1}$ a interpretujte výsledek slovně.
 1. Pocitová teplota $W$ je lineární v proměnné $T$. Proto derivace $\frac{\partial W}{\partial T}$ nezávisí na $T$. Jak se tato skutečnost
   odrazí v tabulce?
   1. Odhadněte z tabulky, zda vliv větru klesá nebo roste s rychlostí větru. Potvrďte svou hypotézu analytickým výpočtem parciální derivace $\frac{\partial W}{\partial v}$ a vysvětlete fyzikálně.
@@ -79,8 +79,8 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 <div class=reseni>
 
 1.  $$\frac {\partial W}{\partial v}(T=-15,v=40)\approx\frac{-29-(-26)}{50-30}\frac{{}^\circ \mathrm C}{\mathrm{km}\,\mathrm{hod}^{-1}}=-0.15^\circ \mathrm C/(\mathrm{km}\,\mathrm{hod}^{-1})$$  Za podmínek, kde je $15$ stupňů pod nulou a vítr o rychlosti $40$ kilometrů za hodinu každé další zesílení větru o kilometr za hodinu sníží pocitovou teplotu přibližně o patnáct setin stupně.
-1. Neformálně: V rámci každého řádku jsou stejně velké   skoky. Přesněji: V každém řádku je přibližně aritmetická   posloupnost, data se mění odečtením pevné konstantny. Případné  fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.
-1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciálni derivace podle větru s rostoucí  rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivání změní na  zápornou mocninu a tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
+1. Neformálně: V rámci každého řádku jsou stejně velké   skoky. Přesněji: V každém řádku je přibližně aritmetická   posloupnost, data se mění odečtením pevné konstanty. Případné  fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.
+1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciální derivace podle větru s rostoucí  rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivání změní na  zápornou mocninu a tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
 
 </div>
 
@@ -92,9 +92,9 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 
 Vypočtěte a slovně interpretujte parciální derivaci měrné tepelné kapacity dřeva $c$ podle teploty $T$ a podle obsahu vody MC $w$ v bodě o hodnotě MC 12\% a teplotě $27^\circ\mathrm C$.
 
-Pro obě derivace použijte dopřednou diferenci (v tabulce nejsou ekvidistatní kroky MC).
+Pro obě derivace použijte dopřednou diferenci (v tabulce nejsou ekvidistantní kroky MC).
 
-*Poznámka:* Kromě dopředné diference je možné uvažovat ještě zpětou diferenci definovanou vztahem $$\frac{f(x)-f(x-h)}{h},$$ což je vlastně dopředná diference na předhozím intervalu. Ukažte, že centrální diference je průměrem dopředné a zpětné diference.
+*Poznámka:* Kromě dopředné diference je možné uvažovat ještě zpětnou diferenci definovanou vztahem $$\frac{f(x)-f(x-h)}{h},$$ což je vlastně dopředná diference na předchozím intervalu. Ukažte, že centrální diference je průměrem dopředné a zpětné diference.
 
 <div class=reseni>
 
@@ -104,7 +104,7 @@ Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané tep
 $$\pdv{c}{w}=\frac{1.9-1.7}{20-12}=0.025 \,\mathrm{kJ}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}=25 \,\mathrm{J}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}$$
 Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané teploty a vlhkosti při zvýšení obsahu vody o jedno procento.
 
-Průměr centrální a zpětné diference:
+Průměr dopředné a zpětné diference:
 $$
   \frac{\frac{f(x)-f(x-h)}{h} + \frac{f(x+h)-f(x)}{h}}{2}=
   \frac{\frac{f(x)-f(x-h)+f(x+h)-f(x)}{h}}{2}=
@@ -133,9 +133,9 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 <div class=reseni>
 
-1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestaně měnit. Měříme ve stupních celsia za sekundu.
+1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních celsia za sekundu.
   $\left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}$
-1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních celsia na metr.
+1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních celsia na metr.
     $\left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
 1. Rychlost, jak rychle se klesá teplota jako funkce polohy, tj. směrem doprava, je $-\frac {\partial T}{\partial x}$ a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních celsia na metr.
         $\left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
@@ -144,7 +144,7 @@ Vyjádřete následující veličiny a určete jejich znaménko.
           $\left[\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$
 1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je $-\frac {\partial q}{\partial x}$ a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko.
   Měříme v joulech za sekundu na metr.
-            $\left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$ Tato veličina udává, kolik tepla se za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže ``ztratit'', ale použije se na zvýšení teploty, což je vyjádřeno právě v rovnici vedení tepla.
+            $\left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}$ Tato veličina udává, kolik tepla za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže ``ztratit'', ale použije se na zvýšení teploty, což je vyjádřeno právě v rovnici vedení tepla.
 
 </div>
 
@@ -154,7 +154,7 @@ K modelu stěny pomocí rovnice vedení tepla je ještě nutné přidat podmínk
 
 Nechť stěna je na intervalu $x\in[0,L]$, $x=0$ je vnitřní okraj a $x=L$ je vnější okraj. Výraz $-k\frac{\partial T}{\partial x}$ udává tok tepla ve směru osy $x$. Tok ve směru osy $x$ má kladné znaménko. Naformulujte okrajové podmínky v následujících scénářích.
 
-1. Z venku dokonale izolovaná stěna. Na hranici $x=L$ nedochází k toku tepla.
+1. Zvenku dokonale izolovaná stěna. Na hranici $x=L$ nedochází k toku tepla.
 1. Vnitřní část stěny je udržovaná na konstantní teplotě $T=23^\circ \mathrm C$.
 1. Stěna je zvenku osvětlená a zahřívaná Sluncem. Na vnější hranici je konstantní tok tepla směrem do stěny.
 1. Stěna je zvenku ochlazována prouděním vzduchu. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.
@@ -166,7 +166,7 @@ _Zpracováno podle Cengel: Mass and heat transfer._
 
 1. $\frac{\partial T}{\partial x}(L)=0$
 1. $T(0)=23$
-1. $-k\frac{\partial T}{\partial x}(L)=-Q$, kde $Q$ je teplo za jednotku času dodané ze Slunce. Jedná se výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy $x$.
+1. $-k\frac{\partial T}{\partial x}(L)=-Q$, kde $Q$ je teplo za jednotku času dodané ze Slunce. Jedná se o výkon Slunce dopadající na stěnu vynásobený koeficientem absorpce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy $x$.
 1. $-k\frac{\partial T}{\partial x}(L)=h(T-T_{\text{okolí}})$, kde $h$ je koeficient přestupu tepla.
 1. $-k\frac{\partial T}{\partial x}(0)=h(T_{\text{místnost}}-T)$, kde $h$ je koeficient přestupu tepla.
 
@@ -182,7 +182,7 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u veličiny $T$
 
 ### Linearizace pocitové teploty
 
-Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
+Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rychlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
 $$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
 
 <div class=reseni>
@@ -191,7 +191,7 @@ Přímým použitím vzorce pro lineární aproximaci dostáváme
 $$
 W=-20.2+1.289(T-(-11))-0.163(v-26)=-20.2+1.289(T+11)-0.163(v-26),
 $$
-přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kilometry za hodinu).
+přičemž všechny veličiny dosazujeme v jednotkách SI (stupně Celsia a kilometry za hodinu).
 
 </div>
 
@@ -350,13 +350,13 @@ $$\vec q=-\lambda \nabla T=\frac 1{\sqrt{x^2+y^2}}\begin{pmatrix}
   2x\\3y
 \end{pmatrix}
 $$
-Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\frac 1{\sqrt{2}}(2,3)^T$. Porovnáním s gradientem $\nabla T(A)=-(0,1)^T$, $\nabla T(B)=-(1,0)^T$ a $\nabla T(C)=-\frac 1{\sqrt 2}(1,1)^T$ vidíme, že v bodech $A$  a $B$ je tok proti směru gradientu, v bodě $C$ se tok stáčí do směru osy $y$. Protože ve ose $y$ má dřevo větší vodivost, jedná se o podélný směr. To je ale vlastně vidět už ze zadané matice.
+Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\frac 1{\sqrt{2}}(2,3)^T$. Porovnáním s gradientem $\nabla T(A)=-(0,1)^T$, $\nabla T(B)=-(1,0)^T$ a $\nabla T(C)=-\frac 1{\sqrt 2}(1,1)^T$ vidíme, že v bodech $A$  a $B$ je tok proti směru gradientu, v bodě $C$ se tok stáčí do směru osy $y$. Protože v ose $y$ má dřevo větší vodivost, jedná se o podélný směr. To je ale vlastně vidět už ze zadané matice.
 
 </div>
 
 ## Divergence, rovnice vedení tepla
 
-### Divegrence vektorového pole
+### Divergence vektorového pole
 
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.$$
@@ -368,13 +368,13 @@ Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\fra
 
 1. $\nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2)
 =2xy+(0+2y)=2y(x+1)$
-1. $\vec F(2,1)=2^2\cdot 1\vec \cdot \imath + (2+1^2)\vec \jmath=4\vec\imath+3\vec\jmath=(4,3)$, tj. vektorové pole teče směrem doprava nahoru směrem daným směrnicí $0.75$, tj. pod úhlem menším než $45^\circ$.
+1. $\vec F(2,1)=2^2\cdot 1\vec\imath + (2+1^2)\vec \jmath=4\vec\imath+3\vec\jmath=(4,3)$, tj. vektorové pole teče směrem doprava nahoru směrem daným směrnicí $0.75$, tj. pod úhlem menším než $45^\circ$.
 1. $\nabla\cdot\vec F(2,1)=2\cdot 1 \cdot(2+1)=6>0$. Divergence je kladná a proto se tok zahušťuje.
 1. Zdroj (kladná divergence).
 
 </div>
 
-### Divegrence vektorového pole s parametrem
+### Divergence vektorového pole s parametrem
 
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=ax^3y^2\vec \imath + 3x^2y\vec \jmath,$$ kde
@@ -436,7 +436,7 @@ $$
 \nabla \cdot (-k\cdot \nabla T )&=\pdv{x}(-14(2x- y)-16x^3)+\pdv{y}(8(2x- y)-4x^3)\\&=-48x^2-28-8\\&=-48x^2-36
 \end{aligned}
 $$
-1. Do vztahu pro diveregenci dosadíme bod, který nás zajímá. $$\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-1236$$ Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje. Z rovnice vedení tepla
+1. Do vztahu pro divergenci dosadíme bod, který nás zajímá. $$\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-1236$$ Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje. Z rovnice vedení tepla
   $$\rho c\pdv{T}{t}=\nabla\cdot(k \cdot \nabla T)$$
   plyne v daném bodě
   $$\rho c\pdv{T}{t}=1236$$
@@ -512,7 +512,7 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
    xyz& 5x^2y & -3x^2z
  \end{vmatrix}\\
  &=
-\vec \imath \ \qty[\pdv x{-3x^2z}-\pdv z{5x^2y}]
+\vec \imath \ \qty[\pdv y{-3x^2z}-\pdv z{5x^2y}]
  +\vec \jmath \ \qty[\pdv z{xyz}-\pdv x{-3x^2z}] 
  +\vec k \qty({\pdv x{5x^2y}-\pdv y{xyz}})\\
  &=(xy+6xz)\vec\jmath + (10xy-xz)\vec k
@@ -673,7 +673,7 @@ $$
 
 **Interpretace jako práce, srovnání.**
 
-Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čvrtkružnice $C_1$, křivka $C_2$ je mezi nimi.
+Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čtvrtkružnice $C_1$, křivka $C_3$ je mezi nimi.
 
 Integrál fyzikálně znamená práci vektorového pole $(-y,x)$ po zadané křivce. Toto vektorové pole míří po kružnicích okolo počátku proti směru hodinových ručiček. Délka vektoru je rovna vzdálenosti od počátku.
 
@@ -689,7 +689,7 @@ Křivka $C_1$ je nejdále od počátku a vektorové pole je na ní nejsilnějš�
 
 **Interpretace jako tok, srovnání.**
 
-Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čvrtkružnice $C_1$, část paraboly $C_2$ je mezi nimi.
+Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čvrtkružnice $C_1$, část paraboly $C_3$ je mezi nimi.
 
 Integrál fyzikálně znamená tok vektorového pole $(x,y)$ křivkou. Toto vektorové pole míří směrem z počátku a zesiluje směrem od počátku, protože délka vektoru je rovna vzdálenosti od počátku.
 
@@ -792,7 +792,7 @@ Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kr
 \textit{Návod:} $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0$$
 
 <div class=reseni>
-Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každý výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.
+Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každé výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.
 
 Vektorové pole je $$\vec \Phi_2=(y+2,0)$$ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole $$\vec F=(0,y+2).$$
 Vskutku, tok vektorového pole zadaného v komponentách $\Phi_2=(P,Q)$ je vyjádřen integrálem druhého druhu vektorového pole $\vec F=(-Q,P)$ a v našem případě je $P=y+2$ a $Q=0$. Derivací rovnice křivky obdržíme
@@ -909,7 +909,7 @@ $$
   =\frac 1{n+1}
 \end{aligned}$$
 
-Správnost můžeme ověřit pomocí vzorců pro obsah  $$I_0=1$$ a polohu težiště $$\frac{I_1}{I_0}=\frac 12,$$
+Správnost můžeme ověřit pomocí vzorců pro obsah  $$I_0=1$$ a polohu těžiště $$\frac{I_1}{I_0}=\frac 12,$$
 což porovnáme s očekávanými výsledky. Dalším využitím je působiště tlakové síly na přehradu (viz přednáška), které je při orientaci osy $y$ od hladiny směrem dolů v místě
 $$\frac{I_2}{I_1}=\frac {\frac 13}{\frac 12}=\frac 23,$$
 tj. ve dvou třetinách hloubky.
@@ -1083,19 +1083,19 @@ $$
   \iint_\Omega \,\mathrm dx\mathrm dy
   &=\int_0^1 \int_0^{\frac \pi2} 1 \times r\,\mathrm d\phi\mathrm dr
   =\int_0^1 r \,\mathrm dr \times \int_0^{\frac \pi2}\mathrm d \phi
-  \\&=\left[\frac 12 r^2\right]_0^1\times {\pi2}=\frac 12 \times \frac \pi 2=\frac \pi 4
+  \\&=\left[\frac 12 r^2\right]_0^1\times \frac \pi2=\frac 12 \times \frac \pi 2=\frac \pi 4
 \end{aligned}
 $$
 
-Obsah je $\frac \pi 4$, což odpovídá čtvtině vzorce pro obsah jednotkového kruhu. Souřadnice težište jsou obě stejné, což odpovídá symetrii množiny.  Tyto souřadnice leží v bodě
+Obsah je $\frac \pi 4$, což odpovídá čtvrtině vzorce pro obsah jednotkového kruhu. Souřadnice těžiště jsou obě stejné, což odpovídá symetrii množiny.  Tyto souřadnice leží v bodě
 $$\frac {4}{3\pi}\approx 0.42,$$
-což odpovídá tomu, že těžište je posunuto doprava nahoru ve srovnání těžištěm trojúhelníka, který by vznikl nahrazením oblouku úsečkou.
+což odpovídá tomu, že těžiště je posunuto doprava nahoru ve srovnání s těžištěm trojúhelníka, který by vznikl nahrazením oblouku úsečkou.
 
 </div>
 
 ### Kvadratický moment kruhu
 
-Vypočtěte kvadratický moment kruhu o poloěmru $R$ vzhledem k ose procházející středem.
+Vypočtěte kvadratický moment kruhu o poloměru $R$ vzhledem k ose procházející středem.
 
 <div class=reseni>
 
@@ -1121,7 +1121,7 @@ kde při výpočtu integrálu přes proměnnou $\varphi$ využijeme nápovědu, 
 
 Že je výsledkem veličina úměrná čtvrté mocnině poloměru je zřejmé i z rozměrové analýzy (resp. z Buckinghamova $\Pi$ teorému), uvedeným výpočtem však vidíme i konstantu úměrnosti.
 
-To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Devadesát šest procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
+To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně $(0.5)^4$ tj. na šest procent. Devadesát čtyři procenta tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.
 
 </div>
 
@@ -1145,7 +1145,7 @@ To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že sn�
 
 ### Křivkový integrál pomocí kmenové funkce
 
-Určete, pro jako hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
+Určete, pro jakou hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
 
 <div class=reseni>
 
@@ -1158,17 +1158,17 @@ Podmínka pro nezávislost na integrační cestě je $$
   ax^2y &  x^3+1 &  0
 \end{vmatrix}
 \\&=\vec k \left(  \frac{\partial}{\partial x} (x^3+1) - \frac{\partial }{\partial y} (ax^2y)\right)
-  =\vec k(3x^2-ax^2y)=\vec k x^2(3-a)
+  =\vec k(3x^2-ax^2)=\vec k x^2(3-a)
 \end{aligned}
   $$
-  a odsud $a=3$. Totéž dokážeme určit pomocí věty, kterou jsme se ukázali již v souvislosti s pojmem gradient, ze které vyplývá podmínka na existenci kmenové funkce ve tvaru $$
+  a odsud $a=3$. Totéž dokážeme určit pomocí věty, kterou jsme ukázali již v souvislosti s pojmem gradient, ze které vyplývá podmínka na existenci kmenové funkce ve tvaru $$
 \begin{aligned}
   \pdv{y}(ax^2y)&=\pdv{x}(x^3+1)\\
   ax^2&=3x^2\\
   a&=3
 \end{aligned}
 $$
-Kmenová fukce $\varphi(x,y)$ vektorového pole $\vec F=(3x^2y,x^3+1)$ splňuje
+Kmenová funkce $\varphi(x,y)$ vektorového pole $\vec F=(3x^2y,x^3+1)$ splňuje
 $$
 \begin{aligned}
   \pdv{\varphi}{x}&=3x^2y \\  \pdv{\varphi}{y}&=x^3+1.
@@ -1282,12 +1282,12 @@ V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být
 \obrazek{chladic.jpg}
 ### Stacionární vedení tepla v žebru chladiče
 
-Vyjímečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
+Výjimečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
 Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
 jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
-vodivostí. Kolem chladiče proudí vzduch a teplotě $T_0$ a chladič
+vodivostí. Kolem chladiče proudí vzduch o teplotě $T_0$ a chladič
 ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a
-teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
+teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
 
 <div class=reseni>
 
@@ -1417,7 +1417,7 @@ $$ \dv {x}{t}=0.10 x-50, $$ kde $t$ je čas v letech.
 
 ### Hrubý model chřipkové epidemie
 
-Rychlost s jakou roste počet nemocných chřipkou je úměrný současně
+Rychlost s jakou roste počet nemocných chřipkou je úměrná současně
 počtu nemocných a počtu zdravých jedinců. Sestavte model takového
 šíření chřipky.
 
@@ -1450,7 +1450,7 @@ maximální manuální zručnosti) je úměrná objemu dosud nenaučené
 látky. Vyjádřete proces kvantitativně pomocí derivací.
 
 <div class=reseni>
-Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
+Je-li $L$ objem naučené látky a $L_{\max}$ maximální objem látky, kterou je možné se naučit, je objem dosud nenaučené látky $L_{\max}-L$ a model má tvar
 $$\dv {L}{t}=k (L_{\max}-L).$$
 </div>
 
@@ -1460,7 +1460,7 @@ $$\dv {L}{t}=k (L_{\max}-L).$$
 
 ### Tloušťka ledu
 
-Takzvaný Stefanův zákon (J. Stefan, Uber die Theorie der Eisbildung, insbesondere uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
+Takzvaný Stefanův zákon (J. Stefan, Uber die Theorie der Eisbildung, insbesondere uber die Eisbildung im Polarmeere, 1891) vyjadřuje, že tloušťka ledu na hladině moře roste ve
 stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
 tento fakt pomocí vhodného matematického modelu a najděte řešení
 vzniklé diferenciální rovnice.
@@ -1499,7 +1499,7 @@ nádrž ve tvaru
 \textbf{kvádru} 
 a nádrž ve tvaru \textbf{kužele} otočeného vrcholem dolů (trychtýř). 
 
-\textit{V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky.}
+\textit{V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výška hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky.}
 
 <div class=reseni>
 Buď $V$ objem vody a $h$ výška hladiny od dna.
@@ -1889,9 +1889,9 @@ se děje rychlostí úměrnou povrchu návětrné strany pláště.
 Rychlost s jakou se mění objem je $\frac{\mathrm dV}{\mathrm dt}$, rychlost přisypávání označme $R$, povrch návětrné strany $S$.
 Podle zadání platí
 $$  \frac{\mathrm dV}{\mathrm dt} = R - k_0S.$$
-Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z podobnosti víme, že plochy rostou s druhou mocninnou a objemy se třetí mocninou délkových rozměrů. Proto je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky ``pasují'', Existuje tedy konstanta taková, že $$S=k_1V^{\frac 23}.$$ Spojením těchto dvou vztahů dostáváme
+Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z podobnosti víme, že plochy rostou s druhou mocninou a objemy se třetí mocninou délkových rozměrů. Proto je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky ``pasují'', Existuje tedy konstanta taková, že $$S=k_1V^{\frac 23}.$$ Spojením těchto dvou vztahů dostáváme
 $$  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},$$
-kde $r$ a $k=k_0k_1$ jsou konstanty.
+kde $R$ a $k=k_0k_1$ jsou konstanty.
 
 Označme $f(V)=R-kV^{\frac 23}$.
 Konstantní řešení je řešením rovnice $f(V)=0$, tj. $$R-kV^{\frac 23}=0.$$ Odsud
@@ -1919,7 +1919,7 @@ Předpokládejme, že **(1)** pokud žádní pasažéři nečekají na druhý v�
   klesá konstantní rychlostí, pokud na druhý vůz nečekají žádní pasažéři
 **(2)** rychlost druhého vozu klesá (a rozestup roste) s rostoucím počtem pasažérů, kteří
   čekají na zastávce 
-**(3)** počet pasažérů kteří čekají na zastávce roste s rostoucím
+**(3)** počet pasažérů, kteří čekají na zastávce roste s rostoucím
   intervalem mezi oběma vozy.
 
 Navrhněte model pro rozestup trolejbusů, najděte stacionární řešení a posuďte jeho stabilitu.
@@ -2007,13 +2007,13 @@ $$
 
 Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.
 \textbf{(1)} Populace hlodavců má porodnost 0.1 na jedince a úmrtnost 0.025 na jedince za jednotku času.
-\textbf{(2)} Rychlost s jakou jeden puštík konzumuje hlodavce je úměrná počtu hlodavců s kostantou úměrnosti 0.01.
+\textbf{(2)} Rychlost s jakou jeden puštík konzumuje hlodavce je úměrná počtu hlodavců s konstantou úměrnosti 0.01.
 \textbf{(3)} Porodnost v populaci puštíka je úměrná množství zkonzumované potravy s konstantou úměrnosti 0.05.
 \textbf{(4)} Úmrtnost v populaci puštíka je 0.1 na jedince za jednotku času.
 
 Vyjádřete tyto vztahy matematickým modelem.
 
-_Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snižené úmrtnosti v případě, že puštík má přístup k potravě._
+_Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snížené úmrtnosti v případě, že puštík má přístup k potravě._
 
 <div class=reseni>
 
@@ -2034,7 +2034,7 @@ $$
 
 ### Kůň Převalského
 
-Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tyto koně loveni vlky. Napište matematický model založený na následujících předpokladech.
+Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tito koně loveni vlky. Napište matematický model založený na následujících předpokladech.
 \textbf{(1)} Porodnost v populaci koní je  0.15 na jedince. \textbf{(2)} Úmrtnost v populaci koní je  0.01 na jedince.
 \textbf{(3)} Vlci se živí i jinou potravou, mají tedy kladnou porodnost. Ta je 0.1 na jedince.
 \textbf{(4)} Vlci mají konstantní úmrtnost 0.05 na jedince.
@@ -2077,7 +2077,7 @@ $$
   \frac{\mathrm dy}{\mathrm dt}&= 3xy^2-3y
 \end{aligned}
 $$
-má stacionární bod $(1,1)$. Najděte Jacobiho matici v tomto bodě, vlastní čísla této matice a určete typ stacioárního bodu.
+má stacionární bod $(1,1)$. Najděte Jacobiho matici v tomto bodě, vlastní čísla této matice a určete typ stacionárního bodu.
 
 <div class=reseni>
 

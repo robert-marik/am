@@ -290,7 +290,7 @@ endtable
 
 ### Soretův efekt (termodifuze)
 
-Většinou je hybatelem transportního děje nerovnoměrnost v rozložení té stejné veličiny, která se tímto dějem transportuje. Například tok tepla (vnitřní energie) je vyvolaný nerovnoměrným rozložením vnitřní energie, kterou vyjadřujeme pohodlněji pomocí teplotu. Nebo difuze chemické látky je vyvolána nerovnoměrným rozložením koncentrace této látky. Nemusí tomu však být vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$ kde $s$ je koeficient termodifuze.
+Většinou je hybatelem transportního děje nerovnoměrnost v rozložení té stejné veličiny, která se tímto dějem transportuje. Například tok tepla (vnitřní energie) je vyvolaný nerovnoměrným rozložením vnitřní energie, kterou vyjadřujeme pohodlněji pomocí teploty. Nebo difuze chemické látky je vyvolána nerovnoměrným rozložením koncentrace této látky. Nemusí tomu však být vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$ kde $s$ je koeficient termodifuze.
 
 Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. To je v kontrastu s ostatními konstitutivními zákony, kde tok stavové veličiny směřuje vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis.
 
@@ -304,7 +304,7 @@ Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k tran
 
 </div>
 
-Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru (pro popis děje v látce) tento zákon říká, že hustota elektrického proudu $\vec j$ je dána intenzitou  elektrického pole $\vec E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického pole, tj. $\vec E=\nabla \varphi$. Spojenením těchto poznatků a při použití  lineární aproximace dostáváme $$\vec j=-\gamma \nabla \varphi,$$ což je Ohmův zákon v diferenciálním tvaru. Formálně máme tedy stejný tvar zákona jako u vedení tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot je nahrazen rozdílem potenciálů. Znalost zapojování elektrických obvodů, jako je například paralelní nebo sériové zapojení rezistorů, bývá běžná a toho se často využívá při modelování tepelného odporu pomocí elektrického odporu. Formálně jsou vztahy identické.
+Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru (pro popis děje v látce) tento zákon říká, že hustota elektrického proudu $\vec j$ je dána intenzitou  elektrického pole $\vec E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického pole, tj. $\vec E=-\nabla \varphi$. Spojením těchto poznatků a při použití  lineární aproximace dostáváme $$\vec j=-\gamma \nabla \varphi,$$ což je Ohmův zákon v diferenciálním tvaru. Formálně máme tedy stejný tvar zákona jako u vedení tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot je nahrazen rozdílem potenciálů. Znalost zapojování elektrických obvodů, jako je například paralelní nebo sériové zapojení rezistorů, bývá běžná a toho se často využívá při modelování tepelného odporu pomocí elektrického odporu. Formálně jsou vztahy identické.
 
 Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo, nikoliv matice. Tím se věci znatelně zjednodušují, ale vyplývají odsud i limity použitelnosti při modelování vedení tepla jako vedení elektrického proudu. Například při průchodu elektrického proudu dřevem je konstanta úměrnosti z Ohmova zákona tenzorová a její nahrazení jedinou skalární hodnotou je pouze zjednodušení reálné situace.
 
@@ -326,7 +326,7 @@ https://youtu.be/vrPhbc-GJqc
 
 \fi
 
-Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla u ,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
+Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla u ,$$ kde $K$ je symetrický tenzor. Gradient má v trojrozměrném případě vyjádření
 $$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y},\frac{\partial u }{\partial z}\right)^T$$
 a ve 2D
 $$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}\right)^T.$$
@@ -391,7 +391,7 @@ vlastní směr charakterizují směr, ve kterém je odezva materiálu na
 vnější podnět maximální a vlastní číslo udává velikost této
 reakce. Tyto fyzikální charakteristiky nemohou být závislé na volbě
 souřadné soustavy, ve které úlohu popisujeme. Co se mění s volbou
-souřadné soustavy jsou pouze souřadnice vlastního vektoru. Vlastní
+souřadné soustavy, jsou pouze souřadnice vlastního vektoru. Vlastní
 čísla jsou však skalární a proto jsou invariantní při otočení soustavy
 souřadnic. Pokud bychom neměli možnost zvolit
 soustavu souřadnic tak, aby matice byla diagonální, máme alespoň
@@ -494,7 +494,7 @@ je nulová.
 \iffalse
 
 ```{figure} beer-mugs-deformace.jpg
- Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.
+ Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jenom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.
 ```
 
 \fi
@@ -541,6 +541,6 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 \fi
 
-* Parciální derivace z minulé přednášky sleduje vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, který míří směrem maximálního růstu funkčních hodnot a má velikost odpovídající nárůstu na intervalu jednotkové délky.
+* Parciální derivace z minulé přednášky sledují vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, který míří směrem maximálního růstu funkčních hodnot a má velikost odpovídající nárůstu na intervalu jednotkové délky.
 * Pomocí gradientu dokážeme formulovat lineární aproximaci funkce. U vektorových  funkcí tuto aproximaci můžeme formulovat pro každou komponentu samostatně a dostáváme tak nástroj, jak pomocí maticového násobení aproximovat funkční vztahy, kde na vstupu i na výstupu je vektor. Tím získáme jednotný popis všech materiálových vztahů, kde vektorová veličina, která je podnětem, vyvolává jako odezvu jinou vektorovou veličinu. Například pokles teploty, definovaný směrem a intenzitou, vyvolává tok tepla odpovídajícím směrem a odpovídající intenzitou.
 

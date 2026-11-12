@@ -18,8 +18,8 @@
 V této přednášce se seznámíme s nástroji pro pohodlný výpočet křivkového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového integrálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo publikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
 
 V následujících větách si ukážeme některé souvislosti mezi
-studovanými pojmy. Tyto souvislosti existují, pokud objekty se kterými
-pracujeme jsou dostatečně pěkné - funkce jsou dostatečně hladké,
+studovanými pojmy. Tyto souvislosti existují, pokud objekty, se kterými
+pracujeme, jsou dostatečně pěkné - funkce jsou dostatečně hladké,
 oblasti mají dostatečně hladkou hranici a neobsahují díry apod.  Pro
 úplnost uvedeme nebo zopakujeme potřebné pojmy. Některé pojmy pro
 názornost uvedeme poněkud volnější interpretací, jejich přesnější zavedení je
@@ -108,7 +108,7 @@ nulou. Protože $\nabla \times\vec F=\left(\frac {\partial F_y}{\partial x}-\fra
 $$
 \frac {\partial F_x}{\partial y}=\frac {\partial F_y}{\partial x}
 $$
-pro to aby výraz
+pro to, aby výraz
 $$F_x\mathrm{d}x+F_y\mathrm{d}y$$ 
 byl totálním diferenciálem.  
 
@@ -262,7 +262,7 @@ Greenova věta ve formulaci pro tok křivkou je nástrojem pro přechod mezi lok
 
 Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přístupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
 
-Navážeme na koncept představený v přednášce o divergenci vektorového pole a podobnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice použijeme pro konečně velký objem.
+Navážeme na koncept představený v přednášce o divergenci vektorového pole a podobnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice, použijeme pro konečně velký objem.
 
 Je-li $u(x,y)$ hustota stavové veličiny v množině $M$, $\sigma(x,y)$ vydatnost zdrojů a $\vec J=(P,Q)$ pole popisující tok stavové veličiny, je rychlost s jakou roste množství stavové veličiny v množině $M$ (tj. derivace množství podle času) dána vydatností zdrojů stavové veličiny sníženou o odtok stavové veličiny přes hranici množiny $M$. Matematicky vyjádřeno platí
 \dm$$\frac{\mathrm d}{\mathrm dt}\left(\iint_M u\,\mathrm dx\mathrm dy\right)=\iint_M \sigma\,\mathrm dx\mathrm dy-\oint_{\partial M}-Q\,\mathrm dx+P\,\mathrm dy.$$
